@@ -1,0 +1,48 @@
+name: Market Morning Daily Update
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    # 毎朝7:00 日本時間
+    # GitHub ActionsのcronはUTCなので22:00 UTC = 翌7:00 JST
+    - cron: "0 22 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create status file
+        run: |
+          mkdir -p data
+
+          NOW_JST=$(TZ=Asia/Tokyo date '+%Y年%m月%d日 %H:%M')
+
+          cat > data/status.json << EOF
+          {
+            "status": "success",
+            "updated_at": "$NOW_JST",
+            "message": "Market Morning automatic update is working."
+          }
+          EOF
+
+      - name: Commit updated data
+        run: |
+          git config user.name "Market Morning Bot"
+          git config user.email "actions@github.com"
+
+          git add data/status.json
+
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Daily Market Morning update"
+            git push
+          fi

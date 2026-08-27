@@ -31,12 +31,9 @@ SYMBOLS = {
         "ticker": "^N225",
     },
     "topix": {
-    "name": "TOPIX参考（1306 ETF）",
-    "ticker": "1306.T",
+        "name": "TOPIX",
+        "ticker": "1306.T",
     },
-    "us10y": {
-    "name": "米10年債",
-    "ticker": "^TNX",
     "dxy": {
         "name": "DXY",
         "ticker": "DX-Y.NYB",
@@ -48,6 +45,10 @@ SYMBOLS = {
     "eurusd": {
         "name": "EUR/USD",
         "ticker": "EURUSD=X",
+    },
+    "us10y": {
+        "name": "米10年債",
+        "ticker": "^TNX",
     },
     "gold": {
         "name": "Gold",
@@ -80,16 +81,20 @@ SYMBOLS = {
 }
 
 
-def get_market_data(symbol, info):
+def get_market_data(info):
     ticker = yf.Ticker(info["ticker"])
 
-    hist = ticker.history(period="5d", interval="1d")
+    hist = ticker.history(
+        period="5d",
+        interval="1d"
+    )
 
-    if len(hist) < 2:
+    if hist.empty or len(hist) < 2:
         return {
             "name": info["name"],
             "ticker": info["ticker"],
             "price": None,
+            "previous": None,
             "change": None,
             "change_pct": None,
             "status": "確認できず",
@@ -116,40 +121,44 @@ def get_market_data(symbol, info):
 
 
 def main():
-
-    now = datetime.now(ZoneInfo("Asia/Tokyo"))
+    now = datetime.now(
+        ZoneInfo("Asia/Tokyo")
+    )
 
     result = {
-        "updated_at": now.strftime("%Y-%m-%d %H:%M:%S"),
+        "updated_at": now.strftime(
+            "%Y-%m-%d %H:%M:%S"
+        ),
         "timezone": "Asia/Tokyo",
         "source": "Yahoo Finance via yfinance",
+        "notes": {
+            "topix": "TOPIXは1306.T（TOPIX連動ETF）を参考値として使用",
+            "us10y": "^TNXを米10年債利回りとして使用",
+        },
         "markets": {},
     }
 
     for key, info in SYMBOLS.items():
-
         try:
-            result["markets"][key] = get_market_data(key, info)
+            result["markets"][key] = get_market_data(info)
 
         except Exception as e:
-
             result["markets"][key] = {
                 "name": info["name"],
                 "ticker": info["ticker"],
                 "price": None,
+                "previous": None,
                 "change": None,
                 "change_pct": None,
                 "status": "取得失敗",
                 "error": str(e),
             }
 
-
     with open(
         "data/market.json",
         "w",
         encoding="utf-8"
     ) as f:
-
         json.dump(
             result,
             f,

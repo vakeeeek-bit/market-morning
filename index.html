@@ -1185,6 +1185,144 @@ td {
 </div>
 
 </div>
+<script>
+async function loadMarketData() {
+  try {
+    const response = await fetch('/data/market.json?ts=' + Date.now());
 
+    if (!response.ok) {
+      throw new Error('market.jsonの取得に失敗しました');
+    }
+
+    const data = await response.json();
+
+    console.log('Market data:', data);
+
+    const markets = data.markets || {};
+
+    updateMarketCard('S&P500', markets.sp500);
+    updateMarketCard('NASDAQ100', markets.nasdaq100);
+    updateMarketCard('NASDAQ総合', markets.nasdaq);
+    updateMarketCard('NYダウ', markets.dow);
+    updateMarketCard('Russell2000', markets.russell2000);
+    updateMarketCard('日経225', markets.nikkei225);
+    updateMarketCard('TOPIX', markets.topix);
+    updateMarketCard('DXY', markets.dxy);
+    updateMarketCard('USD/JPY', markets.usdjpy);
+    updateMarketCard('Gold', markets.gold);
+    updateMarketCard('Silver', markets.silver);
+    updateMarketCard('Copper', markets.copper);
+    updateMarketCard('WTI', markets.wti);
+    updateMarketCard('Brent', markets.brent);
+    updateMarketCard('BTC', markets.btc);
+    updateMarketCard('ETH', markets.eth);
+
+    updatePageDate(data.updated_at);
+
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+function updateMarketCard(name, market) {
+  if (!market) return;
+
+  const cards = document.querySelectorAll('.market-card');
+
+  cards.forEach(card => {
+    const nameElement = card.querySelector('.market-name');
+
+    if (!nameElement) return;
+
+    if (nameElement.textContent.trim() === name) {
+
+      const priceElement = card.querySelector('.market-price');
+      const changeElement = card.querySelector('.market-change');
+
+      if (market.price !== null && market.price !== undefined) {
+        priceElement.textContent = formatPrice(name, market.price);
+      } else {
+        priceElement.textContent = '確認できず';
+      }
+
+      if (
+        market.change_pct !== null &&
+        market.change_pct !== undefined
+      ) {
+        const arrow =
+          market.change_pct > 0
+            ? '↑'
+            : market.change_pct < 0
+            ? '↓'
+            : '→';
+
+        const sign =
+          market.change_pct > 0 ? '+' : '';
+
+        changeElement.textContent =
+          `${arrow} ${sign}${market.change_pct.toFixed(2)}%`;
+      } else {
+        changeElement.textContent = '前日比：確認できず';
+      }
+    }
+  });
+}
+
+function formatPrice(name, price) {
+
+  const number = Number(price);
+
+  if (isNaN(number)) return price;
+
+  if (
+    name === 'BTC' ||
+    name === 'ETH' ||
+    name === 'Gold' ||
+    name === 'Silver' ||
+    name === 'WTI' ||
+    name === 'Brent'
+  ) {
+    return '$' + number.toLocaleString(
+      'en-US',
+      {
+        maximumFractionDigits: 2
+      }
+    );
+  }
+
+  if (name === 'Copper') {
+    return '$' + number.toFixed(4);
+  }
+
+  if (
+    name === 'USD/JPY' ||
+    name === 'DXY'
+  ) {
+    return number.toFixed(2);
+  }
+
+  return number.toLocaleString(
+    'ja-JP',
+    {
+      maximumFractionDigits: 2
+    }
+  );
+}
+
+function updatePageDate(updatedAt) {
+
+  if (!updatedAt) return;
+
+  const headerDate =
+    document.querySelector('.header .date');
+
+  if (headerDate) {
+    headerDate.textContent =
+      `データ更新：${updatedAt} JST`;
+  }
+}
+
+loadMarketData();
+</script>
 </body>
 </html>

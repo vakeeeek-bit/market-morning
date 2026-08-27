@@ -1,0 +1,159 @@
+{
+  "updated_at": "2026-08-27 17:22:28",
+  "timezone": "Asia/Tokyo",
+  "source": "Yahoo Finance via yfinance",
+  "markets": {
+    "sp500": {
+      "name": "S&P500",
+      "ticker": "^GSPC",
+      "price": 7675.7002,
+      "previous": 7677.2798,
+      "change": -1.5796,
+      "change_pct": -0.02,
+      "status": "取得成功"
+    },
+    "nasdaq": {
+      "name": "NASDAQ総合",
+      "ticker": "^IXIC",
+      "price": 26130.1992,
+      "previous": 26151.3008,
+      "change": -21.1016,
+      "change_pct": -0.08,
+      "status": "取得成功"
+    },
+    "nasdaq100": {
+      "name": "NASDAQ100",
+      "ticker": "^NDX",
+      "price": 29224.5195,
+      "previous": 29209.2305,
+      "change": 15.2891,
+      "change_pct": 0.05,
+      "status": "取得成功"
+    },
+    "dow": {
+      "name": "NYダウ",
+      "ticker": "^DJI",
+      "price": 53463.8789,
+      "previous": 53577.3984,
+      "change": -113.5195,
+      "change_pct": -0.21,
+      "status": "取得成功"
+    },
+    "russell2000": {
+      "name": "Russell2000",
+      "ticker": "^RUT",
+      "price": 3005.8999,
+      "previous": 3010.02,
+      "change": -4.1201,
+      "change_pct": -0.14,
+      "status": "取得成功"
+    },
+    "nikkei225": {
+      "name": "日経225",
+      "ticker": "^N225",
+      "price": 66131.9766,
+      "previous": 66262.1562,
+      "change": -130.1797,
+      "change_pct": -0.2,
+      "status": "取得成功"
+    },
+    "topix": {
+      "name": "TOPIX",
+      "ticker": "^TOPX",
+      "price": null,
+      "change": null,
+      "change_pct": null,
+      "status": "確認できず"
+    },
+    "dxy": {
+      "name": "DXY",
+      "ticker": "DX-Y.NYB",
+      "price": 99.133,
+      "previous": 99.17,
+      "change": -0.037,
+      "change_pct": -0.04,
+      "status": "取得成功"
+    },
+    "usdjpy": {
+      "name": "USD/JPY",
+      "ticker": "JPY=X",
+      "price": 159.329,
+      "previous": 159.223,
+      "change": 0.106,
+      "change_pct": 0.07,
+      "status": "取得成功"
+    },
+    "eurusd": {
+      "name": "EUR/USD",
+      "ticker": "EURUSD=X",
+      "price": 1.1656,
+      "previous": 1.1675,
+      "change": -0.0018,
+      "change_pct": -0.16,
+      "status": "取得成功"
+    },
+    "gold": {
+      "name": "Gold",
+      "ticker": "GC=F",
+      "price": 4657.0,
+      "previous": 4598.2002,
+      "change": 58.7998,
+      "change_pct": 1.28,
+      "status": "取得成功"
+    },
+    "silver": {
+      "name": "Silver",
+      "ticker": "SI=F",
+      "price": 69.245,
+      "previous": 67.99,
+      "change": 1.255,
+      "change_pct": 1.85,
+      "status": "取得成功"
+    },
+    "copper": {
+      "name": "Copper",
+      "ticker": "HG=F",
+      "price": 6.673,
+      "previous": 6.5945,
+      "change": 0.0785,
+      "change_pct": 1.19,
+      "status": "取得成功"
+    },
+    "wti": {
+      "name": "WTI",
+      "ticker": "CL=F",
+      "price": 81.27,
+      "previous": 82.23,
+      "change": -0.96,
+      "change_pct": -1.17,
+      "status": "取得成功"
+    },
+    "brent": {
+      "name": "Brent",
+      "ticker": "BZ=F",
+      "price": 86.06,
+      "previous": 87.84,
+      "change": -1.78,
+      "change_pct": -2.03,
+      "status": "取得成功"
+    },
+    "btc": {
+      "name": "BTC",
+      "ticker": "BTC-USD",
+      "price": 79528.7109,
+      "previous": 79027.4219,
+      "change": 501.2891,
+      "change_pct": 0.63,
+      "status": "取得成功"
+    },
+    "eth": {
+      "name": "ETH",
+      "ticker": "ETH-USD",
+      "price": 2514.8999,
+      "previous": 2506.261,
+      "change": 8.6389,
+      "change_pct": 0.34,
+      "status": "取得成功"
+    }
+  }
+}

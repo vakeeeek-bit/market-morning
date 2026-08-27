@@ -1,7 +1,11 @@
 {
-  "updated_at": "2026-08-27 17:22:28",
+  "updated_at": "2026-08-27 18:02:07",
   "timezone": "Asia/Tokyo",
   "source": "Yahoo Finance via yfinance",
+  "notes": {
+    "topix": "TOPIXは1306.T（TOPIX連動ETF）を参考値として使用",
+    "us10y": "^TNXを米10年債利回りとして使用"
+  },
   "markets": {
     "sp500": {
       "name": "S&P500",
@@ -59,100 +63,110 @@
     },
     "topix": {
       "name": "TOPIX",
-      "ticker": "^TOPX",
-      "price": null,
-      "change": null,
-      "change_pct": null,
-      "status": "確認できず"
+      "ticker": "1306.T",
+      "price": 429.4,
+      "previous": 428.2,
+      "change": 1.2,
+      "change_pct": 0.28,
+      "status": "取得成功"
     },
     "dxy": {
       "name": "DXY",
       "ticker": "DX-Y.NYB",
-      "price": 99.133,
+      "price": 99.166,
       "previous": 99.17,
-      "change": -0.037,
-      "change_pct": -0.04,
+      "change": -0.004,
+      "change_pct": -0.0,
       "status": "取得成功"
     },
     "usdjpy": {
       "name": "USD/JPY",
       "ticker": "JPY=X",
-      "price": 159.329,
+      "price": 159.32,
       "previous": 159.223,
-      "change": 0.106,
-      "change_pct": 0.07,
+      "change": 0.097,
+      "change_pct": 0.06,
       "status": "取得成功"
     },
     "eurusd": {
       "name": "EUR/USD",
       "ticker": "EURUSD=X",
-      "price": 1.1656,
+      "price": 1.1652,
       "previous": 1.1675,
-      "change": -0.0018,
-      "change_pct": -0.16,
+      "change": -0.0022,
+      "change_pct": -0.19,
+      "status": "取得成功"
+    },
+    "us10y": {
+      "name": "米10年債",
+      "ticker": "^TNX",
+      "price": 4.664,
+      "previous": 4.639,
+      "change": 0.025,
+      "change_pct": 0.54,
       "status": "取得成功"
     },
     "gold": {
       "name": "Gold",
       "ticker": "GC=F",
-      "price": 4657.0,
+      "price": 4652.7998,
       "previous": 4598.2002,
-      "change": 58.7998,
-      "change_pct": 1.28,
+      "change": 54.5996,
+      "change_pct": 1.19,
       "status": "取得成功"
     },
     "silver": {
       "name": "Silver",
       "ticker": "SI=F",
-      "price": 69.245,
+      "price": 69.23,
       "previous": 67.99,
-      "change": 1.255,
-      "change_pct": 1.85,
+      "change": 1.24,
+      "change_pct": 1.82,
       "status": "取得成功"
     },
     "copper": {
       "name": "Copper",
       "ticker": "HG=F",
-      "price": 6.673,
+      "price": 6.664,
       "previous": 6.5945,
-      "change": 0.0785,
-      "change_pct": 1.19,
+      "change": 0.0695,
+      "change_pct": 1.05,
       "status": "取得成功"
     },
     "wti": {
       "name": "WTI",
       "ticker": "CL=F",
-      "price": 81.27,
+      "price": 81.55,
       "previous": 82.23,
-      "change": -0.96,
-      "change_pct": -1.17,
+      "change": -0.68,
+      "change_pct": -0.83,
       "status": "取得成功"
     },
     "brent": {
       "name": "Brent",
       "ticker": "BZ=F",
-      "price": 86.06,
+      "price": 86.23,
       "previous": 87.84,
-      "change": -1.78,
-      "change_pct": -2.03,
+      "change": -1.61,
+      "change_pct": -1.83,
       "status": "取得成功"
     },
     "btc": {
       "name": "BTC",
       "ticker": "BTC-USD",
-      "price": 79528.7109,
+      "price": 79776.8438,
       "previous": 79027.4219,
-      "change": 501.2891,
-      "change_pct": 0.63,
+      "change": 749.4219,
+      "change_pct": 0.95,
       "status": "取得成功"
     },
     "eth": {
       "name": "ETH",
       "ticker": "ETH-USD",
-      "price": 2514.8999,
+      "price": 2529.3999,
       "previous": 2506.261,
-      "change": 8.6389,
-      "change_pct": 0.34,
+      "change": 23.1389,
+      "change_pct": 0.92,
       "status": "取得成功"
     }
   }

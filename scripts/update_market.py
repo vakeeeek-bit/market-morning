@@ -31,9 +31,12 @@ SYMBOLS = {
         "ticker": "^N225",
     },
     "topix": {
-        "name": "TOPIX",
-        "ticker": "^TOPX",
+    "name": "TOPIX参考（1306 ETF）",
+    "ticker": "1306.T",
     },
+    "us10y": {
+    "name": "米10年債",
+    "ticker": "^TNX",
     "dxy": {
         "name": "DXY",
         "ticker": "DX-Y.NYB",

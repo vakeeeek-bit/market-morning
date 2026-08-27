@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#111827">
+
+  <title>Market Morning</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+      background: #f3f4f6;
+      color: #111827;
+    }
+
+    .app {
+      max-width: 600px;
+      margin: 0 auto;
+      padding-bottom: 90px;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 24px 20px 20px;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .date {
+      margin-top: 5px;
+      font-size: 13px;
+      opacity: 0.7;
+    }
+
+    .section {
+      margin: 14px 14px 0;
+      padding: 18px;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .section-title {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .main-message {
+      font-size: 21px;
+      font-weight: 700;
+    }
+
+    .sub {
+      margin-top: 8px;
+      font-size: 13px;
+      color: #6b7280;
+      line-height: 1.6;
+    }
+
+    .winner {
+      display: flex;
+      align-items: center;
+      padding: 9px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 15px;
+    }
+
+    .winner:last-child {
+      border-bottom: none;
+    }
+
+    .rank {
+      width: 35px;
+      font-size: 18px;
+    }
+
+    .market-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .market {
+      background: #f9fafb;
+      padding: 12px;
+      border-radius: 10px;
+    }
+
+    .market-name {
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    .market-value {
+      margin-top: 4px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 600px;
+      background: white;
+      border-top: 1px solid #e5e7eb;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+    .nav-item {
+      text-align: center;
+      font-size: 11px;
+      color: #6b7280;
+    }
+
+    .nav-icon {
+      font-size: 20px;
+      margin-bottom: 2px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <header>
+    <div class="title">Market Morning</div>
+    <div class="date">2026年8月27日（木）</div>
+  </header>
+
+
+  <!-- 市場全体 -->
+
+  <div class="section">
+
+    <div class="section-title">
+      📌 昨日の市場
+    </div>
+
+    <div class="main-message">
+      リスクを取りやすい状態
+    </div>
+
+    <div class="sub">
+      株式・商品・暗号資産を横断して市場を確認。
+      現在は暫定判断です。
+    </div>
+
+  </div>
+
+
+  <!-- 市場の主役 -->
+
+  <div class="section">
+
+    <div class="section-title">
+      🔥 昨日の市場の主役
+    </div>
+
+    <div class="main-message">
+      米10年債 × NASDAQ
+    </div>
+
+    <div class="sub">
+      金利と株式の動きを確認し、
+      市場が何を織り込んでいる可能性があるかを分析します。
+    </div>
+
+  </div>
+
+
+  <!-- 勝者 -->
+
+  <div class="section">
+
+    <div class="section-title">
+      🏆 昨日の勝者
+    </div>
+
+    <div class="winner">
+      <div class="rank">🥇</div>
+      <div>NASDAQ</div>
+    </div>
+
+    <div class="winner">
+      <div class="rank">🥈</div>
+      <div>Gold</div>
+    </div>
+
+    <div class="winner">
+      <div class="rank">🥉</div>
+      <div>BTC</div>
+    </div>
+
+  </div>
+
+
+  <!-- 今日の注目 -->
+
+  <div class="section">
+
+    <div class="section-title">
+      👀 今日の注目
+    </div>
+
+    <div class="market-grid">
+
+      <div class="market">
+        <div class="market-name">米10年債</div>
+        <div class="market-value">確認待ち</div>
+      </div>
+
+      <div class="market">
+        <div class="market-name">DXY</div>
+        <div class="market-value">確認待ち</div>
+      </div>
+
+      <div class="market">
+        <div class="market-name">NASDAQ</div>
+        <div class="market-value">確認待ち</div>
+      </div>
+
+      <div class="market">
+        <div class="market-name">Gold</div>
+        <div class="market-value">確認待ち</div>
+      </div>
+
+      <div class="market">
+        <div class="market-name">Copper</div>
+        <div class="market-value">確認待ち</div>
+      </div>
+
+      <div class="market">
+        <div class="market-name">BTC</div>
+        <div class="market-value">確認待ち</div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- 今日の注目カード -->
+
+  <div class="section">
+
+    <div class="section-title">
+      ⚠️ 今日の注目カード
+    </div>
+
+    <div class="sub">
+
+      <strong>① 米10年債 × NASDAQ</strong><br>
+      金利上昇にNASDAQがどの程度反応するか確認。
+      <br><br>
+
+      <strong>② DXY × Gold</strong><br>
+      ドル上昇時にもGoldが底堅いか確認。
+      <br><br>
+
+      <strong>③ BTC × NASDAQ</strong><br>
+      株式市場との相対的な強さを確認。
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- 下部ナビ -->
+
+<div class="bottom-nav">
+
+  <div class="nav-item">
+    <div class="nav-icon">🏠</div>
+    Home
+  </div>
+
+  <div class="nav-item">
+    <div class="nav-icon">📊</div>
+    Market
+  </div>
+
+  <div class="nav-item">
+    <div class="nav-icon">🧠</div>
+    Analysis
+  </div>
+
+  <div class="nav-item">
+    <div class="nav-icon">🟠</div>
+    Copper
+  </div>
+
+  <div class="nav-item">
+    <div class="nav-icon">₿</div>
+    Crypto
+  </div>
+
+</div>
+
+</body>
+</html>

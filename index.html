@@ -1,290 +1,505 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111827">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Market Morning">
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+<title>Market Morning</title>
 
-  <meta name="theme-color" content="#111827">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-  <title>Market Morning</title>
+body {
+  margin: 0;
+  background: #f4f6f8;
+  color: #17202a;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    sans-serif;
+  line-height: 1.6;
+}
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 16px;
+}
 
-    body {
-      margin: 0;
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Helvetica Neue",
-        Arial,
-        sans-serif;
-      background: #f3f4f6;
-      color: #111827;
-    }
+/* ヘッダー */
 
-    .app {
-      max-width: 600px;
-      margin: 0 auto;
-      padding-bottom: 90px;
-    }
+.header {
+  background: #111827;
+  color: white;
+  padding: 22px 18px;
+  border-radius: 18px;
+  margin-bottom: 16px;
+}
 
-    header {
-      background: #111827;
-      color: white;
-      padding: 24px 20px 20px;
-    }
+.header-title {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
 
-    .title {
-      font-size: 24px;
-      font-weight: 700;
-    }
+.header-sub {
+  font-size: 13px;
+  opacity: 0.75;
+}
 
-    .date {
-      margin-top: 5px;
-      font-size: 13px;
-      opacity: 0.7;
-    }
+.date {
+  margin-top: 12px;
+  font-size: 14px;
+  opacity: 0.9;
+}
 
-    .section {
-      margin: 14px 14px 0;
-      padding: 18px;
-      background: white;
-      border-radius: 14px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
+/* セクション */
 
-    .section-title {
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
+.section {
+  background: white;
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
 
-    .main-message {
-      font-size: 21px;
-      font-weight: 700;
-    }
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
 
-    .sub {
-      margin-top: 8px;
-      font-size: 13px;
-      color: #6b7280;
-      line-height: 1.6;
-    }
+.section-title span {
+  margin-right: 6px;
+}
 
-    .winner {
-      display: flex;
-      align-items: center;
-      padding: 9px 0;
-      border-bottom: 1px solid #eee;
-      font-size: 15px;
-    }
+/* エグゼクティブ */
 
-    .winner:last-child {
-      border-bottom: none;
-    }
+.summary-main {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
 
-    .rank {
-      width: 35px;
-      font-size: 18px;
-    }
+.summary-box {
+  background: #f7f8fa;
+  border-radius: 12px;
+  padding: 13px;
+  margin-bottom: 10px;
+}
 
-    .market-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
+.label {
+  font-size: 12px;
+  color: #68707a;
+  margin-bottom: 3px;
+}
 
-    .market {
-      background: #f9fafb;
-      padding: 12px;
-      border-radius: 10px;
-    }
+.value {
+  font-size: 15px;
+  font-weight: 600;
+}
 
-    .market-name {
-      font-size: 12px;
-      color: #6b7280;
-    }
+/* 勝者・敗者 */
 
-    .market-value {
-      margin-top: 4px;
-      font-size: 16px;
-      font-weight: 700;
-    }
+.rank {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #edf0f2;
+}
 
-    .bottom-nav {
-      position: fixed;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      max-width: 600px;
-      background: white;
-      border-top: 1px solid #e5e7eb;
-      display: flex;
-      justify-content: space-around;
-      padding: 10px 0;
-    }
+.rank:last-child {
+  border-bottom: none;
+}
 
-    .nav-item {
-      text-align: center;
-      font-size: 11px;
-      color: #6b7280;
-    }
+.rank-number {
+  width: 35px;
+  font-size: 20px;
+}
 
-    .nav-icon {
-      font-size: 20px;
-      margin-bottom: 2px;
-    }
-  </style>
+.rank-name {
+  flex: 1;
+  font-weight: 600;
+}
+
+.rank-value {
+  font-weight: 700;
+}
+
+/* 市場カード */
+
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.market-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 13px;
+}
+
+.market-name {
+  font-size: 13px;
+  color: #68707a;
+}
+
+.market-price {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.market-change {
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+/* テーブル */
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th {
+  background: #f3f4f6;
+  text-align: left;
+  padding: 9px;
+  white-space: nowrap;
+}
+
+td {
+  padding: 9px;
+  border-bottom: 1px solid #edf0f2;
+  white-space: nowrap;
+}
+
+/* ニュース */
+
+.news {
+  border-left: 4px solid #111827;
+  padding-left: 12px;
+  margin-bottom: 18px;
+}
+
+.news:last-child {
+  margin-bottom: 0;
+}
+
+.news-title {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.news-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #68707a;
+}
+
+.news-text {
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+
+/* カード */
+
+.card {
+  background: #f7f8fa;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+.card-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* 星 */
+
+.stars {
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+/* 条件 */
+
+.condition {
+  padding: 12px;
+  border-radius: 10px;
+  background: #f7f8fa;
+  margin-bottom: 9px;
+}
+
+.condition:last-child {
+  margin-bottom: 0;
+}
+
+.condition strong {
+  display: block;
+  margin-bottom: 3px;
+}
+
+/* フッター */
+
+.footer {
+  text-align: center;
+  color: #8a929b;
+  font-size: 12px;
+  padding: 20px 0 30px;
+}
+
+/* PC */
+
+@media (min-width: 700px) {
+
+  .container {
+    padding: 30px;
+  }
+
+  .market-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}
+
+/* iPhone */
+
+@media (max-width: 480px) {
+
+  .container {
+    padding: 10px;
+  }
+
+  .header {
+    border-radius: 14px;
+    padding: 18px 15px;
+  }
+
+  .header-title {
+    font-size: 23px;
+  }
+
+  .section {
+    border-radius: 14px;
+    padding: 15px;
+  }
+
+  .market-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+</style>
 </head>
+
 
 <body>
 
-<div class="app">
+<div class="container">
 
-  <header>
-    <div class="title">Market Morning</div>
-    <div class="date">2026年8月27日（木）</div>
-  </header>
+<!-- HEADER -->
 
+<div class="header">
 
-  <!-- 市場全体 -->
-
-  <div class="section">
-
-    <div class="section-title">
-      📌 昨日の市場
-    </div>
-
-    <div class="main-message">
-      リスクを取りやすい状態
-    </div>
-
-    <div class="sub">
-      株式・商品・暗号資産を横断して市場を確認。
-      現在は暫定判断です。
-    </div>
-
+  <div class="header-title">
+    Market Morning
   </div>
 
-
-  <!-- 市場の主役 -->
-
-  <div class="section">
-
-    <div class="section-title">
-      🔥 昨日の市場の主役
-    </div>
-
-    <div class="main-message">
-      米10年債 × NASDAQ
-    </div>
-
-    <div class="sub">
-      金利と株式の動きを確認し、
-      市場が何を織り込んでいる可能性があるかを分析します。
-    </div>
-
+  <div class="header-sub">
+    Global Macro Market Dashboard
   </div>
 
-
-  <!-- 勝者 -->
-
-  <div class="section">
-
-    <div class="section-title">
-      🏆 昨日の勝者
-    </div>
-
-    <div class="winner">
-      <div class="rank">🥇</div>
-      <div>NASDAQ</div>
-    </div>
-
-    <div class="winner">
-      <div class="rank">🥈</div>
-      <div>Gold</div>
-    </div>
-
-    <div class="winner">
-      <div class="rank">🥉</div>
-      <div>BTC</div>
-    </div>
-
+  <div class="date">
+    2026年8月26日（水）｜昨日の市場分析
   </div>
 
+</div>
 
-  <!-- 今日の注目 -->
 
-  <div class="section">
+<!-- EXECUTIVE SUMMARY -->
 
-    <div class="section-title">
-      👀 今日の注目
-    </div>
+<div class="section">
 
-    <div class="market-grid">
-
-      <div class="market">
-        <div class="market-name">米10年債</div>
-        <div class="market-value">確認待ち</div>
-      </div>
-
-      <div class="market">
-        <div class="market-name">DXY</div>
-        <div class="market-value">確認待ち</div>
-      </div>
-
-      <div class="market">
-        <div class="market-name">NASDAQ</div>
-        <div class="market-value">確認待ち</div>
-      </div>
-
-      <div class="market">
-        <div class="market-name">Gold</div>
-        <div class="market-value">確認待ち</div>
-      </div>
-
-      <div class="market">
-        <div class="market-name">Copper</div>
-        <div class="market-value">確認待ち</div>
-      </div>
-
-      <div class="market">
-        <div class="market-name">BTC</div>
-        <div class="market-value">確認待ち</div>
-      </div>
-
-    </div>
-
+  <div class="section-title">
+    📌 昨日の市場を一言で
   </div>
 
+  <div class="summary-main">
+    市場は方向感を探る展開
+  </div>
 
-  <!-- 今日の注目カード -->
+  <div class="summary-box">
+    <div class="label">市場全体の雰囲気</div>
+    <div class="value">→ 方向感なし</div>
+  </div>
 
-  <div class="section">
+  <div class="summary-box">
+    <div class="label">🔥 最大材料</div>
+    <div class="value">市場データ取得後に自動表示</div>
+  </div>
 
-    <div class="section-title">
-      ⚠️ 今日の注目カード
+  <div class="summary-box">
+    <div class="label">🏆 勝者</div>
+    <div class="value">NASDAQ / Gold / BTC</div>
+  </div>
+
+  <div class="summary-box">
+    <div class="label">⚠️ 敗者</div>
+    <div class="value">確認中</div>
+  </div>
+
+  <div class="summary-box">
+    <div class="label">📅 今日最重要</div>
+    <div class="value">米国経済指標・金利・FRB関連材料</div>
+  </div>
+
+</div>
+
+
+<!-- MARKET RANKING -->
+
+<div class="section">
+
+  <div class="section-title">
+    🏆 昨日の強かった市場 TOP5
+  </div>
+
+  <div class="rank">
+    <div class="rank-number">🥇</div>
+    <div class="rank-name">NASDAQ100</div>
+    <div class="rank-value">確認中</div>
+  </div>
+
+  <div class="rank">
+    <div class="rank-number">🥈</div>
+    <div class="rank-name">Gold</div>
+    <div class="rank-value">確認中</div>
+  </div>
+
+  <div class="rank">
+    <div class="rank-number">🥉</div>
+    <div class="rank-name">BTC</div>
+    <div class="rank-value">確認中</div>
+  </div>
+
+  <div class="rank">
+    <div class="rank-number">4</div>
+    <div class="rank-name">S&P500</div>
+    <div class="rank-value">確認中</div>
+  </div>
+
+  <div class="rank">
+    <div class="rank-number">5</div>
+    <div class="rank-name">Copper</div>
+    <div class="rank-value">確認中</div>
+  </div>
+
+</div>
+
+
+<!-- MARKET DATA -->
+
+<div class="section">
+
+  <div class="section-title">
+    📊 主要市場
+  </div>
+
+  <div class="market-grid">
+
+    <div class="market-card">
+      <div class="market-name">S&P500</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">前日比：確認中</div>
     </div>
 
-    <div class="sub">
+    <div class="market-card">
+      <div class="market-name">NASDAQ100</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">前日比：確認中</div>
+    </div>
 
-      <strong>① 米10年債 × NASDAQ</strong><br>
-      金利上昇にNASDAQがどの程度反応するか確認。
-      <br><br>
+    <div class="market-card">
+      <div class="market-name">日経225</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">前日比：確認中</div>
+    </div>
 
-      <strong>② DXY × Gold</strong><br>
-      ドル上昇時にもGoldが底堅いか確認。
-      <br><br>
+    <div class="market-card">
+      <div class="market-name">TOPIX</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">前日比：確認中</div>
+    </div>
 
-      <strong>③ BTC × NASDAQ</strong><br>
-      株式市場との相対的な強さを確認。
+    <div class="market-card">
+      <div class="market-name">DXY</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">前日比：確認中</div>
+    </div>
 
+    <div class="market-card">
+      <div class="market-name">USD/JPY</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">基準時刻：確認中</div>
+    </div>
+
+    <div class="market-card">
+      <div class="market-name">米10年債</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">前日比：確認中</div>
+    </div>
+
+    <div class="market-card">
+      <div class="market-name">Gold</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">前日比：確認中</div>
+    </div>
+
+    <div class="market-card">
+      <div class="market-name">Copper</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">前日比：確認中</div>
+    </div>
+
+    <div class="market-card">
+      <div class="market-name">WTI</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">前日比：確認中</div>
+    </div>
+
+    <div class="market-card">
+      <div class="market-name">BTC</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">24時間：確認中</div>
+    </div>
+
+    <div class="market-card">
+      <div class="market-name">ETH</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">24時間：確認中</div>
     </div>
 
   </div>
@@ -292,34 +507,682 @@
 </div>
 
 
-<!-- 下部ナビ -->
+<!-- MARKET OVERVIEW -->
 
-<div class="bottom-nav">
+<div class="section">
 
-  <div class="nav-item">
-    <div class="nav-icon">🏠</div>
-    Home
+  <div class="section-title">
+    🌍 昨日の市場を一目で見る
   </div>
 
-  <div class="nav-item">
-    <div class="nav-icon">📊</div>
-    Market
+  <div class="table-wrap">
+
+    <table>
+
+      <tr>
+        <th>市場</th>
+        <th>値動き</th>
+        <th>相対的な強さ</th>
+        <th>背景</th>
+      </tr>
+
+      <tr>
+        <td>米国株</td>
+        <td>確認中</td>
+        <td>確認中</td>
+        <td>確認中</td>
+      </tr>
+
+      <tr>
+        <td>日本株</td>
+        <td>確認中</td>
+        <td>確認中</td>
+        <td>確認中</td>
+      </tr>
+
+      <tr>
+        <td>欧州株</td>
+        <td>確認中</td>
+        <td>確認中</td>
+        <td>確認中</td>
+      </tr>
+
+      <tr>
+        <td>DXY</td>
+        <td>確認中</td>
+        <td>確認中</td>
+        <td>確認中</td>
+      </tr>
+
+      <tr>
+        <td>米10年債</td>
+        <td>確認中</td>
+        <td>確認中</td>
+        <td>確認中</td>
+      </tr>
+
+      <tr>
+        <td>Gold</td>
+        <td>確認中</td>
+        <td>確認中</td>
+        <td>確認中</td>
+      </tr>
+
+      <tr>
+        <td>Copper</td>
+        <td>確認中</td>
+        <td>確認中</td>
+        <td>確認中</td>
+      </tr>
+
+      <tr>
+        <td>原油</td>
+        <td>確認中</td>
+        <td>確認中</td>
+        <td>確認中</td>
+      </tr>
+
+      <tr>
+        <td>BTC</td>
+        <td>確認中</td>
+        <td>確認中</td>
+        <td>確認中</td>
+      </tr>
+
+    </table>
+
   </div>
 
-  <div class="nav-item">
-    <div class="nav-icon">🧠</div>
-    Analysis
+</div>
+
+
+<!-- MAIN NEWS -->
+
+<div class="section">
+
+  <div class="section-title">
+    🔥 昨日の市場の主役
   </div>
 
-  <div class="nav-item">
-    <div class="nav-icon">🟠</div>
-    Copper
+  <div class="card">
+
+    <div class="card-title">
+      主役材料
+    </div>
+
+    <div class="news-text">
+      実際の市場データとニュースを照合して判断します。
+    </div>
+
+    <div class="news-label">
+      確信度
+    </div>
+
+    <div>
+      確認中
+    </div>
+
   </div>
 
-  <div class="nav-item">
-    <div class="nav-icon">₿</div>
-    Crypto
+</div>
+
+
+<!-- NEWS -->
+
+<div class="section">
+
+  <div class="section-title">
+    📰 市場を動かしたニュース
   </div>
+
+  <div class="news">
+
+    <div class="news-title">
+      ① 重要ニュース
+    </div>
+
+    <div class="news-label">
+      何が起きた？
+    </div>
+
+    <div class="news-text">
+      Web検索による最新情報をここに表示します。
+    </div>
+
+    <div class="news-label">
+      市場反応
+    </div>
+
+    <div class="news-text">
+      株・債券・為替・商品・暗号資産への反応を確認します。
+    </div>
+
+  </div>
+
+
+  <div class="news">
+
+    <div class="news-title">
+      ② 重要ニュース
+    </div>
+
+    <div class="news-label">
+      何が起きた？
+    </div>
+
+    <div class="news-text">
+      確認中
+    </div>
+
+    <div class="news-label">
+      市場反応
+    </div>
+
+    <div class="news-text">
+      確認中
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- CENTRAL BANK -->
+
+<div class="section">
+
+  <div class="section-title">
+    🏦 Trump・米政府・中央銀行
+  </div>
+
+  <div class="card">
+
+    <div class="card-title">
+      米国
+    </div>
+
+    <div class="news-text">
+      Trump・米政府・FRBの発言や政策を確認します。
+    </div>
+
+  </div>
+
+  <div class="card">
+
+    <div class="card-title">
+      日本
+    </div>
+
+    <div class="news-text">
+      日銀・日本政府関連を確認します。
+    </div>
+
+  </div>
+
+  <div class="card">
+
+    <div class="card-title">
+      中国
+    </div>
+
+    <div class="news-text">
+      PBOC・中国政府関連を確認します。
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- INTERNAL STRENGTH -->
+
+<div class="section">
+
+  <div class="section-title">
+    🔎 市場内部の強弱
+  </div>
+
+  <div class="card">
+    <div class="card-title">大型株 vs 小型株</div>
+    <div>確認中</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">NASDAQ vs NYダウ</div>
+    <div>確認中</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Gold vs Copper</div>
+    <div>確認中</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">BTC vs アルトコイン</div>
+    <div>確認中</div>
+  </div>
+
+</div>
+
+
+<!-- COPPER -->
+
+<div class="section">
+
+  <div class="section-title">
+    🟠 Copper重点調査
+  </div>
+
+  <div class="table-wrap">
+
+    <table>
+
+      <tr>
+        <th>項目</th>
+        <th>状況</th>
+      </tr>
+
+      <tr>
+        <td>LME在庫</td>
+        <td>確認中</td>
+      </tr>
+
+      <tr>
+        <td>SHFE在庫</td>
+        <td>確認中</td>
+      </tr>
+
+      <tr>
+        <td>COMEX在庫</td>
+        <td>確認中</td>
+      </tr>
+
+      <tr>
+        <td>中国需要</td>
+        <td>確認中</td>
+      </tr>
+
+      <tr>
+        <td>中国製造業</td>
+        <td>確認中</td>
+      </tr>
+
+      <tr>
+        <td>米国銅関税</td>
+        <td>確認中</td>
+      </tr>
+
+      <tr>
+        <td>鉱山供給</td>
+        <td>確認中</td>
+      </tr>
+
+      <tr>
+        <td>精錬供給</td>
+        <td>確認中</td>
+      </tr>
+
+    </table>
+
+  </div>
+
+</div>
+
+
+<!-- CRYPTO -->
+
+<div class="section">
+
+  <div class="section-title">
+    ₿ 暗号資産
+  </div>
+
+  <div class="market-grid">
+
+    <div class="market-card">
+      <div class="market-name">BTC</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">24時間：確認中</div>
+    </div>
+
+    <div class="market-card">
+      <div class="market-name">ETH</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">24時間：確認中</div>
+    </div>
+
+    <div class="market-card">
+      <div class="market-name">XRP</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">24時間：確認中</div>
+    </div>
+
+    <div class="market-card">
+      <div class="market-name">SOL</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">24時間：確認中</div>
+    </div>
+
+  </div>
+
+  <div class="card" style="margin-top:10px;">
+    <div class="card-title">暗号資産全体</div>
+    <div>判断：確認中</div>
+  </div>
+
+</div>
+
+
+<!-- MARKET ENVIRONMENT -->
+
+<div class="section">
+
+  <div class="section-title">
+    🌐 現在の市場環境
+  </div>
+
+  <div class="card">
+    <div class="card-title">①</div>
+    <div>確認中</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">②</div>
+    <div>確認中</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">③</div>
+    <div>確認中</div>
+  </div>
+
+</div>
+
+
+<!-- EVENTS -->
+
+<div class="section">
+
+  <div class="section-title">
+    📅 今日以降の重要イベント
+  </div>
+
+  <div class="table-wrap">
+
+    <table>
+
+      <tr>
+        <th>イベント</th>
+        <th>日本時間</th>
+        <th>予想</th>
+        <th>重要度</th>
+      </tr>
+
+      <tr>
+        <td>米国経済指標</td>
+        <td>確認中</td>
+        <td>確認中</td>
+        <td>★★★★★</td>
+      </tr>
+
+      <tr>
+        <td>FRB関連</td>
+        <td>確認中</td>
+        <td>確認中</td>
+        <td>★★★★★</td>
+      </tr>
+
+      <tr>
+        <td>中国経済指標</td>
+        <td>確認中</td>
+        <td>確認中</td>
+        <td>★★★★☆</td>
+      </tr>
+
+    </table>
+
+  </div>
+
+</div>
+
+
+<!-- WATCH CARDS -->
+
+<div class="section">
+
+  <div class="section-title">
+    👀 今日の注目カード
+  </div>
+
+  <div class="card">
+
+    <div class="card-title">
+      第1カード：米10年債 vs NASDAQ
+    </div>
+
+    <div>
+      金利上昇時にNASDAQがどの程度反応するかを確認。
+    </div>
+
+  </div>
+
+  <div class="card">
+
+    <div class="card-title">
+      第2カード：DXY vs Gold
+    </div>
+
+    <div>
+      ドルとGoldが通常と異なる動きをするか確認。
+    </div>
+
+  </div>
+
+  <div class="card">
+
+    <div class="card-title">
+      第3カード：BTC vs NASDAQ
+    </div>
+
+    <div>
+      株式市場と暗号資産の連動性に変化がないか確認。
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- CONDITIONS -->
+
+<div class="section">
+
+  <div class="section-title">
+    ⚠️ 今日、見方を変える条件
+  </div>
+
+  <div class="condition">
+
+    <strong>① 米10年債が急上昇</strong>
+
+    株・Gold・BTCへの下押し圧力が強まる可能性。
+
+  </div>
+
+  <div class="condition">
+
+    <strong>② DXYが急反発</strong>
+
+    Gold・Copper・BTCの上値が重くなる可能性。
+
+  </div>
+
+  <div class="condition">
+
+    <strong>③ 原油が急騰</strong>
+
+    インフレ懸念が再燃する可能性。
+
+  </div>
+
+  <div class="condition">
+
+    <strong>④ 株式市場の内部が急速に悪化</strong>
+
+    表面的な指数上昇だけでは判断できなくなる可能性。
+
+  </div>
+
+</div>
+
+
+<!-- SCENARIOS -->
+
+<div class="section">
+
+  <div class="section-title">
+    🎯 今後の市場シナリオ
+  </div>
+
+  <div class="card">
+
+    <div class="card-title">
+      【基本シナリオ】
+    </div>
+
+    <div>
+      現在の金利・景気・インフレ環境が大きく変化しなければ、
+      各市場が材料を探しながら推移する可能性。
+    </div>
+
+  </div>
+
+  <div class="card">
+
+    <div class="card-title">
+      【強気シナリオ】
+    </div>
+
+    <div>
+      金利上昇が抑えられ、景気への懸念が後退すれば、
+      株式やリスク資産が支援される可能性。
+    </div>
+
+  </div>
+
+  <div class="card">
+
+    <div class="card-title">
+      【弱気シナリオ】
+    </div>
+
+    <div>
+      金利急上昇、ドル急騰、インフレ再燃などが発生すれば、
+      株式や暗号資産への圧力が強まる可能性。
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- STRENGTH -->
+
+<div class="section">
+
+  <div class="section-title">
+    ⭐ 市場の強さ
+  </div>
+
+  <div class="table-wrap">
+
+    <table>
+
+      <tr>
+        <th>資産</th>
+        <th>強さ</th>
+        <th>コメント</th>
+      </tr>
+
+      <tr>
+        <td>株式</td>
+        <td class="stars">★★★☆☆</td>
+        <td>確認中</td>
+      </tr>
+
+      <tr>
+        <td>債券</td>
+        <td class="stars">★★★☆☆</td>
+        <td>確認中</td>
+      </tr>
+
+      <tr>
+        <td>ドル</td>
+        <td class="stars">★★★☆☆</td>
+        <td>確認中</td>
+      </tr>
+
+      <tr>
+        <td>Gold</td>
+        <td class="stars">★★★☆☆</td>
+        <td>確認中</td>
+      </tr>
+
+      <tr>
+        <td>Copper</td>
+        <td class="stars">★★★☆☆</td>
+        <td>確認中</td>
+      </tr>
+
+      <tr>
+        <td>原油</td>
+        <td class="stars">★★★☆☆</td>
+        <td>確認中</td>
+      </tr>
+
+      <tr>
+        <td>暗号資産</td>
+        <td class="stars">★★★☆☆</td>
+        <td>確認中</td>
+      </tr>
+
+    </table>
+
+  </div>
+
+</div>
+
+
+<!-- FINAL -->
+
+<div class="section">
+
+  <div class="section-title">
+    🎯 今日の市場を一言で
+  </div>
+
+  <div class="summary-main">
+    「市場データを確認中」
+  </div>
+
+  <div class="card">
+
+    <div class="card-title">
+      今日最重要の3つ
+    </div>
+
+    <div>① 米10年債</div>
+    <div>② DXY</div>
+    <div>③ NASDAQ / BTC</div>
+
+  </div>
+
+</div>
+
+
+<div class="footer">
+  Market Morning ｜ Personal Macro Dashboard
+</div>
 
 </div>
 

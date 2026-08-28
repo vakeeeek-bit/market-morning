@@ -729,6 +729,70 @@ td.nowrap {
   padding-bottom: 12px;
 }
 
+
+/* =====================================================
+   VER.3.3 NEWS TOPICS ACCORDION
+===================================================== */
+.news-topic {
+  border: 1px solid #e4e7eb;
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.news-topic-button {
+  width: 100%;
+  border: 0;
+  background: #fff;
+  color: #17202a;
+  padding: 13px 14px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  align-items: center;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+.news-topic-number {
+  color: #7a838d;
+  font-size: 12px;
+  font-weight: 800;
+}
+.news-topic-title {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 800;
+}
+.news-topic-toggle {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: #f1f3f6;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  font-weight: 800;
+}
+.news-topic-detail {
+  display: none;
+  padding: 0 14px 14px;
+}
+.news-topic.open .news-topic-detail {
+  display: block;
+}
+.news-topic.open .news-topic-toggle::before {
+  content: "−";
+}
+.news-topic:not(.open) .news-topic-toggle::before {
+  content: "＋";
+}
+.news-topics-note {
+  margin: 0 0 9px;
+  font-size: 11px;
+  color: #727b86;
+}
+
 </style>
 </head>
 
@@ -1949,22 +2013,13 @@ function updateWhatChanged(data) {
   setChangeCard('us2y', us2[0], us2[1]);
 
   const curve = d.us_2s10s || {};
-  const sameYieldDate =
-    m.us2y?.market_date &&
-    m.us10y?.market_date &&
-    m.us2y.market_date === m.us10y.market_date;
 
-  if (!sameYieldDate) {
-    setChangeCard(
-      '2s10s',
-      '日付不一致',
-      `2年 ${m.us2y?.market_date || '?'}｜10年 ${m.us10y?.market_date || '?'}`
-    );
-  } else if (curve.value_bp === null || curve.value_bp === undefined) {
+  if (curve.value_bp === null || curve.value_bp === undefined) {
     setChangeCard('2s10s', '確認できず', '-');
   } else {
     const change = curve.change_bp;
     let movement = '';
+
     if (change !== null && change !== undefined) {
       movement = change > 0
         ? `｜+${Number(change).toFixed(1)}bp スティープ化`
@@ -1972,10 +2027,11 @@ function updateWhatChanged(data) {
           ? `｜${Number(change).toFixed(1)}bp フラット化`
           : '｜変化なし';
     }
+
     setChangeCard(
       '2s10s',
       `${Number(curve.value_bp).toFixed(1)}bp`,
-      `${curve.curve || ''}${movement}`
+      `${curve.curve || ''}${movement}｜${curve.market_date || '日付不明'}`
     );
   }
 
@@ -2641,6 +2697,181 @@ function renderCards(
     }
   );
 
+}
+
+
+
+function renderNewsTopics(
+  id,
+  items
+) {
+  const element =
+    document.getElementById(id);
+
+  if (!element) return;
+
+  clearElement(element);
+
+  if (
+    !Array.isArray(items) ||
+    !items.length
+  ) {
+    element.textContent = '確認中';
+    return;
+  }
+
+  const note =
+    document.createElement('div');
+
+  note.className =
+    'news-topics-note';
+
+  note.textContent =
+    '見出しをタップすると詳細を表示します';
+
+  element.appendChild(note);
+
+  items.forEach(
+    (item, index) => {
+      const topic =
+        document.createElement('div');
+
+      topic.className =
+        'news-topic';
+
+      const button =
+        document.createElement('button');
+
+      button.type = 'button';
+      button.className =
+        'news-topic-button';
+
+      button.setAttribute(
+        'aria-expanded',
+        'false'
+      );
+
+      const number =
+        document.createElement('span');
+
+      number.className =
+        'news-topic-number';
+
+      number.textContent =
+        String(index + 1).padStart(2, '0');
+
+      const title =
+        document.createElement('span');
+
+      title.className =
+        'news-topic-title';
+
+      title.textContent =
+        safeText(
+          item.title ||
+          item.name ||
+          `ニュース ${index + 1}`
+        );
+
+      const toggle =
+        document.createElement('span');
+
+      toggle.className =
+        'news-topic-toggle';
+
+      const detail =
+        document.createElement('div');
+
+      detail.className =
+        'news-topic-detail';
+
+      const fields = [
+        ['確認された事実', item.fact || item.facts],
+        ['実際の市場反応', item.market_reaction || item.reaction],
+        ['分析', item.analysis || item.interpretation],
+        ['今後', item.outlook],
+        ['関連資産', item.related_assets]
+      ];
+
+      let fieldAdded = false;
+
+      fields.forEach(([label, content]) => {
+        if (!content) return;
+
+        const block =
+          document.createElement('div');
+
+        block.className =
+          'analysis-block';
+
+        const fieldLabel =
+          document.createElement('div');
+
+        fieldLabel.className =
+          'analysis-label';
+
+        fieldLabel.textContent =
+          label;
+
+        const fieldText =
+          document.createElement('div');
+
+        fieldText.className =
+          'analysis-text';
+
+        fieldText.textContent =
+          Array.isArray(content)
+            ? content.join(' / ')
+            : content;
+
+        block.appendChild(fieldLabel);
+        block.appendChild(fieldText);
+        detail.appendChild(block);
+
+        fieldAdded = true;
+      });
+
+      if (!fieldAdded) {
+        const body =
+          document.createElement('div');
+
+        body.className =
+          'card-text';
+
+        body.textContent =
+          safeText(
+            item.description ||
+            item.summary ||
+            item.text
+          );
+
+        detail.appendChild(body);
+      }
+
+      button.appendChild(number);
+      button.appendChild(title);
+      button.appendChild(toggle);
+
+      button.addEventListener(
+        'click',
+        () => {
+          const open =
+            topic.classList.toggle(
+              'open'
+            );
+
+          button.setAttribute(
+            'aria-expanded',
+            open ? 'true' : 'false'
+          );
+        }
+      );
+
+      topic.appendChild(button);
+      topic.appendChild(detail);
+      element.appendChild(topic);
+    }
+  );
 }
 
 
@@ -3399,7 +3630,7 @@ async function loadMarketReport() {
        NEWS
     ------------------------- */
 
-    renderCards(
+    renderNewsTopics(
       'market-news',
       report.news ||
       report.market_news

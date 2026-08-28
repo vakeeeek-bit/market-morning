@@ -583,6 +583,44 @@ td.nowrap {
   }
 }
 
+
+/* =====================================================
+   MARKET MORNING VER.3 UX
+===================================================== */
+.mm-v3-tools {
+  position: sticky; top: 0; z-index: 50;
+  margin: 0 0 14px; padding: 8px;
+  border: 1px solid #e5e7eb; border-radius: 14px;
+  background: rgba(255,255,255,.96);
+  box-shadow: 0 6px 20px rgba(15,23,42,.08);
+  backdrop-filter: blur(10px);
+}
+.mm-v3-nav { display:flex; gap:6px; overflow-x:auto; scrollbar-width:none; }
+.mm-v3-nav::-webkit-scrollbar { display:none; }
+.mm-v3-nav button, .mm-v3-actions button {
+  flex:0 0 auto; min-height:38px; padding:7px 11px;
+  border:1px solid #d8dde5; border-radius:10px;
+  background:#fff; color:#18202a; font:inherit;
+  font-size:12px; font-weight:700; cursor:pointer;
+}
+.mm-v3-actions { display:flex; gap:6px; margin-top:7px; }
+.mm-v3-actions button { flex:1; }
+.section.mm-collapsible > .section-title {
+  cursor:pointer; user-select:none; display:flex;
+  align-items:center; justify-content:space-between; gap:10px;
+}
+.section.mm-collapsible > .section-title::after {
+  content:"−"; flex:0 0 auto; width:26px; height:26px;
+  display:grid; place-items:center; border-radius:8px;
+  background:#f1f3f6; color:#4b5563; font-size:17px; font-weight:800;
+}
+.section.mm-collapsible.mm-collapsed > .section-title::after { content:"＋"; }
+.section.mm-collapsible.mm-collapsed > :not(.section-title) { display:none !important; }
+@media (max-width:560px) {
+  .mm-v3-tools { margin-left:-2px; margin-right:-2px; border-radius:12px; }
+  .section.mm-collapsible { padding-top:13px; padding-bottom:13px; }
+}
+
 </style>
 </head>
 
@@ -627,6 +665,22 @@ td.nowrap {
 
 </div>
 
+
+<div class="mm-v3-tools" id="mm-v3-tools">
+  <div class="mm-v3-nav">
+    <button type="button" data-mm-target="executive">📌 概要</button>
+    <button type="button" data-mm-target="news">🔥 News</button>
+    <button type="button" data-mm-target="market">📈 市場</button>
+    <button type="button" data-mm-target="commodity">🛢 商品</button>
+    <button type="button" data-mm-target="crypto">₿ Crypto</button>
+    <button type="button" data-mm-target="scenario">🎯 Scenario</button>
+    <button type="button" data-mm-target="watch">👀 Watch</button>
+  </div>
+  <div class="mm-v3-actions">
+    <button type="button" id="mm-expand-all">すべて展開</button>
+    <button type="button" id="mm-collapse-all">すべて閉じる</button>
+  </div>
+</div>
 
 <!-- =====================================================
      0 EXECUTIVE SUMMARY
@@ -728,7 +782,7 @@ td.nowrap {
     </div>
 
     <div class="market-card">
-      <div class="market-name">TOPIX</div>
+      <div class="market-name">TOPIX参考（1306 ETF）</div>
       <div class="market-price">確認中</div>
       <div class="market-change">1306.T参考値</div>
     </div>
@@ -1492,6 +1546,8 @@ function setupHistoryNavigation() {
   const latestButton = document.getElementById('latest-day');
 
   if (dateInput) {
+    dateInput.max = toDateKey(new Date());
+
     dateInput.addEventListener('change', () => {
       if (dateInput.value) {
         showHistoryDate(dateInput.value);
@@ -3474,9 +3530,104 @@ async function loadMarketReport() {
    START
 ===================================================== */
 
+
+/* =====================================================
+   MARKET MORNING VER.3 UX
+===================================================== */
+function mmText(element) {
+  return (element?.textContent || '').replace(/\s+/g, ' ').trim();
+}
+
+function setupVer3UX() {
+  const sections = Array.from(document.querySelectorAll('.section'));
+
+  sections.forEach((section, index) => {
+    const title = section.querySelector(':scope > .section-title');
+    if (!title) return;
+
+    section.classList.add('mm-collapsible');
+
+    if (index > 2) section.classList.add('mm-collapsed');
+
+    title.setAttribute('role', 'button');
+    title.setAttribute('tabindex', '0');
+    title.setAttribute(
+      'aria-expanded',
+      section.classList.contains('mm-collapsed') ? 'false' : 'true'
+    );
+
+    const toggle = () => {
+      const collapsed = section.classList.toggle('mm-collapsed');
+      title.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+    };
+
+    title.addEventListener('click', toggle);
+    title.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        toggle();
+      }
+    });
+  });
+
+  document.getElementById('mm-expand-all')?.addEventListener('click', () => {
+    sections.forEach(section => {
+      section.classList.remove('mm-collapsed');
+      section.querySelector(':scope > .section-title')
+        ?.setAttribute('aria-expanded', 'true');
+    });
+  });
+
+  document.getElementById('mm-collapse-all')?.addEventListener('click', () => {
+    sections.forEach(section => {
+      section.classList.add('mm-collapsed');
+      section.querySelector(':scope > .section-title')
+        ?.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  const keywords = {
+    executive: ['EXECUTIVE'],
+    news: ['NEWS', 'MAIN STORY', 'ニュース'],
+    market: ['MARKET DATA', 'MARKET OVERVIEW', '市場'],
+    commodity: ['COMMOD', 'COPPER', '商品'],
+    crypto: ['CRYPTO', '暗号'],
+    scenario: ['SCENARIO', 'シナリオ'],
+    watch: ['WATCH', '監視', '注目']
+  };
+
+  document.querySelectorAll('[data-mm-target]').forEach(button => {
+    button.addEventListener('click', () => {
+      const words = keywords[button.dataset.mmTarget] || [];
+      const target = sections.find(section => {
+        const title = mmText(
+          section.querySelector(':scope > .section-title')
+        ).toUpperCase();
+
+        return words.some(word =>
+          title.includes(word.toUpperCase())
+        );
+      });
+
+      if (!target) return;
+
+      target.classList.remove('mm-collapsed');
+      target.querySelector(':scope > .section-title')
+        ?.setAttribute('aria-expanded', 'true');
+
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  });
+}
+
 setupHistoryNavigation();
 
 loadSelectedDay();
+
+setupVer3UX();
 
 </script>
 

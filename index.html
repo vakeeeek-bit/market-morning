@@ -26,7 +26,7 @@ body {
     "Hiragino Kaku Gothic ProN",
     "Yu Gothic",
     sans-serif;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .container {
@@ -36,7 +36,7 @@ body {
   padding: 16px;
 }
 
-/* ヘッダー */
+/* HEADER */
 
 .header {
   background: #111827;
@@ -63,7 +63,7 @@ body {
   opacity: 0.9;
 }
 
-/* セクション */
+/* SECTION */
 
 .section {
   background: white;
@@ -79,11 +79,14 @@ body {
   margin-bottom: 14px;
 }
 
-.section-title span {
-  margin-right: 6px;
+.section-sub {
+  color: #68707a;
+  font-size: 13px;
+  margin-top: -8px;
+  margin-bottom: 14px;
 }
 
-/* エグゼクティブ */
+/* SUMMARY */
 
 .summary-main {
   font-size: 20px;
@@ -98,6 +101,10 @@ body {
   margin-bottom: 10px;
 }
 
+.summary-box:last-child {
+  margin-bottom: 0;
+}
+
 .label {
   font-size: 12px;
   color: #68707a;
@@ -109,7 +116,7 @@ body {
   font-weight: 600;
 }
 
-/* 勝者・敗者 */
+/* RANKING */
 
 .rank {
   display: flex;
@@ -136,7 +143,7 @@ body {
   font-weight: 700;
 }
 
-/* 市場カード */
+/* MARKET CARDS */
 
 .market-grid {
   display: grid;
@@ -148,6 +155,7 @@ body {
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   padding: 13px;
+  min-width: 0;
 }
 
 .market-name {
@@ -166,7 +174,7 @@ body {
   margin-top: 2px;
 }
 
-/* テーブル */
+/* TABLE */
 
 .table-wrap {
   overflow-x: auto;
@@ -191,35 +199,7 @@ td {
   white-space: nowrap;
 }
 
-/* ニュース */
-
-.news {
-  border-left: 4px solid #111827;
-  padding-left: 12px;
-  margin-bottom: 18px;
-}
-
-.news:last-child {
-  margin-bottom: 0;
-}
-
-.news-title {
-  font-weight: 700;
-  margin-bottom: 5px;
-}
-
-.news-label {
-  font-size: 12px;
-  font-weight: 700;
-  color: #68707a;
-}
-
-.news-text {
-  font-size: 14px;
-  margin-bottom: 7px;
-}
-
-/* カード */
+/* CARDS */
 
 .card {
   background: #f7f8fa;
@@ -237,32 +217,129 @@ td {
   margin-bottom: 6px;
 }
 
-/* 星 */
+.card-meta {
+  color: #68707a;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+/* AI REPORT */
+
+.report-header {
+  background: #111827;
+  color: white;
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.report-header-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.report-header-sub {
+  font-size: 12px;
+  opacity: 0.75;
+  margin-top: 3px;
+}
+
+.report-theme {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.report-text {
+  white-space: pre-line;
+}
+
+.report-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.report-item {
+  background: #f7f8fa;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.report-item-title {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.report-rating {
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-bottom: 7px;
+}
+
+.report-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.report-list li {
+  margin-bottom: 8px;
+}
+
+.report-list li:last-child {
+  margin-bottom: 0;
+}
+
+.winner-loser-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.winner-loser-item {
+  background: #f7f8fa;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 8px;
+}
+
+.winner-loser-item:last-child {
+  margin-bottom: 0;
+}
+
+.winner-loser-name {
+  font-weight: 700;
+}
+
+.winner-loser-reason {
+  font-size: 13px;
+  color: #4b5563;
+  margin-top: 3px;
+}
+
+/* STRENGTH */
 
 .stars {
   letter-spacing: 1px;
   font-size: 16px;
 }
 
-/* 条件 */
+/* STATUS */
 
-.condition {
-  padding: 12px;
-  border-radius: 10px;
+.status {
+  font-size: 12px;
+  color: #68707a;
+  margin-top: 10px;
+}
+
+.error-message {
   background: #f7f8fa;
-  margin-bottom: 9px;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 13px;
 }
 
-.condition:last-child {
-  margin-bottom: 0;
-}
-
-.condition strong {
-  display: block;
-  margin-bottom: 3px;
-}
-
-/* フッター */
+/* FOOTER */
 
 .footer {
   text-align: center;
@@ -274,7 +351,6 @@ td {
 /* PC */
 
 @media (min-width: 700px) {
-
   .container {
     padding: 30px;
   }
@@ -282,18 +358,24 @@ td {
   .market-grid {
     grid-template-columns: repeat(4, 1fr);
   }
-
 }
 
-/* iPhone */
+/* MOBILE */
+
+@media (max-width: 650px) {
+  .report-grid,
+  .winner-loser-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 @media (max-width: 480px) {
-
   .container {
     padding: 10px;
   }
 
-  .header {
+  .header,
+  .report-header {
     border-radius: 14px;
     padding: 18px 15px;
   }
@@ -310,11 +392,9 @@ td {
   .market-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
 }
 </style>
 </head>
-
 
 <body>
 
@@ -323,19 +403,9 @@ td {
 <!-- HEADER -->
 
 <div class="header">
-
-  <div class="header-title">
-    Market Morning
-  </div>
-
-  <div class="header-sub">
-    Global Macro Market Dashboard
-  </div>
-
-  <div class="date">
-    2026年8月26日（水）｜昨日の市場分析
-  </div>
-
+  <div class="header-title">Market Morning</div>
+  <div class="header-sub">Global Macro Market Dashboard</div>
+  <div class="date" id="market-updated">市場データを読み込み中...</div>
 </div>
 
 
@@ -343,37 +413,25 @@ td {
 
 <div class="section">
 
-  <div class="section-title">
-    📌 昨日の市場を一言で
-  </div>
+  <div class="section-title">📌 昨日の市場を一言で</div>
 
-  <div class="summary-main">
-    市場は方向感を探る展開
-  </div>
-
-  <div class="summary-box">
-    <div class="label">市場全体の雰囲気</div>
-    <div class="value">→ 方向感なし</div>
-  </div>
-
-  <div class="summary-box">
-    <div class="label">🔥 最大材料</div>
-    <div class="value">市場データ取得後に自動表示</div>
+  <div class="summary-main" id="top-summary">
+    市場データを確認中
   </div>
 
   <div class="summary-box">
     <div class="label">🏆 勝者</div>
-    <div class="value">NASDAQ / Gold / BTC</div>
+    <div class="value" id="auto-winners">確認中</div>
   </div>
 
   <div class="summary-box">
     <div class="label">⚠️ 敗者</div>
-    <div class="value">確認中</div>
+    <div class="value" id="auto-losers">確認中</div>
   </div>
 
   <div class="summary-box">
     <div class="label">📅 今日最重要</div>
-    <div class="value">米国経済指標・金利・FRB関連材料</div>
+    <div class="value" id="top-watch">ChatGPTレポートを確認中</div>
   </div>
 
 </div>
@@ -383,37 +441,35 @@ td {
 
 <div class="section">
 
-  <div class="section-title">
-    🏆 昨日の強かった市場 TOP5
-  </div>
+  <div class="section-title">🏆 昨日の強かった市場 TOP5</div>
 
   <div class="rank">
     <div class="rank-number">🥇</div>
-    <div class="rank-name">NASDAQ100</div>
+    <div class="rank-name">確認中</div>
     <div class="rank-value">確認中</div>
   </div>
 
   <div class="rank">
     <div class="rank-number">🥈</div>
-    <div class="rank-name">Gold</div>
+    <div class="rank-name">確認中</div>
     <div class="rank-value">確認中</div>
   </div>
 
   <div class="rank">
     <div class="rank-number">🥉</div>
-    <div class="rank-name">BTC</div>
+    <div class="rank-name">確認中</div>
     <div class="rank-value">確認中</div>
   </div>
 
   <div class="rank">
     <div class="rank-number">4</div>
-    <div class="rank-name">S&P500</div>
+    <div class="rank-name">確認中</div>
     <div class="rank-value">確認中</div>
   </div>
 
   <div class="rank">
     <div class="rank-number">5</div>
-    <div class="rank-name">Copper</div>
+    <div class="rank-name">確認中</div>
     <div class="rank-value">確認中</div>
   </div>
 
@@ -424,8 +480,10 @@ td {
 
 <div class="section">
 
-  <div class="section-title">
-    📊 主要市場
+  <div class="section-title">📊 主要市場</div>
+
+  <div class="section-sub">
+    GitHub Actionsによる市場データ自動更新
   </div>
 
   <div class="market-grid">
@@ -443,6 +501,24 @@ td {
     </div>
 
     <div class="market-card">
+      <div class="market-name">NASDAQ総合</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">前日比：確認中</div>
+    </div>
+
+    <div class="market-card">
+      <div class="market-name">NYダウ</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">前日比：確認中</div>
+    </div>
+
+    <div class="market-card">
+      <div class="market-name">Russell2000</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">前日比：確認中</div>
+    </div>
+
+    <div class="market-card">
       <div class="market-name">日経225</div>
       <div class="market-price">確認中</div>
       <div class="market-change">前日比：確認中</div>
@@ -451,7 +527,7 @@ td {
     <div class="market-card">
       <div class="market-name">TOPIX</div>
       <div class="market-price">確認中</div>
-      <div class="market-change">前日比：確認中</div>
+      <div class="market-change">参考値：1306.T</div>
     </div>
 
     <div class="market-card">
@@ -463,7 +539,7 @@ td {
     <div class="market-card">
       <div class="market-name">USD/JPY</div>
       <div class="market-price">確認中</div>
-      <div class="market-change">基準時刻：確認中</div>
+      <div class="market-change">前日比：確認中</div>
     </div>
 
     <div class="market-card">
@@ -474,6 +550,12 @@ td {
 
     <div class="market-card">
       <div class="market-name">Gold</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">前日比：確認中</div>
+    </div>
+
+    <div class="market-card">
+      <div class="market-name">Silver</div>
       <div class="market-price">確認中</div>
       <div class="market-change">前日比：確認中</div>
     </div>
@@ -491,597 +573,26 @@ td {
     </div>
 
     <div class="market-card">
+      <div class="market-name">Brent</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">前日比：確認中</div>
+    </div>
+
+    <div class="market-card">
       <div class="market-name">BTC</div>
       <div class="market-price">確認中</div>
-      <div class="market-change">24時間：確認中</div>
+      <div class="market-change">前日比：確認中</div>
     </div>
 
     <div class="market-card">
       <div class="market-name">ETH</div>
       <div class="market-price">確認中</div>
-      <div class="market-change">24時間：確認中</div>
+      <div class="market-change">前日比：確認中</div>
     </div>
 
   </div>
 
-</div>
-
-
-<!-- MARKET OVERVIEW -->
-
-<div class="section">
-
-  <div class="section-title">
-    🌍 昨日の市場を一目で見る
-  </div>
-
-  <div class="table-wrap">
-
-    <table>
-
-      <tr>
-        <th>市場</th>
-        <th>値動き</th>
-        <th>相対的な強さ</th>
-        <th>背景</th>
-      </tr>
-
-      <tr>
-        <td>米国株</td>
-        <td>確認中</td>
-        <td>確認中</td>
-        <td>確認中</td>
-      </tr>
-
-      <tr>
-        <td>日本株</td>
-        <td>確認中</td>
-        <td>確認中</td>
-        <td>確認中</td>
-      </tr>
-
-      <tr>
-        <td>欧州株</td>
-        <td>確認中</td>
-        <td>確認中</td>
-        <td>確認中</td>
-      </tr>
-
-      <tr>
-        <td>DXY</td>
-        <td>確認中</td>
-        <td>確認中</td>
-        <td>確認中</td>
-      </tr>
-
-      <tr>
-        <td>米10年債</td>
-        <td>確認中</td>
-        <td>確認中</td>
-        <td>確認中</td>
-      </tr>
-
-      <tr>
-        <td>Gold</td>
-        <td>確認中</td>
-        <td>確認中</td>
-        <td>確認中</td>
-      </tr>
-
-      <tr>
-        <td>Copper</td>
-        <td>確認中</td>
-        <td>確認中</td>
-        <td>確認中</td>
-      </tr>
-
-      <tr>
-        <td>原油</td>
-        <td>確認中</td>
-        <td>確認中</td>
-        <td>確認中</td>
-      </tr>
-
-      <tr>
-        <td>BTC</td>
-        <td>確認中</td>
-        <td>確認中</td>
-        <td>確認中</td>
-      </tr>
-
-    </table>
-
-  </div>
-
-</div>
-
-
-<!-- MAIN NEWS -->
-
-<div class="section">
-
-  <div class="section-title">
-    🔥 昨日の市場の主役
-  </div>
-
-  <div class="card">
-
-    <div class="card-title">
-      主役材料
-    </div>
-
-    <div class="news-text">
-      実際の市場データとニュースを照合して判断します。
-    </div>
-
-    <div class="news-label">
-      確信度
-    </div>
-
-    <div>
-      確認中
-    </div>
-
-  </div>
-
-</div>
-
-
-<!-- NEWS -->
-
-<div class="section">
-
-  <div class="section-title">
-    📰 市場を動かしたニュース
-  </div>
-
-  <div class="news">
-
-    <div class="news-title">
-      ① 重要ニュース
-    </div>
-
-    <div class="news-label">
-      何が起きた？
-    </div>
-
-    <div class="news-text">
-      Web検索による最新情報をここに表示します。
-    </div>
-
-    <div class="news-label">
-      市場反応
-    </div>
-
-    <div class="news-text">
-      株・債券・為替・商品・暗号資産への反応を確認します。
-    </div>
-
-  </div>
-
-
-  <div class="news">
-
-    <div class="news-title">
-      ② 重要ニュース
-    </div>
-
-    <div class="news-label">
-      何が起きた？
-    </div>
-
-    <div class="news-text">
-      確認中
-    </div>
-
-    <div class="news-label">
-      市場反応
-    </div>
-
-    <div class="news-text">
-      確認中
-    </div>
-
-  </div>
-
-</div>
-
-
-<!-- CENTRAL BANK -->
-
-<div class="section">
-
-  <div class="section-title">
-    🏦 Trump・米政府・中央銀行
-  </div>
-
-  <div class="card">
-
-    <div class="card-title">
-      米国
-    </div>
-
-    <div class="news-text">
-      Trump・米政府・FRBの発言や政策を確認します。
-    </div>
-
-  </div>
-
-  <div class="card">
-
-    <div class="card-title">
-      日本
-    </div>
-
-    <div class="news-text">
-      日銀・日本政府関連を確認します。
-    </div>
-
-  </div>
-
-  <div class="card">
-
-    <div class="card-title">
-      中国
-    </div>
-
-    <div class="news-text">
-      PBOC・中国政府関連を確認します。
-    </div>
-
-  </div>
-
-</div>
-
-
-<!-- INTERNAL STRENGTH -->
-
-<div class="section">
-
-  <div class="section-title">
-    🔎 市場内部の強弱
-  </div>
-
-  <div class="card">
-    <div class="card-title">大型株 vs 小型株</div>
-    <div>確認中</div>
-  </div>
-
-  <div class="card">
-    <div class="card-title">NASDAQ vs NYダウ</div>
-    <div>確認中</div>
-  </div>
-
-  <div class="card">
-    <div class="card-title">Gold vs Copper</div>
-    <div>確認中</div>
-  </div>
-
-  <div class="card">
-    <div class="card-title">BTC vs アルトコイン</div>
-    <div>確認中</div>
-  </div>
-
-</div>
-
-
-<!-- COPPER -->
-
-<div class="section">
-
-  <div class="section-title">
-    🟠 Copper重点調査
-  </div>
-
-  <div class="table-wrap">
-
-    <table>
-
-      <tr>
-        <th>項目</th>
-        <th>状況</th>
-      </tr>
-
-      <tr>
-        <td>LME在庫</td>
-        <td>確認中</td>
-      </tr>
-
-      <tr>
-        <td>SHFE在庫</td>
-        <td>確認中</td>
-      </tr>
-
-      <tr>
-        <td>COMEX在庫</td>
-        <td>確認中</td>
-      </tr>
-
-      <tr>
-        <td>中国需要</td>
-        <td>確認中</td>
-      </tr>
-
-      <tr>
-        <td>中国製造業</td>
-        <td>確認中</td>
-      </tr>
-
-      <tr>
-        <td>米国銅関税</td>
-        <td>確認中</td>
-      </tr>
-
-      <tr>
-        <td>鉱山供給</td>
-        <td>確認中</td>
-      </tr>
-
-      <tr>
-        <td>精錬供給</td>
-        <td>確認中</td>
-      </tr>
-
-    </table>
-
-  </div>
-
-</div>
-
-
-<!-- CRYPTO -->
-
-<div class="section">
-
-  <div class="section-title">
-    ₿ 暗号資産
-  </div>
-
-  <div class="market-grid">
-
-    <div class="market-card">
-      <div class="market-name">BTC</div>
-      <div class="market-price">確認中</div>
-      <div class="market-change">24時間：確認中</div>
-    </div>
-
-    <div class="market-card">
-      <div class="market-name">ETH</div>
-      <div class="market-price">確認中</div>
-      <div class="market-change">24時間：確認中</div>
-    </div>
-
-    <div class="market-card">
-      <div class="market-name">XRP</div>
-      <div class="market-price">確認中</div>
-      <div class="market-change">24時間：確認中</div>
-    </div>
-
-    <div class="market-card">
-      <div class="market-name">SOL</div>
-      <div class="market-price">確認中</div>
-      <div class="market-change">24時間：確認中</div>
-    </div>
-
-  </div>
-
-  <div class="card" style="margin-top:10px;">
-    <div class="card-title">暗号資産全体</div>
-    <div>判断：確認中</div>
-  </div>
-
-</div>
-
-
-<!-- MARKET ENVIRONMENT -->
-
-<div class="section">
-
-  <div class="section-title">
-    🌐 現在の市場環境
-  </div>
-
-  <div class="card">
-    <div class="card-title">①</div>
-    <div>確認中</div>
-  </div>
-
-  <div class="card">
-    <div class="card-title">②</div>
-    <div>確認中</div>
-  </div>
-
-  <div class="card">
-    <div class="card-title">③</div>
-    <div>確認中</div>
-  </div>
-
-</div>
-
-
-<!-- EVENTS -->
-
-<div class="section">
-
-  <div class="section-title">
-    📅 今日以降の重要イベント
-  </div>
-
-  <div class="table-wrap">
-
-    <table>
-
-      <tr>
-        <th>イベント</th>
-        <th>日本時間</th>
-        <th>予想</th>
-        <th>重要度</th>
-      </tr>
-
-      <tr>
-        <td>米国経済指標</td>
-        <td>確認中</td>
-        <td>確認中</td>
-        <td>★★★★★</td>
-      </tr>
-
-      <tr>
-        <td>FRB関連</td>
-        <td>確認中</td>
-        <td>確認中</td>
-        <td>★★★★★</td>
-      </tr>
-
-      <tr>
-        <td>中国経済指標</td>
-        <td>確認中</td>
-        <td>確認中</td>
-        <td>★★★★☆</td>
-      </tr>
-
-    </table>
-
-  </div>
-
-</div>
-
-
-<!-- WATCH CARDS -->
-
-<div class="section">
-
-  <div class="section-title">
-    👀 今日の注目カード
-  </div>
-
-  <div class="card">
-
-    <div class="card-title">
-      第1カード：米10年債 vs NASDAQ
-    </div>
-
-    <div>
-      金利上昇時にNASDAQがどの程度反応するかを確認。
-    </div>
-
-  </div>
-
-  <div class="card">
-
-    <div class="card-title">
-      第2カード：DXY vs Gold
-    </div>
-
-    <div>
-      ドルとGoldが通常と異なる動きをするか確認。
-    </div>
-
-  </div>
-
-  <div class="card">
-
-    <div class="card-title">
-      第3カード：BTC vs NASDAQ
-    </div>
-
-    <div>
-      株式市場と暗号資産の連動性に変化がないか確認。
-    </div>
-
-  </div>
-
-</div>
-
-
-<!-- CONDITIONS -->
-
-<div class="section">
-
-  <div class="section-title">
-    ⚠️ 今日、見方を変える条件
-  </div>
-
-  <div class="condition">
-
-    <strong>① 米10年債が急上昇</strong>
-
-    株・Gold・BTCへの下押し圧力が強まる可能性。
-
-  </div>
-
-  <div class="condition">
-
-    <strong>② DXYが急反発</strong>
-
-    Gold・Copper・BTCの上値が重くなる可能性。
-
-  </div>
-
-  <div class="condition">
-
-    <strong>③ 原油が急騰</strong>
-
-    インフレ懸念が再燃する可能性。
-
-  </div>
-
-  <div class="condition">
-
-    <strong>④ 株式市場の内部が急速に悪化</strong>
-
-    表面的な指数上昇だけでは判断できなくなる可能性。
-
-  </div>
-
-</div>
-
-
-<!-- SCENARIOS -->
-
-<div class="section">
-
-  <div class="section-title">
-    🎯 今後の市場シナリオ
-  </div>
-
-  <div class="card">
-
-    <div class="card-title">
-      【基本シナリオ】
-    </div>
-
-    <div>
-      現在の金利・景気・インフレ環境が大きく変化しなければ、
-      各市場が材料を探しながら推移する可能性。
-    </div>
-
-  </div>
-
-  <div class="card">
-
-    <div class="card-title">
-      【強気シナリオ】
-    </div>
-
-    <div>
-      金利上昇が抑えられ、景気への懸念が後退すれば、
-      株式やリスク資産が支援される可能性。
-    </div>
-
-  </div>
-
-  <div class="card">
-
-    <div class="card-title">
-      【弱気シナリオ】
-    </div>
-
-    <div>
-      金利急上昇、ドル急騰、インフレ再燃などが発生すれば、
-      株式や暗号資産への圧力が強まる可能性。
-    </div>
-
-  </div>
+  <div class="status" id="market-status"></div>
 
 </div>
 
@@ -1090,13 +601,15 @@ td {
 
 <div class="section">
 
-  <div class="section-title">
-    ⭐ 市場の強さ
+  <div class="section-title">⭐ 市場の強さ</div>
+
+  <div class="section-sub">
+    市場価格の前日比をもとにした簡易評価
   </div>
 
   <div class="table-wrap">
 
-    <table>
+    <table id="strength-table">
 
       <tr>
         <th>資産</th>
@@ -1153,28 +666,168 @@ td {
 </div>
 
 
+<!-- AI REPORT HEADER -->
+
+<div class="report-header">
+
+  <div class="report-header-title">
+    🧠 Market Morning AI Report
+  </div>
+
+  <div class="report-header-sub">
+    ChatGPTによるニュース調査・クロスアセット分析
+  </div>
+
+  <div class="report-header-sub" id="report-updated">
+    レポートを読み込み中...
+  </div>
+
+</div>
+
+
+<!-- MARKET THEME -->
+
+<div class="section">
+
+  <div class="section-title">📌 市場テーマ</div>
+
+  <div class="report-theme" id="report-theme">
+    レポートを読み込み中...
+  </div>
+
+</div>
+
+
+<!-- SUMMARY -->
+
+<div class="section">
+
+  <div class="section-title">📝 市場総括</div>
+
+  <div class="report-text" id="report-summary">
+    レポートを読み込み中...
+  </div>
+
+</div>
+
+
+<!-- WINNERS / LOSERS -->
+
+<div class="section">
+
+  <div class="section-title">🏆 勝者・敗者</div>
+
+  <div class="winner-loser-grid">
+
+    <div>
+      <div class="card-title">🏆 勝者</div>
+      <div id="report-winners">読み込み中...</div>
+    </div>
+
+    <div>
+      <div class="card-title">⚠️ 敗者</div>
+      <div id="report-losers">読み込み中...</div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- CROSS ASSET -->
+
+<div class="section">
+
+  <div class="section-title">🌍 クロスアセット分析</div>
+
+  <div class="report-grid">
+
+    <div class="report-item">
+      <div class="report-item-title">📈 株式</div>
+      <div class="report-rating" id="rating-equities">★★★☆☆</div>
+      <div class="report-text" id="report-equities">確認中</div>
+    </div>
+
+    <div class="report-item">
+      <div class="report-item-title">🏦 債券</div>
+      <div class="report-rating" id="rating-bonds">★★★☆☆</div>
+      <div class="report-text" id="report-bonds">確認中</div>
+    </div>
+
+    <div class="report-item">
+      <div class="report-item-title">💵 為替</div>
+      <div class="report-rating" id="rating-fx">★★★☆☆</div>
+      <div class="report-text" id="report-fx">確認中</div>
+    </div>
+
+    <div class="report-item">
+      <div class="report-item-title">🥇 商品</div>
+      <div class="report-rating" id="rating-commodities">★★★☆☆</div>
+      <div class="report-text" id="report-commodities">確認中</div>
+    </div>
+
+    <div class="report-item">
+      <div class="report-item-title">₿ 暗号資産</div>
+      <div class="report-rating" id="rating-crypto">★★★☆☆</div>
+      <div class="report-text" id="report-crypto">確認中</div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- COPPER -->
+
+<div class="section">
+
+  <div class="section-title">🟠 Copper重点調査</div>
+
+  <div class="report-rating" id="rating-copper">
+    ★★★☆☆
+  </div>
+
+  <div class="report-text" id="report-copper">
+    レポートを読み込み中...
+  </div>
+
+</div>
+
+
+<!-- TODAY WATCH -->
+
+<div class="section">
+
+  <div class="section-title">👀 今日の注目</div>
+
+  <ul class="report-list" id="report-watch">
+    <li>レポートを読み込み中...</li>
+  </ul>
+
+</div>
+
+
+<!-- SCENARIOS -->
+
+<div class="section">
+
+  <div class="section-title">🎯 市場シナリオ</div>
+
+  <div id="report-scenarios">
+    レポートを読み込み中...
+  </div>
+
+</div>
+
+
 <!-- FINAL -->
 
 <div class="section">
 
-  <div class="section-title">
-    🎯 今日の市場を一言で
-  </div>
+  <div class="section-title">🎯 今日の市場を一言で</div>
 
-  <div class="summary-main">
-    「市場データを確認中」
-  </div>
-
-  <div class="card">
-
-    <div class="card-title">
-      今日最重要の3つ
-    </div>
-
-    <div>① 米10年債</div>
-    <div>② DXY</div>
-    <div>③ NASDAQ / BTC</div>
-
+  <div class="summary-main" id="final-summary">
+    ChatGPTレポートを読み込み中
   </div>
 
 </div>
@@ -1185,10 +838,57 @@ td {
 </div>
 
 </div>
+
+
 <script>
+
+/* =====================================================
+   共通
+===================================================== */
+
+function validChange(market) {
+
+  if (!market) return null;
+
+  if (
+    market.change_pct === null ||
+    market.change_pct === undefined
+  ) {
+    return null;
+  }
+
+  const value = Number(market.change_pct);
+
+  return Number.isFinite(value) ? value : null;
+}
+
+
+function average(values) {
+
+  const valid = values.filter(
+    value => value !== null && Number.isFinite(value)
+  );
+
+  if (valid.length === 0) return null;
+
+  return valid.reduce(
+    (sum, value) => sum + value,
+    0
+  ) / valid.length;
+}
+
+
+/* =====================================================
+   MARKET DATA
+===================================================== */
+
 async function loadMarketData() {
+
   try {
-    const response = await fetch('/data/market.json?ts=' + Date.now());
+
+    const response = await fetch(
+      '/data/market.json?ts=' + Date.now()
+    );
 
     if (!response.ok) {
       throw new Error('market.jsonの取得に失敗しました');
@@ -1197,23 +897,17 @@ async function loadMarketData() {
     const data = await response.json();
     const markets = data.markets || {};
 
-    console.log('Market data:', data);
-
-    // =========================
-    // 市場データ表示
-    // =========================
-
     updateMarketCard('S&P500', markets.sp500);
     updateMarketCard('NASDAQ100', markets.nasdaq100);
     updateMarketCard('NASDAQ総合', markets.nasdaq);
     updateMarketCard('NYダウ', markets.dow);
     updateMarketCard('Russell2000', markets.russell2000);
+
     updateMarketCard('日経225', markets.nikkei225);
     updateMarketCard('TOPIX', markets.topix);
 
     updateMarketCard('DXY', markets.dxy);
     updateMarketCard('USD/JPY', markets.usdjpy);
-
     updateMarketCard('米10年債', markets.us10y);
 
     updateMarketCard('Gold', markets.gold);
@@ -1227,115 +921,112 @@ async function loadMarketData() {
 
     updatePageDate(data.updated_at);
 
-    // =========================
-    // 自動ランキング
-    // =========================
-
     updateMarketRanking(markets);
-
-    // =========================
-    // 星5段階評価
-    // =========================
-
     updateStrengthTable(markets);
-
-    // =========================
-    // 冒頭の勝者・敗者
-    // =========================
-
     updateExecutiveSummary(markets);
 
+    document.getElementById('market-status').textContent =
+      '市場データ取得成功';
+
   } catch (error) {
-    console.error('Market Morning error:', error);
+
+    console.error(error);
+
+    document.getElementById('market-status').textContent =
+      '市場データを取得できませんでした';
+
   }
 }
 
-
-// ======================================================
-// 市場カード更新
-// ======================================================
 
 function updateMarketCard(name, market) {
 
   if (!market) return;
 
-  const cards = document.querySelectorAll('.market-card');
+  const cards =
+    document.querySelectorAll('.market-card');
 
   cards.forEach(card => {
 
-    const nameElement = card.querySelector('.market-name');
+    const nameElement =
+      card.querySelector('.market-name');
 
     if (!nameElement) return;
 
-    if (nameElement.textContent.trim() === name) {
-
-      const priceElement = card.querySelector('.market-price');
-      const changeElement = card.querySelector('.market-change');
-
-      if (priceElement) {
-
-        if (market.price !== null && market.price !== undefined) {
-          priceElement.textContent = formatPrice(name, market.price);
-        } else {
-          priceElement.textContent = '確認できず';
-        }
-
-      }
-
-      if (changeElement) {
-
-        if (
-          market.change_pct !== null &&
-          market.change_pct !== undefined
-        ) {
-
-          const pct = Number(market.change_pct);
-
-          const arrow =
-            pct > 0 ? '↑' :
-            pct < 0 ? '↓' :
-            '→';
-
-          const sign = pct > 0 ? '+' : '';
-
-          changeElement.textContent =
-            `${arrow} ${sign}${pct.toFixed(2)}%`;
-
-        } else {
-
-          changeElement.textContent =
-            '前日比：確認できず';
-
-        }
-
-      }
-
+    if (
+      nameElement.textContent.trim() !== name
+    ) {
+      return;
     }
 
-  });
+    const priceElement =
+      card.querySelector('.market-price');
 
+    const changeElement =
+      card.querySelector('.market-change');
+
+    if (priceElement) {
+
+      if (
+        market.price !== null &&
+        market.price !== undefined
+      ) {
+
+        priceElement.textContent =
+          formatPrice(name, market.price);
+
+      } else {
+
+        priceElement.textContent =
+          '確認できず';
+
+      }
+    }
+
+    if (changeElement) {
+
+      const pct =
+        validChange(market);
+
+      if (pct === null) {
+
+        changeElement.textContent =
+          '前日比：確認できず';
+
+      } else {
+
+        const arrow =
+          pct > 0 ? '↑' :
+          pct < 0 ? '↓' :
+          '→';
+
+        const sign =
+          pct > 0 ? '+' : '';
+
+        changeElement.textContent =
+          `${arrow} ${sign}${pct.toFixed(2)}%`;
+      }
+    }
+  });
 }
 
-
-// ======================================================
-// 価格表示
-// ======================================================
 
 function formatPrice(name, price) {
 
   const number = Number(price);
 
-  if (isNaN(number)) return price;
+  if (!Number.isFinite(number)) {
+    return '確認できず';
+  }
 
   if (name === '米10年債') {
     return number.toFixed(3) + '%';
   }
 
-  if (name === 'USD/JPY') {
-    return number.toFixed(2);
-  }
-
-  if (name === 'DXY') {
+  if (
+    name === 'USD/JPY' ||
+    name === 'DXY'
+  ) {
     return number.toFixed(2);
   }
 
@@ -1343,6 +1034,7 @@ function formatPrice(name, price) {
     name === 'BTC' ||
     name === 'ETH'
   ) {
+
     return '$' + number.toLocaleString(
       'en-US',
       {
@@ -1357,6 +1049,7 @@ function formatPrice(name, price) {
     name === 'WTI' ||
     name === 'Brent'
   ) {
+
     return '$' + number.toLocaleString(
       'en-US',
       {
@@ -1375,236 +1068,152 @@ function formatPrice(name, price) {
       maximumFractionDigits: 2
     }
   );
-
 }
 
-
-// ======================================================
-// 更新日時
-// ======================================================
 
 function updatePageDate(updatedAt) {
 
   if (!updatedAt) return;
 
-  const headerDate =
-    document.querySelector('.header .date');
-
-  if (headerDate) {
-    headerDate.textContent =
-      `データ更新：${updatedAt} JST`;
-  }
-
+  document.getElementById(
+    'market-updated'
+  ).textContent =
+    `市場データ更新：${updatedAt} JST`;
 }
 
 
-// ======================================================
-// 有効な前日比を取得
-// ======================================================
+/* =====================================================
+   RANKING
+===================================================== */
 
-function validChange(market) {
+function getRankingCandidates(markets) {
 
-  if (!market) return null;
+  return [
 
-  if (
-    market.change_pct === null ||
-    market.change_pct === undefined
-  ) {
-    return null;
-  }
+    ['S&P500', markets.sp500],
+    ['NASDAQ100', markets.nasdaq100],
+    ['NASDAQ総合', markets.nasdaq],
+    ['NYダウ', markets.dow],
+    ['Russell2000', markets.russell2000],
 
-  const value = Number(market.change_pct);
+    ['日経225', markets.nikkei225],
+    ['TOPIX', markets.topix],
 
-  if (isNaN(value)) return null;
+    ['DXY', markets.dxy],
 
-  return value;
+    ['Gold', markets.gold],
+    ['Silver', markets.silver],
+    ['Copper', markets.copper],
+    ['WTI', markets.wti],
+    ['Brent', markets.brent],
 
+    ['BTC', markets.btc],
+    ['ETH', markets.eth]
+
+  ]
+  .map(item => ({
+    name: item[0],
+    change: validChange(item[1])
+  }))
+  .filter(item =>
+    item.change !== null
+  );
 }
 
-
-// ======================================================
-// ランキング
-// ======================================================
 
 function updateMarketRanking(markets) {
 
-  const candidates = [
-
-    {
-      name: 'S&P500',
-      market: markets.sp500
-    },
-
-    {
-      name: 'NASDAQ100',
-      market: markets.nasdaq100
-    },
-
-    {
-      name: 'NASDAQ総合',
-      market: markets.nasdaq
-    },
-
-    {
-      name: 'NYダウ',
-      market: markets.dow
-    },
-
-    {
-      name: 'Russell2000',
-      market: markets.russell2000
-    },
-
-    {
-      name: '日経225',
-      market: markets.nikkei225
-    },
-
-    {
-      name: 'TOPIX',
-      market: markets.topix
-    },
-
-    {
-      name: 'DXY',
-      market: markets.dxy
-    },
-
-    {
-      name: 'Gold',
-      market: markets.gold
-    },
-
-    {
-      name: 'Silver',
-      market: markets.silver
-    },
-
-    {
-      name: 'Copper',
-      market: markets.copper
-    },
-
-    {
-      name: 'WTI',
-      market: markets.wti
-    },
-
-    {
-      name: 'Brent',
-      market: markets.brent
-    },
-
-    {
-      name: 'BTC',
-      market: markets.btc
-    },
-
-    {
-      name: 'ETH',
-      market: markets.eth
-    }
-
-  ];
-
-  const available = candidates
-    .map(item => {
-
-      return {
-        ...item,
-        change:
-          validChange(item.market)
-      };
-
-    })
-    .filter(item =>
-      item.change !== null
-    );
+  const candidates =
+    getRankingCandidates(markets);
 
   const strongest =
-    [...available]
+    [...candidates]
       .sort((a, b) =>
         b.change - a.change
       )
       .slice(0, 5);
 
-  const rankingRows =
+  const rows =
     document.querySelectorAll('.rank');
 
-  rankingRows.forEach(
-    (row, index) => {
+  rows.forEach((row, index) => {
 
-      const item =
-        strongest[index];
+    const item = strongest[index];
 
-      if (!item) return;
+    if (!item) return;
 
-      const name =
-        row.querySelector('.rank-name');
+    const name =
+      row.querySelector('.rank-name');
 
-      const value =
-        row.querySelector('.rank-value');
+    const value =
+      row.querySelector('.rank-value');
 
-      if (name) {
-        name.textContent =
-          item.name;
-      }
-
-      if (value) {
-
-        const sign =
-          item.change > 0
-            ? '+'
-            : '';
-
-        value.textContent =
-          `${sign}${item.change.toFixed(2)}%`;
-
-      }
-
+    if (name) {
+      name.textContent = item.name;
     }
-  );
 
+    if (value) {
+
+      const sign =
+        item.change > 0 ? '+' : '';
+
+      value.textContent =
+        `${sign}${item.change.toFixed(2)}%`;
+    }
+  });
 }
 
 
-// ======================================================
-// 平均値
-// ======================================================
+/* =====================================================
+   EXECUTIVE SUMMARY
+===================================================== */
 
-function average(values) {
+function updateExecutiveSummary(markets) {
 
-  const valid =
-    values.filter(
-      value =>
-        value !== null &&
-        value !== undefined &&
-        !isNaN(value)
-    );
+  const candidates =
+    getRankingCandidates(markets);
 
-  if (valid.length === 0) {
-    return null;
+  if (candidates.length === 0) {
+    return;
   }
 
-  return valid.reduce(
-    (sum, value) =>
-      sum + value,
-    0
-  ) / valid.length;
+  const winners =
+    [...candidates]
+      .sort((a, b) =>
+        b.change - a.change
+      )
+      .slice(0, 3);
 
+  const losers =
+    [...candidates]
+      .sort((a, b) =>
+        a.change - b.change
+      )
+      .slice(0, 3);
+
+  document.getElementById(
+    'auto-winners'
+  ).textContent =
+    winners.map(item =>
+      `${item.name} (${item.change > 0 ? '+' : ''}${item.change.toFixed(2)}%)`
+    ).join(' / ');
+
+  document.getElementById(
+    'auto-losers'
+  ).textContent =
+    losers.map(item =>
+      `${item.name} (${item.change > 0 ? '+' : ''}${item.change.toFixed(2)}%)`
+    ).join(' / ');
 }
 
 
-// ======================================================
-// 星評価
-// ======================================================
+/* =====================================================
+   STRENGTH
+===================================================== */
 
 function scoreToStars(score) {
 
-  if (
-    score === null ||
-    score === undefined
-  ) {
+  if (score === null) {
     return '★★★☆☆';
   }
 
@@ -1625,20 +1234,12 @@ function scoreToStars(score) {
   }
 
   return '★☆☆☆☆';
-
 }
 
 
-// ======================================================
-// コメント
-// ======================================================
-
 function strengthComment(score) {
 
-  if (
-    score === null ||
-    score === undefined
-  ) {
+  if (score === null) {
     return '判断材料不足';
   }
 
@@ -1659,13 +1260,8 @@ function strengthComment(score) {
   }
 
   return '相対的にかなり弱い';
-
 }
 
-
-// ======================================================
-// 星評価テーブル
-// ======================================================
 
 function updateStrengthTable(markets) {
 
@@ -1681,12 +1277,12 @@ function updateStrengthTable(markets) {
   ]);
 
   /*
-    債券は利回りと価格が逆方向。
+    米10年債は「利回り」。
 
-    米10年債利回りが低下
-    → 債券価格にはプラス
+    利回り上昇 = 債券価格下落
+    利回り低下 = 債券価格上昇
 
-    そのため符号を逆にする。
+    そのため符号を反転。
   */
 
   const yieldChange =
@@ -1697,66 +1293,51 @@ function updateStrengthTable(markets) {
       ? null
       : -yieldChange;
 
-  const dollarScore =
-    validChange(markets.dxy);
-
-  const goldScore =
-    validChange(markets.gold);
-
-  const copperScore =
-    validChange(markets.copper);
-
-  const oilScore = average([
-
-    validChange(markets.wti),
-    validChange(markets.brent)
-
-  ]);
-
-  const cryptoScore = average([
-
-    validChange(markets.btc),
-    validChange(markets.eth)
-
-  ]);
-
   const scores = {
 
     '株式': stockScore,
 
     '債券': bondScore,
 
-    'ドル': dollarScore,
+    'ドル':
+      validChange(markets.dxy),
 
-    'Gold': goldScore,
+    'Gold':
+      validChange(markets.gold),
 
-    'Copper': copperScore,
+    'Copper':
+      validChange(markets.copper),
 
-    '原油': oilScore,
+    '原油':
+      average([
+        validChange(markets.wti),
+        validChange(markets.brent)
+      ]),
 
-    '暗号資産': cryptoScore
+    '暗号資産':
+      average([
+        validChange(markets.btc),
+        validChange(markets.eth)
+      ])
 
   };
 
-
   const rows =
-    document.querySelectorAll('table tr');
+    document.querySelectorAll(
+      '#strength-table tr'
+    );
 
   rows.forEach(row => {
 
     const cells =
       row.querySelectorAll('td');
 
-    if (cells.length < 3) {
-      return;
-    }
+    if (cells.length < 3) return;
 
     const asset =
       cells[0].textContent.trim();
 
-    if (!(asset in scores)) {
-      return;
-    }
+    if (!(asset in scores)) return;
 
     const score =
       scores[asset];
@@ -1766,130 +1347,400 @@ function updateStrengthTable(markets) {
 
     cells[2].textContent =
       strengthComment(score);
-
   });
-
 }
 
 
-// ======================================================
-// 冒頭の勝者・敗者を更新
-// ======================================================
+/* =====================================================
+   CHATGPT REPORT
+===================================================== */
 
-function updateExecutiveSummary(markets) {
+function makeStars(rating) {
 
-  const candidates = [
+  let value =
+    Math.round(Number(rating));
 
-    ['S&P500', markets.sp500],
-    ['NASDAQ100', markets.nasdaq100],
-    ['NASDAQ総合', markets.nasdaq],
-    ['NYダウ', markets.dow],
-    ['Russell2000', markets.russell2000],
-    ['日経225', markets.nikkei225],
-    ['TOPIX', markets.topix],
-    ['DXY', markets.dxy],
-    ['Gold', markets.gold],
-    ['Silver', markets.silver],
-    ['Copper', markets.copper],
-    ['WTI', markets.wti],
-    ['Brent', markets.brent],
-    ['BTC', markets.btc],
-    ['ETH', markets.eth]
+  if (!Number.isFinite(value)) {
+    value = 3;
+  }
 
-  ]
-    .map(item => {
+  value =
+    Math.max(1, Math.min(5, value));
 
-      return {
-        name: item[0],
-        change:
-          validChange(item[1])
-      };
-
-    })
-    .filter(item =>
-      item.change !== null
-    );
-
-
-  const winners =
-    [...candidates]
-      .sort((a, b) =>
-        b.change - a.change
-      )
-      .slice(0, 3);
-
-
-  const losers =
-    [...candidates]
-      .sort((a, b) =>
-        a.change - b.change
-      )
-      .slice(0, 3);
-
-
-  const boxes =
-    document.querySelectorAll(
-      '.summary-box'
-    );
-
-
-  boxes.forEach(box => {
-
-    const label =
-      box.querySelector('.label');
-
-    const value =
-      box.querySelector('.value');
-
-    if (!label || !value) {
-      return;
-    }
-
-
-    const labelText =
-      label.textContent;
-
-
-    if (
-      labelText.includes('勝者')
-    ) {
-
-      value.textContent =
-        winners
-          .map(
-            item =>
-              `${item.name} (${item.change > 0 ? '+' : ''}${item.change.toFixed(2)}%)`
-          )
-          .join(' / ');
-
-    }
-
-
-    if (
-      labelText.includes('敗者')
-    ) {
-
-      value.textContent =
-        losers
-          .map(
-            item =>
-              `${item.name} (${item.change > 0 ? '+' : ''}${item.change.toFixed(2)}%)`
-          )
-          .join(' / ');
-
-    }
-
-  });
-
+  return (
+    '★'.repeat(value) +
+    '☆'.repeat(5 - value)
+  );
 }
 
 
-// ======================================================
-// 実行
-// ======================================================
+async function loadMarketReport() {
+
+  try {
+
+    const response = await fetch(
+      '/data/report.json?ts=' + Date.now()
+    );
+
+    if (!response.ok) {
+      throw new Error(
+        'report.jsonの取得に失敗しました'
+      );
+    }
+
+    const report =
+      await response.json();
+
+    /* 更新日時 */
+
+    document.getElementById(
+      'report-updated'
+    ).textContent =
+      report.updated_at
+        ? `レポート更新：${report.updated_at}`
+        : 'レポート更新時刻：確認できず';
+
+
+    /* テーマ */
+
+    const theme =
+      report.market_theme ||
+      '市場テーマを確認中';
+
+    document.getElementById(
+      'report-theme'
+    ).textContent = theme;
+
+
+    /* 総括 */
+
+    const summary =
+      report.summary ||
+      '市場総括を確認中';
+
+    document.getElementById(
+      'report-summary'
+    ).textContent = summary;
+
+
+    /* 上部にも反映 */
+
+    document.getElementById(
+      'top-summary'
+    ).textContent = theme;
+
+    document.getElementById(
+      'final-summary'
+    ).textContent = theme;
+
+
+    /* 勝者・敗者 */
+
+    renderWinnerLoser(
+      'report-winners',
+      report.winners
+    );
+
+    renderWinnerLoser(
+      'report-losers',
+      report.losers
+    );
+
+
+    /* 資産分析 */
+
+    renderAsset(
+      'equities',
+      report.equities
+    );
+
+    renderAsset(
+      'bonds',
+      report.bonds
+    );
+
+    renderAsset(
+      'fx',
+      report.fx
+    );
+
+    renderAsset(
+      'commodities',
+      report.commodities
+    );
+
+    renderAsset(
+      'crypto',
+      report.crypto
+    );
+
+    renderAsset(
+      'copper',
+      report.copper
+    );
+
+
+    /* 今日の注目 */
+
+    renderWatch(
+      report.today_watch
+    );
+
+
+    /* 上部の今日最重要 */
+
+    if (
+      Array.isArray(report.today_watch) &&
+      report.today_watch.length > 0
+    ) {
+
+      document.getElementById(
+        'top-watch'
+      ).textContent =
+        report.today_watch
+          .slice(0, 3)
+          .join(' / ');
+    }
+
+
+    /* シナリオ */
+
+    renderScenarios(
+      report.scenarios
+    );
+
+  } catch (error) {
+
+    console.error(error);
+
+    document.getElementById(
+      'report-theme'
+    ).textContent =
+      'ChatGPTレポートを取得できませんでした';
+
+    document.getElementById(
+      'report-summary'
+    ).textContent =
+      'data/report.json を確認してください';
+
+    document.getElementById(
+      'report-updated'
+    ).textContent =
+      'レポート取得失敗';
+  }
+}
+
+
+/* =====================================================
+   REPORT WINNER / LOSER
+===================================================== */
+
+function renderWinnerLoser(id, items) {
+
+  const element =
+    document.getElementById(id);
+
+  if (!element) return;
+
+  element.innerHTML = '';
+
+  if (
+    !Array.isArray(items) ||
+    items.length === 0
+  ) {
+
+    element.textContent =
+      '確認中';
+
+    return;
+  }
+
+  items.forEach(item => {
+
+    const box =
+      document.createElement('div');
+
+    box.className =
+      'winner-loser-item';
+
+    const name =
+      document.createElement('div');
+
+    name.className =
+      'winner-loser-name';
+
+    name.textContent =
+      item.name || '確認中';
+
+    const reason =
+      document.createElement('div');
+
+    reason.className =
+      'winner-loser-reason';
+
+    reason.textContent =
+      item.reason || '';
+
+    box.appendChild(name);
+    box.appendChild(reason);
+
+    element.appendChild(box);
+  });
+}
+
+
+/* =====================================================
+   REPORT ASSET
+===================================================== */
+
+function renderAsset(name, data) {
+
+  if (!data) return;
+
+  const text =
+    document.getElementById(
+      `report-${name}`
+    );
+
+  const rating =
+    document.getElementById(
+      `rating-${name}`
+    );
+
+  if (text) {
+
+    text.textContent =
+      data.summary ||
+      '確認中';
+  }
+
+  if (rating) {
+
+    rating.textContent =
+      makeStars(data.rating);
+  }
+}
+
+
+/* =====================================================
+   TODAY WATCH
+===================================================== */
+
+function renderWatch(items) {
+
+  const element =
+    document.getElementById(
+      'report-watch'
+    );
+
+  if (!element) return;
+
+  element.innerHTML = '';
+
+  if (
+    !Array.isArray(items) ||
+    items.length === 0
+  ) {
+
+    const li =
+      document.createElement('li');
+
+    li.textContent =
+      '確認中';
+
+    element.appendChild(li);
+
+    return;
+  }
+
+  items.forEach(item => {
+
+    const li =
+      document.createElement('li');
+
+    li.textContent = item;
+
+    element.appendChild(li);
+  });
+}
+
+
+/* =====================================================
+   SCENARIOS
+===================================================== */
+
+function renderScenarios(items) {
+
+  const element =
+    document.getElementById(
+      'report-scenarios'
+    );
+
+  if (!element) return;
+
+  element.innerHTML = '';
+
+  if (
+    !Array.isArray(items) ||
+    items.length === 0
+  ) {
+
+    element.textContent =
+      '確認中';
+
+    return;
+  }
+
+  items.forEach(item => {
+
+    const card =
+      document.createElement('div');
+
+    card.className = 'card';
+
+    const title =
+      document.createElement('div');
+
+    title.className =
+      'card-title';
+
+    let titleText =
+      item.name ||
+      '市場シナリオ';
+
+    if (item.probability) {
+      titleText +=
+        ` ｜ ${item.probability}`;
+    }
+
+    title.textContent =
+      titleText;
+
+    const description =
+      document.createElement('div');
+
+    description.className =
+      'report-text';
+
+    description.textContent =
+      item.description || '';
+
+    card.appendChild(title);
+    card.appendChild(description);
+
+    element.appendChild(card);
+  });
+}
+
+
+/* =====================================================
+   START
+===================================================== */
 
 loadMarketData();
+loadMarketReport();
 
 </script>
+
 </body>
 </html>

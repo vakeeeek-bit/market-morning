@@ -1933,6 +1933,12 @@ function updateMarketCard(
 
   if (!market) return;
 
+  const marketUnavailable =
+    market.price === null ||
+    market.price === undefined ||
+    market.status === '取得失敗' ||
+    market.status === '確認できず';
+
   const cards =
     document.querySelectorAll(
       '.market-card'
@@ -1968,10 +1974,12 @@ function updateMarketCard(
     if (priceElement) {
 
       priceElement.textContent =
-        formatPrice(
-          name,
-          market.price
-        );
+        marketUnavailable
+          ? '確認できず'
+          : formatPrice(
+              name,
+              market.price
+            );
 
     }
 
@@ -2017,6 +2025,14 @@ function formatPrice(
   price
 ) {
 
+  if (
+    price === null ||
+    price === undefined ||
+    price === ''
+  ) {
+    return '確認できず';
+  }
+
   const number =
     Number(price);
 
@@ -2025,7 +2041,10 @@ function formatPrice(
   }
 
 
-  if (name === '米10年債') {
+  if (
+    name === '米10年債' ||
+    name === '米2年債'
+  ) {
     return number.toFixed(3) + '%';
   }
 

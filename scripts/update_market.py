@@ -89,24 +89,31 @@ def get_market_data(info):
 
 def get_fred_2y():
     """
-    FREDのDGS2（日次・米2年国債利回り）をCSVで取得。
-    yfinanceに安定した2年債利回り指数が見当たらないため、
-    2年金利だけ公式FREDを利用する。
+    FRED DGS2（日次・米2年国債利回り）をCSVで取得。
+    FRED CSVの日付列名は環境により observation_date 等になるため、
+    先頭列を日付列として安全に扱う。
     """
+    import pandas as pd
+
     url = (
         "https://fred.stlouisfed.org/graph/"
         "fredgraph.csv?id=DGS2"
     )
 
-    hist = yf.download  # requirements互換確認用ではなく未使用
-
-    import pandas as pd
-
     df = pd.read_csv(url)
+
+    if "DGS2" not in df.columns or len(df.columns) < 2:
+        raise ValueError(
+            f"FRED DGS2 CSVの列を確認できません: {list(df.columns)}"
+        )
+
+    date_column = df.columns[0]
+
     df["DGS2"] = pd.to_numeric(
         df["DGS2"],
         errors="coerce"
     )
+
     df = df.dropna(subset=["DGS2"])
 
     if len(df) < 2:
@@ -146,8 +153,8 @@ def get_fred_2y():
             else None
         ),
         "status": "取得成功",
-        "market_date": str(latest["DATE"]),
-        "previous_market_date": str(previous["DATE"]),
+        "market_date": str(latest[date_column]),
+        "previous_market_date": str(previous[date_column]),
     }
 
 

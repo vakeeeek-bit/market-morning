@@ -670,6 +670,65 @@ td.nowrap {
   .change-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
 
+
+/* =====================================================
+   MARKET MORNING VER.3.2 MOBILE POLISH
+===================================================== */
+.history-date {
+  min-width: 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .history-nav {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .history-date {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    min-height: 44px;
+  }
+
+  .history-button {
+    min-height: 44px;
+    padding: 8px 6px;
+  }
+
+  .mm-v3-tools {
+    padding: 6px;
+  }
+
+  .mm-v3-nav button {
+    min-height: 36px;
+    padding: 6px 9px;
+    font-size: 11px;
+  }
+
+  .mm-v3-actions {
+    position: static;
+    margin-top: 6px;
+  }
+
+  .mm-v3-actions button {
+    min-height: 34px;
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+}
+
+/* Sticky時はナビ本体だけを残し、展開/閉じる操作は隠す */
+.mm-v3-tools.mm-scrolled .mm-v3-actions {
+  display: none;
+}
+
+/* 市場データと詳細セクションを閉じた時の余白をさらに圧縮 */
+.section.mm-collapsible.mm-collapsed {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
 </style>
 </head>
 
@@ -1628,7 +1687,7 @@ function showLatest() {
   selectedHistoryDate = null;
 
   const input = document.getElementById('history-date');
-  if (input) input.value = '';
+  if (input) input.value = toDateKey(new Date());
 
   loadSelectedDay();
 }
@@ -1640,7 +1699,12 @@ function setupHistoryNavigation() {
   const latestButton = document.getElementById('latest-day');
 
   if (dateInput) {
-    dateInput.max = toDateKey(new Date());
+    const todayKey = toDateKey(new Date());
+    dateInput.max = todayKey;
+
+    if (!selectedHistoryDate) {
+      dateInput.value = todayKey;
+    }
 
     dateInput.addEventListener('change', () => {
       if (dateInput.value) {
@@ -1885,7 +1949,18 @@ function updateWhatChanged(data) {
   setChangeCard('us2y', us2[0], us2[1]);
 
   const curve = d.us_2s10s || {};
-  if (curve.value_bp === null || curve.value_bp === undefined) {
+  const sameYieldDate =
+    m.us2y?.market_date &&
+    m.us10y?.market_date &&
+    m.us2y.market_date === m.us10y.market_date;
+
+  if (!sameYieldDate) {
+    setChangeCard(
+      '2s10s',
+      '日付不一致',
+      `2年 ${m.us2y?.market_date || '?'}｜10年 ${m.us10y?.market_date || '?'}`
+    );
+  } else if (curve.value_bp === null || curve.value_bp === undefined) {
     setChangeCard('2s10s', '確認できず', '-');
   } else {
     const change = curve.change_bp;
@@ -3776,7 +3851,14 @@ function setupVer3UX() {
 
     section.classList.add('mm-collapsible');
 
-    if (index > 2) section.classList.add('mm-collapsed');
+    const sectionTitle = mmText(title).toUpperCase();
+    const keepOpen =
+      sectionTitle.includes('EXECUTIVE') ||
+      sectionTitle.includes('昨日から何が変わった');
+
+    if (!keepOpen) {
+      section.classList.add('mm-collapsed');
+    }
 
     title.setAttribute('role', 'button');
     title.setAttribute('tabindex', '0');
@@ -3824,6 +3906,16 @@ function setupVer3UX() {
     scenario: ['SCENARIO', 'シナリオ'],
     watch: ['WATCH', '監視', '注目']
   };
+
+  const tools = document.getElementById('mm-v3-tools');
+
+  const updateStickyTools = () => {
+    if (!tools) return;
+    tools.classList.toggle('mm-scrolled', window.scrollY > 180);
+  };
+
+  window.addEventListener('scroll', updateStickyTools, { passive: true });
+  updateStickyTools();
 
   document.querySelectorAll('[data-mm-target]').forEach(button => {
     button.addEventListener('click', () => {

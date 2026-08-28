@@ -1,0 +1,90 @@
+name: Archive Market Morning Report
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "data/report.json"
+
+permissions:
+  contents: write
+
+jobs:
+  archive-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Detect report date and save history
+        run: |
+          python <<'PY'
+          import json
+          import os
+          import re
+          import shutil
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          report_path = "data/report.json"
+
+          with open(report_path, "r", encoding="utf-8") as f:
+              report = json.load(f)
+
+          updated_at = str(report.get("updated_at", ""))
+
+          match = re.search(r"(\d{4})-(\d{2})-(\d{2})", updated_at)
+
+          if match:
+              report_date = match.group(0)
+          else:
+              report_date = datetime.now(
+                  ZoneInfo("Asia/Tokyo")
+              ).strftime("%Y-%m-%d")
+
+          history_dir = os.path.join(
+              "data",
+              "history",
+              report_date
+          )
+
+          os.makedirs(
+              history_dir,
+              exist_ok=True
+          )
+
+          destination = os.path.join(
+              history_dir,
+              "report.json"
+          )
+
+          shutil.copy2(
+              report_path,
+              destination
+          )
+
+          print(
+              f"Saved report history: {destination}"
+          )
+          PY
+
+      - name: Commit report history
+        run: |
+          git config user.name "Market Morning Bot"
+          git config user.email "actions@github.com"
+
+          git add data/history/
+
+          if git diff --cached --quiet; then
+            echo "No report history changes"
+          else
+            git commit -m "Archive Market Morning report"
+            git push
+          fi

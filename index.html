@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta name="theme-color" content="#111827">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -11,6 +12,11 @@
 <title>Market Morning</title>
 
 <style>
+
+/* =====================================================
+   BASE
+===================================================== */
+
 * {
   box-sizing: border-box;
 }
@@ -19,6 +25,7 @@ body {
   margin: 0;
   background: #f4f6f8;
   color: #17202a;
+
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -26,17 +33,21 @@ body {
     "Hiragino Kaku Gothic ProN",
     "Yu Gothic",
     sans-serif;
+
   line-height: 1.65;
 }
 
 .container {
   width: 100%;
-  max-width: 900px;
+  max-width: 940px;
   margin: auto;
   padding: 16px;
 }
 
-/* HEADER */
+
+/* =====================================================
+   HEADER
+===================================================== */
 
 .header {
   background: #111827;
@@ -47,9 +58,9 @@ body {
 }
 
 .header-title {
-  font-size: 25px;
-  font-weight: 700;
-  margin-bottom: 3px;
+  font-size: 26px;
+  font-weight: 750;
+  margin-bottom: 2px;
 }
 
 .header-sub {
@@ -59,38 +70,64 @@ body {
 
 .date {
   margin-top: 12px;
-  font-size: 14px;
+  font-size: 13px;
   opacity: 0.9;
 }
 
-/* SECTION */
+.report-date {
+  margin-top: 3px;
+  font-size: 12px;
+  opacity: 0.72;
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
 
 .section {
   background: white;
   border-radius: 16px;
   padding: 18px;
   margin-bottom: 16px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+
+  box-shadow:
+    0 2px 10px rgba(0,0,0,0.045);
 }
 
 .section-title {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 750;
   margin-bottom: 14px;
 }
 
 .section-sub {
+  font-size: 12px;
   color: #68707a;
-  font-size: 13px;
-  margin-top: -8px;
+  margin-top: -9px;
   margin-bottom: 14px;
 }
 
-/* SUMMARY */
+.sub-title {
+  font-weight: 700;
+  font-size: 15px;
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+
+.sub-title:first-child {
+  margin-top: 0;
+}
+
+
+/* =====================================================
+   SUMMARY
+===================================================== */
 
 .summary-main {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 750;
+  line-height: 1.55;
   margin-bottom: 14px;
 }
 
@@ -98,7 +135,7 @@ body {
   background: #f7f8fa;
   border-radius: 12px;
   padding: 13px;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 .summary-box:last-child {
@@ -116,11 +153,16 @@ body {
   font-weight: 600;
 }
 
-/* RANKING */
+
+/* =====================================================
+   RANKING
+===================================================== */
 
 .rank {
   display: flex;
   align-items: center;
+  gap: 8px;
+
   padding: 10px 0;
   border-bottom: 1px solid #edf0f2;
 }
@@ -131,19 +173,31 @@ body {
 
 .rank-number {
   width: 35px;
+  flex: 0 0 35px;
   font-size: 20px;
 }
 
 .rank-name {
   flex: 1;
-  font-weight: 600;
+  min-width: 0;
+  font-weight: 650;
 }
 
 .rank-value {
+  white-space: nowrap;
   font-weight: 700;
 }
 
-/* MARKET CARDS */
+.rank-reason {
+  font-size: 12px;
+  color: #68707a;
+  margin-top: 2px;
+}
+
+
+/* =====================================================
+   MARKET CARDS
+===================================================== */
 
 .market-grid {
   display: grid;
@@ -165,7 +219,7 @@ body {
 
 .market-price {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 750;
   margin-top: 2px;
 }
 
@@ -174,9 +228,13 @@ body {
   margin-top: 2px;
 }
 
-/* TABLE */
+
+/* =====================================================
+   TABLE
+===================================================== */
 
 .table-wrap {
+  width: 100%;
   overflow-x: auto;
 }
 
@@ -196,10 +254,17 @@ th {
 td {
   padding: 9px;
   border-bottom: 1px solid #edf0f2;
+  vertical-align: top;
+}
+
+td.nowrap {
   white-space: nowrap;
 }
 
-/* CARDS */
+
+/* =====================================================
+   CARD
+===================================================== */
 
 .card {
   background: #f7f8fa;
@@ -218,41 +283,46 @@ td {
 }
 
 .card-meta {
+  font-size: 12px;
   color: #68707a;
-  font-size: 12px;
-  margin-bottom: 6px;
+  margin-bottom: 7px;
 }
 
-/* AI REPORT */
-
-.report-header {
-  background: #111827;
-  color: white;
-  border-radius: 16px;
-  padding: 18px;
-  margin-bottom: 16px;
-}
-
-.report-header-title {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.report-header-sub {
-  font-size: 12px;
-  opacity: 0.75;
-  margin-top: 3px;
-}
-
-.report-theme {
-  font-size: 19px;
-  font-weight: 700;
-  line-height: 1.55;
-}
-
-.report-text {
+.card-text {
   white-space: pre-line;
 }
+
+
+/* =====================================================
+   FACT / REACTION / ANALYSIS
+===================================================== */
+
+.analysis-block {
+  border-left: 3px solid #d1d5db;
+  padding-left: 12px;
+  margin-bottom: 14px;
+}
+
+.analysis-block:last-child {
+  margin-bottom: 0;
+}
+
+.analysis-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #68707a;
+  margin-top: 7px;
+}
+
+.analysis-text {
+  margin-top: 2px;
+  white-space: pre-line;
+}
+
+
+/* =====================================================
+   REPORT GRID
+===================================================== */
 
 .report-grid {
   display: grid;
@@ -272,74 +342,117 @@ td {
 }
 
 .report-rating {
-  font-size: 15px;
   letter-spacing: 1px;
-  margin-bottom: 7px;
+  font-size: 15px;
+  margin-bottom: 6px;
 }
 
-.report-list {
+.report-text {
+  white-space: pre-line;
+}
+
+
+/* =====================================================
+   LIST
+===================================================== */
+
+.clean-list {
   margin: 0;
   padding-left: 20px;
 }
 
-.report-list li {
+.clean-list li {
   margin-bottom: 8px;
 }
 
-.report-list li:last-child {
+.clean-list li:last-child {
   margin-bottom: 0;
 }
 
-.winner-loser-grid {
+
+/* =====================================================
+   WINNERS / LOSERS
+===================================================== */
+
+.two-column {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
 
-.winner-loser-item {
+.result-item {
   background: #f7f8fa;
   border-radius: 12px;
-  padding: 14px;
+  padding: 13px;
   margin-bottom: 8px;
 }
 
-.winner-loser-item:last-child {
+.result-item:last-child {
   margin-bottom: 0;
 }
 
-.winner-loser-name {
+.result-name {
   font-weight: 700;
 }
 
-.winner-loser-reason {
+.result-reason {
   font-size: 13px;
   color: #4b5563;
   margin-top: 3px;
 }
 
-/* STRENGTH */
 
-.stars {
-  letter-spacing: 1px;
-  font-size: 16px;
+/* =====================================================
+   IMPORTANCE / CONFIDENCE
+===================================================== */
+
+.badge {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: #eef0f3;
+  font-size: 11px;
+  font-weight: 650;
+  margin-right: 5px;
 }
 
-/* STATUS */
+
+/* =====================================================
+   DATA QUALITY
+===================================================== */
+
+.quality-grade {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+  background: #111827;
+  color: white;
+
+  font-size: 20px;
+  font-weight: 750;
+  margin-bottom: 10px;
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
 
 .status {
+  margin-top: 10px;
   font-size: 12px;
   color: #68707a;
-  margin-top: 10px;
 }
 
-.error-message {
-  background: #f7f8fa;
-  border-radius: 10px;
-  padding: 12px;
-  font-size: 13px;
-}
 
-/* FOOTER */
+/* =====================================================
+   FOOTER
+===================================================== */
 
 .footer {
   text-align: center;
@@ -348,9 +461,13 @@ td {
   padding: 20px 0 30px;
 }
 
-/* PC */
+
+/* =====================================================
+   PC
+===================================================== */
 
 @media (min-width: 700px) {
+
   .container {
     padding: 30px;
   }
@@ -358,26 +475,32 @@ td {
   .market-grid {
     grid-template-columns: repeat(4, 1fr);
   }
+
 }
 
-/* MOBILE */
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media (max-width: 650px) {
+
   .report-grid,
-  .winner-loser-grid {
+  .two-column {
     grid-template-columns: 1fr;
   }
+
 }
 
 @media (max-width: 480px) {
+
   .container {
     padding: 10px;
   }
 
-  .header,
-  .report-header {
-    border-radius: 14px;
+  .header {
     padding: 18px 15px;
+    border-radius: 14px;
   }
 
   .header-title {
@@ -385,105 +508,109 @@ td {
   }
 
   .section {
-    border-radius: 14px;
     padding: 15px;
+    border-radius: 14px;
   }
 
   .market-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
+
 </style>
 </head>
+
 
 <body>
 
 <div class="container">
 
-<!-- HEADER -->
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <div class="header">
-  <div class="header-title">Market Morning</div>
-  <div class="header-sub">Global Macro Market Dashboard</div>
-  <div class="date" id="market-updated">市場データを読み込み中...</div>
-</div>
 
-
-<!-- EXECUTIVE SUMMARY -->
-
-<div class="section">
-
-  <div class="section-title">📌 昨日の市場を一言で</div>
-
-  <div class="summary-main" id="top-summary">
-    市場データを確認中
+  <div class="header-title">
+    Market Morning
   </div>
 
-  <div class="summary-box">
-    <div class="label">🏆 勝者</div>
-    <div class="value" id="auto-winners">確認中</div>
+  <div class="header-sub">
+    Global Macro Market Dashboard
   </div>
 
-  <div class="summary-box">
-    <div class="label">⚠️ 敗者</div>
-    <div class="value" id="auto-losers">確認中</div>
+  <div class="date" id="market-updated">
+    市場データを読み込み中...
   </div>
 
-  <div class="summary-box">
-    <div class="label">📅 今日最重要</div>
-    <div class="value" id="top-watch">ChatGPTレポートを確認中</div>
+  <div class="report-date" id="report-updated">
+    AIレポートを読み込み中...
   </div>
 
 </div>
 
 
-<!-- MARKET RANKING -->
+<!-- =====================================================
+     0 EXECUTIVE SUMMARY
+===================================================== -->
 
 <div class="section">
 
-  <div class="section-title">🏆 昨日の強かった市場 TOP5</div>
-
-  <div class="rank">
-    <div class="rank-number">🥇</div>
-    <div class="rank-name">確認中</div>
-    <div class="rank-value">確認中</div>
+  <div class="section-title">
+    📌 EXECUTIVE SUMMARY
   </div>
 
-  <div class="rank">
-    <div class="rank-number">🥈</div>
-    <div class="rank-name">確認中</div>
-    <div class="rank-value">確認中</div>
+  <div class="summary-main" id="executive-headline">
+    市場レポートを読み込み中...
   </div>
 
-  <div class="rank">
-    <div class="rank-number">🥉</div>
-    <div class="rank-name">確認中</div>
-    <div class="rank-value">確認中</div>
+  <div class="summary-box">
+    <div class="label">市場全体の雰囲気</div>
+    <div class="value" id="market-mood">確認中</div>
   </div>
 
-  <div class="rank">
-    <div class="rank-number">4</div>
-    <div class="rank-name">確認中</div>
-    <div class="rank-value">確認中</div>
+  <div class="summary-box">
+    <div class="label">🔥 昨日の市場を動かした最大材料</div>
+    <div class="value" id="main-driver">確認中</div>
   </div>
 
-  <div class="rank">
-    <div class="rank-number">5</div>
-    <div class="rank-name">確認中</div>
-    <div class="rank-value">確認中</div>
+  <div class="summary-box">
+    <div class="label">🏆 昨日の勝者 TOP3</div>
+    <div class="value" id="executive-winners">確認中</div>
+  </div>
+
+  <div class="summary-box">
+    <div class="label">⚠️ 昨日の敗者 TOP3</div>
+    <div class="value" id="executive-losers">確認中</div>
+  </div>
+
+  <div class="summary-box">
+    <div class="label">📅 今日最重要 TOP3</div>
+    <div class="value" id="executive-events">確認中</div>
+  </div>
+
+  <div class="summary-box">
+    <div class="label">👀 今日最も見るべき市場 TOP5</div>
+    <div class="value" id="executive-watch">確認中</div>
   </div>
 
 </div>
 
 
-<!-- MARKET DATA -->
+<!-- =====================================================
+     MARKET DATA
+===================================================== -->
 
 <div class="section">
 
-  <div class="section-title">📊 主要市場</div>
+  <div class="section-title">
+    📊 市場データ
+  </div>
 
   <div class="section-sub">
-    GitHub Actionsによる市場データ自動更新
+    market.json｜価格・前日比は自動取得データ
   </div>
 
   <div class="market-grid">
@@ -491,103 +618,103 @@ td {
     <div class="market-card">
       <div class="market-name">S&P500</div>
       <div class="market-price">確認中</div>
-      <div class="market-change">前日比：確認中</div>
+      <div class="market-change">確認中</div>
     </div>
 
     <div class="market-card">
       <div class="market-name">NASDAQ100</div>
       <div class="market-price">確認中</div>
-      <div class="market-change">前日比：確認中</div>
+      <div class="market-change">確認中</div>
     </div>
 
     <div class="market-card">
       <div class="market-name">NASDAQ総合</div>
       <div class="market-price">確認中</div>
-      <div class="market-change">前日比：確認中</div>
+      <div class="market-change">確認中</div>
     </div>
 
     <div class="market-card">
       <div class="market-name">NYダウ</div>
       <div class="market-price">確認中</div>
-      <div class="market-change">前日比：確認中</div>
+      <div class="market-change">確認中</div>
     </div>
 
     <div class="market-card">
       <div class="market-name">Russell2000</div>
       <div class="market-price">確認中</div>
-      <div class="market-change">前日比：確認中</div>
+      <div class="market-change">確認中</div>
     </div>
 
     <div class="market-card">
       <div class="market-name">日経225</div>
       <div class="market-price">確認中</div>
-      <div class="market-change">前日比：確認中</div>
+      <div class="market-change">確認中</div>
     </div>
 
     <div class="market-card">
       <div class="market-name">TOPIX</div>
       <div class="market-price">確認中</div>
-      <div class="market-change">参考値：1306.T</div>
+      <div class="market-change">1306.T参考値</div>
     </div>
 
     <div class="market-card">
       <div class="market-name">DXY</div>
       <div class="market-price">確認中</div>
-      <div class="market-change">前日比：確認中</div>
+      <div class="market-change">確認中</div>
     </div>
 
     <div class="market-card">
       <div class="market-name">USD/JPY</div>
       <div class="market-price">確認中</div>
-      <div class="market-change">前日比：確認中</div>
+      <div class="market-change">確認中</div>
     </div>
 
     <div class="market-card">
       <div class="market-name">米10年債</div>
       <div class="market-price">確認中</div>
-      <div class="market-change">前日比：確認中</div>
+      <div class="market-change">確認中</div>
     </div>
 
     <div class="market-card">
       <div class="market-name">Gold</div>
       <div class="market-price">確認中</div>
-      <div class="market-change">前日比：確認中</div>
+      <div class="market-change">確認中</div>
     </div>
 
     <div class="market-card">
       <div class="market-name">Silver</div>
       <div class="market-price">確認中</div>
-      <div class="market-change">前日比：確認中</div>
+      <div class="market-change">確認中</div>
     </div>
 
     <div class="market-card">
       <div class="market-name">Copper</div>
       <div class="market-price">確認中</div>
-      <div class="market-change">前日比：確認中</div>
+      <div class="market-change">確認中</div>
     </div>
 
     <div class="market-card">
       <div class="market-name">WTI</div>
       <div class="market-price">確認中</div>
-      <div class="market-change">前日比：確認中</div>
+      <div class="market-change">確認中</div>
     </div>
 
     <div class="market-card">
       <div class="market-name">Brent</div>
       <div class="market-price">確認中</div>
-      <div class="market-change">前日比：確認中</div>
+      <div class="market-change">確認中</div>
     </div>
 
     <div class="market-card">
       <div class="market-name">BTC</div>
       <div class="market-price">確認中</div>
-      <div class="market-change">前日比：確認中</div>
+      <div class="market-change">確認中</div>
     </div>
 
     <div class="market-card">
       <div class="market-name">ETH</div>
       <div class="market-price">確認中</div>
-      <div class="market-change">前日比：確認中</div>
+      <div class="market-change">確認中</div>
     </div>
 
   </div>
@@ -597,136 +724,50 @@ td {
 </div>
 
 
-<!-- STRENGTH -->
+<!-- =====================================================
+     PRICE RANKING
+===================================================== -->
 
 <div class="section">
 
-  <div class="section-title">⭐ 市場の強さ</div>
+  <div class="section-title">
+    📈 騰落率 TOP5
+  </div>
 
   <div class="section-sub">
-    市場価格の前日比をもとにした簡易評価
+    market.jsonの前日比による機械的ランキング
   </div>
 
-  <div class="table-wrap">
+  <div id="price-ranking">
 
-    <table id="strength-table">
-
-      <tr>
-        <th>資産</th>
-        <th>強さ</th>
-        <th>コメント</th>
-      </tr>
-
-      <tr>
-        <td>株式</td>
-        <td class="stars">★★★☆☆</td>
-        <td>確認中</td>
-      </tr>
-
-      <tr>
-        <td>債券</td>
-        <td class="stars">★★★☆☆</td>
-        <td>確認中</td>
-      </tr>
-
-      <tr>
-        <td>ドル</td>
-        <td class="stars">★★★☆☆</td>
-        <td>確認中</td>
-      </tr>
-
-      <tr>
-        <td>Gold</td>
-        <td class="stars">★★★☆☆</td>
-        <td>確認中</td>
-      </tr>
-
-      <tr>
-        <td>Copper</td>
-        <td class="stars">★★★☆☆</td>
-        <td>確認中</td>
-      </tr>
-
-      <tr>
-        <td>原油</td>
-        <td class="stars">★★★☆☆</td>
-        <td>確認中</td>
-      </tr>
-
-      <tr>
-        <td>暗号資産</td>
-        <td class="stars">★★★☆☆</td>
-        <td>確認中</td>
-      </tr>
-
-    </table>
-
-  </div>
-
-</div>
-
-
-<!-- AI REPORT HEADER -->
-
-<div class="report-header">
-
-  <div class="report-header-title">
-    🧠 Market Morning AI Report
-  </div>
-
-  <div class="report-header-sub">
-    ChatGPTによるニュース調査・クロスアセット分析
-  </div>
-
-  <div class="report-header-sub" id="report-updated">
-    レポートを読み込み中...
-  </div>
-
-</div>
-
-
-<!-- MARKET THEME -->
-
-<div class="section">
-
-  <div class="section-title">📌 市場テーマ</div>
-
-  <div class="report-theme" id="report-theme">
-    レポートを読み込み中...
-  </div>
-
-</div>
-
-
-<!-- SUMMARY -->
-
-<div class="section">
-
-  <div class="section-title">📝 市場総括</div>
-
-  <div class="report-text" id="report-summary">
-    レポートを読み込み中...
-  </div>
-
-</div>
-
-
-<!-- WINNERS / LOSERS -->
-
-<div class="section">
-
-  <div class="section-title">🏆 勝者・敗者</div>
-
-  <div class="winner-loser-grid">
-
-    <div>
-      <div class="card-title">🏆 勝者</div>
-      <div id="report-winners">読み込み中...</div>
+    <div class="rank">
+      <div class="rank-number">🥇</div>
+      <div class="rank-name">確認中</div>
+      <div class="rank-value">確認中</div>
     </div>
 
-    <div>
-      <div class="card-title">⚠️ 敗者</div>
-      <div id="report-losers">読み込み中...</div>
+    <div class="rank">
+      <div class="rank-number">🥈</div>
+      <div class="rank-name">確認中</div>
+      <div class="rank-value">確認中</div>
+    </div>
+
+    <div class="rank">
+      <div class="rank-number">🥉</div>
+      <div class="rank-name">確認中</div>
+      <div class="rank-value">確認中</div>
+    </div>
+
+    <div class="rank">
+      <div class="rank-number">4</div>
+      <div class="rank-name">確認中</div>
+      <div class="rank-value">確認中</div>
+    </div>
+
+    <div class="rank">
+      <div class="rank-number">5</div>
+      <div class="rank-name">確認中</div>
+      <div class="rank-value">確認中</div>
     </div>
 
   </div>
@@ -734,11 +775,138 @@ td {
 </div>
 
 
-<!-- CROSS ASSET -->
+<!-- =====================================================
+     AI RELATIVE RANKING
+===================================================== -->
 
 <div class="section">
 
-  <div class="section-title">🌍 クロスアセット分析</div>
+  <div class="section-title">
+    🏆 相対的に強かった市場 TOP5
+  </div>
+
+  <div class="section-sub">
+    値動き・関連市場・ニュース・市場内部をAIが総合評価
+  </div>
+
+  <div id="relative-ranking">
+    確認中
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     MARKET OVERVIEW
+===================================================== -->
+
+<div class="section">
+
+  <div class="section-title">
+    🌍 昨日の市場を一目で見る
+  </div>
+
+  <div id="market-overview">
+    確認中
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     MAIN DRIVER
+===================================================== -->
+
+<div class="section">
+
+  <div class="section-title">
+    🔥 昨日の市場の主役
+  </div>
+
+  <div id="main-story">
+    確認中
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     NEWS
+===================================================== -->
+
+<div class="section">
+
+  <div class="section-title">
+    📰 市場を動かしたニュース
+  </div>
+
+  <div id="market-news">
+    確認中
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     POLICY / CENTRAL BANK
+===================================================== -->
+
+<div class="section">
+
+  <div class="section-title">
+    🏦 Trump・米政府・中央銀行
+  </div>
+
+  <div id="policy-section">
+    確認中
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     INTERNAL STRENGTH
+===================================================== -->
+
+<div class="section">
+
+  <div class="section-title">
+    🔎 市場内部の強弱
+  </div>
+
+  <div id="internal-strength">
+    確認中
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     CROSS ASSET
+===================================================== -->
+
+<div class="section">
+
+  <div class="section-title">
+    🔗 市場同士の関係
+  </div>
+
+  <div id="cross-asset">
+    確認中
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     ASSET ANALYSIS
+===================================================== -->
+
+<div class="section">
+
+  <div class="section-title">
+    🌐 クロスアセット分析
+  </div>
 
   <div class="report-grid">
 
@@ -777,57 +945,241 @@ td {
 </div>
 
 
-<!-- COPPER -->
+<!-- =====================================================
+     COMMODITIES
+===================================================== -->
 
 <div class="section">
 
-  <div class="section-title">🟠 Copper重点調査</div>
+  <div class="section-title">
+    🥇 商品市場
+  </div>
+
+  <div id="commodity-detail">
+    確認中
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     COPPER
+===================================================== -->
+
+<div class="section">
+
+  <div class="section-title">
+    🟠 Copper重点調査
+  </div>
 
   <div class="report-rating" id="rating-copper">
     ★★★☆☆
   </div>
 
   <div class="report-text" id="report-copper">
-    レポートを読み込み中...
+    確認中
+  </div>
+
+  <div id="copper-detail" style="margin-top:14px;">
   </div>
 
 </div>
 
 
-<!-- TODAY WATCH -->
+<!-- =====================================================
+     CRYPTO
+===================================================== -->
 
 <div class="section">
 
-  <div class="section-title">👀 今日の注目</div>
+  <div class="section-title">
+    ₿ 暗号資産
+  </div>
 
-  <ul class="report-list" id="report-watch">
-    <li>レポートを読み込み中...</li>
-  </ul>
-
-</div>
-
-
-<!-- SCENARIOS -->
-
-<div class="section">
-
-  <div class="section-title">🎯 市場シナリオ</div>
-
-  <div id="report-scenarios">
-    レポートを読み込み中...
+  <div id="crypto-detail">
+    確認中
   </div>
 
 </div>
 
 
-<!-- FINAL -->
+<!-- =====================================================
+     MARKET ENVIRONMENT
+===================================================== -->
 
 <div class="section">
 
-  <div class="section-title">🎯 今日の市場を一言で</div>
+  <div class="section-title">
+    🌐 現在の市場環境
+  </div>
 
-  <div class="summary-main" id="final-summary">
-    ChatGPTレポートを読み込み中
+  <div id="market-environment">
+    確認中
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     UNUSUAL MOVES
+===================================================== -->
+
+<div class="section">
+
+  <div class="section-title">
+    ⚡ 普段とは違う値動き
+  </div>
+
+  <div id="unusual-moves">
+    確認中
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     EVENTS
+===================================================== -->
+
+<div class="section">
+
+  <div class="section-title">
+    📅 今日以降の重要イベント
+  </div>
+
+  <div id="event-section">
+    確認中
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     WATCH CARDS
+===================================================== -->
+
+<div class="section">
+
+  <div class="section-title">
+    👀 今日の注目カード
+  </div>
+
+  <div id="watch-cards">
+    確認中
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     VIEW CHANGE CONDITIONS
+===================================================== -->
+
+<div class="section">
+
+  <div class="section-title">
+    ⚠️ 今日、見方を変える条件
+  </div>
+
+  <div id="change-conditions">
+    確認中
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     SCENARIOS
+===================================================== -->
+
+<div class="section">
+
+  <div class="section-title">
+    🎯 今後の市場シナリオ
+  </div>
+
+  <div id="scenario-section">
+    確認中
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     TRADE WATCH TOP5
+===================================================== -->
+
+<div class="section">
+
+  <div class="section-title">
+    👀 今日のトレードで最も見るもの
+  </div>
+
+  <div id="trade-watch">
+    確認中
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     STRENGTH
+===================================================== -->
+
+<div class="section">
+
+  <div class="section-title">
+    ⭐ 市場の強さ
+  </div>
+
+  <div class="section-sub">
+    AIによる総合評価｜将来予測ではなく昨日の相対的な強さ
+  </div>
+
+  <div id="ai-strength">
+    確認中
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     DATA QUALITY
+===================================================== -->
+
+<div class="section">
+
+  <div class="section-title">
+    🔎 データ品質チェック
+  </div>
+
+  <div class="quality-grade" id="quality-grade">
+    -
+  </div>
+
+  <div id="quality-detail">
+    確認中
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     FINAL
+===================================================== -->
+
+<div class="section">
+
+  <div class="section-title">
+    🎯 最終結論
+  </div>
+
+  <div class="summary-main" id="final-headline">
+    確認中
+  </div>
+
+  <div id="final-detail">
+    確認中
   </div>
 
 </div>
@@ -837,44 +1189,88 @@ td {
   Market Morning ｜ Personal Macro Dashboard
 </div>
 
+
 </div>
 
 
 <script>
 
 /* =====================================================
-   共通
+   BASIC HELPERS
 ===================================================== */
+
+function safeText(value, fallback = '確認中') {
+
+  if (
+    value === null ||
+    value === undefined ||
+    value === ''
+  ) {
+    return fallback;
+  }
+
+  return String(value);
+}
+
 
 function validChange(market) {
 
   if (!market) return null;
 
-  if (
-    market.change_pct === null ||
-    market.change_pct === undefined
-  ) {
-    return null;
-  }
+  const value =
+    Number(market.change_pct);
 
-  const value = Number(market.change_pct);
-
-  return Number.isFinite(value) ? value : null;
+  return Number.isFinite(value)
+    ? value
+    : null;
 }
 
 
 function average(values) {
 
-  const valid = values.filter(
-    value => value !== null && Number.isFinite(value)
-  );
+  const usable =
+    values.filter(
+      value => Number.isFinite(value)
+    );
 
-  if (valid.length === 0) return null;
+  if (!usable.length) {
+    return null;
+  }
 
-  return valid.reduce(
-    (sum, value) => sum + value,
+  return usable.reduce(
+    (a, b) => a + b,
     0
-  ) / valid.length;
+  ) / usable.length;
+}
+
+
+function stars(rating) {
+
+  let value =
+    Math.round(Number(rating));
+
+  if (!Number.isFinite(value)) {
+    value = 3;
+  }
+
+  value =
+    Math.min(
+      5,
+      Math.max(1, value)
+    );
+
+  return (
+    '★'.repeat(value) +
+    '☆'.repeat(5 - value)
+  );
+}
+
+
+function clearElement(element) {
+
+  if (element) {
+    element.innerHTML = '';
+  }
 }
 
 
@@ -886,102 +1282,176 @@ async function loadMarketData() {
 
   try {
 
-    const response = await fetch(
-      '/data/market.json?ts=' + Date.now()
-    );
+    const response =
+      await fetch(
+        '/data/market.json?ts=' +
+        Date.now()
+      );
 
     if (!response.ok) {
-      throw new Error('market.jsonの取得に失敗しました');
+      throw new Error(
+        'market.json取得失敗'
+      );
     }
 
-    const data = await response.json();
-    const markets = data.markets || {};
+    const data =
+      await response.json();
 
-    updateMarketCard('S&P500', markets.sp500);
-    updateMarketCard('NASDAQ100', markets.nasdaq100);
-    updateMarketCard('NASDAQ総合', markets.nasdaq);
-    updateMarketCard('NYダウ', markets.dow);
-    updateMarketCard('Russell2000', markets.russell2000);
+    const markets =
+      data.markets || {};
 
-    updateMarketCard('日経225', markets.nikkei225);
-    updateMarketCard('TOPIX', markets.topix);
+    const map = {
 
-    updateMarketCard('DXY', markets.dxy);
-    updateMarketCard('USD/JPY', markets.usdjpy);
-    updateMarketCard('米10年債', markets.us10y);
+      'S&P500':
+        markets.sp500,
 
-    updateMarketCard('Gold', markets.gold);
-    updateMarketCard('Silver', markets.silver);
-    updateMarketCard('Copper', markets.copper);
-    updateMarketCard('WTI', markets.wti);
-    updateMarketCard('Brent', markets.brent);
+      'NASDAQ100':
+        markets.nasdaq100,
 
-    updateMarketCard('BTC', markets.btc);
-    updateMarketCard('ETH', markets.eth);
+      'NASDAQ総合':
+        markets.nasdaq,
 
-    updatePageDate(data.updated_at);
+      'NYダウ':
+        markets.dow,
 
-    updateMarketRanking(markets);
-    updateStrengthTable(markets);
-    updateExecutiveSummary(markets);
+      'Russell2000':
+        markets.russell2000,
 
-    document.getElementById('market-status').textContent =
+      '日経225':
+        markets.nikkei225,
+
+      'TOPIX':
+        markets.topix,
+
+      'DXY':
+        markets.dxy,
+
+      'USD/JPY':
+        markets.usdjpy,
+
+      '米10年債':
+        markets.us10y,
+
+      'Gold':
+        markets.gold,
+
+      'Silver':
+        markets.silver,
+
+      'Copper':
+        markets.copper,
+
+      'WTI':
+        markets.wti,
+
+      'Brent':
+        markets.brent,
+
+      'BTC':
+        markets.btc,
+
+      'ETH':
+        markets.eth
+
+    };
+
+
+    Object.entries(map)
+      .forEach(
+        ([name, market]) => {
+          updateMarketCard(
+            name,
+            market
+          );
+        }
+      );
+
+
+    if (data.updated_at) {
+
+      document.getElementById(
+        'market-updated'
+      ).textContent =
+        `市場データ更新：${data.updated_at} JST`;
+
+    }
+
+
+    updatePriceRanking(markets);
+
+
+    document.getElementById(
+      'market-status'
+    ).textContent =
       '市場データ取得成功';
+
 
   } catch (error) {
 
-    console.error(error);
+    console.error(
+      'Market data error:',
+      error
+    );
 
-    document.getElementById('market-status').textContent =
+    document.getElementById(
+      'market-status'
+    ).textContent =
       '市場データを取得できませんでした';
 
   }
+
 }
 
 
-function updateMarketCard(name, market) {
+function updateMarketCard(
+  name,
+  market
+) {
 
   if (!market) return;
 
   const cards =
-    document.querySelectorAll('.market-card');
+    document.querySelectorAll(
+      '.market-card'
+    );
 
   cards.forEach(card => {
 
     const nameElement =
-      card.querySelector('.market-name');
+      card.querySelector(
+        '.market-name'
+      );
 
     if (!nameElement) return;
 
     if (
-      nameElement.textContent.trim() !== name
+      nameElement.textContent.trim()
+      !== name
     ) {
       return;
     }
 
     const priceElement =
-      card.querySelector('.market-price');
+      card.querySelector(
+        '.market-price'
+      );
 
     const changeElement =
-      card.querySelector('.market-change');
+      card.querySelector(
+        '.market-change'
+      );
+
 
     if (priceElement) {
 
-      if (
-        market.price !== null &&
-        market.price !== undefined
-      ) {
+      priceElement.textContent =
+        formatPrice(
+          name,
+          market.price
+        );
 
-        priceElement.textContent =
-          formatPrice(name, market.price);
-
-      } else {
-
-        priceElement.textContent =
-          '確認できず';
-
-      }
     }
+
 
     if (changeElement) {
 
@@ -996,32 +1466,46 @@ function updateMarketCard(name, market) {
       } else {
 
         const arrow =
-          pct > 0 ? '↑' :
-          pct < 0 ? '↓' :
-          '→';
+          pct > 0
+            ? '↑'
+            : pct < 0
+              ? '↓'
+              : '→';
 
         const sign =
-          pct > 0 ? '+' : '';
+          pct > 0
+            ? '+'
+            : '';
 
         changeElement.textContent =
           `${arrow} ${sign}${pct.toFixed(2)}%`;
+
       }
+
     }
+
   });
+
 }
 
 
-function formatPrice(name, price) {
+function formatPrice(
+  name,
+  price
+) {
 
-  const number = Number(price);
+  const number =
+    Number(price);
 
   if (!Number.isFinite(number)) {
     return '確認できず';
   }
 
+
   if (name === '米10年債') {
     return number.toFixed(3) + '%';
   }
+
 
   if (
     name === 'USD/JPY' ||
@@ -1030,18 +1514,22 @@ function formatPrice(name, price) {
     return number.toFixed(2);
   }
 
+
   if (
     name === 'BTC' ||
     name === 'ETH'
   ) {
 
-    return '$' + number.toLocaleString(
-      'en-US',
-      {
-        maximumFractionDigits: 2
-      }
-    );
+    return '$' +
+      number.toLocaleString(
+        'en-US',
+        {
+          maximumFractionDigits: 2
+        }
+      );
+
   }
+
 
   if (
     name === 'Gold' ||
@@ -1050,17 +1538,24 @@ function formatPrice(name, price) {
     name === 'Brent'
   ) {
 
-    return '$' + number.toLocaleString(
-      'en-US',
-      {
-        maximumFractionDigits: 2
-      }
-    );
+    return '$' +
+      number.toLocaleString(
+        'en-US',
+        {
+          maximumFractionDigits: 2
+        }
+      );
+
   }
 
+
   if (name === 'Copper') {
-    return '$' + number.toFixed(4);
+
+    return '$' +
+      number.toFixed(4);
+
   }
+
 
   return number.toLocaleString(
     'ja-JP',
@@ -1068,386 +1563,1267 @@ function formatPrice(name, price) {
       maximumFractionDigits: 2
     }
   );
-}
 
-
-function updatePageDate(updatedAt) {
-
-  if (!updatedAt) return;
-
-  document.getElementById(
-    'market-updated'
-  ).textContent =
-    `市場データ更新：${updatedAt} JST`;
 }
 
 
 /* =====================================================
-   RANKING
+   PRICE RANKING
 ===================================================== */
 
-function getRankingCandidates(markets) {
+function getPriceCandidates(markets) {
 
-  return [
+  const raw = [
 
     ['S&P500', markets.sp500],
     ['NASDAQ100', markets.nasdaq100],
     ['NASDAQ総合', markets.nasdaq],
     ['NYダウ', markets.dow],
     ['Russell2000', markets.russell2000],
-
     ['日経225', markets.nikkei225],
     ['TOPIX', markets.topix],
-
     ['DXY', markets.dxy],
-
     ['Gold', markets.gold],
     ['Silver', markets.silver],
     ['Copper', markets.copper],
     ['WTI', markets.wti],
     ['Brent', markets.brent],
-
     ['BTC', markets.btc],
     ['ETH', markets.eth]
 
-  ]
-  .map(item => ({
-    name: item[0],
-    change: validChange(item[1])
-  }))
-  .filter(item =>
-    item.change !== null
-  );
+  ];
+
+  return raw
+    .map(item => ({
+
+      name:
+        item[0],
+
+      change:
+        validChange(item[1])
+
+    }))
+    .filter(
+      item =>
+        item.change !== null
+    );
+
 }
 
 
-function updateMarketRanking(markets) {
+function updatePriceRanking(
+  markets
+) {
 
-  const candidates =
-    getRankingCandidates(markets);
-
-  const strongest =
-    [...candidates]
-      .sort((a, b) =>
-        b.change - a.change
+  const ranking =
+    getPriceCandidates(markets)
+      .sort(
+        (a, b) =>
+          b.change - a.change
       )
       .slice(0, 5);
 
-  const rows =
-    document.querySelectorAll('.rank');
-
-  rows.forEach((row, index) => {
-
-    const item = strongest[index];
-
-    if (!item) return;
-
-    const name =
-      row.querySelector('.rank-name');
-
-    const value =
-      row.querySelector('.rank-value');
-
-    if (name) {
-      name.textContent = item.name;
-    }
-
-    if (value) {
-
-      const sign =
-        item.change > 0 ? '+' : '';
-
-      value.textContent =
-        `${sign}${item.change.toFixed(2)}%`;
-    }
-  });
-}
-
-
-/* =====================================================
-   EXECUTIVE SUMMARY
-===================================================== */
-
-function updateExecutiveSummary(markets) {
-
-  const candidates =
-    getRankingCandidates(markets);
-
-  if (candidates.length === 0) {
-    return;
-  }
-
-  const winners =
-    [...candidates]
-      .sort((a, b) =>
-        b.change - a.change
-      )
-      .slice(0, 3);
-
-  const losers =
-    [...candidates]
-      .sort((a, b) =>
-        a.change - b.change
-      )
-      .slice(0, 3);
-
-  document.getElementById(
-    'auto-winners'
-  ).textContent =
-    winners.map(item =>
-      `${item.name} (${item.change > 0 ? '+' : ''}${item.change.toFixed(2)}%)`
-    ).join(' / ');
-
-  document.getElementById(
-    'auto-losers'
-  ).textContent =
-    losers.map(item =>
-      `${item.name} (${item.change > 0 ? '+' : ''}${item.change.toFixed(2)}%)`
-    ).join(' / ');
-}
-
-
-/* =====================================================
-   STRENGTH
-===================================================== */
-
-function scoreToStars(score) {
-
-  if (score === null) {
-    return '★★★☆☆';
-  }
-
-  if (score >= 1.0) {
-    return '★★★★★';
-  }
-
-  if (score >= 0.3) {
-    return '★★★★☆';
-  }
-
-  if (score > -0.3) {
-    return '★★★☆☆';
-  }
-
-  if (score > -1.0) {
-    return '★★☆☆☆';
-  }
-
-  return '★☆☆☆☆';
-}
-
-
-function strengthComment(score) {
-
-  if (score === null) {
-    return '判断材料不足';
-  }
-
-  if (score >= 1.0) {
-    return '相対的にかなり強い';
-  }
-
-  if (score >= 0.3) {
-    return '相対的に強い';
-  }
-
-  if (score > -0.3) {
-    return '概ね中立';
-  }
-
-  if (score > -1.0) {
-    return '相対的に弱い';
-  }
-
-  return '相対的にかなり弱い';
-}
-
-
-function updateStrengthTable(markets) {
-
-  const stockScore = average([
-
-    validChange(markets.sp500),
-    validChange(markets.nasdaq100),
-    validChange(markets.dow),
-    validChange(markets.russell2000),
-    validChange(markets.nikkei225),
-    validChange(markets.topix)
-
-  ]);
-
-  /*
-    米10年債は「利回り」。
-
-    利回り上昇 = 債券価格下落
-    利回り低下 = 債券価格上昇
-
-    そのため符号を反転。
-  */
-
-  const yieldChange =
-    validChange(markets.us10y);
-
-  const bondScore =
-    yieldChange === null
-      ? null
-      : -yieldChange;
-
-  const scores = {
-
-    '株式': stockScore,
-
-    '債券': bondScore,
-
-    'ドル':
-      validChange(markets.dxy),
-
-    'Gold':
-      validChange(markets.gold),
-
-    'Copper':
-      validChange(markets.copper),
-
-    '原油':
-      average([
-        validChange(markets.wti),
-        validChange(markets.brent)
-      ]),
-
-    '暗号資産':
-      average([
-        validChange(markets.btc),
-        validChange(markets.eth)
-      ])
-
-  };
 
   const rows =
     document.querySelectorAll(
-      '#strength-table tr'
+      '#price-ranking .rank'
     );
 
-  rows.forEach(row => {
 
-    const cells =
-      row.querySelectorAll('td');
+  rows.forEach(
+    (row, index) => {
 
-    if (cells.length < 3) return;
+      const item =
+        ranking[index];
 
-    const asset =
-      cells[0].textContent.trim();
+      if (!item) return;
 
-    if (!(asset in scores)) return;
 
-    const score =
-      scores[asset];
+      const name =
+        row.querySelector(
+          '.rank-name'
+        );
 
-    cells[1].textContent =
-      scoreToStars(score);
+      const value =
+        row.querySelector(
+          '.rank-value'
+        );
 
-    cells[2].textContent =
-      strengthComment(score);
-  });
+
+      if (name) {
+        name.textContent =
+          item.name;
+      }
+
+
+      if (value) {
+
+        const sign =
+          item.change > 0
+            ? '+'
+            : '';
+
+        value.textContent =
+          `${sign}${item.change.toFixed(2)}%`;
+
+      }
+
+    }
+  );
+
 }
 
 
 /* =====================================================
-   CHATGPT REPORT
+   GENERIC RENDERERS
 ===================================================== */
 
-function makeStars(rating) {
+function renderSimpleList(
+  id,
+  items
+) {
 
-  let value =
-    Math.round(Number(rating));
+  const element =
+    document.getElementById(id);
 
-  if (!Number.isFinite(value)) {
-    value = 3;
+  if (!element) return;
+
+  clearElement(element);
+
+
+  if (
+    !Array.isArray(items) ||
+    items.length === 0
+  ) {
+
+    element.textContent =
+      '確認中';
+
+    return;
+
   }
 
-  value =
-    Math.max(1, Math.min(5, value));
 
-  return (
-    '★'.repeat(value) +
-    '☆'.repeat(5 - value)
-  );
+  const ul =
+    document.createElement('ul');
+
+  ul.className =
+    'clean-list';
+
+
+  items.forEach(item => {
+
+    const li =
+      document.createElement('li');
+
+    li.textContent =
+      typeof item === 'string'
+        ? item
+        : (
+          item.text ||
+          item.name ||
+          item.title ||
+          '確認中'
+        );
+
+    ul.appendChild(li);
+
+  });
+
+
+  element.appendChild(ul);
+
 }
 
+
+function renderResultItems(
+  id,
+  items
+) {
+
+  const element =
+    document.getElementById(id);
+
+  if (!element) return;
+
+  clearElement(element);
+
+
+  if (
+    !Array.isArray(items) ||
+    !items.length
+  ) {
+
+    element.textContent =
+      '確認中';
+
+    return;
+
+  }
+
+
+  items.forEach(item => {
+
+    const box =
+      document.createElement('div');
+
+    box.className =
+      'result-item';
+
+
+    const name =
+      document.createElement('div');
+
+    name.className =
+      'result-name';
+
+    name.textContent =
+      safeText(
+        item.name ||
+        item.title
+      );
+
+
+    const reason =
+      document.createElement('div');
+
+    reason.className =
+      'result-reason';
+
+    reason.textContent =
+      safeText(
+        item.reason ||
+        item.summary ||
+        item.description,
+        ''
+      );
+
+
+    box.appendChild(name);
+
+    if (reason.textContent) {
+      box.appendChild(reason);
+    }
+
+    element.appendChild(box);
+
+  });
+
+}
+
+
+function renderCards(
+  id,
+  items
+) {
+
+  const element =
+    document.getElementById(id);
+
+  if (!element) return;
+
+  clearElement(element);
+
+
+  if (
+    !Array.isArray(items) ||
+    !items.length
+  ) {
+
+    element.textContent =
+      '確認中';
+
+    return;
+
+  }
+
+
+  items.forEach(
+    (item, index) => {
+
+      const card =
+        document.createElement('div');
+
+      card.className =
+        'card';
+
+
+      const title =
+        document.createElement('div');
+
+      title.className =
+        'card-title';
+
+      title.textContent =
+        safeText(
+          item.title ||
+          item.name ||
+          `項目 ${index + 1}`
+        );
+
+
+      card.appendChild(title);
+
+
+      if (
+        item.importance ||
+        item.confidence
+      ) {
+
+        const meta =
+          document.createElement('div');
+
+        meta.className =
+          'card-meta';
+
+
+        if (item.importance) {
+
+          const span =
+            document.createElement('span');
+
+          span.className =
+            'badge';
+
+          span.textContent =
+            `重要度 ${item.importance}`;
+
+          meta.appendChild(span);
+
+        }
+
+
+        if (item.confidence) {
+
+          const span =
+            document.createElement('span');
+
+          span.className =
+            'badge';
+
+          span.textContent =
+            `確信度 ${item.confidence}`;
+
+          meta.appendChild(span);
+
+        }
+
+
+        card.appendChild(meta);
+
+      }
+
+
+      const fields = [
+
+        ['確認された事実',
+          item.fact ||
+          item.facts],
+
+        ['実際の市場反応',
+          item.market_reaction ||
+          item.reaction],
+
+        ['分析',
+          item.analysis ||
+          item.interpretation],
+
+        ['今後',
+          item.outlook],
+
+        ['関連資産',
+          item.related_assets]
+
+      ];
+
+
+      let fieldAdded = false;
+
+
+      fields.forEach(
+        ([label, content]) => {
+
+          if (!content) return;
+
+
+          const block =
+            document.createElement(
+              'div'
+            );
+
+          block.className =
+            'analysis-block';
+
+
+          const fieldLabel =
+            document.createElement(
+              'div'
+            );
+
+          fieldLabel.className =
+            'analysis-label';
+
+          fieldLabel.textContent =
+            label;
+
+
+          const fieldText =
+            document.createElement(
+              'div'
+            );
+
+          fieldText.className =
+            'analysis-text';
+
+          fieldText.textContent =
+            Array.isArray(content)
+              ? content.join(' / ')
+              : content;
+
+
+          block.appendChild(
+            fieldLabel
+          );
+
+          block.appendChild(
+            fieldText
+          );
+
+          card.appendChild(block);
+
+          fieldAdded = true;
+
+        }
+      );
+
+
+      if (!fieldAdded) {
+
+        const text =
+          document.createElement(
+            'div'
+          );
+
+        text.className =
+          'card-text';
+
+        text.textContent =
+          safeText(
+            item.description ||
+            item.summary ||
+            item.text
+          );
+
+        card.appendChild(text);
+
+      }
+
+
+      element.appendChild(card);
+
+    }
+  );
+
+}
+
+
+/* =====================================================
+   TABLE RENDERER
+===================================================== */
+
+function renderTable(
+  id,
+  columns,
+  rows
+) {
+
+  const element =
+    document.getElementById(id);
+
+  if (!element) return;
+
+  clearElement(element);
+
+
+  if (
+    !Array.isArray(rows) ||
+    !rows.length
+  ) {
+
+    element.textContent =
+      '確認中';
+
+    return;
+
+  }
+
+
+  const wrapper =
+    document.createElement('div');
+
+  wrapper.className =
+    'table-wrap';
+
+
+  const table =
+    document.createElement(
+      'table'
+    );
+
+
+  const header =
+    document.createElement(
+      'tr'
+    );
+
+
+  columns.forEach(
+    column => {
+
+      const th =
+        document.createElement(
+          'th'
+        );
+
+      th.textContent =
+        column.label;
+
+      header.appendChild(th);
+
+    }
+  );
+
+
+  table.appendChild(header);
+
+
+  rows.forEach(row => {
+
+    const tr =
+      document.createElement(
+        'tr'
+      );
+
+
+    columns.forEach(column => {
+
+      const td =
+        document.createElement(
+          'td'
+        );
+
+      const value =
+        row[column.key];
+
+      td.textContent =
+        Array.isArray(value)
+          ? value.join(' / ')
+          : safeText(value);
+
+      tr.appendChild(td);
+
+    });
+
+
+    table.appendChild(tr);
+
+  });
+
+
+  wrapper.appendChild(table);
+
+  element.appendChild(wrapper);
+
+}
+
+
+/* =====================================================
+   ASSET SUMMARY
+===================================================== */
+
+function renderAsset(
+  name,
+  data
+) {
+
+  if (!data) return;
+
+
+  const text =
+    document.getElementById(
+      `report-${name}`
+    );
+
+  const rating =
+    document.getElementById(
+      `rating-${name}`
+    );
+
+
+  if (text) {
+
+    text.textContent =
+      safeText(
+        data.summary ||
+        data.analysis ||
+        data.text
+      );
+
+  }
+
+
+  if (rating) {
+
+    rating.textContent =
+      stars(
+        data.rating
+      );
+
+  }
+
+}
+
+
+/* =====================================================
+   SCENARIOS
+===================================================== */
+
+function renderScenarios(
+  items
+) {
+
+  const element =
+    document.getElementById(
+      'scenario-section'
+    );
+
+  clearElement(element);
+
+
+  if (
+    !Array.isArray(items) ||
+    !items.length
+  ) {
+
+    element.textContent =
+      '確認中';
+
+    return;
+
+  }
+
+
+  items.forEach(item => {
+
+    const card =
+      document.createElement(
+        'div'
+      );
+
+    card.className =
+      'card';
+
+
+    const title =
+      document.createElement(
+        'div'
+      );
+
+    title.className =
+      'card-title';
+
+
+    let titleText =
+      safeText(
+        item.name ||
+        item.title
+      );
+
+
+    if (item.probability) {
+
+      titleText +=
+        ` ｜ ${item.probability}`;
+
+    }
+
+
+    title.textContent =
+      titleText;
+
+    card.appendChild(title);
+
+
+    const details = [
+
+      ['前提条件',
+        item.conditions ||
+        item.assumptions],
+
+      ['想定市場反応',
+        item.market_reaction],
+
+      ['上昇しやすい資産',
+        item.winners],
+
+      ['下落しやすい資産',
+        item.losers],
+
+      ['シナリオが崩れる条件',
+        item.invalidation],
+
+      ['概要',
+        item.description]
+
+    ];
+
+
+    details.forEach(
+      ([label, value]) => {
+
+        if (!value) return;
+
+
+        const block =
+          document.createElement(
+            'div'
+          );
+
+        block.className =
+          'analysis-block';
+
+
+        const l =
+          document.createElement(
+            'div'
+          );
+
+        l.className =
+          'analysis-label';
+
+        l.textContent =
+          label;
+
+
+        const t =
+          document.createElement(
+            'div'
+          );
+
+        t.className =
+          'analysis-text';
+
+        t.textContent =
+          Array.isArray(value)
+            ? value.join(' / ')
+            : value;
+
+
+        block.appendChild(l);
+
+        block.appendChild(t);
+
+        card.appendChild(block);
+
+      }
+    );
+
+
+    element.appendChild(card);
+
+  });
+
+}
+
+
+/* =====================================================
+   AI STRENGTH
+===================================================== */
+
+function renderStrength(
+  strength
+) {
+
+  const element =
+    document.getElementById(
+      'ai-strength'
+    );
+
+  clearElement(element);
+
+
+  if (!strength) {
+
+    element.textContent =
+      '確認中';
+
+    return;
+
+  }
+
+
+  const rows =
+    Array.isArray(strength)
+      ? strength
+      : (
+        strength.assets ||
+        []
+      );
+
+
+  if (!rows.length) {
+
+    element.textContent =
+      '確認中';
+
+    return;
+
+  }
+
+
+  renderTable(
+    'ai-strength',
+
+    [
+      {
+        key: 'asset',
+        label: '資産'
+      },
+      {
+        key: 'stars',
+        label: '強さ'
+      },
+      {
+        key: 'comment',
+        label: '一言コメント'
+      }
+    ],
+
+    rows.map(item => ({
+      asset:
+        item.asset ||
+        item.name,
+
+      stars:
+        item.stars ||
+        stars(item.rating),
+
+      comment:
+        item.comment ||
+        item.summary
+    }))
+
+  );
+
+}
+
+
+/* =====================================================
+   DATA QUALITY
+===================================================== */
+
+function renderQuality(
+  quality
+) {
+
+  if (!quality) return;
+
+
+  document.getElementById(
+    'quality-grade'
+  ).textContent =
+    safeText(
+      quality.grade,
+      '-'
+    );
+
+
+  const element =
+    document.getElementById(
+      'quality-detail'
+    );
+
+  clearElement(element);
+
+
+  const card =
+    document.createElement(
+      'div'
+    );
+
+  card.className =
+    'card';
+
+
+  const fields = [
+
+    [
+      '確認できなかった重要データ',
+      quality.missing_data
+    ],
+
+    [
+      '情報源によって差異があった重要データ',
+      quality.source_differences
+    ],
+
+    [
+      '今回の分析で特に注意すべき点',
+      quality.notes
+    ]
+
+  ];
+
+
+  fields.forEach(
+    ([label, value]) => {
+
+      const block =
+        document.createElement(
+          'div'
+        );
+
+      block.className =
+        'analysis-block';
+
+
+      const l =
+        document.createElement(
+          'div'
+        );
+
+      l.className =
+        'analysis-label';
+
+      l.textContent =
+        label;
+
+
+      const t =
+        document.createElement(
+          'div'
+        );
+
+      t.className =
+        'analysis-text';
+
+      t.textContent =
+        Array.isArray(value)
+          ? (
+            value.length
+              ? value.join(' / ')
+              : 'なし'
+          )
+          : safeText(
+              value,
+              'なし'
+            );
+
+
+      block.appendChild(l);
+
+      block.appendChild(t);
+
+      card.appendChild(block);
+
+    }
+  );
+
+
+  element.appendChild(card);
+
+}
+
+
+/* =====================================================
+   REPORT
+===================================================== */
 
 async function loadMarketReport() {
 
   try {
 
-    const response = await fetch(
-      '/data/report.json?ts=' + Date.now()
-    );
+    const response =
+      await fetch(
+        '/data/report.json?ts=' +
+        Date.now()
+      );
+
 
     if (!response.ok) {
+
       throw new Error(
-        'report.jsonの取得に失敗しました'
+        'report.json取得失敗'
       );
+
     }
+
 
     const report =
       await response.json();
 
-    /* 更新日時 */
 
-    document.getElementById(
-      'report-updated'
-    ).textContent =
-      report.updated_at
-        ? `レポート更新：${report.updated_at}`
-        : 'レポート更新時刻：確認できず';
+    /* -------------------------
+       DATE
+    ------------------------- */
+
+    if (report.updated_at) {
+
+      document.getElementById(
+        'report-updated'
+      ).textContent =
+        `AIレポート更新：${report.updated_at}`;
+
+    }
 
 
-    /* テーマ */
+    /* -------------------------
+       EXECUTIVE
+    ------------------------- */
 
-    const theme =
+    const executive =
+      report.executive_summary ||
+      {};
+
+
+    const headline =
+      executive.headline ||
       report.market_theme ||
-      '市場テーマを確認中';
-
-    document.getElementById(
-      'report-theme'
-    ).textContent = theme;
-
-
-    /* 総括 */
-
-    const summary =
       report.summary ||
-      '市場総括を確認中';
+      '確認中';
+
 
     document.getElementById(
-      'report-summary'
-    ).textContent = summary;
+      'executive-headline'
+    ).textContent =
+      headline;
 
-
-    /* 上部にも反映 */
 
     document.getElementById(
-      'top-summary'
-    ).textContent = theme;
+      'market-mood'
+    ).textContent =
+      safeText(
+        executive.market_mood
+      );
+
 
     document.getElementById(
-      'final-summary'
-    ).textContent = theme;
+      'main-driver'
+    ).textContent =
+      safeText(
+        executive.main_driver ||
+        report.market_theme
+      );
 
 
-    /* 勝者・敗者 */
+    const winners =
+      executive.winners ||
+      report.winners ||
+      [];
 
-    renderWinnerLoser(
-      'report-winners',
-      report.winners
+
+    const losers =
+      executive.losers ||
+      report.losers ||
+      [];
+
+
+    document.getElementById(
+      'executive-winners'
+    ).textContent =
+      winners.length
+        ? winners
+          .slice(0,3)
+          .map(
+            item =>
+              typeof item === 'string'
+                ? item
+                : item.name
+          )
+          .join(' / ')
+        : '確認中';
+
+
+    document.getElementById(
+      'executive-losers'
+    ).textContent =
+      losers.length
+        ? losers
+          .slice(0,3)
+          .map(
+            item =>
+              typeof item === 'string'
+                ? item
+                : item.name
+          )
+          .join(' / ')
+        : '確認中';
+
+
+    const importantEvents =
+      executive.important_today ||
+      report.today_watch ||
+      [];
+
+
+    document.getElementById(
+      'executive-events'
+    ).textContent =
+      importantEvents.length
+        ? importantEvents
+          .slice(0,3)
+          .map(
+            item =>
+              typeof item === 'string'
+                ? item
+                : (
+                  item.name ||
+                  item.title
+                )
+          )
+          .join(' / ')
+        : '確認中';
+
+
+    const watchMarkets =
+      executive.watch_markets ||
+      report.today_watch ||
+      [];
+
+
+    document.getElementById(
+      'executive-watch'
+    ).textContent =
+      watchMarkets.length
+        ? watchMarkets
+          .slice(0,5)
+          .map(
+            item =>
+              typeof item === 'string'
+                ? item
+                : (
+                  item.name ||
+                  item.title
+                )
+          )
+          .join(' / ')
+        : '確認中';
+
+
+    /* -------------------------
+       RELATIVE RANKING
+    ------------------------- */
+
+    renderResultItems(
+      'relative-ranking',
+      report.relative_ranking ||
+      report.market_ranking
     );
 
-    renderWinnerLoser(
-      'report-losers',
-      report.losers
+
+    /* -------------------------
+       OVERVIEW
+    ------------------------- */
+
+    if (
+      Array.isArray(
+        report.market_overview
+      )
+    ) {
+
+      renderTable(
+
+        'market-overview',
+
+        [
+          {
+            key:'market',
+            label:'市場'
+          },
+          {
+            key:'move',
+            label:'値動き'
+          },
+          {
+            key:'strength',
+            label:'相対的な強さ'
+          },
+          {
+            key:'background',
+            label:'考えられる背景'
+          }
+        ],
+
+        report.market_overview
+
+      );
+
+    }
+
+
+    /* -------------------------
+       MAIN STORY
+    ------------------------- */
+
+    const mainStory =
+      report.main_story;
+
+
+    if (mainStory) {
+
+      renderCards(
+        'main-story',
+        [mainStory]
+      );
+
+    }
+
+
+    /* -------------------------
+       NEWS
+    ------------------------- */
+
+    renderCards(
+      'market-news',
+      report.news ||
+      report.market_news
     );
 
 
-    /* 資産分析 */
+    /* -------------------------
+       POLICY
+    ------------------------- */
+
+    renderCards(
+      'policy-section',
+      report.policy ||
+      report.central_banks
+    );
+
+
+    /* -------------------------
+       INTERNAL STRENGTH
+    ------------------------- */
+
+    renderCards(
+      'internal-strength',
+      report.internal_strength
+    );
+
+
+    /* -------------------------
+       CROSS ASSET
+    ------------------------- */
+
+    renderCards(
+      'cross-asset',
+      report.cross_asset
+    );
+
+
+    /* -------------------------
+       SIMPLE ASSET SUMMARY
+    ------------------------- */
 
     renderAsset(
       'equities',
@@ -1480,256 +2856,357 @@ async function loadMarketReport() {
     );
 
 
-    /* 今日の注目 */
+    /* -------------------------
+       COMMODITIES
+    ------------------------- */
 
-    renderWatch(
-      report.today_watch
+    renderCards(
+      'commodity-detail',
+      report.commodity_detail
     );
 
 
-    /* 上部の今日最重要 */
+    /* -------------------------
+       COPPER
+    ------------------------- */
 
     if (
-      Array.isArray(report.today_watch) &&
-      report.today_watch.length > 0
+      report.copper &&
+      Array.isArray(
+        report.copper.details
+      )
     ) {
 
-      document.getElementById(
-        'top-watch'
-      ).textContent =
-        report.today_watch
-          .slice(0, 3)
-          .join(' / ');
+      renderCards(
+        'copper-detail',
+        report.copper.details
+      );
+
     }
 
 
-    /* シナリオ */
+    /* -------------------------
+       CRYPTO DETAIL
+    ------------------------- */
+
+    if (
+      report.crypto &&
+      Array.isArray(
+        report.crypto.details
+      )
+    ) {
+
+      renderCards(
+        'crypto-detail',
+        report.crypto.details
+      );
+
+    } else {
+
+      document.getElementById(
+        'crypto-detail'
+      ).textContent =
+        safeText(
+          report.crypto?.conclusion
+        );
+
+    }
+
+
+    /* -------------------------
+       ENVIRONMENT
+    ------------------------- */
+
+    renderCards(
+      'market-environment',
+      report.market_environment
+    );
+
+
+    /* -------------------------
+       UNUSUAL MOVES
+    ------------------------- */
+
+    renderCards(
+      'unusual-moves',
+      report.unusual_moves
+    );
+
+
+    /* -------------------------
+       EVENTS
+    ------------------------- */
+
+    if (
+      Array.isArray(
+        report.events
+      )
+    ) {
+
+      renderTable(
+
+        'event-section',
+
+        [
+          {
+            key:'event',
+            label:'イベント'
+          },
+          {
+            key:'time_jst',
+            label:'日本時間'
+          },
+          {
+            key:'forecast',
+            label:'市場予想'
+          },
+          {
+            key:'watch',
+            label:'何を見るか'
+          },
+          {
+            key:'markets',
+            label:'影響市場'
+          },
+          {
+            key:'importance',
+            label:'重要度'
+          }
+        ],
+
+        report.events
+
+      );
+
+    }
+
+
+    /* -------------------------
+       WATCH CARDS
+    ------------------------- */
+
+    renderCards(
+      'watch-cards',
+      report.watch_cards
+    );
+
+
+    /* -------------------------
+       CHANGE CONDITIONS
+    ------------------------- */
+
+    renderCards(
+      'change-conditions',
+      report.change_conditions
+    );
+
+
+    /* -------------------------
+       SCENARIOS
+    ------------------------- */
 
     renderScenarios(
       report.scenarios
     );
 
+
+    /* -------------------------
+       TRADE WATCH
+    ------------------------- */
+
+    renderCards(
+      'trade-watch',
+      report.trade_watch ||
+      report.today_trade_watch
+    );
+
+
+    /* -------------------------
+       STRENGTH
+    ------------------------- */
+
+    renderStrength(
+      report.strength
+    );
+
+
+    /* -------------------------
+       QUALITY
+    ------------------------- */
+
+    renderQuality(
+      report.data_quality
+    );
+
+
+    /* -------------------------
+       FINAL
+    ------------------------- */
+
+    const final =
+      report.final ||
+      report.final_conclusion ||
+      {};
+
+
+    document.getElementById(
+      'final-headline'
+    ).textContent =
+      safeText(
+        final.headline ||
+        report.market_theme ||
+        report.summary
+      );
+
+
+    const finalElement =
+      document.getElementById(
+        'final-detail'
+      );
+
+    clearElement(
+      finalElement
+    );
+
+
+    const finalCard =
+      document.createElement(
+        'div'
+      );
+
+    finalCard.className =
+      'card';
+
+
+    const finalFields = [
+
+      [
+        '昨日の勝者',
+        final.winners ||
+        report.winners
+      ],
+
+      [
+        '昨日の敗者',
+        final.losers ||
+        report.losers
+      ],
+
+      [
+        '今日最重要の3つ',
+        final.top3 ||
+        report.today_watch
+      ],
+
+      [
+        '今日、見方を変えるきっかけ',
+        final.change_triggers ||
+        report.change_conditions
+      ]
+
+    ];
+
+
+    finalFields.forEach(
+      ([label, value]) => {
+
+        if (!value) return;
+
+
+        const block =
+          document.createElement(
+            'div'
+          );
+
+        block.className =
+          'analysis-block';
+
+
+        const l =
+          document.createElement(
+            'div'
+          );
+
+        l.className =
+          'analysis-label';
+
+        l.textContent =
+          label;
+
+
+        const t =
+          document.createElement(
+            'div'
+          );
+
+        t.className =
+          'analysis-text';
+
+
+        if (Array.isArray(value)) {
+
+          t.textContent =
+            value
+              .slice(0,5)
+              .map(
+                item =>
+                  typeof item === 'string'
+                    ? item
+                    : (
+                      item.name ||
+                      item.title ||
+                      item.description ||
+                      ''
+                    )
+              )
+              .join(' / ');
+
+        } else {
+
+          t.textContent =
+            value;
+
+        }
+
+
+        block.appendChild(l);
+
+        block.appendChild(t);
+
+        finalCard.appendChild(
+          block
+        );
+
+      }
+    );
+
+
+    finalElement.appendChild(
+      finalCard
+    );
+
+
   } catch (error) {
 
-    console.error(error);
+    console.error(
+      'Report error:',
+      error
+    );
+
 
     document.getElementById(
-      'report-theme'
+      'executive-headline'
     ).textContent =
-      'ChatGPTレポートを取得できませんでした';
+      'AIレポートを取得できませんでした';
 
-    document.getElementById(
-      'report-summary'
-    ).textContent =
-      'data/report.json を確認してください';
 
     document.getElementById(
       'report-updated'
     ).textContent =
-      'レポート取得失敗';
-  }
-}
+      'AIレポート取得失敗';
 
-
-/* =====================================================
-   REPORT WINNER / LOSER
-===================================================== */
-
-function renderWinnerLoser(id, items) {
-
-  const element =
-    document.getElementById(id);
-
-  if (!element) return;
-
-  element.innerHTML = '';
-
-  if (
-    !Array.isArray(items) ||
-    items.length === 0
-  ) {
-
-    element.textContent =
-      '確認中';
-
-    return;
   }
 
-  items.forEach(item => {
-
-    const box =
-      document.createElement('div');
-
-    box.className =
-      'winner-loser-item';
-
-    const name =
-      document.createElement('div');
-
-    name.className =
-      'winner-loser-name';
-
-    name.textContent =
-      item.name || '確認中';
-
-    const reason =
-      document.createElement('div');
-
-    reason.className =
-      'winner-loser-reason';
-
-    reason.textContent =
-      item.reason || '';
-
-    box.appendChild(name);
-    box.appendChild(reason);
-
-    element.appendChild(box);
-  });
-}
-
-
-/* =====================================================
-   REPORT ASSET
-===================================================== */
-
-function renderAsset(name, data) {
-
-  if (!data) return;
-
-  const text =
-    document.getElementById(
-      `report-${name}`
-    );
-
-  const rating =
-    document.getElementById(
-      `rating-${name}`
-    );
-
-  if (text) {
-
-    text.textContent =
-      data.summary ||
-      '確認中';
-  }
-
-  if (rating) {
-
-    rating.textContent =
-      makeStars(data.rating);
-  }
-}
-
-
-/* =====================================================
-   TODAY WATCH
-===================================================== */
-
-function renderWatch(items) {
-
-  const element =
-    document.getElementById(
-      'report-watch'
-    );
-
-  if (!element) return;
-
-  element.innerHTML = '';
-
-  if (
-    !Array.isArray(items) ||
-    items.length === 0
-  ) {
-
-    const li =
-      document.createElement('li');
-
-    li.textContent =
-      '確認中';
-
-    element.appendChild(li);
-
-    return;
-  }
-
-  items.forEach(item => {
-
-    const li =
-      document.createElement('li');
-
-    li.textContent = item;
-
-    element.appendChild(li);
-  });
-}
-
-
-/* =====================================================
-   SCENARIOS
-===================================================== */
-
-function renderScenarios(items) {
-
-  const element =
-    document.getElementById(
-      'report-scenarios'
-    );
-
-  if (!element) return;
-
-  element.innerHTML = '';
-
-  if (
-    !Array.isArray(items) ||
-    items.length === 0
-  ) {
-
-    element.textContent =
-      '確認中';
-
-    return;
-  }
-
-  items.forEach(item => {
-
-    const card =
-      document.createElement('div');
-
-    card.className = 'card';
-
-    const title =
-      document.createElement('div');
-
-    title.className =
-      'card-title';
-
-    let titleText =
-      item.name ||
-      '市場シナリオ';
-
-    if (item.probability) {
-      titleText +=
-        ` ｜ ${item.probability}`;
-    }
-
-    title.textContent =
-      titleText;
-
-    const description =
-      document.createElement('div');
-
-    description.className =
-      'report-text';
-
-    description.textContent =
-      item.description || '';
-
-    card.appendChild(title);
-    card.appendChild(description);
-
-    element.appendChild(card);
-  });
 }
 
 
@@ -1738,6 +3215,7 @@ function renderScenarios(items) {
 ===================================================== */
 
 loadMarketData();
+
 loadMarketReport();
 
 </script>

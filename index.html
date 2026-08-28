@@ -518,6 +518,71 @@ td.nowrap {
 
 }
 
+
+/* =====================================================
+   HISTORY NAVIGATION
+===================================================== */
+
+.history-nav {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 8px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.history-button,
+.history-date {
+  min-height: 40px;
+  border: 1px solid rgba(255,255,255,0.24);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.10);
+  color: white;
+  font: inherit;
+  font-size: 13px;
+}
+
+.history-button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.history-button:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+.history-button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.history-date {
+  width: 100%;
+  padding: 7px 9px;
+  color-scheme: dark;
+}
+
+.history-mode {
+  margin-top: 8px;
+  font-size: 12px;
+  opacity: 0.72;
+}
+
+@media (max-width: 560px) {
+  .history-nav {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .history-date {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .history-button {
+    width: 100%;
+  }
+}
+
 </style>
 </head>
 
@@ -547,6 +612,17 @@ td.nowrap {
 
   <div class="report-date" id="report-updated">
     AIレポートを読み込み中...
+  </div>
+
+  <div class="history-nav" aria-label="履歴ナビゲーション">
+    <button class="history-button" id="prev-day" type="button">← 前日</button>
+    <input class="history-date" id="history-date" type="date" aria-label="表示する日付">
+    <button class="history-button" id="next-day" type="button">翌日 →</button>
+    <button class="history-button" id="latest-day" type="button">最新</button>
+  </div>
+
+  <div class="history-mode" id="history-mode">
+    最新データを表示中
   </div>
 
 </div>
@@ -1275,6 +1351,186 @@ function clearElement(element) {
 
 
 /* =====================================================
+   HISTORY NAVIGATION
+===================================================== */
+
+let selectedHistoryDate = null;
+
+function pad2(value) {
+  return String(value).padStart(2, '0');
+}
+
+function toDateKey(date) {
+  return (
+    date.getFullYear() + '-' +
+    pad2(date.getMonth() + 1) + '-' +
+    pad2(date.getDate())
+  );
+}
+
+function parseDateKey(value) {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value || '');
+  if (!match) return null;
+
+  const date = new Date(
+    Number(match[1]),
+    Number(match[2]) - 1,
+    Number(match[3]),
+    12, 0, 0
+  );
+
+  return Number.isNaN(date.getTime()) ? null : date;
+}
+
+function shiftDateKey(value, days) {
+  const date = parseDateKey(value);
+  if (!date) return value;
+
+  date.setDate(date.getDate() + days);
+  return toDateKey(date);
+}
+
+function formatDateKey(value) {
+  const date = parseDateKey(value);
+  if (!date) return value || '';
+
+  return date.toLocaleDateString(
+    'ja-JP',
+    {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit'
+    }
+  );
+}
+
+function marketDataUrl() {
+  if (selectedHistoryDate) {
+    return (
+      '/data/history/' +
+      selectedHistoryDate +
+      '/market.json?ts=' +
+      Date.now()
+    );
+  }
+
+  return '/data/market.json?ts=' + Date.now();
+}
+
+function reportDataUrl() {
+  if (selectedHistoryDate) {
+    return (
+      '/data/history/' +
+      selectedHistoryDate +
+      '/report.json?ts=' +
+      Date.now()
+    );
+  }
+
+  return '/data/report.json?ts=' + Date.now();
+}
+
+function setHistoryMode(message) {
+  const element = document.getElementById('history-mode');
+  if (element) element.textContent = message;
+}
+
+function resetLoadingState() {
+  document.getElementById('market-updated').textContent =
+    '市場データを読み込み中...';
+
+  document.getElementById('report-updated').textContent =
+    'AIレポートを読み込み中...';
+
+  document.getElementById('market-status').textContent = '';
+
+  document.getElementById('executive-headline').textContent =
+    '市場レポートを読み込み中...';
+}
+
+async function loadSelectedDay() {
+  resetLoadingState();
+
+  if (selectedHistoryDate) {
+    setHistoryMode(
+      '履歴：' + formatDateKey(selectedHistoryDate) + ' を表示中'
+    );
+  } else {
+    setHistoryMode('最新データを表示中');
+  }
+
+  await Promise.all([
+    loadMarketData(),
+    loadMarketReport()
+  ]);
+}
+
+function showHistoryDate(dateKey) {
+  if (!parseDateKey(dateKey)) return;
+
+  selectedHistoryDate = dateKey;
+
+  const input = document.getElementById('history-date');
+  if (input) input.value = dateKey;
+
+  loadSelectedDay();
+}
+
+function showLatest() {
+  selectedHistoryDate = null;
+
+  const input = document.getElementById('history-date');
+  if (input) input.value = '';
+
+  loadSelectedDay();
+}
+
+function setupHistoryNavigation() {
+  const dateInput = document.getElementById('history-date');
+  const prevButton = document.getElementById('prev-day');
+  const nextButton = document.getElementById('next-day');
+  const latestButton = document.getElementById('latest-day');
+
+  if (dateInput) {
+    dateInput.addEventListener('change', () => {
+      if (dateInput.value) {
+        showHistoryDate(dateInput.value);
+      }
+    });
+  }
+
+  if (prevButton) {
+    prevButton.addEventListener('click', () => {
+      if (selectedHistoryDate) {
+        showHistoryDate(
+          shiftDateKey(selectedHistoryDate, -1)
+        );
+        return;
+      }
+
+      const today = new Date();
+      today.setDate(today.getDate() - 1);
+      showHistoryDate(toDateKey(today));
+    });
+  }
+
+  if (nextButton) {
+    nextButton.addEventListener('click', () => {
+      if (!selectedHistoryDate) return;
+
+      showHistoryDate(
+        shiftDateKey(selectedHistoryDate, 1)
+      );
+    });
+  }
+
+  if (latestButton) {
+    latestButton.addEventListener('click', showLatest);
+  }
+}
+
+
+/* =====================================================
    MARKET DATA
 ===================================================== */
 
@@ -1284,8 +1540,7 @@ async function loadMarketData() {
 
     const response =
       await fetch(
-        '/data/market.json?ts=' +
-        Date.now()
+        marketDataUrl()
       );
 
     if (!response.ok) {
@@ -1396,7 +1651,9 @@ async function loadMarketData() {
     document.getElementById(
       'market-status'
     ).textContent =
-      '市場データを取得できませんでした';
+      selectedHistoryDate
+        ? 'この日の市場データは保存されていません'
+        : '市場データを取得できませんでした';
 
   }
 
@@ -2545,8 +2802,7 @@ async function loadMarketReport() {
 
     const response =
       await fetch(
-        '/data/report.json?ts=' +
-        Date.now()
+        reportDataUrl()
       );
 
 
@@ -3197,13 +3453,17 @@ async function loadMarketReport() {
     document.getElementById(
       'executive-headline'
     ).textContent =
-      'AIレポートを取得できませんでした';
+      selectedHistoryDate
+        ? 'この日のAIレポートは保存されていません'
+        : 'AIレポートを取得できませんでした';
 
 
     document.getElementById(
       'report-updated'
     ).textContent =
-      'AIレポート取得失敗';
+      selectedHistoryDate
+        ? 'AIレポート履歴なし'
+        : 'AIレポート取得失敗';
 
   }
 
@@ -3214,9 +3474,9 @@ async function loadMarketReport() {
    START
 ===================================================== */
 
-loadMarketData();
+setupHistoryNavigation();
 
-loadMarketReport();
+loadSelectedDay();
 
 </script>
 

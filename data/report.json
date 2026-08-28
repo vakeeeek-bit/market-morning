@@ -1,0 +1,52 @@
+{
+  "updated_at": "2026-08-28 12:45:00",
+  "title": "Market Morning Daily Report",
+  "summary": "市場レポートを準備中です。",
+  "market_theme": "本日の主要テーマをここに表示します。",
+  "winners": [
+    {
+      "name": "確認中",
+      "reason": "市場データ確認中"
+    }
+  ],
+  "losers": [
+    {
+      "name": "確認中",
+      "reason": "市場データ確認中"
+    }
+  ],
+  "equities": {
+    "rating": 3,
+    "summary": "株式市場分析をここに表示します。"
+  },
+  "bonds": {
+    "rating": 3,
+    "summary": "債券市場分析をここに表示します。"
+  },
+  "fx": {
+    "rating": 3,
+    "summary": "為替市場分析をここに表示します。"
+  },
+  "commodities": {
+    "rating": 3,
+    "summary": "商品市場分析をここに表示します。"
+  },
+  "crypto": {
+    "rating": 3,
+    "summary": "暗号資産市場分析をここに表示します。"
+  },
+  "copper": {
+    "rating": 3,
+    "summary": "Copper詳細分析をここに表示します。"
+  },
+  "today_watch": [
+    "重要イベント確認中"
+  ],
+  "scenarios": [
+    {
+      "name": "メインシナリオ",
+      "probability": "確認中",
+      "description": "市場シナリオをここに表示します。"
+    }
+  ]
+}

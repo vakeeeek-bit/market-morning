@@ -6,7 +6,7 @@ on:
   schedule:
     # 日本時間 毎朝7:07
     # GitHub Actions の cron は UTC
-    # 22:07 UTC = 翌朝 7:07 JST
+    # 22:07 UTC = 翌朝7:07 JST
     - cron: "7 22 * * *"
 
 permissions:
@@ -37,12 +37,24 @@ jobs:
         run: |
           python scripts/update_market.py
 
+      - name: Save market history
+        run: |
+          DATE_JST=$(TZ=Asia/Tokyo date +%Y-%m-%d)
+
+          mkdir -p "data/history/$DATE_JST"
+
+          cp data/market.json \
+             "data/history/$DATE_JST/market.json"
+
+          echo "Saved market history: $DATE_JST"
+
       - name: Commit updated market data
         run: |
           git config user.name "Market Morning Bot"
           git config user.email "actions@github.com"
 
           git add data/market.json
+          git add data/history/
 
           if git diff --cached --quiet; then
             echo "No market data changes"

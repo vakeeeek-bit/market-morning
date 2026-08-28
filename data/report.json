@@ -1,578 +1,210 @@
 {
-  "updated_at": "2026-08-28 12:00 JST",
-  "title": "Market Morning Daily Report",
-
+  "updated_at": "2026-08-29 06:00 JST",
+  "report_date": "2026-08-29",
+  "target_market_date": "2026-08-28",
   "executive_summary": {
-    "headline": "NVIDIAがAI相場を再点火。ただし上昇はテックに集中し、金利も上昇。全面リスクオンではなく『AI集中＋Fed警戒』の相場。",
-    "market_mood": "方向感なし（指数は上昇したが、市場内部は一部大型テックへの集中が強い）",
-    "main_driver": "NVIDIAの好決算・強い成長見通しと、それを受けたAI・半導体・ソフトウェア株への資金集中",
-    "winners": [
-      "AI・半導体",
-      "NASDAQ・大型テック",
-      "Silver・BTC"
+    "headline": "Warsh議長がインフレ抑制姿勢を明確化。9月利上げ観測が再浮上し、金利に弱い資産が下落",
+    "market_mood": "リスクを避ける（ただし全面安ではない）",
+    "main_driver": "Warsh FRB議長のJackson Hole講演。9月利上げ確率は35.4%から55.7%へ上昇",
+    "winners": ["ドル", "欧州株", "TOPIX・一部米メガキャップ"],
+    "losers": ["Silver", "Gold", "暗号資産・米小型株"],
+    "important_today": ["週末の中東・Hormuz関連ヘッドライン", "米2年利回り4.40%とDXY100", "来週のISM・雇用統計"],
+    "watch_markets": ["米2年債", "DXY", "Gold", "Russell2000", "BTC"]
+  },
+  "relative_ranking": {
+    "strong": [
+      {"rank": 1, "market": "ドル", "move": "+0.61%", "comment": "利上げ観測上昇に素直に反応し約2か月半ぶりの大幅高"},
+      {"rank": 2, "market": "STOXX Europe 600", "move": "+0.51%", "comment": "前日売られたフランス株・銀行・高級品株が反発"},
+      {"rank": 3, "market": "TOPIX", "move": "+0.72%", "comment": "日経225を上回り、日本株内部では相対的に広い強さ"},
+      {"rank": 4, "market": "米大型バリュー／一部メガキャップ", "move": "Dow -0.02%", "comment": "小型株・NASDAQより底堅い"},
+      {"rank": 5, "market": "原油", "move": "WTI -0.16%", "comment": "ドル高・金利上昇の割に下げは限定的"}
     ],
-    "losers": [
-      "非テック株",
-      "欧州株",
-      "米国債"
-    ],
-    "important_today": [
-      "Kevin Warsh Fed議長のJackson Hole講演",
-      "米10年債利回りとDXYの反応",
-      "NVIDIA主導のAI買いが他セクターへ波及するか"
-    ],
-    "watch_markets": [
-      "米10年債",
-      "NASDAQ",
-      "DXY",
-      "Gold",
-      "BTC"
+    "weak": [
+      {"rank": 1, "market": "Silver", "move": "-4.3%"},
+      {"rank": 2, "market": "Gold", "move": "-3.19%"},
+      {"rank": 3, "market": "暗号資産・Russell2000", "move": "BTC -3.34%、Russell2000 -1.39%"}
     ]
   },
-
-  "relative_ranking": [
-    {
-      "name": "NASDAQ・AI関連",
-      "reason": "NASDAQ総合は1.57%上昇。NVIDIAの8.7%高を起点に半導体・ソフトウェアへ買いが広がり、他の主要株価指数を明確にアウトパフォームした。"
-    },
-    {
-      "name": "Silver",
-      "reason": "Goldの上昇率を上回り、貴金属の中で相対的な強さが目立った。"
-    },
-    {
-      "name": "BTC",
-      "reason": "約2%上昇して8万ドル台を回復。米金利が上昇する環境でも上昇しており、短期的には相対的な底堅さが確認された。"
-    },
-    {
-      "name": "原油",
-      "reason": "WTIとBrentが上昇。米国・イラン関係を巡る供給不安が再び価格に反映された。"
-    },
-    {
-      "name": "Gold",
-      "reason": "米金利が上昇する中でも小幅上昇。金利面の逆風に対して底堅い値動きだった。"
-    }
+  "market_data": [
+    {"market":"S&P500","price":"7,711.76","change":"-0.25%","time":"8/28米国終値","source":"Reuters / AP","confidence":"A"},
+    {"market":"NASDAQ100","price":"確認できず","change":"確認できず","time":"8/28","source":"—","confidence":"D"},
+    {"market":"NASDAQ総合","price":"26,402.42","change":"-0.52%","time":"8/28米国終値","source":"Reuters / Investing.com","confidence":"A"},
+    {"market":"NYダウ","price":"53,559.99","change":"-0.02%","time":"8/28米国終値","source":"Reuters / AP","confidence":"A"},
+    {"market":"Russell2000","price":"2,972.37","change":"-1.39%","time":"8/28米国終値","source":"AP / Yahoo Finance","confidence":"A"},
+    {"market":"日経225","price":"66,405.56","change":"+0.41%","time":"8/28東京終値","source":"Reuters/LSEG","confidence":"A"},
+    {"market":"TOPIX","price":"4,146.71","change":"+0.72%","time":"8/28東京終値","source":"Investing.com","confidence":"B"},
+    {"market":"STOXX Europe 600","price":"655.16","change":"+0.51%","time":"8/28欧州終値","source":"Reuters","confidence":"A"},
+    {"market":"上海総合","price":"3,952.18","change":"-0.11%","time":"8/28上海終値","source":"Reuters/LSEG","confidence":"B"},
+    {"market":"香港ハンセン","price":"25,584.79","change":"+0.07%","time":"8/28香港終値","source":"Reuters/LSEG","confidence":"B"},
+    {"market":"DXY","price":"99.71","change":"+0.61%","time":"8/28米国終盤","source":"Reuters","confidence":"A"},
+    {"market":"USD/JPY","price":"160.11","change":"+0.45%","time":"8/28米国終盤","source":"Reuters","confidence":"A"},
+    {"market":"EUR/USD","price":"1.1580","change":"-0.61%","time":"8/28米国終盤","source":"Reuters","confidence":"A"},
+    {"market":"USD/CNY","price":"約6.73","change":"確認できず","time":"8/28代表値","source":"Reuters/LSEG換算","confidence":"C"},
+    {"market":"GBP/USD","price":"1.3534","change":"-0.43%","time":"8/28代表値","source":"Reuters/LSEG","confidence":"B"},
+    {"market":"米2年債利回り","price":"4.360%","change":"+12.8bp","time":"8/28米国終盤","source":"Reuters","confidence":"A"},
+    {"market":"米5年債利回り","price":"4.488%","change":"+9.2bp","time":"8/28米国終盤","source":"Investing.com","confidence":"B"},
+    {"market":"米10年債利回り","price":"4.728%","change":"+5.6bp","time":"8/28米国終盤","source":"Reuters / Investing.com","confidence":"A"},
+    {"market":"米30年債利回り","price":"5.213%","change":"+2.2bp","time":"8/28米国終盤","source":"Reuters","confidence":"A"},
+    {"market":"Gold","price":"$4,454.52/oz","change":"-3.19%","time":"8/28米国終盤","source":"Reuters","confidence":"A"},
+    {"market":"Silver","price":"$66.28/oz","change":"-4.3%","time":"8/28米国終盤","source":"Reuters","confidence":"A"},
+    {"market":"Copper","price":"$6.5443/lb","change":"-1.16%","time":"8/28代表先物","source":"Investing.com","confidence":"B"},
+    {"market":"Aluminum","price":"$3,228.80/t","change":"+4.21%","time":"8/28代表値","source":"MetalCharts","confidence":"C"},
+    {"market":"Nickel","price":"$16,770/t","change":"-0.62%","time":"8/28代表値（CFD）","source":"Trading Economics","confidence":"C"},
+    {"market":"WTI","price":"$83.40/bbl","change":"-0.16%","time":"8/28清算値","source":"Reuters","confidence":"A"},
+    {"market":"Brent","price":"$89.31/bbl","change":"-0.43%","time":"8/28清算値","source":"Reuters","confidence":"A"},
+    {"market":"BTC","price":"約$77,500","change":"約-3.3%","time":"8/29早朝JST","source":"Reuters / CoinDesk","confidence":"A"},
+    {"market":"ETH","price":"約$2,432","change":"-2.9%","time":"8/29早朝JST","source":"CoinDesk / Investing.com","confidence":"A"},
+    {"market":"XRP","price":"$1.38","change":"-4.5%","time":"8/29早朝JST","source":"CoinDesk","confidence":"B"},
+    {"market":"BNB","price":"$689","change":"-3.0%","time":"8/29早朝JST","source":"CoinDesk / Investing.com","confidence":"A"},
+    {"market":"SOL","price":"$104.0","change":"-4.3%","time":"8/29早朝JST","source":"CoinDesk","confidence":"B"},
+    {"market":"DOGE","price":"$0.0851","change":"-4.1%","time":"8/29早朝JST","source":"CoinDesk","confidence":"B"},
+    {"market":"BTC占有率","price":"59.48%","change":"-0.24pt","time":"8/29早朝JST","source":"CoinMarketCap","confidence":"B"},
+    {"market":"暗号資産時価総額","price":"$2.61兆","change":"-3.01%","time":"8/29早朝JST","source":"CoinMarketCap","confidence":"B"}
   ],
-
   "market_overview": [
-    {
-      "market": "米国株",
-      "move": "S&P500 +0.72%、NASDAQ +1.57%、NYダウ +0.20%",
-      "strength": "一部だけ強い",
-      "background": "NVIDIAを中心とするAI・テクノロジーへの資金集中"
-    },
-    {
-      "market": "日本株",
-      "move": "market.json参照",
-      "strength": "個別データ参照",
-      "background": "米国AI株、為替、国内金利環境を確認"
-    },
-    {
-      "market": "欧州株",
-      "move": "STOXX600 -0.69%",
-      "strength": "弱い",
-      "background": "米国テック高が欧州市場全体には波及せず、フランス政治不安も重荷"
-    },
-    {
-      "market": "DXY",
-      "move": "ほぼ横ばい",
-      "strength": "中立",
-      "background": "Warsh講演を前に方向感が限定的"
-    },
-    {
-      "market": "米10年債",
-      "move": "利回り4.676%へ上昇",
-      "strength": "債券価格は弱い",
-      "background": "インフレ警戒とFed政策見通し"
-    },
-    {
-      "market": "Gold",
-      "move": "+0.23%",
-      "strength": "底堅い",
-      "background": "米金利上昇にもかかわらず上昇"
-    },
-    {
-      "market": "Copper",
-      "move": "market.json参照",
-      "strength": "判断継続",
-      "background": "米国関税と地域間在庫移動が重要"
-    },
-    {
-      "market": "原油",
-      "move": "WTI +1.58%、Brent +2.12%",
-      "strength": "強い",
-      "background": "米国・イラン情勢を巡る供給不安"
-    },
-    {
-      "market": "BTC",
-      "move": "+2.05%",
-      "strength": "強い",
-      "background": "株式のリスク選好改善とともに上昇"
-    }
+    {"market":"米国株","move":"小幅安","strength":"弱い","background":"利上げ観測上昇。小型株・半導体の下げが大きい"},
+    {"market":"日本株","move":"上昇","strength":"強い","background":"前日の米ハイテク高を反映。TOPIXが日経を上回る"},
+    {"market":"欧州株","move":"+0.51%","strength":"強い","background":"フランス株・銀行・高級品株の自律反発"},
+    {"market":"中国株","move":"上海小幅安、香港横ばい","strength":"中立～弱い","background":"明確な全面買いは確認できず"},
+    {"market":"DXY","move":"+0.61%","strength":"非常に強い","background":"米利上げ確率上昇"},
+    {"market":"USD/JPY","move":"160.11へ上昇","strength":"ドル優位","background":"米短期金利上昇が円支援材料を上回った可能性"},
+    {"market":"米10年債","move":"利回り+5.6bp","strength":"債券は弱い","background":"インフレ・利上げ再評価"},
+    {"market":"Gold","move":"-3.19%","strength":"非常に弱い","background":"ドル高と金利上昇への警戒"},
+    {"market":"Copper","move":"-1.16%","strength":"弱い","background":"ドル高・景気敏感資産への逆風"},
+    {"market":"原油","move":"小幅安","strength":"相対的に底堅い","background":"Hormuz航行合意観測と供給懸念が綱引き"},
+    {"market":"BTC","move":"-3.34%","strength":"弱い","background":"金利上昇・ドル高と同時に売られた"}
   ],
-
   "main_story": {
-    "title": "NVIDIA決算がAI相場を再点火",
-    "fact": "NVIDIAはQ2売上高962億ドルを発表。前四半期比18%増、前年同期比106%増。株価は翌27日に8.7%上昇した。",
-    "market_reaction": "NASDAQ総合+1.57%、S&P500+0.72%、NYダウ+0.20%。半導体指数は+2.3%、S&P500テクノロジーは+3.4%。",
-    "analysis": "AI投資需要の持続性への信頼が強まった可能性が高い。ただしS&P500の他セクターは弱く、指数上昇を全面的なリスクオンと解釈するのは適切ではない。資金がAI・大型テックへ集中した相場と考える方が整合的。",
+    "title": "Warsh FRB議長のJackson Hole講演",
+    "facts": "物価上昇率が2%へ十分な速さで戻る確信がなければFRBにはさらに取り組むべきことがあると発言。金融環境が明確に引き締まっていないとの認識も示した。",
+    "market_reaction": "9月利上げ確率35.4%→55.7%。米2年+12.8bp、DXY+0.61%、Gold-3.19%、BTC-3.34%、Russell2000-1.39%。",
+    "analysis": "発言前後で政策金利の織り込みが大きく変化し、株・債券・為替・貴金属・暗号資産へ波及した。",
     "confidence": "高"
   },
-
   "news": [
-    {
-      "title": "① NVIDIA決算・AI需要",
-      "fact": "NVIDIAのQ2売上高は962億ドル。会社側の強い業績と成長見通しが確認された。",
-      "market_reaction": "NVIDIA+8.7%、半導体指数+2.3%、S&P500テクノロジー+3.4%、NASDAQ総合+1.57%。",
-      "analysis": "AIインフラ投資の持続性に対する市場の信頼を強めた可能性がある。",
-      "related_assets": "NASDAQ / 半導体 / AI / S&P500",
-      "importance": "★★★★★",
-      "confidence": "高"
-    },
-    {
-      "title": "② Fed・インフレ警戒",
-      "fact": "直近のPCEインフレが市場予想を上回り、複数のFed当局者もインフレへの警戒を示した。",
-      "market_reaction": "米国債利回りは上昇。米10年債利回りは4.676%。",
-      "analysis": "AI株高とは別に、金融政策面では高金利長期化への警戒が残っている。",
-      "related_assets": "米国債 / DXY / NASDAQ / Gold / BTC",
-      "importance": "★★★★★",
-      "confidence": "高"
-    },
-    {
-      "title": "③ 米国・イラン情勢",
-      "fact": "米国とイランの合意を巡る不透明感が再び意識された。",
-      "market_reaction": "WTIは1.58%上昇して83.53ドル、Brentは2.12%上昇して89.70ドル。",
-      "analysis": "供給途絶リスクへの警戒が原油価格へ反映された可能性がある。",
-      "related_assets": "WTI / Brent / 米国債 / インフレ期待",
-      "importance": "★★★★☆",
-      "confidence": "中"
-    },
-    {
-      "title": "④ Salesforce・ソフトウェア株",
-      "fact": "Salesforceは年間売上高・利益見通しを引き上げ、AI関連機能も発表した。",
-      "market_reaction": "Salesforceは22.6%上昇。CrowdStrikeも20.5%上昇した。",
-      "analysis": "AIによる既存ソフトウェア企業への破壊懸念が一部後退し、AI買いが半導体以外へ広がった可能性がある。",
-      "related_assets": "NASDAQ / ソフトウェア / AI",
-      "importance": "★★★★☆",
-      "confidence": "高"
-    }
+    {"title":"Warsh議長がインフレ抑制を優先","fact":"2%目標を維持し、最近のインフレ指標は基調変化を示していないと発言","market_reaction":"短期金利・ドル上昇、Gold・BTC・小型株下落","analysis":"9月据え置き優勢から利上げと据え置きがほぼ五分へ修正","related_assets":["米国債","DXY","NASDAQ","Gold","BTC"],"importance":"★★★★★"},
+    {"title":"米国株の内部は指数以上に弱い","fact":"NYSE下落銘柄は上昇銘柄の1.77倍、NASDAQは2.19倍。Russell2000は-1.39%","market_reaction":"S&P500は-0.25%だが広範な銘柄が下落","analysis":"一部メガキャップが指数を支えた可能性","importance":"★★★★☆"},
+    {"title":"Nvidia反落、Marvell急落","fact":"Nvidia-4.6%、Marvell-10.3%","market_reaction":"NASDAQはDowを下回る","analysis":"金利上昇と決算後の利益確定が高評価銘柄を圧迫","importance":"★★★★☆"},
+    {"title":"Gold・Silverが大幅安","fact":"Gold-3.19%、Silver-4.3%、DXYと米金利は上昇","market_reaction":"逃避需要より金利・ドル要因が優勢","analysis":"地政学リスクだけでは高金利の逆風を相殺できなかった","importance":"★★★★☆"},
+    {"title":"欧州株はフランス主導で反発","fact":"STOXX600+0.51%、CAC40約+1%。フランスQ2 GDPは0.0%へ下方修正","market_reaction":"銀行・高級品株が反発","analysis":"新規強気材料より前日急落からの反発の色が強い","importance":"★★★☆☆"},
+    {"title":"原油は小幅安にとどまる","fact":"Hormuz航行合意観測。WTI-0.16%、Brent-0.43%","market_reaction":"GoldやBTCほど下落せず","analysis":"合意期待による売りと中東供給不安による買いが相殺","importance":"★★★☆☆"}
   ],
-
-  "policy": [
-    {
-      "title": "FRB",
-      "fact": "Kevin Warsh議長は8月28日、Jackson Hole Economic Policy Symposiumで基調講演を予定。",
-      "market_reaction": "講演前日の米国債利回りは上昇し、ドルはほぼ横ばい。",
-      "analysis": "市場は政策金利の具体的な予告よりも、Warsh議長が現在のインフレと金融政策のリスクをどう評価するかに注目している。",
-      "importance": "★★★★★",
-      "confidence": "高"
-    },
-    {
-      "title": "米国政府・Trump",
-      "fact": "米国・イラン関係を巡る政策不透明感が原油市場で意識された。",
-      "market_reaction": "WTI・Brentが上昇。",
-      "analysis": "エネルギー価格の再上昇が続けば、インフレ期待と長期金利を通じて他市場へ波及する可能性がある。",
-      "importance": "★★★★☆",
-      "confidence": "中"
-    }
-  ],
-
-  "internal_strength": [
-    {
-      "title": "大型テック vs 市場全体",
-      "fact": "S&P500テクノロジーは3.4%上昇した一方、他の主要セクターは弱かった。",
-      "analysis": "市場全体が広く買われているのではなく、AI・テクノロジーへの集中が強い。"
-    },
-    {
-      "title": "NASDAQ vs NYダウ",
-      "fact": "NASDAQ +1.57%に対してNYダウは+0.20%。",
-      "analysis": "グロース・AI関連の相対的優位が明確。"
-    },
-    {
-      "title": "市場の騰落",
-      "fact": "NYSEでは下落銘柄が上昇銘柄をわずかに上回った。NASDAQでは上昇銘柄が下落銘柄を上回った。",
-      "analysis": "指数の上昇ほど市場全体の地合いが強かったわけではなく、内部は混在している。"
-    },
-    {
-      "title": "Gold vs Copper",
-      "fact": "Goldは金利上昇にもかかわらず底堅く推移。Copperは関税・在庫移動という固有材料の影響が大きい。",
-      "analysis": "両者を単純な商品高としてまとめず、それぞれの固有材料を分けて見る必要がある。"
-    }
-  ],
-
+  "policy": {
+    "fed": {"fact":"Warsh議長は2%目標と短期金利を主要手段とする姿勢を明確化。具体的時期は示さず。","reaction":"9月利上げ確率上昇、短期金利上昇、ドル高、Gold・BTC安","outlook":"弱い雇用や明確なインフレ鈍化がなければ利上げ観測が残りやすい"},
+    "boj_japan": {"fact":"東京コアCPI1.8%（予想1.7%）。日本政府は7/30～8/26に15.4兆円の円買い介入を実施とReuters報道。","reaction":"USD/JPYは160.11へ上昇","outlook":"日米金利差の圧力が継続"},
+    "trump_us_government": "中東政策とHormuz航行協議は原油の主要材料。8月28日にそれを上回るTrump本人の新規市場材料は確認できず。",
+    "ecb_pboc_china": "市場を大きく動かす新規政策変更は確認できず。"
+  },
+  "internal_strength": {
+    "large_vs_small":"大型株優位。Dow-0.02%に対しRussell2000-1.39%",
+    "nasdaq_vs_dow":"NASDAQが弱い。金利感応度の高い成長株が下落",
+    "japan_vs_us":"日本株優位。ただし日本株はWarsh講演前に終了",
+    "gold_vs_copper":"両方下落したがGoldの下げが大きい",
+    "btc_vs_alt":"主要暗号資産は全面安。XRP・SOL・DOGEがBTCより弱い",
+    "conclusion":"米金利上昇に弱い資産へ売りが集中。欧州株と一部米メガキャップは底堅い。"
+  },
   "cross_asset": [
-    {
-      "title": "米10年債 × NASDAQ",
-      "fact": "米10年債利回りが上昇する一方、NASDAQは1.57%上昇。",
-      "analysis": "通常は長期金利上昇が高PERグロース株の逆風になりやすいが、昨日はNVIDIAなどAI企業の利益成長期待が金利面の逆風を上回った可能性。",
-      "confidence": "高"
-    },
-    {
-      "title": "米10年債 × Gold",
-      "fact": "米10年債利回りは上昇したが、Goldも0.23%上昇。",
-      "analysis": "金利上昇だけではGoldが売られなかった。政策・地政学・インフレへのヘッジ需要などGold固有の買いが存在する可能性。",
-      "confidence": "中"
-    },
-    {
-      "title": "DXY × Gold",
-      "fact": "DXYはほぼ横ばい、Goldは小幅上昇。",
-      "analysis": "ドル要因だけではなく、他のマクロ・ヘッジ要因がGoldを支えた可能性。",
-      "confidence": "中"
-    },
-    {
-      "title": "米10年債 × BTC",
-      "fact": "米10年債利回り上昇にもかかわらずBTCは約2%上昇。",
-      "analysis": "短期的には金利上昇の逆風よりもリスク選好改善が優勢だった可能性。",
-      "confidence": "中"
-    },
-    {
-      "title": "BTC × NASDAQ",
-      "fact": "NASDAQとBTCがともに上昇。",
-      "analysis": "昨日については両市場ともリスク資産として同方向に動いた。",
-      "confidence": "高"
-    }
+    {"pair":"DXY × Gold","fact":"DXY上昇、Gold大幅下落","usual":"ドル高はGoldの逆風","assessment":"普段通り。金利上昇も重なった","confidence":"高"},
+    {"pair":"米10年債 × NASDAQ","fact":"利回り上昇、NASDAQ下落","usual":"金利上昇は成長株の逆風","assessment":"普段通り","confidence":"高"},
+    {"pair":"米10年債 × BTC","fact":"利回り上昇、BTC下落","usual":"BTCは流動性・金利に敏感","assessment":"普段通り","confidence":"中～高"},
+    {"pair":"DXY × Copper","fact":"DXY上昇、Copper下落","usual":"ドル高はドル建て商品の逆風","assessment":"普段通り","confidence":"中"},
+    {"pair":"Oil × 米10年債","fact":"Oil小幅下落、金利上昇","usual":"原油高なら金利上昇が多い","assessment":"今回はFRB要因が金利を主導","confidence":"高"},
+    {"pair":"BTC × BTC占有率","fact":"BTC下落、占有率も小幅低下","usual":"リスク回避時はBTC優位になりやすい","assessment":"時刻差があり判断に注意","confidence":"低～中"}
   ],
-
-  "equities": {
-    "rating": 4,
-    "summary": "指数は上昇したが、強さはAI・大型テックへ集中。NASDAQの相対的優位は明確だが、市場全体の広がりは十分ではない。今後はNVIDIAを起点とした買いが小型株・非テックへ広がるかが重要。"
-  },
-
-  "bonds": {
-    "rating": 2,
-    "summary": "米国債は弱い。10年債利回りは4.676%、2年債は4.236%へ上昇。インフレ警戒とWarsh議長の政策姿勢を巡る不確実性が重荷。"
-  },
-
-  "fx": {
-    "rating": 3,
-    "summary": "DXYは99.14付近でほぼ横ばい、USD/JPYは159.38付近。Warsh講演を控えて大きな方向性は出ていない。今日の米金利との連動が重要。"
-  },
-
   "commodities": {
-    "rating": 4,
-    "summary": "Gold・Silver・原油が上昇。特にSilverと原油が相対的に強かった。Goldも米金利上昇に耐えており底堅い。一方、商品ごとの材料は異なるため一括した商品高とは判断しない。"
+    "gold_silver":"Gold $4,454.52（-3.19%）、Silver $66.28（-4.3%）。Warsh発言後の金利・ドル上昇が最大材料。",
+    "copper":{"price":"$6.5443/lb、-1.16%","demand":"中国株は横ばい圏で需要期待の明確な強化は確認できず","supply":"Codelco上期生産は前年同期比11%減の56.4万トン","lme_inventory":"確認できず","shfe_inventory":"確認できず","comex_inventory":"確認できず","analysis":"構造的供給懸念よりドル高と金利上昇が短期価格を押した可能性。在庫未確認のため確信度は低い"},
+    "aluminum_nickel":"Aluminum代表値$3,228.80/t（+4.21%）、Nickel CFD代表値$16,770/t（-0.62%）。LME公式終値の十分な照合はできず。",
+    "oil":"WTI $83.40（-0.16%）、Brent $89.31（-0.43%）。航行合意観測と供給不安が綱引き。"
   },
-
-  "commodity_detail": [
-    {
-      "title": "Gold",
-      "fact": "スポットGoldは0.23%上昇し約4,602.81ドル。",
-      "analysis": "米金利上昇にもかかわらず上昇しており、相対的に底堅い。"
-    },
-    {
-      "title": "Silver",
-      "fact": "スポットSilverは1.7%上昇し約69.25ドル。",
-      "analysis": "Goldを上回る上昇率となり、貴金属内で相対的に強かった。"
-    },
-    {
-      "title": "WTI",
-      "fact": "1.58%上昇し83.53ドル。",
-      "analysis": "米国・イラン関係を巡る供給不安が意識された。"
-    },
-    {
-      "title": "Brent",
-      "fact": "2.12%上昇し89.70ドル。",
-      "analysis": "地政学的な供給プレミアムが再び強まった可能性。"
-    }
-  ],
-
-  "copper": {
-    "rating": 3,
-    "summary": "Copperは米国関税を巡る地域間の在庫移動が重要。世界的な銅不足と、米国へ銅が移動することでLME在庫が減少する現象を分けて考える必要がある。",
-    "details": [
-      {
-        "title": "LME在庫",
-        "fact": "利用可能在庫が再び減少していることを確認。",
-        "analysis": "米国への銅移動がLME在庫減少の一因になっている可能性があり、LME在庫減少だけで世界的な供給不足とは判断しない。"
-      },
-      {
-        "title": "COMEX在庫",
-        "fact": "Reutersは8月25日時点でCOMEX在庫が46営業日連続で増加していると報道。",
-        "analysis": "米国関税を見越した在庫移動が続いている可能性が高い。"
-      },
-      {
-        "title": "SHFE在庫",
-        "fact": "今回の調査では8月27日時点の正確な数値を十分確認できず。",
-        "analysis": "確認できず。推測値は使用しない。"
-      },
-      {
-        "title": "中国需要",
-        "fact": "今回の調査では昨日の値動きを直接説明できる新しい需要統計を十分確認できず。",
-        "analysis": "中国需要は引き続き重要だが、昨日の価格変動との因果関係は断定しない。"
-      },
-      {
-        "title": "米国銅関税",
-        "fact": "関税を巡る不透明感が米国への在庫移動を促している。",
-        "analysis": "COMEXとLMEの地域間需給・価格差を歪める重要材料。"
-      },
-      {
-        "title": "世界需給",
-        "fact": "Reutersが取材したアナリストは、世界全体として現在銅が不足しているわけではないと指摘。",
-        "analysis": "短期的な価格上昇を構造的な世界供給不足だけで説明するのは危険。"
-      }
-    ]
-  },
-
   "crypto": {
-    "rating": 4,
-    "summary": "BTCは約2%上昇して8万ドル台を回復。NASDAQと同方向に動き、昨日はリスク選好改善の影響が優勢だった。ただし米金利上昇が続く場合は逆風になり得る。",
-    "conclusion": "BTC中心",
-    "details": [
-      {
-        "title": "BTC",
-        "fact": "Reuters基準で2.05%上昇し80,046ドル付近。",
-        "analysis": "NASDAQとともに上昇し、短期的なリスク選好改善を反映した可能性。"
-      },
-      {
-        "title": "ETH",
-        "fact": "価格・前日比はmarket.json参照。",
-        "analysis": "BTCとの相対的な強弱を確認する。"
-      },
-      {
-        "title": "アルトコイン",
-        "fact": "XRP・BNB・SOL・DOGEを同一基準時刻で十分確認できず。",
-        "analysis": "暗号資産全体が全面的に強かったとは断定しない。"
-      }
-    ]
+    "data":[
+      {"asset":"BTC","price":"約$77,500","change":"約-3.3%"},
+      {"asset":"ETH","price":"約$2,432","change":"約-2.9%"},
+      {"asset":"XRP","price":"約$1.38","change":"約-4.5%"},
+      {"asset":"BNB","price":"約$689","change":"約-3.0%"},
+      {"asset":"SOL","price":"約$104.0","change":"約-4.3%"},
+      {"asset":"DOGE","price":"約$0.0851","change":"約-4.1%"}
+    ],
+    "btc_dominance":"59.48%（-0.24pt）",
+    "total_market_cap":"$2.61兆（-3.01%）",
+    "etf":"8月28日確定フローは確認できず",
+    "judgment":"暗号資産全体が弱い",
+    "reason":"金利上昇・ドル高と同時にBTCが下落し、主要アルトはさらに弱い"
   },
-
   "market_environment": [
-    {
-      "title": "① 一部でリスクを取りやすい",
-      "description": "AI・大型テック・BTCには買いが入った。ただし株式市場全体へ広がったわけではないため暫定判断。"
-    },
-    {
-      "title": "② インフレ警戒",
-      "description": "直近PCEとFed当局者発言を受け、米金利は高止まり。原油上昇も追加的なインフレ材料になり得る。"
-    },
-    {
-      "title": "③ 市場内部の方向感は弱い",
-      "description": "NASDAQは強い一方、非テック株・欧州株・債券は弱く、全面的なリスクオンとは言いにくい。"
-    }
+    {"label":"リスクを避ける","provisional":true},
+    {"label":"インフレが強い","provisional":false},
+    {"label":"方向感が弱い","provisional":true}
   ],
-
   "unusual_moves": [
-    {
-      "title": "① 米金利↑ ＋ NASDAQ↑",
-      "fact": "米10年債利回りが上昇する一方、NASDAQは1.57%上昇。",
-      "analysis": "NVIDIAを中心とする利益成長期待が金利上昇の逆風を上回った可能性。",
-      "confidence": "高"
-    },
-    {
-      "title": "② 米金利↑ ＋ Gold↑",
-      "fact": "米10年債利回りが上昇した一方、Goldも上昇。",
-      "analysis": "Gold固有のヘッジ需要が金利要因を相殺した可能性。",
-      "confidence": "中"
-    },
-    {
-      "title": "③ 指数↑ ＋ 市場内部は弱い",
-      "fact": "S&P500は上昇したが、テクノロジー以外の主要セクターは弱かった。",
-      "analysis": "指数上昇だけでは市場全体の強さを判断できない典型的な一日。",
-      "confidence": "高"
-    }
+    {"title":"原油下落 × 米金利上昇","fact":"原油は小幅安、米金利は上昇","usual":"原油上昇が金利を押し上げる場面が多い","analysis":"今回はFRB政策見通しが金利を主導","confidence":"高"},
+    {"title":"欧州株上昇 × 米国株下落","fact":"STOXX600+0.51%、S&P500-0.25%","usual":"世界材料で同方向になりやすい","analysis":"欧州は前日のフランス株急落からの反発が優勢","confidence":"中～高"},
+    {"title":"Gold大幅下落 × 原油ほぼ横ばい","fact":"中東不安継続でもGold-3.19%、原油小幅安","usual":"地政学悪化時は両方上昇することがある","analysis":"Goldではドル・金利要因が地政学要因を上回った","confidence":"高"}
   ],
-
   "events": [
-    {
-      "event": "Kevin Warsh Fed議長 Jackson Hole基調講演",
-      "time_jst": "8月28日 23:00",
-      "forecast": "数値予想なし",
-      "watch": "インフレ評価、金利政策、金融政策フレームワークへの考え方",
-      "markets": "米国債 / DXY / 株 / Gold / BTC",
-      "importance": "★★★★★"
-    }
+    {"event":"週末の中東・Hormuz関連ヘッドライン","jst":"8/29～30","forecast":"確認できず","watch":"航行合意・供給再開の具体性","markets":"Oil、Gold、債券","importance":"★★★★★"},
+    {"event":"米製造業PMI（確報）","jst":"9/1 22:45","forecast":"確認できず","watch":"景気の持続性","markets":"ドル、株、債券","importance":"★★★☆☆"},
+    {"event":"米ISM製造業","jst":"9/1 23:00","forecast":"55.1","watch":"物価・新規受注・雇用","markets":"全市場","importance":"★★★★★"},
+    {"event":"米建設支出","jst":"9/1 23:00","forecast":"-0.1%","watch":"金利高の実体経済への影響","markets":"株、債券","importance":"★★★☆☆"},
+    {"event":"米ISMサービス","jst":"9/3 23:00","forecast":"確認できず","watch":"サービス物価・雇用","markets":"全市場","importance":"★★★★★"},
+    {"event":"米雇用統計","jst":"9/4 21:30","forecast":"確認できず","watch":"利上げを止めるほど雇用が弱いか","markets":"全市場","importance":"★★★★★"},
+    {"event":"Broadcom決算","jst":"来週（日時確認できず）","forecast":"確認できず","watch":"AI投資需要の広がり","markets":"半導体、NASDAQ","importance":"★★★★☆"}
   ],
-
   "watch_cards": [
-    {
-      "title": "第1カード：米10年債 vs NASDAQ",
-      "description": "Warsh講演後に米10年債利回りが上昇した場合でもNASDAQが耐えられるか。耐えればAI株の相対的な強さを示す可能性。"
-    },
-    {
-      "title": "第2カード：DXY vs Gold",
-      "description": "ドル高になってもGoldが下落しなければ、Gold固有の買い需要がかなり強い可能性。"
-    },
-    {
-      "title": "第3カード：BTC vs NASDAQ",
-      "description": "NASDAQが失速した場合にBTCも連動して下落するか、それとも独自に底堅さを維持するか。"
-    }
+    {"rank":1,"pair":"米2年債 vs NASDAQ／Russell2000","point":"米2年が4.36%よりさらに上昇した際、小型株・成長株の下押しが続くか"},
+    {"rank":2,"pair":"DXY vs Gold","point":"DXYが100へ向かう中でGoldが$4,450近辺を維持できるか"},
+    {"rank":3,"pair":"BTC vs NASDAQ","point":"BTCが$77,000台を維持しNASDAQより先に反発できるか"}
   ],
-
-  "change_conditions": [
-    {
-      "title": "① 米10年債利回りが急上昇",
-      "description": "NASDAQ・Gold・BTCへの下押し圧力が強まるなら、昨日のリスク資産の強さを再評価する。"
-    },
-    {
-      "title": "② DXYが急上昇",
-      "description": "Gold・Copper・BTCの上値が重くなる場合、ドル主導の金融環境引き締まりを警戒する。"
-    },
-    {
-      "title": "③ AI株以外にも買いが拡大",
-      "description": "Russell2000・NYダウ・非テックセクターまで上昇すれば『AI集中』から『広範なリスクオン』へ判断を変更する。"
-    },
-    {
-      "title": "④ 原油が再び急騰",
-      "description": "インフレ期待と米長期金利が同時上昇する場合、株式市場への影響を再評価する。"
-    },
-    {
-      "title": "⑤ NVIDIA・NASDAQが急反落",
-      "description": "好決算後にもかかわらず上昇を維持できなければ、AIテーマの短期的な過熱・利益確定を警戒する。"
-    }
+  "view_change_conditions": [
+    {"condition":"米2年利回りが4.40%を明確に上回る","impact":"Gold・BTC・小型株への逆風強化"},
+    {"condition":"DXYが100を上抜けて定着","impact":"ドル建て商品・暗号資産の上値がさらに重くなる可能性"},
+    {"condition":"Goldが$4,450を割れた後すぐ回復","impact":"地政学・実物需要による押し目買いが強い可能性"},
+    {"condition":"WTIが$85を超える","impact":"インフレ再加速懸念と長期金利上昇圧力"},
+    {"condition":"BTCが$80,000を回復","impact":"暗号資産の見方を中立へ修正"}
   ],
-
   "scenarios": [
-    {
-      "name": "基本シナリオ",
-      "probability": "55%",
-      "conditions": "Warsh議長がインフレ警戒を示すものの、極端にタカ派的な政策シグナルを出さない。",
-      "market_reaction": "米金利は高止まり。AI・大型テック優位は続くが、市場全体への波及は限定的。",
-      "winners": [
-        "AI・大型テック",
-        "選別された成長株"
-      ],
-      "losers": [
-        "金利敏感資産",
-        "業績の弱い非テック株"
-      ],
-      "invalidation": "米10年債利回りまたはDXYの急激な上昇、もしくはNASDAQの急反落。"
-    },
-    {
-      "name": "強気シナリオ",
-      "probability": "25%",
-      "conditions": "Warsh議長の発言で金融引き締めへの警戒が後退し、米長期金利が低下する。",
-      "market_reaction": "AI株だけでなくS&P500・Russell2000・BTCなどへ買いが広がる。",
-      "winners": [
-        "NASDAQ",
-        "Russell2000",
-        "BTC",
-        "Gold"
-      ],
-      "losers": [
-        "DXY"
-      ],
-      "invalidation": "米金利が再上昇し、市場の騰落が再び大型テック偏重になる。"
-    },
-    {
-      "name": "弱気シナリオ",
-      "probability": "20%",
-      "conditions": "Warsh議長がインフレ抑制を強く優先し、高金利長期化または追加引き締め観測が強まる。",
-      "market_reaction": "米10年債利回りとDXYが上昇し、NASDAQ・BTC・Goldなどに利益確定が広がる。",
-      "winners": [
-        "ドル"
-      ],
-      "losers": [
-        "NASDAQ",
-        "BTC",
-        "Gold",
-        "高PER成長株"
-      ],
-      "invalidation": "金利上昇にもかかわらずNASDAQやBTCが高値を維持する。"
-    }
+    {"name":"基本シナリオ","assumptions":"米2年4.25～4.45%、DXY99～100台、原油が急騰しない","reaction":"株は高値圏でもみ合い、Gold・BTCは戻りが鈍い","winners":"ドル、収益力のある大型株","losers":"小型株、高PER成長株、無利息資産","invalidated_by":"雇用・ISM急減速、または中東情勢急激悪化"},
+    {"name":"強気シナリオ","assumptions":"景気は底堅いが物価・賃金が鈍化し9月利上げ確率40%以下","reaction":"金利低下、株・Gold・BTC上昇","winners":"NASDAQ、小型株、Gold、BTC、Copper","losers":"ドル","invalidated_by":"DXY100超、米2年4.40%超、原油急騰"},
+    {"name":"弱気シナリオ","assumptions":"WTI$85超、ISM価格指数上昇、雇用も強い","reaction":"利上げ確率上昇、株・債券・Gold・BTCが同時圧迫","winners":"ドル、エネルギー株、短期現金性資産","losers":"小型株、長期債、成長株、暗号資産","invalidated_by":"原油反落、雇用急減速、FRBの据え置き示唆"}
   ],
-
   "trade_watch": [
-    {
-      "title": "① Kevin Warsh",
-      "description": "今日の最重要材料。具体的な利上げ・利下げ示唆より、インフレと金融政策への考え方を見る。"
-    },
-    {
-      "title": "② 米10年債",
-      "description": "Warsh発言を市場がどう解釈したかを最も直接的に確認しやすい。"
-    },
-    {
-      "title": "③ NASDAQ",
-      "description": "NVIDIA主導の上昇が2日目も続くか。金利上昇への耐性も確認する。"
-    },
-    {
-      "title": "④ DXY",
-      "description": "Fed政策期待の変化がドルへ波及しているかを確認。Gold・Copper・BTCにも影響。"
-    },
-    {
-      "title": "⑤ 市場の広がり",
-      "description": "Russell2000・NYダウ・非テック株まで買われれば、昨日とは市場構造が変化した可能性。"
-    }
+    {"rank":1,"item":"米2年債利回り","reason":"9月政策金利の織り込みを最も直接反映"},
+    {"rank":2,"item":"DXYの100","reason":"Gold・Copper・BTCへの横断的圧力を判断"},
+    {"rank":3,"item":"Gold $4,450","reason":"急落後の買い需要が残るか"},
+    {"rank":4,"item":"BTC $77,000～$80,000","reason":"リスク資産としての弱さが続くか"},
+    {"rank":5,"item":"WTI $85","reason":"インフレ再加速シナリオへの切り替え水準"}
   ],
-
-  "strength": {
-    "assets": [
-      {
-        "asset": "株式",
-        "rating": 4,
-        "comment": "指数は強いがAI・テック偏重"
-      },
-      {
-        "asset": "債券",
-        "rating": 2,
-        "comment": "利回り上昇で債券価格は弱い"
-      },
-      {
-        "asset": "ドル",
-        "rating": 3,
-        "comment": "ほぼ横ばいで方向感なし"
-      },
-      {
-        "asset": "Gold",
-        "rating": 4,
-        "comment": "金利上昇にも耐えて底堅い"
-      },
-      {
-        "asset": "Copper",
-        "rating": 3,
-        "comment": "関税・在庫移動の影響が大きく判断は中立"
-      },
-      {
-        "asset": "原油",
-        "rating": 4,
-        "comment": "地政学的供給懸念で上昇"
-      },
-      {
-        "asset": "暗号資産",
-        "rating": 4,
-        "comment": "BTCが2%上昇し相対的に強い"
-      }
-    ]
-  },
-
+  "strength": [
+    {"asset":"株式","rating":2,"comment":"指数は小幅安だが小型株と市場の広がりが弱い"},
+    {"asset":"債券","rating":2,"comment":"利回り上昇、特に短期債が弱い"},
+    {"asset":"ドル","rating":5,"comment":"利上げ観測上昇を受け主要資産で最も強い"},
+    {"asset":"Gold","rating":1,"comment":"3%超下落で明確に弱い"},
+    {"asset":"Copper","rating":2,"comment":"ドル高に押され供給懸念を活かせず"},
+    {"asset":"原油","rating":3,"comment":"小幅安だが相対的には底堅い"},
+    {"asset":"暗号資産","rating":1,"comment":"全体時価総額減、主要アルトも全面安"}
+  ],
   "data_quality": {
-    "grade": "B",
-    "missing_data": [
-      "8月27日時点のSHFE銅在庫の正確な数値",
-      "XRP・BNB・SOL・DOGEの同一基準時刻データ",
-      "BTC占有率・暗号資産全体時価総額",
-      "米5年債などVer.2のmarket.jsonに未実装の一部市場データ"
-    ],
-    "source_differences": [
-      "24時間市場である為替・暗号資産は情報源・基準時刻により価格差が生じる可能性あり",
-      "TOPIXは現在market.jsonで1306.T ETFを参考値として使用しておりTOPIX指数そのものではない"
-    ],
-    "notes": [
-      "米国株の指数上昇を市場全体の全面高と解釈しない",
-      "Copperでは世界需給と米国への地域的な在庫移動を区別する",
-      "Warsh講演前のため、Fed政策期待は今日大きく変化する可能性がある"
-    ]
+    "overall":"B",
+    "missing":["8月28日のLME・SHFE・COMEX銅在庫","NASDAQ100の8月28日公式終値・前日比","Aluminum・NickelのLME公式終値の十分な照合","暗号資産ETFの8月28日確定フロー","来週の一部予想値とBroadcom決算の確定日時"],
+    "differences":["Goldは現物終盤$4,454.52と更新途中値・先物値に差。現物終盤値を採用","BrentはReuters清算値$89.31とInvesting.com代表先物$88.24に差。限月・時刻差の可能性","暗号資産時価総額はCoinMarketCap$2.61兆、Investing.com$2.67兆。集計対象・時刻差"],
+    "cautions":["アジア市場はWarsh講演前に終了","週末の中東情勢変化に注意","為替・暗号資産は統一終値ではなく代表値"]
   },
-
-  "final": {
-    "headline": "AI株は強い。しかし市場全体はまだ強くない。今日はWarsh議長→米10年債→DXY→NASDAQの順で市場の反応を見る。",
-    "winners": [
-      "NASDAQ・AI",
-      "Silver",
-      "BTC"
-    ],
-    "losers": [
-      "非テック株",
-      "欧州株",
-      "米国債"
-    ],
-    "top3": [
-      "Kevin Warsh Jackson Hole講演",
-      "米10年債利回り",
-      "NVIDIA・NASDAQの上昇継続性"
-    ],
-    "change_triggers": [
-      "AI株以外へ買いが広がる",
-      "米10年債・DXYが急上昇する",
-      "NVIDIA・NASDAQが好材料にもかかわらず反落する"
-    ]
-  }
+  "final_conclusion": {
+    "headline":"Warsh議長は市場に9月利上げが十分あり得ると再認識させた。指数の小幅安より、短期金利上昇・ドル高・小型株・Gold・BTCの弱さを重視。",
+    "winners":["ドル","欧州株","TOPIX"],
+    "losers":["Silver","Gold","暗号資産・米小型株"],
+    "top_three":["週末の中東・Hormuz関連ニュース","米2年利回り4.40%とDXY100","来週のISM・雇用統計に向けた9月利上げ織り込み"],
+    "triggers":["米2年4.40%超","WTI $85超","BTC $80,000回復、またはGold $4,450割れからの即時反発"],
+    "disclaimer":"市場の相対的な強弱を整理するもので、売買を直接推奨するものではありません。"
+  },
+  "source_notes": [
+    "https://www.reuters.com/world/china/global-markets-global-markets-2026-08-28/",
+    "https://www.reuters.com/business/sp-500-nasdaq-futures-slip-after-tech-rally-warshs-speech-awaited-2026-08-28/",
+    "https://www.reuters.com/markets/europe/european-shares-inch-up-french-stocks-recover-markets-await-warsh-speech-2026-08-28/",
+    "https://www.reuters.com/world/india/gold-slips-fed-chief-warshs-jackson-hole-speech-looms-2026-08-28/",
+    "https://coinmarketcap.com/",
+    "https://www.coindesk.com/price",
+    "https://www.investing.com/crypto"
+  ]
 }

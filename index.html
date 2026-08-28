@@ -1195,10 +1195,13 @@ async function loadMarketData() {
     }
 
     const data = await response.json();
+    const markets = data.markets || {};
 
     console.log('Market data:', data);
 
-    const markets = data.markets || {};
+    // =========================
+    // 市場データ表示
+    // =========================
 
     updateMarketCard('S&P500', markets.sp500);
     updateMarketCard('NASDAQ100', markets.nasdaq100);
@@ -1207,30 +1210,59 @@ async function loadMarketData() {
     updateMarketCard('Russell2000', markets.russell2000);
     updateMarketCard('日経225', markets.nikkei225);
     updateMarketCard('TOPIX', markets.topix);
+
     updateMarketCard('DXY', markets.dxy);
     updateMarketCard('USD/JPY', markets.usdjpy);
+
     updateMarketCard('米10年債', markets.us10y);
+
     updateMarketCard('Gold', markets.gold);
     updateMarketCard('Silver', markets.silver);
     updateMarketCard('Copper', markets.copper);
     updateMarketCard('WTI', markets.wti);
     updateMarketCard('Brent', markets.brent);
+
     updateMarketCard('BTC', markets.btc);
     updateMarketCard('ETH', markets.eth);
 
     updatePageDate(data.updated_at);
 
+    // =========================
+    // 自動ランキング
+    // =========================
+
+    updateMarketRanking(markets);
+
+    // =========================
+    // 星5段階評価
+    // =========================
+
+    updateStrengthTable(markets);
+
+    // =========================
+    // 冒頭の勝者・敗者
+    // =========================
+
+    updateExecutiveSummary(markets);
+
   } catch (error) {
-    console.error(error);
+    console.error('Market Morning error:', error);
   }
 }
 
+
+// ======================================================
+// 市場カード更新
+// ======================================================
+
 function updateMarketCard(name, market) {
+
   if (!market) return;
 
   const cards = document.querySelectorAll('.market-card');
 
   cards.forEach(card => {
+
     const nameElement = card.querySelector('.market-name');
 
     if (!nameElement) return;
@@ -1240,34 +1272,54 @@ function updateMarketCard(name, market) {
       const priceElement = card.querySelector('.market-price');
       const changeElement = card.querySelector('.market-change');
 
-      if (market.price !== null && market.price !== undefined) {
-        priceElement.textContent = formatPrice(name, market.price);
-      } else {
-        priceElement.textContent = '確認できず';
+      if (priceElement) {
+
+        if (market.price !== null && market.price !== undefined) {
+          priceElement.textContent = formatPrice(name, market.price);
+        } else {
+          priceElement.textContent = '確認できず';
+        }
+
       }
 
-      if (
-        market.change_pct !== null &&
-        market.change_pct !== undefined
-      ) {
-        const arrow =
-          market.change_pct > 0
-            ? '↑'
-            : market.change_pct < 0
-            ? '↓'
-            : '→';
+      if (changeElement) {
 
-        const sign =
-          market.change_pct > 0 ? '+' : '';
+        if (
+          market.change_pct !== null &&
+          market.change_pct !== undefined
+        ) {
 
-        changeElement.textContent =
-          `${arrow} ${sign}${market.change_pct.toFixed(2)}%`;
-      } else {
-        changeElement.textContent = '前日比：確認できず';
+          const pct = Number(market.change_pct);
+
+          const arrow =
+            pct > 0 ? '↑' :
+            pct < 0 ? '↓' :
+            '→';
+
+          const sign = pct > 0 ? '+' : '';
+
+          changeElement.textContent =
+            `${arrow} ${sign}${pct.toFixed(2)}%`;
+
+        } else {
+
+          changeElement.textContent =
+            '前日比：確認できず';
+
+        }
+
       }
+
     }
+
   });
+
 }
+
+
+// ======================================================
+// 価格表示
+// ======================================================
 
 function formatPrice(name, price) {
 
@@ -1275,9 +1327,31 @@ function formatPrice(name, price) {
 
   if (isNaN(number)) return price;
 
+  if (name === '米10年債') {
+    return number.toFixed(3) + '%';
+  }
+
+  if (name === 'USD/JPY') {
+    return number.toFixed(2);
+  }
+
+  if (name === 'DXY') {
+    return number.toFixed(2);
+  }
+
   if (
     name === 'BTC' ||
-    name === 'ETH' ||
+    name === 'ETH'
+  ) {
+    return '$' + number.toLocaleString(
+      'en-US',
+      {
+        maximumFractionDigits: 2
+      }
+    );
+  }
+
+  if (
     name === 'Gold' ||
     name === 'Silver' ||
     name === 'WTI' ||
@@ -1295,20 +1369,19 @@ function formatPrice(name, price) {
     return '$' + number.toFixed(4);
   }
 
-  if (
-    name === 'USD/JPY' ||
-    name === 'DXY'
-  ) {
-    return number.toFixed(2);
-  }
-
   return number.toLocaleString(
     'ja-JP',
     {
       maximumFractionDigits: 2
     }
   );
+
 }
+
+
+// ======================================================
+// 更新日時
+// ======================================================
 
 function updatePageDate(updatedAt) {
 
@@ -1321,9 +1394,502 @@ function updatePageDate(updatedAt) {
     headerDate.textContent =
       `データ更新：${updatedAt} JST`;
   }
+
 }
 
+
+// ======================================================
+// 有効な前日比を取得
+// ======================================================
+
+function validChange(market) {
+
+  if (!market) return null;
+
+  if (
+    market.change_pct === null ||
+    market.change_pct === undefined
+  ) {
+    return null;
+  }
+
+  const value = Number(market.change_pct);
+
+  if (isNaN(value)) return null;
+
+  return value;
+
+}
+
+
+// ======================================================
+// ランキング
+// ======================================================
+
+function updateMarketRanking(markets) {
+
+  const candidates = [
+
+    {
+      name: 'S&P500',
+      market: markets.sp500
+    },
+
+    {
+      name: 'NASDAQ100',
+      market: markets.nasdaq100
+    },
+
+    {
+      name: 'NASDAQ総合',
+      market: markets.nasdaq
+    },
+
+    {
+      name: 'NYダウ',
+      market: markets.dow
+    },
+
+    {
+      name: 'Russell2000',
+      market: markets.russell2000
+    },
+
+    {
+      name: '日経225',
+      market: markets.nikkei225
+    },
+
+    {
+      name: 'TOPIX',
+      market: markets.topix
+    },
+
+    {
+      name: 'DXY',
+      market: markets.dxy
+    },
+
+    {
+      name: 'Gold',
+      market: markets.gold
+    },
+
+    {
+      name: 'Silver',
+      market: markets.silver
+    },
+
+    {
+      name: 'Copper',
+      market: markets.copper
+    },
+
+    {
+      name: 'WTI',
+      market: markets.wti
+    },
+
+    {
+      name: 'Brent',
+      market: markets.brent
+    },
+
+    {
+      name: 'BTC',
+      market: markets.btc
+    },
+
+    {
+      name: 'ETH',
+      market: markets.eth
+    }
+
+  ];
+
+  const available = candidates
+    .map(item => {
+
+      return {
+        ...item,
+        change:
+          validChange(item.market)
+      };
+
+    })
+    .filter(item =>
+      item.change !== null
+    );
+
+  const strongest =
+    [...available]
+      .sort((a, b) =>
+        b.change - a.change
+      )
+      .slice(0, 5);
+
+  const rankingRows =
+    document.querySelectorAll('.rank');
+
+  rankingRows.forEach(
+    (row, index) => {
+
+      const item =
+        strongest[index];
+
+      if (!item) return;
+
+      const name =
+        row.querySelector('.rank-name');
+
+      const value =
+        row.querySelector('.rank-value');
+
+      if (name) {
+        name.textContent =
+          item.name;
+      }
+
+      if (value) {
+
+        const sign =
+          item.change > 0
+            ? '+'
+            : '';
+
+        value.textContent =
+          `${sign}${item.change.toFixed(2)}%`;
+
+      }
+
+    }
+  );
+
+}
+
+
+// ======================================================
+// 平均値
+// ======================================================
+
+function average(values) {
+
+  const valid =
+    values.filter(
+      value =>
+        value !== null &&
+        value !== undefined &&
+        !isNaN(value)
+    );
+
+  if (valid.length === 0) {
+    return null;
+  }
+
+  return valid.reduce(
+    (sum, value) =>
+      sum + value,
+    0
+  ) / valid.length;
+
+}
+
+
+// ======================================================
+// 星評価
+// ======================================================
+
+function scoreToStars(score) {
+
+  if (
+    score === null ||
+    score === undefined
+  ) {
+    return '★★★☆☆';
+  }
+
+  if (score >= 1.0) {
+    return '★★★★★';
+  }
+
+  if (score >= 0.3) {
+    return '★★★★☆';
+  }
+
+  if (score > -0.3) {
+    return '★★★☆☆';
+  }
+
+  if (score > -1.0) {
+    return '★★☆☆☆';
+  }
+
+  return '★☆☆☆☆';
+
+}
+
+
+// ======================================================
+// コメント
+// ======================================================
+
+function strengthComment(score) {
+
+  if (
+    score === null ||
+    score === undefined
+  ) {
+    return '判断材料不足';
+  }
+
+  if (score >= 1.0) {
+    return '相対的にかなり強い';
+  }
+
+  if (score >= 0.3) {
+    return '相対的に強い';
+  }
+
+  if (score > -0.3) {
+    return '概ね中立';
+  }
+
+  if (score > -1.0) {
+    return '相対的に弱い';
+  }
+
+  return '相対的にかなり弱い';
+
+}
+
+
+// ======================================================
+// 星評価テーブル
+// ======================================================
+
+function updateStrengthTable(markets) {
+
+  const stockScore = average([
+
+    validChange(markets.sp500),
+    validChange(markets.nasdaq100),
+    validChange(markets.dow),
+    validChange(markets.russell2000),
+    validChange(markets.nikkei225),
+    validChange(markets.topix)
+
+  ]);
+
+  /*
+    債券は利回りと価格が逆方向。
+
+    米10年債利回りが低下
+    → 債券価格にはプラス
+
+    そのため符号を逆にする。
+  */
+
+  const yieldChange =
+    validChange(markets.us10y);
+
+  const bondScore =
+    yieldChange === null
+      ? null
+      : -yieldChange;
+
+  const dollarScore =
+    validChange(markets.dxy);
+
+  const goldScore =
+    validChange(markets.gold);
+
+  const copperScore =
+    validChange(markets.copper);
+
+  const oilScore = average([
+
+    validChange(markets.wti),
+    validChange(markets.brent)
+
+  ]);
+
+  const cryptoScore = average([
+
+    validChange(markets.btc),
+    validChange(markets.eth)
+
+  ]);
+
+  const scores = {
+
+    '株式': stockScore,
+
+    '債券': bondScore,
+
+    'ドル': dollarScore,
+
+    'Gold': goldScore,
+
+    'Copper': copperScore,
+
+    '原油': oilScore,
+
+    '暗号資産': cryptoScore
+
+  };
+
+
+  const rows =
+    document.querySelectorAll('table tr');
+
+  rows.forEach(row => {
+
+    const cells =
+      row.querySelectorAll('td');
+
+    if (cells.length < 3) {
+      return;
+    }
+
+    const asset =
+      cells[0].textContent.trim();
+
+    if (!(asset in scores)) {
+      return;
+    }
+
+    const score =
+      scores[asset];
+
+    cells[1].textContent =
+      scoreToStars(score);
+
+    cells[2].textContent =
+      strengthComment(score);
+
+  });
+
+}
+
+
+// ======================================================
+// 冒頭の勝者・敗者を更新
+// ======================================================
+
+function updateExecutiveSummary(markets) {
+
+  const candidates = [
+
+    ['S&P500', markets.sp500],
+    ['NASDAQ100', markets.nasdaq100],
+    ['NASDAQ総合', markets.nasdaq],
+    ['NYダウ', markets.dow],
+    ['Russell2000', markets.russell2000],
+    ['日経225', markets.nikkei225],
+    ['TOPIX', markets.topix],
+    ['DXY', markets.dxy],
+    ['Gold', markets.gold],
+    ['Silver', markets.silver],
+    ['Copper', markets.copper],
+    ['WTI', markets.wti],
+    ['Brent', markets.brent],
+    ['BTC', markets.btc],
+    ['ETH', markets.eth]
+
+  ]
+    .map(item => {
+
+      return {
+        name: item[0],
+        change:
+          validChange(item[1])
+      };
+
+    })
+    .filter(item =>
+      item.change !== null
+    );
+
+
+  const winners =
+    [...candidates]
+      .sort((a, b) =>
+        b.change - a.change
+      )
+      .slice(0, 3);
+
+
+  const losers =
+    [...candidates]
+      .sort((a, b) =>
+        a.change - b.change
+      )
+      .slice(0, 3);
+
+
+  const boxes =
+    document.querySelectorAll(
+      '.summary-box'
+    );
+
+
+  boxes.forEach(box => {
+
+    const label =
+      box.querySelector('.label');
+
+    const value =
+      box.querySelector('.value');
+
+    if (!label || !value) {
+      return;
+    }
+
+
+    const labelText =
+      label.textContent;
+
+
+    if (
+      labelText.includes('勝者')
+    ) {
+
+      value.textContent =
+        winners
+          .map(
+            item =>
+              `${item.name} (${item.change > 0 ? '+' : ''}${item.change.toFixed(2)}%)`
+          )
+          .join(' / ');
+
+    }
+
+
+    if (
+      labelText.includes('敗者')
+    ) {
+
+      value.textContent =
+        losers
+          .map(
+            item =>
+              `${item.name} (${item.change > 0 ? '+' : ''}${item.change.toFixed(2)}%)`
+          )
+          .join(' / ');
+
+    }
+
+  });
+
+}
+
+
+// ======================================================
+// 実行
+// ======================================================
+
 loadMarketData();
+
 </script>
 </body>
 </html>

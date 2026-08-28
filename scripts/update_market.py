@@ -174,6 +174,25 @@ def calculate_2s10s(us2y, us10y):
             "status": "確認できず",
         }
 
+    if (
+        not us2y.get("market_date")
+        or not us10y.get("market_date")
+        or us2y["market_date"] != us10y["market_date"]
+    ):
+        return {
+            "name": "米2年-10年スプレッド",
+            "value_pct_point": None,
+            "value_bp": None,
+            "previous_pct_point": None,
+            "previous_bp": None,
+            "change_bp": None,
+            "curve": "基準日不一致",
+            "status": "基準日不一致",
+            "us2y_market_date": us2y.get("market_date"),
+            "us10y_market_date": us10y.get("market_date"),
+            "formula": "米10年債利回り - 米2年債利回り",
+        }
+
     current = us10y["price"] - us2y["price"]
 
     previous = None

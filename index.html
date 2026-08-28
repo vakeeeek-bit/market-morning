@@ -621,6 +621,55 @@ td.nowrap {
   .section.mm-collapsible { padding-top:13px; padding-bottom:13px; }
 }
 
+
+/* =====================================================
+   VER.3 DATA SNAPSHOT
+===================================================== */
+.change-grid {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:8px;
+}
+.change-card {
+  padding:10px;
+  border:1px solid #e7e9ed;
+  border-radius:12px;
+  background:#fafbfc;
+}
+.change-label {
+  font-size:11px;
+  color:#68707a;
+  font-weight:700;
+}
+.change-value {
+  margin-top:4px;
+  font-size:15px;
+  font-weight:800;
+  line-height:1.3;
+}
+.change-detail {
+  margin-top:3px;
+  font-size:11px;
+  color:#68707a;
+}
+.data-health {
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+.data-health span {
+  padding:5px 8px;
+  border-radius:999px;
+  background:#f3f5f7;
+  font-size:11px;
+  font-weight:700;
+  color:#59616b;
+}
+@media (max-width:700px) {
+  .change-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+
 </style>
 </head>
 
@@ -730,6 +779,39 @@ td.nowrap {
 
 
 <!-- =====================================================
+     WHAT CHANGED
+===================================================== -->
+
+<div class="section" id="what-changed-section">
+
+  <div class="section-title">
+    📌 昨日から何が変わった？
+  </div>
+
+  <div class="section-sub">
+    market.json｜価格・金利・ボラティリティの前日比較
+  </div>
+
+  <div class="change-grid" id="change-grid">
+    <div class="change-card"><div class="change-label">S&P500</div><div class="change-value" id="chg-sp500">確認中</div><div class="change-detail" id="chg-sp500-detail">-</div></div>
+    <div class="change-card"><div class="change-label">DXY</div><div class="change-value" id="chg-dxy">確認中</div><div class="change-detail" id="chg-dxy-detail">-</div></div>
+    <div class="change-card"><div class="change-label">米10年金利</div><div class="change-value" id="chg-us10y">確認中</div><div class="change-detail" id="chg-us10y-detail">-</div></div>
+    <div class="change-card"><div class="change-label">米2年金利</div><div class="change-value" id="chg-us2y">確認中</div><div class="change-detail" id="chg-us2y-detail">-</div></div>
+    <div class="change-card"><div class="change-label">2s10s</div><div class="change-value" id="chg-2s10s">確認中</div><div class="change-detail" id="chg-2s10s-detail">-</div></div>
+    <div class="change-card"><div class="change-label">VIX</div><div class="change-value" id="chg-vix">確認中</div><div class="change-detail" id="chg-vix-detail">-</div></div>
+    <div class="change-card"><div class="change-label">Copper</div><div class="change-value" id="chg-copper">確認中</div><div class="change-detail" id="chg-copper-detail">-</div></div>
+    <div class="change-card"><div class="change-label">BTC</div><div class="change-value" id="chg-btc">確認中</div><div class="change-detail" id="chg-btc-detail">-</div></div>
+  </div>
+
+  <div class="data-health">
+    <span id="data-quality-badge">データ取得状況：確認中</span>
+    <span id="data-date-badge">基準日：確認中</span>
+  </div>
+
+</div>
+
+
+<!-- =====================================================
      MARKET DATA
 ===================================================== -->
 
@@ -801,6 +883,18 @@ td.nowrap {
 
     <div class="market-card">
       <div class="market-name">米10年債</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">確認中</div>
+    </div>
+
+    <div class="market-card">
+      <div class="market-name">米2年債</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">確認中</div>
+    </div>
+
+    <div class="market-card">
+      <div class="market-name">VIX</div>
       <div class="market-price">確認中</div>
       <div class="market-change">確認中</div>
     </div>
@@ -1574,9 +1668,15 @@ function setupHistoryNavigation() {
     nextButton.addEventListener('click', () => {
       if (!selectedHistoryDate) return;
 
-      showHistoryDate(
-        shiftDateKey(selectedHistoryDate, 1)
-      );
+      const nextDate = shiftDateKey(selectedHistoryDate, 1);
+      const today = toDateKey(new Date());
+
+      if (nextDate > today) {
+        showLatest();
+        return;
+      }
+
+      showHistoryDate(nextDate);
     });
   }
 
@@ -1631,7 +1731,7 @@ async function loadMarketData() {
       '日経225':
         markets.nikkei225,
 
-      'TOPIX':
+      'TOPIX参考（1306 ETF）':
         markets.topix,
 
       'DXY':
@@ -1642,6 +1742,12 @@ async function loadMarketData() {
 
       '米10年債':
         markets.us10y,
+
+      '米2年債':
+        markets.us2y,
+
+      'VIX':
+        markets.vix,
 
       'Gold':
         markets.gold,
@@ -1690,6 +1796,8 @@ async function loadMarketData() {
 
     updatePriceRanking(markets);
 
+    updateWhatChanged(data);
+
 
     document.getElementById(
       'market-status'
@@ -1713,6 +1821,108 @@ async function loadMarketData() {
 
   }
 
+}
+
+
+function signedPct(value) {
+  if (value === null || value === undefined) return '確認できず';
+  const arrow = value > 0 ? '▲' : value < 0 ? '▼' : '→';
+  const sign = value > 0 ? '+' : '';
+  return `${arrow} ${sign}${Number(value).toFixed(2)}%`;
+}
+
+function yieldChangeText(market) {
+  if (!market || market.price === null || market.price === undefined) {
+    return ['確認できず', '-'];
+  }
+  const bp = market.change === null || market.change === undefined
+    ? null
+    : Number(market.change) * 100;
+  const bpText = bp === null
+    ? '前日差確認できず'
+    : `${bp > 0 ? '+' : ''}${bp.toFixed(1)}bp`;
+  return [
+    `${Number(market.price).toFixed(3)}%`,
+    `${bpText}｜${market.market_date || '日付不明'}`
+  ];
+}
+
+function setChangeCard(id, value, detail) {
+  const valueEl = document.getElementById(`chg-${id}`);
+  const detailEl = document.getElementById(`chg-${id}-detail`);
+  if (valueEl) valueEl.textContent = value;
+  if (detailEl) detailEl.textContent = detail;
+}
+
+function updateWhatChanged(data) {
+  const m = data.markets || {};
+  const d = data.derived || {};
+  const quality = data.data_quality || {};
+
+  const simple = [
+    ['sp500', m.sp500],
+    ['dxy', m.dxy],
+    ['vix', m.vix],
+    ['copper', m.copper],
+    ['btc', m.btc]
+  ];
+
+  simple.forEach(([id, market]) => {
+    if (!market || market.change_pct === null || market.change_pct === undefined) {
+      setChangeCard(id, '確認できず', '-');
+      return;
+    }
+    setChangeCard(
+      id,
+      signedPct(market.change_pct),
+      market.market_date ? `基準日 ${market.market_date}` : '-'
+    );
+  });
+
+  const us10 = yieldChangeText(m.us10y);
+  const us2 = yieldChangeText(m.us2y);
+  setChangeCard('us10y', us10[0], us10[1]);
+  setChangeCard('us2y', us2[0], us2[1]);
+
+  const curve = d.us_2s10s || {};
+  if (curve.value_bp === null || curve.value_bp === undefined) {
+    setChangeCard('2s10s', '確認できず', '-');
+  } else {
+    const change = curve.change_bp;
+    let movement = '';
+    if (change !== null && change !== undefined) {
+      movement = change > 0
+        ? `｜+${Number(change).toFixed(1)}bp スティープ化`
+        : change < 0
+          ? `｜${Number(change).toFixed(1)}bp フラット化`
+          : '｜変化なし';
+    }
+    setChangeCard(
+      '2s10s',
+      `${Number(curve.value_bp).toFixed(1)}bp`,
+      `${curve.curve || ''}${movement}`
+    );
+  }
+
+  const qualityBadge = document.getElementById('data-quality-badge');
+  if (qualityBadge) {
+    qualityBadge.textContent =
+      quality.total !== undefined
+        ? `データ取得：${quality.success_count}/${quality.total}（${quality.success_rate_pct}%）`
+        : 'データ取得状況：確認できず';
+  }
+
+  const dates = Object.values(m)
+    .map(item => item && item.market_date)
+    .filter(Boolean)
+    .sort();
+
+  const dateBadge = document.getElementById('data-date-badge');
+  if (dateBadge) {
+    dateBadge.textContent = dates.length
+      ? `最新基準日：${dates[dates.length - 1]}`
+      : '基準日：確認できず';
+  }
 }
 
 

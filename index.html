@@ -80,6 +80,25 @@ body {
   opacity: 0.72;
 }
 
+.report-type-badge {
+  display: none;
+  width: fit-content;
+  margin-top: 9px;
+  padding: 5px 10px;
+  border: 1px solid rgba(255,255,255,0.30);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.14);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.report-type-badge.is-visible {
+  display: inline-flex;
+  align-items: center;
+}
+
 
 /* =====================================================
    SECTION
@@ -894,6 +913,8 @@ td.nowrap {
   <div class="report-date" id="report-updated">
     AIレポートを読み込み中...
   </div>
+
+  <div class="report-type-badge" id="report-type-badge"></div>
 
   <div class="history-nav" aria-label="履歴ナビゲーション">
     <button class="history-button" id="prev-day" type="button">← 前日</button>
@@ -1848,6 +1869,12 @@ function resetLoadingState() {
 
   document.getElementById('report-updated').textContent =
     'AIレポートを読み込み中...';
+
+  const reportTypeBadge = document.getElementById('report-type-badge');
+  if (reportTypeBadge) {
+    reportTypeBadge.textContent = '';
+    reportTypeBadge.classList.remove('is-visible');
+  }
 
   document.getElementById('market-status').textContent = '';
 
@@ -3801,6 +3828,13 @@ async function loadMarketReport() {
       await response.json();
 
     updateQuickView(report);
+
+    const reportTypeBadge = document.getElementById('report-type-badge');
+    if (reportTypeBadge) {
+      const isWeekly = report.report_type === 'weekly';
+      reportTypeBadge.textContent = isWeekly ? '週間レポート｜1週間の総括・翌週見通し' : '';
+      reportTypeBadge.classList.toggle('is-visible', isWeekly);
+    }
 
 
     /* -------------------------

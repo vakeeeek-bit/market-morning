@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-29 07:14:25",
+  "updated_at": "2026-08-30 07:14:33",
   "timezone": "Asia/Tokyo",
   "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
   "notes": {
@@ -24,9 +24,9 @@
     "nasdaq": {
       "name": "NASDAQ総合",
       "ticker": "^IXIC",
-      "price": 26402.4238,
+      "price": 26402.4199,
       "previous": 26541.3496,
-      "change": -138.9258,
+      "change": -138.9297,
       "change_pct": -0.52,
       "status": "取得成功",
       "market_date": "2026-08-28",
@@ -35,9 +35,9 @@
     "nasdaq100": {
       "name": "NASDAQ100",
       "ticker": "^NDX",
-      "price": 29433.4277,
+      "price": 29433.4297,
       "previous": 29641.5605,
-      "change": -208.1328,
+      "change": -208.1309,
       "change_pct": -0.7,
       "status": "取得成功",
       "market_date": "2026-08-28",
@@ -57,9 +57,9 @@
     "russell2000": {
       "name": "Russell2000",
       "ticker": "^RUT",
-      "price": 2972.3718,
+      "price": 2972.3701,
       "previous": 3014.3401,
-      "change": -41.9683,
+      "change": -41.97,
       "change_pct": -1.39,
       "status": "取得成功",
       "market_date": "2026-08-28",
@@ -68,21 +68,21 @@
     "nikkei225": {
       "name": "日経225",
       "ticker": "^N225",
-      "price": 66131.9766,
-      "previous": 66262.1562,
-      "change": -130.1797,
-      "change_pct": -0.2,
+      "price": 66405.5625,
+      "previous": 66131.9766,
+      "change": 273.5859,
+      "change_pct": 0.41,
       "status": "取得成功",
-      "market_date": "2026-08-27",
-      "previous_market_date": "2026-08-26"
+      "market_date": "2026-08-28",
+      "previous_market_date": "2026-08-27"
     },
     "topix": {
       "name": "TOPIX参考（1306 ETF）",
       "ticker": "1306.T",
-      "price": NaN,
+      "price": 432.0,
       "previous": 429.4,
-      "change": NaN,
-      "change_pct": NaN,
+      "change": 2.6,
+      "change_pct": 0.61,
       "status": "取得成功",
       "market_date": "2026-08-28",
       "previous_market_date": "2026-08-27"
@@ -90,10 +90,10 @@
     "dxy": {
       "name": "DXY",
       "ticker": "DX-Y.NYB",
-      "price": 99.677,
+      "price": 99.7,
       "previous": 99.16,
-      "change": 0.517,
-      "change_pct": 0.52,
+      "change": 0.54,
+      "change_pct": 0.54,
       "status": "取得成功",
       "market_date": "2026-08-28",
       "previous_market_date": "2026-08-27"
@@ -145,10 +145,10 @@
     "gold": {
       "name": "Gold",
       "ticker": "GC=F",
-      "price": 4504.1001,
+      "price": NaN,
       "previous": 4609.7002,
-      "change": -105.6001,
-      "change_pct": -2.29,
+      "change": NaN,
+      "change_pct": NaN,
       "status": "取得成功",
       "market_date": "2026-08-28",
       "previous_market_date": "2026-08-27"
@@ -156,10 +156,10 @@
     "silver": {
       "name": "Silver",
       "ticker": "SI=F",
-      "price": 67.09,
+      "price": NaN,
       "previous": 69.429,
-      "change": -2.339,
-      "change_pct": -3.37,
+      "change": NaN,
+      "change_pct": NaN,
       "status": "取得成功",
       "market_date": "2026-08-28",
       "previous_market_date": "2026-08-27"
@@ -167,10 +167,10 @@
     "copper": {
       "name": "Copper",
       "ticker": "HG=F",
-      "price": 6.64,
+      "price": NaN,
       "previous": 6.587,
-      "change": 0.053,
-      "change_pct": 0.8,
+      "change": NaN,
+      "change_pct": NaN,
       "status": "取得成功",
       "market_date": "2026-08-28",
       "previous_market_date": "2026-08-27"
@@ -178,10 +178,10 @@
     "wti": {
       "name": "WTI",
       "ticker": "CL=F",
-      "price": 83.44,
+      "price": NaN,
       "previous": 83.53,
-      "change": -0.09,
-      "change_pct": -0.11,
+      "change": NaN,
+      "change_pct": NaN,
       "status": "取得成功",
       "market_date": "2026-08-28",
       "previous_market_date": "2026-08-27"
@@ -189,10 +189,10 @@
     "brent": {
       "name": "Brent",
       "ticker": "BZ=F",
-      "price": 88.29,
+      "price": NaN,
       "previous": 89.7,
-      "change": -1.41,
-      "change_pct": -1.57,
+      "change": NaN,
+      "change_pct": NaN,
       "status": "取得成功",
       "market_date": "2026-08-28",
       "previous_market_date": "2026-08-27"
@@ -200,23 +200,23 @@
     "btc": {
       "name": "BTC",
       "ticker": "BTC-USD",
-      "price": 77445.3203,
+      "price": 78122.9766,
       "previous": 80257.5391,
-      "change": -2812.2188,
-      "change_pct": -3.5,
+      "change": -2134.5625,
+      "change_pct": -2.66,
       "status": "取得成功",
-      "market_date": "2026-08-28",
+      "market_date": "2026-08-29",
       "previous_market_date": "2026-08-27"
     },
     "eth": {
       "name": "ETH",
       "ticker": "ETH-USD",
-      "price": 2428.75,
+      "price": 2451.0,
       "previous": 2510.4102,
-      "change": -81.6602,
-      "change_pct": -3.25,
+      "change": -59.4102,
+      "change_pct": -2.37,
       "status": "取得成功",
-      "market_date": "2026-08-28",
+      "market_date": "2026-08-29",
       "previous_market_date": "2026-08-27"
     },
     "us2y": {

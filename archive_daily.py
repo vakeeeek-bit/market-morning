@@ -12,6 +12,7 @@ Expected repository layout:
 from __future__ import annotations
 
 import json
+import math
 import re
 import shutil
 import subprocess
@@ -27,12 +28,35 @@ HISTORY_DIR = DATA_DIR / "history"
 INDEX_PATH = HISTORY_DIR / "index.json"
 
 
+def reject_non_standard_number(value: str) -> None:
+    raise ValueError(f"JSONで使用できない数値です: {value}")
+
+
+def validate_finite_numbers(value: object, location: str = "root") -> None:
+    if isinstance(value, float) and not math.isfinite(value):
+        raise ValueError(f"{location} にNaNまたはInfinityがあります")
+    if isinstance(value, dict):
+        for key, child in value.items():
+            validate_finite_numbers(child, f"{location}.{key}")
+    elif isinstance(value, list):
+        for index, child in enumerate(value):
+            validate_finite_numbers(child, f"{location}[{index}]")
+
+
+def parse_json_text(text: str, source: str) -> dict:
+    try:
+        value = json.loads(text, parse_constant=reject_non_standard_number)
+    except (json.JSONDecodeError, ValueError) as error:
+        raise ValueError(f"{source} は有効なJSONではありません: {error}") from error
+    if not isinstance(value, dict):
+        raise ValueError(f"{source} の最上位はJSONオブジェクトである必要があります")
+    validate_finite_numbers(value)
+    return value
+
+
 def load_json(path: Path) -> dict:
     with path.open("r", encoding="utf-8") as file:
-        value = json.load(file)
-    if not isinstance(value, dict):
-        raise ValueError(f"{path} の最上位はJSONオブジェクトである必要があります")
-    return value
+        return parse_json_text(file.read(), str(path))
 
 
 def extract_date(report: dict) -> str:
@@ -53,6 +77,14 @@ def validate_report(report: dict) -> None:
     missing = [key for key in required if key not in report]
     if missing:
         raise ValueError("report.json 必須項目不足: " + ", ".join(missing))
+
+
+def extract_market_update_date(market: dict) -> str | None:
+    value = market.get("updated_at")
+    match = re.search(r"(20\d{2})[-/年](\d{1,2})[-/月](\d{1,2})", str(value or ""))
+    if not match:
+        return None
+    return f"{int(match.group(1)):04d}-{int(match.group(2)):02d}-{int(match.group(3)):02d}"
 
 
 def git_file(commit: str, path: str) -> bytes | None:
@@ -86,13 +118,14 @@ def backfill_from_git() -> None:
         if not report_bytes or not market_bytes:
             continue
         try:
-            report = json.loads(report_bytes.decode("utf-8-sig"))
-            market = json.loads(market_bytes.decode("utf-8-sig"))
-            if not isinstance(report, dict) or not isinstance(market, dict):
-                continue
+            report = parse_json_text(report_bytes.decode("utf-8-sig"), "Git履歴のreport.json")
+            market = parse_json_text(market_bytes.decode("utf-8-sig"), "Git履歴のmarket.json")
             validate_report(report)
             date_key = extract_date(report)
-        except (UnicodeDecodeError, json.JSONDecodeError, ValueError):
+            market_date = extract_market_update_date(market)
+            if market_date and market_date != date_key:
+                continue
+        except (UnicodeDecodeError, ValueError):
             continue
 
         destination = HISTORY_DIR / date_key
@@ -101,8 +134,12 @@ def backfill_from_git() -> None:
         if report_history.exists() and market_history.exists():
             continue
         destination.mkdir(parents=True, exist_ok=True)
-        report_history.write_bytes(report_bytes)
-        market_history.write_bytes(market_bytes)
+        report_temp = destination / "report.json.tmp"
+        market_temp = destination / "market.json.tmp"
+        report_temp.write_bytes(report_bytes)
+        market_temp.write_bytes(market_bytes)
+        report_temp.replace(report_history)
+        market_temp.replace(market_history)
         restored += 1
     print(f"Backfilled {restored} historical day(s) from Git")
 
@@ -111,18 +148,30 @@ def main() -> None:
     if not REPORT_PATH.exists() or not MARKET_PATH.exists():
         raise FileNotFoundError("data/report.json と data/market.json の両方が必要です")
 
+    report = load_json(REPORT_PATH)
+    market = load_json(MARKET_PATH)
+    validate_report(report)
+    date_key = extract_date(report)
+    market_date = extract_market_update_date(market)
+
+    if market_date and market_date != date_key:
+        print(
+            "保存待ち: report.jsonの日付 "
+            f"{date_key} と market.jsonの更新日 {market_date} が一致していません"
+        )
+        return
+
     HISTORY_DIR.mkdir(parents=True, exist_ok=True)
     backfill_from_git()
 
-    report = load_json(REPORT_PATH)
-    load_json(MARKET_PATH)
-    validate_report(report)
-    date_key = extract_date(report)
-
     destination = HISTORY_DIR / date_key
     destination.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(REPORT_PATH, destination / "report.json")
-    shutil.copy2(MARKET_PATH, destination / "market.json")
+    report_temp = destination / "report.json.tmp"
+    market_temp = destination / "market.json.tmp"
+    shutil.copy2(REPORT_PATH, report_temp)
+    shutil.copy2(MARKET_PATH, market_temp)
+    report_temp.replace(destination / "report.json")
+    market_temp.replace(destination / "market.json")
 
     dates = sorted(
         path.name
@@ -138,10 +187,12 @@ def main() -> None:
         "latest": dates[-1] if dates else None,
         "dates": dates,
     }
-    INDEX_PATH.write_text(
+    index_temp = HISTORY_DIR / "index.json.tmp"
+    index_temp.write_text(
         json.dumps(index, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
+    index_temp.replace(INDEX_PATH)
     print(f"Archived {date_key}: report.json + market.json")
 
 

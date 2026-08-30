@@ -1986,10 +1986,10 @@ function setupHistoryNavigation() {
 
       if (availableHistoryDates.length) {
         const saved = adjacentSavedDate(1);
-        if (!saved || saved === availableHistoryDates[availableHistoryDates.length - 1]) {
-          showLatest();
-        } else {
+        if (saved) {
           showHistoryDate(saved);
+        } else {
+          showLatest();
         }
         return;
       }

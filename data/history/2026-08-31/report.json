@@ -1,0 +1,216 @@
+{
+  "updated_at": "2026-08-31 06:00 JST",
+  "report_date": "2026-08-31",
+  "target_market_date": "2026-08-28",
+  "executive_summary": {
+    "headline": "金曜は金利上昇・ドル高。週明けは円介入警戒とエネルギー供給リスクを確認",
+    "market_mood": "リスクを避ける（ただし全面安ではない）",
+    "main_driver": "金曜のWarsh FRB議長講演に加え、週末の円介入警戒・ロシア軽油輸出禁止延長・中東情勢",
+    "winners": ["ドル", "欧州株", "TOPIX・一部米メガキャップ"],
+    "losers": ["Silver", "Gold", "暗号資産・米小型株"],
+    "important_today": ["USD/JPY 160円近辺と介入警戒", "原油の週明け初動", "米2年利回り4.40%とDXY100"],
+    "watch_markets": ["USD/JPY", "WTI", "米2年債", "Gold", "BTC"]
+  },
+  "relative_ranking": {
+    "strong": [
+      {"rank": 1, "market": "ドル", "move": "+0.61%", "comment": "利上げ観測上昇に素直に反応し約2か月半ぶりの大幅高"},
+      {"rank": 2, "market": "STOXX Europe 600", "move": "+0.51%", "comment": "前日売られたフランス株・銀行・高級品株が反発"},
+      {"rank": 3, "market": "TOPIX", "move": "+0.72%", "comment": "日経225を上回り、日本株内部では相対的に広い強さ"},
+      {"rank": 4, "market": "米大型バリュー／一部メガキャップ", "move": "Dow -0.02%", "comment": "小型株・NASDAQより底堅い"},
+      {"rank": 5, "market": "原油", "move": "WTI -0.16%", "comment": "ドル高・金利上昇の割に下げは限定的"}
+    ],
+    "weak": [
+      {"rank": 1, "market": "Silver", "move": "-4.3%"},
+      {"rank": 2, "market": "Gold", "move": "-3.19%"},
+      {"rank": 3, "market": "暗号資産・Russell2000", "move": "BTC -3.34%、Russell2000 -1.39%"}
+    ]
+  },
+  "market_data": [
+    {"market":"S&P500","price":"7,711.76","change":"-0.25%","time":"8/28米国終値","source":"Reuters / AP","confidence":"A"},
+    {"market":"NASDAQ100","price":"確認できず","change":"確認できず","time":"8/28","source":"—","confidence":"D"},
+    {"market":"NASDAQ総合","price":"26,402.42","change":"-0.52%","time":"8/28米国終値","source":"Reuters / Investing.com","confidence":"A"},
+    {"market":"NYダウ","price":"53,559.99","change":"-0.02%","time":"8/28米国終値","source":"Reuters / AP","confidence":"A"},
+    {"market":"Russell2000","price":"2,972.37","change":"-1.39%","time":"8/28米国終値","source":"AP / Yahoo Finance","confidence":"A"},
+    {"market":"日経225","price":"66,405.56","change":"+0.41%","time":"8/28東京終値","source":"Reuters/LSEG","confidence":"A"},
+    {"market":"TOPIX","price":"4,146.71","change":"+0.72%","time":"8/28東京終値","source":"Investing.com","confidence":"B"},
+    {"market":"STOXX Europe 600","price":"655.16","change":"+0.51%","time":"8/28欧州終値","source":"Reuters","confidence":"A"},
+    {"market":"上海総合","price":"3,952.18","change":"-0.11%","time":"8/28上海終値","source":"Reuters/LSEG","confidence":"B"},
+    {"market":"香港ハンセン","price":"25,584.79","change":"+0.07%","time":"8/28香港終値","source":"Reuters/LSEG","confidence":"B"},
+    {"market":"DXY","price":"99.71","change":"+0.61%","time":"8/28米国終盤","source":"Reuters","confidence":"A"},
+    {"market":"USD/JPY","price":"160.11","change":"+0.45%","time":"8/28米国終盤","source":"Reuters","confidence":"A"},
+    {"market":"EUR/USD","price":"1.1580","change":"-0.61%","time":"8/28米国終盤","source":"Reuters","confidence":"A"},
+    {"market":"USD/CNY","price":"約6.73","change":"確認できず","time":"8/28代表値","source":"Reuters/LSEG換算","confidence":"C"},
+    {"market":"GBP/USD","price":"1.3534","change":"-0.43%","time":"8/28代表値","source":"Reuters/LSEG","confidence":"B"},
+    {"market":"米2年債利回り","price":"4.360%","change":"+12.8bp","time":"8/28米国終盤","source":"Reuters","confidence":"A"},
+    {"market":"米5年債利回り","price":"4.488%","change":"+9.2bp","time":"8/28米国終盤","source":"Investing.com","confidence":"B"},
+    {"market":"米10年債利回り","price":"4.728%","change":"+5.6bp","time":"8/28米国終盤","source":"Reuters / Investing.com","confidence":"A"},
+    {"market":"米30年債利回り","price":"5.213%","change":"+2.2bp","time":"8/28米国終盤","source":"Reuters","confidence":"A"},
+    {"market":"Gold","price":"$4,454.52/oz","change":"-3.19%","time":"8/28米国終盤","source":"Reuters","confidence":"A"},
+    {"market":"Silver","price":"$66.28/oz","change":"-4.3%","time":"8/28米国終盤","source":"Reuters","confidence":"A"},
+    {"market":"Copper","price":"$6.5443/lb","change":"-1.16%","time":"8/28代表先物","source":"Investing.com","confidence":"B"},
+    {"market":"Aluminum","price":"$3,228.80/t","change":"+4.21%","time":"8/28代表値","source":"MetalCharts","confidence":"C"},
+    {"market":"Nickel","price":"$16,770/t","change":"-0.62%","time":"8/28代表値（CFD）","source":"Trading Economics","confidence":"C"},
+    {"market":"WTI","price":"$83.40/bbl","change":"-0.16%","time":"8/28清算値","source":"Reuters","confidence":"A"},
+    {"market":"Brent","price":"$89.31/bbl","change":"-0.43%","time":"8/28清算値","source":"Reuters","confidence":"A"},
+    {"market":"BTC","price":"約$77,500","change":"約-3.3%","time":"8/29早朝JST","source":"Reuters / CoinDesk","confidence":"A"},
+    {"market":"ETH","price":"約$2,432","change":"-2.9%","time":"8/29早朝JST","source":"CoinDesk / Investing.com","confidence":"A"},
+    {"market":"XRP","price":"$1.38","change":"-4.5%","time":"8/29早朝JST","source":"CoinDesk","confidence":"B"},
+    {"market":"BNB","price":"$689","change":"-3.0%","time":"8/29早朝JST","source":"CoinDesk / Investing.com","confidence":"A"},
+    {"market":"SOL","price":"$104.0","change":"-4.3%","time":"8/29早朝JST","source":"CoinDesk","confidence":"B"},
+    {"market":"DOGE","price":"$0.0851","change":"-4.1%","time":"8/29早朝JST","source":"CoinDesk","confidence":"B"},
+    {"market":"BTC占有率","price":"59.48%","change":"-0.24pt","time":"8/29早朝JST","source":"CoinMarketCap","confidence":"B"},
+    {"market":"暗号資産時価総額","price":"$2.61兆","change":"-3.01%","time":"8/29早朝JST","source":"CoinMarketCap","confidence":"B"}
+  ],
+  "market_overview": [
+    {"market":"米国株","move":"小幅安","strength":"弱い","background":"利上げ観測上昇。小型株・半導体の下げが大きい"},
+    {"market":"日本株","move":"上昇","strength":"強い","background":"前日の米ハイテク高を反映。TOPIXが日経を上回る"},
+    {"market":"欧州株","move":"+0.51%","strength":"強い","background":"フランス株・銀行・高級品株の自律反発"},
+    {"market":"中国株","move":"上海小幅安、香港横ばい","strength":"中立～弱い","background":"明確な全面買いは確認できず"},
+    {"market":"DXY","move":"+0.61%","strength":"非常に強い","background":"米利上げ確率上昇"},
+    {"market":"USD/JPY","move":"160.11へ上昇","strength":"ドル優位","background":"米短期金利上昇が円支援材料を上回った可能性"},
+    {"market":"米10年債","move":"利回り+5.6bp","strength":"債券は弱い","background":"インフレ・利上げ再評価"},
+    {"market":"Gold","move":"-3.19%","strength":"非常に弱い","background":"ドル高と金利上昇への警戒"},
+    {"market":"Copper","move":"-1.16%","strength":"弱い","background":"ドル高・景気敏感資産への逆風"},
+    {"market":"原油","move":"小幅安","strength":"相対的に底堅い","background":"Hormuz航行合意観測と供給懸念が綱引き"},
+    {"market":"BTC","move":"-3.34%","strength":"弱い","background":"金利上昇・ドル高と同時に売られた"}
+  ],
+  "main_story": {
+    "title": "Warsh FRB議長のJackson Hole講演",
+    "facts": "物価上昇率が2%へ十分な速さで戻る確信がなければFRBにはさらに取り組むべきことがあると発言。金融環境が明確に引き締まっていないとの認識も示した。",
+    "market_reaction": "9月利上げ確率35.4%→55.7%。米2年+12.8bp、DXY+0.61%、Gold-3.19%、BTC-3.34%、Russell2000-1.39%。",
+    "analysis": "発言前後で政策金利の織り込みが大きく変化し、株・債券・為替・貴金属・暗号資産へ波及した。",
+    "confidence": "高"
+  },
+  "news": [
+    {"title":"日本の円買い介入額は過去最大","fact":"日本は7月30日～8月26日に15.4兆円を円買い介入に投入。Bessent米財務長官は無秩序な円変動が世界市場を不安定化させ得ると説明","market_reaction":"金曜のUSD/JPYは160.11で終了し、円安圧力は残った","analysis":"160円近辺では再介入への警戒が強まりやすい。実際の介入有無は値動きと当局発表で確認が必要","related_assets":["USD/JPY","日経225","日本国債"],"importance":"★★★★★"},
+    {"title":"ロシアが軽油輸出禁止を9月30日まで延長","fact":"製油所への攻撃と国内燃料不足を背景に、軽油・船舶燃料等の輸出禁止を延長","market_reaction":"発表は金曜清算後のため、主要原油先物の反応は確認できず","analysis":"週明けに精製品価格や原油へ供給プレミアムが乗る可能性。ただし需要懸念が相殺する可能性もある","related_assets":["WTI","Brent","軽油","エネルギー株"],"importance":"★★★★☆"},
+    {"title":"イラン経済への戦争・制裁圧力が継続","fact":"Reutersはイランの対外貿易減少と高インフレ、米制裁強化を報道。Hormuzを巡る不確実性も継続","market_reaction":"週末報道のため新たな公式終値反応は確認できず","analysis":"外交進展がなければ原油の下値を支える可能性。航行正常化が確認されれば逆方向になり得る","related_assets":["WTI","Brent","Gold","米国債"],"importance":"★★★★☆"},
+    {"title":"Warsh議長がインフレ抑制を優先","fact":"2%目標を維持し、最近のインフレ指標は基調変化を示していないと発言","market_reaction":"短期金利・ドル上昇、Gold・BTC・小型株下落","analysis":"9月据え置き優勢から利上げと据え置きがほぼ五分へ修正","related_assets":["米国債","DXY","NASDAQ","Gold","BTC"],"importance":"★★★★★"},
+    {"title":"米国株の内部は指数以上に弱い","fact":"NYSE下落銘柄は上昇銘柄の1.77倍、NASDAQは2.19倍。Russell2000は-1.39%","market_reaction":"S&P500は-0.25%だが広範な銘柄が下落","analysis":"一部メガキャップが指数を支えた可能性","importance":"★★★★☆"},
+    {"title":"Nvidia反落、Marvell急落","fact":"Nvidia-4.6%、Marvell-10.3%","market_reaction":"NASDAQはDowを下回る","analysis":"金利上昇と決算後の利益確定が高評価銘柄を圧迫","importance":"★★★★☆"},
+    {"title":"Gold・Silverが大幅安","fact":"Gold-3.19%、Silver-4.3%、DXYと米金利は上昇","market_reaction":"逃避需要より金利・ドル要因が優勢","analysis":"地政学リスクだけでは高金利の逆風を相殺できなかった","importance":"★★★★☆"}
+  ],
+  "policy": {
+    "fed": {"fact":"Warsh議長は2%目標と短期金利を主要手段とする姿勢を明確化。具体的時期は示さず。","reaction":"9月利上げ確率上昇、短期金利上昇、ドル高、Gold・BTC安","outlook":"弱い雇用や明確なインフレ鈍化がなければ利上げ観測が残りやすい"},
+    "boj_japan": {"fact":"東京コアCPI1.8%（予想1.7%）。日本政府は7/30～8/26に15.4兆円の円買い介入を実施とReuters報道。","reaction":"USD/JPYは160.11へ上昇","outlook":"日米金利差の圧力が継続"},
+    "trump_us_government": "中東政策とHormuz航行協議は原油の主要材料。8月28日にそれを上回るTrump本人の新規市場材料は確認できず。",
+    "ecb_pboc_china": "市場を大きく動かす新規政策変更は確認できず。"
+  },
+  "internal_strength": {
+    "large_vs_small":"大型株優位。Dow-0.02%に対しRussell2000-1.39%",
+    "nasdaq_vs_dow":"NASDAQが弱い。金利感応度の高い成長株が下落",
+    "japan_vs_us":"日本株優位。ただし日本株はWarsh講演前に終了",
+    "gold_vs_copper":"両方下落したがGoldの下げが大きい",
+    "btc_vs_alt":"主要暗号資産は全面安。XRP・SOL・DOGEがBTCより弱い",
+    "conclusion":"米金利上昇に弱い資産へ売りが集中。欧州株と一部米メガキャップは底堅い。"
+  },
+  "cross_asset": [
+    {"pair":"DXY × Gold","fact":"DXY上昇、Gold大幅下落","usual":"ドル高はGoldの逆風","assessment":"普段通り。金利上昇も重なった","confidence":"高"},
+    {"pair":"米10年債 × NASDAQ","fact":"利回り上昇、NASDAQ下落","usual":"金利上昇は成長株の逆風","assessment":"普段通り","confidence":"高"},
+    {"pair":"米10年債 × BTC","fact":"利回り上昇、BTC下落","usual":"BTCは流動性・金利に敏感","assessment":"普段通り","confidence":"中～高"},
+    {"pair":"DXY × Copper","fact":"DXY上昇、Copper下落","usual":"ドル高はドル建て商品の逆風","assessment":"普段通り","confidence":"中"},
+    {"pair":"Oil × 米10年債","fact":"Oil小幅下落、金利上昇","usual":"原油高なら金利上昇が多い","assessment":"今回はFRB要因が金利を主導","confidence":"高"},
+    {"pair":"BTC × BTC占有率","fact":"BTC下落、占有率も小幅低下","usual":"リスク回避時はBTC優位になりやすい","assessment":"時刻差があり判断に注意","confidence":"低～中"}
+  ],
+  "commodities": {
+    "gold_silver":"Gold $4,454.52（-3.19%）、Silver $66.28（-4.3%）。Warsh発言後の金利・ドル上昇が最大材料。",
+    "copper":{"price":"$6.5443/lb、-1.16%","demand":"中国株は横ばい圏で需要期待の明確な強化は確認できず","supply":"Codelco上期生産は前年同期比11%減の56.4万トン","lme_inventory":"確認できず","shfe_inventory":"確認できず","comex_inventory":"確認できず","analysis":"構造的供給懸念よりドル高と金利上昇が短期価格を押した可能性。在庫未確認のため確信度は低い"},
+    "aluminum_nickel":"Aluminum代表値$3,228.80/t（+4.21%）、Nickel CFD代表値$16,770/t（-0.62%）。LME公式終値の十分な照合はできず。",
+    "oil":"WTI $83.40（-0.16%）、Brent $89.31（-0.43%）。航行合意観測と供給不安が綱引き。"
+  },
+  "crypto": {
+    "data":[
+      {"asset":"BTC","price":"約$77,500","change":"約-3.3%"},
+      {"asset":"ETH","price":"約$2,432","change":"約-2.9%"},
+      {"asset":"XRP","price":"約$1.38","change":"約-4.5%"},
+      {"asset":"BNB","price":"約$689","change":"約-3.0%"},
+      {"asset":"SOL","price":"約$104.0","change":"約-4.3%"},
+      {"asset":"DOGE","price":"約$0.0851","change":"約-4.1%"}
+    ],
+    "btc_dominance":"59.48%（-0.24pt）",
+    "total_market_cap":"$2.61兆（-3.01%）",
+    "etf":"8月28日確定フローは確認できず",
+    "judgment":"暗号資産全体が弱い",
+    "reason":"金利上昇・ドル高と同時にBTCが下落し、主要アルトはさらに弱い"
+  },
+  "market_environment": [
+    {"label":"リスクを避ける","provisional":true},
+    {"label":"インフレが強い","provisional":false},
+    {"label":"方向感が弱い","provisional":true}
+  ],
+  "unusual_moves": [
+    {"title":"原油下落 × 米金利上昇","fact":"原油は小幅安、米金利は上昇","usual":"原油上昇が金利を押し上げる場面が多い","analysis":"今回はFRB政策見通しが金利を主導","confidence":"高"},
+    {"title":"欧州株上昇 × 米国株下落","fact":"STOXX600+0.51%、S&P500-0.25%","usual":"世界材料で同方向になりやすい","analysis":"欧州は前日のフランス株急落からの反発が優勢","confidence":"中～高"},
+    {"title":"Gold大幅下落 × 原油ほぼ横ばい","fact":"中東不安継続でもGold-3.19%、原油小幅安","usual":"地政学悪化時は両方上昇することがある","analysis":"Goldではドル・金利要因が地政学要因を上回った","confidence":"高"}
+  ],
+  "events": [
+    {"event":"日銀・高田審議委員発言","jst":"8/31（時刻確認できず）","forecast":"確認できず","watch":"円安・介入・追加利上げへの言及","markets":"USD/JPY、日本株、日本国債","importance":"★★★★☆"},
+    {"event":"米製造業PMI（確報）","jst":"9/1 22:45","forecast":"確認できず","watch":"景気の持続性","markets":"ドル、株、債券","importance":"★★★☆☆"},
+    {"event":"米ISM製造業","jst":"9/1 23:00","forecast":"55.1","watch":"物価・新規受注・雇用","markets":"全市場","importance":"★★★★★"},
+    {"event":"米建設支出","jst":"9/1 23:00","forecast":"-0.1%","watch":"金利高の実体経済への影響","markets":"株、債券","importance":"★★★☆☆"},
+    {"event":"Broadcom決算","jst":"9/3 05:00前後（9/2米引け後）","forecast":"確認できず","watch":"AI半導体需要と利益率","markets":"半導体、NASDAQ","importance":"★★★★☆"},
+    {"event":"米ISMサービス","jst":"9/3 23:00","forecast":"確認できず","watch":"サービス物価・雇用","markets":"全市場","importance":"★★★★★"},
+    {"event":"米雇用統計","jst":"9/4 21:30","forecast":"非農業部門雇用者数+5.8万人、失業率4.1%","watch":"利上げを止めるほど雇用が弱いか、過去分改定","markets":"全市場","importance":"★★★★★"}
+  ],
+  "watch_cards": [
+    {"rank":1,"pair":"米2年債 vs NASDAQ／Russell2000","point":"米2年が4.36%よりさらに上昇した際、小型株・成長株の下押しが続くか"},
+    {"rank":2,"pair":"DXY vs Gold","point":"DXYが100へ向かう中でGoldが$4,450近辺を維持できるか"},
+    {"rank":3,"pair":"BTC vs NASDAQ","point":"BTCが$77,000台を維持しNASDAQより先に反発できるか"}
+  ],
+  "view_change_conditions": [
+    {"condition":"米2年利回りが4.40%を明確に上回る","impact":"Gold・BTC・小型株への逆風強化"},
+    {"condition":"DXYが100を上抜けて定着","impact":"ドル建て商品・暗号資産の上値がさらに重くなる可能性"},
+    {"condition":"Goldが$4,450を割れた後すぐ回復","impact":"地政学・実物需要による押し目買いが強い可能性"},
+    {"condition":"WTIが$85を超える","impact":"インフレ再加速懸念と長期金利上昇圧力"},
+    {"condition":"BTCが$80,000を回復","impact":"暗号資産の見方を中立へ修正"}
+  ],
+  "scenarios": [
+    {"name":"基本シナリオ","assumptions":"米2年4.25～4.45%、DXY99～100台、原油が急騰しない","reaction":"株は高値圏でもみ合い、Gold・BTCは戻りが鈍い","winners":"ドル、収益力のある大型株","losers":"小型株、高PER成長株、無利息資産","invalidated_by":"雇用・ISM急減速、または中東情勢急激悪化"},
+    {"name":"強気シナリオ","assumptions":"景気は底堅いが物価・賃金が鈍化し9月利上げ確率40%以下","reaction":"金利低下、株・Gold・BTC上昇","winners":"NASDAQ、小型株、Gold、BTC、Copper","losers":"ドル","invalidated_by":"DXY100超、米2年4.40%超、原油急騰"},
+    {"name":"弱気シナリオ","assumptions":"WTI$85超、ISM価格指数上昇、雇用も強い","reaction":"利上げ確率上昇、株・債券・Gold・BTCが同時圧迫","winners":"ドル、エネルギー株、短期現金性資産","losers":"小型株、長期債、成長株、暗号資産","invalidated_by":"原油反落、雇用急減速、FRBの据え置き示唆"}
+  ],
+  "trade_watch": [
+    {"rank":1,"item":"米2年債利回り","reason":"9月政策金利の織り込みを最も直接反映"},
+    {"rank":2,"item":"DXYの100","reason":"Gold・Copper・BTCへの横断的圧力を判断"},
+    {"rank":3,"item":"Gold $4,450","reason":"急落後の買い需要が残るか"},
+    {"rank":4,"item":"BTC $77,000～$80,000","reason":"リスク資産としての弱さが続くか"},
+    {"rank":5,"item":"WTI $85","reason":"インフレ再加速シナリオへの切り替え水準"}
+  ],
+  "strength": [
+    {"asset":"株式","rating":2,"comment":"指数は小幅安だが小型株と市場の広がりが弱い"},
+    {"asset":"債券","rating":2,"comment":"利回り上昇、特に短期債が弱い"},
+    {"asset":"ドル","rating":5,"comment":"利上げ観測上昇を受け主要資産で最も強い"},
+    {"asset":"Gold","rating":1,"comment":"3%超下落で明確に弱い"},
+    {"asset":"Copper","rating":2,"comment":"ドル高に押され供給懸念を活かせず"},
+    {"asset":"原油","rating":3,"comment":"小幅安だが相対的には底堅い"},
+    {"asset":"暗号資産","rating":1,"comment":"全体時価総額減、主要アルトも全面安"}
+  ],
+  "data_quality": {
+    "overall":"B",
+    "missing":["8月28日のLME・SHFE・COMEX銅在庫","NASDAQ100の8月28日公式終値・前日比","Aluminum・NickelのLME公式終値の十分な照合","暗号資産ETFの8月28日確定フロー","日銀・高田審議委員発言の確定時刻","ISMサービスの市場予想"],
+    "differences":["Goldは現物終盤$4,454.52と更新途中値・先物値に差。現物終盤値を採用","BrentはReuters清算値$89.31とInvesting.com代表先物$88.24に差。限月・時刻差の可能性","暗号資産時価総額はCoinMarketCap$2.61兆、Investing.com$2.67兆。集計対象・時刻差"],
+    "cautions":["8月29～30日は週末のため株・債券・商品に新しい公式終値なし","週末ニュースの市場反応は月曜の取引開始後に確認が必要","アジア市場は金曜のWarsh講演前に終了","為替・暗号資産は統一終値ではなく代表値"]
+  },
+  "final_conclusion": {
+    "headline":"金曜はWarsh議長を受け短期金利・ドルが上昇。月曜はUSD/JPY 160円近辺の介入警戒と、ロシア軽油禁輸・中東情勢を受けた原油の初動を最優先で確認。",
+    "winners":["ドル","欧州株","TOPIX"],
+    "losers":["Silver","Gold","暗号資産・米小型株"],
+    "top_three":["USD/JPY 160円近辺と当局対応","原油の週明け初動","米2年4.40%・DXY100と米指標週間"],
+    "triggers":["USD/JPYが160円台で加速、または急落","WTI $85超","米2年4.40%超、またはBTC $80,000回復"],
+    "disclaimer":"市場の相対的な強弱を整理するもので、売買を直接推奨するものではありません。"
+  },
+  "source_notes": [
+    "https://www.reuters.com/world/china/global-markets-global-markets-2026-08-28/",
+    "https://www.reuters.com/business/sp-500-nasdaq-futures-slip-after-tech-rally-warshs-speech-awaited-2026-08-28/",
+    "https://www.reuters.com/markets/europe/european-shares-inch-up-french-stocks-recover-markets-await-warsh-speech-2026-08-28/",
+    "https://www.reuters.com/world/india/gold-slips-fed-chief-warshs-jackson-hole-speech-looms-2026-08-28/",
+    "https://coinmarketcap.com/",
+    "https://www.coindesk.com/price",
+    "https://www.investing.com/crypto"
+    ,"https://www.reuters.com/world/asia-pacific/japan-spent-record-965-billion-support-yen-over-past-month-ministry-data-shows-2026-08-28/"
+    ,"https://www.reuters.com/business/energy/russia-extends-ban-diesel-exports-until-september-30-2026-08-29/"
+    ,"https://www.reuters.com/world/asia-pacific/war-weighs-irans-economy-us-intensifies-sanctions-2026-08-29/"
+    ,"https://www.reuters.com/business/wall-st-week-ahead-jobs-report-broadcom-results-pose-next-hurdles-stock-market-2026-08-28/"
+    ,"https://www.broadcom.com/company/news/financial-releases/64621"
+  ]
+}

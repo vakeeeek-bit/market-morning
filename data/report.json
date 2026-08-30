@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-08-29 06:00 JST",
-  "report_date": "2026-08-29",
+  "updated_at": "2026-08-31 06:00 JST",
+  "report_date": "2026-08-31",
   "target_market_date": "2026-08-28",
   "executive_summary": {
-    "headline": "Warsh議長がインフレ抑制姿勢を明確化。9月利上げ観測が再浮上し、金利に弱い資産が下落",
+    "headline": "金曜は金利上昇・ドル高。週明けは円介入警戒とエネルギー供給リスクを確認",
     "market_mood": "リスクを避ける（ただし全面安ではない）",
-    "main_driver": "Warsh FRB議長のJackson Hole講演。9月利上げ確率は35.4%から55.7%へ上昇",
+    "main_driver": "金曜のWarsh FRB議長講演に加え、週末の円介入警戒・ロシア軽油輸出禁止延長・中東情勢",
     "winners": ["ドル", "欧州株", "TOPIX・一部米メガキャップ"],
     "losers": ["Silver", "Gold", "暗号資産・米小型株"],
-    "important_today": ["週末の中東・Hormuz関連ヘッドライン", "米2年利回り4.40%とDXY100", "来週のISM・雇用統計"],
-    "watch_markets": ["米2年債", "DXY", "Gold", "Russell2000", "BTC"]
+    "important_today": ["USD/JPY 160円近辺と介入警戒", "原油の週明け初動", "米2年利回り4.40%とDXY100"],
+    "watch_markets": ["USD/JPY", "WTI", "米2年債", "Gold", "BTC"]
   },
   "relative_ranking": {
     "strong": [
@@ -82,12 +82,13 @@
     "confidence": "高"
   },
   "news": [
+    {"title":"日本の円買い介入額は過去最大","fact":"日本は7月30日～8月26日に15.4兆円を円買い介入に投入。Bessent米財務長官は無秩序な円変動が世界市場を不安定化させ得ると説明","market_reaction":"金曜のUSD/JPYは160.11で終了し、円安圧力は残った","analysis":"160円近辺では再介入への警戒が強まりやすい。実際の介入有無は値動きと当局発表で確認が必要","related_assets":["USD/JPY","日経225","日本国債"],"importance":"★★★★★"},
+    {"title":"ロシアが軽油輸出禁止を9月30日まで延長","fact":"製油所への攻撃と国内燃料不足を背景に、軽油・船舶燃料等の輸出禁止を延長","market_reaction":"発表は金曜清算後のため、主要原油先物の反応は確認できず","analysis":"週明けに精製品価格や原油へ供給プレミアムが乗る可能性。ただし需要懸念が相殺する可能性もある","related_assets":["WTI","Brent","軽油","エネルギー株"],"importance":"★★★★☆"},
+    {"title":"イラン経済への戦争・制裁圧力が継続","fact":"Reutersはイランの対外貿易減少と高インフレ、米制裁強化を報道。Hormuzを巡る不確実性も継続","market_reaction":"週末報道のため新たな公式終値反応は確認できず","analysis":"外交進展がなければ原油の下値を支える可能性。航行正常化が確認されれば逆方向になり得る","related_assets":["WTI","Brent","Gold","米国債"],"importance":"★★★★☆"},
     {"title":"Warsh議長がインフレ抑制を優先","fact":"2%目標を維持し、最近のインフレ指標は基調変化を示していないと発言","market_reaction":"短期金利・ドル上昇、Gold・BTC・小型株下落","analysis":"9月据え置き優勢から利上げと据え置きがほぼ五分へ修正","related_assets":["米国債","DXY","NASDAQ","Gold","BTC"],"importance":"★★★★★"},
     {"title":"米国株の内部は指数以上に弱い","fact":"NYSE下落銘柄は上昇銘柄の1.77倍、NASDAQは2.19倍。Russell2000は-1.39%","market_reaction":"S&P500は-0.25%だが広範な銘柄が下落","analysis":"一部メガキャップが指数を支えた可能性","importance":"★★★★☆"},
     {"title":"Nvidia反落、Marvell急落","fact":"Nvidia-4.6%、Marvell-10.3%","market_reaction":"NASDAQはDowを下回る","analysis":"金利上昇と決算後の利益確定が高評価銘柄を圧迫","importance":"★★★★☆"},
-    {"title":"Gold・Silverが大幅安","fact":"Gold-3.19%、Silver-4.3%、DXYと米金利は上昇","market_reaction":"逃避需要より金利・ドル要因が優勢","analysis":"地政学リスクだけでは高金利の逆風を相殺できなかった","importance":"★★★★☆"},
-    {"title":"欧州株はフランス主導で反発","fact":"STOXX600+0.51%、CAC40約+1%。フランスQ2 GDPは0.0%へ下方修正","market_reaction":"銀行・高級品株が反発","analysis":"新規強気材料より前日急落からの反発の色が強い","importance":"★★★☆☆"},
-    {"title":"原油は小幅安にとどまる","fact":"Hormuz航行合意観測。WTI-0.16%、Brent-0.43%","market_reaction":"GoldやBTCほど下落せず","analysis":"合意期待による売りと中東供給不安による買いが相殺","importance":"★★★☆☆"}
+    {"title":"Gold・Silverが大幅安","fact":"Gold-3.19%、Silver-4.3%、DXYと米金利は上昇","market_reaction":"逃避需要より金利・ドル要因が優勢","analysis":"地政学リスクだけでは高金利の逆風を相殺できなかった","importance":"★★★★☆"}
   ],
   "policy": {
     "fed": {"fact":"Warsh議長は2%目標と短期金利を主要手段とする姿勢を明確化。具体的時期は示さず。","reaction":"9月利上げ確率上昇、短期金利上昇、ドル高、Gold・BTC安","outlook":"弱い雇用や明確なインフレ鈍化がなければ利上げ観測が残りやすい"},
@@ -143,13 +144,13 @@
     {"title":"Gold大幅下落 × 原油ほぼ横ばい","fact":"中東不安継続でもGold-3.19%、原油小幅安","usual":"地政学悪化時は両方上昇することがある","analysis":"Goldではドル・金利要因が地政学要因を上回った","confidence":"高"}
   ],
   "events": [
-    {"event":"週末の中東・Hormuz関連ヘッドライン","jst":"8/29～30","forecast":"確認できず","watch":"航行合意・供給再開の具体性","markets":"Oil、Gold、債券","importance":"★★★★★"},
+    {"event":"日銀・高田審議委員発言","jst":"8/31（時刻確認できず）","forecast":"確認できず","watch":"円安・介入・追加利上げへの言及","markets":"USD/JPY、日本株、日本国債","importance":"★★★★☆"},
     {"event":"米製造業PMI（確報）","jst":"9/1 22:45","forecast":"確認できず","watch":"景気の持続性","markets":"ドル、株、債券","importance":"★★★☆☆"},
     {"event":"米ISM製造業","jst":"9/1 23:00","forecast":"55.1","watch":"物価・新規受注・雇用","markets":"全市場","importance":"★★★★★"},
     {"event":"米建設支出","jst":"9/1 23:00","forecast":"-0.1%","watch":"金利高の実体経済への影響","markets":"株、債券","importance":"★★★☆☆"},
+    {"event":"Broadcom決算","jst":"9/3 05:00前後（9/2米引け後）","forecast":"確認できず","watch":"AI半導体需要と利益率","markets":"半導体、NASDAQ","importance":"★★★★☆"},
     {"event":"米ISMサービス","jst":"9/3 23:00","forecast":"確認できず","watch":"サービス物価・雇用","markets":"全市場","importance":"★★★★★"},
-    {"event":"米雇用統計","jst":"9/4 21:30","forecast":"確認できず","watch":"利上げを止めるほど雇用が弱いか","markets":"全市場","importance":"★★★★★"},
-    {"event":"Broadcom決算","jst":"来週（日時確認できず）","forecast":"確認できず","watch":"AI投資需要の広がり","markets":"半導体、NASDAQ","importance":"★★★★☆"}
+    {"event":"米雇用統計","jst":"9/4 21:30","forecast":"非農業部門雇用者数+5.8万人、失業率4.1%","watch":"利上げを止めるほど雇用が弱いか、過去分改定","markets":"全市場","importance":"★★★★★"}
   ],
   "watch_cards": [
     {"rank":1,"pair":"米2年債 vs NASDAQ／Russell2000","point":"米2年が4.36%よりさらに上昇した際、小型株・成長株の下押しが続くか"},
@@ -186,16 +187,16 @@
   ],
   "data_quality": {
     "overall":"B",
-    "missing":["8月28日のLME・SHFE・COMEX銅在庫","NASDAQ100の8月28日公式終値・前日比","Aluminum・NickelのLME公式終値の十分な照合","暗号資産ETFの8月28日確定フロー","来週の一部予想値とBroadcom決算の確定日時"],
+    "missing":["8月28日のLME・SHFE・COMEX銅在庫","NASDAQ100の8月28日公式終値・前日比","Aluminum・NickelのLME公式終値の十分な照合","暗号資産ETFの8月28日確定フロー","日銀・高田審議委員発言の確定時刻","ISMサービスの市場予想"],
     "differences":["Goldは現物終盤$4,454.52と更新途中値・先物値に差。現物終盤値を採用","BrentはReuters清算値$89.31とInvesting.com代表先物$88.24に差。限月・時刻差の可能性","暗号資産時価総額はCoinMarketCap$2.61兆、Investing.com$2.67兆。集計対象・時刻差"],
-    "cautions":["アジア市場はWarsh講演前に終了","週末の中東情勢変化に注意","為替・暗号資産は統一終値ではなく代表値"]
+    "cautions":["8月29～30日は週末のため株・債券・商品に新しい公式終値なし","週末ニュースの市場反応は月曜の取引開始後に確認が必要","アジア市場は金曜のWarsh講演前に終了","為替・暗号資産は統一終値ではなく代表値"]
   },
   "final_conclusion": {
-    "headline":"Warsh議長は市場に9月利上げが十分あり得ると再認識させた。指数の小幅安より、短期金利上昇・ドル高・小型株・Gold・BTCの弱さを重視。",
+    "headline":"金曜はWarsh議長を受け短期金利・ドルが上昇。月曜はUSD/JPY 160円近辺の介入警戒と、ロシア軽油禁輸・中東情勢を受けた原油の初動を最優先で確認。",
     "winners":["ドル","欧州株","TOPIX"],
     "losers":["Silver","Gold","暗号資産・米小型株"],
-    "top_three":["週末の中東・Hormuz関連ニュース","米2年利回り4.40%とDXY100","来週のISM・雇用統計に向けた9月利上げ織り込み"],
-    "triggers":["米2年4.40%超","WTI $85超","BTC $80,000回復、またはGold $4,450割れからの即時反発"],
+    "top_three":["USD/JPY 160円近辺と当局対応","原油の週明け初動","米2年4.40%・DXY100と米指標週間"],
+    "triggers":["USD/JPYが160円台で加速、または急落","WTI $85超","米2年4.40%超、またはBTC $80,000回復"],
     "disclaimer":"市場の相対的な強弱を整理するもので、売買を直接推奨するものではありません。"
   },
   "source_notes": [
@@ -206,5 +207,10 @@
     "https://coinmarketcap.com/",
     "https://www.coindesk.com/price",
     "https://www.investing.com/crypto"
+    ,"https://www.reuters.com/world/asia-pacific/japan-spent-record-965-billion-support-yen-over-past-month-ministry-data-shows-2026-08-28/"
+    ,"https://www.reuters.com/business/energy/russia-extends-ban-diesel-exports-until-september-30-2026-08-29/"
+    ,"https://www.reuters.com/world/asia-pacific/war-weighs-irans-economy-us-intensifies-sanctions-2026-08-29/"
+    ,"https://www.reuters.com/business/wall-st-week-ahead-jobs-report-broadcom-results-pose-next-hurdles-stock-market-2026-08-28/"
+    ,"https://www.broadcom.com/company/news/financial-releases/64621"
   ]
 }

@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-08-31 06:00 JST",
+  "updated_at": "2026-08-31 07:30 JST",
   "report_date": "2026-08-31",
   "target_market_date": "2026-08-28",
   "executive_summary": {
-    "headline": "金曜は金利上昇・ドル高。週明けは円介入警戒とエネルギー供給リスクを確認",
+    "headline": "米軍がHormuz近傍のイラン発射装置を攻撃。金曜の金利上昇・ドル高に、週明けの原油急変リスクが加わる",
     "market_mood": "リスクを避ける（ただし全面安ではない）",
-    "main_driver": "金曜のWarsh FRB議長講演に加え、週末の円介入警戒・ロシア軽油輸出禁止延長・中東情勢",
+    "main_driver": "米軍によるイラン・ララク島攻撃とイランの報復表明。金曜市場の主役はWarsh FRB議長講演",
     "winners": ["ドル", "欧州株", "TOPIX・一部米メガキャップ"],
     "losers": ["Silver", "Gold", "暗号資産・米小型株"],
-    "important_today": ["USD/JPY 160円近辺と介入警戒", "原油の週明け初動", "米2年利回り4.40%とDXY100"],
-    "watch_markets": ["USD/JPY", "WTI", "米2年債", "Gold", "BTC"]
+    "important_today": ["ララク島攻撃後のWTI・Brent初動", "USD/JPY 160円近辺と介入警戒", "米2年利回り4.40%とDXY100"],
+    "watch_markets": ["WTI", "Brent", "Gold", "USD/JPY", "米2年債"]
   },
   "relative_ranking": {
     "strong": [
@@ -45,21 +45,21 @@
     {"market":"米5年債利回り","price":"4.488%","change":"+9.2bp","time":"8/28米国終盤","source":"Investing.com","confidence":"B"},
     {"market":"米10年債利回り","price":"4.728%","change":"+5.6bp","time":"8/28米国終盤","source":"Reuters / Investing.com","confidence":"A"},
     {"market":"米30年債利回り","price":"5.213%","change":"+2.2bp","time":"8/28米国終盤","source":"Reuters","confidence":"A"},
-    {"market":"Gold","price":"$4,454.52/oz","change":"-3.19%","time":"8/28米国終盤","source":"Reuters","confidence":"A"},
-    {"market":"Silver","price":"$66.28/oz","change":"-4.3%","time":"8/28米国終盤","source":"Reuters","confidence":"A"},
+    {"market":"Gold","price":"$4,454.52～$4,567.23/oz","change":"-2.9%～-3.19%","time":"8/28米国終盤（記事間差異）","source":"Reuters市場総括 / Reuters貴金属記事","confidence":"C"},
+    {"market":"Silver","price":"$66.28～$66.81/oz","change":"-3.5%～-4.3%","time":"8/28米国終盤（記事間差異）","source":"Reuters市場総括 / Reuters貴金属記事","confidence":"C"},
     {"market":"Copper","price":"$6.5443/lb","change":"-1.16%","time":"8/28代表先物","source":"Investing.com","confidence":"B"},
     {"market":"Aluminum","price":"$3,228.80/t","change":"+4.21%","time":"8/28代表値","source":"MetalCharts","confidence":"C"},
     {"market":"Nickel","price":"$16,770/t","change":"-0.62%","time":"8/28代表値（CFD）","source":"Trading Economics","confidence":"C"},
     {"market":"WTI","price":"$83.40/bbl","change":"-0.16%","time":"8/28清算値","source":"Reuters","confidence":"A"},
     {"market":"Brent","price":"$89.31/bbl","change":"-0.43%","time":"8/28清算値","source":"Reuters","confidence":"A"},
-    {"market":"BTC","price":"約$77,500","change":"約-3.3%","time":"8/29早朝JST","source":"Reuters / CoinDesk","confidence":"A"},
-    {"market":"ETH","price":"約$2,432","change":"-2.9%","time":"8/29早朝JST","source":"CoinDesk / Investing.com","confidence":"A"},
-    {"market":"XRP","price":"$1.38","change":"-4.5%","time":"8/29早朝JST","source":"CoinDesk","confidence":"B"},
-    {"market":"BNB","price":"$689","change":"-3.0%","time":"8/29早朝JST","source":"CoinDesk / Investing.com","confidence":"A"},
-    {"market":"SOL","price":"$104.0","change":"-4.3%","time":"8/29早朝JST","source":"CoinDesk","confidence":"B"},
-    {"market":"DOGE","price":"$0.0851","change":"-4.1%","time":"8/29早朝JST","source":"CoinDesk","confidence":"B"},
-    {"market":"BTC占有率","price":"59.48%","change":"-0.24pt","time":"8/29早朝JST","source":"CoinMarketCap","confidence":"B"},
-    {"market":"暗号資産時価総額","price":"$2.61兆","change":"-3.01%","time":"8/29早朝JST","source":"CoinMarketCap","confidence":"B"}
+    {"market":"BTC","price":"約$78,735","change":"+0.7%（24時間）","time":"8/30 10:30 JST前後","source":"CoinGecko","confidence":"B"},
+    {"market":"ETH","price":"約$2,477～$2,481","change":"+1.0%～+1.2%（24時間）","time":"8/30 10:30 JST前後","source":"CoinMarketCap / CoinGecko","confidence":"A"},
+    {"market":"XRP","price":"約$1.40","change":"+0.1%（24時間）","time":"8/30 10:30 JST前後","source":"CoinGecko","confidence":"B"},
+    {"market":"BNB","price":"約$696","change":"確認できず","time":"8/30 10:30 JST前後","source":"CoinGecko参考値","confidence":"C"},
+    {"market":"SOL","price":"確認できず","change":"確認できず","time":"8/30 10:30 JST前後","source":"—","confidence":"D"},
+    {"market":"DOGE","price":"約$0.0844","change":"-1.0%（24時間）","time":"8/30 10:30 JST前後","source":"CoinGecko","confidence":"B"},
+    {"market":"BTC占有率","price":"57.73%","change":"確認できず","time":"8/30 10:30 JST前後","source":"CoinGecko","confidence":"B"},
+    {"market":"暗号資産時価総額","price":"約$2.73兆","change":"+0.14%（24時間）","time":"8/30 10:30 JST前後","source":"CoinGecko","confidence":"B"}
   ],
   "market_overview": [
     {"market":"米国株","move":"小幅安","strength":"弱い","background":"利上げ観測上昇。小型株・半導体の下げが大きい"},
@@ -82,18 +82,18 @@
     "confidence": "高"
   },
   "news": [
+    {"title":"米軍がイラン・ララク島の発射装置を攻撃","fact":"米当局者によると、米軍はHormuz海峡への機雷敷設準備に使われる可能性があったイラン革命防衛隊のロケット発射装置2基を攻撃。Reuters掲載は8月30日20:38 UTCで、日本時間8月31日05:38頃","market_reaction":"週末・アジア市場開始前のため、株・債券・原油の公式反応は確認できず","analysis":"Hormuz正常化期待を後退させ、原油・Goldへ地政学プレミアムが戻る可能性。ただし実際の報復と通航への影響確認が必要","related_assets":["WTI","Brent","Gold","米国債","USD/JPY"],"importance":"★★★★★"},
+    {"title":"イラン革命防衛隊が報復を表明","fact":"イラン側は兵士・民間人に死傷者が出たとし、攻撃への報復を表明。具体的な報復内容は確認できず","market_reaction":"市場反応は確認できず","analysis":"報復がHormuz通航・石油施設・米軍施設へ及ぶ場合、エネルギー価格とリスク回避が強まる可能性","related_assets":["WTI","Brent","Gold","株式"],"importance":"★★★★★"},
+    {"title":"Trump大統領、ベネズエラ産原油でSPR補充方針","fact":"米国はベネズエラとの新たな合意による原油を、約2.9億バレルまで低下した戦略石油備蓄の補充に使用すると表明。供給時期は確認できず","market_reaction":"週末発表のため確認できず","analysis":"短期には政府買い需要、中長期にはベネズエラ供給回復期待という逆方向の材料になり得る","related_assets":["WTI","Brent","米エネルギー株"],"importance":"★★★★☆"},
     {"title":"日本の円買い介入額は過去最大","fact":"日本は7月30日～8月26日に15.4兆円を円買い介入に投入。Bessent米財務長官は無秩序な円変動が世界市場を不安定化させ得ると説明","market_reaction":"金曜のUSD/JPYは160.11で終了し、円安圧力は残った","analysis":"160円近辺では再介入への警戒が強まりやすい。実際の介入有無は値動きと当局発表で確認が必要","related_assets":["USD/JPY","日経225","日本国債"],"importance":"★★★★★"},
     {"title":"ロシアが軽油輸出禁止を9月30日まで延長","fact":"製油所への攻撃と国内燃料不足を背景に、軽油・船舶燃料等の輸出禁止を延長","market_reaction":"発表は金曜清算後のため、主要原油先物の反応は確認できず","analysis":"週明けに精製品価格や原油へ供給プレミアムが乗る可能性。ただし需要懸念が相殺する可能性もある","related_assets":["WTI","Brent","軽油","エネルギー株"],"importance":"★★★★☆"},
-    {"title":"イラン経済への戦争・制裁圧力が継続","fact":"Reutersはイランの対外貿易減少と高インフレ、米制裁強化を報道。Hormuzを巡る不確実性も継続","market_reaction":"週末報道のため新たな公式終値反応は確認できず","analysis":"外交進展がなければ原油の下値を支える可能性。航行正常化が確認されれば逆方向になり得る","related_assets":["WTI","Brent","Gold","米国債"],"importance":"★★★★☆"},
     {"title":"Warsh議長がインフレ抑制を優先","fact":"2%目標を維持し、最近のインフレ指標は基調変化を示していないと発言","market_reaction":"短期金利・ドル上昇、Gold・BTC・小型株下落","analysis":"9月据え置き優勢から利上げと据え置きがほぼ五分へ修正","related_assets":["米国債","DXY","NASDAQ","Gold","BTC"],"importance":"★★★★★"},
-    {"title":"米国株の内部は指数以上に弱い","fact":"NYSE下落銘柄は上昇銘柄の1.77倍、NASDAQは2.19倍。Russell2000は-1.39%","market_reaction":"S&P500は-0.25%だが広範な銘柄が下落","analysis":"一部メガキャップが指数を支えた可能性","importance":"★★★★☆"},
-    {"title":"Nvidia反落、Marvell急落","fact":"Nvidia-4.6%、Marvell-10.3%","market_reaction":"NASDAQはDowを下回る","analysis":"金利上昇と決算後の利益確定が高評価銘柄を圧迫","importance":"★★★★☆"},
-    {"title":"Gold・Silverが大幅安","fact":"Gold-3.19%、Silver-4.3%、DXYと米金利は上昇","market_reaction":"逃避需要より金利・ドル要因が優勢","analysis":"地政学リスクだけでは高金利の逆風を相殺できなかった","importance":"★★★★☆"}
+    {"title":"Gold・Silverが大幅安","fact":"Goldは約3%下落、Silverは3.5%～4.3%下落、DXYと米金利は上昇","market_reaction":"金曜は逃避需要より金利・ドル要因が優勢","analysis":"ララク島攻撃後にGoldが反発するかが、地政学需要の強さを測る材料","related_assets":["Gold","Silver","DXY","米国債"],"importance":"★★★★☆"}
   ],
   "policy": {
     "fed": {"fact":"Warsh議長は2%目標と短期金利を主要手段とする姿勢を明確化。具体的時期は示さず。","reaction":"9月利上げ確率上昇、短期金利上昇、ドル高、Gold・BTC安","outlook":"弱い雇用や明確なインフレ鈍化がなければ利上げ観測が残りやすい"},
     "boj_japan": {"fact":"東京コアCPI1.8%（予想1.7%）。日本政府は7/30～8/26に15.4兆円の円買い介入を実施とReuters報道。","reaction":"USD/JPYは160.11へ上昇","outlook":"日米金利差の圧力が継続"},
-    "trump_us_government": "中東政策とHormuz航行協議は原油の主要材料。8月28日にそれを上回るTrump本人の新規市場材料は確認できず。",
+    "trump_us_government": "米軍はHormuz近傍のララク島でイラン側発射装置を攻撃。Trump大統領はベネズエラ産原油でSPRを補充する方針を表明。前者は供給リスク上昇、後者は政府買い需要と将来供給回復の両面を持つ。",
     "ecb_pboc_china": "市場を大きく動かす新規政策変更は確認できず。"
   },
   "internal_strength": {
@@ -120,18 +120,18 @@
   },
   "crypto": {
     "data":[
-      {"asset":"BTC","price":"約$77,500","change":"約-3.3%"},
-      {"asset":"ETH","price":"約$2,432","change":"約-2.9%"},
-      {"asset":"XRP","price":"約$1.38","change":"約-4.5%"},
-      {"asset":"BNB","price":"約$689","change":"約-3.0%"},
-      {"asset":"SOL","price":"約$104.0","change":"約-4.3%"},
-      {"asset":"DOGE","price":"約$0.0851","change":"約-4.1%"}
+      {"asset":"BTC","price":"約$78,735","change":"+0.7%（24時間）"},
+      {"asset":"ETH","price":"約$2,477～$2,481","change":"+1.0%～+1.2%（24時間）"},
+      {"asset":"XRP","price":"約$1.40","change":"+0.1%（24時間）"},
+      {"asset":"BNB","price":"約$696","change":"確認できず"},
+      {"asset":"SOL","price":"確認できず","change":"確認できず"},
+      {"asset":"DOGE","price":"約$0.0844","change":"-1.0%（24時間）"}
     ],
-    "btc_dominance":"59.48%（-0.24pt）",
-    "total_market_cap":"$2.61兆（-3.01%）",
+    "btc_dominance":"57.73%（前日比確認できず）",
+    "total_market_cap":"約$2.73兆（24時間+0.14%）",
     "etf":"8月28日確定フローは確認できず",
-    "judgment":"暗号資産全体が弱い",
-    "reason":"金利上昇・ドル高と同時にBTCが下落し、主要アルトはさらに弱い"
+    "judgment":"判断困難",
+    "reason":"金曜は全面安だったが、週末24時間ではBTC・ETHが小幅反発。金曜下落を取り戻すほどではなく、方向転換の確認には不足"
   },
   "market_environment": [
     {"label":"リスクを避ける","provisional":true},
@@ -188,11 +188,11 @@
   "data_quality": {
     "overall":"B",
     "missing":["8月28日のLME・SHFE・COMEX銅在庫","NASDAQ100の8月28日公式終値・前日比","Aluminum・NickelのLME公式終値の十分な照合","暗号資産ETFの8月28日確定フロー","日銀・高田審議委員発言の確定時刻","ISMサービスの市場予想"],
-    "differences":["Goldは現物終盤$4,454.52と更新途中値・先物値に差。現物終盤値を採用","BrentはReuters清算値$89.31とInvesting.com代表先物$88.24に差。限月・時刻差の可能性","暗号資産時価総額はCoinMarketCap$2.61兆、Investing.com$2.67兆。集計対象・時刻差"],
+    "differences":["Reuters市場総括はGold $4,454.52・Silver $66.28、Reuters貴金属記事はGold $4,567.23・Silver $66.81。記事更新時刻またはデータ系列差が大きいため範囲表示","BrentはReuters清算値$89.31とTrading Economics CFD $88.29に差。限月・商品設計・時刻差","暗号資産は取得時刻で価格が変動するため8/30 10:30 JST前後の代表値"],
     "cautions":["8月29～30日は週末のため株・債券・商品に新しい公式終値なし","週末ニュースの市場反応は月曜の取引開始後に確認が必要","アジア市場は金曜のWarsh講演前に終了","為替・暗号資産は統一終値ではなく代表値"]
   },
   "final_conclusion": {
-    "headline":"金曜はWarsh議長を受け短期金利・ドルが上昇。月曜はUSD/JPY 160円近辺の介入警戒と、ロシア軽油禁輸・中東情勢を受けた原油の初動を最優先で確認。",
+    "headline":"米軍のララク島攻撃とイランの報復表明で、週明けの原油・Gold・リスク資産に窓開けリスク。金曜から続く短期金利上昇・ドル高と地政学リスクのどちらが優勢かを確認。",
     "winners":["ドル","欧州株","TOPIX"],
     "losers":["Silver","Gold","暗号資産・米小型株"],
     "top_three":["USD/JPY 160円近辺と当局対応","原油の週明け初動","米2年4.40%・DXY100と米指標週間"],
@@ -212,5 +212,8 @@
     ,"https://www.reuters.com/world/asia-pacific/war-weighs-irans-economy-us-intensifies-sanctions-2026-08-29/"
     ,"https://www.reuters.com/business/wall-st-week-ahead-jobs-report-broadcom-results-pose-next-hurdles-stock-market-2026-08-28/"
     ,"https://www.broadcom.com/company/news/financial-releases/64621"
+    ,"https://www.reuters.com/world/middle-east/us-forces-strike-two-iranian-launchers-irans-larak-island-us-official-says-2026-08-30/"
+    ,"https://www.reuters.com/world/middle-east/irans-revolutionary-guards-vow-response-us-attack-larak-island-2026-08-30/"
+    ,"https://www.reuters.com/business/energy/trump-says-us-will-refill-strategic-petroleum-reserve-using-venezuelan-oil-2026-08-30/"
   ]
 }

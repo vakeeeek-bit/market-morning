@@ -99,6 +99,18 @@ body {
   align-items: center;
 }
 
+.report-context {
+  display: none;
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.82);
+}
+
+.report-context.is-visible {
+  display: block;
+}
+
 
 /* =====================================================
    SECTION
@@ -783,6 +795,14 @@ td.nowrap {
   line-height: 1.5;
   font-weight: 800;
 }
+.news-topic-importance {
+  display: block;
+  margin-top: 3px;
+  color: #68707a;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
 .news-topic-toggle {
   width: 28px;
   height: 28px;
@@ -805,6 +825,45 @@ td.nowrap {
 }
 .news-topic:not(.open) .news-topic-toggle::before {
   content: "＋";
+}
+.news-topic-image {
+  margin: 2px 0 14px;
+}
+.news-topic-image img {
+  display: block;
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #f1f3f6;
+}
+.news-topic-image figcaption {
+  margin-top: 6px;
+  color: #68707a;
+  font-size: 10px;
+  line-height: 1.5;
+}
+.news-topic-image a {
+  color: inherit;
+  text-decoration: underline;
+}
+.news-topic-source {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 12px;
+  align-items: center;
+  margin: 2px 0 13px;
+  padding: 9px 10px;
+  border-radius: 9px;
+  background: #f7f8fa;
+  color: #68707a;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.news-topic-source a {
+  color: #334155;
+  font-weight: 700;
+  text-decoration: underline;
 }
 .news-topics-note {
   margin: 0 0 9px;
@@ -916,6 +975,8 @@ td.nowrap {
 
   <div class="report-type-badge" id="report-type-badge"></div>
 
+  <div class="report-context" id="report-context"></div>
+
   <div class="history-nav" aria-label="履歴ナビゲーション">
     <button class="history-button" id="prev-day" type="button">← 前日</button>
     <input class="history-date" id="history-date" type="date" aria-label="表示する日付">
@@ -950,11 +1011,11 @@ td.nowrap {
      QUICK VIEW
 ===================================================== -->
 <div class="quick-view" id="quick-view">
-  <div class="quick-view-title">⚡ QUICK VIEW｜朝3分</div>
+  <div class="quick-view-title" id="quick-view-title">⚡ QUICK VIEW｜朝3分</div>
 
   <div class="quick-view-grid">
     <div class="quick-box">
-      <div class="quick-label">📌 今日の市場の結論</div>
+      <div class="quick-label" id="quick-conclusion-label">📌 今日の市場の結論</div>
       <div class="quick-main" id="quick-conclusion">AIレポートを読み込み中...</div>
     </div>
 
@@ -966,7 +1027,7 @@ td.nowrap {
     </div>
 
     <div class="quick-box">
-      <div class="quick-label">📅 今日最重要 TOP3</div>
+      <div class="quick-label" id="quick-events-label">📅 今日最重要 TOP3</div>
       <ol class="quick-list" id="quick-events">
         <li>確認中</li>
       </ol>
@@ -1876,6 +1937,12 @@ function resetLoadingState() {
     reportTypeBadge.classList.remove('is-visible');
   }
 
+  const reportContext = document.getElementById('report-context');
+  if (reportContext) {
+    reportContext.textContent = '';
+    reportContext.classList.remove('is-visible');
+  }
+
   document.getElementById('market-status').textContent = '';
 
   document.getElementById('executive-headline').textContent =
@@ -1887,6 +1954,13 @@ function resetLoadingState() {
   if (quickConclusion) quickConclusion.textContent = 'AIレポートを読み込み中...';
   if (quickNews) quickNews.innerHTML = '<li>確認中</li>';
   if (quickEvents) quickEvents.innerHTML = '<li>確認中</li>';
+
+  const quickViewTitle = document.getElementById('quick-view-title');
+  const quickConclusionLabel = document.getElementById('quick-conclusion-label');
+  const quickEventsLabel = document.getElementById('quick-events-label');
+  if (quickViewTitle) quickViewTitle.textContent = '⚡ QUICK VIEW｜朝3分';
+  if (quickConclusionLabel) quickConclusionLabel.textContent = '📌 今日の市場の結論';
+  if (quickEventsLabel) quickEventsLabel.textContent = '📅 今日最重要 TOP3';
 }
 
 async function loadSelectedDay() {
@@ -3095,6 +3169,19 @@ function renderNewsTopics(
           `ニュース ${index + 1}`
         );
 
+      if (item.importance) {
+        const importance =
+          document.createElement('span');
+
+        importance.className =
+          'news-topic-importance';
+
+        importance.textContent =
+          `重要度 ${item.importance}`;
+
+        title.appendChild(importance);
+      }
+
       const toggle =
         document.createElement('span');
 
@@ -3106,6 +3193,123 @@ function renderNewsTopics(
 
       detail.className =
         'news-topic-detail';
+
+      if (item.image_url) {
+        let imageUrl = null;
+
+        try {
+          const parsedImageUrl =
+            new URL(item.image_url, window.location.origin);
+
+          if (parsedImageUrl.protocol === 'https:') {
+            imageUrl = parsedImageUrl.href;
+          }
+        } catch (error) {
+          imageUrl = null;
+        }
+
+        if (imageUrl) {
+          const figure =
+            document.createElement('figure');
+
+          figure.className =
+            'news-topic-image';
+
+          const image =
+            document.createElement('img');
+
+          image.src = imageUrl;
+          image.alt = safeText(
+            item.image_alt,
+            item.title || 'ニュース画像'
+          );
+          image.loading = 'lazy';
+          image.referrerPolicy = 'no-referrer';
+          image.addEventListener('error', () => figure.remove());
+
+          figure.appendChild(image);
+
+          if (item.image_credit || item.image_source_url) {
+            const caption =
+              document.createElement('figcaption');
+
+            const creditText = safeText(
+              item.image_credit,
+              '画像出典'
+            );
+
+            if (item.image_source_url) {
+              try {
+                const parsedSourceUrl =
+                  new URL(item.image_source_url, window.location.origin);
+
+                if (parsedSourceUrl.protocol === 'https:') {
+                  const sourceLink =
+                    document.createElement('a');
+
+                  sourceLink.href = parsedSourceUrl.href;
+                  sourceLink.target = '_blank';
+                  sourceLink.rel = 'noopener noreferrer';
+                  sourceLink.textContent = creditText;
+                  caption.appendChild(sourceLink);
+                } else {
+                  caption.textContent = creditText;
+                }
+              } catch (error) {
+                caption.textContent = creditText;
+              }
+            } else {
+              caption.textContent = creditText;
+            }
+
+            figure.appendChild(caption);
+          }
+
+          detail.appendChild(figure);
+        }
+      }
+
+      if (item.published_at || item.source_url) {
+        const sourceMeta =
+          document.createElement('div');
+
+        sourceMeta.className =
+          'news-topic-source';
+
+        if (item.published_at) {
+          const publishedAt =
+            document.createElement('span');
+
+          publishedAt.textContent =
+            `発表・報道：${safeText(item.published_at)}`;
+
+          sourceMeta.appendChild(publishedAt);
+        }
+
+        if (item.source_url) {
+          try {
+            const parsedNewsSource =
+              new URL(item.source_url, window.location.origin);
+
+            if (parsedNewsSource.protocol === 'https:') {
+              const sourceLink =
+                document.createElement('a');
+
+              sourceLink.href = parsedNewsSource.href;
+              sourceLink.target = '_blank';
+              sourceLink.rel = 'noopener noreferrer';
+              sourceLink.textContent = '確認元を開く ↗';
+              sourceMeta.appendChild(sourceLink);
+            }
+          } catch (error) {
+            // URLが無効な場合はリンクを表示しない
+          }
+        }
+
+        if (sourceMeta.childNodes.length) {
+          detail.appendChild(sourceMeta);
+        }
+      }
 
       const fields = [
         ['確認された事実', item.fact || item.facts],
@@ -3829,11 +4033,58 @@ async function loadMarketReport() {
 
     updateQuickView(report);
 
+    const isWeeklyReport = report.report_type === 'weekly';
+    const quickViewTitle = document.getElementById('quick-view-title');
+    const quickConclusionLabel = document.getElementById('quick-conclusion-label');
+    const quickEventsLabel = document.getElementById('quick-events-label');
+
+    if (quickViewTitle) {
+      quickViewTitle.textContent = isWeeklyReport
+        ? '⚡ WEEKLY QUICK VIEW｜週間総括'
+        : '⚡ QUICK VIEW｜朝3分';
+    }
+    if (quickConclusionLabel) {
+      quickConclusionLabel.textContent = isWeeklyReport
+        ? '📌 今週の市場の結論'
+        : '📌 今日の市場の結論';
+    }
+    if (quickEventsLabel) {
+      quickEventsLabel.textContent = isWeeklyReport
+        ? '📅 翌週最重要 TOP3'
+        : '📅 今日最重要 TOP3';
+    }
+
     const reportTypeBadge = document.getElementById('report-type-badge');
     if (reportTypeBadge) {
-      const isWeekly = report.report_type === 'weekly';
-      reportTypeBadge.textContent = isWeekly ? '週間レポート｜1週間の総括・翌週見通し' : '';
-      reportTypeBadge.classList.toggle('is-visible', isWeekly);
+      reportTypeBadge.textContent = isWeeklyReport ? '週間レポート｜1週間の総括・翌週見通し' : '';
+      reportTypeBadge.classList.toggle('is-visible', isWeeklyReport);
+    }
+
+    const reportContext = document.getElementById('report-context');
+    if (reportContext) {
+      const contextParts = [];
+      if (report.report_date) {
+        contextParts.push('公開日：' + formatDateKey(report.report_date));
+      }
+      if (
+        isWeeklyReport &&
+        report.week_period &&
+        report.week_period.start &&
+        report.week_period.end
+      ) {
+        contextParts.push(
+          '対象期間：' +
+          formatDateKey(report.week_period.start) +
+          ' ～ ' +
+          formatDateKey(report.week_period.end)
+        );
+      } else if (report.target_market_date) {
+        contextParts.push(
+          '対象市場日：' + formatDateKey(report.target_market_date)
+        );
+      }
+      reportContext.textContent = contextParts.join('｜');
+      reportContext.classList.toggle('is-visible', contextParts.length > 0);
     }
 
 

@@ -5,7 +5,12 @@ on:
     branches: [main]
     paths:
       - "data/report.json"
+      - "data/market.json"
   workflow_dispatch:
+
+concurrency:
+  group: archive-market-morning
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -26,6 +31,18 @@ jobs:
 
       - name: Archive report and market data
         run: python archive_daily.py
+
+      - name: Validate archived JSON
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          for path in Path("data/history").rglob("*.json"):
+              with path.open(encoding="utf-8") as file:
+                  json.load(file, parse_constant=lambda value: (_ for _ in ()).throw(ValueError(value)))
+              print(f"Valid JSON: {path}")
+          PY
 
       - name: Commit history files
         run: |

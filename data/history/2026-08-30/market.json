@@ -145,10 +145,10 @@
     "gold": {
       "name": "Gold",
       "ticker": "GC=F",
-      "price": NaN,
+      "price": null,
       "previous": 4609.7002,
-      "change": NaN,
-      "change_pct": NaN,
+      "change": null,
+      "change_pct": null,
       "status": "取得成功",
       "market_date": "2026-08-28",
       "previous_market_date": "2026-08-27"
@@ -156,10 +156,10 @@
     "silver": {
       "name": "Silver",
       "ticker": "SI=F",
-      "price": NaN,
+      "price": null,
       "previous": 69.429,
-      "change": NaN,
-      "change_pct": NaN,
+      "change": null,
+      "change_pct": null,
       "status": "取得成功",
       "market_date": "2026-08-28",
       "previous_market_date": "2026-08-27"
@@ -167,10 +167,10 @@
     "copper": {
       "name": "Copper",
       "ticker": "HG=F",
-      "price": NaN,
+      "price": null,
       "previous": 6.587,
-      "change": NaN,
-      "change_pct": NaN,
+      "change": null,
+      "change_pct": null,
       "status": "取得成功",
       "market_date": "2026-08-28",
       "previous_market_date": "2026-08-27"
@@ -178,10 +178,10 @@
     "wti": {
       "name": "WTI",
       "ticker": "CL=F",
-      "price": NaN,
+      "price": null,
       "previous": 83.53,
-      "change": NaN,
-      "change_pct": NaN,
+      "change": null,
+      "change_pct": null,
       "status": "取得成功",
       "market_date": "2026-08-28",
       "previous_market_date": "2026-08-27"
@@ -189,10 +189,10 @@
     "brent": {
       "name": "Brent",
       "ticker": "BZ=F",
-      "price": NaN,
+      "price": null,
       "previous": 89.7,
-      "change": NaN,
-      "change_pct": NaN,
+      "change": null,
+      "change_pct": null,
       "status": "取得成功",
       "market_date": "2026-08-28",
       "previous_market_date": "2026-08-27"

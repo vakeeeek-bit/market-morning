@@ -795,7 +795,7 @@ td.nowrap {
 
 
 /* =====================================================
-   MARKET MORNING VER.3.4 QUICK VIEW
+   MARKET MORNING VER.4 QUICK VIEW
 ===================================================== */
 .quick-view {
   margin-bottom: 14px;
@@ -843,6 +843,18 @@ td.nowrap {
   color: #7a838d;
   font-size: 10px;
 }
+
+/* =====================================================
+   VER.4 MULTI-MARKET HISTORY CHART
+===================================================== */
+.asset-chart-tabs { display:flex; gap:7px; overflow-x:auto; margin-bottom:12px; }
+.asset-chart-tab { flex:0 0 auto; border:1px solid #d8dde5; border-radius:999px; background:#fff; padding:7px 12px; font:inherit; font-size:12px; font-weight:800; cursor:pointer; }
+.asset-chart-tab.active { background:#111827; color:#fff; border-color:#111827; }
+.asset-chart-wrap { min-height:250px; border:1px solid #e5e7eb; border-radius:14px; background:#fafbfc; padding:10px; }
+.asset-chart-meta { display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; margin-bottom:7px; font-size:12px; color:#68707a; }
+.asset-chart-svg { display:block; width:100%; height:210px; }
+.asset-chart-empty { min-height:210px; display:grid; place-items:center; color:#68707a; font-size:13px; }
+.asset-chart-legend { margin-top:7px; font-size:11px; color:#68707a; }
 @media (max-width: 700px) {
   .quick-view-grid {
     grid-template-columns: 1fr 1fr;
@@ -1022,6 +1034,29 @@ td.nowrap {
     <span id="data-date-badge">基準日：確認中</span>
   </div>
 
+</div>
+
+
+<!-- =====================================================
+     MULTI-MARKET HISTORY CHART
+===================================================== -->
+<div class="section" id="asset-history-section">
+  <div class="section-title">📈 市場別チャート</div>
+  <div class="section-sub">保存済みmarket.jsonを使った直近30回分の推移</div>
+  <div class="asset-chart-tabs" id="asset-chart-tabs">
+    <button class="asset-chart-tab active" type="button" data-chart-key="copper">Copper</button>
+    <button class="asset-chart-tab" type="button" data-chart-key="wti">原油（WTI）</button>
+    <button class="asset-chart-tab" type="button" data-chart-key="gold">Gold</button>
+    <button class="asset-chart-tab" type="button" data-chart-key="usdjpy">USD/JPY</button>
+  </div>
+  <div class="asset-chart-wrap">
+    <div class="asset-chart-meta">
+      <strong id="asset-chart-name">Copper</strong>
+      <span id="asset-chart-range">履歴を読み込み中...</span>
+    </div>
+    <div id="asset-chart-body" class="asset-chart-empty">履歴を読み込み中...</div>
+  </div>
+  <div class="asset-chart-legend">※ 情報源や単位が途中で変わった場合は、連続比較に注意してください。</div>
 </div>
 
 
@@ -1717,6 +1752,16 @@ function clearElement(element) {
 ===================================================== */
 
 let selectedHistoryDate = null;
+let availableHistoryDates = [];
+let marketHistoryCache = [];
+let activeChartKey = 'copper';
+
+const chartAssets = {
+  copper: { label: 'Copper', unit: '', decimals: 2 },
+  wti: { label: '原油（WTI）', unit: '$', decimals: 2 },
+  gold: { label: 'Gold', unit: '$', decimals: 2 },
+  usdjpy: { label: 'USD/JPY', unit: '¥', decimals: 2 }
+};
 
 function pad2(value) {
   return String(value).padStart(2, '0');
@@ -1808,6 +1853,13 @@ function resetLoadingState() {
 
   document.getElementById('executive-headline').textContent =
     '市場レポートを読み込み中...';
+
+  const quickConclusion = document.getElementById('quick-conclusion');
+  const quickNews = document.getElementById('quick-news');
+  const quickEvents = document.getElementById('quick-events');
+  if (quickConclusion) quickConclusion.textContent = 'AIレポートを読み込み中...';
+  if (quickNews) quickNews.innerHTML = '<li>確認中</li>';
+  if (quickEvents) quickEvents.innerHTML = '<li>確認中</li>';
 }
 
 async function loadSelectedDay() {
@@ -1825,6 +1877,46 @@ async function loadSelectedDay() {
     loadMarketData(),
     loadMarketReport()
   ]);
+
+  updateHistoryButtons();
+}
+
+async function loadHistoryIndex() {
+  try {
+    const response = await fetch('/data/history/index.json?ts=' + Date.now());
+    if (!response.ok) throw new Error('history index not found');
+    const data = await response.json();
+    availableHistoryDates = (Array.isArray(data.dates) ? data.dates : [])
+      .filter(parseDateKey)
+      .sort();
+  } catch (error) {
+    console.warn('History index error:', error);
+    availableHistoryDates = [];
+  }
+  updateHistoryButtons();
+  await loadMarketHistory();
+}
+
+function currentDisplayDateKey() {
+  if (selectedHistoryDate) return selectedHistoryDate;
+  return availableHistoryDates[availableHistoryDates.length - 1] || toDateKey(new Date());
+}
+
+function adjacentSavedDate(direction) {
+  if (!availableHistoryDates.length) {
+    return shiftDateKey(currentDisplayDateKey(), direction);
+  }
+  const current = currentDisplayDateKey();
+  let index = availableHistoryDates.indexOf(current);
+  if (index < 0) index = direction < 0 ? availableHistoryDates.length : -1;
+  return availableHistoryDates[index + direction] || null;
+}
+
+function updateHistoryButtons() {
+  const prev = document.getElementById('prev-day');
+  const next = document.getElementById('next-day');
+  if (prev && availableHistoryDates.length) prev.disabled = !adjacentSavedDate(-1);
+  if (next && availableHistoryDates.length) next.disabled = !selectedHistoryDate || !adjacentSavedDate(1);
 }
 
 function showHistoryDate(dateKey) {
@@ -1870,6 +1962,11 @@ function setupHistoryNavigation() {
 
   if (prevButton) {
     prevButton.addEventListener('click', () => {
+      const saved = adjacentSavedDate(-1);
+      if (availableHistoryDates.length) {
+        if (saved) showHistoryDate(saved);
+        return;
+      }
       if (selectedHistoryDate) {
         showHistoryDate(
           shiftDateKey(selectedHistoryDate, -1)
@@ -1887,6 +1984,16 @@ function setupHistoryNavigation() {
     nextButton.addEventListener('click', () => {
       if (!selectedHistoryDate) return;
 
+      if (availableHistoryDates.length) {
+        const saved = adjacentSavedDate(1);
+        if (!saved || saved === availableHistoryDates[availableHistoryDates.length - 1]) {
+          showLatest();
+        } else {
+          showHistoryDate(saved);
+        }
+        return;
+      }
+
       const nextDate = shiftDateKey(selectedHistoryDate, 1);
       const today = toDateKey(new Date());
 
@@ -1902,6 +2009,103 @@ function setupHistoryNavigation() {
   if (latestButton) {
     latestButton.addEventListener('click', showLatest);
   }
+}
+
+
+/* =====================================================
+   MULTI-MARKET HISTORY CHART
+===================================================== */
+function numericMarketPrice(value) {
+  if (typeof value === 'number' && Number.isFinite(value)) return value;
+  if (typeof value !== 'string') return null;
+  const parsed = Number(value.replace(/[^0-9.+-]/g, ''));
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+async function loadMarketHistory() {
+  const dates = availableHistoryDates.slice(-30);
+  const rows = await Promise.all(dates.map(async date => {
+    try {
+      const response = await fetch(`/data/history/${date}/market.json?ts=${Date.now()}`);
+      if (!response.ok) return null;
+      const data = await response.json();
+      return { date, markets: data.markets || {} };
+    } catch (error) {
+      return null;
+    }
+  }));
+
+  marketHistoryCache = rows.filter(Boolean);
+  renderAssetChart(activeChartKey);
+}
+
+function chartPointRows(key) {
+  return marketHistoryCache.map(row => ({
+    date: row.date,
+    value: numericMarketPrice(row.markets?.[key]?.price)
+  })).filter(row => row.value !== null);
+}
+
+function renderAssetChart(key) {
+  activeChartKey = chartAssets[key] ? key : 'copper';
+  const config = chartAssets[activeChartKey];
+  const body = document.getElementById('asset-chart-body');
+  const name = document.getElementById('asset-chart-name');
+  const range = document.getElementById('asset-chart-range');
+  if (!body || !name || !range) return;
+
+  document.querySelectorAll('.asset-chart-tab').forEach(button => {
+    button.classList.toggle('active', button.dataset.chartKey === activeChartKey);
+  });
+  name.textContent = config.label;
+
+  const points = chartPointRows(activeChartKey);
+  if (points.length < 2) {
+    range.textContent = 'データ不足';
+    body.className = 'asset-chart-empty';
+    body.textContent = '履歴が2日分以上保存されるとチャートを表示します';
+    return;
+  }
+
+  const width = 760;
+  const height = 210;
+  const pad = { left: 58, right: 16, top: 14, bottom: 30 };
+  const values = points.map(point => point.value);
+  let min = Math.min(...values);
+  let max = Math.max(...values);
+  if (min === max) { min -= 1; max += 1; }
+  const margin = (max - min) * 0.08;
+  min -= margin;
+  max += margin;
+
+  const x = index => pad.left + index * ((width - pad.left - pad.right) / (points.length - 1));
+  const y = value => pad.top + (max - value) * ((height - pad.top - pad.bottom) / (max - min));
+  const path = points.map((point, index) => `${index ? 'L' : 'M'} ${x(index).toFixed(1)} ${y(point.value).toFixed(1)}`).join(' ');
+  const fmt = value => `${config.unit}${value.toLocaleString('ja-JP', { minimumFractionDigits: config.decimals, maximumFractionDigits: config.decimals })}`;
+  const first = points[0];
+  const last = points[points.length - 1];
+  const change = ((last.value / first.value) - 1) * 100;
+
+  body.className = '';
+  body.innerHTML = `
+    <svg class="asset-chart-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="${config.label}の価格推移">
+      <line x1="${pad.left}" y1="${pad.top}" x2="${pad.left}" y2="${height-pad.bottom}" stroke="#d9dee5" />
+      <line x1="${pad.left}" y1="${height-pad.bottom}" x2="${width-pad.right}" y2="${height-pad.bottom}" stroke="#d9dee5" />
+      <line x1="${pad.left}" y1="${y((max+min)/2)}" x2="${width-pad.right}" y2="${y((max+min)/2)}" stroke="#e8ebef" stroke-dasharray="4 4" />
+      <text x="4" y="${pad.top+5}" font-size="11" fill="#68707a">${fmt(max-margin)}</text>
+      <text x="4" y="${height-pad.bottom}" font-size="11" fill="#68707a">${fmt(min+margin)}</text>
+      <path d="${path}" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      ${points.map((point,index) => `<circle cx="${x(index)}" cy="${y(point.value)}" r="3" fill="#111827"><title>${point.date} ${fmt(point.value)}</title></circle>`).join('')}
+      <text x="${pad.left}" y="${height-8}" font-size="11" fill="#68707a">${first.date.slice(5)}</text>
+      <text x="${width-pad.right}" y="${height-8}" text-anchor="end" font-size="11" fill="#68707a">${last.date.slice(5)}</text>
+    </svg>`;
+  range.textContent = `${points.length}回｜${fmt(first.value)} → ${fmt(last.value)}（${change >= 0 ? '+' : ''}${change.toFixed(2)}%）`;
+}
+
+function setupAssetChartTabs() {
+  document.querySelectorAll('.asset-chart-tab').forEach(button => {
+    button.addEventListener('click', () => renderAssetChart(button.dataset.chartKey));
+  });
 }
 
 
@@ -3524,6 +3728,7 @@ function updateQuickView(report) {
       executive.headline,
       executive.summary,
       executive.market_mood,
+      report.final_conclusion?.headline,
       report.final_conclusion?.summary,
       report.final?.summary,
       '確認中'
@@ -3548,6 +3753,7 @@ function updateQuickView(report) {
   );
 
   const eventCandidates =
+    executive.important_today ||
     executive.today_top3 ||
     executive.today_important ||
     report.events ||
@@ -4374,6 +4580,10 @@ function setupVer3UX() {
 }
 
 setupHistoryNavigation();
+
+setupAssetChartTabs();
+
+loadHistoryIndex();
 
 loadSelectedDay();
 

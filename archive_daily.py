@@ -189,35 +189,9 @@ def backfill_from_git() -> None:
     print(f"Backfilled {restored} historical day(s) from Git")
 
 
-def main() -> None:
-    if not REPORT_PATH.exists() or not MARKET_PATH.exists():
-        raise FileNotFoundError("data/report.json と data/market.json の両方が必要です")
-
-    report = load_json(REPORT_PATH)
-    market = load_json(MARKET_PATH)
-    validate_report(report)
-    date_key = extract_date(report)
-    market_date = extract_market_update_date(market)
-
-    if market_date and market_date != date_key:
-        print(
-            "保存待ち: report.jsonの日付 "
-            f"{date_key} と market.jsonの更新日 {market_date} が一致していません"
-        )
-        return
-
+def refresh_history_index() -> None:
+    """現在の履歴フォルダから、表示用の履歴一覧を必ず再作成する。"""
     HISTORY_DIR.mkdir(parents=True, exist_ok=True)
-    backfill_from_git()
-
-    destination = HISTORY_DIR / date_key
-    destination.mkdir(parents=True, exist_ok=True)
-    report_temp = destination / "report.json.tmp"
-    market_temp = destination / "market.json.tmp"
-    shutil.copy2(REPORT_PATH, report_temp)
-    shutil.copy2(MARKET_PATH, market_temp)
-    report_temp.replace(destination / "report.json")
-    market_temp.replace(destination / "market.json")
-
     history_paths = sorted(
         path
         for path in HISTORY_DIR.iterdir()
@@ -243,6 +217,39 @@ def main() -> None:
         encoding="utf-8",
     )
     index_temp.replace(INDEX_PATH)
+
+
+def main() -> None:
+    if not REPORT_PATH.exists() or not MARKET_PATH.exists():
+        raise FileNotFoundError("data/report.json と data/market.json の両方が必要です")
+
+    report = load_json(REPORT_PATH)
+    market = load_json(MARKET_PATH)
+    validate_report(report)
+    date_key = extract_date(report)
+    market_date = extract_market_update_date(market)
+
+    HISTORY_DIR.mkdir(parents=True, exist_ok=True)
+    backfill_from_git()
+
+    if market_date and market_date != date_key:
+        refresh_history_index()
+        print(
+            "保存待ち: report.jsonの日付 "
+            f"{date_key} と market.jsonの更新日 {market_date} が一致していません"
+        )
+        return
+
+    destination = HISTORY_DIR / date_key
+    destination.mkdir(parents=True, exist_ok=True)
+    report_temp = destination / "report.json.tmp"
+    market_temp = destination / "market.json.tmp"
+    shutil.copy2(REPORT_PATH, report_temp)
+    shutil.copy2(MARKET_PATH, market_temp)
+    report_temp.replace(destination / "report.json")
+    market_temp.replace(destination / "market.json")
+
+    refresh_history_index()
     print(f"Archived {date_key}: report.json + market.json")
 
 

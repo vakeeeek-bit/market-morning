@@ -1,10 +1,48 @@
 {
-  "updated_at": "2026-08-30T23:26:12+00:00",
+  "updated_at": "2026-09-01T07:36:01+00:00",
   "latest": "2026-08-31",
   "dates": [
     "2026-08-28",
     "2026-08-29",
     "2026-08-30",
-    "2026-08-31"
+    "2026-08-31",
+    "2026-09-01"
+  ],
+  "entries": [
+    {
+      "date": "2026-08-28",
+      "status": "complete",
+      "has_report": true,
+      "has_market": true,
+      "report_type": "daily"
+    },
+    {
+      "date": "2026-08-29",
+      "status": "complete",
+      "has_report": true,
+      "has_market": true,
+      "report_type": "daily"
+    },
+    {
+      "date": "2026-08-30",
+      "status": "complete",
+      "has_report": true,
+      "has_market": true,
+      "report_type": "weekly"
+    },
+    {
+      "date": "2026-08-31",
+      "status": "complete",
+      "has_report": true,
+      "has_market": true,
+      "report_type": "daily"
+    },
+    {
+      "date": "2026-09-01",
+      "status": "market_only",
+      "has_report": false,
+      "has_market": true,
+      "report_type": null
+    }
   ]
 }

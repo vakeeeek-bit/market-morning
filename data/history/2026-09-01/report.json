@@ -1,0 +1,300 @@
+{
+  "report_date": "2026-09-01",
+  "target_market_date": "2026-08-31",
+  "updated_at": "2026-09-01 16:40 JST",
+  "report_type": "daily",
+  "week_period": null,
+  "executive_summary": {
+    "headline": "米・イランの軍事衝突再開で原油と長期金利が上昇し、株式は下落。ただしNASDAQの下げは小さく、全面的なリスク回避には至らなかった。",
+    "market_mood": "リスクを避ける（ただし一部大型ハイテクは底堅い）",
+    "main_driver": "Hormuz周辺の緊張再燃による原油高とインフレ・追加利上げ懸念",
+    "winners": ["WTI", "Brent", "TOPIX・上海総合"],
+    "losers": ["NYダウ", "STOXX600", "米国債"],
+    "important_today": ["米ISM製造業PMI", "原油と米10年債利回りの連動", "USD/JPY 160円近辺と日米当局発言"],
+    "watch_markets": ["WTI・Brent", "米10年債", "USD/JPY", "NASDAQ", "Gold"]
+  },
+  "relative_ranking": {
+    "strong": [
+      {"rank": 1, "market": "WTI", "move": "+2.83%", "comment": "地政学的な供給懸念を最も直接的に反映"},
+      {"rank": 2, "market": "Brent", "move": "+2.71%", "comment": "Hormuzリスクで90ドル台へ上昇"},
+      {"rank": 3, "market": "上海総合", "move": "+0.86%", "comment": "欧米株安に逆行"},
+      {"rank": 4, "market": "TOPIX", "move": "+0.23%", "comment": "日経平均を上回った"},
+      {"rank": 5, "market": "NASDAQ総合", "move": "-0.12%", "comment": "株安・金利上昇局面でも相対的に底堅い"}
+    ],
+    "weak": [
+      {"rank": 1, "market": "NYダウ", "move": "-0.70%"},
+      {"rank": 2, "market": "STOXX600", "move": "-0.60%"},
+      {"rank": 3, "market": "米国債", "move": "10年利回り+3.6bp"}
+    ]
+  },
+  "market_data": [
+    {"market": "S&P500", "price": 7686.14, "change": "-0.33%", "basis_time": "2026-08-31 米国終値", "source": "Reuters/LSEG", "confidence": "A"},
+    {"market": "NASDAQ100", "price": "確認できず", "change": "確認できず", "basis_time": "2026-08-31", "source": "確認できず", "confidence": "D"},
+    {"market": "NASDAQ総合", "price": 26370.89, "change": "-0.12%", "basis_time": "2026-08-31 米国終値", "source": "Reuters/LSEG", "confidence": "A"},
+    {"market": "NYダウ", "price": 53185.90, "change": "-0.70%", "basis_time": "2026-08-31 米国終値", "source": "Reuters/LSEG", "confidence": "A"},
+    {"market": "Russell2000", "price": "確認できず", "change": "確認できず", "basis_time": "2026-08-31", "source": "確認できず", "confidence": "D"},
+    {"market": "日経225", "price": 66311.93, "change": "-0.14%", "basis_time": "2026-08-31 東京終値", "source": "Reuters/LSEG", "confidence": "B"},
+    {"market": "TOPIX", "price": 4156.29, "change": "+0.23%", "basis_time": "2026-08-31 東京終値", "source": "Armenpress市場集計", "confidence": "B"},
+    {"market": "STOXX600", "price": 651.10, "change": "-0.60%", "basis_time": "2026-08-31 欧州終値（英国休場）", "source": "Reuters/LSEG", "confidence": "A"},
+    {"market": "上海総合", "price": 3986.30, "change": "+0.86%", "basis_time": "2026-08-31 上海終値", "source": "Armenpress市場集計", "confidence": "B"},
+    {"market": "香港ハンセン", "price": 25566.99, "change": "-0.07%", "basis_time": "2026-08-31 香港終値", "source": "Armenpress市場集計", "confidence": "B"},
+    {"market": "DXY", "price": 99.43, "change": "-0.24%", "basis_time": "2026-08-31 Reuters米国午後", "source": "Reuters/LSEG", "confidence": "A"},
+    {"market": "USD/JPY", "price": 159.77, "change": "円+0.20%", "basis_time": "2026-08-31 Reuters米国午後", "source": "Reuters/LSEG", "confidence": "A"},
+    {"market": "EUR/USD", "price": "確認できず", "change": "確認できず", "basis_time": "2026-08-31", "source": "確認できず", "confidence": "D"},
+    {"market": "USD/CNY", "price": "確認できず", "change": "確認できず", "basis_time": "2026-08-31", "source": "Reutersで方向のみ確認", "confidence": "D"},
+    {"market": "GBP/USD", "price": "確認できず", "change": "確認できず", "basis_time": "2026-08-31（英国休場）", "source": "確認できず", "confidence": "D"},
+    {"market": "米2年債利回り", "price": "4.325%", "change": "-2.3bp（記事時点）", "basis_time": "2026-08-31 米国取引中", "source": "Barron's", "confidence": "B"},
+    {"market": "米5年債利回り", "price": "確認できず", "change": "確認できず", "basis_time": "2026-08-31", "source": "確認できず", "confidence": "D"},
+    {"market": "米10年債利回り", "price": "4.758%", "change": "+3.6bp", "basis_time": "2026-08-31 Reuters米国午後", "source": "Reuters/LSEG", "confidence": "A"},
+    {"market": "米30年債利回り", "price": "5.248%", "change": "確認できず", "basis_time": "2026-08-31 米国終盤", "source": "Wall Street Journal", "confidence": "B"},
+    {"market": "Gold現物", "price": "$4,448.30/oz", "change": "-0.10%", "basis_time": "2026-08-31 Reuters米国午後", "source": "Reuters/LSEG", "confidence": "A"},
+    {"market": "Silver", "price": "$66.221/oz", "change": "-1.20%", "basis_time": "2026-08-31 COMEX前月限", "source": "Wall Street Journal", "confidence": "B"},
+    {"market": "LME Copper現物", "price": "$14,535/t", "change": "確認できず", "basis_time": "2026-08-28 LME公式値（8/31ロンドン祝日）", "source": "LME/KME", "confidence": "B"},
+    {"market": "LME Aluminum現物", "price": "$3,221.50/t", "change": "確認できず", "basis_time": "2026-08-28 LME公式値（8/31ロンドン祝日）", "source": "LME", "confidence": "B"},
+    {"market": "LME Nickel現物", "price": "$16,850/t", "change": "確認できず", "basis_time": "2026-08-28 LME公式値（8/31ロンドン祝日）", "source": "LME/KME", "confidence": "B"},
+    {"market": "WTI", "price": "$85.76/bbl", "change": "+2.83%", "basis_time": "2026-08-31 NYMEX清算値", "source": "Reuters/LSEG", "confidence": "A"},
+    {"market": "Brent", "price": "$90.49/bbl", "change": "+2.71%", "basis_time": "2026-08-31 ICE清算値", "source": "Reuters/LSEG", "confidence": "A"},
+    {"market": "BTC", "price": "$78,612", "change": "+0.50%", "basis_time": "2026-09-01 16:40 JST現在", "source": "金融市場データフィード", "confidence": "B"},
+    {"market": "ETH", "price": "$1,624.95", "change": "確認できず", "basis_time": "2026-09-01 16:40 JST現在", "source": "金融市場データフィード", "confidence": "B"},
+    {"market": "XRP", "price": "$1.059", "change": "確認できず", "basis_time": "2026-09-01 16:40 JST現在", "source": "金融市場データフィード", "confidence": "B"},
+    {"market": "BNB", "price": "$689.11", "change": "+0.25%", "basis_time": "2026-09-01 16:40 JST現在", "source": "金融市場データフィード", "confidence": "B"},
+    {"market": "SOL", "price": "$77.97", "change": "確認できず", "basis_time": "2026-09-01 16:40 JST現在", "source": "金融市場データフィード", "confidence": "B"},
+    {"market": "DOGE", "price": "$0.083271", "change": "+0.73%", "basis_time": "2026-09-01 16:40 JST現在", "source": "金融市場データフィード", "confidence": "B"},
+    {"market": "BTC占有率", "price": "確認できず", "change": "確認できず", "basis_time": "2026-09-01", "source": "確認できず", "confidence": "D"},
+    {"market": "暗号資産全体時価総額", "price": "確認できず", "change": "確認できず", "basis_time": "2026-09-01", "source": "確認できず", "confidence": "D"}
+  ],
+  "market_overview": [
+    {"market": "米国株", "move": "S&P500 -0.33%、NASDAQ -0.12%、Dow -0.70%", "strength": "弱いがNASDAQは相対的に底堅い", "background": "原油高と長期金利上昇が重荷となった可能性"},
+    {"market": "日本株", "move": "日経 -0.14%、TOPIX +0.23%", "strength": "TOPIX優位", "background": "大型指数より市場の広がりが相対的に良好"},
+    {"market": "欧州株", "move": "STOXX600 -0.60%", "strength": "弱い", "background": "エネルギー高と追加利上げ懸念。英国休場で商いは薄い"},
+    {"market": "中国株", "move": "上海 +0.86%、香港 -0.07%", "strength": "本土株が強い", "background": "本土と香港で差。単一の材料で断定困難"},
+    {"market": "DXY", "move": "-0.24%の99.43", "strength": "弱い", "background": "金利上昇とドル安が併存し、月末フローの影響も考えられる"},
+    {"market": "USD/JPY", "move": "159.77、円+0.20%", "strength": "円が小幅高", "background": "Bessent財務長官の日本・日銀への発言が円を支援した可能性"},
+    {"market": "米10年債", "move": "利回り+3.6bpの4.758%", "strength": "債券価格は弱い", "background": "原油高と利上げ観測"},
+    {"market": "Gold", "move": "現物-0.10%", "strength": "中立からやや弱い", "background": "地政学リスクより金利上昇圧力が優勢だった可能性"},
+    {"market": "Copper", "move": "8/31公式値なし", "strength": "判断困難", "background": "ロンドン祝日のため日次比較不可"},
+    {"market": "原油", "move": "WTI +2.83%、Brent +2.71%", "strength": "非常に強い", "background": "米・イランの攻撃再開とHormuz供給不安"},
+    {"market": "BTC", "move": "9/1 16:40 JSTで78,612ドル", "strength": "中立", "background": "8万ドルを下回る一方、株安に対して崩れていない"}
+  ],
+  "main_story": {
+    "material": "米・イランの軍事衝突再開と原油急伸",
+    "facts": "米国がLarak島の発射装置を攻撃し、イランが米軍基地を攻撃。WTIとBrentが2.7～2.8%上昇した。",
+    "market_reaction": "原油上昇、米10年利回り上昇、米欧株下落。DXYは小幅下落した。",
+    "analysis": "供給不安がインフレと追加利上げ観測を強め、株・債券の双方を圧迫した可能性が高い。ただしNASDAQの下げは小さく、全面的な資金逃避ではない。",
+    "confidence": "高"
+  },
+  "news": [
+    {
+      "title": "米・イランがHormuz周辺で攻撃を再開",
+      "fact": "米軍がイランのLarak島にある発射装置を攻撃し、イランはヨルダンの米軍基地を攻撃したと報じられた。",
+      "market_reaction": "WTI +2.83%、Brent +2.71%、S&P500 -0.33%、米10年利回り+3.6bp。",
+      "analysis": "原油供給とインフレへの警戒を通じて株・債券を圧迫した可能性。",
+      "related_assets": ["WTI", "Brent", "米国債", "米国株", "Gold"],
+      "importance": "★★★★★",
+      "source_url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-08-31/",
+      "published_at": "2026-08-31 21:38 JST更新",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "title": "Bessent米財務長官が日本の円安対応と日銀利上げに言及",
+      "fact": "Bessent氏は日本政府と日銀が円を強める措置を取るとの見方を示した。",
+      "market_reaction": "円は0.2%上昇し、USD/JPYは159.77。",
+      "analysis": "160円近辺で口先介入と9月の日銀利上げ観測が円の下値を支えた可能性。実際の新規介入ではない。",
+      "related_assets": ["USD/JPY", "日本国債", "日本株"],
+      "importance": "★★★★★",
+      "source_url": "https://www.reuters.com/world/asia-pacific/bessent-says-he-believes-japan-will-take-action-leading-stronger-yen-2026-08-31/",
+      "published_at": "2026-08-31 JST",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "title": "9月FRB利上げ確率が約65%へ上昇",
+      "fact": "Warsh FRB議長の8月28日講演後、9月利上げ確率は約35%から65%へ上昇したとReutersが報じた。",
+      "market_reaction": "米10年利回りは4.758%へ上昇し、米株は下落。",
+      "analysis": "原油高が講演後のインフレ警戒を補強した可能性。雇用統計次第で織り込みは大きく変わり得る。",
+      "related_assets": ["米国債", "NASDAQ", "DXY", "Gold", "BTC"],
+      "importance": "★★★★★",
+      "source_url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-08-31/",
+      "published_at": "2026-08-31 21:38 JST更新",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "title": "PBOCが人民元の急上昇を抑制",
+      "fact": "PBOCは市場予想より弱い基準値設定を行い、国有銀行はドル買いで人民元高を抑えていると報じられた。",
+      "market_reaction": "人民元の正確な8月31日終値は確認できず。上海総合は+0.86%、香港は-0.07%。",
+      "analysis": "輸出支援と国内景気の弱さを優先し、急速な人民元高を避ける意図が考えられる。",
+      "related_assets": ["USD/CNY", "中国株", "Copper"],
+      "importance": "★★★★☆",
+      "source_url": "https://www.reuters.com/world/asia-pacific/china-reins-rising-yuan-weak-domestic-demand-clouds-outlook-2026-08-31/",
+      "published_at": "2026-08-31 JST",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "title": "原油見通しは供給不安と中国需要鈍化の綱引き",
+      "fact": "Reuters調査で2026年平均予想はBrent 85.08ドル、WTI 80.20ドル。中国の7月輸入は前年比24.3%減。",
+      "market_reaction": "8月31日は地政学要因が優勢となり原油は2%以上上昇。",
+      "analysis": "短期は供給障害、中期は中国需要の弱さが上値を制約する構図。",
+      "related_assets": ["WTI", "Brent", "中国株", "米国債"],
+      "importance": "★★★★☆",
+      "source_url": "https://www.reuters.com/world/asia-pacific/oil-hold-above-80-barrel-middle-east-supply-risks-persist-2026-08-31/",
+      "published_at": "2026-08-31 20:08 JST",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    }
+  ],
+  "policy": {
+    "trump_us": "Trump大統領はイランの攻撃に対し強硬姿勢を示したと報じられた。市場では原油上昇とリスク回避が確認された。",
+    "fed": "8月31日の新たな金融政策発言は確認できず。8月28日のWarsh議長講演を受け、9月利上げ確率は約65%。",
+    "boj_japan": "Bessent米財務長官が日本政府・日銀の円高方向の措置に期待を表明。USD/JPYは159.77。新規の実弾介入は確認できず。次回会合は9月17～18日。",
+    "ecb": "9月9～10日に政策理事会。市場は利上げを強く警戒している。",
+    "pboc_china": "人民元の急上昇を抑える弱めの基準値設定と国有銀行のドル買いが報じられた。"
+  },
+  "internal_strength": {
+    "breadth": "広く弱いというより、エネルギー高・金利上昇に弱いセクターが売られた局面。",
+    "large_vs_small": "Russell2000の終値を確認できず、厳密比較は不能。",
+    "nasdaq_vs_dow": "NASDAQ -0.12%に対しDow -0.70%。大型ハイテクが相対的に強い。",
+    "japan_vs_us": "TOPIX +0.23%は米主要指数を上回った。",
+    "gold_vs_copper": "Copperは8/31公式値なしのため比較不能。",
+    "btc_vs_alts": "BTC占有率と多くの24時間騰落率が確認できず、判断困難。"
+  },
+  "cross_asset": [
+    {"pair": "Oil×米10年債", "fact": "原油上昇、10年利回り上昇", "usual": "原油高が期待インフレを通じ金利上昇と並行しやすい", "assessment": "普段通り", "confidence": "高"},
+    {"pair": "米10年債×NASDAQ", "fact": "利回り上昇、NASDAQ小幅安", "usual": "金利上昇は高PER株の重荷になりやすい", "assessment": "方向は普段通りだがNASDAQは相対的に底堅い", "confidence": "中"},
+    {"pair": "DXY×Gold", "fact": "DXY低下、Goldも小幅低下", "usual": "ドル安はGoldを支援しやすい", "assessment": "普段と異なる", "confidence": "中"},
+    {"pair": "米10年債×Gold", "fact": "利回り上昇、Gold低下", "usual": "金利上昇はGoldの重荷", "assessment": "普段通り", "confidence": "高"},
+    {"pair": "BTC×NASDAQ", "fact": "NASDAQは小幅安、BTCは9/1時点で底堅い", "usual": "流動性局面では同方向になりやすい", "assessment": "基準時刻が異なるため判断保留", "confidence": "低"}
+  ],
+  "commodities": {
+    "copper": {
+      "price": "LME現物14,535ドル/t（2026-08-28）",
+      "change": "8月31日はロンドン祝日のため確認できず",
+      "news": "市場を大きく動かす新規材料は確認できず",
+      "market_reaction": "確認できず",
+      "analysis": "中国本土株は上昇したが、銅の同日価格がないため連動性は評価不能",
+      "today_condition": "LME再開後に14,535ドルを維持できるか",
+      "lme_inventory": "確認できず",
+      "shfe_inventory": "確認できず",
+      "comex_inventory": "確認できず",
+      "china_demand": "中国8月民間製造業PMIは9/1発表で51.5。8/31市場反応とは分離",
+      "tariffs_supply": "重要な新規確認材料なし"
+    },
+    "oil": {
+      "price": "WTI 85.76ドル、Brent 90.49ドル",
+      "change": "WTI +2.83%、Brent +2.71%",
+      "news": "米・イランの攻撃再開とHormuz輸送懸念",
+      "market_reaction": "原油上昇、債券利回り上昇、株下落",
+      "analysis": "地政学的供給プレミアムが再拡大した可能性",
+      "today_condition": "Brentが90ドル台を維持するか、Hormuz通航量がさらに低下するか",
+      "inventory": "EIA週間在庫は対象日には新規発表なし",
+      "opec_iea": "OPEC+は9月に日量18.8万バレル増産予定。IEAは2026年需要を日量160万バレル減と予想"
+    },
+    "gold_silver": {
+      "price": "Gold現物4,448.30ドル、Silver 66.221ドル",
+      "change": "Gold -0.10%、Silver -1.20%",
+      "news": "地政学緊張より金利上昇・利上げ観測が優勢",
+      "market_reaction": "DXY低下でも両金属は下落",
+      "analysis": "安全資産需要が金利圧力を相殺できなかった可能性",
+      "today_condition": "米10年利回りが4.75%を維持してもGoldが下げ止まるか",
+      "etf_central_bank": "当日の確定フローは確認できず"
+    }
+  },
+  "crypto": {
+    "prices": {"BTC": "$78,612", "ETH": "$1,624.95", "XRP": "$1.059", "BNB": "$689.11", "SOL": "$77.97", "DOGE": "$0.083271"},
+    "basis_time": "2026-09-01 16:40 JST現在",
+    "btc_dominance": "確認できず",
+    "total_market_cap": "確認できず",
+    "etf": "8月31日の確定ETFフローは確認できず",
+    "assessment": "判断困難",
+    "reason": "BTCは8万ドルを下回るが、株安・金利上昇に対して急落していない。アルト全体の騰落率と占有率が不足。"
+  },
+  "market_environment": [
+    {"label": "リスクを避ける", "status": "暫定判断", "reason": "株安・債券安・原油高。ただしNASDAQの下げは小さい。"},
+    {"label": "インフレが強い", "status": "市場の織り込み", "reason": "原油上昇と9月利上げ確率65%が示唆。実際の新規物価統計ではない。"},
+    {"label": "方向感が弱い", "status": "一部市場", "reason": "ドル安、円高、Gold安が併存し、全面的な一方向ではない。"}
+  ],
+  "unusual_moves": [
+    {"move": "DXY↓、Gold↓", "usual": "ドル安はGoldを支援しやすい", "analysis": "長期金利上昇と利上げ観測がドル安効果を上回った可能性", "confidence": "中"},
+    {"move": "米10年利回り↑、NASDAQは-0.12%にとどまる", "usual": "金利上昇はNASDAQの重荷", "analysis": "AI大型株など指数上位の底堅さが下落を抑えた可能性", "confidence": "中"},
+    {"move": "原油↑、DXY↓", "usual": "インフレ懸念と米金利上昇はドルを支えやすい", "analysis": "月末フローと円・人民元固有材料が影響した可能性", "confidence": "低"}
+  ],
+  "events": [
+    {"event": "米ISM製造業PMI", "jst": "2026-09-01 23:00", "forecast": "55.2", "watch": "新規受注・雇用・価格指数", "markets": ["米国債", "DXY", "NASDAQ", "Gold"], "importance": "★★★★★"},
+    {"event": "米8月雇用統計", "jst": "2026-09-04 21:30", "forecast": "非農業部門+5.8万人、失業率4.1%", "watch": "7月-2.3万人からの反発と賃金", "markets": ["米国債", "DXY", "株式", "Gold", "BTC"], "importance": "★★★★★"},
+    {"event": "ECB政策理事会", "jst": "2026-09-10 時刻確認できず", "forecast": "確認できず", "watch": "エネルギー高への対応と利上げ判断", "markets": ["EUR/USD", "欧州株", "国債"], "importance": "★★★★★"},
+    {"event": "米8月CPI", "jst": "2026-09-11 21:30予定", "forecast": "確認できず", "watch": "原油高前の基調インフレ", "markets": ["米国債", "DXY", "株式", "Gold"], "importance": "★★★★★"},
+    {"event": "FOMC政策決定", "jst": "2026-09-17 03:00予定", "forecast": "利上げ確率約65%（8/31 Reuters）", "watch": "実際の利上げ、声明、見通し", "markets": ["全市場"], "importance": "★★★★★"},
+    {"event": "日銀金融政策決定会合", "jst": "2026-09-17～18（発表時刻未定）", "forecast": "確認できず", "watch": "利上げと円安・物価への評価", "markets": ["USD/JPY", "日本国債", "日本株"], "importance": "★★★★★"}
+  ],
+  "watch_cards": [
+    {"card": "Oil vs 米10年債", "point": "Brentが90ドル台を維持した場合、10年利回りが4.75%超でさらに上昇するか"},
+    {"card": "米10年債 vs NASDAQ", "point": "金利上昇でもNASDAQの相対的な底堅さが続くか"},
+    {"card": "USD/JPY vs 日米当局", "point": "160円接近時に口先介入・政策期待だけで円が反発するか"}
+  ],
+  "view_change_conditions": [
+    "Brentが90ドルを明確に下回り、Hormuz通航正常化が確認されれば、インフレ再燃シナリオを弱める。",
+    "米10年利回りが4.80%を超えNASDAQが下げを拡大すれば、金利耐性が崩れたと再評価する。",
+    "USD/JPYが160円を上抜けて定着すれば、当局発言による円の下支えが不十分と判断する。",
+    "Goldが米10年利回り上昇下でも4,450ドル超を回復すれば、地政学・安全資産需要を上方修正する。",
+    "米ISMまたは雇用統計が大幅に弱ければ、9月利上げ確率低下を通じて現在の金利上昇シナリオを再検討する。"
+  ],
+  "scenarios": [
+    {"name": "基本シナリオ", "conditions": "Hormuz緊張は継続するが全面封鎖は悪化せず、Brentが高80～低90ドル台", "reaction": "金利は高止まり、株は選別色、ドル円は160円近辺", "up_assets": ["エネルギー株", "原油"], "down_assets": ["長期債", "金利敏感株"], "invalidated_if": "停戦・通航正常化、または弱い米指標で利上げ観測が急低下"},
+    {"name": "強気シナリオ", "conditions": "原油反落と米指標の適度な鈍化で利上げ確率が低下", "reaction": "金利低下、株・Gold・BTCが持ち直す可能性", "up_assets": ["NASDAQ", "Gold", "BTC", "米国債"], "down_assets": ["DXY", "原油"], "invalidated_if": "Brent再上昇と米10年4.80%超"},
+    {"name": "弱気シナリオ", "conditions": "Hormuz供給障害が拡大しBrentが急騰、米指標も強い", "reaction": "インフレ・利上げ観測上昇、株債同時安の可能性", "up_assets": ["原油", "一部エネルギー株"], "down_assets": ["長期債", "NASDAQ", "Gold", "BTC"], "invalidated_if": "外交合意または需要急減で原油が反落"}
+  ],
+  "trade_watch": [
+    {"rank": 1, "item": "Brent 90ドル", "reason": "地政学プレミアムとインフレ再燃の境目"},
+    {"rank": 2, "item": "米10年4.75～4.80%", "reason": "株式の金利耐性を左右"},
+    {"rank": 3, "item": "USD/JPY 160円", "reason": "日銀・財務省・米財務省の反応が集中"},
+    {"rank": 4, "item": "NASDAQ対Dow", "reason": "大型ハイテクの相対優位が続くか"},
+    {"rank": 5, "item": "Gold 4,450ドル", "reason": "安全資産需要と金利圧力の勝敗を確認"}
+  ],
+  "strength": [
+    {"asset": "株式", "rating": 2, "comment": "米欧株安。ただしNASDAQと中国本土株は相対的に底堅い"},
+    {"asset": "債券", "rating": 1, "comment": "長期利回り上昇で弱い"},
+    {"asset": "ドル", "rating": 2, "comment": "金利上昇にもかかわらずDXYは下落"},
+    {"asset": "Gold", "rating": 2, "comment": "地政学緊張でも金利上昇に押された"},
+    {"asset": "Copper", "rating": 3, "comment": "8月31日の公式値がなく判断保留"},
+    {"asset": "原油", "rating": 5, "comment": "供給不安で2.7～2.8%上昇"},
+    {"asset": "暗号資産", "rating": 3, "comment": "BTCは8万ドル未満だが株安に対して崩れていない"}
+  ],
+  "data_quality": {
+    "overall": "B",
+    "missing": ["NASDAQ100・Russell2000の8月31日終値", "EUR/USD・USD/CNY・GBP/USDの統一時点価格", "米5年債利回り", "8月31日のLME金属公式値", "BTC占有率・暗号資産全体時価総額", "LME・SHFE・COMEX銅在庫"],
+    "differences": ["Goldは現物4,448.30ドル（Reuters）とCOMEX前月限4,431.10ドル（WSJ）で契約・時点差", "米2年利回りは記事時点4.325%、9月1日の市場データでは4.37%付近で時点差"],
+    "cautions": ["英国休場により欧州市場の商いが薄い", "暗号資産は9月1日16:40 JSTの現在値で、8月31日終値ではない", "9月1日発表の中国PMIなどは昨日の市場反応に混ぜていない"]
+  },
+  "final_conclusion": {
+    "headline": "原油高が金利と株式を圧迫する一方、NASDAQの底堅さとドル安が全面的なリスク回避を否定している。今日は原油・米金利・USD/JPYの三角関係を優先する。",
+    "winners": ["WTI", "Brent", "上海総合"],
+    "losers": ["米国債", "NYダウ", "STOXX600"],
+    "top_three": ["米ISM製造業PMI", "Brent 90ドルの維持", "USD/JPY 160円近辺"],
+    "triggers": ["米10年4.80%超", "Brentの90ドル割れまたは急騰", "USD/JPYの160円定着"],
+    "disclaimer": "本レポートは市場観察のための情報であり、売買を推奨するものではありません。"
+  },
+  "source_notes": [
+    "https://www.reuters.com/world/china/global-markets-global-markets-2026-08-31/",
+    "https://www.reuters.com/business/us-stock-index-futures-dip-middle-east-strikes-worsen-inflation-fears-2026-08-31/",
+    "https://www.reuters.com/world/asia-pacific/oil-hold-above-80-barrel-middle-east-supply-risks-persist-2026-08-31/",
+    "https://www.reuters.com/world/asia-pacific/bessent-says-he-believes-japan-will-take-action-leading-stronger-yen-2026-08-31/",
+    "https://www.reuters.com/world/asia-pacific/china-reins-rising-yuan-weak-domestic-demand-clouds-outlook-2026-08-31/",
+    "https://www.federalreserve.gov/",
+    "https://www.lme.com/market-data/reports-and-data/lme-official-prices",
+    "https://www.ismworld.org/supply-management-news-and-reports/reports/rob-report-calendar/",
+    "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+    "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm"
+  ]
+}

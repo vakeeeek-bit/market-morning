@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-01T07:36:01+00:00",
-  "latest": "2026-08-31",
+  "updated_at": "2026-09-01T07:53:12+00:00",
+  "latest": "2026-09-01",
   "dates": [
     "2026-08-28",
     "2026-08-29",
@@ -39,10 +39,10 @@
     },
     {
       "date": "2026-09-01",
-      "status": "market_only",
-      "has_report": false,
+      "status": "complete",
+      "has_report": true,
       "has_market": true,
-      "report_type": null
+      "report_type": "daily"
     }
   ]
 }

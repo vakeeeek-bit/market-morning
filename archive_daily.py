@@ -79,6 +79,51 @@ def validate_report(report: dict) -> None:
         raise ValueError("report.json 必須項目不足: " + ", ".join(missing))
 
 
+def history_entry(path: Path) -> dict:
+    report_path = path / "report.json"
+    market_path = path / "market.json"
+    report_exists = report_path.exists()
+    market_exists = market_path.exists()
+    report_valid = False
+    market_valid = False
+    report_type = None
+
+    if report_exists:
+        try:
+            report = load_json(report_path)
+            validate_report(report)
+            report_valid = True
+            report_type = report.get("report_type", "daily")
+        except ValueError:
+            report_valid = False
+
+    if market_exists:
+        try:
+            load_json(market_path)
+            market_valid = True
+        except ValueError:
+            market_valid = False
+
+    if report_valid and market_valid:
+        status = "complete"
+    elif (report_exists and not report_valid) or (market_exists and not market_valid):
+        status = "invalid"
+    elif report_valid:
+        status = "report_only"
+    elif market_valid:
+        status = "market_only"
+    else:
+        status = "empty"
+
+    return {
+        "date": path.name,
+        "status": status,
+        "has_report": report_valid,
+        "has_market": market_valid,
+        "report_type": report_type,
+    }
+
+
 def extract_market_update_date(market: dict) -> str | None:
     value = market.get("updated_at")
     match = re.search(r"(20\d{2})[-/年](\d{1,2})[-/月](\d{1,2})", str(value or ""))
@@ -173,19 +218,24 @@ def main() -> None:
     report_temp.replace(destination / "report.json")
     market_temp.replace(destination / "market.json")
 
-    dates = sorted(
-        path.name
+    history_paths = sorted(
+        path
         for path in HISTORY_DIR.iterdir()
         if path.is_dir()
         and re.fullmatch(r"20\d{2}-\d{2}-\d{2}", path.name)
-        and (path / "report.json").exists()
-        and (path / "market.json").exists()
     )
+    entries = [history_entry(path) for path in history_paths]
+    entries = [entry for entry in entries if entry["status"] != "empty"]
+    dates = [entry["date"] for entry in entries]
+    complete_dates = [
+        entry["date"] for entry in entries if entry["status"] == "complete"
+    ]
 
     index = {
         "updated_at": datetime.now().astimezone().isoformat(timespec="seconds"),
-        "latest": dates[-1] if dates else None,
+        "latest": complete_dates[-1] if complete_dates else None,
         "dates": dates,
+        "entries": entries,
     }
     index_temp = HISTORY_DIR / "index.json.tmp"
     index_temp.write_text(

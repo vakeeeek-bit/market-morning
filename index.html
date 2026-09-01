@@ -1835,6 +1835,7 @@ function clearElement(element) {
 
 let selectedHistoryDate = null;
 let availableHistoryDates = [];
+let historyEntryMap = {};
 let marketHistoryCache = [];
 let activeChartKey = 'copper';
 
@@ -1924,6 +1925,34 @@ function setHistoryMode(message) {
   if (element) element.textContent = message;
 }
 
+function historyModeMessage(dateKey) {
+  const base = '履歴：' + formatDateKey(dateKey) + ' を表示中';
+  const entry = historyEntryMap[dateKey];
+
+  if (!entry) return base;
+
+  const typeLabel = entry.report_type === 'weekly'
+    ? '週間レポート'
+    : entry.has_report
+      ? '日次レポート'
+      : '';
+
+  if (entry.status === 'complete') {
+    return base + '｜✓ データ正常' + (typeLabel ? '｜' + typeLabel : '');
+  }
+  if (entry.status === 'report_only') {
+    return base + '｜⚠ レポートのみ' + (typeLabel ? '｜' + typeLabel : '');
+  }
+  if (entry.status === 'market_only') {
+    return base + '｜⚠ 市場データのみ';
+  }
+  if (entry.status === 'invalid') {
+    return base + '｜⚠ データエラー';
+  }
+
+  return base + '｜⚠ データ状態を確認できず';
+}
+
 function resetLoadingState() {
   document.getElementById('market-updated').textContent =
     '市場データを読み込み中...';
@@ -1967,9 +1996,7 @@ async function loadSelectedDay() {
   resetLoadingState();
 
   if (selectedHistoryDate) {
-    setHistoryMode(
-      '履歴：' + formatDateKey(selectedHistoryDate) + ' を表示中'
-    );
+    setHistoryMode(historyModeMessage(selectedHistoryDate));
   } else {
     setHistoryMode('最新データを表示中');
   }
@@ -1990,9 +2017,16 @@ async function loadHistoryIndex() {
     availableHistoryDates = (Array.isArray(data.dates) ? data.dates : [])
       .filter(parseDateKey)
       .sort();
+    historyEntryMap = {};
+    (Array.isArray(data.entries) ? data.entries : []).forEach(entry => {
+      if (entry && parseDateKey(entry.date)) {
+        historyEntryMap[entry.date] = entry;
+      }
+    });
   } catch (error) {
     console.warn('History index error:', error);
     availableHistoryDates = [];
+    historyEntryMap = {};
   }
   updateHistoryButtons();
   await loadMarketHistory();

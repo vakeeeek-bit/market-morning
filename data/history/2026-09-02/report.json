@@ -1,0 +1,994 @@
+{
+  "report_date": "2026-09-02",
+  "target_market_date": "2026-09-01",
+  "updated_at": "2026-09-02 09:00 JST",
+  "report_type": "daily",
+  "week_period": null,
+  "executive_summary": {
+    "headline": "原油急騰がインフレ懸念と世界的な金利上昇を強め、株・債券・Gold・Copperが同時に売られた",
+    "market_mood": "リスクを避ける状態",
+    "main_driver": "米・イラン戦闘再燃とホルムズ海峡の原油供給不安",
+    "winners": [
+      "WTI原油",
+      "Brent原油",
+      "ドル"
+    ],
+    "losers": [
+      "Silver",
+      "Copper",
+      "Gold"
+    ],
+    "important_today": [
+      "米ADP民間雇用",
+      "原油と米10年債利回り",
+      "USD/JPYと日米当局発言"
+    ],
+    "watch_markets": [
+      "WTI",
+      "米10年債",
+      "NASDAQ",
+      "USD/JPY",
+      "Gold"
+    ]
+  },
+  "relative_ranking": {
+    "strong": [
+      {
+        "rank": 1,
+        "market": "WTI",
+        "change": "+5.20%",
+        "reason": "ホルムズ海峡の供給不安を直接反映"
+      },
+      {
+        "rank": 2,
+        "market": "Brent",
+        "change": "+4.60%",
+        "reason": "中東産原油の供給リスクを反映"
+      },
+      {
+        "rank": 3,
+        "market": "暗号資産",
+        "change": "全体時価総額+1.6%/24時間",
+        "reason": "9月2日朝時点で主要銘柄が反発"
+      },
+      {
+        "rank": 4,
+        "market": "TOPIX",
+        "change": "+0.63%",
+        "reason": "日経平均下落下で相対的に強い"
+      },
+      {
+        "rank": 5,
+        "market": "DXY",
+        "change": "+0.27%",
+        "reason": "米金利上昇と地政学リスクが支援した可能性"
+      }
+    ],
+    "weak": [
+      {
+        "rank": 1,
+        "market": "Silver",
+        "change": "-2.90%"
+      },
+      {
+        "rank": 2,
+        "market": "Copper",
+        "change": "-2.35%"
+      },
+      {
+        "rank": 3,
+        "market": "Russell 2000",
+        "change": "-1.23%"
+      }
+    ]
+  },
+  "market_data": [
+    {
+      "market": "S&P500",
+      "price": "7631.47",
+      "change": "-0.71%",
+      "as_of": "2026-09-01 US close",
+      "source": "AP",
+      "confidence": "A"
+    },
+    {
+      "market": "NASDAQ100",
+      "price": "29095.81",
+      "change": "約-1.23%",
+      "as_of": "2026-09-01 US close",
+      "source": "Nasdaq",
+      "confidence": "B"
+    },
+    {
+      "market": "NASDAQ総合",
+      "price": "26099.77",
+      "change": "-1.03%",
+      "as_of": "2026-09-01 US close",
+      "source": "AP",
+      "confidence": "A"
+    },
+    {
+      "market": "NYダウ",
+      "price": "52766.88",
+      "change": "-0.79%",
+      "as_of": "2026-09-01 US close",
+      "source": "AP, Reuters",
+      "confidence": "A"
+    },
+    {
+      "market": "Russell2000",
+      "price": "2920.13",
+      "change": "-1.23%",
+      "as_of": "2026-09-01 US close",
+      "source": "AP",
+      "confidence": "A"
+    },
+    {
+      "market": "日経225",
+      "price": "66215.34",
+      "change": "-0.15%",
+      "as_of": "2026-09-01 Tokyo close",
+      "source": "Reuters, Trading Economics",
+      "confidence": "A"
+    },
+    {
+      "market": "TOPIX",
+      "price": "4182.63",
+      "change": "+0.63%",
+      "as_of": "2026-09-01 Tokyo close",
+      "source": "Reuters",
+      "confidence": "A"
+    },
+    {
+      "market": "STOXX600",
+      "price": "647.08",
+      "change": "-0.60%",
+      "as_of": "2026-09-01 Europe close",
+      "source": "Reuters",
+      "confidence": "A"
+    },
+    {
+      "market": "上海総合",
+      "price": "確認できず",
+      "change": "確認できず",
+      "as_of": "2026-09-01",
+      "source": "確認できず",
+      "confidence": "D"
+    },
+    {
+      "market": "香港ハンセン",
+      "price": "25329.73",
+      "change": "-0.93%",
+      "as_of": "2026-09-01 Hong Kong close",
+      "source": "Reuters, Trading Economics",
+      "confidence": "A"
+    },
+    {
+      "market": "DXY",
+      "price": "99.68",
+      "change": "+0.27%",
+      "as_of": "2026-09-01 US session",
+      "source": "Reuters",
+      "confidence": "A"
+    },
+    {
+      "market": "USD/JPY",
+      "price": "160.19",
+      "change": "円-0.3%",
+      "as_of": "2026-09-01 US session",
+      "source": "Reuters",
+      "confidence": "A"
+    },
+    {
+      "market": "EUR/USD",
+      "price": "確認できず",
+      "change": "下落",
+      "as_of": "2026-09-01 US session",
+      "source": "Reuters",
+      "confidence": "D"
+    },
+    {
+      "market": "USD/CNY",
+      "price": "6.7210",
+      "change": "-0.08%",
+      "as_of": "2026-09-01 NY close",
+      "source": "WSJ",
+      "confidence": "B"
+    },
+    {
+      "market": "GBP/USD",
+      "price": "1.3510",
+      "change": "-0.29%",
+      "as_of": "2026-09-02 04:58 JST頃",
+      "source": "Reuters",
+      "confidence": "B"
+    },
+    {
+      "market": "米2年債利回り",
+      "price": "4.375%",
+      "change": "上昇",
+      "as_of": "2026-09-01 US session",
+      "source": "Investors.com",
+      "confidence": "B"
+    },
+    {
+      "market": "米5年債利回り",
+      "price": "4.557%",
+      "change": "+5.0bp",
+      "as_of": "2026-09-01 US session",
+      "source": "Yahoo Finance",
+      "confidence": "B"
+    },
+    {
+      "market": "米10年債利回り",
+      "price": "4.797%",
+      "change": "約+4bp",
+      "as_of": "2026-09-01 US session",
+      "source": "Reutersほか",
+      "confidence": "A"
+    },
+    {
+      "market": "米30年債利回り",
+      "price": "5.286%",
+      "change": "上昇",
+      "as_of": "2026-09-01 US session",
+      "source": "複数報道",
+      "confidence": "A"
+    },
+    {
+      "market": "Gold先物",
+      "price": "4396.40",
+      "change": "-1.90%",
+      "as_of": "2026-09-01 US settlement",
+      "source": "Reuters",
+      "confidence": "A"
+    },
+    {
+      "market": "Silver",
+      "price": "確認できず",
+      "change": "-2.90%",
+      "as_of": "2026-09-01 US session",
+      "source": "Reuters",
+      "confidence": "B"
+    },
+    {
+      "market": "Copper",
+      "price": "6.44 USD/lb",
+      "change": "-2.35%",
+      "as_of": "2026-09-01 CFD reference",
+      "source": "Trading Economics",
+      "confidence": "B"
+    },
+    {
+      "market": "Aluminum",
+      "price": "3241 USD/t",
+      "change": "確認できず",
+      "as_of": "2026-09-01 LME close",
+      "source": "LME",
+      "confidence": "B"
+    },
+    {
+      "market": "Nickel",
+      "price": "16675 USD/t",
+      "change": "-1.36%",
+      "as_of": "2026-09-01",
+      "source": "Trading Economics",
+      "confidence": "B"
+    },
+    {
+      "market": "WTI",
+      "price": "90.22",
+      "change": "+5.20%",
+      "as_of": "2026-09-01 NYMEX settlement",
+      "source": "Reuters",
+      "confidence": "A"
+    },
+    {
+      "market": "Brent",
+      "price": "94.65",
+      "change": "+4.60%",
+      "as_of": "2026-09-01 ICE settlement",
+      "source": "Reuters",
+      "confidence": "A"
+    },
+    {
+      "market": "BTC",
+      "price": "77267.76",
+      "change": "+1.60%/24h",
+      "as_of": "2026-09-02 09:00 JST前後",
+      "source": "CoinMarketCap",
+      "confidence": "B"
+    },
+    {
+      "market": "ETH",
+      "price": "2412.30",
+      "change": "+2.13%/24h",
+      "as_of": "2026-09-02 09:00 JST前後",
+      "source": "CoinMarketCap",
+      "confidence": "B"
+    },
+    {
+      "market": "XRP",
+      "price": "1.35",
+      "change": "+2.41%/24h",
+      "as_of": "2026-09-02 09:00 JST前後",
+      "source": "CoinMarketCap",
+      "confidence": "B"
+    },
+    {
+      "market": "BNB",
+      "price": "680.67",
+      "change": "+1.43%/24h",
+      "as_of": "2026-09-02 09:00 JST前後",
+      "source": "CoinMarketCap",
+      "confidence": "B"
+    },
+    {
+      "market": "SOL",
+      "price": "99.74",
+      "change": "+3.23%/24h",
+      "as_of": "2026-09-02 09:00 JST前後",
+      "source": "CoinMarketCap",
+      "confidence": "B"
+    },
+    {
+      "market": "DOGE",
+      "price": "確認できず",
+      "change": "確認できず",
+      "as_of": "2026-09-02 09:00 JST前後",
+      "source": "確認できず",
+      "confidence": "D"
+    },
+    {
+      "market": "BTC占有率",
+      "price": "57.8%-59.6%",
+      "change": "確認できず",
+      "as_of": "2026-09-02 09:00 JST前後",
+      "source": "CoinGecko, CoinMarketCap",
+      "confidence": "C"
+    },
+    {
+      "market": "暗号資産全体時価総額",
+      "price": "2.69兆USD",
+      "change": "+1.6%/24h",
+      "as_of": "2026-09-02 09:00 JST前後",
+      "source": "CoinGecko",
+      "confidence": "B"
+    }
+  ],
+  "market_overview": [
+    {
+      "market": "米国株",
+      "move": "下落",
+      "strength": "弱い",
+      "background": "原油高と金利上昇が重荷となった可能性"
+    },
+    {
+      "market": "日本株",
+      "move": "まちまち",
+      "strength": "TOPIX優位",
+      "background": "日経平均下落、TOPIX上昇"
+    },
+    {
+      "market": "欧州株",
+      "move": "下落",
+      "strength": "弱い",
+      "background": "インフレ3.3%と欧州金利上昇"
+    },
+    {
+      "market": "中国株",
+      "move": "確認できず",
+      "strength": "判断困難",
+      "background": "上海総合の対象日データを確認できず"
+    },
+    {
+      "market": "DXY",
+      "move": "上昇",
+      "strength": "強い",
+      "background": "米金利上昇と安全需要が支援した可能性"
+    },
+    {
+      "market": "USD/JPY",
+      "move": "ドル高・円安",
+      "strength": "ドル優位",
+      "background": "日米金利差。ただし当局発言が上値リスク"
+    },
+    {
+      "market": "米10年債",
+      "move": "利回り上昇",
+      "strength": "債券価格は弱い",
+      "background": "原油高、インフレ、財政懸念"
+    },
+    {
+      "market": "Gold",
+      "move": "下落",
+      "strength": "非常に弱い",
+      "background": "安全需要より金利とドル要因が優勢"
+    },
+    {
+      "market": "Copper",
+      "move": "下落",
+      "strength": "非常に弱い",
+      "background": "金利高と景気不安が意識された可能性"
+    },
+    {
+      "market": "原油",
+      "move": "大幅上昇",
+      "strength": "非常に強い",
+      "background": "米・イラン戦闘と供給不安"
+    },
+    {
+      "market": "BTC",
+      "move": "24時間ベースで上昇",
+      "strength": "中立から強い",
+      "background": "株式と基準時間が異なるため判断保留"
+    }
+  ],
+  "main_story": {
+    "title": "米・イラン戦闘再燃と原油急騰",
+    "fact": "米軍によるイランへの攻撃とホルムズ海峡周辺の緊張が報じられ、WTIは90.22ドル、Brentは94.65ドルへ上昇した",
+    "market_reaction": "原油上昇、米国債利回り上昇、米国株下落、Gold下落、ドル上昇",
+    "analysis": "供給不安がインフレ見通しを押し上げ、利上げ観測と長期金利上昇を支援した可能性",
+    "confidence": "高"
+  },
+  "news": [
+    {
+      "title": "米・イラン戦闘再燃で原油急騰",
+      "fact": "米軍の攻撃とホルムズ海峡の供給障害懸念が報じられた",
+      "market_reaction": "WTI+5.2%、Brent+4.6%、株安、金利上昇",
+      "analysis": "地政学リスクが原油とインフレ経路を通じて複数市場へ波及した可能性",
+      "related_assets": [
+        "WTI",
+        "Brent",
+        "米国債",
+        "株式",
+        "ドル",
+        "Gold"
+      ],
+      "importance": "★★★★★",
+      "source_url": "https://www.reuters.com/business/energy/oil-prices-rise-latest-fighting-resurrects-middle-east-supply-disruption-risks-2026-09-01/",
+      "published_at": "2026-09-01",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "title": "世界的な国債売り",
+      "fact": "米10年4.797%、米30年5.286%、日本10年3%へ上昇",
+      "market_reaction": "NASDAQとRussell2000が下落",
+      "analysis": "エネルギーインフレに財政と国債供給への懸念が重なった可能性",
+      "related_assets": [
+        "米国債",
+        "日本国債",
+        "NASDAQ",
+        "Russell2000"
+      ],
+      "importance": "★★★★★",
+      "source_url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-09-01/",
+      "published_at": "2026-09-01",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "title": "Goldが地政学リスク下でも下落",
+      "fact": "Gold先物は1.9%下落し、現物は2週間ぶり安値圏",
+      "market_reaction": "GoldとSilverが下落",
+      "analysis": "安全需要より金利とドル上昇が優勢だった可能性",
+      "related_assets": [
+        "Gold",
+        "Silver",
+        "DXY",
+        "米国債"
+      ],
+      "importance": "★★★★☆",
+      "source_url": "https://www.reuters.com/world/india/gold-muted-traders-await-us-jobs-data-monitor-mideast-tensions-2026-09-01/",
+      "published_at": "2026-09-01",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "title": "日米が円相場で連携継続",
+      "fact": "日米財務相が秩序ある円相場の重要性を確認",
+      "market_reaction": "USD/JPYはなお160円前後",
+      "analysis": "発言だけでは円安基調を転換できていない",
+      "related_assets": [
+        "USD/JPY",
+        "日本国債"
+      ],
+      "importance": "★★★★☆",
+      "source_url": "https://www.reuters.com/world/asia-pacific/japan-us-agreed-orderly-yen-movement-critical-market-stability-finance-minister-2026-09-01/",
+      "published_at": "2026-09-01",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "title": "ベッセント米財務長官が日銀の対応を要求",
+      "fact": "円安とインフレへの決定的な金融政策対応を求めた",
+      "market_reaction": "日本10年債利回りは3%へ上昇",
+      "analysis": "9月の日銀利上げ観測を支援した可能性",
+      "related_assets": [
+        "USD/JPY",
+        "日本国債",
+        "日本株"
+      ],
+      "importance": "★★★★☆",
+      "source_url": "https://www.reuters.com/world/asia-pacific/bessent-meets-bojs-ueda-calls-sound-policy-avoid-currency-volatility-treasury-2026-09-01/",
+      "published_at": "2026-09-01",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "title": "ユーロ圏インフレが3.3%へ上昇",
+      "fact": "8月インフレ率は3.3%となり、エネルギー価格が押し上げた",
+      "market_reaction": "欧州債利回り上昇、STOXX600下落",
+      "analysis": "ECB利上げ観測を強めた可能性",
+      "related_assets": [
+        "ユーロ",
+        "欧州債",
+        "欧州株"
+      ],
+      "importance": "★★★★☆",
+      "source_url": "https://www.reuters.com/markets/europe/european-stocks-muted-bond-selloff-continues-reckitt-jumps-2026-09-01/",
+      "published_at": "2026-09-01",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "title": "米求人件数は7.27百万件",
+      "fact": "7月求人件数は前月の7.18百万件から小幅増加",
+      "market_reaction": "労働市場の急失速を示さなかった",
+      "analysis": "原油高と併せFRBの早期緩和期待を抑えた可能性",
+      "related_assets": [
+        "米国債",
+        "ドル",
+        "米国株"
+      ],
+      "importance": "★★★☆☆",
+      "source_url": "https://www.bls.gov/news.release/jolts.nr0.htm",
+      "published_at": "2026-09-01 23:00 JST",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    }
+  ],
+  "policy": {
+    "trump_us": {
+      "fact": "中東での米軍事行動が原油市場を大きく動かした。Trump本人の市場を直接動かした新規SNS投稿は確認できず",
+      "market_reaction": "原油上昇、債券利回り上昇、株式下落",
+      "outlook": "戦闘とホルムズ海峡の状況を継続監視"
+    },
+    "fed": {
+      "fact": "Warsh議長のインフレ警戒姿勢と原油高により9月利上げ観測が強まった",
+      "market_reaction": "米国債利回り上昇、NASDAQ下落",
+      "outlook": "雇用指標とFRB地区連銀経済報告を確認"
+    },
+    "boj_japan": {
+      "fact": "USD/JPYは160円前後。日米は秩序ある円相場へ連携を確認し、ベッセント氏は日銀に対応を求めた。9月1日の実際の為替介入は確認されていない",
+      "market_reaction": "日本10年債利回り3%、USD/JPYは円安基調",
+      "outlook": "161円方向への上昇、当局発言、9月17日前後の日銀会合を監視"
+    },
+    "ecb": {
+      "fact": "ユーロ圏8月インフレ率は3.3%",
+      "market_reaction": "欧州債利回り上昇、STOXX600下落",
+      "outlook": "9月10日の政策決定を監視"
+    },
+    "pboc_china": {
+      "fact": "市場を大きく動かした新規政策は確認できず",
+      "market_reaction": "確認できず",
+      "outlook": "中国需要と人民元を継続監視"
+    }
+  },
+  "internal_strength": {
+    "assessment": "広範な強さではなく、原油と一部暗号資産だけが強い",
+    "large_vs_small": "大型株優位。Russell2000の下落率がS&P500を上回った",
+    "nasdaq_vs_dow": "Dow優位。NASDAQは金利上昇に敏感",
+    "japan_vs_us": "TOPIXは米国株より強い",
+    "gold_vs_copper": "ともに弱い",
+    "btc_vs_altcoins": "SOL、XRP、ETHがBTCを上回りアルトがやや優位"
+  },
+  "cross_asset": [
+    {
+      "pair": "Oil × 米10年債",
+      "fact": "原油上昇、米10年利回り上昇",
+      "usual": "原油高はインフレ期待を通じて金利を押し上げやすい",
+      "assessment": "普段通り",
+      "confidence": "高"
+    },
+    {
+      "pair": "米10年債 × NASDAQ",
+      "fact": "利回り上昇、NASDAQ下落",
+      "usual": "金利上昇は成長株の評価に逆風",
+      "assessment": "普段通り",
+      "confidence": "高"
+    },
+    {
+      "pair": "米10年債 × Gold",
+      "fact": "利回り上昇、Gold下落",
+      "usual": "金利上昇は無利息資産のGoldに逆風",
+      "assessment": "普段通り",
+      "confidence": "高"
+    },
+    {
+      "pair": "DXY × Gold",
+      "fact": "DXY上昇、Gold下落",
+      "usual": "ドル高はGoldに逆風となりやすい",
+      "assessment": "普段通り",
+      "confidence": "高"
+    },
+    {
+      "pair": "BTC × NASDAQ",
+      "fact": "NASDAQ下落、BTCは9月2日朝の24時間比で上昇",
+      "usual": "流動性環境によって同方向になりやすい",
+      "assessment": "短期的に乖離。ただし基準時間が異なる",
+      "confidence": "低"
+    }
+  ],
+  "commodities": {
+    "copper": {
+      "price": "6.44 USD/lb",
+      "change": "-2.35%",
+      "confirmed_news": "原油急騰にもかかわらずCopperは下落",
+      "market_reaction": "工業金属として相対的に弱い",
+      "analysis": "金利上昇、ドル高、景気への警戒が背景となった可能性",
+      "today_condition": "中国株や人民元に対して反発できるか",
+      "lme_inventory": "2026-09-01値は確認できず",
+      "shfe_inventory": "確認できず",
+      "comex_inventory": "確認できず",
+      "china_demand": "新規重要材料は確認できず",
+      "mine_supply": "確認できず",
+      "smelter_supply": "確認できず"
+    },
+    "oil": {
+      "wti": "90.22 USD, +5.20%",
+      "brent": "94.65 USD, +4.60%",
+      "confirmed_news": "米・イラン戦闘再燃とホルムズ海峡の供給障害懸念",
+      "market_reaction": "5週間ぶり高値圏へ上昇",
+      "analysis": "供給リスクの上乗せが急拡大した可能性",
+      "today_condition": "WTIが90ドルを維持するか",
+      "inventory": "発表前のため実績確認できず",
+      "refined_products": "ディーゼル先物が約52カ月ぶり高値との報道"
+    },
+    "gold_silver": {
+      "gold": "米先物4396.40 USD, -1.90%",
+      "silver": "価格確認できず, -2.90%",
+      "confirmed_news": "中東緊迫化にもかかわらず金銀が下落",
+      "market_reaction": "安全資産需要より金利とドル上昇が優勢",
+      "analysis": "実質金利への警戒がGoldを圧迫した可能性",
+      "today_condition": "Goldが4400ドル台を回復できるか",
+      "etf_flow": "確認できず",
+      "central_bank_buying": "対象日の新規材料は確認できず"
+    }
+  },
+  "crypto": {
+    "as_of": "2026-09-02 09:00 JST前後",
+    "btc": "77267.76 USD, +1.60%/24h",
+    "eth": "2412.30 USD, +2.13%/24h",
+    "xrp": "1.35 USD, +2.41%/24h",
+    "bnb": "680.67 USD, +1.43%/24h",
+    "sol": "99.74 USD, +3.23%/24h",
+    "doge": "確認できず",
+    "btc_dominance": "57.8%-59.6%",
+    "total_market_cap": "2.69兆USD, +1.6%/24h",
+    "etf": "対象日の重要フローは確認できず",
+    "regulation": "市場を大きく動かした新規材料は確認できず",
+    "assessment": "アルトコインがやや強い",
+    "reason": "SOL、XRP、ETHの24時間上昇率がBTCを上回った。ただしBTC占有率は情報源によって差異がある"
+  },
+  "market_environment": [
+    {
+      "label": "リスクを避ける状態",
+      "status": "暫定判断"
+    },
+    {
+      "label": "インフレが強い",
+      "status": "暫定判断"
+    },
+    {
+      "label": "景気後退懸念",
+      "status": "暫定判断"
+    }
+  ],
+  "unusual_moves": [
+    {
+      "move": "地政学リスク上昇とGold下落",
+      "usual": "安全需要でGoldが買われやすい",
+      "analysis": "金利とドル上昇が優勢だった可能性",
+      "confidence": "高"
+    },
+    {
+      "move": "原油上昇とCopper下落",
+      "usual": "商品全体が同方向になる場合がある",
+      "analysis": "原油固有の供給ショックと景気敏感商品の違い",
+      "confidence": "中"
+    },
+    {
+      "move": "米国株下落と暗号資産24時間上昇",
+      "usual": "流動性環境によって同方向になりやすい",
+      "analysis": "基準時間が異なるため明確な異常とは断定できない",
+      "confidence": "低"
+    }
+  ],
+  "events": [
+    {
+      "event": "米ADP民間雇用",
+      "jst": "2026-09-02 21:15",
+      "forecast": "+4.7万人",
+      "watch": "雇用の強弱",
+      "markets": "株、債券、ドル",
+      "importance": "★★★★☆"
+    },
+    {
+      "event": "米製造業受注",
+      "jst": "2026-09-02 23:00",
+      "forecast": "+0.7%",
+      "watch": "設備・需要",
+      "markets": "株、債券",
+      "importance": "★★★☆☆"
+    },
+    {
+      "event": "FRB地区連銀経済報告",
+      "jst": "2026-09-03 03:00",
+      "forecast": "予想値なし",
+      "watch": "物価転嫁と雇用",
+      "markets": "全市場",
+      "importance": "★★★★★"
+    },
+    {
+      "event": "米新規失業保険申請",
+      "jst": "2026-09-03 21:30",
+      "forecast": "23.0万件",
+      "watch": "解雇増加の有無",
+      "markets": "株、債券、ドル",
+      "importance": "★★★★☆"
+    },
+    {
+      "event": "米ISM非製造業",
+      "jst": "2026-09-03 23:00",
+      "forecast": "確認できず",
+      "watch": "サービス価格と雇用",
+      "markets": "全市場",
+      "importance": "★★★★★"
+    },
+    {
+      "event": "米雇用統計",
+      "jst": "2026-09-04 21:30",
+      "forecast": "雇用+6.5万人、失業率4.2%",
+      "watch": "9月FRB判断",
+      "markets": "全市場",
+      "importance": "★★★★★"
+    },
+    {
+      "event": "ECB政策決定",
+      "jst": "2026-09-10 時刻確認できず",
+      "forecast": "25bp利上げ観測",
+      "watch": "追加利上げの有無",
+      "markets": "ユーロ、欧州債、欧州株",
+      "importance": "★★★★★"
+    }
+  ],
+  "watch_cards": [
+    {
+      "title": "原油 vs 米10年債",
+      "watch": "原油続伸時に米10年利回りが4.8%を明確に上回るか"
+    },
+    {
+      "title": "米10年債 vs NASDAQ",
+      "watch": "金利上昇が止まらなくてもNASDAQが下げ止まるか"
+    },
+    {
+      "title": "USD/JPY vs 日米当局",
+      "watch": "160円台で円安が続く場合に発言や介入観測が強まるか"
+    }
+  ],
+  "view_change_conditions": [
+    {
+      "condition": "WTIが90ドルを割り込み上昇分を大きく失う",
+      "implication": "供給ショックとインフレ懸念を弱める可能性"
+    },
+    {
+      "condition": "米10年債利回りが4.8%を明確に超えて定着",
+      "implication": "株、Gold、BTCへの圧力継続を警戒"
+    },
+    {
+      "condition": "NASDAQが金利上昇下でも前日高値を回復",
+      "implication": "株式の金利耐性を再評価"
+    },
+    {
+      "condition": "USD/JPYが161円方向へ上昇",
+      "implication": "日米当局の対応リスクが高まる"
+    },
+    {
+      "condition": "Goldが4400ドル台を回復",
+      "implication": "安全需要が金利とドル要因を上回り始めた可能性"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "基本シナリオ",
+      "conditions": "原油高と金利高が続くが上昇速度は鈍化",
+      "market_reaction": "株は値動きが荒く、エネルギー株が相対優位",
+      "assets_up": [
+        "原油",
+        "エネルギー株",
+        "ドル"
+      ],
+      "assets_down": [
+        "長期債",
+        "高PER成長株"
+      ],
+      "invalidated_by": "原油または米金利の再急騰"
+    },
+    {
+      "name": "強気シナリオ",
+      "conditions": "中東情勢が沈静化し原油と金利が低下",
+      "market_reaction": "NASDAQ、Gold、BTCが反発しやすい",
+      "assets_up": [
+        "NASDAQ",
+        "Gold",
+        "BTC"
+      ],
+      "assets_down": [
+        "原油",
+        "ドル"
+      ],
+      "invalidated_by": "WTIが再び90ドル台後半へ上昇"
+    },
+    {
+      "name": "弱気シナリオ",
+      "conditions": "ホルムズ海峡の供給障害が長期化",
+      "market_reaction": "原油、ドル、金利が上昇し株、債券、Copperが下落しやすい",
+      "assets_up": [
+        "原油",
+        "ドル"
+      ],
+      "assets_down": [
+        "株式",
+        "債券",
+        "Copper"
+      ],
+      "invalidated_by": "停戦または輸送正常化の確認"
+    }
+  ],
+  "trade_watch": [
+    {
+      "rank": 1,
+      "item": "WTIの90ドル維持",
+      "reason": "供給ショックとインフレ見通しの中心"
+    },
+    {
+      "rank": 2,
+      "item": "米10年債利回り4.8%",
+      "reason": "株、Gold、BTCの評価を左右しやすい"
+    },
+    {
+      "rank": 3,
+      "item": "NASDAQの金利耐性",
+      "reason": "成長株の内部強度を確認"
+    },
+    {
+      "rank": 4,
+      "item": "USD/JPYの160-161円",
+      "reason": "日米当局の対応を誘発する可能性"
+    },
+    {
+      "rank": 5,
+      "item": "ADP雇用とFRB地区連銀経済報告",
+      "reason": "9月FRB判断を変える可能性"
+    }
+  ],
+  "strength": [
+    {
+      "asset": "株式",
+      "rating": 2,
+      "comment": "主要地域で軟調、小型株が弱い"
+    },
+    {
+      "asset": "債券",
+      "rating": 1,
+      "comment": "世界的な債券売り"
+    },
+    {
+      "asset": "ドル",
+      "rating": 4,
+      "comment": "金利と地政学が支援"
+    },
+    {
+      "asset": "Gold",
+      "rating": 1,
+      "comment": "安全需要より金利とドルが優勢"
+    },
+    {
+      "asset": "Copper",
+      "rating": 1,
+      "comment": "原油高に追随せず下落"
+    },
+    {
+      "asset": "原油",
+      "rating": 5,
+      "comment": "供給不安で突出して強い"
+    },
+    {
+      "asset": "暗号資産",
+      "rating": 3,
+      "comment": "朝時点は反発したが持続性は未確認"
+    }
+  ],
+  "data_quality": {
+    "overall": "B",
+    "missing": [
+      "上海総合の2026-09-01正式終値",
+      "EUR/USDの統一基準価格",
+      "Silverの対象日価格",
+      "DOGE価格",
+      "LME・SHFE・COMEXの2026-09-01銅在庫"
+    ],
+    "differences": [
+      "BTC占有率はCoinGeckoで57.8%、CoinMarketCapで59.6%",
+      "Goldは現物と米先物で価格と下落率が異なる",
+      "NASDAQ100は公式指数と先物・ETFで下落率が異なる"
+    ],
+    "cautions": [
+      "為替と暗号資産は統一終値がなく基準時刻が異なる",
+      "地政学ニュースは状況が変化しやすい",
+      "原油上昇と株安の因果関係を断定しない"
+    ]
+  },
+  "final_conclusion": {
+    "headline": "原油高が金利上昇を通じて株式へ波及する流れが続くかを確認する日",
+    "winners": [
+      "WTI",
+      "Brent",
+      "ドル"
+    ],
+    "losers": [
+      "Silver",
+      "Copper",
+      "Gold"
+    ],
+    "top_three": [
+      "ADP雇用",
+      "原油と米10年債",
+      "USD/JPYと日米当局発言"
+    ],
+    "triggers": [
+      "WTIが90ドルを割れる",
+      "米10年債利回りが4.8%超で定着",
+      "NASDAQが金利上昇下でも反発"
+    ],
+    "disclaimer": "本レポートは市場観察を目的とした情報整理であり、売買推奨ではありません"
+  },
+  "source_notes": [
+    "https://apnews.com/article/61f03262bb5dfa1c414c4fb7be40772e",
+    "https://www.reuters.com/world/china/global-markets-global-markets-2026-09-01/",
+    "https://www.reuters.com/business/energy/oil-prices-rise-latest-fighting-resurrects-middle-east-supply-disruption-risks-2026-09-01/",
+    "https://www.reuters.com/world/india/gold-muted-traders-await-us-jobs-data-monitor-mideast-tensions-2026-09-01/",
+    "https://www.reuters.com/markets/europe/european-stocks-muted-bond-selloff-continues-reckitt-jumps-2026-09-01/",
+    "https://www.reuters.com/world/asia-pacific/japan-us-agreed-orderly-yen-movement-critical-market-stability-finance-minister-2026-09-01/",
+    "https://www.reuters.com/world/asia-pacific/bessent-meets-bojs-ueda-calls-sound-policy-avoid-currency-volatility-treasury-2026-09-01/",
+    "https://www.reuters.com/world/asia-pacific/japans-benchmark-bond-yield-rises-3-first-time-30-years-2026-09-01/",
+    "https://www.reuters.com/world/asia-pacific/yen-hangs-near-160-amid-boj-rate-hike-bets-dollar-wobbles-2026-09-01/",
+    "https://www.bls.gov/news.release/jolts.nr0.htm",
+    "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve",
+    "https://indexes.nasdaqomx.com/Index/History/NDX",
+    "https://www.lme.com/",
+    "https://coinmarketcap.com/charts/",
+    "https://www.coingecko.com/",
+    "https://adpemploymentreport.com/",
+    "https://www.federalreserve.gov/monetarypolicy/publications/beige-book-default.htm",
+    "https://www.bls.gov/schedule/2026/home.htm",
+    "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
+    "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm"
+  ]
+}

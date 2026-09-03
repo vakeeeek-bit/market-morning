@@ -1,13 +1,14 @@
 {
-  "updated_at": "2026-09-02T00:11:53+00:00",
-  "latest": "2026-09-02",
+  "updated_at": "2026-09-03T00:57:26+00:00",
+  "latest": "2026-09-03",
   "dates": [
     "2026-08-28",
     "2026-08-29",
     "2026-08-30",
     "2026-08-31",
     "2026-09-01",
-    "2026-09-02"
+    "2026-09-02",
+    "2026-09-03"
   ],
   "entries": [
     {
@@ -47,6 +48,13 @@
     },
     {
       "date": "2026-09-02",
+      "status": "complete",
+      "has_report": true,
+      "has_market": true,
+      "report_type": "daily"
+    },
+    {
+      "date": "2026-09-03",
       "status": "complete",
       "has_report": true,
       "has_market": true,

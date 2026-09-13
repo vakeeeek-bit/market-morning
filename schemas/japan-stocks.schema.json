@@ -1,0 +1,352 @@
+{
+  "type": "object",
+  "properties": {
+    "report_date": {
+      "type": "string",
+      "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+    },
+    "target_market_date": {
+      "type": "string",
+      "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "report_type": {
+      "type": "string"
+    },
+    "japan_quick_view": {
+      "type": "object",
+      "properties": {
+        "headline": {
+          "type": "string"
+        },
+        "top_materials": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "focus_sectors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "unpriced_materials": {
+          "type": "array",
+          "items": {}
+        }
+      },
+      "additionalProperties": true
+    },
+    "top_stories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "company": {
+            "type": "string"
+          },
+          "ticker": {
+            "type": "string"
+          },
+          "headline": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "fact": {
+            "type": "string"
+          },
+          "announced_at": {
+            "type": "string"
+          },
+          "timing": {
+            "type": "string"
+          },
+          "market_pricing_status": {
+            "type": "string"
+          },
+          "price_reaction": {
+            "type": "string"
+          },
+          "related_stocks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "company": {
+                  "type": "string"
+                },
+                "ticker": {
+                  "type": "string"
+                },
+                "reason": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": true
+            }
+          },
+          "related_sectors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "importance": {
+            "type": "string"
+          },
+          "confidence": {
+            "type": "string"
+          },
+          "source_url": {
+            "type": "string"
+          },
+          "expectation": {
+            "type": "string"
+          },
+          "result": {
+            "type": "string"
+          },
+          "surprise": {
+            "type": "string"
+          },
+          "volume_reaction": {
+            "type": "string"
+          },
+          "analysis": {
+            "type": "string"
+          },
+          "today_watch": {
+            "type": "string"
+          },
+          "secondary_source_url": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "image_url": {
+            "type": "null"
+          },
+          "image_alt": {
+            "type": "null"
+          },
+          "image_credit": {
+            "type": "null"
+          },
+          "image_source_url": {
+            "type": "null"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "important_stories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "company": {
+            "type": "string"
+          },
+          "ticker": {
+            "type": "string"
+          },
+          "headline": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "fact": {
+            "type": "string"
+          },
+          "announced_at": {
+            "type": "string"
+          },
+          "timing": {
+            "type": "string"
+          },
+          "market_pricing_status": {
+            "type": "string"
+          },
+          "price_reaction": {
+            "type": "string"
+          },
+          "related_stocks": {
+            "type": "array",
+            "items": {}
+          },
+          "related_sectors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "importance": {
+            "type": "string"
+          },
+          "confidence": {
+            "type": "string"
+          },
+          "source_url": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "other_stories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "company": {
+            "type": "string"
+          },
+          "ticker": {
+            "type": "string"
+          },
+          "headline": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "fact": {
+            "type": "string"
+          },
+          "announced_at": {
+            "type": "string"
+          },
+          "timing": {
+            "type": "string"
+          },
+          "market_pricing_status": {
+            "type": "string"
+          },
+          "price_reaction": {
+            "type": "string"
+          },
+          "related_stocks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "company": {
+                  "type": "string"
+                },
+                "ticker": {
+                  "type": "string"
+                },
+                "reason": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": true
+            }
+          },
+          "related_sectors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "importance": {
+            "type": "string"
+          },
+          "confidence": {
+            "type": "string"
+          },
+          "source_url": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "company_events": {
+      "type": "array",
+      "items": {}
+    },
+    "sector_implications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "driver": {
+            "type": "string"
+          },
+          "affected_sectors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "possible_impact": {
+            "type": "string"
+          },
+          "confirmation_condition": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "data_quality": {
+      "type": "object",
+      "properties": {
+        "overall": {
+          "type": "string"
+        },
+        "missing": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "differences": {
+          "type": "array",
+          "items": {}
+        },
+        "unpriced": {
+          "type": "array",
+          "items": {}
+        },
+        "cautions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "source_notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://market-morning-gules.vercel.app/schemas/japan-stocks.schema.json",
+  "title": "Market Morning japan-stocks v1",
+  "description": "Current v1 contract. Unknown keys are allowed for forward compatibility.",
+  "required": [
+    "report_date",
+    "target_market_date",
+    "updated_at",
+    "report_type",
+    "japan_quick_view",
+    "top_stories",
+    "important_stories",
+    "other_stories",
+    "data_quality"
+  ]
+}

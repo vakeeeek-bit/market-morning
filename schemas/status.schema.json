@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://market-morning-gules.vercel.app/schemas/status.schema.json",
+  "title": "Market Morning status v1",
+  "description": "Current v1 contract. Unknown keys are allowed for forward compatibility.",
+  "required": [
+    "status",
+    "updated_at",
+    "message"
+  ]
+}

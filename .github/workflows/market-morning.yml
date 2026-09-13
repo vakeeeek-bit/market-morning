@@ -12,6 +12,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: market-morning-daily-update
+  cancel-in-progress: false
+
 jobs:
   update-market:
     runs-on: ubuntu-latest
@@ -36,6 +40,10 @@ jobs:
       - name: Update market data
         run: |
           python scripts/update_market.py
+
+      - name: Validate data before publishing
+        run: |
+          python scripts/validate_data.py
 
       - name: Save market history
         run: |

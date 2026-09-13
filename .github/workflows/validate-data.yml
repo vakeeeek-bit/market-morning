@@ -6,15 +6,15 @@ on:
     paths:
       - "data/*.json"
       - "schemas/*.json"
-      - "scripts/validate_data.py"
-      - "tests/test_validate_data.py"
+      - "scripts/*.py"
+      - "tests/*.py"
       - ".github/workflows/validate-data.yml"
   pull_request:
     paths:
       - "data/*.json"
       - "schemas/*.json"
-      - "scripts/validate_data.py"
-      - "tests/test_validate_data.py"
+      - "scripts/*.py"
+      - "tests/*.py"
       - ".github/workflows/validate-data.yml"
   workflow_dispatch:
 

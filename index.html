@@ -922,6 +922,25 @@ td.nowrap {
   font-size: 10px;
 }
 
+.japan-detail-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 14px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: #111827;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.japan-detail-link:hover {
+  background: #263244;
+}
+
 /* =====================================================
    VER.4 MULTI-MARKET HISTORY CHART
 ===================================================== */
@@ -4129,6 +4148,12 @@ function renderJapanEquitiesPreview(preview) {
   count.className = 'quick-view-note';
   count.textContent = `詳細版掲載：${safeText(preview.total_story_count, 0)}件`;
   element.appendChild(count);
+
+  const detailLink = document.createElement('a');
+  detailLink.className = 'japan-detail-link';
+  detailLink.href = 'japan-stocks.html';
+  detailLink.textContent = '日本株ニュース詳細版を見る →';
+  element.appendChild(detailLink);
 }
 
 function applyReportSectionOrder() {

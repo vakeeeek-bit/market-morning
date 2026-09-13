@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111827">
+<title>日本株ニュース詳細版 | Market Morning</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #f4f6f8;
+  color: #17202a;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  line-height: 1.65;
+}
+.container { width: 100%; max-width: 940px; margin: auto; padding: 16px; }
+.header { background: #111827; color: #fff; padding: 22px 18px; border-radius: 18px; margin-bottom: 16px; }
+.back-link { color: rgba(255,255,255,.82); font-size: 13px; text-decoration: none; }
+.back-link:hover { color: #fff; text-decoration: underline; }
+.header-title { margin-top: 12px; font-size: 26px; font-weight: 750; }
+.header-sub { font-size: 13px; opacity: .75; }
+.date { margin-top: 12px; font-size: 13px; opacity: .9; }
+.section { background: #fff; border-radius: 16px; padding: 18px; margin-bottom: 16px; box-shadow: 0 2px 10px rgba(0,0,0,.045); }
+.section-title { font-size: 18px; font-weight: 750; margin-bottom: 14px; }
+.summary-main { font-size: 20px; font-weight: 750; line-height: 1.55; margin-bottom: 14px; }
+.summary-box { background: #f7f8fa; border-radius: 12px; padding: 13px; margin-bottom: 9px; }
+.label { color: #68707a; font-size: 12px; margin-bottom: 3px; }
+.value { font-size: 15px; font-weight: 600; }
+.material-list { margin: 0; padding-left: 24px; }
+.material-list li { padding: 4px 0; }
+.story { border: 1px solid #e5e7eb; border-radius: 14px; padding: 16px; margin-bottom: 12px; }
+.story:last-child { margin-bottom: 0; }
+.story-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.company { font-size: 17px; font-weight: 750; }
+.ticker { color: #68707a; font-size: 13px; font-weight: 600; }
+.importance { white-space: nowrap; color: #d97706; font-size: 13px; }
+.headline { margin-top: 5px; font-size: 16px; font-weight: 700; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+.badge { padding: 3px 8px; border-radius: 999px; background: #eef2f7; color: #475569; font-size: 11px; font-weight: 650; }
+.fact { margin-top: 10px; }
+.detail-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; margin-top: 12px; }
+.detail { padding: 10px; border-radius: 10px; background: #f7f8fa; font-size: 13px; }
+.analysis { margin-top: 12px; padding: 12px; border-left: 4px solid #334155; background: #f8fafc; }
+.source { display: inline-block; margin-top: 12px; color: #2457a6; font-size: 13px; overflow-wrap: anywhere; }
+.empty, .error { color: #68707a; }
+.error { color: #b42318; }
+.footer { padding: 12px 0 28px; color: #7b8490; text-align: center; font-size: 12px; }
+@media (max-width: 640px) {
+  .container { padding: 10px; }
+  .header, .section { border-radius: 13px; }
+  .header-title { font-size: 22px; }
+  .summary-main { font-size: 18px; }
+  .story-head { display: block; }
+  .importance { margin-top: 3px; }
+  .detail-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<main class="container">
+  <header class="header">
+    <a class="back-link" href="index.html">← Market Morningへ戻る</a>
+    <div class="header-title">🇯🇵 日本株ニュース詳細版</div>
+    <div class="header-sub">重要材料を「最重要・重要・その他」に分類</div>
+    <div class="date" id="report-date">データを読み込み中...</div>
+  </header>
+
+  <section class="section" id="quick-view">
+    <div class="section-title">QUICK VIEW</div>
+    <div class="summary-main" id="headline">確認中</div>
+    <div class="summary-box">
+      <div class="label">重要材料 TOP5</div>
+      <ol class="material-list" id="top-materials"></ol>
+    </div>
+    <div class="summary-box">
+      <div class="label">注目業種</div>
+      <div class="value" id="focus-sectors">確認中</div>
+    </div>
+  </section>
+
+  <div id="story-sections"></div>
+  <section class="section" id="quality-section">
+    <div class="section-title">🔎 データ品質</div>
+    <div id="quality">確認中</div>
+  </section>
+  <div class="footer">Market Morning ｜ Personal Macro Dashboard</div>
+</main>
+<script>
+const text = (value, fallback = '確認できず') => value === null || value === undefined || value === '' ? fallback : String(value);
+
+function appendText(parent, className, value) {
+  const element = document.createElement('div');
+  if (className) element.className = className;
+  element.textContent = text(value);
+  parent.appendChild(element);
+  return element;
+}
+
+function renderStory(item) {
+  const article = document.createElement('article');
+  article.className = 'story';
+  const head = document.createElement('div');
+  head.className = 'story-head';
+  const identity = document.createElement('div');
+  const company = document.createElement('span');
+  company.className = 'company';
+  company.textContent = text(item.company);
+  identity.appendChild(company);
+  if (item.ticker) {
+    const ticker = document.createElement('span');
+    ticker.className = 'ticker';
+    ticker.textContent = `（${item.ticker}）`;
+    identity.appendChild(ticker);
+  }
+  const importance = document.createElement('div');
+  importance.className = 'importance';
+  importance.textContent = text(item.importance, '');
+  head.append(identity, importance);
+  article.appendChild(head);
+  appendText(article, 'headline', item.headline);
+
+  const meta = document.createElement('div');
+  meta.className = 'meta';
+  [item.category, item.timing, item.market_pricing_status, item.confidence ? `確度：${item.confidence}` : ''].filter(Boolean).forEach(value => {
+    const badge = document.createElement('span');
+    badge.className = 'badge';
+    badge.textContent = value;
+    meta.appendChild(badge);
+  });
+  article.appendChild(meta);
+  appendText(article, 'fact', item.fact);
+
+  const details = [
+    ['発表日時', item.announced_at],
+    ['株価反応', item.price_reaction],
+    ['結果', item.result],
+    ['サプライズ', item.surprise],
+    ['出来高反応', item.volume_reaction],
+    ['関連業種', Array.isArray(item.related_sectors) ? item.related_sectors.join(' / ') : item.related_sectors]
+  ].filter(([, value]) => value !== null && value !== undefined && value !== '');
+  if (details.length) {
+    const grid = document.createElement('div');
+    grid.className = 'detail-grid';
+    details.forEach(([label, value]) => {
+      const box = document.createElement('div');
+      box.className = 'detail';
+      appendText(box, 'label', label);
+      appendText(box, '', value);
+      grid.appendChild(box);
+    });
+    article.appendChild(grid);
+  }
+  if (item.analysis) {
+    const analysis = document.createElement('div');
+    analysis.className = 'analysis';
+    appendText(analysis, 'label', '分析');
+    appendText(analysis, '', item.analysis);
+    if (item.today_watch) {
+      appendText(analysis, 'label', '今日の確認点');
+      appendText(analysis, '', item.today_watch);
+    }
+    article.appendChild(analysis);
+  }
+  if (item.source_url) {
+    const link = document.createElement('a');
+    link.className = 'source';
+    link.href = item.source_url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = '情報源を確認 ↗';
+    article.appendChild(link);
+  }
+  return article;
+}
+
+function renderGroup(holder, title, stories, icon) {
+  const section = document.createElement('section');
+  section.className = 'section';
+  const heading = document.createElement('div');
+  heading.className = 'section-title';
+  heading.textContent = `${icon} ${title}（${stories.length}件）`;
+  section.appendChild(heading);
+  if (!stories.length) appendText(section, 'empty', '該当するニュースはありません');
+  stories.forEach(item => section.appendChild(renderStory(item)));
+  holder.appendChild(section);
+}
+
+function renderQuality(quality) {
+  const holder = document.getElementById('quality');
+  holder.replaceChildren();
+  if (!quality || typeof quality !== 'object') {
+    holder.textContent = 'データ品質情報はありません';
+    return;
+  }
+  appendText(holder, 'summary-main', `総合評価：${text(quality.overall, '-')}`);
+  [['未取得', quality.missing], ['注意事項', quality.cautions]].forEach(([label, values]) => {
+    if (!Array.isArray(values) || !values.length) return;
+    const box = document.createElement('div');
+    box.className = 'summary-box';
+    appendText(box, 'label', label);
+    appendText(box, '', values.join(' / '));
+    holder.appendChild(box);
+  });
+}
+
+async function load() {
+  try {
+    const response = await fetch('data/japan-stocks.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+    document.getElementById('report-date').textContent = `公開日：${text(data.report_date)} ｜ 対象市場日：${text(data.target_market_date)} ｜ 更新：${text(data.updated_at)}`;
+    const quick = data.japan_quick_view || {};
+    document.getElementById('headline').textContent = text(quick.headline, '該当材料なし');
+    const topList = document.getElementById('top-materials');
+    topList.replaceChildren();
+    (Array.isArray(quick.top_materials) ? quick.top_materials : []).forEach(value => {
+      const item = document.createElement('li');
+      item.textContent = text(value);
+      topList.appendChild(item);
+    });
+    if (!topList.children.length) appendText(topList, 'empty', '該当材料なし');
+    document.getElementById('focus-sectors').textContent = Array.isArray(quick.focus_sectors) && quick.focus_sectors.length ? quick.focus_sectors.join(' / ') : '該当なし';
+    const holder = document.getElementById('story-sections');
+    renderGroup(holder, '最重要', Array.isArray(data.top_stories) ? data.top_stories : [], '🔥');
+    renderGroup(holder, '重要', Array.isArray(data.important_stories) ? data.important_stories : [], '📌');
+    renderGroup(holder, 'その他', Array.isArray(data.other_stories) ? data.other_stories : [], '🗂️');
+    renderQuality(data.data_quality);
+  } catch (error) {
+    document.getElementById('report-date').textContent = '日本株詳細データを読み込めませんでした';
+    document.getElementById('headline').className = 'error';
+    document.getElementById('headline').textContent = `読み込みエラー：${error.message}`;
+  }
+}
+
+load();
+</script>
+</body>
+</html>

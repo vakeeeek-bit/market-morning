@@ -244,8 +244,21 @@ def refresh_history_index() -> None:
         entry["date"] for entry in entries if entry["status"] == "complete"
     ]
 
+    updated_at = datetime.now().astimezone().isoformat(timespec="seconds")
+    if INDEX_PATH.exists():
+        try:
+            current_index = load_json(INDEX_PATH)
+            if (
+                current_index.get("latest") == (complete_dates[-1] if complete_dates else None)
+                and current_index.get("dates") == dates
+                and current_index.get("entries") == entries
+            ):
+                updated_at = current_index.get("updated_at", updated_at)
+        except ValueError:
+            pass
+
     index = {
-        "updated_at": datetime.now().astimezone().isoformat(timespec="seconds"),
+        "updated_at": updated_at,
         "latest": complete_dates[-1] if complete_dates else None,
         "dates": dates,
         "entries": entries,

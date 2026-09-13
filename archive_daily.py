@@ -4,8 +4,10 @@
 Expected repository layout:
   data/report.json
   data/market.json
+  data/japan-stocks.json
   data/history/YYYY-MM-DD/report.json
   data/history/YYYY-MM-DD/market.json
+  data/history/YYYY-MM-DD/japan-stocks.json
   data/history/index.json
 """
 
@@ -24,6 +26,7 @@ ROOT = Path(__file__).resolve().parent
 DATA_DIR = ROOT / "data"
 REPORT_PATH = DATA_DIR / "report.json"
 MARKET_PATH = DATA_DIR / "market.json"
+JAPAN_STOCKS_PATH = DATA_DIR / "japan-stocks.json"
 HISTORY_DIR = DATA_DIR / "history"
 INDEX_PATH = HISTORY_DIR / "index.json"
 
@@ -79,14 +82,26 @@ def validate_report(report: dict) -> None:
         raise ValueError("report.json 必須項目不足: " + ", ".join(missing))
 
 
+def validate_japan_stocks(data: dict) -> None:
+    required = ["report_date", "top_stories", "important_stories", "other_stories"]
+    missing = [key for key in required if key not in data]
+    if missing:
+        raise ValueError("japan-stocks.json 必須項目不足: " + ", ".join(missing))
+    for key in ("top_stories", "important_stories", "other_stories"):
+        if not isinstance(data[key], list):
+            raise ValueError(f"japan-stocks.json の {key} は配列である必要があります")
+
+
 def history_entry(path: Path) -> dict:
     report_path = path / "report.json"
     market_path = path / "market.json"
+    japan_stocks_path = path / "japan-stocks.json"
     report_exists = report_path.exists()
     market_exists = market_path.exists()
     report_valid = False
     market_valid = False
     report_type = None
+    japan_stocks_valid = False
 
     if report_exists:
         try:
@@ -104,6 +119,14 @@ def history_entry(path: Path) -> dict:
         except ValueError:
             market_valid = False
 
+    if japan_stocks_path.exists():
+        try:
+            japan_stocks = load_json(japan_stocks_path)
+            validate_japan_stocks(japan_stocks)
+            japan_stocks_valid = extract_date(japan_stocks) == path.name
+        except ValueError:
+            japan_stocks_valid = False
+
     if report_valid and market_valid:
         status = "complete"
     elif (report_exists and not report_valid) or (market_exists and not market_valid):
@@ -120,6 +143,7 @@ def history_entry(path: Path) -> dict:
         "status": status,
         "has_report": report_valid,
         "has_market": market_valid,
+        "has_japan_stocks": japan_stocks_valid,
         "report_type": report_type,
     }
 
@@ -189,6 +213,21 @@ def backfill_from_git() -> None:
     print(f"Backfilled {restored} historical day(s) from Git")
 
 
+def archive_japan_stocks() -> None:
+    """Archive Japanese-equity details independently by their report date."""
+    if not JAPAN_STOCKS_PATH.exists():
+        return
+    japan_stocks = load_json(JAPAN_STOCKS_PATH)
+    validate_japan_stocks(japan_stocks)
+    date_key = extract_date(japan_stocks)
+    destination = HISTORY_DIR / date_key
+    destination.mkdir(parents=True, exist_ok=True)
+    temp_path = destination / "japan-stocks.json.tmp"
+    shutil.copy2(JAPAN_STOCKS_PATH, temp_path)
+    temp_path.replace(destination / "japan-stocks.json")
+    print(f"Archived {date_key}: japan-stocks.json")
+
+
 def refresh_history_index() -> None:
     """現在の履歴フォルダから、表示用の履歴一覧を必ず再作成する。"""
     HISTORY_DIR.mkdir(parents=True, exist_ok=True)
@@ -231,6 +270,7 @@ def main() -> None:
 
     HISTORY_DIR.mkdir(parents=True, exist_ok=True)
     backfill_from_git()
+    archive_japan_stocks()
 
     if market_date and market_date != date_key:
         refresh_history_index()

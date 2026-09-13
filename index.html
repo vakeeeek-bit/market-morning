@@ -1777,6 +1777,10 @@ td.nowrap {
     データを読み込み中...
   </div>
 
+  <a class="japan-detail-link" id="japan-detail-link" href="japan-stocks.html">
+    日本株ニュース詳細版を見る →
+  </a>
+
 </div>
 
 
@@ -1960,6 +1964,14 @@ function reportDataUrl() {
   return '/data/report.json?ts=' + Date.now();
 }
 
+function updateJapanDetailLink() {
+  const link = document.getElementById('japan-detail-link');
+  if (!link) return;
+  link.href = selectedHistoryDate
+    ? 'japan-stocks.html?date=' + encodeURIComponent(selectedHistoryDate)
+    : 'japan-stocks.html';
+}
+
 function setHistoryMode(message) {
   const element = document.getElementById('history-mode');
   if (element) element.textContent = message;
@@ -2034,6 +2046,7 @@ function resetLoadingState() {
 
 async function loadSelectedDay() {
   resetLoadingState();
+  updateJapanDetailLink();
 
   if (selectedHistoryDate) {
     setHistoryMode(historyModeMessage(selectedHistoryDate));
@@ -2120,13 +2133,16 @@ function setupHistoryNavigation() {
   const nextButton = document.getElementById('next-day');
   const latestButton = document.getElementById('latest-day');
 
+  const requestedDate = new URLSearchParams(window.location.search).get('date');
+  if (!selectedHistoryDate && parseDateKey(requestedDate)) {
+    selectedHistoryDate = requestedDate;
+  }
+
   if (dateInput) {
     const todayKey = toDateKey(new Date());
     dateInput.max = todayKey;
 
-    if (!selectedHistoryDate) {
-      dateInput.value = todayKey;
-    }
+    dateInput.value = selectedHistoryDate || todayKey;
 
     dateInput.addEventListener('change', () => {
       if (dateInput.value) {
@@ -4149,11 +4165,6 @@ function renderJapanEquitiesPreview(preview) {
   count.textContent = `詳細版掲載：${safeText(preview.total_story_count, 0)}件`;
   element.appendChild(count);
 
-  const detailLink = document.createElement('a');
-  detailLink.className = 'japan-detail-link';
-  detailLink.href = 'japan-stocks.html';
-  detailLink.textContent = '日本株ニュース詳細版を見る →';
-  element.appendChild(detailLink);
 }
 
 function applyReportSectionOrder() {

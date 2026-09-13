@@ -60,7 +60,7 @@ body {
 <body>
 <main class="container">
   <header class="header">
-    <a class="back-link" href="index.html">← Market Morningへ戻る</a>
+    <a class="back-link" id="back-link" href="index.html">← Market Morningへ戻る</a>
     <div class="header-title">🇯🇵 日本株ニュース詳細版</div>
     <div class="header-sub">重要材料を「最重要・重要・その他」に分類</div>
     <div class="date" id="report-date">データを読み込み中...</div>
@@ -206,7 +206,21 @@ function renderQuality(quality) {
 
 async function load() {
   try {
-    const response = await fetch('data/japan-stocks.json', { cache: 'no-store' });
+    const params = new URLSearchParams(window.location.search);
+    const requestedDate = params.get('date');
+    const validDate = /^20\d{2}-\d{2}-\d{2}$/.test(requestedDate || '')
+      ? requestedDate
+      : null;
+    const dataUrl = validDate
+      ? `data/history/${validDate}/japan-stocks.json`
+      : 'data/japan-stocks.json';
+    if (validDate) {
+      document.getElementById('back-link').href = `index.html?date=${encodeURIComponent(validDate)}`;
+    }
+    const response = await fetch(dataUrl, { cache: 'no-store' });
+    if (response.status === 404 && validDate) {
+      throw new Error(`${validDate} の日本株詳細データは保存されていません`);
+    }
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     document.getElementById('report-date').textContent = `公開日：${text(data.report_date)} ｜ 対象市場日：${text(data.target_market_date)} ｜ 更新：${text(data.updated_at)}`;

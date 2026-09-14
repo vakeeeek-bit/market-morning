@@ -4067,13 +4067,15 @@ function updateQuickView(report) {
   fillQuickList(
     'quick-news',
     news,
-    item => firstUsefulText(
-      item?.title,
-      item?.name,
-      item?.headline,
-      item?.summary,
-      '確認中'
-    )
+    item => typeof item === 'string'
+      ? firstUsefulText(item, '確認中')
+      : firstUsefulText(
+          item?.title,
+          item?.name,
+          item?.headline,
+          item?.summary,
+          '確認中'
+        )
   );
 
   const eventCandidates =

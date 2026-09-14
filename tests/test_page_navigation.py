@@ -39,6 +39,13 @@ class PageNavigationTests(unittest.TestCase):
         self.assertIn("encodeURIComponent(selectedHistoryDate)", world)
         self.assertIn("encodeURIComponent(selectedHistoryDate)", japan)
 
+    def test_japan_detail_is_not_duplicated_on_world_page(self):
+        world = self.read("index.html")
+        japan = self.read("japan-stocks.html")
+        self.assertNotIn('id="japan-equities-preview"', world)
+        self.assertIn('id="top-materials"', japan)
+        self.assertIn('id="story-sections"', japan)
+
 
 if __name__ == "__main__":
     unittest.main()

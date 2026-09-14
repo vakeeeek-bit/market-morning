@@ -46,6 +46,13 @@ class PageNavigationTests(unittest.TestCase):
         self.assertIn('id="top-materials"', japan)
         self.assertIn('id="story-sections"', japan)
 
+    def test_latest_view_warns_when_market_and_report_dates_differ(self):
+        world = self.read("index.html")
+        self.assertIn('id="freshness-warning"', world)
+        self.assertIn("function updateDataFreshness()", world)
+        self.assertIn("新しいレポートは品質確認中", world)
+        self.assertIn("AIレポート：${reportLabel}（更新待ち）", world)
+
 
 if __name__ == "__main__":
     unittest.main()

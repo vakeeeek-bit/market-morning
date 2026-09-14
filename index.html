@@ -115,6 +115,22 @@ body {
   opacity: 0.72;
 }
 
+.freshness-warning {
+  display: none;
+  margin-top: 12px;
+  padding: 10px 12px;
+  border: 1px solid rgba(251,191,36,0.58);
+  border-radius: 10px;
+  background: rgba(120,53,15,0.34);
+  color: #fef3c7;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.freshness-warning.is-visible {
+  display: block;
+}
+
 .report-type-badge {
   display: none;
   width: fit-content;
@@ -1036,6 +1052,8 @@ td.nowrap {
 
   <div class="report-context" id="report-context"></div>
 
+  <div class="freshness-warning" id="freshness-warning" role="status"></div>
+
   <div class="history-nav" aria-label="履歴ナビゲーション">
     <button class="history-button" id="prev-day" type="button">← 前日</button>
     <input class="history-date" id="history-date" type="date" aria-label="表示する日付">
@@ -1916,6 +1934,8 @@ function clearElement(element) {
 let selectedHistoryDate = null;
 let availableHistoryDates = [];
 let historyEntryMap = {};
+let loadedMarketDateKey = null;
+let loadedReportDateKey = null;
 let marketHistoryCache = [];
 let activeChartKey = 'copper';
 
@@ -2016,6 +2036,41 @@ function setHistoryMode(message) {
   if (element) element.textContent = message;
 }
 
+function updateDataFreshness() {
+  const warning = document.getElementById('freshness-warning');
+  if (!warning) return;
+
+  const isMixedLatest = !selectedHistoryDate &&
+    loadedMarketDateKey &&
+    loadedReportDateKey &&
+    loadedMarketDateKey !== loadedReportDateKey;
+
+  if (!isMixedLatest) {
+    warning.textContent = '';
+    warning.classList.remove('is-visible');
+    return;
+  }
+
+  const marketLabel = formatDateKey(loadedMarketDateKey);
+  const reportLabel = formatDateKey(loadedReportDateKey);
+  warning.textContent =
+    `⚠ 市場データは${marketLabel}更新ですが、AIレポートは${reportLabel}版です。` +
+    `新しいレポートは品質確認中のため、以下の分析は${reportLabel}時点の内容です。`;
+  warning.classList.add('is-visible');
+  setHistoryMode(
+    `最新市場データ：${marketLabel}｜AIレポート：${reportLabel}（更新待ち）`
+  );
+
+  const quickConclusionLabel = document.getElementById('quick-conclusion-label');
+  const quickEventsLabel = document.getElementById('quick-events-label');
+  if (quickConclusionLabel) {
+    quickConclusionLabel.textContent = `📌 ${reportLabel}版の市場の結論`;
+  }
+  if (quickEventsLabel) {
+    quickEventsLabel.textContent = `📅 ${reportLabel}版の最重要 TOP3`;
+  }
+}
+
 function historyModeMessage(dateKey) {
   const base = '履歴：' + formatDateKey(dateKey) + ' を表示中';
   const entry = historyEntryMap[dateKey];
@@ -2045,6 +2100,9 @@ function historyModeMessage(dateKey) {
 }
 
 function resetLoadingState() {
+  loadedMarketDateKey = null;
+  loadedReportDateKey = null;
+
   document.getElementById('market-updated').textContent =
     '市場データを読み込み中...';
 
@@ -2439,10 +2497,14 @@ async function loadMarketData() {
 
     if (data.updated_at) {
 
+      loadedMarketDateKey = String(data.updated_at).slice(0, 10);
+
       document.getElementById(
         'market-updated'
       ).textContent =
         `市場データ更新：${data.updated_at} JST`;
+
+      updateDataFreshness();
 
     }
 
@@ -4271,6 +4333,8 @@ async function loadMarketReport() {
     const report =
       await response.json();
 
+    loadedReportDateKey = report.report_date || null;
+
     updateQuickView(report);
 
     const isWeeklyReport = report.report_type === 'weekly';
@@ -4340,6 +4404,8 @@ async function loadMarketReport() {
         `AIレポート更新：${report.updated_at}`;
 
     }
+
+    updateDataFreshness();
 
 
     /* -------------------------

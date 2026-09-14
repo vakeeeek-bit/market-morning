@@ -16,11 +16,20 @@ body {
 }
 .container { width: 100%; max-width: 940px; margin: auto; padding: 16px; }
 .header { background: #111827; color: #fff; padding: 22px 18px; border-radius: 18px; margin-bottom: 16px; }
-.back-link { color: rgba(255,255,255,.82); font-size: 13px; text-decoration: none; }
-.back-link:hover { color: #fff; text-decoration: underline; }
-.header-title { margin-top: 12px; font-size: 26px; font-weight: 750; }
+.page-switch { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; margin: 16px 0; padding: 4px; border: 1px solid rgba(255,255,255,.18); border-radius: 12px; background: rgba(255,255,255,.08); }
+.page-switch-link { min-height: 42px; display: flex; align-items: center; justify-content: center; padding: 8px 12px; border-radius: 9px; color: rgba(255,255,255,.76); text-decoration: none; font-size: 14px; font-weight: 750; }
+.page-switch-link:hover { color: #fff; background: rgba(255,255,255,.10); }
+.page-switch-link[aria-current="page"] { background: #fff; color: #111827; box-shadow: 0 2px 8px rgba(0,0,0,.14); }
+.header-title { font-size: 26px; font-weight: 750; }
 .header-sub { font-size: 13px; opacity: .75; }
 .date { margin-top: 12px; font-size: 13px; opacity: .9; }
+.history-nav { display: grid; grid-template-columns: auto 1fr auto auto; gap: 8px; align-items: center; margin-top: 16px; }
+.history-button, .history-date { min-height: 40px; border: 1px solid rgba(255,255,255,.24); border-radius: 10px; background: rgba(255,255,255,.10); color: #fff; font: inherit; font-size: 13px; }
+.history-button { padding: 8px 12px; cursor: pointer; }
+.history-button:hover { background: rgba(255,255,255,.18); }
+.history-button:disabled { opacity: .4; cursor: default; }
+.history-date { width: 100%; min-width: 0; padding: 7px 9px; color-scheme: dark; text-align: center; font-weight: 700; }
+.history-mode { margin-top: 8px; font-size: 12px; opacity: .72; }
 .section { background: #fff; border-radius: 16px; padding: 18px; margin-bottom: 16px; box-shadow: 0 2px 10px rgba(0,0,0,.045); }
 .section-title { font-size: 18px; font-weight: 750; margin-bottom: 14px; }
 .summary-main { font-size: 20px; font-weight: 750; line-height: 1.55; margin-bottom: 14px; }
@@ -54,16 +63,30 @@ body {
   .story-head { display: block; }
   .importance { margin-top: 3px; }
   .detail-grid { grid-template-columns: 1fr; }
+  .history-nav { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .history-date { grid-column: 1 / -1; grid-row: 1; min-height: 44px; }
+  .history-button { min-height: 44px; padding: 8px 6px; }
 }
 </style>
 </head>
 <body>
 <main class="container">
   <header class="header">
-    <a class="back-link" id="back-link" href="index.html">← Market Morningへ戻る</a>
-    <div class="header-title">🇯🇵 日本株ニュース詳細版</div>
+    <div class="header-title">Market Morning</div>
+    <div class="header-sub">Japan Equities Dashboard</div>
+    <nav class="page-switch" aria-label="レポート画面の切り替え">
+      <a class="page-switch-link" id="world-page-link" href="index.html">🌐 世界市場</a>
+      <a class="page-switch-link" href="japan-stocks.html" aria-current="page">🇯🇵 日本株</a>
+    </nav>
     <div class="header-sub">重要材料を「最重要・重要・その他」に分類</div>
     <div class="date" id="report-date">データを読み込み中...</div>
+    <div class="history-nav" aria-label="履歴ナビゲーション">
+      <button class="history-button" id="prev-day" type="button">← 前日</button>
+      <input class="history-date" id="history-date" type="date" aria-label="表示する日付">
+      <button class="history-button" id="next-day" type="button">翌日 →</button>
+      <button class="history-button" id="latest-day" type="button">最新</button>
+    </div>
+    <div class="history-mode" id="history-mode">最新データを表示中</div>
   </header>
 
   <section class="section" id="quick-view">
@@ -88,6 +111,89 @@ body {
 </main>
 <script>
 const text = (value, fallback = '確認できず') => value === null || value === undefined || value === '' ? fallback : String(value);
+let selectedHistoryDate = null;
+let japanHistoryDates = [];
+
+function isDateKey(value) {
+  return /^20\d{2}-\d{2}-\d{2}$/.test(value || '');
+}
+
+function currentPageHref(dateKey) {
+  return dateKey ? `japan-stocks.html?date=${encodeURIComponent(dateKey)}` : 'japan-stocks.html';
+}
+
+function todayInJapan() {
+  return new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Tokyo' });
+}
+
+function setSelectedDate(dateKey) {
+  selectedHistoryDate = isDateKey(dateKey) ? dateKey : null;
+  const url = currentPageHref(selectedHistoryDate);
+  window.history.replaceState({}, '', url);
+  load();
+}
+
+function updateHistoryControls() {
+  const input = document.getElementById('history-date');
+  const prev = document.getElementById('prev-day');
+  const next = document.getElementById('next-day');
+  const today = todayInJapan();
+  input.max = today;
+  input.value = selectedHistoryDate || today;
+
+  const index = japanHistoryDates.indexOf(selectedHistoryDate);
+  prev.disabled = selectedHistoryDate ? index <= 0 : !japanHistoryDates.length;
+  next.disabled = !selectedHistoryDate || index < 0 || index >= japanHistoryDates.length - 1;
+
+  document.getElementById('history-mode').textContent = selectedHistoryDate
+    ? `履歴：${selectedHistoryDate} を表示中`
+    : '最新データを表示中';
+  document.getElementById('world-page-link').href = selectedHistoryDate
+    ? `index.html?date=${encodeURIComponent(selectedHistoryDate)}`
+    : 'index.html';
+}
+
+async function loadHistoryIndex() {
+  try {
+    const response = await fetch('data/history/index.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+    const entries = Array.isArray(data.entries) ? data.entries : [];
+    japanHistoryDates = entries
+      .filter(entry => entry && entry.has_japan_stocks && isDateKey(entry.date))
+      .map(entry => entry.date)
+      .sort();
+  } catch (error) {
+    console.warn('History index error:', error);
+    japanHistoryDates = [];
+  }
+  updateHistoryControls();
+}
+
+function setupHistoryNavigation() {
+  const requestedDate = new URLSearchParams(window.location.search).get('date');
+  selectedHistoryDate = isDateKey(requestedDate) ? requestedDate : null;
+
+  document.getElementById('history-date').addEventListener('change', event => {
+    if (event.target.value) setSelectedDate(event.target.value);
+  });
+  document.getElementById('prev-day').addEventListener('click', () => {
+    if (!selectedHistoryDate && japanHistoryDates.length) {
+      setSelectedDate(japanHistoryDates[japanHistoryDates.length - 1]);
+      return;
+    }
+    const index = japanHistoryDates.indexOf(selectedHistoryDate);
+    if (index > 0) setSelectedDate(japanHistoryDates[index - 1]);
+  });
+  document.getElementById('next-day').addEventListener('click', () => {
+    const index = japanHistoryDates.indexOf(selectedHistoryDate);
+    if (index >= 0 && index < japanHistoryDates.length - 1) {
+      setSelectedDate(japanHistoryDates[index + 1]);
+    }
+  });
+  document.getElementById('latest-day').addEventListener('click', () => setSelectedDate(null));
+  updateHistoryControls();
+}
 
 function appendText(parent, className, value) {
   const element = document.createElement('div');
@@ -206,20 +312,16 @@ function renderQuality(quality) {
 
 async function load() {
   try {
-    const params = new URLSearchParams(window.location.search);
-    const requestedDate = params.get('date');
-    const validDate = /^20\d{2}-\d{2}-\d{2}$/.test(requestedDate || '')
-      ? requestedDate
-      : null;
-    const dataUrl = validDate
-      ? `data/history/${validDate}/japan-stocks.json`
+    updateHistoryControls();
+    document.getElementById('report-date').textContent = 'データを読み込み中...';
+    document.getElementById('headline').className = 'summary-main';
+    document.getElementById('headline').textContent = '確認中';
+    const dataUrl = selectedHistoryDate
+      ? `data/history/${selectedHistoryDate}/japan-stocks.json`
       : 'data/japan-stocks.json';
-    if (validDate) {
-      document.getElementById('back-link').href = `index.html?date=${encodeURIComponent(validDate)}`;
-    }
     const response = await fetch(dataUrl, { cache: 'no-store' });
-    if (response.status === 404 && validDate) {
-      throw new Error(`${validDate} の日本株詳細データは保存されていません`);
+    if (response.status === 404 && selectedHistoryDate) {
+      throw new Error(`${selectedHistoryDate} の日本株詳細データは保存されていません`);
     }
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
@@ -236,6 +338,7 @@ async function load() {
     if (!topList.children.length) appendText(topList, 'empty', '該当材料なし');
     document.getElementById('focus-sectors').textContent = Array.isArray(quick.focus_sectors) && quick.focus_sectors.length ? quick.focus_sectors.join(' / ') : '該当なし';
     const holder = document.getElementById('story-sections');
+    holder.replaceChildren();
     renderGroup(holder, '最重要', Array.isArray(data.top_stories) ? data.top_stories : [], '🔥');
     renderGroup(holder, '重要', Array.isArray(data.important_stories) ? data.important_stories : [], '📌');
     renderGroup(holder, 'その他', Array.isArray(data.other_stories) ? data.other_stories : [], '🗂️');
@@ -247,7 +350,8 @@ async function load() {
   }
 }
 
-load();
+setupHistoryNavigation();
+Promise.all([loadHistoryIndex(), load()]);
 </script>
 </body>
 </html>

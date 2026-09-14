@@ -1,0 +1,58 @@
+{
+  "report_date": "2026-09-08",
+  "target_market_date": "2026-09-07",
+  "updated_at": "2026-09-08 historical reconstruction",
+  "report_type": "japan_stocks",
+  "japan_quick_view": {
+    "headline": "米国休場で海外の価格発見は限定的。円高進行と日本株の高値圏で選別色が強まりやすい。",
+    "top_materials": [
+      "米国市場休場",
+      "154円台への円高",
+      "日本株の高値警戒",
+      "90ドル台のWTI",
+      "Copper高"
+    ],
+    "focus_sectors": [
+      "自動車",
+      "機械",
+      "内需",
+      "資源",
+      "半導体"
+    ],
+    "unpriced_materials": [
+      "個別企業適時開示は未復元"
+    ]
+  },
+  "top_stories": [],
+  "important_stories": [],
+  "other_stories": [],
+  "sector_implications": [
+    {
+      "driver": "米レーバーデー休場とUSD/JPYの154円台への円高",
+      "affected_sectors": [
+        "自動車",
+        "機械",
+        "内需",
+        "資源",
+        "半導体"
+      ],
+      "possible_impact": "米国休場で海外の価格発見は限定的。円高進行と日本株の高値圏で選別色が強まりやすい。",
+      "confirmation_condition": "当時の為替・金利・商品と株価反応を照合"
+    }
+  ],
+  "data_quality": {
+    "overall": "C",
+    "missing": [
+      "当日朝時点の個別企業適時開示"
+    ],
+    "differences": [],
+    "unpriced": [],
+    "cautions": [
+      "過去日再構成版",
+      "証券コードを推測していない"
+    ]
+  },
+  "source_notes": [
+    "https://www.investopedia.com/markets-news-september-4-2026-stocks-close-lower-hot-jobs-report-11816963"
+  ]
+}

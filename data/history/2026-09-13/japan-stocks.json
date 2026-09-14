@@ -1,0 +1,59 @@
+{
+  "report_date": "2026-09-13",
+  "target_market_date": "2026-09-11",
+  "updated_at": "2026-09-13 historical reconstruction",
+  "report_type": "japan_stocks",
+  "japan_quick_view": {
+    "headline": "原油100ドル超と金利上昇が週を支配。金曜は反発したが、インフレと中東リスクは残存。",
+    "top_materials": [
+      "中東の供給障害",
+      "原油100ドル超",
+      "米CPI",
+      "Fed利上げ観測",
+      "金曜の米株反発"
+    ],
+    "focus_sectors": [
+      "資源",
+      "金融",
+      "半導体",
+      "運輸",
+      "内需"
+    ],
+    "unpriced_materials": [
+      "個別企業適時開示は未復元"
+    ]
+  },
+  "top_stories": [],
+  "important_stories": [],
+  "other_stories": [],
+  "sector_implications": [
+    {
+      "driver": "中東の供給障害、米物価指標、Fed利上げ観測",
+      "affected_sectors": [
+        "資源",
+        "金融",
+        "半導体",
+        "運輸",
+        "内需"
+      ],
+      "possible_impact": "原油100ドル超と金利上昇が週を支配。金曜は反発したが、インフレと中東リスクは残存。",
+      "confirmation_condition": "当時の為替・金利・商品と株価反応を照合"
+    }
+  ],
+  "data_quality": {
+    "overall": "C",
+    "missing": [
+      "当日朝時点の個別企業適時開示"
+    ],
+    "differences": [],
+    "unpriced": [],
+    "cautions": [
+      "過去日再構成版",
+      "証券コードを推測していない"
+    ]
+  },
+  "source_notes": [
+    "https://www.kitco.com/news/off-the-wire/2026-09-11/wall-street-jumps-oil-lower-ahead-fed-vote-next-week",
+    "https://www.lse.co.uk/news/global-markets-bonds-stocks-selloff-pauses-as-oil-retreats-from-multi-month-high-d6ks9tlw6ltbggb.html"
+  ]
+}

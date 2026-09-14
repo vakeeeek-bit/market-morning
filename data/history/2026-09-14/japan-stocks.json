@@ -1,0 +1,60 @@
+{
+  "report_date": "2026-09-14",
+  "target_market_date": "2026-09-11",
+  "updated_at": "2026-09-14 historical reconstruction",
+  "report_type": "japan_stocks",
+  "japan_quick_view": {
+    "headline": "米株反発後も週末のサウジ供給不安で原油が再上昇。日本株は資源高・円高・金利高を警戒。",
+    "top_materials": [
+      "サウジ供給不安",
+      "原油再上昇",
+      "米金利4.9%台",
+      "153円台のUSD/JPY",
+      "Fed・日銀会合"
+    ],
+    "focus_sectors": [
+      "石油・鉱業",
+      "商社",
+      "航空・運輸",
+      "自動車",
+      "半導体"
+    ],
+    "unpriced_materials": [
+      "個別企業適時開示は未復元"
+    ]
+  },
+  "top_stories": [],
+  "important_stories": [],
+  "other_stories": [],
+  "sector_implications": [
+    {
+      "driver": "サウジ東西パイプライン停止と主要中銀の利上げ観測",
+      "affected_sectors": [
+        "石油・鉱業",
+        "商社",
+        "航空・運輸",
+        "自動車",
+        "半導体"
+      ],
+      "possible_impact": "米株反発後も週末のサウジ供給不安で原油が再上昇。日本株は資源高・円高・金利高を警戒。",
+      "confirmation_condition": "当時の為替・金利・商品と株価反応を照合"
+    }
+  ],
+  "data_quality": {
+    "overall": "C",
+    "missing": [
+      "当日朝時点の個別企業適時開示"
+    ],
+    "differences": [],
+    "unpriced": [],
+    "cautions": [
+      "過去日再構成版",
+      "証券コードを推測していない"
+    ]
+  },
+  "source_notes": [
+    "https://www.reuters.com/business/energy/saudi-pipeline-outage-threatens-loss-4-global-oil-supply-2026-09-13/",
+    "https://www.reuters.com/world/china/global-markets-global-markets-2026-09-13/",
+    "https://www.kitco.com/news/off-the-wire/2026-09-11/wall-street-jumps-oil-lower-ahead-fed-vote-next-week"
+  ]
+}

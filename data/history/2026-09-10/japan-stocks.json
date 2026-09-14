@@ -1,0 +1,59 @@
+{
+  "report_date": "2026-09-10",
+  "target_market_date": "2026-09-09",
+  "updated_at": "2026-09-10 historical reconstruction",
+  "report_type": "japan_stocks",
+  "japan_quick_view": {
+    "headline": "原油100ドル突破と米金利上昇で世界株が続落。日本株は資源高とコスト増の二極化。",
+    "top_materials": [
+      "原油100ドル突破",
+      "米長期金利上昇",
+      "米主要指数の続落",
+      "153円台のUSD/JPY",
+      "インフレ再加速懸念"
+    ],
+    "focus_sectors": [
+      "石油・鉱業",
+      "商社",
+      "航空・運輸",
+      "自動車",
+      "グロース"
+    ],
+    "unpriced_materials": [
+      "個別企業適時開示は未復元"
+    ]
+  },
+  "top_stories": [],
+  "important_stories": [],
+  "other_stories": [],
+  "sector_implications": [
+    {
+      "driver": "中東の供給不安による原油100ドル突破とインフレ懸念",
+      "affected_sectors": [
+        "石油・鉱業",
+        "商社",
+        "航空・運輸",
+        "自動車",
+        "グロース"
+      ],
+      "possible_impact": "原油100ドル突破と米金利上昇で世界株が続落。日本株は資源高とコスト増の二極化。",
+      "confirmation_condition": "当時の為替・金利・商品と株価反応を照合"
+    }
+  ],
+  "data_quality": {
+    "overall": "C",
+    "missing": [
+      "当日朝時点の個別企業適時開示"
+    ],
+    "differences": [],
+    "unpriced": [],
+    "cautions": [
+      "過去日再構成版",
+      "証券コードを推測していない"
+    ]
+  },
+  "source_notes": [
+    "https://www.marketscreener.com/news/wall-street-dips-as-100-oil-inflation-worries-weigh-on-investors-ce785bd9d080ff27",
+    "https://www.lse.co.uk/news/global-markets-wall-street-dips-as-100-oil-inflation-worries-weigh-on-investors-85xjj6q08zklmto.html"
+  ]
+}

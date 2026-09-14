@@ -1,0 +1,404 @@
+{
+  "report_date": "2026-09-14",
+  "target_market_date": "2026-09-11",
+  "updated_at": "2026-09-14 historical reconstruction",
+  "report_type": "daily",
+  "week_period": null,
+  "quick_view": {
+    "headline": "米株反発後も週末のサウジ供給不安で原油が再上昇。日本株は資源高・円高・金利高を警戒。",
+    "top_news": [
+      {
+        "title": "9月11日の米国株は主要3指数が0.9%前後上昇した。"
+      },
+      {
+        "title": "週末の攻撃でサウジの東西パイプラインが停止し、供給不安が再燃した。"
+      },
+      {
+        "title": "9月14日朝の取得値はWTI 103.26ドル、米10年債利回り4.975%、USD/JPY 153.608円だった。"
+      }
+    ],
+    "important_today": [
+      "サウジ供給不安",
+      "原油再上昇",
+      "米金利4.9%台"
+    ]
+  },
+  "executive_summary": {
+    "headline": "米株反発後も週末のサウジ供給不安で原油が再上昇。日本株は資源高・円高・金利高を警戒。",
+    "market_mood": "確認済みの市場データに基づく過去日再構成",
+    "main_driver": "サウジ東西パイプライン停止と主要中銀の利上げ観測",
+    "winners": [
+      "石油・鉱業",
+      "商社"
+    ],
+    "losers": [
+      "自動車",
+      "半導体"
+    ],
+    "important_today": [
+      "サウジ供給不安",
+      "原油再上昇",
+      "米金利4.9%台"
+    ],
+    "watch_markets": [
+      "USD/JPY",
+      "米10年債",
+      "WTI・Brent"
+    ],
+    "current_environment": [
+      "過去日再構成"
+    ]
+  },
+  "news": [
+    {
+      "title": "確認材料1",
+      "fact": "9月11日の米国株は主要3指数が0.9%前後上昇した。",
+      "published_at": "2026-09-11",
+      "market_reaction": "履歴市場データに反映",
+      "analysis": "サウジ東西パイプライン停止と主要中銀の利上げ観測",
+      "related_assets": [],
+      "related_japan_sectors": [
+        "石油・鉱業",
+        "商社",
+        "航空・運輸",
+        "自動車",
+        "半導体"
+      ],
+      "importance": "★★★★☆",
+      "source_url": "https://www.reuters.com/business/energy/saudi-pipeline-outage-threatens-loss-4-global-oil-supply-2026-09-13/"
+    },
+    {
+      "title": "確認材料2",
+      "fact": "週末の攻撃でサウジの東西パイプラインが停止し、供給不安が再燃した。",
+      "published_at": "2026-09-11",
+      "market_reaction": "履歴市場データに反映",
+      "analysis": "サウジ東西パイプライン停止と主要中銀の利上げ観測",
+      "related_assets": [],
+      "related_japan_sectors": [
+        "石油・鉱業",
+        "商社",
+        "航空・運輸",
+        "自動車",
+        "半導体"
+      ],
+      "importance": "★★★★☆",
+      "source_url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-09-13/"
+    },
+    {
+      "title": "確認材料3",
+      "fact": "9月14日朝の取得値はWTI 103.26ドル、米10年債利回り4.975%、USD/JPY 153.608円だった。",
+      "published_at": "2026-09-11",
+      "market_reaction": "履歴市場データに反映",
+      "analysis": "サウジ東西パイプライン停止と主要中銀の利上げ観測",
+      "related_assets": [],
+      "related_japan_sectors": [
+        "石油・鉱業",
+        "商社",
+        "航空・運輸",
+        "自動車",
+        "半導体"
+      ],
+      "importance": "★★★★☆",
+      "source_url": "https://www.kitco.com/news/off-the-wire/2026-09-11/wall-street-jumps-oil-lower-ahead-fed-vote-next-week"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "基本シナリオ",
+      "conditions": "原油・金利・為替が直近レンジ内",
+      "impact_on_japan": "指数より業種間格差を重視",
+      "strong_sectors": [
+        "石油・鉱業",
+        "商社"
+      ],
+      "weak_sectors": [
+        "自動車",
+        "半導体"
+      ],
+      "invalidation": "原油、米金利、USD/JPYのうち二つ以上が明確に反転"
+    },
+    {
+      "name": "改善シナリオ",
+      "conditions": "原油と米金利が低下し、株式の騰落が改善",
+      "impact_on_japan": "輸出・グロースを含む反発余地",
+      "strong_sectors": [
+        "商社",
+        "航空・運輸"
+      ],
+      "weak_sectors": [],
+      "invalidation": "供給不安またはインフレ懸念が再燃"
+    },
+    {
+      "name": "悪化シナリオ",
+      "conditions": "原油と米金利が同時上昇",
+      "impact_on_japan": "資源以外のコスト・評価面に逆風",
+      "strong_sectors": [
+        "石油・鉱業"
+      ],
+      "weak_sectors": [
+        "航空・運輸",
+        "自動車",
+        "半導体"
+      ],
+      "invalidation": "政策対応や緊張緩和で原油が反落"
+    }
+  ],
+  "market_data": [
+    {
+      "market": "S&P500",
+      "price": "7656.98",
+      "change": "0.86%",
+      "basis_time": "2026-09-11",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "NASDAQ総合",
+      "price": "26333.0391",
+      "change": "0.96%",
+      "basis_time": "2026-09-11",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "NASDAQ100",
+      "price": "29368.4395",
+      "change": "0.91%",
+      "basis_time": "2026-09-11",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "NYダウ",
+      "price": "52573.2891",
+      "change": "0.98%",
+      "basis_time": "2026-09-11",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "Russell2000",
+      "price": "2903.9399",
+      "change": "0.45%",
+      "basis_time": "2026-09-11",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "日経225",
+      "price": "64011.3398",
+      "change": "-1.93%",
+      "basis_time": "2026-09-11",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "TOPIX参考（1306 ETF）",
+      "price": "419.7",
+      "change": "-0.71%",
+      "basis_time": "2026-09-11",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "DXY",
+      "price": "99.099",
+      "change": "-0.02%",
+      "basis_time": "2026-09-13",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "USD/JPY",
+      "price": "153.608",
+      "change": "-0.57%",
+      "basis_time": "2026-09-13",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "米2年債利回り",
+      "price": "4.56",
+      "change": "2.93%",
+      "basis_time": "2026-09-10",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "米10年債利回り",
+      "price": "4.975",
+      "change": "0.63%",
+      "basis_time": "2026-09-11",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "Gold",
+      "price": "4371.5",
+      "change": "0.12%",
+      "basis_time": "2026-09-13",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "Silver",
+      "price": "64.325",
+      "change": "-0.35%",
+      "basis_time": "2026-09-13",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "Copper",
+      "price": "6.511",
+      "change": "0.64%",
+      "basis_time": "2026-09-13",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "WTI",
+      "price": "103.26",
+      "change": "3.21%",
+      "basis_time": "2026-09-13",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "Brent",
+      "price": "108.14",
+      "change": "3.37%",
+      "basis_time": "2026-09-13",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "BTC",
+      "price": "76731.7969",
+      "change": "-0.7%",
+      "basis_time": "2026-09-13",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "ETH",
+      "price": "2478.54",
+      "change": "-1.88%",
+      "basis_time": "2026-09-13",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    }
+  ],
+  "market_overview": [
+    {
+      "market": "クロスアセット",
+      "move": "9月11日の米国株は主要3指数が0.9%前後上昇した。",
+      "relative_strength": "履歴値参照",
+      "background": "サウジ東西パイプライン停止と主要中銀の利上げ観測",
+      "impact_on_japan": "米株反発後も週末のサウジ供給不安で原油が再上昇。日本株は資源高・円高・金利高を警戒。"
+    }
+  ],
+  "japan_equities_preview": {
+    "summary": "過去日再構成。個別企業の適時開示は未復元。",
+    "top_materials": [
+      "サウジ供給不安",
+      "原油再上昇",
+      "米金利4.9%台",
+      "153円台のUSD/JPY",
+      "Fed・日銀会合"
+    ],
+    "focus_sectors": [
+      "石油・鉱業",
+      "商社",
+      "航空・運輸",
+      "自動車",
+      "半導体"
+    ],
+    "top_stories": [],
+    "total_story_count": 0
+  },
+  "monitoring_points": [
+    {
+      "target": "サウジ供給不安",
+      "current_view": "過去日時点の重要材料",
+      "today_check": "当時の市場反応を確認",
+      "view_change_condition": "関連する価格・政策材料が反転"
+    },
+    {
+      "target": "原油再上昇",
+      "current_view": "過去日時点の重要材料",
+      "today_check": "当時の市場反応を確認",
+      "view_change_condition": "関連する価格・政策材料が反転"
+    },
+    {
+      "target": "米金利4.9%台",
+      "current_view": "過去日時点の重要材料",
+      "today_check": "当時の市場反応を確認",
+      "view_change_condition": "関連する価格・政策材料が反転"
+    }
+  ],
+  "data_quality": {
+    "overall": "C",
+    "missing": [
+      "当日朝時点の個別企業適時開示",
+      "一部の公式終値・在庫データ"
+    ],
+    "differences": [
+      "再作成時点で取得できた記事と履歴市場データを使用"
+    ],
+    "excluded": [
+      "確認不能な個別株材料"
+    ],
+    "cautions": [
+      "過去日再構成版",
+      "後知恵を避けるため対象日後の材料は原則不使用",
+      "数値は保存済みmarket.jsonを優先"
+    ]
+  },
+  "final_conclusion": {
+    "headline": "米株反発後も週末のサウジ供給不安で原油が再上昇。日本株は資源高・円高・金利高を警戒。",
+    "winners": [
+      "石油・鉱業",
+      "商社"
+    ],
+    "losers": [
+      "自動車",
+      "半導体"
+    ],
+    "top_three": [
+      "サウジ供給不安",
+      "原油再上昇",
+      "米金利4.9%台"
+    ],
+    "triggers": [
+      "原油の方向",
+      "米金利の方向",
+      "USD/JPYの方向"
+    ],
+    "disclaimer": "本レポートは市場情報の整理を目的とし、特定の金融商品の売買を推奨するものではありません。"
+  },
+  "source_notes": [
+    "https://www.reuters.com/business/energy/saudi-pipeline-outage-threatens-loss-4-global-oil-supply-2026-09-13/",
+    "https://www.reuters.com/world/china/global-markets-global-markets-2026-09-13/",
+    "https://www.kitco.com/news/off-the-wire/2026-09-11/wall-street-jumps-oil-lower-ahead-fed-vote-next-week",
+    "保存済み data/history/2026-09-14/market.json"
+  ]
+}

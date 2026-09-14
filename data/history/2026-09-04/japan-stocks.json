@@ -1,0 +1,59 @@
+{
+  "report_date": "2026-09-04",
+  "target_market_date": "2026-09-03",
+  "updated_at": "2026-09-04 historical reconstruction",
+  "report_type": "japan_stocks",
+  "japan_quick_view": {
+    "headline": "米金利低下と大型テック高で米国株が反発。日本株は円高と原油高への耐性を確認する局面。",
+    "top_materials": [
+      "米国株の全面反発",
+      "米長期金利の低下",
+      "円高方向のUSD/JPY",
+      "90ドル台のWTI",
+      "Copperの上昇"
+    ],
+    "focus_sectors": [
+      "半導体・電気機器",
+      "情報・通信",
+      "自動車",
+      "資源",
+      "航空・運輸"
+    ],
+    "unpriced_materials": [
+      "個別企業適時開示は未復元"
+    ]
+  },
+  "top_stories": [],
+  "important_stories": [],
+  "other_stories": [],
+  "sector_implications": [
+    {
+      "driver": "FRB高官発言後の米国債利回り低下とソフトウェア・大型テック株の上昇",
+      "affected_sectors": [
+        "半導体・電気機器",
+        "情報・通信",
+        "自動車",
+        "資源",
+        "航空・運輸"
+      ],
+      "possible_impact": "米金利低下と大型テック高で米国株が反発。日本株は円高と原油高への耐性を確認する局面。",
+      "confirmation_condition": "当時の為替・金利・商品と株価反応を照合"
+    }
+  ],
+  "data_quality": {
+    "overall": "C",
+    "missing": [
+      "当日朝時点の個別企業適時開示"
+    ],
+    "differences": [],
+    "unpriced": [],
+    "cautions": [
+      "過去日再構成版",
+      "証券コードを推測していない"
+    ]
+  },
+  "source_notes": [
+    "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-oil-prices-bond-yields-ease-ism-services-pmi",
+    "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-sept-3-134812608.html"
+  ]
+}

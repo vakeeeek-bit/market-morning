@@ -1,0 +1,403 @@
+{
+  "report_date": "2026-09-07",
+  "target_market_date": "2026-09-04",
+  "updated_at": "2026-09-07 historical reconstruction",
+  "report_type": "daily",
+  "week_period": null,
+  "quick_view": {
+    "headline": "強い米雇用統計でFedの利上げ警戒が再燃。日本株は円安支援と金利上昇圧力の綱引き。",
+    "top_news": [
+      {
+        "title": "9月4日のS&P500は0.38%、NASDAQ総合は0.29%、NYダウは0.51%下落した。"
+      },
+      {
+        "title": "米10年債利回りは4.784%、USD/JPYは156.244円だった。"
+      },
+      {
+        "title": "日本株の直近市場日9月4日は日経225が1.26%上昇した。"
+      }
+    ],
+    "important_today": [
+      "米雇用統計の上振れ",
+      "Fed利上げ警戒",
+      "米株の反落"
+    ]
+  },
+  "executive_summary": {
+    "headline": "強い米雇用統計でFedの利上げ警戒が再燃。日本株は円安支援と金利上昇圧力の綱引き。",
+    "market_mood": "確認済みの市場データに基づく過去日再構成",
+    "main_driver": "米雇用統計を受けた政策金利見通しの上方修正",
+    "winners": [
+      "銀行・保険",
+      "自動車"
+    ],
+    "losers": [
+      "不動産",
+      "資源"
+    ],
+    "important_today": [
+      "米雇用統計の上振れ",
+      "Fed利上げ警戒",
+      "米株の反落"
+    ],
+    "watch_markets": [
+      "USD/JPY",
+      "米10年債",
+      "WTI・Brent"
+    ],
+    "current_environment": [
+      "過去日再構成"
+    ]
+  },
+  "news": [
+    {
+      "title": "確認材料1",
+      "fact": "9月4日のS&P500は0.38%、NASDAQ総合は0.29%、NYダウは0.51%下落した。",
+      "published_at": "2026-09-04",
+      "market_reaction": "履歴市場データに反映",
+      "analysis": "米雇用統計を受けた政策金利見通しの上方修正",
+      "related_assets": [],
+      "related_japan_sectors": [
+        "銀行・保険",
+        "自動車",
+        "半導体",
+        "不動産",
+        "資源"
+      ],
+      "importance": "★★★★☆",
+      "source_url": "https://www.investopedia.com/markets-news-september-4-2026-stocks-close-lower-hot-jobs-report-11816963"
+    },
+    {
+      "title": "確認材料2",
+      "fact": "米10年債利回りは4.784%、USD/JPYは156.244円だった。",
+      "published_at": "2026-09-04",
+      "market_reaction": "履歴市場データに反映",
+      "analysis": "米雇用統計を受けた政策金利見通しの上方修正",
+      "related_assets": [],
+      "related_japan_sectors": [
+        "銀行・保険",
+        "自動車",
+        "半導体",
+        "不動産",
+        "資源"
+      ],
+      "importance": "★★★★☆",
+      "source_url": "https://www.edwardjones.com/us-en/market-news-insights/stock-market-news/daily-market-recap"
+    },
+    {
+      "title": "確認材料3",
+      "fact": "日本株の直近市場日9月4日は日経225が1.26%上昇した。",
+      "published_at": "2026-09-04",
+      "market_reaction": "履歴市場データに反映",
+      "analysis": "米雇用統計を受けた政策金利見通しの上方修正",
+      "related_assets": [],
+      "related_japan_sectors": [
+        "銀行・保険",
+        "自動車",
+        "半導体",
+        "不動産",
+        "資源"
+      ],
+      "importance": "★★★★☆",
+      "source_url": "https://www.edwardjones.com/us-en/market-news-insights/stock-market-news/daily-market-recap"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "基本シナリオ",
+      "conditions": "原油・金利・為替が直近レンジ内",
+      "impact_on_japan": "指数より業種間格差を重視",
+      "strong_sectors": [
+        "銀行・保険",
+        "自動車"
+      ],
+      "weak_sectors": [
+        "不動産",
+        "資源"
+      ],
+      "invalidation": "原油、米金利、USD/JPYのうち二つ以上が明確に反転"
+    },
+    {
+      "name": "改善シナリオ",
+      "conditions": "原油と米金利が低下し、株式の騰落が改善",
+      "impact_on_japan": "輸出・グロースを含む反発余地",
+      "strong_sectors": [
+        "自動車",
+        "半導体"
+      ],
+      "weak_sectors": [],
+      "invalidation": "供給不安またはインフレ懸念が再燃"
+    },
+    {
+      "name": "悪化シナリオ",
+      "conditions": "原油と米金利が同時上昇",
+      "impact_on_japan": "資源以外のコスト・評価面に逆風",
+      "strong_sectors": [
+        "銀行・保険"
+      ],
+      "weak_sectors": [
+        "半導体",
+        "不動産",
+        "資源"
+      ],
+      "invalidation": "政策対応や緊張緩和で原油が反落"
+    }
+  ],
+  "market_data": [
+    {
+      "market": "S&P500",
+      "price": "7718.6001",
+      "change": "-0.38%",
+      "basis_time": "2026-09-04",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "NASDAQ総合",
+      "price": "26506.9902",
+      "change": "-0.29%",
+      "basis_time": "2026-09-04",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "NASDAQ100",
+      "price": "29544.1504",
+      "change": "0.21%",
+      "basis_time": "2026-09-04",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "NYダウ",
+      "price": "53414.25",
+      "change": "-0.51%",
+      "basis_time": "2026-09-04",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "Russell2000",
+      "price": "2975.6499",
+      "change": "0.25%",
+      "basis_time": "2026-09-04",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "日経225",
+      "price": "65020.9414",
+      "change": "1.26%",
+      "basis_time": "2026-09-04",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "TOPIX参考（1306 ETF）",
+      "price": "427.5",
+      "change": "0.07%",
+      "basis_time": "2026-09-04",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "DXY",
+      "price": "99.164",
+      "change": "0.0%",
+      "basis_time": "2026-09-06",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "USD/JPY",
+      "price": "156.244",
+      "change": "0.38%",
+      "basis_time": "2026-09-06",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "米2年債利回り",
+      "price": "4.34",
+      "change": "-1.14%",
+      "basis_time": "2026-09-03",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "米10年債利回り",
+      "price": "4.784",
+      "change": "0.46%",
+      "basis_time": "2026-09-04",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "Gold",
+      "price": "4476.6001",
+      "change": "1.06%",
+      "basis_time": "2026-09-06",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "Silver",
+      "price": "66.748",
+      "change": "1.06%",
+      "basis_time": "2026-09-06",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "Copper",
+      "price": "6.6825",
+      "change": "1.3%",
+      "basis_time": "2026-09-06",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "WTI",
+      "price": "91.48",
+      "change": "0.0%",
+      "basis_time": "2026-09-06",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "Brent",
+      "price": "96.28",
+      "change": "0.0%",
+      "basis_time": "2026-09-06",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "BTC",
+      "price": "79640.9922",
+      "change": "-0.23%",
+      "basis_time": "2026-09-06",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    },
+    {
+      "market": "ETH",
+      "price": "2492.6899",
+      "change": "0.48%",
+      "basis_time": "2026-09-06",
+      "source": "Yahoo Finance via yfinance; FRED DGS2 for US 2Y Treasury yield",
+      "confidence": "B",
+      "status": "取得成功"
+    }
+  ],
+  "market_overview": [
+    {
+      "market": "クロスアセット",
+      "move": "9月4日のS&P500は0.38%、NASDAQ総合は0.29%、NYダウは0.51%下落した。",
+      "relative_strength": "履歴値参照",
+      "background": "米雇用統計を受けた政策金利見通しの上方修正",
+      "impact_on_japan": "強い米雇用統計でFedの利上げ警戒が再燃。日本株は円安支援と金利上昇圧力の綱引き。"
+    }
+  ],
+  "japan_equities_preview": {
+    "summary": "過去日再構成。個別企業の適時開示は未復元。",
+    "top_materials": [
+      "米雇用統計の上振れ",
+      "Fed利上げ警戒",
+      "米株の反落",
+      "156円台のUSD/JPY",
+      "日本株の直近上昇"
+    ],
+    "focus_sectors": [
+      "銀行・保険",
+      "自動車",
+      "半導体",
+      "不動産",
+      "資源"
+    ],
+    "top_stories": [],
+    "total_story_count": 0
+  },
+  "monitoring_points": [
+    {
+      "target": "米雇用統計の上振れ",
+      "current_view": "過去日時点の重要材料",
+      "today_check": "当時の市場反応を確認",
+      "view_change_condition": "関連する価格・政策材料が反転"
+    },
+    {
+      "target": "Fed利上げ警戒",
+      "current_view": "過去日時点の重要材料",
+      "today_check": "当時の市場反応を確認",
+      "view_change_condition": "関連する価格・政策材料が反転"
+    },
+    {
+      "target": "米株の反落",
+      "current_view": "過去日時点の重要材料",
+      "today_check": "当時の市場反応を確認",
+      "view_change_condition": "関連する価格・政策材料が反転"
+    }
+  ],
+  "data_quality": {
+    "overall": "C",
+    "missing": [
+      "当日朝時点の個別企業適時開示",
+      "一部の公式終値・在庫データ"
+    ],
+    "differences": [
+      "再作成時点で取得できた記事と履歴市場データを使用"
+    ],
+    "excluded": [
+      "確認不能な個別株材料"
+    ],
+    "cautions": [
+      "過去日再構成版",
+      "後知恵を避けるため対象日後の材料は原則不使用",
+      "数値は保存済みmarket.jsonを優先"
+    ]
+  },
+  "final_conclusion": {
+    "headline": "強い米雇用統計でFedの利上げ警戒が再燃。日本株は円安支援と金利上昇圧力の綱引き。",
+    "winners": [
+      "銀行・保険",
+      "自動車"
+    ],
+    "losers": [
+      "不動産",
+      "資源"
+    ],
+    "top_three": [
+      "米雇用統計の上振れ",
+      "Fed利上げ警戒",
+      "米株の反落"
+    ],
+    "triggers": [
+      "原油の方向",
+      "米金利の方向",
+      "USD/JPYの方向"
+    ],
+    "disclaimer": "本レポートは市場情報の整理を目的とし、特定の金融商品の売買を推奨するものではありません。"
+  },
+  "source_notes": [
+    "https://www.investopedia.com/markets-news-september-4-2026-stocks-close-lower-hot-jobs-report-11816963",
+    "https://www.edwardjones.com/us-en/market-news-insights/stock-market-news/daily-market-recap",
+    "保存済み data/history/2026-09-07/market.json"
+  ]
+}

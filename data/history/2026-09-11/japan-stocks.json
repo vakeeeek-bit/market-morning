@@ -1,0 +1,59 @@
+{
+  "report_date": "2026-09-11",
+  "target_market_date": "2026-09-10",
+  "updated_at": "2026-09-11 historical reconstruction",
+  "report_type": "japan_stocks",
+  "japan_quick_view": {
+    "headline": "原油急騰と米金利4.9%台で株式の評価圧力が強まる。日本株は資源株以外に逆風。",
+    "top_materials": [
+      "原油の急騰",
+      "米10年金利4.9%台",
+      "米PPIとインフレ懸念",
+      "半導体株安",
+      "Fed利上げ観測"
+    ],
+    "focus_sectors": [
+      "石油・鉱業",
+      "銀行",
+      "半導体",
+      "航空・運輸",
+      "不動産"
+    ],
+    "unpriced_materials": [
+      "個別企業適時開示は未復元"
+    ]
+  },
+  "top_stories": [],
+  "important_stories": [],
+  "other_stories": [],
+  "sector_implications": [
+    {
+      "driver": "Brentの6%上昇、米生産者物価、Fed利上げ観測の強まり",
+      "affected_sectors": [
+        "石油・鉱業",
+        "銀行",
+        "半導体",
+        "航空・運輸",
+        "不動産"
+      ],
+      "possible_impact": "原油急騰と米金利4.9%台で株式の評価圧力が強まる。日本株は資源株以外に逆風。",
+      "confirmation_condition": "当時の為替・金利・商品と株価反応を照合"
+    }
+  ],
+  "data_quality": {
+    "overall": "C",
+    "missing": [
+      "当日朝時点の個別企業適時開示"
+    ],
+    "differences": [],
+    "unpriced": [],
+    "cautions": [
+      "過去日再構成版",
+      "証券コードを推測していない"
+    ]
+  },
+  "source_notes": [
+    "https://wealthinsights.metrobank.com.ph/news/us-stocks-sandp-500-ends-down-as-treasury-yields-rise-and-traders-fret-about-inflation",
+    "https://www.investing.com/news/economy-news/trading-day-inflation-palpitations-4896968"
+  ]
+}

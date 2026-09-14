@@ -1,5 +1,12 @@
 # Market Morning 日次公開フロー v1
 
+## 定時実行
+
+- 市場データ取得はGitHub Actionsで日本時間の平日6:20に開始する。
+- cronはUTC基準のため、`20 21 * * 0-4`（UTCの日曜〜木曜21:20）を使用する。
+- ChatGPTのMarket Morningタスクも日本時間の平日6:20に開始する。
+- ChatGPTからGitHubへレポート本文を自動反映する処理は、初回出力の品質確認後に有効化する。
+
 ## 目的
 
 市場データの自動更新と、レポート・日本株詳細の公開を、不完全なJSONや日付の異なる組み合わせを公開しない形で運用する。
@@ -8,11 +15,12 @@
 
 ### 市場データ（自動）
 
-1. GitHub Actionsが毎朝7:07 JSTに`update_market.py`を実行する。
+1. GitHub Actionsが平日6:20 JSTに`update_market.py`を実行する。
 2. `validate_data.py`で現行レポートとの組み合わせを検証する。日付差は警告、構造・整合性エラーは公開停止とする。
-3. `data/history/YYYY-MM-DD/market.json`へ履歴を保存する。
-4. `data/market.json`と履歴を1コミットで`main`へ反映する。
-5. Vercelが`main`から本番公開する。
+3. 検証成功時だけ`status.json`へ市場データ更新成功時刻を記録し、公開候補を再検証する。
+4. `data/history/YYYY-MM-DD/market.json`へ履歴を保存する。
+5. `data/market.json`、`data/status.json`、履歴を1コミットで`main`へ反映する。
+6. Vercelが`main`から本番公開する。
 
 同じ更新処理は重複実行しない。`concurrency`により、先行処理の終了後に次の処理を開始する。
 

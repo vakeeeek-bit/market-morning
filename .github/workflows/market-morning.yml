@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
 
   schedule:
-    # 日本時間 毎朝7:07
+    # 日本時間 平日6:20（UTCでは前日の21:20）
     # GitHub Actions の cron は UTC
-    # 22:07 UTC = 翌朝7:07 JST
-    - cron: "7 22 * * *"
+    # UTCの日〜木 = JSTの月〜金
+    - cron: "20 21 * * 0-4"
 
 permissions:
   contents: write
@@ -45,6 +45,31 @@ jobs:
         run: |
           python scripts/validate_data.py
 
+      - name: Record successful market update
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+
+          now = datetime.now(ZoneInfo("Asia/Tokyo"))
+          status = {
+              "status": "success",
+              "updated_at": now.strftime("%Y-%m-%d %H:%M:%S JST"),
+              "message": "Market data update completed and validation passed.",
+              "component": "market_data",
+          }
+          Path("data/status.json").write_text(
+              json.dumps(status, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8",
+          )
+          PY
+
+      - name: Validate final publish bundle
+        run: |
+          python scripts/validate_data.py
+
       - name: Save market history
         run: |
           DATE_JST=$(TZ=Asia/Tokyo date +%Y-%m-%d)
@@ -62,6 +87,7 @@ jobs:
           git config user.email "actions@github.com"
 
           git add data/market.json
+          git add data/status.json
           git add data/history/
 
           if git diff --cached --quiet; then

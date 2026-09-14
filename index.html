@@ -68,6 +68,41 @@ body {
   opacity: 0.75;
 }
 
+.page-switch {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 16px;
+  padding: 4px;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.08);
+}
+
+.page-switch-link {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 9px;
+  color: rgba(255,255,255,0.76);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.page-switch-link:hover {
+  color: white;
+  background: rgba(255,255,255,0.10);
+}
+
+.page-switch-link[aria-current="page"] {
+  background: white;
+  color: #111827;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.14);
+}
+
 .date {
   margin-top: 12px;
   font-size: 13px;
@@ -983,6 +1018,11 @@ td.nowrap {
   <div class="header-sub">
     Global Macro Market Dashboard
   </div>
+
+  <nav class="page-switch" aria-label="レポート画面の切り替え">
+    <a class="page-switch-link" href="index.html" aria-current="page">🌐 世界市場</a>
+    <a class="page-switch-link" id="japan-page-link" href="japan-stocks.html">🇯🇵 日本株</a>
+  </nav>
 
   <div class="date" id="market-updated">
     市場データを読み込み中...
@@ -1965,11 +2005,14 @@ function reportDataUrl() {
 }
 
 function updateJapanDetailLink() {
-  const link = document.getElementById('japan-detail-link');
-  if (!link) return;
-  link.href = selectedHistoryDate
+  const href = selectedHistoryDate
     ? 'japan-stocks.html?date=' + encodeURIComponent(selectedHistoryDate)
     : 'japan-stocks.html';
+
+  ['japan-page-link', 'japan-detail-link'].forEach(id => {
+    const link = document.getElementById(id);
+    if (link) link.href = href;
+  });
 }
 
 function setHistoryMode(message) {

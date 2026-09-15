@@ -18,7 +18,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 SCHEMA_DIR = ROOT / "schemas"
-DATA_NAMES = ("report", "market", "japan-stocks", "status")
+DATA_NAMES = ("report", "market", "japan-stocks", "japan-market", "status")
 
 
 @dataclass

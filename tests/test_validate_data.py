@@ -14,7 +14,7 @@ class ValidateDataTest(unittest.TestCase):
         temporary = Path(tempfile.mkdtemp())
         (temporary / "data").mkdir()
         (temporary / "schemas").mkdir()
-        for name in ("report", "market", "japan-stocks", "status"):
+        for name in ("report", "market", "japan-stocks", "japan-market", "status"):
             data = json.loads((ROOT / "data" / f"{name}.json").read_text())
             if mutate:
                 data = mutate(name, copy.deepcopy(data))

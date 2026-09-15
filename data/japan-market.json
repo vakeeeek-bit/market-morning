@@ -1,0 +1,13 @@
+{
+  "updated_at": null,
+  "market_date": null,
+  "source": "Yahoo Finance via yfinance（1回の一括取得）",
+  "scope": "TOPIX-17業種ETFと各業種の主要監視2銘柄。全上場銘柄・東証公式統計ではない",
+  "sector_ranking": [],
+  "sector_stock_ranking": [],
+  "trading_value_ranking": [],
+  "volume_surge_ranking": [],
+  "market_internals": {"universe_size": 34, "available": 0, "advancing": 0, "declining": 0, "unchanged": 0, "breadth_pct": null, "nikkei_proxy_change_pct": null, "topix_proxy_change_pct": null, "relative": "更新待ち"},
+  "scenario_review": {"market_date": null, "basis": "朝レポートの注目業種を、TOPIX-17業種ETFの当日騰落順位と機械照合", "status": "更新待ち", "checks": [], "note": "大引け後に自動更新"},
+  "data_quality": {"sector_total": 17, "sector_available": 0, "stock_total": 34, "stock_available": 0}
+}

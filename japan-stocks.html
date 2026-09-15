@@ -52,6 +52,21 @@ body {
 .detail { padding: 10px; border-radius: 10px; background: #f7f8fa; font-size: 13px; }
 .analysis { margin-top: 12px; padding: 12px; border-left: 4px solid #334155; background: #f8fafc; }
 .source { display: inline-block; margin-top: 12px; color: #2457a6; font-size: 13px; overflow-wrap: anywhere; }
+.ranking-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+.ranking-card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px; background: #fafbfc; }
+.ranking-title { font-size: 13px; font-weight: 800; margin-bottom: 8px; }
+.ranking-row { display: grid; grid-template-columns: 28px 1fr auto; gap: 8px; align-items: center; padding: 7px 0; border-top: 1px solid #eceff3; font-size: 13px; }
+.ranking-row:first-child { border-top: 0; }
+.ranking-rank { color: #7b8490; font-size: 11px; font-weight: 800; }
+.ranking-name { min-width: 0; font-weight: 650; }
+.ranking-value { white-space: nowrap; font-weight: 800; }
+.positive { color: #b42318; }
+.negative { color: #1769aa; }
+.market-note { margin: 0 0 12px; padding: 10px 12px; border-radius: 10px; background: #fff7ed; color: #7c2d12; font-size: 12px; }
+.internals-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 8px; }
+.internal-card { padding: 11px; border-radius: 10px; background: #f7f8fa; text-align: center; }
+.internal-number { font-size: 20px; font-weight: 800; }
+.internal-label { font-size: 11px; color: #68707a; }
 .empty, .error { color: #68707a; }
 .error { color: #b42318; }
 .footer { padding: 12px 0 28px; color: #7b8490; text-align: center; font-size: 12px; }
@@ -63,6 +78,9 @@ body {
 #story-most-important { border-top-color: #dc2626; }
 #story-important { border-top-color: #d97706; }
 #story-other { border-top-color: #64748b; }
+#market-ranking-section, #stock-ranking-section { border-top-color: #7c3aed; }
+#liquidity-section, #internals-section { border-top-color: #0891b2; }
+#scenario-review-section { border-top-color: #d97706; }
 #quality-section { border-top-color: #059669; }
 @media (max-width: 640px) {
   .container { padding: 10px; }
@@ -76,6 +94,8 @@ body {
   .history-date { grid-column: 1 / -1; grid-row: 1; min-height: 44px; }
   .history-button { min-height: 44px; padding: 8px 6px; }
   .section-title { padding-bottom: 8px; border-bottom: 1px solid #e5e7eb; }
+  .ranking-grid { grid-template-columns: 1fr; }
+  .internals-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
 </style>
 </head>
@@ -101,6 +121,9 @@ body {
 
   <nav class="mobile-section-nav" aria-label="日本株レポート内の移動">
     <button type="button" data-jp-target="quick-view">要点</button>
+    <button type="button" data-jp-target="market-ranking-section">ランキング</button>
+    <button type="button" data-jp-target="liquidity-section">需給</button>
+    <button type="button" data-jp-target="scenario-review-section">答え合わせ</button>
     <button type="button" data-jp-target="story-most-important">最重要</button>
     <button type="button" data-jp-target="story-important">重要</button>
     <button type="button" data-jp-target="story-other">その他</button>
@@ -118,6 +141,40 @@ body {
       <div class="label">注目業種</div>
       <div class="value" id="focus-sectors">確認中</div>
     </div>
+  </section>
+
+  <section class="section" id="market-ranking-section">
+    <div class="section-title">📊 セクター騰落ランキング</div>
+    <div class="market-note" id="japan-market-scope">市場実績データを読み込み中...</div>
+    <div class="ranking-grid">
+      <div class="ranking-card"><div class="ranking-title">上昇セクター</div><div id="sector-winners">確認中</div></div>
+      <div class="ranking-card"><div class="ranking-title">下落セクター</div><div id="sector-losers">確認中</div></div>
+    </div>
+  </section>
+
+  <section class="section" id="stock-ranking-section">
+    <div class="section-title">🏢 セクター内・主要銘柄ランキング</div>
+    <div class="market-note">各セクターの主要監視2銘柄を比較しています。全構成銘柄の順位ではありません。</div>
+    <div class="ranking-grid" id="sector-stock-ranking">確認中</div>
+  </section>
+
+  <section class="section" id="liquidity-section">
+    <div class="section-title">🔥 売買代金・出来高急増</div>
+    <div class="market-note">売買代金は終値×出来高の概算値、出来高急増は直近20日平均との比較です。</div>
+    <div class="ranking-grid">
+      <div class="ranking-card"><div class="ranking-title">売買代金上位（概算）</div><div id="trading-value-ranking">確認中</div></div>
+      <div class="ranking-card"><div class="ranking-title">出来高急増</div><div id="volume-surge-ranking">確認中</div></div>
+    </div>
+  </section>
+
+  <section class="section" id="internals-section">
+    <div class="section-title">🧭 市場内部の強弱</div>
+    <div id="market-internals">確認中</div>
+  </section>
+
+  <section class="section" id="scenario-review-section">
+    <div class="section-title">✅ 朝シナリオの答え合わせ</div>
+    <div id="scenario-review">大引け後の更新を待っています。</div>
   </section>
 
   <div id="story-sections"></div>
@@ -149,6 +206,7 @@ function setSelectedDate(dateKey) {
   const url = currentPageHref(selectedHistoryDate);
   window.history.replaceState({}, '', url);
   load();
+  loadJapanMarket();
 }
 
 function updateHistoryControls() {
@@ -329,6 +387,71 @@ function renderQuality(quality) {
   });
 }
 
+function signedPercent(value) {
+  const number = Number(value);
+  return Number.isFinite(number) ? `${number > 0 ? '+' : ''}${number.toFixed(2)}%` : '確認できず';
+}
+
+function rankingRows(holder, rows, valueFormatter, limit = 5) {
+  holder.replaceChildren();
+  const valid = Array.isArray(rows) ? rows.slice(0, limit) : [];
+  if (!valid.length) return appendText(holder, 'empty', 'データ更新待ち');
+  valid.forEach((row, index) => {
+    const item = document.createElement('div'); item.className = 'ranking-row';
+    appendText(item, 'ranking-rank', `${index + 1}`);
+    appendText(item, 'ranking-name', row.name || row.sector || row.ticker);
+    const value = appendText(item, 'ranking-value', valueFormatter(row));
+    if (Number(row.change_pct) > 0) value.classList.add('positive');
+    if (Number(row.change_pct) < 0) value.classList.add('negative');
+    holder.appendChild(item);
+  });
+}
+
+function renderJapanMarket(data) {
+  document.getElementById('japan-market-scope').textContent = `${text(data.scope)}｜市場日：${text(data.market_date)}｜更新：${text(data.updated_at)}`;
+  const sectors = Array.isArray(data.sector_ranking) ? data.sector_ranking : [];
+  rankingRows(document.getElementById('sector-winners'), sectors, row => signedPercent(row.change_pct));
+  rankingRows(document.getElementById('sector-losers'), [...sectors].reverse(), row => signedPercent(row.change_pct));
+  const stockHolder = document.getElementById('sector-stock-ranking'); stockHolder.replaceChildren();
+  (Array.isArray(data.sector_stock_ranking) ? data.sector_stock_ranking : []).forEach(group => {
+    if (!Array.isArray(group.stocks) || !group.stocks.length) return;
+    const card = document.createElement('div'); card.className = 'ranking-card';
+    appendText(card, 'ranking-title', group.sector);
+    rankingRows(card, group.stocks, row => signedPercent(row.change_pct), 2);
+    stockHolder.appendChild(card);
+  });
+  if (!stockHolder.children.length) appendText(stockHolder, 'empty', 'データ更新待ち');
+  rankingRows(document.getElementById('trading-value-ranking'), data.trading_value_ranking, row => {
+    const value = Number(row.trading_value_proxy_yen);
+    return Number.isFinite(value) ? `${(value / 100000000).toFixed(1)}億円` : '確認できず';
+  }, 10);
+  rankingRows(document.getElementById('volume-surge-ranking'), data.volume_surge_ranking, row => {
+    const value = Number(row.volume_ratio_20d);
+    return Number.isFinite(value) ? `${value.toFixed(2)}倍` : '確認できず';
+  }, 10);
+  const internals = data.market_internals || {}; const internalHolder = document.getElementById('market-internals'); internalHolder.replaceChildren();
+  const grid = document.createElement('div'); grid.className = 'internals-grid';
+  [['値上がり', internals.advancing], ['値下がり', internals.declining], ['変わらず', internals.unchanged], ['広がり指数', Number.isFinite(Number(internals.breadth_pct)) ? internals.breadth_pct : '-']].forEach(([label, value]) => {
+    const card = document.createElement('div'); card.className = 'internal-card'; appendText(card, 'internal-number', value); appendText(card, 'internal-label', label); grid.appendChild(card);
+  });
+  internalHolder.appendChild(grid); appendText(internalHolder, 'market-note', `対象：主要監視${text(internals.universe_size, 34)}銘柄｜指数比較：${text(internals.relative)}`);
+  const review = data.scenario_review || {}; const reviewHolder = document.getElementById('scenario-review'); reviewHolder.replaceChildren();
+  appendText(reviewHolder, 'summary-main', `判定：${text(review.status, '更新待ち')}`); appendText(reviewHolder, 'market-note', text(review.note, '大引け後に更新します'));
+  const checksHolder = document.createElement('div'); reviewHolder.appendChild(checksHolder);
+  rankingRows(checksHolder, review.checks, row => row.result, 10);
+}
+
+async function loadJapanMarket() {
+  const dataUrl = selectedHistoryDate ? `data/history/${selectedHistoryDate}/japan-market.json` : 'data/japan-market.json';
+  try {
+    const response = await fetch(dataUrl, { cache: 'no-store' });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    renderJapanMarket(await response.json());
+  } catch (error) {
+    renderJapanMarket({scope: selectedHistoryDate ? 'この日の市場実績データは未保存です' : '市場実績データを取得できません', market_internals: {}, scenario_review: {status:'確認できず'}});
+  }
+}
+
 async function load() {
   try {
     updateHistoryControls();
@@ -375,7 +498,7 @@ document.querySelectorAll('[data-jp-target]').forEach(button => {
     document.getElementById(button.dataset.jpTarget)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
-Promise.all([loadHistoryIndex(), load()]);
+Promise.all([loadHistoryIndex(), load(), loadJapanMarket()]);
 </script>
 </body>
 </html>

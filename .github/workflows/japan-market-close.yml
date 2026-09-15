@@ -1,0 +1,48 @@
+name: Japan Market Close Update
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/update_japan_market.py"
+      - "data/japan-universe.json"
+      - ".github/workflows/japan-market-close.yml"
+  schedule:
+    # 日本時間 平日15:45（UTC 06:45）
+    - cron: "45 6 * * 1-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: japan-market-close-update
+  cancel-in-progress: false
+
+jobs:
+  update-japan-market:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Calculate Japan market rankings and scenario review
+        run: python scripts/update_japan_market.py
+      - name: Validate JSON and archive
+        run: |
+          python -m json.tool data/japan-market.json > /dev/null
+          DATE_JST=$(TZ=Asia/Tokyo date +%Y-%m-%d)
+          mkdir -p "data/history/$DATE_JST"
+          cp data/japan-market.json "data/history/$DATE_JST/japan-market.json"
+      - name: Commit calculated data
+        run: |
+          git config user.name "Market Morning Bot"
+          git config user.email "actions@github.com"
+          git add data/japan-market.json data/history/
+          if git diff --cached --quiet; then
+            echo "No Japan market changes"
+          else
+            git commit -m "Update Japan market close data"
+            git push
+          fi

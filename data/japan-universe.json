@@ -1,0 +1,26 @@
+{
+  "description": "低負荷で日本株の地合いを把握するための固定監視ユニバース。全上場銘柄ランキングではない。",
+  "benchmarks": {
+    "topix_proxy": {"name": "TOPIX連動ETF", "ticker": "1306.T"},
+    "nikkei_proxy": {"name": "日経225連動ETF", "ticker": "1321.T"}
+  },
+  "sectors": [
+    {"name":"食品","etf":"1617.T","stocks":[{"ticker":"2502.T","name":"アサヒグループHD"},{"ticker":"2802.T","name":"味の素"}]},
+    {"name":"エネルギー資源","etf":"1618.T","stocks":[{"ticker":"1605.T","name":"INPEX"},{"ticker":"5020.T","name":"ENEOS HD"}]},
+    {"name":"建設・資材","etf":"1619.T","stocks":[{"ticker":"1801.T","name":"大成建設"},{"ticker":"1925.T","name":"大和ハウス工業"}]},
+    {"name":"素材・化学","etf":"1620.T","stocks":[{"ticker":"4063.T","name":"信越化学工業"},{"ticker":"4188.T","name":"三菱ケミカルグループ"}]},
+    {"name":"医薬品","etf":"1621.T","stocks":[{"ticker":"4502.T","name":"武田薬品工業"},{"ticker":"4568.T","name":"第一三共"}]},
+    {"name":"自動車・輸送機","etf":"1622.T","stocks":[{"ticker":"7203.T","name":"トヨタ自動車"},{"ticker":"7267.T","name":"本田技研工業"}]},
+    {"name":"鉄鋼・非鉄","etf":"1623.T","stocks":[{"ticker":"5401.T","name":"日本製鉄"},{"ticker":"5713.T","name":"住友金属鉱山"}]},
+    {"name":"機械","etf":"1624.T","stocks":[{"ticker":"6301.T","name":"小松製作所"},{"ticker":"7011.T","name":"三菱重工業"}]},
+    {"name":"電機・精密","etf":"1625.T","stocks":[{"ticker":"6501.T","name":"日立製作所"},{"ticker":"6758.T","name":"ソニーグループ"}]},
+    {"name":"情報通信・サービス","etf":"1626.T","stocks":[{"ticker":"9432.T","name":"NTT"},{"ticker":"9984.T","name":"ソフトバンクグループ"}]},
+    {"name":"電力・ガス","etf":"1627.T","stocks":[{"ticker":"9501.T","name":"東京電力HD"},{"ticker":"9503.T","name":"関西電力"}]},
+    {"name":"運輸・物流","etf":"1628.T","stocks":[{"ticker":"9020.T","name":"JR東日本"},{"ticker":"9101.T","name":"日本郵船"}]},
+    {"name":"商社・卸売","etf":"1629.T","stocks":[{"ticker":"8001.T","name":"伊藤忠商事"},{"ticker":"8058.T","name":"三菱商事"}]},
+    {"name":"小売","etf":"1630.T","stocks":[{"ticker":"8267.T","name":"イオン"},{"ticker":"9983.T","name":"ファーストリテイリング"}]},
+    {"name":"銀行","etf":"1631.T","stocks":[{"ticker":"8306.T","name":"三菱UFJ FG"},{"ticker":"8316.T","name":"三井住友FG"}]},
+    {"name":"金融（銀行除く）","etf":"1632.T","stocks":[{"ticker":"8591.T","name":"オリックス"},{"ticker":"8766.T","name":"東京海上HD"}]},
+    {"name":"不動産","etf":"1633.T","stocks":[{"ticker":"8801.T","name":"三井不動産"},{"ticker":"8802.T","name":"三菱地所"}]}
+  ]
+}

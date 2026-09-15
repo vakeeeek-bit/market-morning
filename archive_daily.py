@@ -27,6 +27,7 @@ DATA_DIR = ROOT / "data"
 REPORT_PATH = DATA_DIR / "report.json"
 MARKET_PATH = DATA_DIR / "market.json"
 JAPAN_STOCKS_PATH = DATA_DIR / "japan-stocks.json"
+JAPAN_MARKET_PATH = DATA_DIR / "japan-market.json"
 HISTORY_DIR = DATA_DIR / "history"
 INDEX_PATH = HISTORY_DIR / "index.json"
 
@@ -96,6 +97,7 @@ def history_entry(path: Path) -> dict:
     report_path = path / "report.json"
     market_path = path / "market.json"
     japan_stocks_path = path / "japan-stocks.json"
+    japan_market_path = path / "japan-market.json"
     report_exists = report_path.exists()
     market_exists = market_path.exists()
     report_valid = False
@@ -144,6 +146,7 @@ def history_entry(path: Path) -> dict:
         "has_report": report_valid,
         "has_market": market_valid,
         "has_japan_stocks": japan_stocks_valid,
+        "has_japan_market": japan_market_path.exists(),
         "report_type": report_type,
     }
 
@@ -228,6 +231,22 @@ def archive_japan_stocks() -> None:
     print(f"Archived {date_key}: japan-stocks.json")
 
 
+def archive_japan_market() -> None:
+    """Archive calculated Japan market data by its actual market date."""
+    if not JAPAN_MARKET_PATH.exists():
+        return
+    japan_market = load_json(JAPAN_MARKET_PATH)
+    date_key = japan_market.get("market_date")
+    if not isinstance(date_key, str) or not re.fullmatch(r"20\d{2}-\d{2}-\d{2}", date_key):
+        return
+    destination = HISTORY_DIR / date_key
+    destination.mkdir(parents=True, exist_ok=True)
+    temp_path = destination / "japan-market.json.tmp"
+    shutil.copy2(JAPAN_MARKET_PATH, temp_path)
+    temp_path.replace(destination / "japan-market.json")
+    print(f"Archived {date_key}: japan-market.json")
+
+
 def refresh_history_index() -> None:
     """現在の履歴フォルダから、表示用の履歴一覧を必ず再作成する。"""
     HISTORY_DIR.mkdir(parents=True, exist_ok=True)
@@ -284,6 +303,7 @@ def main() -> None:
     HISTORY_DIR.mkdir(parents=True, exist_ok=True)
     backfill_from_git()
     archive_japan_stocks()
+    archive_japan_market()
 
     if market_date and market_date != date_key:
         refresh_history_index()

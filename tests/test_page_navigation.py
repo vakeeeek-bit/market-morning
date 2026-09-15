@@ -69,6 +69,16 @@ class PageNavigationTests(unittest.TestCase):
         self.assertIn('class="mobile-section-nav"', japan)
         self.assertIn('data-jp-target="story-most-important"', japan)
 
+    def test_japan_market_enrichment_sections_are_present(self):
+        japan = self.read("japan-stocks.html")
+        for element_id in (
+            "market-ranking-section", "stock-ranking-section", "liquidity-section",
+            "internals-section", "scenario-review-section"
+        ):
+            self.assertIn(f'id="{element_id}"', japan)
+        self.assertIn("全構成銘柄の順位ではありません", japan)
+        self.assertIn("終値×出来高の概算値", japan)
+
     def test_latest_view_warns_when_market_and_report_dates_differ(self):
         world = self.read("index.html")
         self.assertIn('id="freshness-warning"', world)

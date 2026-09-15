@@ -53,6 +53,11 @@ class PageNavigationTests(unittest.TestCase):
         self.assertIn("新しいレポートは品質確認中", world)
         self.assertIn("AIレポート：${reportLabel}（更新待ち）", world)
 
+    def test_structured_policy_cards_are_not_rendered_as_raw_json(self):
+        world = self.read("index.html")
+        self.assertIn("return { title, ...content };", world)
+        self.assertNotIn("typeof content === 'object' ? JSON.stringify(content)", world)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -4209,11 +4209,18 @@ function normalizeCards(value) {
   if (Array.isArray(value)) return value;
   if (!value || typeof value !== 'object') return [];
 
-  return Object.entries(value).map(([key, content]) => ({
-    title: key.replaceAll('_', ' '),
-    description: Array.isArray(content) ? content.join(' / ') :
-      (typeof content === 'object' ? JSON.stringify(content) : String(content))
-  }));
+  return Object.entries(value).map(([key, content]) => {
+    const title = key.replaceAll('_', ' ');
+
+    if (content && typeof content === 'object' && !Array.isArray(content)) {
+      return { title, ...content };
+    }
+
+    return {
+      title,
+      description: Array.isArray(content) ? content.join(' / ') : String(content)
+    };
+  });
 }
 
 function renderJapanEquitiesPreview(preview) {

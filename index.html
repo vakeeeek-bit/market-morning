@@ -1071,12 +1071,12 @@ td.nowrap {
 <div class="mm-v3-tools" id="mm-v3-tools">
   <div class="mm-v3-nav">
     <button type="button" data-mm-target="executive">📌 概要</button>
-    <button type="button" data-mm-target="news">🔥 News</button>
+    <button type="button" data-mm-target="news">🔥 ニュース</button>
     <button type="button" data-mm-target="market">📈 市場</button>
     <button type="button" data-mm-target="commodity">🛢 商品</button>
-    <button type="button" data-mm-target="crypto">₿ Crypto</button>
-    <button type="button" data-mm-target="scenario">🎯 Scenario</button>
-    <button type="button" data-mm-target="watch">👀 Watch</button>
+    <button type="button" data-mm-target="crypto">₿ 暗号資産</button>
+    <button type="button" data-mm-target="scenario">🎯 シナリオ</button>
+    <button type="button" data-mm-target="watch">👀 監視項目</button>
   </div>
   <div class="mm-v3-actions">
     <button type="button" id="mm-expand-all">すべて展開</button>
@@ -1088,7 +1088,7 @@ td.nowrap {
      QUICK VIEW
 ===================================================== -->
 <div class="quick-view" id="quick-view">
-  <div class="quick-view-title" id="quick-view-title">⚡ QUICK VIEW｜朝3分</div>
+  <div class="quick-view-title" id="quick-view-title">⚡ 朝3分の要点</div>
 
   <div class="quick-view-grid">
     <div class="quick-box">
@@ -1097,14 +1097,14 @@ td.nowrap {
     </div>
 
     <div class="quick-box">
-      <div class="quick-label">🔥 重要ニュース TOP3</div>
+      <div class="quick-label">🔥 重要ニュース 上位3件</div>
       <ol class="quick-list" id="quick-news">
         <li>確認中</li>
       </ol>
     </div>
 
     <div class="quick-box">
-      <div class="quick-label" id="quick-events-label">📅 今日最重要 TOP3</div>
+      <div class="quick-label" id="quick-events-label">📅 今日の最重要事項 3件</div>
       <ol class="quick-list" id="quick-events">
         <li>確認中</li>
       </ol>
@@ -1123,7 +1123,7 @@ td.nowrap {
 <div class="section" id="executive-section">
 
   <div class="section-title">
-    📌 EXECUTIVE SUMMARY
+    📌 市場概況
   </div>
 
   <div class="summary-main" id="executive-headline">
@@ -1141,22 +1141,22 @@ td.nowrap {
   </div>
 
   <div class="summary-box">
-    <div class="label">🏆 昨日の勝者 TOP3</div>
+    <div class="label">🏆 相対的に強かった市場 3件</div>
     <div class="value" id="executive-winners">確認中</div>
   </div>
 
   <div class="summary-box">
-    <div class="label">⚠️ 昨日の敗者 TOP3</div>
+    <div class="label">⚠️ 相対的に弱かった市場 3件</div>
     <div class="value" id="executive-losers">確認中</div>
   </div>
 
   <div class="summary-box">
-    <div class="label">📅 今日最重要 TOP3</div>
+    <div class="label">📅 今日の最重要事項 3件</div>
     <div class="value" id="executive-events">確認中</div>
   </div>
 
   <div class="summary-box">
-    <div class="label">👀 今日最も見るべき市場 TOP5</div>
+    <div class="label">👀 今日最も見るべき市場 5件</div>
     <div class="value" id="executive-watch">確認中</div>
   </div>
 
@@ -1184,7 +1184,7 @@ td.nowrap {
     <div class="change-card"><div class="change-label">米2年金利</div><div class="change-value" id="chg-us2y">確認中</div><div class="change-detail" id="chg-us2y-detail">-</div></div>
     <div class="change-card"><div class="change-label">2s10s</div><div class="change-value" id="chg-2s10s">確認中</div><div class="change-detail" id="chg-2s10s-detail">-</div></div>
     <div class="change-card"><div class="change-label">VIX</div><div class="change-value" id="chg-vix">確認中</div><div class="change-detail" id="chg-vix-detail">-</div></div>
-    <div class="change-card"><div class="change-label">Copper</div><div class="change-value" id="chg-copper">確認中</div><div class="change-detail" id="chg-copper-detail">-</div></div>
+    <div class="change-card"><div class="change-label">銅先物（COMEX）</div><div class="change-value" id="chg-copper">確認中</div><div class="change-detail" id="chg-copper-detail">-</div></div>
     <div class="change-card"><div class="change-label">BTC</div><div class="change-value" id="chg-btc">確認中</div><div class="change-detail" id="chg-btc-detail">-</div></div>
   </div>
 
@@ -1203,19 +1203,19 @@ td.nowrap {
   <div class="section-title">📈 市場別チャート</div>
   <div class="section-sub">保存済みmarket.jsonを使った直近30回分の推移</div>
   <div class="asset-chart-tabs" id="asset-chart-tabs">
-    <button class="asset-chart-tab active" type="button" data-chart-key="copper">Copper</button>
+    <button class="asset-chart-tab active" type="button" data-chart-key="copper">銅先物（COMEX）</button>
     <button class="asset-chart-tab" type="button" data-chart-key="wti">原油（WTI）</button>
-    <button class="asset-chart-tab" type="button" data-chart-key="gold">Gold</button>
+    <button class="asset-chart-tab" type="button" data-chart-key="gold">金</button>
     <button class="asset-chart-tab" type="button" data-chart-key="usdjpy">USD/JPY</button>
   </div>
   <div class="asset-chart-wrap">
     <div class="asset-chart-meta">
-      <strong id="asset-chart-name">Copper</strong>
+      <strong id="asset-chart-name">銅先物（COMEX・HG=F）</strong>
       <span id="asset-chart-range">履歴を読み込み中...</span>
     </div>
     <div id="asset-chart-body" class="asset-chart-empty">履歴を読み込み中...</div>
   </div>
-  <div class="asset-chart-legend">※ 情報源や単位が途中で変わった場合は、連続比較に注意してください。</div>
+  <div class="asset-chart-legend">※ 銅はCOMEX銅先物の期近継続データ（HG=F、米ドル/ポンド）です。LME現物価格ではありません。情報源や限月の切替には注意してください。</div>
 </div>
 
 
@@ -1308,7 +1308,7 @@ td.nowrap {
     </div>
 
     <div class="market-card">
-      <div class="market-name">Gold</div>
+      <div class="market-name">金</div>
       <div class="market-price">確認中</div>
       <div class="market-change">確認中</div>
     </div>
@@ -1320,7 +1320,7 @@ td.nowrap {
     </div>
 
     <div class="market-card">
-      <div class="market-name">Copper</div>
+      <div class="market-name">銅先物（COMEX）</div>
       <div class="market-price">確認中</div>
       <div class="market-change">確認中</div>
     </div>
@@ -1363,7 +1363,7 @@ td.nowrap {
 <div class="section" id="price-ranking-section">
 
   <div class="section-title">
-    📈 騰落率 TOP5
+    📈 騰落率 上位5件
   </div>
 
   <div class="section-sub">
@@ -1414,7 +1414,7 @@ td.nowrap {
 <div class="section" id="relative-ranking-section">
 
   <div class="section-title">
-    🏆 相対的に強かった市場 TOP5
+    🏆 相対的に強かった市場 5件
   </div>
 
   <div class="section-sub">
@@ -1537,7 +1537,7 @@ td.nowrap {
 <div class="section" id="asset-analysis-section">
 
   <div class="section-title">
-    🌐 クロスアセット分析
+    🌐 市場横断分析
   </div>
 
   <div class="report-grid">
@@ -1601,7 +1601,7 @@ td.nowrap {
 <div class="section" id="copper-section">
 
   <div class="section-title">
-    🟠 Copper重点調査
+    🟠 銅市場の重点調査
   </div>
 
   <div class="report-rating" id="rating-copper">
@@ -1817,29 +1817,8 @@ td.nowrap {
 </div>
 
 
-<!-- =====================================================
-     JAPAN EQUITIES LINK
-===================================================== -->
-
-<div class="section" id="japan-equities-section">
-
-  <div class="section-title">
-    🇯🇵 本日の日本株
-  </div>
-
-  <div class="section-sub">
-    日本株見通し、重要材料TOP5、注目業種、個別ニュースは日本株画面に集約しています。
-  </div>
-
-  <a class="japan-detail-link" id="japan-detail-link" href="japan-stocks.html">
-    日本株画面を見る →
-  </a>
-
-</div>
-
-
 <div class="footer">
-  Market Morning ｜ Personal Macro Dashboard
+  Market Morning ｜ 個人向け市場分析ダッシュボード
 </div>
 
 
@@ -1940,9 +1919,9 @@ let marketHistoryCache = [];
 let activeChartKey = 'copper';
 
 const chartAssets = {
-  copper: { label: 'Copper', unit: '', decimals: 2 },
+  copper: { label: '銅先物（COMEX・HG=F）', unit: '$', decimals: 4 },
   wti: { label: '原油（WTI）', unit: '$', decimals: 2 },
-  gold: { label: 'Gold', unit: '$', decimals: 2 },
+  gold: { label: '金', unit: '$', decimals: 2 },
   usdjpy: { label: 'USD/JPY', unit: '¥', decimals: 2 }
 };
 
@@ -2067,7 +2046,7 @@ function updateDataFreshness() {
     quickConclusionLabel.textContent = `📌 ${reportLabel}版の市場の結論`;
   }
   if (quickEventsLabel) {
-    quickEventsLabel.textContent = `📅 ${reportLabel}版の最重要 TOP3`;
+    quickEventsLabel.textContent = `📅 ${reportLabel}版の最重要事項 3件`;
   }
 }
 
@@ -2136,9 +2115,9 @@ function resetLoadingState() {
   const quickViewTitle = document.getElementById('quick-view-title');
   const quickConclusionLabel = document.getElementById('quick-conclusion-label');
   const quickEventsLabel = document.getElementById('quick-events-label');
-  if (quickViewTitle) quickViewTitle.textContent = '⚡ QUICK VIEW｜朝3分';
+  if (quickViewTitle) quickViewTitle.textContent = '⚡ 朝3分の要点';
   if (quickConclusionLabel) quickConclusionLabel.textContent = '📌 今日の市場の結論';
-  if (quickEventsLabel) quickEventsLabel.textContent = '📅 今日最重要 TOP3';
+  if (quickEventsLabel) quickEventsLabel.textContent = '📅 今日の最重要事項 3件';
 }
 
 async function loadSelectedDay() {
@@ -4212,7 +4191,15 @@ function normalizeCards(value) {
   const titles = {
     trump_us_government: 'Trump・米政府',
     fed: 'FRB・FOMC',
-    boj_japan: '日本銀行'
+    boj_japan: '日本銀行',
+    large_vs_small: '大型株と小型株',
+    growth_vs_value: 'グロース株とバリュー株',
+    cyclical_vs_defensive: '景気敏感株とディフェンシブ株',
+    semiconductors: '半導体',
+    financials: '金融',
+    energy: 'エネルギー',
+    breadth: '市場全体への広がり',
+    risk_tone: 'リスク選好'
   };
 
   return Object.entries(value).map(([key, content]) => {
@@ -4245,7 +4232,7 @@ function renderJapanEquitiesPreview(preview) {
   element.appendChild(summary);
 
   const groups = [
-    ['重要材料 TOP5', preview.top_materials],
+    ['重要材料 5件', preview.top_materials],
     ['注目業種', preview.focus_sectors]
   ];
 
@@ -4308,7 +4295,6 @@ function applyReportSectionOrder() {
     'strength-section',
     'quality-section',
     'final-section',
-    'japan-equities-section',
     'asset-history-section',
     'price-ranking-section',
     'relative-ranking-section',
@@ -4357,8 +4343,8 @@ async function loadMarketReport() {
 
     if (quickViewTitle) {
       quickViewTitle.textContent = isWeeklyReport
-        ? '⚡ WEEKLY QUICK VIEW｜週間総括'
-        : '⚡ QUICK VIEW｜朝3分';
+        ? '⚡ 週間の要点｜1週間の総括'
+        : '⚡ 朝3分の要点';
     }
     if (quickConclusionLabel) {
       quickConclusionLabel.textContent = isWeeklyReport
@@ -4367,8 +4353,8 @@ async function loadMarketReport() {
     }
     if (quickEventsLabel) {
       quickEventsLabel.textContent = isWeeklyReport
-        ? '📅 翌週最重要 TOP3'
-        : '📅 今日最重要 TOP3';
+        ? '📅 翌週の最重要事項 3件'
+        : '📅 今日の最重要事項 3件';
     }
 
     const reportTypeBadge = document.getElementById('report-type-badge');
@@ -5134,7 +5120,7 @@ function setupVer3UX() {
 
     const sectionTitle = mmText(title).toUpperCase();
     const keepOpen =
-      sectionTitle.includes('EXECUTIVE') ||
+      sectionTitle.includes('市場概況') ||
       sectionTitle.includes('昨日から何が変わった');
 
     if (!keepOpen) {
@@ -5179,7 +5165,7 @@ function setupVer3UX() {
   });
 
   const keywords = {
-    executive: ['EXECUTIVE'],
+    executive: ['市場概況'],
     news: ['NEWS', 'MAIN STORY', 'ニュース'],
     market: ['MARKET DATA', 'MARKET OVERVIEW', '市場'],
     commodity: ['COMMOD', 'COPPER', '商品'],

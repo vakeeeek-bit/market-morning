@@ -43,8 +43,24 @@ class PageNavigationTests(unittest.TestCase):
         world = self.read("index.html")
         japan = self.read("japan-stocks.html")
         self.assertNotIn('id="japan-equities-preview"', world)
+        self.assertNotIn('id="japan-equities-section"', world)
         self.assertIn('id="top-materials"', japan)
         self.assertIn('id="story-sections"', japan)
+
+    def test_reader_facing_headings_are_localized(self):
+        world = self.read("index.html")
+        japan = self.read("japan-stocks.html")
+        self.assertIn("朝3分の要点", world)
+        self.assertIn("市場概況", world)
+        self.assertIn("市場横断分析", world)
+        self.assertNotIn(">QUICK VIEW<", japan)
+        self.assertIn("朝3分の要点", japan)
+
+    def test_copper_chart_identifies_instrument_and_unit(self):
+        world = self.read("index.html")
+        self.assertIn("銅先物（COMEX・HG=F）", world)
+        self.assertIn("米ドル/ポンド", world)
+        self.assertIn("LME現物価格ではありません", world)
 
     def test_latest_view_warns_when_market_and_report_dates_differ(self):
         world = self.read("index.html")

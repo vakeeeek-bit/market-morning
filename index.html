@@ -4209,8 +4209,14 @@ function normalizeCards(value) {
   if (Array.isArray(value)) return value;
   if (!value || typeof value !== 'object') return [];
 
+  const titles = {
+    trump_us_government: 'Trump・米政府',
+    fed: 'FRB・FOMC',
+    boj_japan: '日本銀行'
+  };
+
   return Object.entries(value).map(([key, content]) => {
-    const title = key.replaceAll('_', ' ');
+    const title = titles[key] || key.replaceAll('_', ' ');
 
     if (content && typeof content === 'object' && !Array.isArray(content)) {
       return { title, ...content };

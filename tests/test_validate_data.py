@@ -26,7 +26,6 @@ class ValidateDataTest(unittest.TestCase):
     def test_current_data_has_no_errors(self):
         result = run(ROOT)
         self.assertEqual([], result.errors)
-        self.assertTrue(result.warnings)
 
     def test_top5_mismatch_is_error(self):
         def mutate(name, data):

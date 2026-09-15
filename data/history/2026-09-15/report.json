@@ -402,19 +402,19 @@
   ],
   "market_overview": [
     {
-      "name": "米国株",
+      "market": "米国株",
       "move": "下落",
       "strength": "弱い",
       "background": "金利上昇、原油高、AI・半導体売り。日本の半導体・グロース中心に向かい風。"
     },
     {
-      "name": "原油",
+      "market": "原油",
       "move": "上昇",
       "strength": "強い",
       "background": "中東供給不安。日本の資源株に追い風、輸送・消費に逆風。"
     },
     {
-      "name": "ドル",
+      "market": "ドル",
       "move": "上昇",
       "strength": "強い",
       "background": "利上げ観測と安全需要。日本株には輸出支援と輸入コスト増の両面。"

@@ -4,6 +4,7 @@
   "properties": {
     "updated_at": {"type": ["string", "null"]},
     "market_date": {"type": ["string", "null"]},
+    "data_phase": {"type": "string"},
     "source": {"type": "string"},
     "scope": {"type": "string"},
     "sector_ranking": {"type": "array", "items": {"type": "object"}},

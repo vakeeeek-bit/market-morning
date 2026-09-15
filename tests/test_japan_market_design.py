@@ -22,6 +22,8 @@ class JapanMarketDesignTests(unittest.TestCase):
         self.assertIn('period="35d"', source)
         self.assertIn("meets_quality_gate", source)
         self.assertIn("既存データを維持します", source)
+        self.assertIn('data_phase = "大引け後" if review_ready else "取引中暫定"', source)
+        self.assertIn('result["status"] = "大引け待ち"', source)
 
     def test_close_workflow_runs_after_tokyo_close(self):
         source = (ROOT / ".github" / "workflows" / "japan-market-close.yml").read_text(encoding="utf-8")

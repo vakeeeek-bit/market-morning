@@ -60,7 +60,7 @@ def calculate_row(download, ticker, name, sector=None):
     }
 
 
-def scenario_review(report, sector_rows, market_date):
+def scenario_review(report, sector_rows, market_date, ready=True):
     focus = report.get("japan_quick_view", {}).get("focus_sectors", []) if isinstance(report, dict) else []
     aliases = {
         "石油・鉱業": "エネルギー資源", "商社": "商社・卸売", "半導体": "電機・精密",
@@ -78,13 +78,18 @@ def scenario_review(report, sector_rows, market_date):
     top = {row["name"] for row in ranked[:3]}
     bottom = {row["name"] for row in ranked[-3:]}
     checks = [{"sector": name, "result": "上位3" if name in top else "下位3" if name in bottom else "中位"} for name in watched]
-    return {
+    result = {
         "market_date": market_date,
         "basis": "朝レポートの注目業種を、TOPIX-17業種ETFの当日騰落順位と機械照合",
         "status": "判定可能" if checks else "対象なし",
         "checks": checks,
         "note": "方向予想の的中率ではなく、朝の注目業種が実際に相対的な上位・下位へ現れたかを確認",
     }
+    if not ready:
+        result["status"] = "大引け待ち"
+        result["checks"] = []
+        result["note"] = "取引中のため判定しません。平日15:45 JSTの更新後に機械照合します"
+    return result
 
 
 def build(download, universe, report, now):
@@ -99,6 +104,10 @@ def build(download, universe, report, now):
     valid_stocks = [row for row in stocks if row.get("status") == "取得成功"]
     market_dates = [row["market_date"] for row in valid_sectors + valid_stocks]
     market_date = max(market_dates) if market_dates else None
+    today = now.strftime("%Y-%m-%d")
+    after_close = (now.hour, now.minute) >= (15, 30)
+    review_ready = bool(market_date and (market_date < today or after_close))
+    data_phase = "大引け後" if review_ready else "取引中暫定"
     sector_rank = sorted(valid_sectors, key=lambda row: row["change_pct"], reverse=True)
     stock_groups = []
     for sector in universe["sectors"]:
@@ -112,6 +121,7 @@ def build(download, universe, report, now):
     return {
         "updated_at": now.strftime("%Y-%m-%d %H:%M:%S JST"),
         "market_date": market_date,
+        "data_phase": data_phase,
         "source": "Yahoo Finance via yfinance（1回の一括取得）",
         "scope": "TOPIX-17業種ETFと各業種の主要監視2銘柄。全上場銘柄・東証公式統計ではない",
         "sector_ranking": sector_rank,
@@ -126,7 +136,7 @@ def build(download, universe, report, now):
             "topix_proxy_change_pct": topix.get("change_pct") if topix else None,
             "relative": "日経225優位" if nikkei and topix and nikkei["change_pct"] > topix["change_pct"] else "TOPIX優位" if nikkei and topix else "確認できず",
         },
-        "scenario_review": scenario_review(report, sector_rank, market_date),
+        "scenario_review": scenario_review(report, sector_rank, market_date, review_ready),
         "data_quality": {"sector_total": len(sectors), "sector_available": len(valid_sectors), "stock_total": len(stocks), "stock_available": len(valid_stocks)},
     }
 

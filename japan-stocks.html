@@ -408,7 +408,7 @@ function rankingRows(holder, rows, valueFormatter, limit = 5) {
 }
 
 function renderJapanMarket(data) {
-  document.getElementById('japan-market-scope').textContent = `${text(data.scope)}｜市場日：${text(data.market_date)}｜更新：${text(data.updated_at)}`;
+  document.getElementById('japan-market-scope').textContent = `${text(data.scope)}｜市場日：${text(data.market_date)}｜区分：${text(data.data_phase)}｜更新：${text(data.updated_at)}`;
   const sectors = Array.isArray(data.sector_ranking) ? data.sector_ranking : [];
   rankingRows(document.getElementById('sector-winners'), sectors, row => signedPercent(row.change_pct));
   rankingRows(document.getElementById('sector-losers'), [...sectors].reverse(), row => signedPercent(row.change_pct));

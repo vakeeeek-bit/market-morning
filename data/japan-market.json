@@ -1,7 +1,7 @@
 {
   "updated_at": "2026-09-16 06:31:37 JST",
   "market_date": "2026-09-15",
-  "data_phase": "大引け後",
+  "data_phase": "日付不一致・判定保留",
   "source": "Yahoo Finance via yfinance（1回の一括取得）",
   "scope": "TOPIX-17業種ETFと各業種の主要監視2銘柄。全上場銘柄・東証公式統計ではない",
   "sector_ranking": [
@@ -958,40 +958,27 @@
     "breadth_pct": -76.5,
     "nikkei_proxy_change_pct": -0.59,
     "topix_proxy_change_pct": 0.86,
-    "relative": "TOPIX優位"
+    "relative": "日付不一致"
   },
   "scenario_review": {
     "market_date": "2026-09-15",
     "basis": "朝レポートの注目業種を、TOPIX-17業種ETFの当日騰落順位と機械照合",
-    "status": "判定可能",
-    "checks": [
-      {
-        "sector": "エネルギー資源",
-        "result": "下位3"
-      },
-      {
-        "sector": "商社・卸売",
-        "result": "中位"
-      },
-      {
-        "sector": "銀行",
-        "result": "上位3"
-      },
-      {
-        "sector": "電機・精密",
-        "result": "下位3"
-      },
-      {
-        "sector": "運輸・物流",
-        "result": "上位3"
-      }
-    ],
-    "note": "方向予想の的中率ではなく、朝の注目業種が実際に相対的な上位・下位へ現れたかを確認"
+    "status": "判定保留",
+    "checks": [],
+    "note": "日付が一致しないため判定しません。朝レポート=2026-09-15、セクター=2026-09-14、銘柄=2026-09-15"
   },
   "data_quality": {
     "sector_total": 17,
     "sector_available": 17,
     "stock_total": 34,
-    "stock_available": 34
+    "stock_available": 34,
+    "date_alignment": {
+      "expected_market_date": "2026-09-15",
+      "sector_market_date": "2026-09-14",
+      "stock_market_date": "2026-09-15",
+      "benchmark_market_date": "2026-09-15",
+      "aligned": false,
+      "benchmark_aligned": true
+    }
   }
 }

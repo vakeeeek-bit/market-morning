@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import math
+from collections import Counter
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -16,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 UNIVERSE_PATH = ROOT / "data" / "japan-universe.json"
 OUTPUT_PATH = ROOT / "data" / "japan-market.json"
 JAPAN_REPORT_PATH = ROOT / "data" / "japan-stocks.json"
+HISTORY_ROOT = ROOT / "data" / "history"
 
 
 def finite(value):
@@ -60,7 +62,47 @@ def calculate_row(download, ticker, name, sector=None):
     }
 
 
-def scenario_review(report, sector_rows, market_date, ready=True):
+def dominant_market_date(rows):
+    dates = [row.get("market_date") for row in rows if row.get("status") == "取得成功" and row.get("market_date")]
+    if not dates:
+        return None
+    return Counter(dates).most_common(1)[0][0]
+
+
+def rows_for_date(rows, market_date):
+    return [row for row in rows if row.get("status") == "取得成功" and row.get("market_date") == market_date]
+
+
+def snapshot_dates(snapshot):
+    sector_rows = snapshot.get("sector_ranking", []) if isinstance(snapshot, dict) else []
+    stock_rows = []
+    if isinstance(snapshot, dict):
+        for group in snapshot.get("sector_stock_ranking", []):
+            stock_rows.extend(group.get("stocks", []))
+    return dominant_market_date(sector_rows), dominant_market_date(stock_rows)
+
+
+def aligned_fallback_snapshot(snapshot, expected_market_date):
+    sector_date, stock_date = snapshot_dates(snapshot)
+    if not expected_market_date or sector_date != expected_market_date or stock_date != expected_market_date:
+        return None
+    result = dict(snapshot)
+    quality = dict(result.get("data_quality", {}))
+    quality["date_alignment"] = {
+        "expected_market_date": expected_market_date,
+        "sector_market_date": sector_date,
+        "stock_market_date": stock_date,
+        "benchmark_market_date": None,
+        "aligned": True,
+        "benchmark_aligned": False,
+    }
+    result["data_quality"] = quality
+    result["market_date"] = expected_market_date
+    result["data_phase"] = "大引け後"
+    return result
+
+
+def scenario_review(report, sector_rows, market_date, ready=True, blocked_reason=None):
     focus = report.get("japan_quick_view", {}).get("focus_sectors", []) if isinstance(report, dict) else []
     aliases = {
         "石油・鉱業": "エネルギー資源", "商社": "商社・卸売", "半導体": "電機・精密",
@@ -85,7 +127,11 @@ def scenario_review(report, sector_rows, market_date, ready=True):
         "checks": checks,
         "note": "方向予想の的中率ではなく、朝の注目業種が実際に相対的な上位・下位へ現れたかを確認",
     }
-    if not ready:
+    if blocked_reason:
+        result["status"] = "判定保留"
+        result["checks"] = []
+        result["note"] = blocked_reason
+    elif not ready:
         result["status"] = "大引け待ち"
         result["checks"] = []
         result["note"] = "取引中のため判定しません。平日15:45 JSTの更新後に機械照合します"
@@ -100,14 +146,30 @@ def build(download, universe, report, now):
         for stock in sector["stocks"]:
             stocks.append(calculate_row(download, stock["ticker"], stock["name"], sector["name"]))
     benchmarks = [calculate_row(download, value["ticker"], value["name"]) for value in universe["benchmarks"].values()]
-    valid_sectors = [row for row in sectors if row.get("status") == "取得成功"]
-    valid_stocks = [row for row in stocks if row.get("status") == "取得成功"]
-    market_dates = [row["market_date"] for row in valid_sectors + valid_stocks]
-    market_date = max(market_dates) if market_dates else None
+    fetched_sectors = [row for row in sectors if row.get("status") == "取得成功"]
+    fetched_stocks = [row for row in stocks if row.get("status") == "取得成功"]
+    fetched_benchmarks = [row for row in benchmarks if row.get("status") == "取得成功"]
+    sector_date = dominant_market_date(fetched_sectors)
+    stock_date = dominant_market_date(fetched_stocks)
+    benchmark_date = dominant_market_date(fetched_benchmarks)
+    valid_sectors = rows_for_date(fetched_sectors, sector_date)
+    valid_stocks = rows_for_date(fetched_stocks, stock_date)
+    valid_benchmarks = rows_for_date(fetched_benchmarks, benchmark_date)
+    expected_market_date = report.get("report_date") if isinstance(report, dict) else None
+    market_date = stock_date or sector_date
+    date_aligned = bool(expected_market_date and sector_date == stock_date == expected_market_date)
+    benchmark_aligned = bool(stock_date and benchmark_date == stock_date)
     today = now.strftime("%Y-%m-%d")
     after_close = (now.hour, now.minute) >= (15, 30)
-    review_ready = bool(market_date and (market_date < today or after_close))
-    data_phase = "大引け後" if review_ready else "取引中暫定"
+    review_ready = bool(date_aligned and market_date and (market_date < today or after_close))
+    blocked_reason = None
+    if not date_aligned:
+        blocked_reason = (
+            "日付が一致しないため判定しません。"
+            f"朝レポート={expected_market_date or '確認できず'}、"
+            f"セクター={sector_date or '確認できず'}、銘柄={stock_date or '確認できず'}"
+        )
+    data_phase = "日付不一致・判定保留" if blocked_reason else "大引け後" if review_ready else "取引中暫定"
     sector_rank = sorted(valid_sectors, key=lambda row: row["change_pct"], reverse=True)
     stock_groups = []
     for sector in universe["sectors"]:
@@ -116,8 +178,8 @@ def build(download, universe, report, now):
     advancing = sum(row["change_pct"] > 0 for row in valid_stocks)
     declining = sum(row["change_pct"] < 0 for row in valid_stocks)
     unchanged = len(valid_stocks) - advancing - declining
-    topix = next((row for row in benchmarks if row["ticker"] == "1306.T" and row.get("status") == "取得成功"), None)
-    nikkei = next((row for row in benchmarks if row["ticker"] == "1321.T" and row.get("status") == "取得成功"), None)
+    topix = next((row for row in valid_benchmarks if row["ticker"] == "1306.T"), None)
+    nikkei = next((row for row in valid_benchmarks if row["ticker"] == "1321.T"), None)
     return {
         "updated_at": now.strftime("%Y-%m-%d %H:%M:%S JST"),
         "market_date": market_date,
@@ -134,10 +196,21 @@ def build(download, universe, report, now):
             "breadth_pct": round((advancing - declining) / len(valid_stocks) * 100, 1) if valid_stocks else None,
             "nikkei_proxy_change_pct": nikkei.get("change_pct") if nikkei else None,
             "topix_proxy_change_pct": topix.get("change_pct") if topix else None,
-            "relative": "日経225優位" if nikkei and topix and nikkei["change_pct"] > topix["change_pct"] else "TOPIX優位" if nikkei and topix else "確認できず",
+            "relative": "日付不一致" if not benchmark_aligned else "日経225優位" if nikkei and topix and nikkei["change_pct"] > topix["change_pct"] else "TOPIX優位" if nikkei and topix else "確認できず",
         },
-        "scenario_review": scenario_review(report, sector_rank, market_date, review_ready),
-        "data_quality": {"sector_total": len(sectors), "sector_available": len(valid_sectors), "stock_total": len(stocks), "stock_available": len(valid_stocks)},
+        "scenario_review": scenario_review(report, sector_rank, expected_market_date, review_ready, blocked_reason),
+        "data_quality": {
+            "sector_total": len(sectors), "sector_available": len(valid_sectors),
+            "stock_total": len(stocks), "stock_available": len(valid_stocks),
+            "date_alignment": {
+                "expected_market_date": expected_market_date,
+                "sector_market_date": sector_date,
+                "stock_market_date": stock_date,
+                "benchmark_market_date": benchmark_date,
+                "aligned": date_aligned,
+                "benchmark_aligned": benchmark_aligned,
+            },
+        },
     }
 
 
@@ -162,6 +235,21 @@ def main():
             f"sector={quality['sector_available']}/{quality['sector_total']}, "
             f"stock={quality['stock_available']}/{quality['stock_total']}"
         )
+    alignment = result.get("data_quality", {}).get("date_alignment", {})
+    if not alignment.get("aligned"):
+        expected = alignment.get("expected_market_date")
+        candidates = []
+        if OUTPUT_PATH.exists():
+            candidates.append(json.loads(OUTPUT_PATH.read_text(encoding="utf-8")))
+        archive_path = HISTORY_ROOT / str(expected) / "japan-market.json"
+        if expected and archive_path.exists():
+            candidates.append(json.loads(archive_path.read_text(encoding="utf-8")))
+        for candidate in candidates:
+            fallback = aligned_fallback_snapshot(candidate, expected)
+            if fallback:
+                OUTPUT_PATH.write_text(json.dumps(fallback, ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+                print(f"取得日不一致のため、整合済みの{expected}データを維持しました")
+                return
     OUTPUT_PATH.write_text(json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8")
 
 

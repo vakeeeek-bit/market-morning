@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "required": ["updated_at", "market_date", "source", "scope", "sector_ranking", "sector_stock_ranking", "trading_value_ranking", "volume_surge_ranking", "market_internals", "scenario_review", "data_quality"],
+  "required": ["updated_at", "market_date", "data_phase", "source", "scope", "sector_ranking", "sector_stock_ranking", "trading_value_ranking", "volume_surge_ranking", "market_internals", "scenario_review", "data_quality"],
   "properties": {
     "updated_at": {"type": ["string", "null"]},
     "market_date": {"type": ["string", "null"]},
@@ -13,7 +13,28 @@
     "volume_surge_ranking": {"type": "array", "items": {"type": "object"}},
     "market_internals": {"type": "object"},
     "scenario_review": {"type": "object"},
-    "data_quality": {"type": "object"}
+    "data_quality": {
+      "type": "object",
+      "required": ["sector_total", "sector_available", "stock_total", "stock_available", "date_alignment"],
+      "properties": {
+        "sector_total": {"type": "integer"},
+        "sector_available": {"type": "integer"},
+        "stock_total": {"type": "integer"},
+        "stock_available": {"type": "integer"},
+        "date_alignment": {
+          "type": "object",
+          "required": ["expected_market_date", "sector_market_date", "stock_market_date", "benchmark_market_date", "aligned", "benchmark_aligned"],
+          "properties": {
+            "expected_market_date": {"type": ["string", "null"]},
+            "sector_market_date": {"type": ["string", "null"]},
+            "stock_market_date": {"type": ["string", "null"]},
+            "benchmark_market_date": {"type": ["string", "null"]},
+            "aligned": {"type": "boolean"},
+            "benchmark_aligned": {"type": "boolean"}
+          }
+        }
+      }
+    }
   },
   "additionalProperties": true
 }

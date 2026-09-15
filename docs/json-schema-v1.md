@@ -11,6 +11,7 @@
 | `data/report.json` | `schemas/report.schema.json` | 最新のメインレポート |
 | `data/market.json` | `schemas/market.schema.json` | 最新の自動取得市場データ |
 | `data/japan-stocks.json` | `schemas/japan-stocks.schema.json` | 最新の日本株詳細ニュース |
+| `data/japan-market.json` | `schemas/japan-market.schema.json` | 日本株のランキング・市場内部・朝シナリオ答え合わせ |
 | `data/status.json` | `schemas/status.schema.json` | 更新処理の稼働結果を示す任意の運用ステータス |
 
 履歴JSONは、同名の最新JSONと同じスキーマに従う。
@@ -47,6 +48,12 @@
 
 3分類のニュースがない場合も、対応するキーを空配列で保持する。
 
+### `japan-market.json`
+
+`updated_at`、`market_date`、`data_phase`、`source`、`scope`、`sector_ranking`、`sector_stock_ranking`、`trading_value_ranking`、`volume_surge_ranking`、`market_internals`、`scenario_review`、`data_quality`。
+
+`data_quality.date_alignment`には、朝レポート、セクターETF、主要監視銘柄、指数連動ETFの市場日と整合判定を保持する。朝レポート、セクターETF、主要監視銘柄の日付が一致しない場合、`scenario_review.status`を`判定可能`にしてはならない。
+
 ### `status.json`
 
 `status`、`updated_at`、`message`。
@@ -69,4 +76,4 @@
 python scripts/generate_json_schemas.py
 ```
 
-生成後は4つの現行JSONが対応するスキーマに適合することを確認する。項目の意味、必須区分、互換性ルールを変更する場合は、本書とWebサイト仕様書も同時に更新する。
+生成後は5つの現行JSONが対応するスキーマに適合することを確認する。項目の意味、必須区分、互換性ルールを変更する場合は、本書とWebサイト仕様書も同時に更新する。

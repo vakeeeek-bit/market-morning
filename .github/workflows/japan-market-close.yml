@@ -15,7 +15,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: japan-market-close-update
+  # 履歴保存ワークフローと同じ直列キューに入れ、同時pushを防ぐ。
+  group: archive-market-morning
   cancel-in-progress: false
 
 jobs:
@@ -44,5 +45,6 @@ jobs:
             echo "No Japan market changes"
           else
             git commit -m "Update Japan market close data"
+            git pull --rebase origin main
             git push
           fi

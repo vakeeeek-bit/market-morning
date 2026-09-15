@@ -55,6 +55,15 @@ body {
 .empty, .error { color: #68707a; }
 .error { color: #b42318; }
 .footer { padding: 12px 0 28px; color: #7b8490; text-align: center; font-size: 12px; }
+.mobile-section-nav { position: sticky; top: 0; z-index: 40; display: flex; gap: 6px; overflow-x: auto; margin: 0 0 14px; padding: 7px; border: 1px solid #e5e7eb; border-radius: 12px; background: rgba(255,255,255,.96); box-shadow: 0 5px 16px rgba(15,23,42,.08); scrollbar-width: none; }
+.mobile-section-nav::-webkit-scrollbar { display: none; }
+.mobile-section-nav button { flex: 0 0 auto; min-height: 36px; padding: 6px 10px; border: 1px solid #d8dde5; border-radius: 9px; background: #fff; color: #18202a; font: inherit; font-size: 12px; font-weight: 700; }
+.section { border-top: 5px solid #64748b; scroll-margin-top: 64px; }
+#quick-view { border-top-color: #2563eb; }
+#story-most-important { border-top-color: #dc2626; }
+#story-important { border-top-color: #d97706; }
+#story-other { border-top-color: #64748b; }
+#quality-section { border-top-color: #059669; }
 @media (max-width: 640px) {
   .container { padding: 10px; }
   .header, .section { border-radius: 13px; }
@@ -66,6 +75,7 @@ body {
   .history-nav { grid-template-columns: repeat(3,minmax(0,1fr)); }
   .history-date { grid-column: 1 / -1; grid-row: 1; min-height: 44px; }
   .history-button { min-height: 44px; padding: 8px 6px; }
+  .section-title { padding-bottom: 8px; border-bottom: 1px solid #e5e7eb; }
 }
 </style>
 </head>
@@ -88,6 +98,14 @@ body {
     </div>
     <div class="history-mode" id="history-mode">最新データを表示中</div>
   </header>
+
+  <nav class="mobile-section-nav" aria-label="日本株レポート内の移動">
+    <button type="button" data-jp-target="quick-view">要点</button>
+    <button type="button" data-jp-target="story-most-important">最重要</button>
+    <button type="button" data-jp-target="story-important">重要</button>
+    <button type="button" data-jp-target="story-other">その他</button>
+    <button type="button" data-jp-target="quality-section">品質</button>
+  </nav>
 
   <section class="section" id="quick-view">
     <div class="section-title">朝3分の要点</div>
@@ -280,9 +298,10 @@ function renderStory(item) {
   return article;
 }
 
-function renderGroup(holder, title, stories, icon) {
+function renderGroup(holder, title, stories, icon, id) {
   const section = document.createElement('section');
   section.className = 'section';
+  section.id = id;
   const heading = document.createElement('div');
   heading.className = 'section-title';
   heading.textContent = `${icon} ${title}（${stories.length}件）`;
@@ -339,9 +358,9 @@ async function load() {
     document.getElementById('focus-sectors').textContent = Array.isArray(quick.focus_sectors) && quick.focus_sectors.length ? quick.focus_sectors.join(' / ') : '該当なし';
     const holder = document.getElementById('story-sections');
     holder.replaceChildren();
-    renderGroup(holder, '最重要', Array.isArray(data.top_stories) ? data.top_stories : [], '🔥');
-    renderGroup(holder, '重要', Array.isArray(data.important_stories) ? data.important_stories : [], '📌');
-    renderGroup(holder, 'その他', Array.isArray(data.other_stories) ? data.other_stories : [], '🗂️');
+    renderGroup(holder, '最重要', Array.isArray(data.top_stories) ? data.top_stories : [], '🔥', 'story-most-important');
+    renderGroup(holder, '重要', Array.isArray(data.important_stories) ? data.important_stories : [], '📌', 'story-important');
+    renderGroup(holder, 'その他', Array.isArray(data.other_stories) ? data.other_stories : [], '🗂️', 'story-other');
     renderQuality(data.data_quality);
   } catch (error) {
     document.getElementById('report-date').textContent = '日本株詳細データを読み込めませんでした';
@@ -351,6 +370,11 @@ async function load() {
 }
 
 setupHistoryNavigation();
+document.querySelectorAll('[data-jp-target]').forEach(button => {
+  button.addEventListener('click', () => {
+    document.getElementById(button.dataset.jpTarget)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
 Promise.all([loadHistoryIndex(), load()]);
 </script>
 </body>

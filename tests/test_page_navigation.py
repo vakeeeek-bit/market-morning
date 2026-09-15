@@ -62,6 +62,13 @@ class PageNavigationTests(unittest.TestCase):
         self.assertIn("米ドル/ポンド", world)
         self.assertIn("LME現物価格ではありません", world)
 
+    def test_mobile_pages_have_clear_section_navigation(self):
+        world = self.read("index.html")
+        japan = self.read("japan-stocks.html")
+        self.assertIn('data-mm-group', world)
+        self.assertIn('class="mobile-section-nav"', japan)
+        self.assertIn('data-jp-target="story-most-important"', japan)
+
     def test_latest_view_warns_when_market_and_report_dates_differ(self):
         world = self.read("index.html")
         self.assertIn('id="freshness-warning"', world)

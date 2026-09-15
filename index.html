@@ -811,6 +811,36 @@ td.nowrap {
   padding-bottom: 12px;
 }
 
+/* 長いスマホ画面でも、ジャンルの境界と現在地を見失わないための色分け */
+.section[data-mm-group] {
+  border-top: 5px solid var(--mm-group-color, #64748b);
+  scroll-margin-top: 72px;
+}
+.section[data-mm-group] > .section-title {
+  margin: -18px -18px 14px;
+  padding: 13px 18px 11px;
+  background: linear-gradient(90deg, var(--mm-group-bg, #f8fafc), #fff);
+  border-radius: 12px 12px 0 0;
+}
+.section[data-mm-group="executive"] { --mm-group-color:#2563eb; --mm-group-bg:#eff6ff; }
+.section[data-mm-group="news"] { --mm-group-color:#dc2626; --mm-group-bg:#fef2f2; }
+.section[data-mm-group="market"] { --mm-group-color:#059669; --mm-group-bg:#ecfdf5; }
+.section[data-mm-group="commodity"] { --mm-group-color:#d97706; --mm-group-bg:#fffbeb; }
+.section[data-mm-group="crypto"] { --mm-group-color:#7c3aed; --mm-group-bg:#f5f3ff; }
+.section[data-mm-group="scenario"] { --mm-group-color:#0891b2; --mm-group-bg:#ecfeff; }
+.section[data-mm-group="watch"] { --mm-group-color:#475569; --mm-group-bg:#f8fafc; }
+.mm-v3-nav button.is-active {
+  border-color: #111827;
+  background: #111827;
+  color: #fff;
+}
+@media (max-width:560px) {
+  .section[data-mm-group] > .section-title {
+    margin: -13px -13px 12px;
+    padding: 12px 13px 10px;
+  }
+}
+
 
 /* =====================================================
    VER.3.3 NEWS TOPICS ACCORDION
@@ -5112,6 +5142,19 @@ function mmText(element) {
 function setupVer3UX() {
   const sections = Array.from(document.querySelectorAll('.section'));
 
+  const sectionGroups = {
+    executive: ['executive-section', 'what-changed-section'],
+    news: ['main-story-section', 'market-news-section', 'policy-wrapper-section'],
+    market: ['asset-history-section', 'market-data-section', 'price-ranking-section', 'relative-ranking-section', 'market-overview-section', 'internal-strength-section', 'cross-asset-section', 'asset-analysis-section'],
+    commodity: ['commodities-section', 'copper-section'],
+    crypto: ['crypto-section'],
+    scenario: ['market-environment-section', 'unusual-moves-section', 'events-section', 'change-conditions-section', 'scenarios-section'],
+    watch: ['watch-cards-section', 'trade-watch-section', 'strength-section', 'quality-section', 'final-section']
+  };
+  Object.entries(sectionGroups).forEach(([group, ids]) => {
+    ids.forEach(id => document.getElementById(id)?.setAttribute('data-mm-group', group));
+  });
+
   sections.forEach((section, index) => {
     const title = section.querySelector(':scope > .section-title');
     if (!title) return;
@@ -5220,6 +5263,21 @@ function setupVer3UX() {
       });
     });
   });
+
+  const navButtons = Array.from(document.querySelectorAll('[data-mm-target]'));
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      const visible = entries
+        .filter(entry => entry.isIntersecting)
+        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+      const group = visible?.target?.dataset?.mmGroup;
+      if (!group) return;
+      navButtons.forEach(button => {
+        button.classList.toggle('is-active', button.dataset.mmTarget === group);
+      });
+    }, { rootMargin: '-70px 0px -70% 0px', threshold: 0 });
+    sections.filter(section => section.dataset.mmGroup).forEach(section => observer.observe(section));
+  }
 }
 
 setupHistoryNavigation();

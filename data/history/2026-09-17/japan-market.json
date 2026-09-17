@@ -997,9 +997,9 @@
       "expected_market_date": "2026-09-17",
       "sector_market_date": "2026-09-17",
       "stock_market_date": "2026-09-17",
-      "benchmark_market_date": "2026-09-17",
+      "benchmark_market_date": null,
       "aligned": true,
-      "benchmark_aligned": true
+      "benchmark_aligned": false
     }
   }
 }

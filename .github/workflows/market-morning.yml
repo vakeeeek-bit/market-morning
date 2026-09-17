@@ -2,7 +2,9 @@ name: Market Morning Daily Update
 
 on:
   workflow_dispatch:
-
+  push:
+    paths:
+      - ".github/workflows/market-morning.yml"
   schedule:
     # 日本時間 平日6:20（UTCでは前日の21:20）
     # GitHub Actions の cron は UTC
@@ -77,26 +79,19 @@ jobs:
       - name: Save market history
         run: |
           DATE_JST=$(TZ=Asia/Tokyo date +%Y-%m-%d)
-
           mkdir -p "data/history/$DATE_JST"
-
-          cp data/market.json \
-             "data/history/$DATE_JST/market.json"
-          cp data/japan-market.json \
-             "data/history/$DATE_JST/japan-market.json"
-
+          cp data/market.json "data/history/$DATE_JST/market.json"
+          cp data/japan-market.json "data/history/$DATE_JST/japan-market.json"
           echo "Saved market history: $DATE_JST"
 
       - name: Commit updated market data
         run: |
           git config user.name "Market Morning Bot"
           git config user.email "actions@github.com"
-
           git add data/market.json
           git add data/japan-market.json
           git add data/status.json
           git add data/history/
-
           if git diff --cached --quiet; then
             echo "No market data changes"
           else

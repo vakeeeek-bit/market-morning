@@ -175,7 +175,12 @@ def validate_relationships(data: dict[str, dict], result: ValidationResult) -> N
             value = item.get("market_date")
             parsed = parse_iso_date(value, f"market.markets.{key}.market_date", result)
             if parsed and parsed < target:
-                stale.append(f"{key}={value}")
+                reason = item.get("stale_reason")
+                status = str(item.get("status", ""))
+                if isinstance(reason, str) and reason.strip() and status != "取得成功":
+                    result.warning(f"{key}: {value}を維持（{reason.strip()}）")
+                else:
+                    stale.append(f"{key}={value}")
         if missing:
             result.error("必須市場データがありません: " + ", ".join(missing))
         if stale:

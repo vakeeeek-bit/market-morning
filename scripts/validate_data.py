@@ -158,6 +158,36 @@ def validate_relationships(data: dict[str, dict], result: ValidationResult) -> N
             result.ok("レポート日と市場データ更新日の一致")
 
 
+    target = parse_iso_date(report.get("target_market_date"), "report.target_market_date", result)
+    if target:
+        required_market_keys = (
+            "sp500", "nasdaq", "nasdaq100", "dow", "russell2000", "sox",
+            "nikkei225", "topix", "dxy", "usdjpy", "eurusd", "us10y", "us2y",
+            "vix", "gold", "silver", "copper", "wti", "brent", "btc", "eth",
+        )
+        stale = []
+        missing = []
+        for key in required_market_keys:
+            item = market.get("markets", {}).get(key)
+            if not isinstance(item, dict):
+                missing.append(key)
+                continue
+            value = item.get("market_date")
+            parsed = parse_iso_date(value, f"market.markets.{key}.market_date", result)
+            if parsed and parsed < target:
+                stale.append(f"{key}={value}")
+        if missing:
+            result.error("必須市場データがありません: " + ", ".join(missing))
+        if stale:
+            result.error(
+                "target_market_dateより古い市場データが残っています: " + ", ".join(stale)
+                + "。休場・公表日差など正当な理由がある場合は、日次データ側で明示的な例外設計を追加してください"
+            )
+        if not missing and not stale:
+            result.ok("必須市場データのtarget_market_date整合性")
+
+
+
 def write_summary(result: ValidationResult) -> None:
     summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
     if not summary_path:

@@ -2062,13 +2062,26 @@ function updateDataFreshness() {
 
   const marketLabel = formatDateKey(loadedMarketDateKey);
   const reportLabel = formatDateKey(loadedReportDateKey);
-  warning.textContent =
-    `⚠ 市場データは${marketLabel}更新ですが、AIレポートは${reportLabel}版です。` +
-    `新しいレポートは品質確認中のため、以下の分析は${reportLabel}時点の内容です。`;
+  const marketDate = new Date(`${loadedMarketDateKey}T12:00:00`);
+  const reportDate = new Date(`${loadedReportDateKey}T12:00:00`);
+  const isWeekendReport = reportDate.getDay() === 0 || reportDate.getDay() === 6;
+
+  if (isWeekendReport && marketDate < reportDate) {
+    warning.textContent =
+      `ℹ ${reportLabel}は休場日のため、市場データは前営業日（${marketLabel}更新）を使用しています。` +
+      `AIレポートは${reportLabel}時点の週末材料を反映しています。`;
+    setHistoryMode(
+      `市場データ：前営業日 ${marketLabel}｜AIレポート：${reportLabel}`
+    );
+  } else {
+    warning.textContent =
+      `⚠ 市場データは${marketLabel}更新ですが、AIレポートは${reportLabel}版です。` +
+      `新しいレポートは品質確認中のため、以下の分析は${reportLabel}時点の内容です。`;
+    setHistoryMode(
+      `最新市場データ：${marketLabel}｜AIレポート：${reportLabel}（更新待ち）`
+    );
+  }
   warning.classList.add('is-visible');
-  setHistoryMode(
-    `最新市場データ：${marketLabel}｜AIレポート：${reportLabel}（更新待ち）`
-  );
 
   const quickConclusionLabel = document.getElementById('quick-conclusion-label');
   const quickEventsLabel = document.getElementById('quick-events-label');

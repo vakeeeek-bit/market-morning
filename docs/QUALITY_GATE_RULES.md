@@ -32,3 +32,30 @@ Required checks:
 Do not publish incomplete data to `main`. Use a quality-gate branch/PR first. If any gate fails, return to correction/research and re-run validation.
 
 After merge, re-check production data and Web rendering. A pre-merge PASS does not replace the post-publish check.
+
+## Analysis discipline
+
+### Unconfirmed-event interpretation
+- Separate the fact that an event, meeting, negotiation, policy discussion, earnings release, or economic release has started/occurred from the confirmed outcome.
+- Do not assign a positive or negative market direction merely because discussions started or an event occurred.
+- When the outcome is not confirmed, keep the directional assessment neutral and express upside/downside implications as conditional scenarios.
+- Preserve the sequence: confirmed fact -> confirmed outcome -> observed market reaction -> interpretation -> Japan-equity transmission.
+- Final audit must explicitly ask: **Does any interpretation assign direction beyond the confirmed facts?** If yes, correct it before publication.
+
+### Market-holiday and special-session handling
+- Do not mechanically apply a normal trading-day template when Japanese cash equities are closed.
+- Identify which relevant markets are actually open and performing price discovery, including OSE Nikkei 225/TOPIX futures, FX, commodities, or overseas markets as applicable.
+- Never present the previous cash-session close as the current day's cash-market price.
+- Clearly separate: previous-business-day observations, new information released during the closure, and reactions in markets that are actually tradable.
+- On a Japanese cash-market holiday with OSE holiday trading, prioritize OSE futures as the initial domestic price-discovery signal while retaining appropriate caveats about cash-market confirmation.
+
+## Final analytical audit
+
+In addition to numerical, source, date, and cross-JSON checks, the pre-publication audit must verify:
+1. Confirmed facts and interpretations are explicitly distinguishable.
+2. No directional conclusion runs ahead of an unconfirmed event outcome.
+3. Market reaction is described only where an actual traded-market reaction is observable.
+4. The day's monitoring hierarchy reflects which markets are actually open.
+5. Scenario-change conditions are tied to observable facts or prices rather than assumed outcomes.
+
+Any failure in this analytical audit is a quality-gate FAIL and must be corrected before merge to `main`.

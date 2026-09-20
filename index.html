@@ -131,6 +131,23 @@ body {
   display: block;
 }
 
+.freshness-warning.is-holiday {
+  border-color: rgba(147,197,253,0.42);
+  background: rgba(30,64,175,0.18);
+  color: #e0f2fe;
+}
+
+.freshness-warning.is-holiday .holiday-title {
+  display: block;
+  margin-bottom: 3px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.freshness-warning.is-holiday .holiday-meta {
+  color: rgba(224,242,254,0.86);
+}
+
 .report-type-badge {
   display: none;
   width: fit-content;
@@ -2057,7 +2074,7 @@ function updateDataFreshness() {
 
   if (!isMixedLatest) {
     warning.textContent = '';
-    warning.classList.remove('is-visible');
+    warning.classList.remove('is-visible', 'is-holiday');
     return;
   }
 
@@ -2071,13 +2088,16 @@ function updateDataFreshness() {
   const isClosedCashMarketReport = targetMarketDate && targetMarketDate < reportDate;
 
   if (isClosedCashMarketReport && marketDate >= targetMarketDate) {
-    warning.textContent =
-      `ℹ ${reportLabel}は現物市場の休場日のため、対象市場日は${formatDateKey(loadedTargetMarketDateKey)}です。` +
-      `市場データは${marketLabel}更新、AIレポートは${reportLabel}時点の休場中材料を反映しています。`;
+    const targetLabel = formatDateKey(loadedTargetMarketDateKey);
+    warning.classList.add('is-holiday');
+    warning.innerHTML =
+      `<span class="holiday-title">🇯🇵 本日は日本株休場日</span>` +
+      `<span class="holiday-meta">市場データ：${targetLabel}終値 ｜ レポート：${reportLabel}更新</span>`;
     setHistoryMode(
-      `対象市場日：${formatDateKey(loadedTargetMarketDateKey)}｜市場データ更新：${marketLabel}｜AIレポート：${reportLabel}`
+      `休場日｜市場データ：${targetLabel}終値｜レポート：${reportLabel}更新`
     );
   } else {
+    warning.classList.remove('is-holiday');
     warning.textContent =
       `⚠ 市場データは${marketLabel}更新ですが、AIレポートは${reportLabel}版です。` +
       `新しいレポートは品質確認中のため、以下の分析は${reportLabel}時点の内容です。`;

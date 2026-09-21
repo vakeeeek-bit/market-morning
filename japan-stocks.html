@@ -63,6 +63,25 @@ body {
 .positive { color: #b42318; }
 .negative { color: #1769aa; }
 .market-note { margin: 0 0 12px; padding: 10px 12px; border-radius: 10px; background: #fff7ed; color: #7c2d12; font-size: 12px; }
+.insight-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+.insight-card { min-width: 0; padding: 13px; border: 1px solid #e5e7eb; border-radius: 12px; background: #fafbfc; }
+.insight-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.insight-title { font-size: 13px; font-weight: 800; }
+.insight-label { padding: 3px 8px; border-radius: 999px; background: #e8eef8; color: #1e3a5f; font-size: 11px; font-weight: 800; text-align: right; }
+.insight-reason { color: #4b5563; font-size: 12px; line-height: 1.55; }
+.insight-meta { margin-top: 7px; color: #7b8490; font-size: 11px; }
+.alert-card { margin-bottom: 12px; padding: 13px; border: 1px solid #f59e0b; border-left-width: 5px; border-radius: 11px; background: #fffbeb; color: #78350f; font-weight: 750; }
+.flow-card { position: relative; }
+.flow-path { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; margin: 7px 0; color: #334155; font-size: 12px; font-weight: 700; }
+.flow-arrow { color: #94a3b8; }
+.estimated-tag { color: #7c3aed; }
+.unavailable-tag { color: #64748b; }
+.quality-strip { display: grid; grid-template-columns: minmax(0,1.2fr) repeat(3,minmax(0,1fr)); gap: 6px; align-items: center; padding: 9px 0; border-top: 1px solid #eceff3; font-size: 12px; }
+.quality-strip:first-child { border-top: 0; }
+.quality-sector { font-weight: 800; }
+.disclosure { margin-top: 12px; border: 1px solid #e5e7eb; border-radius: 12px; background: #fff; }
+.disclosure summary { padding: 11px 13px; cursor: pointer; font-size: 13px; font-weight: 800; }
+.disclosure-body { padding: 0 13px 13px; }
 .internals-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 8px; }
 .internal-card { padding: 11px; border-radius: 10px; background: #f7f8fa; text-align: center; }
 .internal-number { font-size: 20px; font-weight: 800; }
@@ -78,7 +97,9 @@ body {
 #story-most-important { border-top-color: #dc2626; }
 #story-important { border-top-color: #d97706; }
 #story-other { border-top-color: #64748b; }
-#market-ranking-section, #stock-ranking-section { border-top-color: #7c3aed; }
+#regime-section { border-top-color: #dc2626; }
+#driver-section { border-top-color: #2563eb; }
+#rotation-section, #market-ranking-section, #stock-ranking-section, #sector-quality-section { border-top-color: #7c3aed; }
 #liquidity-section, #internals-section { border-top-color: #0891b2; }
 #scenario-review-section { border-top-color: #d97706; }
 #quality-section { border-top-color: #059669; }
@@ -96,6 +117,9 @@ body {
   .section-title { padding-bottom: 8px; border-bottom: 1px solid #e5e7eb; }
   .ranking-grid { grid-template-columns: 1fr; }
   .internals-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .insight-grid { grid-template-columns: 1fr; }
+  .quality-strip { grid-template-columns: 1fr 1fr; }
+  .quality-sector { grid-column: 1 / -1; }
 }
 </style>
 </head>
@@ -121,8 +145,10 @@ body {
 
   <nav class="mobile-section-nav" aria-label="日本株レポート内の移動">
     <button type="button" data-jp-target="quick-view">要点</button>
-    <button type="button" data-jp-target="market-ranking-section">ランキング</button>
-    <button type="button" data-jp-target="liquidity-section">需給</button>
+    <button type="button" data-jp-target="regime-section">市場観</button>
+    <button type="button" data-jp-target="driver-section">ドライバー</button>
+    <button type="button" data-jp-target="rotation-section">資金の向き</button>
+    <button type="button" data-jp-target="sector-quality-section">セクター</button>
     <button type="button" data-jp-target="scenario-review-section">答え合わせ</button>
     <button type="button" data-jp-target="story-most-important">最重要</button>
     <button type="button" data-jp-target="story-important">重要</button>
@@ -141,40 +167,73 @@ body {
       <div class="label">注目業種</div>
       <div class="value" id="focus-sectors">確認中</div>
     </div>
+    <details class="disclosure">
+      <summary>初心者向け用語解説を開く</summary>
+      <div class="disclosure-body" id="japan-glossary">用語データを読み込み中...</div>
+    </details>
   </section>
 
-  <section class="section" id="market-ranking-section">
-    <div class="section-title">📊 セクター騰落ランキング</div>
-    <div class="market-note" id="japan-market-scope">市場実績データを読み込み中...</div>
-    <div class="ranking-grid">
-      <div class="ranking-card"><div class="ranking-title">上昇セクター</div><div id="sector-winners">確認中</div></div>
-      <div class="ranking-card"><div class="ranking-title">下落セクター</div><div id="sector-losers">確認中</div></div>
-    </div>
+  <section class="section" id="regime-section">
+    <div class="section-title">🧭 今日の市場観｜現在の市場レジーム</div>
+    <div id="regime-alert"></div>
+    <div class="insight-grid" id="market-regime">データ更新待ち</div>
+    <div class="market-note" id="regime-method">実測値と推定評価を分けて表示します。</div>
   </section>
 
-  <section class="section" id="stock-ranking-section">
-    <div class="section-title">🏢 セクター内・主要銘柄ランキング</div>
-    <div class="market-note">各セクターの主要監視2銘柄を比較しています。全構成銘柄の順位ではありません。</div>
-    <div class="ranking-grid" id="sector-stock-ranking">確認中</div>
-  </section>
-
-  <section class="section" id="liquidity-section">
-    <div class="section-title">🔥 売買代金・出来高急増</div>
-    <div class="market-note">売買代金は終値×出来高の概算値、出来高急増は直近20日平均との比較です。</div>
-    <div class="ranking-grid">
-      <div class="ranking-card"><div class="ranking-title">売買代金上位（概算）</div><div id="trading-value-ranking">確認中</div></div>
-      <div class="ranking-card"><div class="ranking-title">出来高急増</div><div id="volume-surge-ranking">確認中</div></div>
-    </div>
+  <section class="section" id="driver-section">
+    <div class="section-title">🌐 海外から日本株への主要ドライバー</div>
+    <div class="market-note">海外市場 → 金利・為替・商品 → 日本株 → 影響を受けやすい業種、の順で表示します。</div>
+    <div class="insight-grid" id="key-drivers">データ更新待ち</div>
   </section>
 
   <section class="section" id="internals-section">
-    <div class="section-title">🧭 市場内部の強弱</div>
+    <div class="section-title">📐 市場内部の強弱</div>
     <div id="market-internals">確認中</div>
+  </section>
+
+  <section class="section" id="rotation-section">
+    <div class="section-title">↔️ 値動きから見たローテーション</div>
+    <div class="market-note">投資主体別売買ではありません。セクター騰落・Breadth・相対パフォーマンスから見た推定です。</div>
+    <div class="insight-grid" id="rotation-read">データ更新待ち</div>
+  </section>
+
+  <section class="section" id="sector-quality-section">
+    <div class="section-title">🔬 強い／弱いセクターと「強さの質」</div>
+    <div class="market-note">業種ETFと各業種の主要監視2銘柄による限定評価です。全構成銘柄への広がりとは断定しません。</div>
+    <div id="sector-quality">データ更新待ち</div>
+    <details class="disclosure" id="market-ranking-section">
+      <summary>セクター騰落ランキングを開く</summary>
+      <div class="disclosure-body">
+        <div class="market-note" id="japan-market-scope">市場実績データを読み込み中...</div>
+        <div class="ranking-grid">
+          <div class="ranking-card"><div class="ranking-title">上昇セクター</div><div id="sector-winners">確認中</div></div>
+          <div class="ranking-card"><div class="ranking-title">下落セクター</div><div id="sector-losers">確認中</div></div>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="stock-ranking-section">
+    <div class="section-title">🏢 注目銘柄</div>
+    <div class="market-note">売買代金・出来高変化を先に確認し、全セクターの主要監視銘柄は折りたたみ内で比較できます。</div>
+    <div class="ranking-grid" id="liquidity-section">
+      <div class="ranking-card"><div class="ranking-title">売買代金上位（終値×出来高の概算値）</div><div id="trading-value-ranking">確認中</div></div>
+      <div class="ranking-card"><div class="ranking-title">出来高急増（20日平均比）</div><div id="volume-surge-ranking">確認中</div></div>
+    </div>
+    <details class="disclosure">
+      <summary>セクター内・主要銘柄ランキングを開く</summary>
+      <div class="disclosure-body"><div class="market-note">各セクターの主要監視2銘柄を比較しています。全構成銘柄の順位ではありません。</div><div class="ranking-grid" id="sector-stock-ranking">確認中</div></div>
+    </details>
   </section>
 
   <section class="section" id="scenario-review-section">
     <div class="section-title">✅ 朝シナリオの答え合わせ</div>
     <div id="scenario-review">大引け後の更新を待っています。</div>
+  </section>
+
+  <section class="section" id="monitoring-section">
+    <div class="section-title">👀 今後の監視ポイント・見方の変更条件</div>
+    <div class="insight-grid" id="monitoring-points">データ更新待ち</div>
   </section>
 
   <div id="story-sections"></div>
@@ -407,6 +466,64 @@ function rankingRows(holder, rows, valueFormatter, limit = 5) {
   });
 }
 
+function renderInsightCards(holderId, items, options = {}) {
+  const holder = document.getElementById(holderId);
+  holder.replaceChildren();
+  if (!Array.isArray(items) || !items.length) return appendText(holder, 'empty', options.empty || 'この履歴には分析データがありません');
+  items.forEach(item => {
+    const card = document.createElement('article');
+    card.className = `insight-card${options.flow ? ' flow-card' : ''}`;
+    const head = document.createElement('div'); head.className = 'insight-head';
+    appendText(head, 'insight-title', item.axis || item.driver || item.watch || '確認項目');
+    const label = appendText(head, 'insight-label', item.label || item.assessment || item.current_view || '確認できず');
+    if (item.status === 'estimated') label.classList.add('estimated-tag');
+    if (item.status === 'unavailable') label.classList.add('unavailable-tag');
+    card.appendChild(head);
+    if (options.flow && Array.isArray(item.affected_sectors)) {
+      const path = document.createElement('div'); path.className = 'flow-path';
+      [item.driver, item.driver === 'USD/JPY' ? '為替' : item.driver === '米国金利' ? '金利' : item.driver.includes('原油') || item.driver.includes('Copper') ? '商品' : '海外株', '日本株', item.affected_sectors.join('・')].forEach((value, index, values) => {
+        appendText(path, '', value);
+        if (index < values.length - 1) appendText(path, 'flow-arrow', '→');
+      });
+      card.appendChild(path);
+    }
+    appendText(card, 'insight-reason', item.reason || item.change_condition || '根拠を確認できません');
+    const meta = [item.pricing_status, item.basis].filter(Boolean).join('｜');
+    if (meta) appendText(card, 'insight-meta', meta);
+    holder.appendChild(card);
+  });
+}
+
+function renderRegime(regime) {
+  const alert = document.getElementById('regime-alert'); alert.replaceChildren();
+  if (regime?.divergence_alert) appendText(alert, 'alert-card', regime.divergence_alert);
+  renderInsightCards('market-regime', regime?.dimensions);
+  document.getElementById('regime-method').textContent = text(regime?.method_note, 'この履歴には市場レジーム分析がありません。実測と推定を混同せず、ランキングを参照してください。');
+}
+
+function renderSectorQuality(rows) {
+  const holder = document.getElementById('sector-quality'); holder.replaceChildren();
+  const valid = Array.isArray(rows) ? rows : [];
+  if (!valid.length) return appendText(holder, 'empty', 'この履歴には強さの質データがありません');
+  valid.slice(0, 5).forEach(row => {
+    const strip = document.createElement('div'); strip.className = 'quality-strip';
+    appendText(strip, 'quality-sector', `${row.sector} ${signedPercent(row.change_pct)}`);
+    appendText(strip, '', row.quality);
+    appendText(strip, '', row.volume_confirmation);
+    appendText(strip, '', row.persistence);
+    holder.appendChild(strip);
+  });
+  const weakTitle = document.createElement('div'); weakTitle.className = 'ranking-title'; weakTitle.textContent = '下位セクターの質'; weakTitle.style.marginTop = '12px'; holder.appendChild(weakTitle);
+  valid.slice(-3).reverse().forEach(row => {
+    const strip = document.createElement('div'); strip.className = 'quality-strip';
+    appendText(strip, 'quality-sector', `${row.sector} ${signedPercent(row.change_pct)}`);
+    appendText(strip, '', row.quality);
+    appendText(strip, '', row.volume_confirmation);
+    appendText(strip, '', row.persistence);
+    holder.appendChild(strip);
+  });
+}
+
 function renderJapanMarket(data) {
   const dates = data.data_quality?.date_alignment || {};
   const dateSummary = dates.aligned
@@ -414,6 +531,11 @@ function renderJapanMarket(data) {
     : `日付：セクター ${text(dates.sector_market_date)}／銘柄 ${text(dates.stock_market_date)}／朝レポート ${text(dates.expected_market_date)}`;
   document.getElementById('japan-market-scope').textContent = `${text(data.scope)}｜${dateSummary}｜区分：${text(data.data_phase)}｜更新：${text(data.updated_at)}`;
   const sectors = Array.isArray(data.sector_ranking) ? data.sector_ranking : [];
+  renderRegime(data.market_regime || {});
+  renderInsightCards('key-drivers', data.key_drivers, { flow: true });
+  renderInsightCards('rotation-read', data.rotation_read?.items);
+  renderSectorQuality(data.sector_quality);
+  renderInsightCards('monitoring-points', data.monitoring_points);
   rankingRows(document.getElementById('sector-winners'), sectors, row => signedPercent(row.change_pct));
   rankingRows(document.getElementById('sector-losers'), [...sectors].reverse(), row => signedPercent(row.change_pct));
   const stockHolder = document.getElementById('sector-stock-ranking'); stockHolder.replaceChildren();
@@ -441,6 +563,11 @@ function renderJapanMarket(data) {
   internalHolder.appendChild(grid); appendText(internalHolder, 'market-note', `対象：主要監視${text(internals.universe_size, 34)}銘柄｜指数比較：${text(internals.relative)}`);
   const review = data.scenario_review || {}; const reviewHolder = document.getElementById('scenario-review'); reviewHolder.replaceChildren();
   appendText(reviewHolder, 'summary-main', `判定：${text(review.status, '更新待ち')}`); appendText(reviewHolder, 'market-note', text(review.note, '大引け後に更新します'));
+  const reviewGrid = document.createElement('div'); reviewGrid.className = 'insight-grid';
+  [['朝の想定', review.morning_assumption], ['実際の値動き', review.actual_move], ['想定と違った点', review.difference], ['翌営業日に持ち越す材料', Array.isArray(review.carry_forward) ? review.carry_forward.join(' / ') : review.carry_forward]].forEach(([label, value]) => {
+    const card = document.createElement('div'); card.className = 'insight-card'; appendText(card, 'insight-title', label); appendText(card, 'insight-reason', value); reviewGrid.appendChild(card);
+  });
+  reviewHolder.appendChild(reviewGrid);
   const checksHolder = document.createElement('div'); reviewHolder.appendChild(checksHolder);
   rankingRows(checksHolder, review.checks, row => row.result, 10);
 }
@@ -496,13 +623,34 @@ async function load() {
   }
 }
 
+async function loadJapanGlossary() {
+  const holder = document.getElementById('japan-glossary');
+  try {
+    const response = await fetch('data/glossary.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+    const wanted = new Set(['SOX', 'Breadth', 'WTI', 'Copper', 'TOPIX']);
+    const terms = (Array.isArray(data.terms) ? data.terms : []).filter(item => wanted.has(item.term));
+    holder.replaceChildren();
+    terms.forEach(item => {
+      const box = document.createElement('div'); box.className = 'summary-box';
+      appendText(box, 'insight-title', item.term);
+      appendText(box, 'insight-reason', `${item.short} ${item.why_it_matters}`);
+      holder.appendChild(box);
+    });
+    if (!terms.length) holder.textContent = '用語解説はありません';
+  } catch (error) {
+    holder.textContent = '用語解説を読み込めませんでした。市場データ表示には影響しません。';
+  }
+}
+
 setupHistoryNavigation();
 document.querySelectorAll('[data-jp-target]').forEach(button => {
   button.addEventListener('click', () => {
     document.getElementById(button.dataset.jpTarget)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
-Promise.all([loadHistoryIndex(), load(), loadJapanMarket()]);
+Promise.all([loadHistoryIndex(), load(), loadJapanMarket(), loadJapanGlossary()]);
 </script>
 </body>
 </html>

@@ -73,11 +73,18 @@ class PageNavigationTests(unittest.TestCase):
         japan = self.read("japan-stocks.html")
         for element_id in (
             "market-ranking-section", "stock-ranking-section", "liquidity-section",
-            "internals-section", "scenario-review-section"
+            "internals-section", "scenario-review-section", "regime-section",
+            "driver-section", "rotation-section", "sector-quality-section", "monitoring-section"
         ):
             self.assertIn(f'id="{element_id}"', japan)
         self.assertIn("全構成銘柄の順位ではありません", japan)
         self.assertIn("終値×出来高の概算値", japan)
+        self.assertIn("値動きから見たローテーション", japan)
+        self.assertIn("実測値と推定評価を分けて表示", japan)
+        self.assertIn("朝の想定", japan)
+        self.assertIn("翌営業日に持ち越す材料", japan)
+        self.assertIn("data/glossary.json", japan)
+        self.assertIn("市場データ表示には影響しません", japan)
 
     def test_latest_view_warns_when_market_and_report_dates_differ(self):
         world = self.read("index.html")

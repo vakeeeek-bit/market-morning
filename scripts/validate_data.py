@@ -277,6 +277,44 @@ def validate_market_context(data: dict[str, dict], result: ValidationResult) -> 
             result.ok(f"初心者向け用語辞書（{len(terms)}語）")
 
 
+def validate_japan_investor_view(data: dict[str, dict], result: ValidationResult) -> None:
+    japan_market = data["japan-market"]
+    dimensions = japan_market.get("market_regime", {}).get("dimensions", [])
+    by_axis = {item.get("axis"): item for item in dimensions if isinstance(item, dict)}
+    for axis in ("Growth / Value", "大型株 / 小型株", "半導体"):
+        item = by_axis.get(axis)
+        if not item or item.get("status") != "unavailable":
+            result.error(f"japan-market.market_regime: {axis}は現行データでは判定対象外であることを明示してください")
+    if by_axis.get("市場Breadth", {}).get("status") != "observed":
+        result.error("japan-market.market_regime: 市場Breadthは実測として区別してください")
+    else:
+        result.ok("日本株レジームの実測・推定・判定対象外の区別")
+
+    rotation = japan_market.get("rotation_read", {})
+    if rotation.get("label") != "値動きから見たローテーション（推定）":
+        result.error("japan-market.rotation_read: 実フローと誤認しない名称が必要です")
+    elif "投資主体別" not in str(rotation.get("note", "")):
+        result.error("japan-market.rotation_read: 投資主体別売買ではない旨が必要です")
+    else:
+        result.ok("ローテーション推定の明示")
+
+    japan_date = parse_iso_date(japan_market.get("market_date"), "japan-market.market_date", result)
+    for index, driver in enumerate(japan_market.get("key_drivers", [])):
+        driver_date = driver.get("market_date") if isinstance(driver, dict) else None
+        parsed = parse_iso_date(driver_date, f"japan-market.key_drivers[{index}].market_date", result) if driver_date else None
+        if parsed and japan_date and parsed > japan_date and driver.get("pricing_status") != "日本株現物に未反映":
+            result.error(f"japan-market.key_drivers[{index}]: 日本株市場日より新しい材料は未反映と明示してください")
+    if len(japan_market.get("key_drivers", [])) == 5:
+        result.ok("日本株主要ドライバー5系列")
+    else:
+        result.error("japan-market.key_drivers: USD/JPY・米金利・SOX・Copper・原油の5系列が必要です")
+
+    if japan_market.get("methodology", {}).get("implemented_tier") != 1:
+        result.error("japan-market.methodology: 今回の実装は既存データのみのTier 1に限定してください")
+    else:
+        result.ok("追加AI/API負荷なし（Tier 1）")
+
+
 
 def write_summary(result: ValidationResult) -> None:
     summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
@@ -312,6 +350,7 @@ def run(root: Path = ROOT) -> ValidationResult:
     if all(name in data for name in DATA_NAMES):
         validate_relationships(data, result)
         validate_market_context(data, result)
+        validate_japan_investor_view(data, result)
     return result
 
 

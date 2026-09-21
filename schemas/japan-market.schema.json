@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "required": ["updated_at", "market_date", "data_phase", "source", "scope", "sector_ranking", "sector_stock_ranking", "trading_value_ranking", "volume_surge_ranking", "market_internals", "scenario_review", "data_quality"],
+  "required": ["updated_at", "market_date", "data_phase", "source", "scope", "sector_ranking", "sector_stock_ranking", "trading_value_ranking", "volume_surge_ranking", "market_internals", "market_regime", "key_drivers", "rotation_read", "sector_quality", "scenario_review", "monitoring_points", "methodology", "data_quality"],
   "properties": {
     "updated_at": {"type": ["string", "null"]},
     "market_date": {"type": ["string", "null"]},
@@ -12,7 +12,34 @@
     "trading_value_ranking": {"type": "array", "items": {"type": "object"}},
     "volume_surge_ranking": {"type": "array", "items": {"type": "object"}},
     "market_internals": {"type": "object"},
+    "market_regime": {
+      "type": "object",
+      "required": ["headline", "dimensions", "method_note"],
+      "properties": {
+        "headline": {"type": "string"},
+        "divergence_alert": {"type": ["string", "null"]},
+        "dimensions": {"type": "array", "items": {"type": "object", "required": ["axis", "label", "status", "reason"]}},
+        "method_note": {"type": "string"}
+      }
+    },
+    "key_drivers": {"type": "array", "items": {"type": "object", "required": ["driver", "assessment", "status", "reason", "affected_sectors"]}},
+    "rotation_read": {
+      "type": "object",
+      "required": ["label", "items", "note"],
+      "properties": {
+        "label": {"const": "値動きから見たローテーション（推定）"},
+        "items": {"type": "array", "items": {"type": "object", "required": ["axis", "label", "status", "reason"]}},
+        "note": {"type": "string"}
+      }
+    },
+    "sector_quality": {"type": "array", "items": {"type": "object", "required": ["sector", "change_pct", "quality", "participation", "volume_confirmation", "persistence", "coverage_note"]}},
     "scenario_review": {"type": "object"},
+    "monitoring_points": {"type": "array", "items": {"type": "object", "required": ["watch", "current_view", "change_condition", "pricing_status"]}},
+    "methodology": {
+      "type": "object",
+      "required": ["tier_1_existing_data", "tier_2_light_fetch", "tier_3_new_api_or_ai", "implemented_tier"],
+      "properties": {"implemented_tier": {"const": 1}}
+    },
     "data_quality": {
       "type": "object",
       "required": ["sector_total", "sector_available", "stock_total", "stock_available", "date_alignment"],

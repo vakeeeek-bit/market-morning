@@ -52,9 +52,11 @@
 
 ### `japan-market.json`
 
-`updated_at`、`market_date`、`data_phase`、`source`、`scope`、`sector_ranking`、`sector_stock_ranking`、`trading_value_ranking`、`volume_surge_ranking`、`market_internals`、`scenario_review`、`data_quality`。
+`updated_at`、`market_date`、`data_phase`、`source`、`scope`、`sector_ranking`、`sector_stock_ranking`、`trading_value_ranking`、`volume_surge_ranking`、`market_internals`、`market_regime`、`key_drivers`、`rotation_read`、`sector_quality`、`scenario_review`、`monitoring_points`、`methodology`、`data_quality`。
 
 `data_quality.date_alignment`には、朝レポート、セクターETF、主要監視銘柄、指数連動ETFの市場日と整合判定を保持する。朝レポート、セクターETF、主要監視銘柄の日付が一致しない場合、`scenario_review.status`を`判定可能`にしてはならない。
+
+`market_regime`は実測・推定・判定対象外を`status`で区別する。`rotation_read`は投資主体別売買ではなく、値動きから見た推定であることを名称と注記の両方に保持する。`key_drivers`の基準日が日本株現物の`market_date`より新しい場合、`pricing_status`を`日本株現物に未反映`とする。詳細は`docs/JAPAN_INVESTOR_VIEW_SPEC.md`を参照する。
 
 ### `status.json`
 

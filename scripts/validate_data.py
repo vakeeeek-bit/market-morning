@@ -18,7 +18,15 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 SCHEMA_DIR = ROOT / "schemas"
-DATA_NAMES = ("report", "market", "japan-stocks", "japan-market", "status")
+DATA_NAMES = (
+    "report",
+    "market",
+    "japan-stocks",
+    "japan-market",
+    "status",
+    "market-context",
+    "glossary",
+)
 
 
 @dataclass
@@ -192,6 +200,83 @@ def validate_relationships(data: dict[str, dict], result: ValidationResult) -> N
             result.ok("必須市場データのtarget_market_date整合性")
 
 
+def validate_market_context(data: dict[str, dict], result: ValidationResult) -> None:
+    context = data["market-context"]
+    glossary = data["glossary"]
+
+    start = parse_iso_date(context.get("period_start"), "market-context.period_start", result)
+    end = parse_iso_date(context.get("period_end"), "market-context.period_end", result)
+    if start and end:
+        if start > end:
+            result.error("market-context: period_startがperiod_endより後です")
+        elif (end - start).days < 60:
+            result.error("market-context: 対象期間は原則2か月以上必要です")
+        else:
+            result.ok("今のマーケット対象期間")
+
+    timeline = context.get("timeline")
+    if not isinstance(timeline, list) or not 3 <= len(timeline) <= 6:
+        result.error("market-context.timeline: 重要転換点は3〜6件必要です")
+    else:
+        dates = []
+        for index, item in enumerate(timeline):
+            item_date = parse_iso_date(
+                item.get("date") if isinstance(item, dict) else None,
+                f"market-context.timeline[{index}].date",
+                result,
+            )
+            if item_date:
+                dates.append(item_date)
+                if start and item_date < start or end and item_date > end:
+                    result.error(
+                        f"market-context.timeline[{index}]: 対象期間外の日付です"
+                    )
+        if dates and dates != sorted(dates):
+            result.error("market-context.timeline: 日付順に並んでいません")
+        elif len(dates) == len(timeline):
+            result.ok("今のマーケット時系列（3〜6件・日付順）")
+
+    evidence_types = {"直接影響", "間接影響", "可能性"}
+    life_impacts = context.get("daily_life_impacts")
+    if not isinstance(life_impacts, list) or not life_impacts:
+        result.error("market-context.daily_life_impacts: 1件以上必要です")
+    else:
+        invalid = [
+            str(item.get("evidence_type"))
+            for item in life_impacts
+            if not isinstance(item, dict) or item.get("evidence_type") not in evidence_types
+        ]
+        if invalid:
+            result.error("market-context.daily_life_impacts: 影響区分が不正です")
+        else:
+            result.ok("暮らしへの影響区分（直接・間接・可能性）")
+
+    sources = context.get("sources")
+    if not isinstance(sources, list) or len(sources) < 3:
+        result.error("market-context.sources: 3件以上必要です")
+    elif any(
+        not isinstance(item, dict)
+        or not str(item.get("url", "")).startswith("https://")
+        or not str(item.get("title", "")).strip()
+        for item in sources
+    ):
+        result.error("market-context.sources: titleとhttps URLが必要です")
+    else:
+        result.ok("今のマーケット出典")
+
+    terms = glossary.get("terms")
+    if not isinstance(terms, list) or len(terms) < 20:
+        result.error("glossary.terms: 初期辞書は20語以上必要です")
+    else:
+        names = [str(item.get("term", "")).strip() for item in terms if isinstance(item, dict)]
+        if len(names) != len(terms) or any(not name for name in names):
+            result.error("glossary.terms: 空の用語があります")
+        elif len(names) != len(set(names)):
+            result.error("glossary.terms: 用語が重複しています")
+        else:
+            result.ok(f"初心者向け用語辞書（{len(terms)}語）")
+
+
 
 def write_summary(result: ValidationResult) -> None:
     summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
@@ -226,6 +311,7 @@ def run(root: Path = ROOT) -> ValidationResult:
 
     if all(name in data for name in DATA_NAMES):
         validate_relationships(data, result)
+        validate_market_context(data, result)
     return result
 
 

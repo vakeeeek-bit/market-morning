@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://market-morning-gules.vercel.app/schemas/market-context.schema.json",
+  "title": "Market Morning market context v1",
+  "type": "object",
+  "required": ["updated_at", "period_start", "period_end", "headline", "summary", "timeline", "current_drivers", "japan_connection", "daily_life_impacts", "scenario_change_conditions", "sources"],
+  "properties": {
+    "updated_at": {"type": "string"},
+    "period_start": {"type": "string", "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"},
+    "period_end": {"type": "string", "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"},
+    "headline": {"type": "string"},
+    "summary": {"type": "string"},
+    "timeline": {"type": "array", "items": {"type": "object", "required": ["date", "title", "fact", "market_impact"], "properties": {"date": {"type": "string", "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"}, "title": {"type": "string"}, "fact": {"type": "string"}, "market_impact": {"type": "string"}}}},
+    "current_drivers": {"type": "array", "items": {"type": "object", "required": ["title", "explanation", "japan_impact"], "properties": {"title": {"type": "string"}, "explanation": {"type": "string"}, "japan_impact": {"type": "string"}}}},
+    "japan_connection": {"type": "array", "items": {"type": "object", "required": ["route", "assessment"], "properties": {"route": {"type": "string"}, "assessment": {"type": "string"}}}},
+    "daily_life_impacts": {"type": "array", "items": {"type": "object", "required": ["topic", "mechanism", "impact", "evidence_type"], "properties": {"topic": {"type": "string"}, "mechanism": {"type": "string"}, "impact": {"type": "string"}, "evidence_type": {"type": "string"}}}},
+    "scenario_change_conditions": {"type": "array", "items": {"type": "object", "required": ["condition", "meaning"], "properties": {"condition": {"type": "string"}, "meaning": {"type": "string"}}}},
+    "sources": {"type": "array", "items": {"type": "object", "required": ["title", "publisher", "published_at", "url"], "properties": {"title": {"type": "string"}, "publisher": {"type": "string"}, "published_at": {"type": "string", "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"}, "url": {"type": "string"}}}}
+  },
+  "additionalProperties": true
+}

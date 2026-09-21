@@ -858,6 +858,92 @@ td.nowrap {
   }
 }
 
+/* =====================================================
+   CURRENT MARKET CONTEXT + GLOSSARY
+===================================================== */
+.market-context-section {
+  margin-bottom: 16px; padding: 18px; border: 1px solid #cbd5e1;
+  border-top: 5px solid #0f766e; border-radius: 16px;
+  background: linear-gradient(145deg, #f0fdfa 0%, #ffffff 58%);
+  scroll-margin-top: 72px;
+}
+.market-context-kicker {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  color: #0f766e; font-size: 12px; font-weight: 800;
+}
+.market-context-badge {
+  padding: 4px 8px; border-radius: 999px; background: #ccfbf1;
+  color: #115e59; white-space: nowrap;
+}
+.market-context-headline {
+  margin: 8px 0 6px; color: #0f172a; font-size: 20px;
+  font-weight: 850; line-height: 1.45;
+}
+.market-context-meta, .market-context-note { color: #64748b; font-size: 12px; }
+.market-context-summary { margin-top: 12px; color: #334155; font-size: 14px; }
+.context-details {
+  margin-top: 10px; border: 1px solid #dbe5e3; border-radius: 12px;
+  background: rgba(255,255,255,.9); overflow: hidden;
+}
+.context-details > summary {
+  padding: 12px 14px; color: #134e4a; font-size: 14px;
+  font-weight: 800; cursor: pointer; list-style-position: inside;
+}
+.context-details-body { padding: 0 14px 14px; }
+.context-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px; }
+.context-card {
+  padding: 12px; border: 1px solid #e2e8f0; border-radius: 11px; background: #fff;
+}
+.context-card-title { font-size: 14px; font-weight: 850; color: #17202a; }
+.context-card-label { margin-top: 7px; color: #0f766e; font-size: 11px; font-weight: 800; }
+.context-card-text { margin-top: 3px; color: #475569; font-size: 13px; }
+.context-timeline { position: relative; margin-left: 7px; padding-left: 20px; }
+.context-timeline::before {
+  content: ""; position: absolute; left: 4px; top: 7px; bottom: 7px;
+  width: 2px; background: #99f6e4;
+}
+.context-timeline-item { position: relative; padding: 0 0 15px; }
+.context-timeline-item:last-child { padding-bottom: 0; }
+.context-timeline-item::before {
+  content: ""; position: absolute; left: -20px; top: 6px;
+  width: 10px; height: 10px; border-radius: 50%; background: #0f766e;
+}
+.context-timeline-date { color: #0f766e; font-size: 11px; font-weight: 800; }
+.context-impact-type {
+  display: inline-block; margin-top: 7px; padding: 2px 7px;
+  border-radius: 999px; background: #f1f5f9; color: #475569;
+  font-size: 10px; font-weight: 800;
+}
+.context-source-list { margin: 0; padding-left: 20px; }
+.context-source-list li { margin-bottom: 7px; font-size: 12px; }
+.context-source-list a { color: #0f766e; }
+.glossary-info {
+  display: inline-grid; place-items: center; width: 20px; height: 20px;
+  margin-left: 3px; padding: 0; border: 1px solid #94a3b8; border-radius: 50%;
+  background: #fff; color: #0f766e; font: 800 11px/1 sans-serif;
+  vertical-align: middle; cursor: pointer;
+}
+.glossary-dialog {
+  width: min(520px, calc(100% - 28px)); padding: 0; border: 0;
+  border-radius: 16px; box-shadow: 0 24px 70px rgba(15,23,42,.28);
+}
+.glossary-dialog::backdrop { background: rgba(15,23,42,.55); }
+.glossary-dialog-body { padding: 20px; }
+.glossary-dialog-head { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.glossary-dialog-term { font-size: 21px; font-weight: 850; }
+.glossary-dialog-close {
+  width: 36px; height: 36px; border: 0; border-radius: 10px;
+  background: #f1f5f9; font-size: 20px; cursor: pointer;
+}
+.glossary-dialog-label { margin-top: 14px; color: #0f766e; font-size: 11px; font-weight: 800; }
+.glossary-dialog-text { margin-top: 3px; color: #334155; font-size: 14px; }
+@media (max-width: 560px) {
+  .market-context-section { padding: 14px; }
+  .market-context-headline { font-size: 18px; }
+  .context-grid { grid-template-columns: 1fr; }
+  .context-details > summary { min-height: 46px; }
+}
+
 
 /* =====================================================
    VER.3.3 NEWS TOPICS ACCORDION
@@ -1118,6 +1204,7 @@ td.nowrap {
 <div class="mm-v3-tools" id="mm-v3-tools">
   <div class="mm-v3-nav">
     <button type="button" data-mm-target="executive">📌 概要</button>
+    <button type="button" data-mm-target="context">🧭 背景</button>
     <button type="button" data-mm-target="news">🔥 ニュース</button>
     <button type="button" data-mm-target="market">📈 市場</button>
     <button type="button" data-mm-target="commodity">🛢 商品</button>
@@ -1162,6 +1249,21 @@ td.nowrap {
     詳細は下の各セクションをタップして確認
   </div>
 </div>
+
+<!-- =====================================================
+     CURRENT MARKET CONTEXT (WEEKLY STATIC DATA)
+===================================================== -->
+<section class="market-context-section" id="market-context-section" aria-labelledby="market-context-title">
+  <div class="market-context-kicker">
+    <span>🧭 日次ニュースの前提を理解する</span>
+    <span class="market-context-badge">週次更新</span>
+  </div>
+  <h2 class="market-context-headline" id="market-context-title">今のマーケットを読み込み中...</h2>
+  <div class="market-context-meta" id="market-context-meta">最終更新・対象期間を確認中</div>
+  <div class="market-context-summary" id="market-context-summary"></div>
+  <div id="market-context-details"></div>
+  <div class="market-context-note" id="market-context-status" role="status"></div>
+</section>
 
 <!-- =====================================================
      0 EXECUTIVE SUMMARY
@@ -1868,6 +1970,19 @@ td.nowrap {
   Market Morning ｜ 個人向け市場分析ダッシュボード
 </div>
 
+<dialog class="glossary-dialog" id="glossary-dialog" aria-labelledby="glossary-dialog-term">
+  <div class="glossary-dialog-body">
+    <div class="glossary-dialog-head">
+      <div class="glossary-dialog-term" id="glossary-dialog-term"></div>
+      <button class="glossary-dialog-close" id="glossary-dialog-close" type="button" aria-label="用語解説を閉じる">×</button>
+    </div>
+    <div class="glossary-dialog-label">かんたんな説明</div>
+    <div class="glossary-dialog-text" id="glossary-dialog-short"></div>
+    <div class="glossary-dialog-label">Market Morningで見る理由</div>
+    <div class="glossary-dialog-text" id="glossary-dialog-why"></div>
+  </div>
+</dialog>
+
 
 </div>
 
@@ -1949,6 +2064,214 @@ function clearElement(element) {
 
   if (element) {
     element.innerHTML = '';
+  }
+}
+
+
+/* =====================================================
+   CURRENT MARKET CONTEXT + STATIC GLOSSARY
+===================================================== */
+let glossaryTerms = [];
+let glossaryByLabel = new Map();
+
+function elementWithClass(tag, className, text = '') {
+  const element = document.createElement(tag);
+  if (className) element.className = className;
+  if (text !== '') element.textContent = text;
+  return element;
+}
+
+function makeGlossaryButton(entry) {
+  const button = elementWithClass('button', 'glossary-info', 'ⓘ');
+  button.type = 'button';
+  button.setAttribute('aria-label', `${entry.term}の用語解説を開く`);
+  button.addEventListener('click', event => {
+    event.preventDefault();
+    event.stopPropagation();
+    openGlossary(entry);
+  });
+  return button;
+}
+
+function openGlossary(entry) {
+  const dialog = document.getElementById('glossary-dialog');
+  if (!dialog || !entry) return;
+  document.getElementById('glossary-dialog-term').textContent = entry.term;
+  document.getElementById('glossary-dialog-short').textContent = entry.short;
+  document.getElementById('glossary-dialog-why').textContent = entry.why_it_matters;
+  if (typeof dialog.showModal === 'function') dialog.showModal();
+  else dialog.setAttribute('open', '');
+}
+
+function findGlossaryMatch(text) {
+  let best = null;
+  glossaryByLabel.forEach((entry, label) => {
+    const ascii = /^[\x00-\x7F]+$/.test(label);
+    const index = ascii
+      ? text.toLocaleLowerCase().indexOf(label.toLocaleLowerCase())
+      : text.indexOf(label);
+    if (index < 0) return;
+    if (!best || index < best.index || (index === best.index && label.length > best.label.length)) {
+      best = { index, label, entry };
+    }
+  });
+  return best;
+}
+
+function annotateGlossary(root) {
+  if (!root || root.dataset.glossaryAnnotated === 'true' || !glossaryByLabel.size) return;
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+
+  nodes.forEach(node => {
+    const parent = node.parentElement;
+    if (!parent || parent.closest('button, a, script, style, .glossary-dialog')) return;
+    let remaining = node.nodeValue || '';
+    if (!remaining.trim()) return;
+    const fragment = document.createDocumentFragment();
+    let replacements = 0;
+    while (remaining && replacements < 3) {
+      const match = findGlossaryMatch(remaining);
+      if (!match) break;
+      fragment.append(document.createTextNode(remaining.slice(0, match.index + match.label.length)));
+      fragment.append(makeGlossaryButton(match.entry));
+      remaining = remaining.slice(match.index + match.label.length);
+      replacements += 1;
+    }
+    if (!replacements) return;
+    fragment.append(document.createTextNode(remaining));
+    node.replaceWith(fragment);
+  });
+  root.dataset.glossaryAnnotated = 'true';
+}
+
+function contextDetails(title) {
+  const details = elementWithClass('details', 'context-details');
+  details.appendChild(elementWithClass('summary', '', title));
+  const body = elementWithClass('div', 'context-details-body');
+  details.appendChild(body);
+  return { details, body };
+}
+
+function appendContextCard(container, title, rows, badge = '') {
+  const card = elementWithClass('article', 'context-card');
+  card.appendChild(elementWithClass('div', 'context-card-title', title));
+  rows.forEach(([label, text]) => {
+    if (!text) return;
+    card.appendChild(elementWithClass('div', 'context-card-label', label));
+    card.appendChild(elementWithClass('div', 'context-card-text', text));
+  });
+  if (badge) card.appendChild(elementWithClass('span', 'context-impact-type', badge));
+  container.appendChild(card);
+}
+
+function renderMarketContext(data) {
+  const section = document.getElementById('market-context-section');
+  const detailsRoot = document.getElementById('market-context-details');
+  section.dataset.glossaryAnnotated = 'false';
+  document.getElementById('market-context-title').textContent = data.headline;
+  document.getElementById('market-context-meta').textContent =
+    `最終更新：${new Date(data.updated_at).toLocaleString('ja-JP')}｜対象期間：${formatDateKey(data.period_start)}〜${formatDateKey(data.period_end)}`;
+  document.getElementById('market-context-summary').textContent = data.summary;
+  clearElement(detailsRoot);
+
+  const timeline = contextDetails('ここまでの流れ');
+  const timelineList = elementWithClass('div', 'context-timeline');
+  (data.timeline || []).forEach(item => {
+    const row = elementWithClass('div', 'context-timeline-item');
+    row.appendChild(elementWithClass('div', 'context-timeline-date', formatDateKey(item.date)));
+    row.appendChild(elementWithClass('div', 'context-card-title', item.title));
+    row.appendChild(elementWithClass('div', 'context-card-text', item.fact));
+    row.appendChild(elementWithClass('div', 'context-card-label', '市場への影響'));
+    row.appendChild(elementWithClass('div', 'context-card-text', item.market_impact));
+    timelineList.appendChild(row);
+  });
+  timeline.body.appendChild(timelineList);
+  detailsRoot.appendChild(timeline.details);
+
+  const drivers = contextDetails('今、市場が見ていること');
+  const driverGrid = elementWithClass('div', 'context-grid');
+  (data.current_drivers || []).forEach(item => appendContextCard(
+    driverGrid, item.title,
+    [['現在の見方', item.explanation], ['日本株への波及', item.japan_impact]]
+  ));
+  drivers.body.appendChild(driverGrid);
+  detailsRoot.appendChild(drivers.details);
+
+  const japan = contextDetails('日本株へのつながり');
+  const japanGrid = elementWithClass('div', 'context-grid');
+  (data.japan_connection || []).forEach(item => appendContextCard(
+    japanGrid, item.route, [['現在の評価', item.assessment]]
+  ));
+  japan.body.appendChild(japanGrid);
+  detailsRoot.appendChild(japan.details);
+
+  const life = contextDetails('暮らしへの影響');
+  const lifeGrid = elementWithClass('div', 'context-grid');
+  (data.daily_life_impacts || []).forEach(item => appendContextCard(
+    lifeGrid, item.topic,
+    [['波及経路', item.mechanism], ['考えられる影響', item.impact]],
+    item.evidence_type
+  ));
+  life.body.appendChild(lifeGrid);
+  detailsRoot.appendChild(life.details);
+
+  const scenarios = contextDetails('この見方が変わる条件');
+  const scenarioGrid = elementWithClass('div', 'context-grid');
+  (data.scenario_change_conditions || []).forEach(item => appendContextCard(
+    scenarioGrid, item.condition, [['見方の変更', item.meaning]]
+  ));
+  scenarios.body.appendChild(scenarioGrid);
+  detailsRoot.appendChild(scenarios.details);
+
+  const sources = contextDetails('出典');
+  const sourceList = elementWithClass('ul', 'context-source-list');
+  (data.sources || []).forEach(item => {
+    const li = document.createElement('li');
+    const link = document.createElement('a');
+    link.href = item.url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = `${item.publisher}｜${item.title}（${item.published_at}）`;
+    li.appendChild(link);
+    sourceList.appendChild(li);
+  });
+  sources.body.appendChild(sourceList);
+  detailsRoot.appendChild(sources.details);
+
+  document.getElementById('market-context-status').textContent =
+    '日次レポートとは別の週次背景情報です。市場環境が大きく変化した場合は臨時更新します。';
+  annotateGlossary(section);
+}
+
+async function loadMarketContextAndGlossary() {
+  try {
+    const [contextResponse, glossaryResponse] = await Promise.all([
+      fetch('/data/market-context.json?ts=' + Date.now()),
+      fetch('/data/glossary.json?ts=' + Date.now())
+    ]);
+    if (!contextResponse.ok || !glossaryResponse.ok) throw new Error('静的JSON取得失敗');
+    const [context, glossary] = await Promise.all([
+      contextResponse.json(), glossaryResponse.json()
+    ]);
+    glossaryTerms = Array.isArray(glossary.terms) ? glossary.terms : [];
+    glossaryByLabel = new Map();
+    glossaryTerms.forEach(entry => {
+      [entry.term, ...(entry.aliases || [])].filter(Boolean).forEach(label => {
+        glossaryByLabel.set(label, entry);
+      });
+    });
+    renderMarketContext(context);
+    document.querySelectorAll('.market-name, .change-label, .asset-chart-tab').forEach(annotateGlossary);
+  } catch (error) {
+    console.error('Market context error:', error);
+    document.getElementById('market-context-title').textContent = '今のマーケットは更新確認中です';
+    document.getElementById('market-context-meta').textContent = '';
+    document.getElementById('market-context-summary').textContent =
+      '日次レポートと市場データは、引き続き下の各セクションで確認できます。';
+    document.getElementById('market-context-status').textContent =
+      '背景情報の取得に失敗しました。古い内容を推測で表示していません。';
   }
 }
 
@@ -5248,6 +5571,7 @@ function setupVer3UX() {
 
   const keywords = {
     executive: ['市場概況'],
+    context: ['今のマーケット'],
     news: ['NEWS', 'MAIN STORY', 'ニュース'],
     market: ['MARKET DATA', 'MARKET OVERVIEW', '市場'],
     commodity: ['COMMOD', 'COPPER', '商品'],
@@ -5278,6 +5602,14 @@ function setupVer3UX() {
           });
           return;
         }
+      }
+
+      if (button.dataset.mmTarget === 'context') {
+        document.getElementById('market-context-section')?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        return;
       }
 
       const target = sections.find(section => {
@@ -5323,7 +5655,21 @@ setupHistoryNavigation();
 
 setupAssetChartTabs();
 
+document.getElementById('glossary-dialog-close')?.addEventListener('click', () => {
+  const dialog = document.getElementById('glossary-dialog');
+  if (typeof dialog?.close === 'function') dialog.close();
+  else dialog?.removeAttribute('open');
+});
+
+document.getElementById('glossary-dialog')?.addEventListener('click', event => {
+  if (event.target === event.currentTarget && typeof event.currentTarget.close === 'function') {
+    event.currentTarget.close();
+  }
+});
+
 applyReportSectionOrder();
+
+loadMarketContextAndGlossary();
 
 loadHistoryIndex();
 

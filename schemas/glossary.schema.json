@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://market-morning-gules.vercel.app/schemas/glossary.schema.json",
+  "title": "Market Morning glossary v1",
+  "type": "object",
+  "required": ["updated_at", "terms"],
+  "properties": {
+    "updated_at": {"type": "string"},
+    "terms": {"type": "array", "items": {"type": "object", "required": ["term", "short", "why_it_matters", "aliases"], "properties": {"term": {"type": "string"}, "short": {"type": "string"}, "why_it_matters": {"type": "string"}, "aliases": {"type": "array", "items": {"type": "string"}}}}}
+  },
+  "additionalProperties": true
+}

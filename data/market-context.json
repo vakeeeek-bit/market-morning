@@ -1,0 +1,170 @@
+{
+  "updated_at": "2026-09-21T16:30:00+09:00",
+  "period_start": "2026-06-01",
+  "period_end": "2026-09-21",
+  "headline": "AI・半導体の成長期待は続く一方、米国の再利上げ観測と高い長期金利が相場の上値を試している",
+  "summary": "この3か月は、AI関連の利益成長期待が株式市場を支える一方、エネルギー高と粘着的なインフレを受けて米欧日の金融引き締めが再び意識される流れでした。直近は大型半導体が指数を押し上げていますが、小型株や値上がり銘柄数は追随しておらず、全面的なリスクオンではありません。日本株では、半導体・非鉄への追い風と、高金利・原油高・円相場による逆風を分けて見る必要があります。",
+  "timeline": [
+    {
+      "date": "2026-06-01",
+      "title": "米国が金属関税を追加調整",
+      "fact": "米国はアルミニウム、鉄鋼、銅の輸入関税制度を追加調整しました。",
+      "market_impact": "金属価格は世界景気だけでなく、関税による地域間の価格差や供給網再編の影響も受けやすくなりました。"
+    },
+    {
+      "date": "2026-09-14",
+      "title": "米10年金利5%とAI株の変動拡大",
+      "fact": "米10年債利回りが一時5%を超え、AI投資の収益性への警戒からSOXが大きく下落しました。",
+      "market_impact": "成長期待だけで株価を押し上げる局面から、金利と利益の両方を厳しく比べる局面へ移りました。"
+    },
+    {
+      "date": "2026-09-16",
+      "title": "FRBが0.25%利上げ",
+      "fact": "FOMCは政策金利の目標範囲を3.75〜4.00%へ引き上げ、インフレはなお高いと説明しました。",
+      "market_impact": "追加利上げ観測が残り、米2年・10年金利が株式の評価を左右する度合いが高まりました。"
+    },
+    {
+      "date": "2026-09-18",
+      "title": "日銀利上げ後も円安、半導体集中が継続",
+      "fact": "日銀は政策金利を1.25%へ引き上げましたが、円は強まらず、日経平均は半導体主導で上昇する一方、TOPIXと市場の広がりは弱いままでした。",
+      "market_impact": "利上げだけで円高になるとは限らず、日米金利差と次の政策見通しが輸出株・銀行・不動産を分ける局面です。"
+    },
+    {
+      "date": "2026-09-21",
+      "title": "高金利下でもアジア半導体が上昇",
+      "fact": "アジア市場ではAI需要を背景に半導体株が上昇しましたが、債券市場は追加利上げ観測で不安定な状態が続きました。",
+      "market_impact": "株高と高金利が同時進行しており、指数の上昇よりも物色の広がりを確認する必要があります。"
+    }
+  ],
+  "current_drivers": [
+    {
+      "title": "米金利と金融政策",
+      "explanation": "FRBは9月に利上げへ転じ、インフレを抑える姿勢を強めました。短期金利だけでなく、米10年金利が5%近辺で推移するかが株式の評価に影響します。",
+      "japan_impact": "米金利上昇は日本の高PERグロース株に逆風になりやすい一方、ドル高・円安を通じて輸出株を支える場合があります。"
+    },
+    {
+      "title": "AI・半導体",
+      "explanation": "AI向けデータセンター投資と半導体需要は相場の中心ですが、株価上昇が大型銘柄へ集中し、将来収益への要求も高まっています。",
+      "japan_impact": "半導体製造装置、電子部品、電線・電力インフラには追い風ですが、SOX失速時は日経平均への反動も大きくなります。"
+    },
+    {
+      "title": "円相場と日銀",
+      "explanation": "日銀の利上げ後も円安が続いたため、政策変更そのものより、日米金利差と次回利上げの速度が重視されています。",
+      "japan_impact": "円安は輸出企業の採算を支えやすい一方、輸入物価を通じて内需企業と家計のコストを押し上げる可能性があります。"
+    },
+    {
+      "title": "原油・中東情勢",
+      "explanation": "中東の供給不安は残っていますが、供給回復の情報で原油が下がる日もあり、地政学ニュースと実際の供給量を分けて見る必要があります。",
+      "japan_impact": "原油高は資源・石油関連には追い風になり得ますが、空運、陸運、化学、電力、消費にはコスト面の逆風です。"
+    },
+    {
+      "title": "中国の生産と需要",
+      "explanation": "AI・先端製造の生産は強い一方、個人消費と不動産は弱く、中国景気は一枚岩ではありません。",
+      "japan_impact": "機械・非鉄・商社は中国の政策期待だけでなく、実需、在庫、現物プレミアムの確認が重要です。"
+    }
+  ],
+  "japan_connection": [
+    {
+      "route": "米金利上昇 → 高PER株の割引率上昇 → 日本の半導体・グロース株",
+      "assessment": "基本は逆風。ただし利益成長期待が十分強い間は、指数では逆行して上昇することがあります。"
+    },
+    {
+      "route": "ドル高・円安 → 輸出採算の改善期待 → 自動車・機械",
+      "assessment": "追い風になりやすい一方、輸入コスト上昇と為替介入警戒が上値を抑える可能性があります。"
+    },
+    {
+      "route": "原油高 → 輸入コスト・期待インフレ上昇 → 運輸・化学・消費／資源株",
+      "assessment": "資源株には追い風、コスト負担の大きい業種には逆風という業種間格差を生みやすい経路です。"
+    },
+    {
+      "route": "AI投資 → 半導体・電力インフラ需要 → 装置・電子部品・電線",
+      "assessment": "中期の追い風ですが、物色が少数銘柄に集中する場合は相場全体の強さと区別します。"
+    }
+  ],
+  "daily_life_impacts": [
+    {
+      "topic": "住宅ローン",
+      "mechanism": "日銀の政策金利上昇が金融機関の短期金利や貸出金利へ波及する経路",
+      "impact": "変動金利型は将来の適用金利や返済額が上がる可能性があります。実際の変更時期と幅は各金融機関・契約条件で異なります。",
+      "evidence_type": "可能性"
+    },
+    {
+      "topic": "預金金利",
+      "mechanism": "政策金利上昇に合わせて銀行が預金金利を見直す経路",
+      "impact": "普通預金・定期預金の金利が上がる可能性がありますが、政策金利と同じ幅で自動的に上がるわけではありません。",
+      "evidence_type": "可能性"
+    },
+    {
+      "topic": "ガソリン・電気代",
+      "mechanism": "原油・LNG価格と円相場が輸入コストへ波及する経路",
+      "impact": "原油高と円安が重なると負担増要因です。料金への反映には時間差があり、補助制度の有無でも変わります。",
+      "evidence_type": "間接影響"
+    },
+    {
+      "topic": "輸入品と物価",
+      "mechanism": "円安により外貨建ての仕入価格が円換算で上がる経路",
+      "impact": "食品、日用品、海外製品の値上げ要因になりますが、企業が価格転嫁する時期と割合で家計への影響は変わります。",
+      "evidence_type": "間接影響"
+    }
+  ],
+  "scenario_change_conditions": [
+    {
+      "condition": "米10年金利が5%超で定着し、SOXが同時に下落する",
+      "meaning": "AI・半導体が高金利に耐えるという現在の見方を弱めます。"
+    },
+    {
+      "condition": "日経平均だけでなくTOPIX、値上がり銘柄数、小型株も上向く",
+      "meaning": "少数の大型半導体株に偏った相場から、より広い上昇相場へ移った可能性が高まります。"
+    },
+    {
+      "condition": "原油が再び急騰し、期待インフレと米金利も上昇する",
+      "meaning": "企業利益と家計負担の両面で、エネルギー高を主要リスクへ引き上げます。"
+    },
+    {
+      "condition": "円高が定着し、輸出株が下落する一方で内需株が改善する",
+      "meaning": "円安・輸出主導という日本株の物色構造を見直します。"
+    },
+    {
+      "condition": "中国の消費・不動産・在庫指標がそろって改善する",
+      "meaning": "政策期待ではなく実需回復を根拠に、機械・非鉄・商社への見方を強めます。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "米国の金属輸入関税に関する大統領布告",
+      "publisher": "Federal Register",
+      "published_at": "2026-06-04",
+      "url": "https://www.federalregister.gov/documents/2026/06/04/2026-11314/further-adjusting-the-tariff-regimes-for-imports-of-aluminum-steel-and-copper-into-the-united-states"
+    },
+    {
+      "title": "Federal Reserve issues FOMC statement",
+      "publisher": "Federal Reserve Board",
+      "published_at": "2026-09-16",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
+    },
+    {
+      "title": "Wall Street ends down, calls for AI slowdown pummel chipmakers",
+      "publisher": "Reuters",
+      "published_at": "2026-09-14",
+      "url": "https://www.reuters.com/business/ai-warnings-knock-nasdaq-futures-pressure-tech-stocks-2026-09-14/"
+    },
+    {
+      "title": "Tech boom powers China's factories but economic imbalances deepen",
+      "publisher": "Reuters",
+      "published_at": "2026-09-15",
+      "url": "https://www.reuters.com/world/china/chinas-factories-rev-up-slower-consumption-highlights-deepening-economic-2026-09-15/"
+    },
+    {
+      "title": "Yen steadies as intervention threat persists",
+      "publisher": "Reuters",
+      "published_at": "2026-09-21",
+      "url": "https://www.reuters.com/world/asia-pacific/volatile-yen-draws-intervention-watch-other-currencies-subdued-2026-09-21/"
+    },
+    {
+      "title": "Tech lifts share markets in Asia as oil slips",
+      "publisher": "Reuters",
+      "published_at": "2026-09-21",
+      "url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-09-21/"
+    }
+  ]
+}

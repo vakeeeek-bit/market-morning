@@ -91,6 +91,27 @@ class PageNavigationTests(unittest.TestCase):
         self.assertIn("return { title, ...content };", world)
         self.assertNotIn("typeof content === 'object' ? JSON.stringify(content)", world)
 
+    def test_current_market_context_is_separate_from_daily_report(self):
+        world = self.read("index.html")
+        self.assertIn('id="market-context-section"', world)
+        self.assertIn("/data/market-context.json", world)
+        self.assertIn("日次レポートとは別の週次背景情報", world)
+        self.assertNotIn("market-context.json", self.read("japan-stocks.html"))
+
+    def test_market_context_is_mobile_first_and_collapsed_by_topic(self):
+        world = self.read("index.html")
+        self.assertIn("elementWithClass('details', 'context-details')", world)
+        self.assertIn("@media (max-width: 560px)", world)
+        self.assertIn("ここまでの流れ", world)
+        self.assertIn("暮らしへの影響", world)
+
+    def test_glossary_uses_static_json_and_tap_dialog(self):
+        world = self.read("index.html")
+        self.assertIn("/data/glossary.json", world)
+        self.assertIn('id="glossary-dialog"', world)
+        self.assertIn("makeGlossaryButton", world)
+        self.assertNotIn("glossaryApi", world)
+
 
 if __name__ == "__main__":
     unittest.main()

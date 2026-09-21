@@ -17,6 +17,8 @@ FILES = {
     "market": DATA_DIR / "market.json",
     "japan-stocks": DATA_DIR / "japan-stocks.json",
     "status": DATA_DIR / "status.json",
+    "market-context": DATA_DIR / "market-context.json",
+    "glossary": DATA_DIR / "glossary.json",
 }
 
 TOP_LEVEL_REQUIRED = {
@@ -46,6 +48,20 @@ TOP_LEVEL_REQUIRED = {
         "data_quality",
     ],
     "status": ["status", "updated_at", "message"],
+    "market-context": [
+        "updated_at",
+        "period_start",
+        "period_end",
+        "headline",
+        "summary",
+        "timeline",
+        "current_drivers",
+        "japan_connection",
+        "daily_life_impacts",
+        "scenario_change_conditions",
+        "sources",
+    ],
+    "glossary": ["updated_at", "terms"],
 }
 
 

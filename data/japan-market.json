@@ -1,7 +1,7 @@
 {
   "updated_at": "2026-09-22 15:56:41 JST",
   "market_date": "2026-09-18",
-  "data_phase": "日付不一致・判定保留",
+  "data_phase": "休場",
   "source": "Yahoo Finance via yfinance（1回の一括取得）",
   "scope": "TOPIX-17業種ETFと各業種の主要監視2銘柄。全上場銘柄・東証公式統計ではない",
   "sector_ranking": [
@@ -1032,20 +1032,21 @@
     "relative": "日経225優位"
   },
   "scenario_review": {
-    "market_date": "2026-09-21",
-    "basis": "朝レポートの注目業種を、TOPIX-17業種ETFの当日騰落順位と機械照合",
-    "status": "判定保留",
+    "title": "昨日のシナリオ検証 → 今日への修正",
+    "market_date": "2026-09-18",
+    "basis": "前回レポートの注目業種をTOPIX-17業種ETFの実績と照合し、次の取引日へ見方を修正",
+    "status": "休場・検証保留",
     "checks": [],
-    "morning_assumption": "半導体・電気機器 / 非鉄・電線 / 銀行・保険 / 自動車 / 不動産 / 鉱業・石油 / 空運・陸運",
-    "actual_move": "日付不一致のため比較しません",
-    "difference": "判定保留",
-    "carry_forward": [
+    "previous_view": "半導体・電気機器 / 非鉄・電線 / 銀行・保険 / 自動車 / 不動産 / 鉱業・石油 / 空運・陸運",
+    "market_result": "休場のため新しい現物株の結果はありません",
+    "revision": "先物・海外材料は監視し、現物株の判断は次の取引日まで保留",
+    "today_watch": [
       "9/20米中協議の最終成果",
       "中東緊張再上昇のWTI/Brent週明け反応",
       "Kashkari発言後の米金利・SOX反応",
       "CXMT量産の日本メモリ・装置株への反応"
     ],
-    "note": "日付が一致しないため判定しません。朝レポート=2026-09-21、セクター=2026-09-18、銘柄=2026-09-18"
+    "note": "東証現物は休場です。前営業日の実績は保持し、次の取引日に見方を修正します。"
   },
   "data_quality": {
     "sector_total": 17,
@@ -1053,49 +1054,90 @@
     "stock_total": 34,
     "stock_available": 34,
     "date_alignment": {
-      "expected_market_date": "2026-09-21",
+      "expected_market_date": "2026-09-18",
       "sector_market_date": "2026-09-18",
       "stock_market_date": "2026-09-18",
       "benchmark_market_date": "2026-09-18",
-      "aligned": false,
+      "aligned": true,
       "benchmark_aligned": true
     }
   },
   "market_regime": {
     "headline": "指数主導の選別相場",
+    "headline_reason": "日経225連動ETF +1.41%に対しTOPIX連動ETF -0.26%、Breadth -64.7",
+    "scoreboard": [
+      {
+        "label": "日経平均",
+        "value": 1.41,
+        "unit": "%",
+        "meaning": "プラスなら日経平均型が上昇"
+      },
+      {
+        "label": "TOPIX",
+        "value": -0.26,
+        "unit": "%",
+        "meaning": "市場全体の方向"
+      },
+      {
+        "label": "上昇・下落の広がり",
+        "value": -64.7,
+        "unit": "",
+        "meaning": "プラスほど上昇銘柄が多い"
+      },
+      {
+        "label": "値上がり／値下がり",
+        "value": "6／28",
+        "unit": "銘柄",
+        "meaning": "主要監視34銘柄の内訳"
+      }
+    ],
     "divergence_alert": "指数と市場内部が乖離：日経225連動ETF +1.41%に対しTOPIX連動ETF -0.26%、Breadth -64.7",
     "dimensions": [
       {
-        "axis": "Growth / Value",
+        "axis": "成長株と割安株",
         "label": "判定対象外",
         "status": "unavailable",
-        "reason": "現行データに同一基準のGrowth・Value指数がないため"
+        "reason": "同じ基準で比較できる成長株・割安株指数がないため"
       },
       {
-        "axis": "大型株 / 小型株",
+        "axis": "大型株と小型株",
         "label": "判定対象外",
         "status": "unavailable",
-        "reason": "小型株指数を取得しておらず、日経/TOPIX差を規模差と断定できないため"
+        "reason": "小型株指数を取得しておらず、日経平均とTOPIXの差を規模差と断定できないため"
       },
       {
-        "axis": "外需 / 内需",
+        "axis": "外需と内需",
         "label": "外需優位",
+        "result": "外需優位",
         "status": "estimated",
+        "left_label": "外需",
+        "right_label": "内需",
+        "left_value": 0.43,
+        "right_value": -0.74,
+        "spread_pt": 1.17,
+        "detail": "外需 +0.43% ／ 内需 -0.74%",
         "reason": "相対騰落：外需 +0.43%／内需 -0.74%（差 +1.17pt）",
         "basis": "固定17業種ETFのうち外需5・内需10業種の代理比較"
       },
       {
-        "axis": "景気敏感 / ディフェンシブ",
+        "axis": "景気敏感とディフェンシブ",
         "label": "景気敏感優位",
+        "result": "景気敏感優位",
         "status": "estimated",
+        "left_label": "景気敏感",
+        "right_label": "ディフェンシブ",
+        "left_value": -0.17,
+        "right_value": -0.81,
+        "spread_pt": 0.64,
+        "detail": "景気敏感 -0.17% ／ ディフェンシブ -0.81%",
         "reason": "相対騰落：景気敏感 -0.17%／ディフェンシブ -0.81%（差 +0.64pt）",
         "basis": "固定17業種ETFのうち景気敏感12・ディフェンシブ5業種の代理比較"
       },
       {
-        "axis": "半導体",
-        "label": "日本株は判定対象外",
+        "axis": "国内半導体",
+        "label": "判定対象外",
         "status": "unavailable",
-        "reason": "現行の電機・精密ETFを半導体だけの値動きとして扱えないため。海外SOXは主要ドライバー欄で確認"
+        "reason": "電機・精密ETFを半導体だけの値動きとして扱えないため。米国半導体は主要材料欄で確認"
       },
       {
         "axis": "金融",
@@ -1104,13 +1146,14 @@
         "reason": "銀行・金融（銀行除く）ETFの平均騰落 -0.48%"
       },
       {
-        "axis": "市場Breadth",
+        "axis": "上昇・下落の広がり",
         "label": "広い下落",
         "status": "observed",
+        "value": -64.7,
         "reason": "主要監視34銘柄の値上がり6・値下がり28、広がり指数 -64.7"
       },
       {
-        "axis": "リスクオン / リスクオフ",
+        "axis": "市場全体の姿勢",
         "label": "指数主導の選別相場",
         "status": "estimated",
         "reason": "日経225連動ETF +1.41%に対しTOPIX連動ETF -0.26%、Breadth -64.7"
@@ -1120,72 +1163,77 @@
   },
   "key_drivers": [
     {
-      "driver": "USD/JPY",
-      "assessment": "外需に追い風／輸入コストに向かい風",
-      "status": "observed",
-      "reason": "USD/JPY 157.318、前日比 +0.76%（2026-09-21）→ 円安なら外需採算を支えやすい一方、輸入コストを押し上げやすい。日本株現物の基準日2026-09-18より新しく、次回取引の監視材料",
-      "affected_sectors": [
-        "自動車・輸送機",
-        "機械",
-        "小売"
-      ],
-      "market_date": "2026-09-21",
-      "change_condition": "円高へ反転し、自動車・機械がTOPIXを下回るなら外需追い風の見方を弱める",
-      "pricing_status": "日本株現物に未反映"
-    },
-    {
-      "driver": "米国金利",
-      "assessment": "グロースに追い風",
-      "status": "observed",
-      "reason": "米10年債利回り 4.963、前日比 -0.70%（2026-09-21）→ 金利低下は高PER株の割引率負担を和らげ、上昇は逆風になりやすい。日本株現物の基準日2026-09-18より新しく、次回取引の監視材料",
-      "affected_sectors": [
-        "電機・精密",
-        "情報通信・サービス",
-        "銀行"
-      ],
-      "market_date": "2026-09-21",
-      "change_condition": "米10年金利が再上昇し、電機・精密や情報通信がTOPIXを下回るなら追い風判定を修正する",
-      "pricing_status": "日本株現物に未反映"
-    },
-    {
-      "driver": "SOX・米半導体",
-      "assessment": "追い風",
-      "status": "observed",
-      "reason": "PHLX半導体株指数（SOX） 12433.1709、前日比 +4.29%（2026-09-21）→ 米半導体の方向は日本の半導体関連の初期センチメントに波及しやすい。日本株現物の基準日2026-09-18より新しく、次回取引の監視材料",
-      "affected_sectors": [
-        "電機・精密",
-        "機械"
-      ],
-      "market_date": "2026-09-21",
-      "change_condition": "SOXが反落し、日本の電機・精密ETFと主要半導体株が追随しなければ追い風判定を修正する",
-      "pricing_status": "日本株現物に未反映"
-    },
-    {
-      "driver": "Copper・中国景気",
-      "assessment": "参考・追い風候補",
-      "status": "observed",
-      "reason": "Copper 6.792、前日比 +2.68%（2026-09-21）→ 銅価格は素材・設備投資の確認材料。継続先物価格だけで中国景気や実需を断定しません。日本株現物の基準日2026-09-18より新しく、次回取引の監視材料",
-      "affected_sectors": [
-        "鉄鋼・非鉄",
-        "機械",
-        "商社・卸売"
-      ],
-      "market_date": "2026-09-21",
-      "change_condition": "銅高が継続せず、非鉄・機械も反応しなければ景気改善材料として扱わない",
-      "pricing_status": "日本株現物に未反映"
-    },
-    {
       "driver": "原油",
+      "category": "商品",
       "assessment": "運輸に追い風／資源に向かい風",
       "status": "observed",
-      "reason": "WTI 91.97、前日比 -8.31%（2026-09-21）→ 原油安は燃料コストを抑える一方、資源収益には逆風になりやすい。継続先物のため限月付き清算値としては扱いません。日本株現物の基準日2026-09-18より新しく、次回取引の監視材料",
+      "market_value": 91.97,
+      "change_pct": -8.31,
+      "transmission_path": "原油価格 → 資源収益と燃料コスト",
+      "reason": "WTI 91.97、前日比 -8.31%（2026-09-21）→ 原油価格 → 資源収益と燃料コスト。継続先物のため限月付き清算値としては扱いません。日本株現物の基準日2026-09-18より新しく、次回取引の監視材料",
       "affected_sectors": [
         "エネルギー資源",
         "運輸・物流",
         "素材・化学"
       ],
       "market_date": "2026-09-21",
+      "impact_score": 8.31,
       "change_condition": "原油が反発するか、運輸・物流が相対優位にならなければコスト追い風の見方を修正する",
+      "pricing_status": "日本株現物に未反映"
+    },
+    {
+      "driver": "米国半導体株",
+      "category": "海外株",
+      "assessment": "追い風",
+      "status": "observed",
+      "market_value": 12433.1709,
+      "change_pct": 4.29,
+      "transmission_path": "米半導体株 → 国内半導体関連の初期センチメント",
+      "reason": "PHLX半導体株指数（SOX） 12433.1709、前日比 +4.29%（2026-09-21）→ 米半導体株 → 国内半導体関連の初期センチメント。日本株現物の基準日2026-09-18より新しく、次回取引の監視材料",
+      "affected_sectors": [
+        "電機・精密",
+        "機械"
+      ],
+      "market_date": "2026-09-21",
+      "impact_score": 6.435,
+      "change_condition": "米半導体株が反転するか、日本の電機・精密が追随しなければ影響を弱く見る",
+      "pricing_status": "日本株現物に未反映"
+    },
+    {
+      "driver": "米国大型ハイテク株",
+      "category": "海外株",
+      "assessment": "追い風",
+      "status": "observed",
+      "market_value": 30482.3516,
+      "change_pct": 2.83,
+      "transmission_path": "米国ハイテク株 → 国内グロース株の投資家心理",
+      "reason": "NASDAQ100 30482.3516、前日比 +2.83%（2026-09-21）→ 米国ハイテク株 → 国内グロース株の投資家心理。日本株現物の基準日2026-09-18より新しく、次回取引の監視材料",
+      "affected_sectors": [
+        "電機・精密",
+        "情報通信・サービス"
+      ],
+      "market_date": "2026-09-21",
+      "impact_score": 2.83,
+      "change_condition": "米国ハイテク株が反転し、日本のグロース株が追随しなければ影響を弱く見る",
+      "pricing_status": "日本株現物に未反映"
+    },
+    {
+      "driver": "銅",
+      "category": "商品",
+      "assessment": "関連株に追い風候補",
+      "status": "observed",
+      "market_value": 6.792,
+      "change_pct": 2.68,
+      "transmission_path": "銅価格 → 非鉄・設備投資関連の収益期待",
+      "reason": "Copper 6.792、前日比 +2.68%（2026-09-21）→ 銅価格 → 非鉄・設備投資関連の収益期待。継続先物だけで中国実需を断定しません。日本株現物の基準日2026-09-18より新しく、次回取引の監視材料",
+      "affected_sectors": [
+        "鉄鋼・非鉄",
+        "機械",
+        "商社・卸売"
+      ],
+      "market_date": "2026-09-21",
+      "impact_score": 2.68,
+      "change_condition": "銅の方向が継続せず、非鉄・機械も反応しなければ影響材料から外す",
       "pricing_status": "日本株現物に未反映"
     }
   ],
@@ -1193,31 +1241,52 @@
     "label": "値動きから見たローテーション（推定）",
     "items": [
       {
-        "axis": "外需 ↔ 内需",
+        "axis": "外需と内需",
         "label": "外需優位",
+        "result": "外需優位",
         "status": "estimated",
+        "left_label": "外需",
+        "right_label": "内需",
+        "left_value": 0.43,
+        "right_value": -0.74,
+        "spread_pt": 1.17,
+        "detail": "外需 +0.43% ／ 内需 -0.74%",
         "reason": "相対騰落：外需 +0.43%／内需 -0.74%（差 +1.17pt）",
         "basis": "固定セクターETFの相対騰落"
       },
       {
-        "axis": "景気敏感 ↔ ディフェンシブ",
+        "axis": "景気敏感とディフェンシブ",
         "label": "景気敏感優位",
+        "result": "景気敏感優位",
         "status": "estimated",
+        "left_label": "景気敏感",
+        "right_label": "ディフェンシブ",
+        "left_value": -0.17,
+        "right_value": -0.81,
+        "spread_pt": 0.64,
+        "detail": "景気敏感 -0.17% ／ ディフェンシブ -0.81%",
         "reason": "相対騰落：景気敏感 -0.17%／ディフェンシブ -0.81%（差 +0.64pt）",
         "basis": "固定セクターETFの相対騰落"
       },
       {
-        "axis": "日経225 ↔ TOPIX",
-        "label": "日経225優位",
+        "axis": "日経平均とTOPIX",
+        "label": "日経平均優位",
+        "result": "日経平均優位",
         "status": "estimated",
-        "reason": "相対騰落：日経225 +1.41%／TOPIX -0.26%（差 +1.67pt）",
-        "basis": "指数連動ETFの相対騰落（大型/小型の代理ではない）"
+        "left_label": "日経平均",
+        "right_label": "TOPIX",
+        "left_value": 1.41,
+        "right_value": -0.26,
+        "spread_pt": 1.67,
+        "detail": "日経平均 +1.41% ／ TOPIX -0.26%",
+        "reason": "相対騰落：日経平均 +1.41%／TOPIX -0.26%（差 +1.67pt）",
+        "basis": "指数連動ETFの相対騰落（大型株・小型株の代理ではない）"
       },
       {
-        "axis": "Growth ↔ Value",
+        "axis": "成長株と割安株",
         "label": "判定対象外",
         "status": "unavailable",
-        "reason": "同一基準のスタイル指数がないため"
+        "reason": "同じ基準のスタイル指数がないため"
       }
     ],
     "note": "投資主体別売買を取得していないため『資金流入』とは表現しません。"
@@ -1230,9 +1299,32 @@
       "participation": "まちまち",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.48,
-      "persistence": "5日相対劣後",
+      "persistence": "確認できず",
       "return_5d_pct": 0.08,
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価"
+      "axes": {
+        "momentum": {
+          "label": "強い",
+          "value": 1.44,
+          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
+        },
+        "breadth": {
+          "label": "まちまち",
+          "value": "1/2",
+          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+        },
+        "activity": {
+          "label": "商い低調",
+          "value": 0.48,
+          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+        },
+        "persistence": {
+          "label": "確認できず",
+          "value": 0.08,
+          "rule": "5日騰落をTOPIX連動ETFと比較"
+        }
+      },
+      "comment": "選別的な上昇。まちまち、商い低調、確認できず。",
+      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
       "sector": "電機・精密",
@@ -1241,9 +1333,32 @@
       "participation": "まちまち",
       "volume_confirmation": "出来高増",
       "volume_ratio_20d": 2.3,
-      "persistence": "5日相対優位",
+      "persistence": "確認できず",
       "return_5d_pct": 2.91,
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価"
+      "axes": {
+        "momentum": {
+          "label": "強い",
+          "value": 1.44,
+          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
+        },
+        "breadth": {
+          "label": "まちまち",
+          "value": "1/2",
+          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+        },
+        "activity": {
+          "label": "出来高増",
+          "value": 2.3,
+          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+        },
+        "persistence": {
+          "label": "確認できず",
+          "value": 2.91,
+          "rule": "5日騰落をTOPIX連動ETFと比較"
+        }
+      },
+      "comment": "選別的な上昇。まちまち、出来高増、確認できず。",
+      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
       "sector": "医薬品",
@@ -1252,9 +1367,32 @@
       "participation": "2銘柄とも上昇",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.46,
-      "persistence": "5日相対優位",
+      "persistence": "確認できず",
       "return_5d_pct": 4.6,
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価"
+      "axes": {
+        "momentum": {
+          "label": "中立",
+          "value": 0.52,
+          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
+        },
+        "breadth": {
+          "label": "広い",
+          "value": "2/2",
+          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+        },
+        "activity": {
+          "label": "商い低調",
+          "value": 0.46,
+          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+        },
+        "persistence": {
+          "label": "確認できず",
+          "value": 4.6,
+          "rule": "5日騰落をTOPIX連動ETFと比較"
+        }
+      },
+      "comment": "広がりを伴う上昇。2銘柄とも上昇、商い低調、確認できず。",
+      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
       "sector": "機械",
@@ -1263,9 +1401,32 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.38,
-      "persistence": "5日ほぼ同等",
+      "persistence": "確認できず",
       "return_5d_pct": 1.91,
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価"
+      "axes": {
+        "momentum": {
+          "label": "中立",
+          "value": 0.49,
+          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
+        },
+        "breadth": {
+          "label": "狭い",
+          "value": "0/2",
+          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+        },
+        "activity": {
+          "label": "商い低調",
+          "value": 0.38,
+          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+        },
+        "persistence": {
+          "label": "確認できず",
+          "value": 1.91,
+          "rule": "5日騰落をTOPIX連動ETFと比較"
+        }
+      },
+      "comment": "選別的な上昇。2銘柄とも下落、商い低調、確認できず。",
+      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
       "sector": "小売",
@@ -1274,9 +1435,32 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.25,
-      "persistence": "5日相対劣後",
+      "persistence": "確認できず",
       "return_5d_pct": 1.03,
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価"
+      "axes": {
+        "momentum": {
+          "label": "中立",
+          "value": 0.39,
+          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
+        },
+        "breadth": {
+          "label": "狭い",
+          "value": "0/2",
+          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+        },
+        "activity": {
+          "label": "商い低調",
+          "value": 0.25,
+          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+        },
+        "persistence": {
+          "label": "確認できず",
+          "value": 1.03,
+          "rule": "5日騰落をTOPIX連動ETFと比較"
+        }
+      },
+      "comment": "選別的な上昇。2銘柄とも下落、商い低調、確認できず。",
+      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
       "sector": "素材・化学",
@@ -1285,9 +1469,32 @@
       "participation": "まちまち",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.22,
-      "persistence": "5日相対優位",
+      "persistence": "確認できず",
       "return_5d_pct": 2.48,
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価"
+      "axes": {
+        "momentum": {
+          "label": "中立",
+          "value": 0.28,
+          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
+        },
+        "breadth": {
+          "label": "まちまち",
+          "value": "1/2",
+          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+        },
+        "activity": {
+          "label": "商い低調",
+          "value": 0.22,
+          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+        },
+        "persistence": {
+          "label": "確認できず",
+          "value": 2.48,
+          "rule": "5日騰落をTOPIX連動ETFと比較"
+        }
+      },
+      "comment": "選別的な上昇。まちまち、商い低調、確認できず。",
+      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
       "sector": "建設・資材",
@@ -1296,9 +1503,32 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "出来高増",
       "volume_ratio_20d": 1.2,
-      "persistence": "5日ほぼ同等",
+      "persistence": "確認できず",
       "return_5d_pct": 1.89,
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価"
+      "axes": {
+        "momentum": {
+          "label": "中立",
+          "value": -0.31,
+          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
+        },
+        "breadth": {
+          "label": "狭い",
+          "value": "0/2",
+          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+        },
+        "activity": {
+          "label": "出来高増",
+          "value": 1.2,
+          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+        },
+        "persistence": {
+          "label": "確認できず",
+          "value": 1.89,
+          "rule": "5日騰落をTOPIX連動ETFと比較"
+        }
+      },
+      "comment": "広がりを伴う下落。2銘柄とも下落、出来高増、確認できず。",
+      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
       "sector": "金融（銀行除く）",
@@ -1307,9 +1537,32 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "出来高増",
       "volume_ratio_20d": 1.2,
-      "persistence": "5日ほぼ同等",
+      "persistence": "確認できず",
       "return_5d_pct": 1.81,
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価"
+      "axes": {
+        "momentum": {
+          "label": "中立",
+          "value": -0.43,
+          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
+        },
+        "breadth": {
+          "label": "狭い",
+          "value": "0/2",
+          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+        },
+        "activity": {
+          "label": "出来高増",
+          "value": 1.2,
+          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+        },
+        "persistence": {
+          "label": "確認できず",
+          "value": 1.81,
+          "rule": "5日騰落をTOPIX連動ETFと比較"
+        }
+      },
+      "comment": "広がりを伴う下落。2銘柄とも下落、出来高増、確認できず。",
+      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
       "sector": "銀行",
@@ -1318,9 +1571,32 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "出来高増",
       "volume_ratio_20d": 2.44,
-      "persistence": "5日相対劣後",
+      "persistence": "確認できず",
       "return_5d_pct": -0.7,
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価"
+      "axes": {
+        "momentum": {
+          "label": "中立",
+          "value": -0.53,
+          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
+        },
+        "breadth": {
+          "label": "狭い",
+          "value": "0/2",
+          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+        },
+        "activity": {
+          "label": "出来高増",
+          "value": 2.44,
+          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+        },
+        "persistence": {
+          "label": "確認できず",
+          "value": -0.7,
+          "rule": "5日騰落をTOPIX連動ETFと比較"
+        }
+      },
+      "comment": "広がりを伴う下落。2銘柄とも下落、出来高増、確認できず。",
+      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
       "sector": "自動車・輸送機",
@@ -1329,9 +1605,32 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "平常圏",
       "volume_ratio_20d": 1.14,
-      "persistence": "5日相対劣後",
+      "persistence": "確認できず",
       "return_5d_pct": 0.67,
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価"
+      "axes": {
+        "momentum": {
+          "label": "中立",
+          "value": -0.55,
+          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
+        },
+        "breadth": {
+          "label": "狭い",
+          "value": "0/2",
+          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+        },
+        "activity": {
+          "label": "平常圏",
+          "value": 1.14,
+          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+        },
+        "persistence": {
+          "label": "確認できず",
+          "value": 0.67,
+          "rule": "5日騰落をTOPIX連動ETFと比較"
+        }
+      },
+      "comment": "広がりを伴う下落。2銘柄とも下落、平常圏、確認できず。",
+      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
       "sector": "運輸・物流",
@@ -1340,9 +1639,32 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "平常圏",
       "volume_ratio_20d": 0.86,
-      "persistence": "5日ほぼ同等",
+      "persistence": "確認できず",
       "return_5d_pct": 1.66,
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価"
+      "axes": {
+        "momentum": {
+          "label": "中立",
+          "value": -0.62,
+          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
+        },
+        "breadth": {
+          "label": "狭い",
+          "value": "0/2",
+          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+        },
+        "activity": {
+          "label": "平常圏",
+          "value": 0.86,
+          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+        },
+        "persistence": {
+          "label": "確認できず",
+          "value": 1.66,
+          "rule": "5日騰落をTOPIX連動ETFと比較"
+        }
+      },
+      "comment": "広がりを伴う下落。2銘柄とも下落、平常圏、確認できず。",
+      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
       "sector": "商社・卸売",
@@ -1351,9 +1673,32 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.73,
-      "persistence": "5日相対劣後",
+      "persistence": "確認できず",
       "return_5d_pct": 0.75,
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価"
+      "axes": {
+        "momentum": {
+          "label": "中立",
+          "value": -0.67,
+          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
+        },
+        "breadth": {
+          "label": "狭い",
+          "value": "0/2",
+          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+        },
+        "activity": {
+          "label": "商い低調",
+          "value": 0.73,
+          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+        },
+        "persistence": {
+          "label": "確認できず",
+          "value": 0.75,
+          "rule": "5日騰落をTOPIX連動ETFと比較"
+        }
+      },
+      "comment": "広がりを伴う下落。2銘柄とも下落、商い低調、確認できず。",
+      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
       "sector": "情報通信・サービス",
@@ -1362,9 +1707,32 @@
       "participation": "まちまち",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.19,
-      "persistence": "5日相対優位",
+      "persistence": "確認できず",
       "return_5d_pct": 3.0,
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価"
+      "axes": {
+        "momentum": {
+          "label": "弱い",
+          "value": -0.76,
+          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
+        },
+        "breadth": {
+          "label": "まちまち",
+          "value": "1/2",
+          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+        },
+        "activity": {
+          "label": "商い低調",
+          "value": 0.19,
+          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+        },
+        "persistence": {
+          "label": "確認できず",
+          "value": 3.0,
+          "rule": "5日騰落をTOPIX連動ETFと比較"
+        }
+      },
+      "comment": "方向感まちまち。まちまち、商い低調、確認できず。",
+      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
       "sector": "エネルギー資源",
@@ -1373,9 +1741,32 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "出来高増",
       "volume_ratio_20d": 2.44,
-      "persistence": "5日相対劣後",
+      "persistence": "確認できず",
       "return_5d_pct": -0.4,
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価"
+      "axes": {
+        "momentum": {
+          "label": "弱い",
+          "value": -1.19,
+          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
+        },
+        "breadth": {
+          "label": "狭い",
+          "value": "0/2",
+          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+        },
+        "activity": {
+          "label": "出来高増",
+          "value": 2.44,
+          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+        },
+        "persistence": {
+          "label": "確認できず",
+          "value": -0.4,
+          "rule": "5日騰落をTOPIX連動ETFと比較"
+        }
+      },
+      "comment": "広がりを伴う下落。2銘柄とも下落、出来高増、確認できず。",
+      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
       "sector": "不動産",
@@ -1384,9 +1775,32 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.32,
-      "persistence": "5日ほぼ同等",
+      "persistence": "確認できず",
       "return_5d_pct": 1.17,
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価"
+      "axes": {
+        "momentum": {
+          "label": "弱い",
+          "value": -1.42,
+          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
+        },
+        "breadth": {
+          "label": "狭い",
+          "value": "0/2",
+          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+        },
+        "activity": {
+          "label": "商い低調",
+          "value": 0.32,
+          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+        },
+        "persistence": {
+          "label": "確認できず",
+          "value": 1.17,
+          "rule": "5日騰落をTOPIX連動ETFと比較"
+        }
+      },
+      "comment": "広がりを伴う下落。2銘柄とも下落、商い低調、確認できず。",
+      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
       "sector": "食品",
@@ -1395,9 +1809,32 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "平常圏",
       "volume_ratio_20d": 1.12,
-      "persistence": "5日相対劣後",
+      "persistence": "確認できず",
       "return_5d_pct": 0.62,
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価"
+      "axes": {
+        "momentum": {
+          "label": "弱い",
+          "value": -1.6,
+          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
+        },
+        "breadth": {
+          "label": "狭い",
+          "value": "0/2",
+          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+        },
+        "activity": {
+          "label": "平常圏",
+          "value": 1.12,
+          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+        },
+        "persistence": {
+          "label": "確認できず",
+          "value": 0.62,
+          "rule": "5日騰落をTOPIX連動ETFと比較"
+        }
+      },
+      "comment": "広がりを伴う下落。2銘柄とも下落、平常圏、確認できず。",
+      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
       "sector": "電力・ガス",
@@ -1406,50 +1843,67 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.64,
-      "persistence": "5日相対劣後",
+      "persistence": "確認できず",
       "return_5d_pct": -0.35,
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価"
+      "axes": {
+        "momentum": {
+          "label": "弱い",
+          "value": -2.6,
+          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
+        },
+        "breadth": {
+          "label": "狭い",
+          "value": "0/2",
+          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+        },
+        "activity": {
+          "label": "商い低調",
+          "value": 0.64,
+          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+        },
+        "persistence": {
+          "label": "確認できず",
+          "value": -0.35,
+          "rule": "5日騰落をTOPIX連動ETFと比較"
+        }
+      },
+      "comment": "広がりを伴う下落。2銘柄とも下落、商い低調、確認できず。",
+      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     }
   ],
   "monitoring_points": [
-    {
-      "watch": "USD/JPY",
-      "current_view": "外需に追い風／輸入コストに向かい風",
-      "change_condition": "円高へ反転し、自動車・機械がTOPIXを下回るなら外需追い風の見方を弱める",
-      "pricing_status": "日本株現物に未反映"
-    },
-    {
-      "watch": "米国金利",
-      "current_view": "グロースに追い風",
-      "change_condition": "米10年金利が再上昇し、電機・精密や情報通信がTOPIXを下回るなら追い風判定を修正する",
-      "pricing_status": "日本株現物に未反映"
-    },
-    {
-      "watch": "SOX・米半導体",
-      "current_view": "追い風",
-      "change_condition": "SOXが反落し、日本の電機・精密ETFと主要半導体株が追随しなければ追い風判定を修正する",
-      "pricing_status": "日本株現物に未反映"
-    },
-    {
-      "watch": "Copper・中国景気",
-      "current_view": "参考・追い風候補",
-      "change_condition": "銅高が継続せず、非鉄・機械も反応しなければ景気改善材料として扱わない",
-      "pricing_status": "日本株現物に未反映"
-    },
     {
       "watch": "原油",
       "current_view": "運輸に追い風／資源に向かい風",
       "change_condition": "原油が反発するか、運輸・物流が相対優位にならなければコスト追い風の見方を修正する",
       "pricing_status": "日本株現物に未反映"
+    },
+    {
+      "watch": "米国半導体株",
+      "current_view": "追い風",
+      "change_condition": "米半導体株が反転するか、日本の電機・精密が追随しなければ影響を弱く見る",
+      "pricing_status": "日本株現物に未反映"
+    },
+    {
+      "watch": "米国大型ハイテク株",
+      "current_view": "追い風",
+      "change_condition": "米国ハイテク株が反転し、日本のグロース株が追随しなければ影響を弱く見る",
+      "pricing_status": "日本株現物に未反映"
+    },
+    {
+      "watch": "銅",
+      "current_view": "関連株に追い風候補",
+      "change_condition": "銅の方向が継続せず、非鉄・機械も反応しなければ影響材料から外す",
+      "pricing_status": "日本株現物に未反映"
     }
   ],
   "methodology": {
     "tier_1_existing_data": [
-      "市場レジーム",
-      "主要ドライバー",
+      "今日の市場観",
+      "主要材料",
       "値動きから見たローテーション",
-      "セクターの強さの質",
-      "朝シナリオ答え合わせ"
+      "セクター4軸評価",
+      "昨日のシナリオ検証と今日への修正"
     ],
     "tier_2_light_fetch": [
       "Growth/Value指数",
@@ -1462,5 +1916,10 @@
       "大規模な類似局面バックテスト"
     ],
     "implemented_tier": 1
+  },
+  "data_state": {
+    "kind": "holiday",
+    "label": "東証現物は休場",
+    "message": "2026-09-21は休場。2026-09-18の前営業日データを表示"
   }
 }

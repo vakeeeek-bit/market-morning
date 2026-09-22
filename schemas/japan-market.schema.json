@@ -1,10 +1,11 @@
 {
   "type": "object",
-  "required": ["updated_at", "market_date", "data_phase", "source", "scope", "sector_ranking", "sector_stock_ranking", "trading_value_ranking", "volume_surge_ranking", "market_internals", "market_regime", "key_drivers", "rotation_read", "sector_quality", "scenario_review", "monitoring_points", "methodology", "data_quality"],
+  "required": ["updated_at", "market_date", "data_phase", "data_state", "source", "scope", "sector_ranking", "sector_stock_ranking", "trading_value_ranking", "volume_surge_ranking", "market_internals", "market_regime", "key_drivers", "rotation_read", "sector_quality", "scenario_review", "monitoring_points", "methodology", "data_quality"],
   "properties": {
     "updated_at": {"type": ["string", "null"]},
     "market_date": {"type": ["string", "null"]},
     "data_phase": {"type": "string"},
+    "data_state": {"type": "object", "required": ["kind", "label", "message"], "properties": {"kind": {"enum": ["normal", "holiday", "data_error"]}}},
     "source": {"type": "string"},
     "scope": {"type": "string"},
     "sector_ranking": {"type": "array", "items": {"type": "object"}},
@@ -14,15 +15,16 @@
     "market_internals": {"type": "object"},
     "market_regime": {
       "type": "object",
-      "required": ["headline", "dimensions", "method_note"],
+      "required": ["headline", "headline_reason", "scoreboard", "dimensions", "method_note"],
       "properties": {
         "headline": {"type": "string"},
         "divergence_alert": {"type": ["string", "null"]},
+        "scoreboard": {"type": "array", "minItems": 4, "items": {"type": "object", "required": ["label", "value", "unit", "meaning"]}},
         "dimensions": {"type": "array", "items": {"type": "object", "required": ["axis", "label", "status", "reason"]}},
         "method_note": {"type": "string"}
       }
     },
-    "key_drivers": {"type": "array", "items": {"type": "object", "required": ["driver", "assessment", "status", "reason", "affected_sectors"]}},
+    "key_drivers": {"type": "array", "minItems": 1, "maxItems": 4, "items": {"type": "object", "required": ["driver", "category", "assessment", "status", "reason", "affected_sectors", "impact_score"]}},
     "rotation_read": {
       "type": "object",
       "required": ["label", "items", "note"],
@@ -32,8 +34,8 @@
         "note": {"type": "string"}
       }
     },
-    "sector_quality": {"type": "array", "items": {"type": "object", "required": ["sector", "change_pct", "quality", "participation", "volume_confirmation", "persistence", "coverage_note"]}},
-    "scenario_review": {"type": "object"},
+    "sector_quality": {"type": "array", "items": {"type": "object", "required": ["sector", "change_pct", "quality", "axes", "comment", "coverage_note"], "properties": {"axes": {"type": "object", "required": ["momentum", "breadth", "activity", "persistence"]}}}},
+    "scenario_review": {"type": "object", "required": ["title", "status", "previous_view", "market_result", "revision", "today_watch", "note"]},
     "monitoring_points": {"type": "array", "items": {"type": "object", "required": ["watch", "current_view", "change_condition", "pricing_status"]}},
     "methodology": {
       "type": "object",

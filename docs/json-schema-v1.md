@@ -11,7 +11,7 @@
 | `data/report.json` | `schemas/report.schema.json` | 最新のメインレポート |
 | `data/market.json` | `schemas/market.schema.json` | 最新の自動取得市場データ |
 | `data/japan-stocks.json` | `schemas/japan-stocks.schema.json` | 最新の日本株詳細ニュース |
-| `data/japan-market.json` | `schemas/japan-market.schema.json` | 日本株のランキング・市場内部・朝シナリオ答え合わせ |
+| `data/japan-market.json` | `schemas/japan-market.schema.json` | 日本株の強弱・主要材料・比較・4軸評価・シナリオ修正 |
 | `data/status.json` | `schemas/status.schema.json` | 更新処理の稼働結果を示す任意の運用ステータス |
 | `data/market-context.json` | `schemas/market-context.schema.json` | 週次中心で更新する現在の市場環境・日本株・暮らしへの波及 |
 | `data/glossary.json` | `schemas/glossary.schema.json` | 表示時に外部APIを使わない固定用語辞書 |
@@ -52,11 +52,11 @@
 
 ### `japan-market.json`
 
-`updated_at`、`market_date`、`data_phase`、`source`、`scope`、`sector_ranking`、`sector_stock_ranking`、`trading_value_ranking`、`volume_surge_ranking`、`market_internals`、`market_regime`、`key_drivers`、`rotation_read`、`sector_quality`、`scenario_review`、`monitoring_points`、`methodology`、`data_quality`。
+`updated_at`、`market_date`、`data_phase`、`data_state`、`source`、`scope`、`sector_ranking`、`sector_stock_ranking`、`trading_value_ranking`、`volume_surge_ranking`、`market_internals`、`market_regime`、`key_drivers`、`rotation_read`、`sector_quality`、`scenario_review`、`monitoring_points`、`methodology`、`data_quality`。
 
 `data_quality.date_alignment`には、朝レポート、セクターETF、主要監視銘柄、指数連動ETFの市場日と整合判定を保持する。朝レポート、セクターETF、主要監視銘柄の日付が一致しない場合、`scenario_review.status`を`判定可能`にしてはならない。
 
-`market_regime`は実測・推定・判定対象外を`status`で区別する。`rotation_read`は投資主体別売買ではなく、値動きから見た推定であることを名称と注記の両方に保持する。`key_drivers`の基準日が日本株現物の`market_date`より新しい場合、`pricing_status`を`日本株現物に未反映`とする。詳細は`docs/JAPAN_INVESTOR_VIEW_SPEC.md`を参照する。
+`data_state.kind`は`normal`、`holiday`、`data_error`を区別する。`market_regime`は実測・推定・判定対象外を`status`で区別する。`rotation_read`は投資主体別売買ではなく、値動きから見た推定であることを名称と注記の両方に保持する。`key_drivers`は影響度順の最大4件とし、基準日が日本株現物の`market_date`より新しい場合、`pricing_status`を`日本株現物に未反映`とする。`sector_quality.axes`には勢い・広がり・商い・継続力の元数値と規則を保持し、総合点は持たない。詳細は`docs/JAPAN_INVESTOR_VIEW_SPEC.md`を参照する。
 
 ### `status.json`
 

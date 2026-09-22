@@ -69,8 +69,11 @@ Before publishing the enhanced Japan page, verify:
 3. Rotation is labeled `値動きから見たローテーション（推定）` and never presented as investor flow.
 4. Sector participation is described as a two-stock monitoring proxy, not full constituent breadth.
 5. Overseas drivers newer than the Japan cash-market date are marked unpriced.
-6. A holiday or date mismatch keeps scenario review on hold.
-7. Page display adds no external API or AI request.
+6. Gold and copper are impact-ranked candidates, not fixed slots; at most four drivers are shown.
+7. Sector quality exposes momentum, breadth, activity, and persistence with raw values and rules, without a composite score.
+8. A holiday and a data error are distinct states; either keeps scenario review on hold.
+9. Scenario review revises today's view and does not grade the forecast with circles or crosses.
+10. Page display adds no external API or AI request.
 
 ## Current market context and glossary gate
 

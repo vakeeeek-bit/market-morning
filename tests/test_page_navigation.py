@@ -79,12 +79,23 @@ class PageNavigationTests(unittest.TestCase):
             self.assertIn(f'id="{element_id}"', japan)
         self.assertIn("全構成銘柄の順位ではありません", japan)
         self.assertIn("終値×出来高の概算値", japan)
-        self.assertIn("値動きから見たローテーション", japan)
+        self.assertIn("どちらが強い？", japan)
         self.assertIn("実測値と推定評価を分けて表示", japan)
-        self.assertIn("朝の想定", japan)
-        self.assertIn("翌営業日に持ち越す材料", japan)
+        self.assertIn("昨日までの見方", japan)
+        self.assertIn("今日の監視材料", japan)
         self.assertIn("data/glossary.json", japan)
         self.assertIn("市場データ表示には影響しません", japan)
+
+    def test_japan_v2_progressive_disclosure_and_plain_japanese(self):
+        japan = self.read("japan-stocks.html")
+        self.assertIn("3秒で強弱、その次に理由、最後に詳細数値", japan)
+        self.assertIn('id="market-scoreboard"', japan)
+        self.assertIn("材料 → 伝達経路 → 影響業種", japan)
+        self.assertIn("比較結果 → 差 → 詳細数値", japan)
+        self.assertIn("勢い・広がり・商い・継続力", japan)
+        self.assertIn("昨日のシナリオ検証 → 今日への修正", japan)
+        self.assertIn("総合戦闘力は算出しません", japan)
+        self.assertNotIn("朝シナリオの答え合わせ", japan)
 
     def test_latest_view_warns_when_market_and_report_dates_differ(self):
         world = self.read("index.html")

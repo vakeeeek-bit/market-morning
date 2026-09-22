@@ -86,3 +86,33 @@ Before publication, verify:
 6. The glossary contains no empty or duplicate canonical terms.
 7. The feature remains readable when either static JSON fails; daily report and Japan page must continue loading.
 8. No external API or AI call is added to page display or the daily market update.
+
+
+## Chat / Work handoff gate
+
+Quality takes priority over keeping a task in Chat.
+
+Before starting substantive execution in Chat, assess whether the task is better suited to ChatGPT Work. If Work is materially better for quality, continuity, or end-to-end completion, tell the user **before starting the implementation** and recommend handing it to Work.
+
+Use Work by preference when the task includes one or more of the following:
+- multi-file or repository-wide implementation
+- substantial code changes or refactoring
+- cross-checking specifications, Project files, JSON, scripts, tests, and production behavior
+- long-running or multi-step research / data collection
+- full test -> PR -> GitHub Actions -> merge -> Vercel -> production-display verification
+- tasks where losing execution context or splitting the work would materially reduce quality
+
+Keep Chat as the preferred place for:
+- requirements discussion
+- design decisions
+- prioritization
+- review of screenshots/results
+- small, self-contained corrections
+- deciding what Work should execute
+
+Handoff procedure:
+1. Identify that Work is preferable **before implementation begins**.
+2. Tell the user briefly why Work is preferable.
+3. Provide a ready-to-paste handoff instruction that preserves all decided requirements and completion gates.
+4. Do not begin a partial implementation in Chat and only later recommend Work unless the task unexpectedly expands.
+5. A Work recommendation is a quality-control step, not a reason to weaken or skip the normal quality gate.

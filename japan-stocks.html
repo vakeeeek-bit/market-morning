@@ -163,8 +163,8 @@ body {
   </header>
 
   <nav class="mobile-section-nav" aria-label="日本株レポート内の移動">
-    <button type="button" data-jp-target="quick-view">要点</button>
     <button type="button" data-jp-target="regime-section">市場観</button>
+    <button type="button" data-jp-target="quick-view">要点</button>
     <button type="button" data-jp-target="driver-section">主要材料</button>
     <button type="button" data-jp-target="rotation-section">比較</button>
     <button type="button" data-jp-target="sector-quality-section">セクター</button>
@@ -174,6 +174,15 @@ body {
     <button type="button" data-jp-target="story-other">その他</button>
     <button type="button" data-jp-target="quality-section">品質</button>
   </nav>
+
+  <section class="section" id="regime-section">
+    <div class="section-title">🔥 今日の市場観｜数字で強弱を確認</div>
+    <div id="data-state"></div>
+    <div class="scoreboard" id="market-scoreboard">データ更新待ち</div>
+    <div id="regime-alert"></div>
+    <div class="insight-grid" id="market-regime">データ更新待ち</div>
+    <div class="market-note" id="regime-method">実測値と推定評価を分けて表示します。</div>
+  </section>
 
   <section class="section" id="quick-view">
     <div class="section-title">朝3分の要点</div>
@@ -190,15 +199,6 @@ body {
       <summary>初心者向け用語解説を開く</summary>
       <div class="disclosure-body" id="japan-glossary">用語データを読み込み中...</div>
     </details>
-  </section>
-
-  <section class="section" id="regime-section">
-    <div class="section-title">🔥 今日の市場観｜数字で強弱を確認</div>
-    <div id="data-state"></div>
-    <div class="scoreboard" id="market-scoreboard">データ更新待ち</div>
-    <div id="regime-alert"></div>
-    <div class="insight-grid" id="market-regime">データ更新待ち</div>
-    <div class="market-note" id="regime-method">実測値と推定評価を分けて表示します。</div>
   </section>
 
   <section class="section" id="driver-section">

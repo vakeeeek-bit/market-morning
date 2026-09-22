@@ -80,6 +80,7 @@ class PageNavigationTests(unittest.TestCase):
         self.assertIn("全構成銘柄の順位ではありません", japan)
         self.assertIn("終値×出来高の概算値", japan)
         self.assertIn("どちらが強い？", japan)
+        self.assertLess(japan.index('id="regime-section"'), japan.index('id="quick-view"'))
         self.assertIn("実測値と推定評価を分けて表示", japan)
         self.assertIn("昨日までの見方", japan)
         self.assertIn("今日の監視材料", japan)

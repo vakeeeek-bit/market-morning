@@ -1,7 +1,12 @@
 {
-  "updated_at": "2026-09-22 15:56:41 JST",
+  "updated_at": "2026-09-22 16:12:29 JST",
   "market_date": "2026-09-18",
   "data_phase": "休場",
+  "data_state": {
+    "kind": "holiday",
+    "label": "東証現物は休場",
+    "message": "2026-09-21は休場。2026-09-18の前営業日データを表示"
+  },
   "source": "Yahoo Finance via yfinance（1回の一括取得）",
   "scope": "TOPIX-17業種ETFと各業種の主要監視2銘柄。全上場銘柄・東証公式統計ではない",
   "sector_ranking": [
@@ -1032,8 +1037,8 @@
     "relative": "日経225優位"
   },
   "scenario_review": {
-    "title": "昨日のシナリオ検証 → 今日への修正",
     "market_date": "2026-09-18",
+    "title": "昨日のシナリオ検証 → 今日への修正",
     "basis": "前回レポートの注目業種をTOPIX-17業種ETFの実績と照合し、次の取引日へ見方を修正",
     "status": "休場・検証保留",
     "checks": [],
@@ -1299,7 +1304,7 @@
       "participation": "まちまち",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.48,
-      "persistence": "確認できず",
+      "persistence": "5日相対劣後",
       "return_5d_pct": 0.08,
       "axes": {
         "momentum": {
@@ -1318,12 +1323,12 @@
           "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対劣後",
           "value": 0.08,
           "rule": "5日騰落をTOPIX連動ETFと比較"
         }
       },
-      "comment": "選別的な上昇。まちまち、商い低調、確認できず。",
+      "comment": "選別的な上昇。まちまち、商い低調、5日相対劣後。",
       "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
@@ -1333,7 +1338,7 @@
       "participation": "まちまち",
       "volume_confirmation": "出来高増",
       "volume_ratio_20d": 2.3,
-      "persistence": "確認できず",
+      "persistence": "5日相対優位",
       "return_5d_pct": 2.91,
       "axes": {
         "momentum": {
@@ -1352,12 +1357,12 @@
           "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対優位",
           "value": 2.91,
           "rule": "5日騰落をTOPIX連動ETFと比較"
         }
       },
-      "comment": "選別的な上昇。まちまち、出来高増、確認できず。",
+      "comment": "選別的な上昇。まちまち、出来高増、5日相対優位。",
       "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
@@ -1367,7 +1372,7 @@
       "participation": "2銘柄とも上昇",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.46,
-      "persistence": "確認できず",
+      "persistence": "5日相対優位",
       "return_5d_pct": 4.6,
       "axes": {
         "momentum": {
@@ -1386,12 +1391,12 @@
           "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対優位",
           "value": 4.6,
           "rule": "5日騰落をTOPIX連動ETFと比較"
         }
       },
-      "comment": "広がりを伴う上昇。2銘柄とも上昇、商い低調、確認できず。",
+      "comment": "広がりを伴う上昇。2銘柄とも上昇、商い低調、5日相対優位。",
       "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
@@ -1401,7 +1406,7 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.38,
-      "persistence": "確認できず",
+      "persistence": "5日ほぼ同等",
       "return_5d_pct": 1.91,
       "axes": {
         "momentum": {
@@ -1420,12 +1425,12 @@
           "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日ほぼ同等",
           "value": 1.91,
           "rule": "5日騰落をTOPIX連動ETFと比較"
         }
       },
-      "comment": "選別的な上昇。2銘柄とも下落、商い低調、確認できず。",
+      "comment": "選別的な上昇。2銘柄とも下落、商い低調、5日ほぼ同等。",
       "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
@@ -1435,7 +1440,7 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.25,
-      "persistence": "確認できず",
+      "persistence": "5日相対劣後",
       "return_5d_pct": 1.03,
       "axes": {
         "momentum": {
@@ -1454,12 +1459,12 @@
           "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対劣後",
           "value": 1.03,
           "rule": "5日騰落をTOPIX連動ETFと比較"
         }
       },
-      "comment": "選別的な上昇。2銘柄とも下落、商い低調、確認できず。",
+      "comment": "選別的な上昇。2銘柄とも下落、商い低調、5日相対劣後。",
       "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
@@ -1469,7 +1474,7 @@
       "participation": "まちまち",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.22,
-      "persistence": "確認できず",
+      "persistence": "5日相対優位",
       "return_5d_pct": 2.48,
       "axes": {
         "momentum": {
@@ -1488,12 +1493,12 @@
           "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対優位",
           "value": 2.48,
           "rule": "5日騰落をTOPIX連動ETFと比較"
         }
       },
-      "comment": "選別的な上昇。まちまち、商い低調、確認できず。",
+      "comment": "選別的な上昇。まちまち、商い低調、5日相対優位。",
       "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
@@ -1503,7 +1508,7 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "出来高増",
       "volume_ratio_20d": 1.2,
-      "persistence": "確認できず",
+      "persistence": "5日ほぼ同等",
       "return_5d_pct": 1.89,
       "axes": {
         "momentum": {
@@ -1522,12 +1527,12 @@
           "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日ほぼ同等",
           "value": 1.89,
           "rule": "5日騰落をTOPIX連動ETFと比較"
         }
       },
-      "comment": "広がりを伴う下落。2銘柄とも下落、出来高増、確認できず。",
+      "comment": "広がりを伴う下落。2銘柄とも下落、出来高増、5日ほぼ同等。",
       "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
@@ -1537,7 +1542,7 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "出来高増",
       "volume_ratio_20d": 1.2,
-      "persistence": "確認できず",
+      "persistence": "5日ほぼ同等",
       "return_5d_pct": 1.81,
       "axes": {
         "momentum": {
@@ -1556,12 +1561,12 @@
           "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日ほぼ同等",
           "value": 1.81,
           "rule": "5日騰落をTOPIX連動ETFと比較"
         }
       },
-      "comment": "広がりを伴う下落。2銘柄とも下落、出来高増、確認できず。",
+      "comment": "広がりを伴う下落。2銘柄とも下落、出来高増、5日ほぼ同等。",
       "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
@@ -1571,7 +1576,7 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "出来高増",
       "volume_ratio_20d": 2.44,
-      "persistence": "確認できず",
+      "persistence": "5日相対劣後",
       "return_5d_pct": -0.7,
       "axes": {
         "momentum": {
@@ -1590,12 +1595,12 @@
           "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対劣後",
           "value": -0.7,
           "rule": "5日騰落をTOPIX連動ETFと比較"
         }
       },
-      "comment": "広がりを伴う下落。2銘柄とも下落、出来高増、確認できず。",
+      "comment": "広がりを伴う下落。2銘柄とも下落、出来高増、5日相対劣後。",
       "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
@@ -1605,7 +1610,7 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "平常圏",
       "volume_ratio_20d": 1.14,
-      "persistence": "確認できず",
+      "persistence": "5日相対劣後",
       "return_5d_pct": 0.67,
       "axes": {
         "momentum": {
@@ -1624,12 +1629,12 @@
           "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対劣後",
           "value": 0.67,
           "rule": "5日騰落をTOPIX連動ETFと比較"
         }
       },
-      "comment": "広がりを伴う下落。2銘柄とも下落、平常圏、確認できず。",
+      "comment": "広がりを伴う下落。2銘柄とも下落、平常圏、5日相対劣後。",
       "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
@@ -1639,7 +1644,7 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "平常圏",
       "volume_ratio_20d": 0.86,
-      "persistence": "確認できず",
+      "persistence": "5日ほぼ同等",
       "return_5d_pct": 1.66,
       "axes": {
         "momentum": {
@@ -1658,12 +1663,12 @@
           "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日ほぼ同等",
           "value": 1.66,
           "rule": "5日騰落をTOPIX連動ETFと比較"
         }
       },
-      "comment": "広がりを伴う下落。2銘柄とも下落、平常圏、確認できず。",
+      "comment": "広がりを伴う下落。2銘柄とも下落、平常圏、5日ほぼ同等。",
       "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
@@ -1673,7 +1678,7 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.73,
-      "persistence": "確認できず",
+      "persistence": "5日相対劣後",
       "return_5d_pct": 0.75,
       "axes": {
         "momentum": {
@@ -1692,12 +1697,12 @@
           "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対劣後",
           "value": 0.75,
           "rule": "5日騰落をTOPIX連動ETFと比較"
         }
       },
-      "comment": "広がりを伴う下落。2銘柄とも下落、商い低調、確認できず。",
+      "comment": "広がりを伴う下落。2銘柄とも下落、商い低調、5日相対劣後。",
       "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
@@ -1707,7 +1712,7 @@
       "participation": "まちまち",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.19,
-      "persistence": "確認できず",
+      "persistence": "5日相対優位",
       "return_5d_pct": 3.0,
       "axes": {
         "momentum": {
@@ -1726,12 +1731,12 @@
           "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対優位",
           "value": 3.0,
           "rule": "5日騰落をTOPIX連動ETFと比較"
         }
       },
-      "comment": "方向感まちまち。まちまち、商い低調、確認できず。",
+      "comment": "方向感まちまち。まちまち、商い低調、5日相対優位。",
       "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
@@ -1741,7 +1746,7 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "出来高増",
       "volume_ratio_20d": 2.44,
-      "persistence": "確認できず",
+      "persistence": "5日相対劣後",
       "return_5d_pct": -0.4,
       "axes": {
         "momentum": {
@@ -1760,12 +1765,12 @@
           "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対劣後",
           "value": -0.4,
           "rule": "5日騰落をTOPIX連動ETFと比較"
         }
       },
-      "comment": "広がりを伴う下落。2銘柄とも下落、出来高増、確認できず。",
+      "comment": "広がりを伴う下落。2銘柄とも下落、出来高増、5日相対劣後。",
       "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
@@ -1775,7 +1780,7 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.32,
-      "persistence": "確認できず",
+      "persistence": "5日ほぼ同等",
       "return_5d_pct": 1.17,
       "axes": {
         "momentum": {
@@ -1794,12 +1799,12 @@
           "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日ほぼ同等",
           "value": 1.17,
           "rule": "5日騰落をTOPIX連動ETFと比較"
         }
       },
-      "comment": "広がりを伴う下落。2銘柄とも下落、商い低調、確認できず。",
+      "comment": "広がりを伴う下落。2銘柄とも下落、商い低調、5日ほぼ同等。",
       "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
@@ -1809,7 +1814,7 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "平常圏",
       "volume_ratio_20d": 1.12,
-      "persistence": "確認できず",
+      "persistence": "5日相対劣後",
       "return_5d_pct": 0.62,
       "axes": {
         "momentum": {
@@ -1828,12 +1833,12 @@
           "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対劣後",
           "value": 0.62,
           "rule": "5日騰落をTOPIX連動ETFと比較"
         }
       },
-      "comment": "広がりを伴う下落。2銘柄とも下落、平常圏、確認できず。",
+      "comment": "広がりを伴う下落。2銘柄とも下落、平常圏、5日相対劣後。",
       "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     },
     {
@@ -1843,7 +1848,7 @@
       "participation": "2銘柄とも下落",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.64,
-      "persistence": "確認できず",
+      "persistence": "5日相対劣後",
       "return_5d_pct": -0.35,
       "axes": {
         "momentum": {
@@ -1862,12 +1867,12 @@
           "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対劣後",
           "value": -0.35,
           "rule": "5日騰落をTOPIX連動ETFと比較"
         }
       },
-      "comment": "広がりを伴う下落。2銘柄とも下落、商い低調、確認できず。",
+      "comment": "広がりを伴う下落。2銘柄とも下落、商い低調、5日相対劣後。",
       "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
     }
   ],
@@ -1916,10 +1921,5 @@
       "大規模な類似局面バックテスト"
     ],
     "implemented_tier": 1
-  },
-  "data_state": {
-    "kind": "holiday",
-    "label": "東証現物は休場",
-    "message": "2026-09-21は休場。2026-09-18の前営業日データを表示"
   }
 }

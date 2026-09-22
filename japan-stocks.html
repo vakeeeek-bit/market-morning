@@ -187,13 +187,14 @@ body {
   </section>
 
   <section class="section" id="internals-section">
-    <div class="section-title">📐 市場内部の強弱</div>
+    <div class="section-title">📐 相場の広がり｜何銘柄が上がった？</div>
+    <div class="market-note">指数だけでは見えない相場の中身を確認します。値下がりが多いほど、上昇が一部銘柄に偏っている可能性があります。</div>
     <div id="market-internals">確認中</div>
   </section>
 
   <section class="section" id="rotation-section">
-    <div class="section-title">↔️ 値動きから見たローテーション</div>
-    <div class="market-note">投資主体別売買ではありません。セクター騰落・Breadth・相対パフォーマンスから見た推定です。</div>
+    <div class="section-title">↔️ どんな株が相対的に強い？</div>
+    <div class="market-note">実際の資金流入額ではなく、グループ同士の値動きを比較しています。「優位」は「より上がった／下げが小さかった」という意味です。</div>
     <div class="insight-grid" id="rotation-read">データ更新待ち</div>
   </section>
 
@@ -494,6 +495,18 @@ function renderInsightCards(holderId, items, options = {}) {
   });
 }
 
+function simplifyRotationItem(item) {
+  const next = { ...item };
+  const axis = String(item?.axis || '');
+  const label = String(item?.label || item?.assessment || '');
+  if (axis.includes('外需') && axis.includes('内需')) next.axis = '外需株 vs 内需株';
+  if (axis.includes('景気敏感') && axis.includes('ディフェンシブ')) next.axis = '景気敏感株 vs ディフェンシブ株';
+  if (axis.includes('大型') && axis.includes('小型')) next.axis = '大型株 vs 小型株';
+  if (label.endsWith('優位')) next.label = label.replace(/優位$/, 'の方が強い');
+  next.reason = item?.reason || item?.change_condition || '相対的な値動きを比較しています';
+  return next;
+}
+
 function renderRegime(regime) {
   const alert = document.getElementById('regime-alert'); alert.replaceChildren();
   if (regime?.divergence_alert) appendText(alert, 'alert-card', regime.divergence_alert);
@@ -533,7 +546,7 @@ function renderJapanMarket(data) {
   const sectors = Array.isArray(data.sector_ranking) ? data.sector_ranking : [];
   renderRegime(data.market_regime || {});
   renderInsightCards('key-drivers', data.key_drivers, { flow: true });
-  renderInsightCards('rotation-read', data.rotation_read?.items);
+  renderInsightCards('rotation-read', Array.isArray(data.rotation_read?.items) ? data.rotation_read.items.map(simplifyRotationItem) : []);
   renderSectorQuality(data.sector_quality);
   renderInsightCards('monitoring-points', data.monitoring_points);
   rankingRows(document.getElementById('sector-winners'), sectors, row => signedPercent(row.change_pct));
@@ -560,7 +573,22 @@ function renderJapanMarket(data) {
   [['値上がり', internals.advancing], ['値下がり', internals.declining], ['変わらず', internals.unchanged], ['広がり指数', Number.isFinite(Number(internals.breadth_pct)) ? internals.breadth_pct : '-']].forEach(([label, value]) => {
     const card = document.createElement('div'); card.className = 'internal-card'; appendText(card, 'internal-number', value); appendText(card, 'internal-label', label); grid.appendChild(card);
   });
-  internalHolder.appendChild(grid); appendText(internalHolder, 'market-note', `対象：主要監視${text(internals.universe_size, 34)}銘柄｜指数比較：${text(internals.relative)}`);
+  internalHolder.appendChild(grid);
+  const advancing = Number(internals.advancing);
+  const declining = Number(internals.declining);
+  const breadth = Number(internals.breadth_pct);
+  let breadthSummary = '相場の広がりを確認できません';
+  if (Number.isFinite(advancing) && Number.isFinite(declining)) {
+    if (declining > advancing * 2) breadthSummary = '値下がり銘柄が大幅に多く、相場全体の中身は弱めです';
+    else if (advancing > declining * 2) breadthSummary = '値上がり銘柄が大幅に多く、上昇が広く銘柄に波及しています';
+    else if (advancing > declining) breadthSummary = '値上がり銘柄が多く、相場の中身はやや強めです';
+    else if (declining > advancing) breadthSummary = '値下がり銘柄が多く、相場の中身はやや弱めです';
+    else breadthSummary = '値上がり・値下がりが拮抗しています';
+  }
+  if (Number.isFinite(breadth)) breadthSummary += `（広がり指数 ${breadth > 0 ? '+' : ''}${breadth.toFixed(1)}）`;
+  appendText(internalHolder, 'summary-main', breadthSummary);
+  appendText(internalHolder, 'market-note', `対象：主要監視${text(internals.universe_size, 34)}銘柄｜日経225との比較：${text(internals.relative)}`);
+  appendText(internalHolder, 'insight-meta', '広がり指数：+100に近いほど幅広く上昇、-100に近いほど幅広く下落');
   const review = data.scenario_review || {}; const reviewHolder = document.getElementById('scenario-review'); reviewHolder.replaceChildren();
   appendText(reviewHolder, 'summary-main', `判定：${text(review.status, '更新待ち')}`); appendText(reviewHolder, 'market-note', text(review.note, '大引け後に更新します'));
   const reviewGrid = document.createElement('div'); reviewGrid.className = 'insight-grid';

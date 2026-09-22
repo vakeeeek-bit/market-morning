@@ -79,6 +79,22 @@ body {
 .quality-strip { display: grid; grid-template-columns: minmax(0,1.2fr) repeat(3,minmax(0,1fr)); gap: 6px; align-items: center; padding: 9px 0; border-top: 1px solid #eceff3; font-size: 12px; }
 .quality-strip:first-child { border-top: 0; }
 .quality-sector { font-weight: 800; }
+.scoreboard { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 8px; margin-bottom: 12px; }
+.score-card { padding: 12px; border: 1px solid #e5e7eb; border-radius: 12px; background: linear-gradient(145deg,#fff,#f5f7fb); }
+.score-value { font-size: 24px; font-weight: 900; line-height: 1.1; }
+.score-label { margin-top: 5px; font-size: 12px; font-weight: 800; }
+.score-meaning { margin-top: 4px; color: #68707a; font-size: 10px; }
+.battle-bar { height: 8px; overflow: hidden; border-radius: 999px; background: #e5e7eb; }
+.battle-fill { height: 100%; border-radius: inherit; background: #64748b; }
+.battle-fill.strong { background: #dc2626; }
+.battle-fill.weak { background: #2563eb; }
+.axis-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 6px; margin-top: 9px; }
+.axis-chip { padding: 7px; border-radius: 9px; background: #f3f4f6; font-size: 10px; }
+.axis-chip strong { display: block; font-size: 11px; }
+.state-banner { margin-bottom: 12px; padding: 11px 13px; border-radius: 10px; font-size: 12px; font-weight: 800; }
+.state-normal { background: #ecfdf5; color: #065f46; }
+.state-holiday { background: #eff6ff; color: #1e40af; }
+.state-error { background: #fef2f2; color: #991b1b; }
 .disclosure { margin-top: 12px; border: 1px solid #e5e7eb; border-radius: 12px; background: #fff; }
 .disclosure summary { padding: 11px 13px; cursor: pointer; font-size: 13px; font-weight: 800; }
 .disclosure-body { padding: 0 13px 13px; }
@@ -120,6 +136,9 @@ body {
   .insight-grid { grid-template-columns: 1fr; }
   .quality-strip { grid-template-columns: 1fr 1fr; }
   .quality-sector { grid-column: 1 / -1; }
+  .scoreboard { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .score-card:first-child { grid-column: 1 / -1; }
+  .axis-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
 </style>
 </head>
@@ -132,7 +151,7 @@ body {
       <a class="page-switch-link" id="world-page-link" href="index.html">🌐 世界市場</a>
       <a class="page-switch-link" href="japan-stocks.html" aria-current="page">🇯🇵 日本株</a>
     </nav>
-    <div class="header-sub">重要材料を「最重要・重要・その他」に分類</div>
+    <div class="header-sub">3秒で強弱、その次に理由、最後に詳細数値</div>
     <div class="date" id="report-date">データを読み込み中...</div>
     <div class="history-nav" aria-label="履歴ナビゲーション">
       <button class="history-button" id="prev-day" type="button">← 前日</button>
@@ -146,10 +165,10 @@ body {
   <nav class="mobile-section-nav" aria-label="日本株レポート内の移動">
     <button type="button" data-jp-target="quick-view">要点</button>
     <button type="button" data-jp-target="regime-section">市場観</button>
-    <button type="button" data-jp-target="driver-section">ドライバー</button>
-    <button type="button" data-jp-target="rotation-section">資金の向き</button>
+    <button type="button" data-jp-target="driver-section">主要材料</button>
+    <button type="button" data-jp-target="rotation-section">比較</button>
     <button type="button" data-jp-target="sector-quality-section">セクター</button>
-    <button type="button" data-jp-target="scenario-review-section">答え合わせ</button>
+    <button type="button" data-jp-target="scenario-review-section">見方の修正</button>
     <button type="button" data-jp-target="story-most-important">最重要</button>
     <button type="button" data-jp-target="story-important">重要</button>
     <button type="button" data-jp-target="story-other">その他</button>
@@ -174,31 +193,33 @@ body {
   </section>
 
   <section class="section" id="regime-section">
-    <div class="section-title">🧭 今日の市場観｜現在の市場レジーム</div>
+    <div class="section-title">🔥 今日の市場観｜数字で強弱を確認</div>
+    <div id="data-state"></div>
+    <div class="scoreboard" id="market-scoreboard">データ更新待ち</div>
     <div id="regime-alert"></div>
     <div class="insight-grid" id="market-regime">データ更新待ち</div>
     <div class="market-note" id="regime-method">実測値と推定評価を分けて表示します。</div>
   </section>
 
   <section class="section" id="driver-section">
-    <div class="section-title">🌐 海外から日本株への主要ドライバー</div>
-    <div class="market-note">海外市場 → 金利・為替・商品 → 日本株 → 影響を受けやすい業種、の順で表示します。</div>
+    <div class="section-title">🌐 海外から日本株へ｜今日効く主要材料</div>
+    <div class="market-note">材料 → 伝達経路 → 影響業種の順です。銅・金を固定せず、その日の日本株への影響度で選びます。</div>
     <div class="insight-grid" id="key-drivers">データ更新待ち</div>
   </section>
 
   <section class="section" id="internals-section">
-    <div class="section-title">📐 市場内部の強弱</div>
+    <div class="section-title">📐 上昇・下落はどこまで広がったか</div>
     <div id="market-internals">確認中</div>
   </section>
 
   <section class="section" id="rotation-section">
-    <div class="section-title">↔️ 値動きから見たローテーション</div>
-    <div class="market-note">投資主体別売買ではありません。セクター騰落・Breadth・相対パフォーマンスから見た推定です。</div>
+    <div class="section-title">↔️ どちらが強い？｜比較結果 → 差 → 詳細数値</div>
+    <div class="market-note">投資主体別売買ではありません。セクター騰落・上昇と下落の広がり・相対的な値動きから見た推定です。</div>
     <div class="insight-grid" id="rotation-read">データ更新待ち</div>
   </section>
 
   <section class="section" id="sector-quality-section">
-    <div class="section-title">🔬 強い／弱いセクターと「強さの質」</div>
+    <div class="section-title">🔬 セクター強弱｜勢い・広がり・商い・継続力</div>
     <div class="market-note">業種ETFと各業種の主要監視2銘柄による限定評価です。全構成銘柄への広がりとは断定しません。</div>
     <div id="sector-quality">データ更新待ち</div>
     <details class="disclosure" id="market-ranking-section">
@@ -227,7 +248,7 @@ body {
   </section>
 
   <section class="section" id="scenario-review-section">
-    <div class="section-title">✅ 朝シナリオの答え合わせ</div>
+    <div class="section-title">🔄 昨日のシナリオ検証 → 今日への修正</div>
     <div id="scenario-review">大引け後の更新を待っています。</div>
   </section>
 
@@ -481,12 +502,14 @@ function renderInsightCards(holderId, items, options = {}) {
     card.appendChild(head);
     if (options.flow && Array.isArray(item.affected_sectors)) {
       const path = document.createElement('div'); path.className = 'flow-path';
-      [item.driver, item.driver === 'USD/JPY' ? '為替' : item.driver === '米国金利' ? '金利' : item.driver.includes('原油') || item.driver.includes('Copper') ? '商品' : '海外株', '日本株', item.affected_sectors.join('・')].forEach((value, index, values) => {
+      [item.driver, item.transmission_path || item.category || '市場経由', item.affected_sectors.join('・')].forEach((value, index, values) => {
         appendText(path, '', value);
         if (index < values.length - 1) appendText(path, 'flow-arrow', '→');
       });
       card.appendChild(path);
     }
+    if (Number.isFinite(Number(item.spread_pt))) appendText(card, 'summary-main', `差 ${Number(item.spread_pt) >= 0 ? '+' : ''}${Number(item.spread_pt).toFixed(2)}pt`);
+    if (item.detail) appendText(card, 'insight-reason', item.detail);
     appendText(card, 'insight-reason', item.reason || item.change_condition || '根拠を確認できません');
     const meta = [item.pricing_status, item.basis].filter(Boolean).join('｜');
     if (meta) appendText(card, 'insight-meta', meta);
@@ -501,27 +524,57 @@ function renderRegime(regime) {
   document.getElementById('regime-method').textContent = text(regime?.method_note, 'この履歴には市場レジーム分析がありません。実測と推定を混同せず、ランキングを参照してください。');
 }
 
+function renderScoreboard(regime, dataState) {
+  const state = document.getElementById('data-state'); state.replaceChildren();
+  appendText(state, `state-banner ${dataState?.kind === 'holiday' ? 'state-holiday' : dataState?.kind === 'data_error' ? 'state-error' : 'state-normal'}`, `${text(dataState?.label, '状態確認中')}｜${text(dataState?.message)}`);
+  const holder = document.getElementById('market-scoreboard'); holder.replaceChildren();
+  const rows = Array.isArray(regime?.scoreboard) ? regime.scoreboard : [];
+  rows.forEach(row => {
+    const card = document.createElement('article'); card.className = 'score-card';
+    const numeric = typeof row.value === 'number' && Number.isFinite(row.value) ? row.value : null;
+    const display = numeric !== null ? `${numeric >= 0 ? '+' : ''}${numeric.toFixed(1)}${text(row.unit, '')}` : `${text(row.value)}${row.unit ? ` ${row.unit}` : ''}`;
+    const value = appendText(card, 'score-value', display);
+    if (numeric !== null && numeric > 0) value.classList.add('positive');
+    if (numeric !== null && numeric < 0) value.classList.add('negative');
+    appendText(card, 'score-label', row.label);
+    appendText(card, 'score-meaning', row.meaning);
+    holder.appendChild(card);
+  });
+  if (!rows.length) appendText(holder, 'empty', 'この履歴には強弱の要約がありません');
+}
+
 function renderSectorQuality(rows) {
   const holder = document.getElementById('sector-quality'); holder.replaceChildren();
   const valid = Array.isArray(rows) ? rows : [];
   if (!valid.length) return appendText(holder, 'empty', 'この履歴には強さの質データがありません');
   valid.slice(0, 5).forEach(row => {
-    const strip = document.createElement('div'); strip.className = 'quality-strip';
-    appendText(strip, 'quality-sector', `${row.sector} ${signedPercent(row.change_pct)}`);
-    appendText(strip, '', row.quality);
-    appendText(strip, '', row.volume_confirmation);
-    appendText(strip, '', row.persistence);
-    holder.appendChild(strip);
+    holder.appendChild(sectorQualityCard(row));
   });
   const weakTitle = document.createElement('div'); weakTitle.className = 'ranking-title'; weakTitle.textContent = '下位セクターの質'; weakTitle.style.marginTop = '12px'; holder.appendChild(weakTitle);
   valid.slice(-3).reverse().forEach(row => {
-    const strip = document.createElement('div'); strip.className = 'quality-strip';
-    appendText(strip, 'quality-sector', `${row.sector} ${signedPercent(row.change_pct)}`);
-    appendText(strip, '', row.quality);
-    appendText(strip, '', row.volume_confirmation);
-    appendText(strip, '', row.persistence);
-    holder.appendChild(strip);
+    holder.appendChild(sectorQualityCard(row));
   });
+}
+
+function sectorQualityCard(row) {
+  const card = document.createElement('article'); card.className = 'insight-card';
+  const head = document.createElement('div'); head.className = 'insight-head';
+  appendText(head, 'insight-title', row.sector);
+  const change = appendText(head, 'insight-label', signedPercent(row.change_pct));
+  if (Number(row.change_pct) > 0) change.classList.add('positive');
+  if (Number(row.change_pct) < 0) change.classList.add('negative');
+  card.appendChild(head);
+  const axes = document.createElement('div'); axes.className = 'axis-grid';
+  const labels = {momentum:'勢い', breadth:'広がり', activity:'商い', persistence:'継続力'};
+  Object.entries(row.axes || {}).forEach(([key, axis]) => {
+    const chip = document.createElement('div'); chip.className = 'axis-chip';
+    appendText(chip, '', labels[key] || key); appendText(chip, '', axis.label).className = 'value';
+    chip.title = text(axis.rule); axes.appendChild(chip);
+  });
+  card.appendChild(axes);
+  appendText(card, 'insight-reason', row.comment || row.quality);
+  appendText(card, 'insight-meta', `${row.coverage_note}｜評価ルールは各項目に表示。総合戦闘力は算出しません。`);
+  return card;
 }
 
 function renderJapanMarket(data) {
@@ -531,6 +584,7 @@ function renderJapanMarket(data) {
     : `日付：セクター ${text(dates.sector_market_date)}／銘柄 ${text(dates.stock_market_date)}／朝レポート ${text(dates.expected_market_date)}`;
   document.getElementById('japan-market-scope').textContent = `${text(data.scope)}｜${dateSummary}｜区分：${text(data.data_phase)}｜更新：${text(data.updated_at)}`;
   const sectors = Array.isArray(data.sector_ranking) ? data.sector_ranking : [];
+  renderScoreboard(data.market_regime || {}, data.data_state || {});
   renderRegime(data.market_regime || {});
   renderInsightCards('key-drivers', data.key_drivers, { flow: true });
   renderInsightCards('rotation-read', data.rotation_read?.items);
@@ -564,7 +618,7 @@ function renderJapanMarket(data) {
   const review = data.scenario_review || {}; const reviewHolder = document.getElementById('scenario-review'); reviewHolder.replaceChildren();
   appendText(reviewHolder, 'summary-main', `判定：${text(review.status, '更新待ち')}`); appendText(reviewHolder, 'market-note', text(review.note, '大引け後に更新します'));
   const reviewGrid = document.createElement('div'); reviewGrid.className = 'insight-grid';
-  [['朝の想定', review.morning_assumption], ['実際の値動き', review.actual_move], ['想定と違った点', review.difference], ['翌営業日に持ち越す材料', Array.isArray(review.carry_forward) ? review.carry_forward.join(' / ') : review.carry_forward]].forEach(([label, value]) => {
+  [['昨日までの見方', review.previous_view], ['実際の市場結果', review.market_result], ['今日への修正', review.revision], ['今日の監視材料', Array.isArray(review.today_watch) ? review.today_watch.join(' / ') : review.today_watch]].forEach(([label, value]) => {
     const card = document.createElement('div'); card.className = 'insight-card'; appendText(card, 'insight-title', label); appendText(card, 'insight-reason', value); reviewGrid.appendChild(card);
   });
   reviewHolder.appendChild(reviewGrid);

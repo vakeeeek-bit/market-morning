@@ -27,7 +27,8 @@ class JapanMarketDesignTests(unittest.TestCase):
         self.assertIn("既存データを維持します", source)
         self.assertIn('"大引け後" if review_ready else "取引中暫定"', source)
         self.assertIn('result["status"] = "大引け待ち"', source)
-        self.assertIn('data_phase = "日付不一致・判定保留"', source)
+        self.assertIn('"データ異常・検証保留" if blocked_reason', source)
+        self.assertIn('data_phase = "休場" if holiday', source)
         self.assertIn('result["status"] = "判定保留"', source)
         self.assertIn('sector_date == stock_date == expected_market_date', source)
         self.assertIn("aligned_fallback_snapshot", source)
@@ -54,9 +55,9 @@ class JapanMarketDesignTests(unittest.TestCase):
     def test_investor_view_does_not_overclaim_unavailable_style_axes(self):
         data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))
         dimensions = {item["axis"]: item for item in data["market_regime"]["dimensions"]}
-        for axis in ("Growth / Value", "大型株 / 小型株", "半導体"):
+        for axis in ("成長株と割安株", "大型株と小型株", "国内半導体"):
             self.assertEqual("unavailable", dimensions[axis]["status"])
-        self.assertEqual("observed", dimensions["市場Breadth"]["status"])
+        self.assertEqual("observed", dimensions["上昇・下落の広がり"]["status"])
 
     def test_rotation_is_labeled_as_price_action_estimate(self):
         data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))
@@ -68,6 +69,38 @@ class JapanMarketDesignTests(unittest.TestCase):
         for item in data["key_drivers"]:
             if item.get("market_date") and item["market_date"] > data["market_date"]:
                 self.assertEqual("日本株現物に未反映", item["pricing_status"])
+
+    def test_v2_uses_impact_ranked_drivers_without_fixed_copper_gold_slots(self):
+        data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))
+        drivers = data["key_drivers"]
+        self.assertLessEqual(len(drivers), 4)
+        self.assertEqual(drivers, sorted(drivers, key=lambda item: item["impact_score"], reverse=True))
+        self.assertTrue(all(item.get("category") for item in drivers))
+        source = (ROOT / "scripts" / "update_japan_market.py").read_text(encoding="utf-8")
+        self.assertIn('sorted(candidates, key=lambda item: item.get("impact_score", -1), reverse=True)[:4]', source)
+
+    def test_sector_quality_has_four_explained_axes_without_composite_score(self):
+        data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))
+        for item in data["sector_quality"]:
+            self.assertEqual({"momentum", "breadth", "activity", "persistence"}, set(item["axes"]))
+            self.assertNotIn("combat_power", item)
+            self.assertTrue(all(axis.get("rule") for axis in item["axes"].values()))
+
+    def test_scenario_review_revises_view_instead_of_scoring_prediction(self):
+        data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))
+        review = data["scenario_review"]
+        self.assertEqual("昨日のシナリオ検証 → 今日への修正", review["title"])
+        for key in ("previous_view", "market_result", "revision", "today_watch"):
+            self.assertIn(key, review)
+        self.assertNotIn("○×", json.dumps(review, ensure_ascii=False))
+
+    def test_holiday_and_data_error_have_distinct_states(self):
+        data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))
+        self.assertIn(data["data_state"]["kind"], {"normal", "holiday", "data_error"})
+        report = json.loads((ROOT / "data" / "japan-stocks.json").read_text(encoding="utf-8"))
+        if report.get("report_date") != report.get("target_market_date") and "休場" in json.dumps(report, ensure_ascii=False):
+            self.assertEqual("holiday", data["data_state"]["kind"])
+            self.assertEqual("休場", data["data_phase"])
 
     def test_close_workflow_runs_after_tokyo_close(self):
         source = (ROOT / ".github" / "workflows" / "japan-market-close.yml").read_text(encoding="utf-8")

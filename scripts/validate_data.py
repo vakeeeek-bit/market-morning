@@ -281,12 +281,12 @@ def validate_japan_investor_view(data: dict[str, dict], result: ValidationResult
     japan_market = data["japan-market"]
     dimensions = japan_market.get("market_regime", {}).get("dimensions", [])
     by_axis = {item.get("axis"): item for item in dimensions if isinstance(item, dict)}
-    for axis in ("Growth / Value", "大型株 / 小型株", "半導体"):
+    for axis in ("成長株と割安株", "大型株と小型株", "国内半導体"):
         item = by_axis.get(axis)
         if not item or item.get("status") != "unavailable":
             result.error(f"japan-market.market_regime: {axis}は現行データでは判定対象外であることを明示してください")
-    if by_axis.get("市場Breadth", {}).get("status") != "observed":
-        result.error("japan-market.market_regime: 市場Breadthは実測として区別してください")
+    if by_axis.get("上昇・下落の広がり", {}).get("status") != "observed":
+        result.error("japan-market.market_regime: 上昇・下落の広がりは実測として区別してください")
     else:
         result.ok("日本株レジームの実測・推定・判定対象外の区別")
 
@@ -304,10 +304,30 @@ def validate_japan_investor_view(data: dict[str, dict], result: ValidationResult
         parsed = parse_iso_date(driver_date, f"japan-market.key_drivers[{index}].market_date", result) if driver_date else None
         if parsed and japan_date and parsed > japan_date and driver.get("pricing_status") != "日本株現物に未反映":
             result.error(f"japan-market.key_drivers[{index}]: 日本株市場日より新しい材料は未反映と明示してください")
-    if len(japan_market.get("key_drivers", [])) == 5:
-        result.ok("日本株主要ドライバー5系列")
+    drivers = japan_market.get("key_drivers", [])
+    names = {item.get("driver") for item in drivers if isinstance(item, dict)}
+    if 1 <= len(drivers) <= 4 and not ({"銅", "金"} <= names):
+        result.ok("日本株主要材料は影響度順・最大4件（銅・金の固定枠なし）")
     else:
-        result.error("japan-market.key_drivers: USD/JPY・米金利・SOX・Copper・原油の5系列が必要です")
+        result.error("japan-market.key_drivers: 影響度順で最大4件とし、銅・金を同時に固定表示しないでください")
+
+    qualities = japan_market.get("sector_quality", [])
+    if qualities and all(set((item.get("axes") or {}).keys()) == {"momentum", "breadth", "activity", "persistence"} for item in qualities):
+        result.ok("セクター4軸評価（勢い・広がり・商い・継続力）")
+    else:
+        result.error("japan-market.sector_quality: 4軸評価が不足しています")
+
+    review = japan_market.get("scenario_review", {})
+    if "○×" in str(review) or review.get("title") != "昨日のシナリオ検証 → 今日への修正":
+        result.error("japan-market.scenario_review: 予想採点ではなく今日への修正として表示してください")
+    else:
+        result.ok("昨日のシナリオ検証から今日への修正")
+
+    state = japan_market.get("data_state", {})
+    if state.get("kind") not in {"normal", "holiday", "data_error"}:
+        result.error("japan-market.data_state: 休場とデータ異常を区別してください")
+    else:
+        result.ok("休場・通常日・データ異常の区別")
 
     if japan_market.get("methodology", {}).get("implemented_tier") != 1:
         result.error("japan-market.methodology: 今回の実装は既存データのみのTier 1に限定してください")

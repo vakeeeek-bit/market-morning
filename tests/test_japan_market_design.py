@@ -119,7 +119,12 @@ class JapanMarketDesignTests(unittest.TestCase):
         self.assertEqual("秋分の日", module.jpx_closure_name(date(2026, 9, 23)))
         self.assertIsNone(module.jpx_closure_name(date(2026, 9, 24)))
 
-        snapshot = {"market_date": "2026-09-18", "data_quality": {}, "sector_ranking": []}
+        snapshot = {
+            "market_date": "2026-09-18",
+            "data_quality": {},
+            "sector_ranking": [],
+            "sector_quality": [{"sector": "電機・精密", "persistence": "直近5日：TOPIXより強い"}],
+        }
         refreshed = module.refresh_closed_day_snapshot(
             snapshot,
             datetime(2026, 9, 23, 12, 34, tzinfo=ZoneInfo("Asia/Tokyo")),
@@ -128,6 +133,7 @@ class JapanMarketDesignTests(unittest.TestCase):
         )
         self.assertEqual("holiday", refreshed["data_state"]["kind"])
         self.assertEqual("2026-09-23は秋分の日で休場。2026-09-18の前営業日データを表示", refreshed["data_state"]["message"])
+        self.assertEqual(snapshot["sector_quality"], refreshed["sector_quality"])
 
     def test_close_workflow_runs_after_tokyo_close(self):
         source = (ROOT / ".github" / "workflows" / "japan-market-close.yml").read_text(encoding="utf-8")

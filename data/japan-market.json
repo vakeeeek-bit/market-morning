@@ -8,7 +8,7 @@
     "message": "2026-09-21は休場。2026-09-18の前営業日データを表示"
   },
   "source": "Yahoo Finance via yfinance（1回の一括取得）",
-  "scope": "TOPIX-17業種ETFと各業種の主要監視2銘柄。全上場銘柄・東証公式統計ではない",
+  "scope": "市場・セクター評価は指数連動ETFとTOPIX-17業種ETFを使用。主要監視34銘柄は銘柄ランキングだけに使用",
   "sector_ranking": [
     {
       "ticker": "1623.T",
@@ -1026,12 +1026,6 @@
     }
   ],
   "market_internals": {
-    "universe_size": 34,
-    "available": 34,
-    "advancing": 6,
-    "declining": 28,
-    "unchanged": 0,
-    "breadth_pct": -64.7,
     "nikkei_proxy_change_pct": 1.41,
     "topix_proxy_change_pct": -0.26,
     "relative": "日経225優位"
@@ -1068,8 +1062,8 @@
     }
   },
   "market_regime": {
-    "headline": "指数主導の選別相場",
-    "headline_reason": "日経225連動ETF +1.41%に対しTOPIX連動ETF -0.26%、Breadth -64.7",
+    "headline": "指数ごとに強弱が分かれる相場",
+    "headline_reason": "日経平均 +1.41%に対しTOPIX -0.26%",
     "scoreboard": [
       {
         "label": "日経平均",
@@ -1082,89 +1076,11 @@
         "value": -0.26,
         "unit": "%",
         "meaning": "市場全体の方向"
-      },
-      {
-        "label": "上昇・下落の広がり",
-        "value": -64.7,
-        "unit": "",
-        "meaning": "プラスほど上昇銘柄が多い"
-      },
-      {
-        "label": "値上がり／値下がり",
-        "value": "6／28",
-        "unit": "銘柄",
-        "meaning": "主要監視34銘柄の内訳"
       }
     ],
-    "divergence_alert": "指数と市場内部が乖離：日経225連動ETF +1.41%に対しTOPIX連動ETF -0.26%、Breadth -64.7",
-    "dimensions": [
-      {
-        "axis": "成長株と割安株",
-        "label": "判定対象外",
-        "status": "unavailable",
-        "reason": "同じ基準で比較できる成長株・割安株指数がないため"
-      },
-      {
-        "axis": "大型株と小型株",
-        "label": "判定対象外",
-        "status": "unavailable",
-        "reason": "小型株指数を取得しておらず、日経平均とTOPIXの差を規模差と断定できないため"
-      },
-      {
-        "axis": "外需と内需",
-        "label": "外需優位",
-        "result": "外需優位",
-        "status": "estimated",
-        "left_label": "外需",
-        "right_label": "内需",
-        "left_value": 0.43,
-        "right_value": -0.74,
-        "spread_pt": 1.17,
-        "detail": "外需 +0.43% ／ 内需 -0.74%",
-        "reason": "相対騰落：外需 +0.43%／内需 -0.74%（差 +1.17pt）",
-        "basis": "固定17業種ETFのうち外需5・内需10業種の代理比較"
-      },
-      {
-        "axis": "景気敏感とディフェンシブ",
-        "label": "景気敏感優位",
-        "result": "景気敏感優位",
-        "status": "estimated",
-        "left_label": "景気敏感",
-        "right_label": "ディフェンシブ",
-        "left_value": -0.17,
-        "right_value": -0.81,
-        "spread_pt": 0.64,
-        "detail": "景気敏感 -0.17% ／ ディフェンシブ -0.81%",
-        "reason": "相対騰落：景気敏感 -0.17%／ディフェンシブ -0.81%（差 +0.64pt）",
-        "basis": "固定17業種ETFのうち景気敏感12・ディフェンシブ5業種の代理比較"
-      },
-      {
-        "axis": "国内半導体",
-        "label": "判定対象外",
-        "status": "unavailable",
-        "reason": "電機・精密ETFを半導体だけの値動きとして扱えないため。米国半導体は主要材料欄で確認"
-      },
-      {
-        "axis": "金融",
-        "label": "弱い",
-        "status": "observed",
-        "reason": "銀行・金融（銀行除く）ETFの平均騰落 -0.48%"
-      },
-      {
-        "axis": "上昇・下落の広がり",
-        "label": "広い下落",
-        "status": "observed",
-        "value": -64.7,
-        "reason": "主要監視34銘柄の値上がり6・値下がり28、広がり指数 -64.7"
-      },
-      {
-        "axis": "市場全体の姿勢",
-        "label": "指数主導の選別相場",
-        "status": "estimated",
-        "reason": "日経225連動ETF +1.41%に対しTOPIX連動ETF -0.26%、Breadth -64.7"
-      }
-    ],
-    "method_note": "実測は固定17業種ETF・主要監視34銘柄。分類軸とリスク姿勢は値動きからの推定で、投資主体別フローではありません。"
+    "divergence_alert": "指数と市場内部が乖離：日経平均 +1.41%に対しTOPIX -0.26%",
+    "dimensions": [],
+    "method_note": "市場観は日経平均・TOPIX連動ETFの同日騰落だけで判定します。34銘柄を市場全体の広がりには使用しません。"
   },
   "key_drivers": [
     {
@@ -1174,8 +1090,8 @@
       "status": "observed",
       "market_value": 89.85,
       "change_pct": -6.19,
-      "transmission_path": "原油価格 → 資源収益と燃料コスト",
-      "reason": "WTI 89.85、前日比 -6.19%（2026-09-22）→ 原油価格 → 資源収益と燃料コスト。継続先物のため限月付き清算値としては扱いません。日本株現物の基準日2026-09-18より新しく、次回取引の監視材料",
+      "transmission_path": "資源収益と燃料コストが変化",
+      "reason": "WTI 89.85、前日比 -6.19%（2026-09-22）→ 資源収益と燃料コストが変化。継続先物のため限月付き清算値としては扱いません。日本株現物の基準日2026-09-18より新しく、次回取引の監視材料",
       "affected_sectors": [
         "エネルギー資源",
         "運輸・物流",
@@ -1193,8 +1109,8 @@
       "status": "observed",
       "market_value": 6.905,
       "change_pct": 3.27,
-      "transmission_path": "銅価格 → 非鉄・設備投資関連の収益期待",
-      "reason": "Copper 6.905、前日比 +3.27%（2026-09-22）→ 銅価格 → 非鉄・設備投資関連の収益期待。継続先物だけで中国実需を断定しません。日本株現物の基準日2026-09-18より新しく、次回取引の監視材料",
+      "transmission_path": "非鉄・設備投資関連の収益期待が変化",
+      "reason": "Copper 6.905、前日比 +3.27%（2026-09-22）→ 非鉄・設備投資関連の収益期待が変化。継続先物だけで中国実需を断定しません。日本株現物の基準日2026-09-18より新しく、次回取引の監視材料",
       "affected_sectors": [
         "鉄鋼・非鉄",
         "機械",
@@ -1212,8 +1128,8 @@
       "status": "observed",
       "market_value": 12689.8203,
       "change_pct": 2.06,
-      "transmission_path": "米半導体株 → 国内半導体関連の初期センチメント",
-      "reason": "PHLX半導体株指数（SOX） 12689.8203、前日比 +2.06%（2026-09-22）→ 米半導体株 → 国内半導体関連の初期センチメント。日本株現物の基準日2026-09-18より新しく、次回取引の監視材料",
+      "transmission_path": "国内半導体関連の投資家心理に波及",
+      "reason": "PHLX半導体株指数（SOX） 12689.8203、前日比 +2.06%（2026-09-22）→ 国内半導体関連の投資家心理に波及。日本株現物の基準日2026-09-18より新しく、次回取引の監視材料",
       "affected_sectors": [
         "電機・精密",
         "機械"
@@ -1230,8 +1146,8 @@
       "status": "observed",
       "market_value": 30732.3965,
       "change_pct": 0.82,
-      "transmission_path": "米国ハイテク株 → 国内グロース株の投資家心理",
-      "reason": "NASDAQ100 30732.3965、前日比 +0.82%（2026-09-22）→ 米国ハイテク株 → 国内グロース株の投資家心理。日本株現物の基準日2026-09-18より新しく、次回取引の監視材料",
+      "transmission_path": "国内グロース株の投資家心理に波及",
+      "reason": "NASDAQ100 30732.3965、前日比 +0.82%（2026-09-22）→ 国内グロース株の投資家心理に波及。日本株現物の基準日2026-09-18より新しく、次回取引の監視材料",
       "affected_sectors": [
         "電機・精密",
         "情報通信・サービス"
@@ -1243,7 +1159,7 @@
     }
   ],
   "rotation_read": {
-    "label": "値動きから見たローテーション（推定）",
+    "label": "どちらが強い？",
     "items": [
       {
         "axis": "外需と内需",
@@ -1258,622 +1174,486 @@
         "detail": "外需 +0.43% ／ 内需 -0.74%",
         "reason": "相対騰落：外需 +0.43%／内需 -0.74%（差 +1.17pt）",
         "basis": "固定セクターETFの相対騰落"
-      },
-      {
-        "axis": "景気敏感とディフェンシブ",
-        "label": "景気敏感優位",
-        "result": "景気敏感優位",
-        "status": "estimated",
-        "left_label": "景気敏感",
-        "right_label": "ディフェンシブ",
-        "left_value": -0.17,
-        "right_value": -0.81,
-        "spread_pt": 0.64,
-        "detail": "景気敏感 -0.17% ／ ディフェンシブ -0.81%",
-        "reason": "相対騰落：景気敏感 -0.17%／ディフェンシブ -0.81%（差 +0.64pt）",
-        "basis": "固定セクターETFの相対騰落"
-      },
-      {
-        "axis": "日経平均とTOPIX",
-        "label": "日経平均優位",
-        "result": "日経平均優位",
-        "status": "estimated",
-        "left_label": "日経平均",
-        "right_label": "TOPIX",
-        "left_value": 1.41,
-        "right_value": -0.26,
-        "spread_pt": 1.67,
-        "detail": "日経平均 +1.41% ／ TOPIX -0.26%",
-        "reason": "相対騰落：日経平均 +1.41%／TOPIX -0.26%（差 +1.67pt）",
-        "basis": "指数連動ETFの相対騰落（大型株・小型株の代理ではない）"
-      },
-      {
-        "axis": "成長株と割安株",
-        "label": "判定対象外",
-        "status": "unavailable",
-        "reason": "同じ基準のスタイル指数がないため"
       }
     ],
-    "note": "投資主体別売買を取得していないため『資金流入』とは表現しません。"
+    "note": "17業種ETFを外需型・内需型に分けた相対騰落です。投資主体別の資金流入を示すものではありません。"
   },
   "sector_quality": [
     {
       "sector": "鉄鋼・非鉄",
       "change_pct": 1.44,
-      "quality": "選別的な上昇",
-      "participation": "まちまち",
+      "quality": "強い",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.48,
-      "persistence": "5日相対劣後",
+      "persistence": "確認できず",
       "return_5d_pct": 0.08,
       "axes": {
         "momentum": {
           "label": "強い",
           "value": 1.44,
-          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
-        },
-        "breadth": {
-          "label": "まちまち",
-          "value": "1/2",
-          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+          "rule": "業種ETFの当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
         },
         "activity": {
           "label": "商い低調",
           "value": 0.48,
-          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+          "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "5日相対劣後",
+          "label": "確認できず",
           "value": 0.08,
-          "rule": "5日騰落をTOPIX連動ETFと比較"
+          "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "選別的な上昇。まちまち、商い低調、5日相対劣後。",
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
+      "comment": "業種ETFは当日+1.44%で強い。商い低調、確認できず。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
       "sector": "電機・精密",
       "change_pct": 1.44,
-      "quality": "選別的な上昇",
-      "participation": "まちまち",
+      "quality": "強い",
       "volume_confirmation": "出来高増",
       "volume_ratio_20d": 2.3,
-      "persistence": "5日相対優位",
+      "persistence": "確認できず",
       "return_5d_pct": 2.91,
       "axes": {
         "momentum": {
           "label": "強い",
           "value": 1.44,
-          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
-        },
-        "breadth": {
-          "label": "まちまち",
-          "value": "1/2",
-          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+          "rule": "業種ETFの当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
         },
         "activity": {
           "label": "出来高増",
           "value": 2.3,
-          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+          "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "5日相対優位",
+          "label": "確認できず",
           "value": 2.91,
-          "rule": "5日騰落をTOPIX連動ETFと比較"
+          "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "選別的な上昇。まちまち、出来高増、5日相対優位。",
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
+      "comment": "業種ETFは当日+1.44%で強い。出来高増、確認できず。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
       "sector": "医薬品",
       "change_pct": 0.52,
-      "quality": "広がりを伴う上昇",
-      "participation": "2銘柄とも上昇",
+      "quality": "小動き",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.46,
-      "persistence": "5日相対優位",
+      "persistence": "確認できず",
       "return_5d_pct": 4.6,
       "axes": {
         "momentum": {
           "label": "中立",
           "value": 0.52,
-          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
-        },
-        "breadth": {
-          "label": "広い",
-          "value": "2/2",
-          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+          "rule": "業種ETFの当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
         },
         "activity": {
           "label": "商い低調",
           "value": 0.46,
-          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+          "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "5日相対優位",
+          "label": "確認できず",
           "value": 4.6,
-          "rule": "5日騰落をTOPIX連動ETFと比較"
+          "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "広がりを伴う上昇。2銘柄とも上昇、商い低調、5日相対優位。",
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
+      "comment": "業種ETFは当日+0.52%で中立。商い低調、確認できず。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
       "sector": "機械",
       "change_pct": 0.49,
-      "quality": "選別的な上昇",
-      "participation": "2銘柄とも下落",
+      "quality": "小動き",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.38,
-      "persistence": "5日ほぼ同等",
+      "persistence": "確認できず",
       "return_5d_pct": 1.91,
       "axes": {
         "momentum": {
           "label": "中立",
           "value": 0.49,
-          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
-        },
-        "breadth": {
-          "label": "狭い",
-          "value": "0/2",
-          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+          "rule": "業種ETFの当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
         },
         "activity": {
           "label": "商い低調",
           "value": 0.38,
-          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+          "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "5日ほぼ同等",
+          "label": "確認できず",
           "value": 1.91,
-          "rule": "5日騰落をTOPIX連動ETFと比較"
+          "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "選別的な上昇。2銘柄とも下落、商い低調、5日ほぼ同等。",
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
+      "comment": "業種ETFは当日+0.49%で中立。商い低調、確認できず。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
       "sector": "小売",
       "change_pct": 0.39,
-      "quality": "選別的な上昇",
-      "participation": "2銘柄とも下落",
+      "quality": "小動き",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.25,
-      "persistence": "5日相対劣後",
+      "persistence": "確認できず",
       "return_5d_pct": 1.03,
       "axes": {
         "momentum": {
           "label": "中立",
           "value": 0.39,
-          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
-        },
-        "breadth": {
-          "label": "狭い",
-          "value": "0/2",
-          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+          "rule": "業種ETFの当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
         },
         "activity": {
           "label": "商い低調",
           "value": 0.25,
-          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+          "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "5日相対劣後",
+          "label": "確認できず",
           "value": 1.03,
-          "rule": "5日騰落をTOPIX連動ETFと比較"
+          "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "選別的な上昇。2銘柄とも下落、商い低調、5日相対劣後。",
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
+      "comment": "業種ETFは当日+0.39%で中立。商い低調、確認できず。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
       "sector": "素材・化学",
       "change_pct": 0.28,
-      "quality": "選別的な上昇",
-      "participation": "まちまち",
+      "quality": "小動き",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.22,
-      "persistence": "5日相対優位",
+      "persistence": "確認できず",
       "return_5d_pct": 2.48,
       "axes": {
         "momentum": {
           "label": "中立",
           "value": 0.28,
-          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
-        },
-        "breadth": {
-          "label": "まちまち",
-          "value": "1/2",
-          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+          "rule": "業種ETFの当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
         },
         "activity": {
           "label": "商い低調",
           "value": 0.22,
-          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+          "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "5日相対優位",
+          "label": "確認できず",
           "value": 2.48,
-          "rule": "5日騰落をTOPIX連動ETFと比較"
+          "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "選別的な上昇。まちまち、商い低調、5日相対優位。",
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
+      "comment": "業種ETFは当日+0.28%で中立。商い低調、確認できず。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
       "sector": "建設・資材",
       "change_pct": -0.31,
-      "quality": "広がりを伴う下落",
-      "participation": "2銘柄とも下落",
+      "quality": "小動き",
       "volume_confirmation": "出来高増",
       "volume_ratio_20d": 1.2,
-      "persistence": "5日ほぼ同等",
+      "persistence": "確認できず",
       "return_5d_pct": 1.89,
       "axes": {
         "momentum": {
           "label": "中立",
           "value": -0.31,
-          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
-        },
-        "breadth": {
-          "label": "狭い",
-          "value": "0/2",
-          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+          "rule": "業種ETFの当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
         },
         "activity": {
           "label": "出来高増",
           "value": 1.2,
-          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+          "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "5日ほぼ同等",
+          "label": "確認できず",
           "value": 1.89,
-          "rule": "5日騰落をTOPIX連動ETFと比較"
+          "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "広がりを伴う下落。2銘柄とも下落、出来高増、5日ほぼ同等。",
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
+      "comment": "業種ETFは当日-0.31%で中立。出来高増、確認できず。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
       "sector": "金融（銀行除く）",
       "change_pct": -0.43,
-      "quality": "広がりを伴う下落",
-      "participation": "2銘柄とも下落",
+      "quality": "小動き",
       "volume_confirmation": "出来高増",
       "volume_ratio_20d": 1.2,
-      "persistence": "5日ほぼ同等",
+      "persistence": "確認できず",
       "return_5d_pct": 1.81,
       "axes": {
         "momentum": {
           "label": "中立",
           "value": -0.43,
-          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
-        },
-        "breadth": {
-          "label": "狭い",
-          "value": "0/2",
-          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+          "rule": "業種ETFの当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
         },
         "activity": {
           "label": "出来高増",
           "value": 1.2,
-          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+          "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "5日ほぼ同等",
+          "label": "確認できず",
           "value": 1.81,
-          "rule": "5日騰落をTOPIX連動ETFと比較"
+          "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "広がりを伴う下落。2銘柄とも下落、出来高増、5日ほぼ同等。",
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
+      "comment": "業種ETFは当日-0.43%で中立。出来高増、確認できず。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
       "sector": "銀行",
       "change_pct": -0.53,
-      "quality": "広がりを伴う下落",
-      "participation": "2銘柄とも下落",
+      "quality": "小動き",
       "volume_confirmation": "出来高増",
       "volume_ratio_20d": 2.44,
-      "persistence": "5日相対劣後",
+      "persistence": "確認できず",
       "return_5d_pct": -0.7,
       "axes": {
         "momentum": {
           "label": "中立",
           "value": -0.53,
-          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
-        },
-        "breadth": {
-          "label": "狭い",
-          "value": "0/2",
-          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+          "rule": "業種ETFの当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
         },
         "activity": {
           "label": "出来高増",
           "value": 2.44,
-          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+          "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "5日相対劣後",
+          "label": "確認できず",
           "value": -0.7,
-          "rule": "5日騰落をTOPIX連動ETFと比較"
+          "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "広がりを伴う下落。2銘柄とも下落、出来高増、5日相対劣後。",
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
+      "comment": "業種ETFは当日-0.53%で中立。出来高増、確認できず。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
       "sector": "自動車・輸送機",
       "change_pct": -0.55,
-      "quality": "広がりを伴う下落",
-      "participation": "2銘柄とも下落",
+      "quality": "小動き",
       "volume_confirmation": "平常圏",
       "volume_ratio_20d": 1.14,
-      "persistence": "5日相対劣後",
+      "persistence": "確認できず",
       "return_5d_pct": 0.67,
       "axes": {
         "momentum": {
           "label": "中立",
           "value": -0.55,
-          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
-        },
-        "breadth": {
-          "label": "狭い",
-          "value": "0/2",
-          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+          "rule": "業種ETFの当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
         },
         "activity": {
           "label": "平常圏",
           "value": 1.14,
-          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+          "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "5日相対劣後",
+          "label": "確認できず",
           "value": 0.67,
-          "rule": "5日騰落をTOPIX連動ETFと比較"
+          "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "広がりを伴う下落。2銘柄とも下落、平常圏、5日相対劣後。",
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
+      "comment": "業種ETFは当日-0.55%で中立。平常圏、確認できず。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
       "sector": "運輸・物流",
       "change_pct": -0.62,
-      "quality": "広がりを伴う下落",
-      "participation": "2銘柄とも下落",
+      "quality": "小動き",
       "volume_confirmation": "平常圏",
       "volume_ratio_20d": 0.86,
-      "persistence": "5日ほぼ同等",
+      "persistence": "確認できず",
       "return_5d_pct": 1.66,
       "axes": {
         "momentum": {
           "label": "中立",
           "value": -0.62,
-          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
-        },
-        "breadth": {
-          "label": "狭い",
-          "value": "0/2",
-          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+          "rule": "業種ETFの当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
         },
         "activity": {
           "label": "平常圏",
           "value": 0.86,
-          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+          "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "5日ほぼ同等",
+          "label": "確認できず",
           "value": 1.66,
-          "rule": "5日騰落をTOPIX連動ETFと比較"
+          "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "広がりを伴う下落。2銘柄とも下落、平常圏、5日ほぼ同等。",
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
+      "comment": "業種ETFは当日-0.62%で中立。平常圏、確認できず。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
       "sector": "商社・卸売",
       "change_pct": -0.67,
-      "quality": "広がりを伴う下落",
-      "participation": "2銘柄とも下落",
+      "quality": "小動き",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.73,
-      "persistence": "5日相対劣後",
+      "persistence": "確認できず",
       "return_5d_pct": 0.75,
       "axes": {
         "momentum": {
           "label": "中立",
           "value": -0.67,
-          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
-        },
-        "breadth": {
-          "label": "狭い",
-          "value": "0/2",
-          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+          "rule": "業種ETFの当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
         },
         "activity": {
           "label": "商い低調",
           "value": 0.73,
-          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+          "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "5日相対劣後",
+          "label": "確認できず",
           "value": 0.75,
-          "rule": "5日騰落をTOPIX連動ETFと比較"
+          "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "広がりを伴う下落。2銘柄とも下落、商い低調、5日相対劣後。",
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
+      "comment": "業種ETFは当日-0.67%で中立。商い低調、確認できず。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
       "sector": "情報通信・サービス",
       "change_pct": -0.76,
-      "quality": "方向感まちまち",
-      "participation": "まちまち",
+      "quality": "弱い",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.19,
-      "persistence": "5日相対優位",
+      "persistence": "確認できず",
       "return_5d_pct": 3.0,
       "axes": {
         "momentum": {
           "label": "弱い",
           "value": -0.76,
-          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
-        },
-        "breadth": {
-          "label": "まちまち",
-          "value": "1/2",
-          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+          "rule": "業種ETFの当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
         },
         "activity": {
           "label": "商い低調",
           "value": 0.19,
-          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+          "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "5日相対優位",
+          "label": "確認できず",
           "value": 3.0,
-          "rule": "5日騰落をTOPIX連動ETFと比較"
+          "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "方向感まちまち。まちまち、商い低調、5日相対優位。",
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
+      "comment": "業種ETFは当日-0.76%で弱い。商い低調、確認できず。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
       "sector": "エネルギー資源",
       "change_pct": -1.19,
-      "quality": "広がりを伴う下落",
-      "participation": "2銘柄とも下落",
+      "quality": "弱い",
       "volume_confirmation": "出来高増",
       "volume_ratio_20d": 2.44,
-      "persistence": "5日相対劣後",
+      "persistence": "確認できず",
       "return_5d_pct": -0.4,
       "axes": {
         "momentum": {
           "label": "弱い",
           "value": -1.19,
-          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
-        },
-        "breadth": {
-          "label": "狭い",
-          "value": "0/2",
-          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+          "rule": "業種ETFの当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
         },
         "activity": {
           "label": "出来高増",
           "value": 2.44,
-          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+          "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "5日相対劣後",
+          "label": "確認できず",
           "value": -0.4,
-          "rule": "5日騰落をTOPIX連動ETFと比較"
+          "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "広がりを伴う下落。2銘柄とも下落、出来高増、5日相対劣後。",
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
+      "comment": "業種ETFは当日-1.19%で弱い。出来高増、確認できず。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
       "sector": "不動産",
       "change_pct": -1.42,
-      "quality": "広がりを伴う下落",
-      "participation": "2銘柄とも下落",
+      "quality": "弱い",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.32,
-      "persistence": "5日ほぼ同等",
+      "persistence": "確認できず",
       "return_5d_pct": 1.17,
       "axes": {
         "momentum": {
           "label": "弱い",
           "value": -1.42,
-          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
-        },
-        "breadth": {
-          "label": "狭い",
-          "value": "0/2",
-          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+          "rule": "業種ETFの当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
         },
         "activity": {
           "label": "商い低調",
           "value": 0.32,
-          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+          "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "5日ほぼ同等",
+          "label": "確認できず",
           "value": 1.17,
-          "rule": "5日騰落をTOPIX連動ETFと比較"
+          "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "広がりを伴う下落。2銘柄とも下落、商い低調、5日ほぼ同等。",
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
+      "comment": "業種ETFは当日-1.42%で弱い。商い低調、確認できず。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
       "sector": "食品",
       "change_pct": -1.6,
-      "quality": "広がりを伴う下落",
-      "participation": "2銘柄とも下落",
+      "quality": "弱い",
       "volume_confirmation": "平常圏",
       "volume_ratio_20d": 1.12,
-      "persistence": "5日相対劣後",
+      "persistence": "確認できず",
       "return_5d_pct": 0.62,
       "axes": {
         "momentum": {
           "label": "弱い",
           "value": -1.6,
-          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
-        },
-        "breadth": {
-          "label": "狭い",
-          "value": "0/2",
-          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+          "rule": "業種ETFの当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
         },
         "activity": {
           "label": "平常圏",
           "value": 1.12,
-          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+          "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "5日相対劣後",
+          "label": "確認できず",
           "value": 0.62,
-          "rule": "5日騰落をTOPIX連動ETFと比較"
+          "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "広がりを伴う下落。2銘柄とも下落、平常圏、5日相対劣後。",
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
+      "comment": "業種ETFは当日-1.60%で弱い。平常圏、確認できず。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
       "sector": "電力・ガス",
       "change_pct": -2.6,
-      "quality": "広がりを伴う下落",
-      "participation": "2銘柄とも下落",
+      "quality": "弱い",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.64,
-      "persistence": "5日相対劣後",
+      "persistence": "確認できず",
       "return_5d_pct": -0.35,
       "axes": {
         "momentum": {
           "label": "弱い",
           "value": -2.6,
-          "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
-        },
-        "breadth": {
-          "label": "狭い",
-          "value": "0/2",
-          "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"
+          "rule": "業種ETFの当日騰落が+0.7%以上で強い、-0.7%以下で弱い"
         },
         "activity": {
           "label": "商い低調",
           "value": 0.64,
-          "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
+          "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "5日相対劣後",
+          "label": "確認できず",
           "value": -0.35,
-          "rule": "5日騰落をTOPIX連動ETFと比較"
+          "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "広がりを伴う下落。2銘柄とも下落、商い低調、5日相対劣後。",
-      "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"
+      "comment": "業種ETFは当日-2.60%で弱い。商い低調、確認できず。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     }
   ],
   "monitoring_points": [
@@ -1906,8 +1686,8 @@
     "tier_1_existing_data": [
       "今日の市場観",
       "主要材料",
-      "値動きから見たローテーション",
-      "セクター4軸評価",
+      "外需と内需の比較",
+      "業種ETFのセクター3軸評価",
       "昨日のシナリオ検証と今日への修正"
     ],
     "tier_2_light_fetch": [

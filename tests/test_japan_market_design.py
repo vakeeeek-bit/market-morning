@@ -4,6 +4,8 @@ import json
 import sys
 import types
 import unittest
+from datetime import date, datetime
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 
@@ -108,6 +110,24 @@ class JapanMarketDesignTests(unittest.TestCase):
         if report.get("report_date") != report.get("target_market_date") and "休場" in json.dumps(report, ensure_ascii=False):
             self.assertEqual("holiday", data["data_state"]["kind"])
             self.assertEqual("休場", data["data_phase"])
+
+    def test_jpx_holiday_reason_uses_execution_date(self):
+        sys.modules.setdefault("yfinance", types.SimpleNamespace(download=None))
+        spec = importlib.util.spec_from_file_location("update_japan_market_holiday_test", ROOT / "scripts" / "update_japan_market.py")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        self.assertEqual("秋分の日", module.jpx_closure_name(date(2026, 9, 23)))
+        self.assertIsNone(module.jpx_closure_name(date(2026, 9, 24)))
+
+        snapshot = {"market_date": "2026-09-18", "data_quality": {}, "sector_ranking": []}
+        refreshed = module.refresh_closed_day_snapshot(
+            snapshot,
+            datetime(2026, 9, 23, 12, 34, tzinfo=ZoneInfo("Asia/Tokyo")),
+            {},
+            {},
+        )
+        self.assertEqual("holiday", refreshed["data_state"]["kind"])
+        self.assertEqual("2026-09-23は秋分の日で休場。2026-09-18の前営業日データを表示", refreshed["data_state"]["message"])
 
     def test_close_workflow_runs_after_tokyo_close(self):
         source = (ROOT / ".github" / "workflows" / "japan-market-close.yml").read_text(encoding="utf-8")

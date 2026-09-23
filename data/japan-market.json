@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-23 06:31:51 JST",
+  "updated_at": "2026-09-23 10:46:58 JST",
   "market_date": "2026-09-18",
   "data_phase": "休場",
   "data_state": {
@@ -1185,7 +1185,7 @@
       "quality": "強い",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.48,
-      "persistence": "確認できず",
+      "persistence": "5日相対劣後",
       "return_5d_pct": 0.08,
       "axes": {
         "momentum": {
@@ -1199,12 +1199,12 @@
           "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対劣後",
           "value": 0.08,
           "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "業種ETFは当日+1.44%で強い。商い低調、確認できず。",
+      "comment": "業種ETFは当日+1.44%で強い。商い低調、5日相対劣後。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
@@ -1213,7 +1213,7 @@
       "quality": "強い",
       "volume_confirmation": "出来高増",
       "volume_ratio_20d": 2.3,
-      "persistence": "確認できず",
+      "persistence": "5日相対優位",
       "return_5d_pct": 2.91,
       "axes": {
         "momentum": {
@@ -1227,12 +1227,12 @@
           "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対優位",
           "value": 2.91,
           "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "業種ETFは当日+1.44%で強い。出来高増、確認できず。",
+      "comment": "業種ETFは当日+1.44%で強い。出来高増、5日相対優位。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
@@ -1241,7 +1241,7 @@
       "quality": "小動き",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.46,
-      "persistence": "確認できず",
+      "persistence": "5日相対優位",
       "return_5d_pct": 4.6,
       "axes": {
         "momentum": {
@@ -1255,12 +1255,12 @@
           "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対優位",
           "value": 4.6,
           "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "業種ETFは当日+0.52%で中立。商い低調、確認できず。",
+      "comment": "業種ETFは当日+0.52%で中立。商い低調、5日相対優位。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
@@ -1269,7 +1269,7 @@
       "quality": "小動き",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.38,
-      "persistence": "確認できず",
+      "persistence": "5日ほぼ同等",
       "return_5d_pct": 1.91,
       "axes": {
         "momentum": {
@@ -1283,12 +1283,12 @@
           "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日ほぼ同等",
           "value": 1.91,
           "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "業種ETFは当日+0.49%で中立。商い低調、確認できず。",
+      "comment": "業種ETFは当日+0.49%で中立。商い低調、5日ほぼ同等。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
@@ -1297,7 +1297,7 @@
       "quality": "小動き",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.25,
-      "persistence": "確認できず",
+      "persistence": "5日相対劣後",
       "return_5d_pct": 1.03,
       "axes": {
         "momentum": {
@@ -1311,12 +1311,12 @@
           "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対劣後",
           "value": 1.03,
           "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "業種ETFは当日+0.39%で中立。商い低調、確認できず。",
+      "comment": "業種ETFは当日+0.39%で中立。商い低調、5日相対劣後。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
@@ -1325,7 +1325,7 @@
       "quality": "小動き",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.22,
-      "persistence": "確認できず",
+      "persistence": "5日相対優位",
       "return_5d_pct": 2.48,
       "axes": {
         "momentum": {
@@ -1339,12 +1339,12 @@
           "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対優位",
           "value": 2.48,
           "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "業種ETFは当日+0.28%で中立。商い低調、確認できず。",
+      "comment": "業種ETFは当日+0.28%で中立。商い低調、5日相対優位。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
@@ -1353,7 +1353,7 @@
       "quality": "小動き",
       "volume_confirmation": "出来高増",
       "volume_ratio_20d": 1.2,
-      "persistence": "確認できず",
+      "persistence": "5日ほぼ同等",
       "return_5d_pct": 1.89,
       "axes": {
         "momentum": {
@@ -1367,12 +1367,12 @@
           "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日ほぼ同等",
           "value": 1.89,
           "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "業種ETFは当日-0.31%で中立。出来高増、確認できず。",
+      "comment": "業種ETFは当日-0.31%で中立。出来高増、5日ほぼ同等。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
@@ -1381,7 +1381,7 @@
       "quality": "小動き",
       "volume_confirmation": "出来高増",
       "volume_ratio_20d": 1.2,
-      "persistence": "確認できず",
+      "persistence": "5日ほぼ同等",
       "return_5d_pct": 1.81,
       "axes": {
         "momentum": {
@@ -1395,12 +1395,12 @@
           "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日ほぼ同等",
           "value": 1.81,
           "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "業種ETFは当日-0.43%で中立。出来高増、確認できず。",
+      "comment": "業種ETFは当日-0.43%で中立。出来高増、5日ほぼ同等。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
@@ -1409,7 +1409,7 @@
       "quality": "小動き",
       "volume_confirmation": "出来高増",
       "volume_ratio_20d": 2.44,
-      "persistence": "確認できず",
+      "persistence": "5日相対劣後",
       "return_5d_pct": -0.7,
       "axes": {
         "momentum": {
@@ -1423,12 +1423,12 @@
           "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対劣後",
           "value": -0.7,
           "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "業種ETFは当日-0.53%で中立。出来高増、確認できず。",
+      "comment": "業種ETFは当日-0.53%で中立。出来高増、5日相対劣後。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
@@ -1437,7 +1437,7 @@
       "quality": "小動き",
       "volume_confirmation": "平常圏",
       "volume_ratio_20d": 1.14,
-      "persistence": "確認できず",
+      "persistence": "5日相対劣後",
       "return_5d_pct": 0.67,
       "axes": {
         "momentum": {
@@ -1451,12 +1451,12 @@
           "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対劣後",
           "value": 0.67,
           "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "業種ETFは当日-0.55%で中立。平常圏、確認できず。",
+      "comment": "業種ETFは当日-0.55%で中立。平常圏、5日相対劣後。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
@@ -1465,7 +1465,7 @@
       "quality": "小動き",
       "volume_confirmation": "平常圏",
       "volume_ratio_20d": 0.86,
-      "persistence": "確認できず",
+      "persistence": "5日ほぼ同等",
       "return_5d_pct": 1.66,
       "axes": {
         "momentum": {
@@ -1479,12 +1479,12 @@
           "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日ほぼ同等",
           "value": 1.66,
           "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "業種ETFは当日-0.62%で中立。平常圏、確認できず。",
+      "comment": "業種ETFは当日-0.62%で中立。平常圏、5日ほぼ同等。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
@@ -1493,7 +1493,7 @@
       "quality": "小動き",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.73,
-      "persistence": "確認できず",
+      "persistence": "5日相対劣後",
       "return_5d_pct": 0.75,
       "axes": {
         "momentum": {
@@ -1507,12 +1507,12 @@
           "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対劣後",
           "value": 0.75,
           "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "業種ETFは当日-0.67%で中立。商い低調、確認できず。",
+      "comment": "業種ETFは当日-0.67%で中立。商い低調、5日相対劣後。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
@@ -1521,7 +1521,7 @@
       "quality": "弱い",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.19,
-      "persistence": "確認できず",
+      "persistence": "5日相対優位",
       "return_5d_pct": 3.0,
       "axes": {
         "momentum": {
@@ -1535,12 +1535,12 @@
           "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対優位",
           "value": 3.0,
           "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "業種ETFは当日-0.76%で弱い。商い低調、確認できず。",
+      "comment": "業種ETFは当日-0.76%で弱い。商い低調、5日相対優位。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
@@ -1549,7 +1549,7 @@
       "quality": "弱い",
       "volume_confirmation": "出来高増",
       "volume_ratio_20d": 2.44,
-      "persistence": "確認できず",
+      "persistence": "5日相対劣後",
       "return_5d_pct": -0.4,
       "axes": {
         "momentum": {
@@ -1563,12 +1563,12 @@
           "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対劣後",
           "value": -0.4,
           "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "業種ETFは当日-1.19%で弱い。出来高増、確認できず。",
+      "comment": "業種ETFは当日-1.19%で弱い。出来高増、5日相対劣後。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
@@ -1577,7 +1577,7 @@
       "quality": "弱い",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.32,
-      "persistence": "確認できず",
+      "persistence": "5日ほぼ同等",
       "return_5d_pct": 1.17,
       "axes": {
         "momentum": {
@@ -1591,12 +1591,12 @@
           "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日ほぼ同等",
           "value": 1.17,
           "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "業種ETFは当日-1.42%で弱い。商い低調、確認できず。",
+      "comment": "業種ETFは当日-1.42%で弱い。商い低調、5日ほぼ同等。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
@@ -1605,7 +1605,7 @@
       "quality": "弱い",
       "volume_confirmation": "平常圏",
       "volume_ratio_20d": 1.12,
-      "persistence": "確認できず",
+      "persistence": "5日相対劣後",
       "return_5d_pct": 0.62,
       "axes": {
         "momentum": {
@@ -1619,12 +1619,12 @@
           "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対劣後",
           "value": 0.62,
           "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "業種ETFは当日-1.60%で弱い。平常圏、確認できず。",
+      "comment": "業種ETFは当日-1.60%で弱い。平常圏、5日相対劣後。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     },
     {
@@ -1633,7 +1633,7 @@
       "quality": "弱い",
       "volume_confirmation": "商い低調",
       "volume_ratio_20d": 0.64,
-      "persistence": "確認できず",
+      "persistence": "5日相対劣後",
       "return_5d_pct": -0.35,
       "axes": {
         "momentum": {
@@ -1647,12 +1647,12 @@
           "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"
         },
         "persistence": {
-          "label": "確認できず",
+          "label": "5日相対劣後",
           "value": -0.35,
           "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "業種ETFは当日-2.60%で弱い。商い低調、確認できず。",
+      "comment": "業種ETFは当日-2.60%で弱い。商い低調、5日相対劣後。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"
     }
   ],

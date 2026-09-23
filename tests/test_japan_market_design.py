@@ -71,14 +71,17 @@ class JapanMarketDesignTests(unittest.TestCase):
             if item.get("market_date") and item["market_date"] > data["market_date"]:
                 self.assertEqual("日本株現物に未反映", item["pricing_status"])
 
-    def test_v2_uses_impact_ranked_drivers_without_fixed_copper_gold_slots(self):
+    def test_v2_selects_drivers_with_transparent_factors_without_fixed_slots(self):
         data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))
         drivers = data["key_drivers"]
-        self.assertLessEqual(len(drivers), 4)
-        self.assertEqual(drivers, sorted(drivers, key=lambda item: item["impact_score"], reverse=True))
+        self.assertGreaterEqual(len(drivers), 3)
+        self.assertLessEqual(len(drivers), 5)
+        self.assertTrue(all(item.get("selection_factors") for item in drivers))
+        self.assertTrue(all(item.get("change_condition") for item in drivers))
+        self.assertTrue(all("impact_score" not in item for item in drivers))
         self.assertTrue(all(item.get("category") for item in drivers))
         source = (ROOT / "scripts" / "update_japan_market.py").read_text(encoding="utf-8")
-        self.assertIn('sorted(candidates, key=lambda item: item.get("impact_score", -1), reverse=True)[:4]', source)
+        self.assertIn("def selection_key(item):", source)
 
     def test_sector_quality_uses_only_sector_etf_three_axes(self):
         data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))
@@ -87,12 +90,14 @@ class JapanMarketDesignTests(unittest.TestCase):
             self.assertNotIn("combat_power", item)
             self.assertTrue(all(axis.get("rule") for axis in item["axes"].values()))
             self.assertNotIn("2銘柄", json.dumps(item, ensure_ascii=False))
+            self.assertIsInstance(item["relative_today_pct"], (int, float))
+            self.assertIn("TOPIX", item["axes"]["momentum"]["label"])
 
     def test_scenario_review_revises_view_instead_of_scoring_prediction(self):
         data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))
         review = data["scenario_review"]
         self.assertEqual("昨日のシナリオ検証 → 今日への修正", review["title"])
-        for key in ("previous_view", "market_result", "revision", "today_watch"):
+        for key in ("previous_condition", "condition_result", "market_reaction", "unexpected_gap", "gap_reason", "revision", "today_watch"):
             self.assertIn(key, review)
         self.assertNotIn("○×", json.dumps(review, ensure_ascii=False))
 

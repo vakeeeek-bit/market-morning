@@ -130,31 +130,39 @@ def build_market_regime(sector_rows, stock_rows, internals):
     }
 
 
-def driver_item(market, key, title, category, affected, evaluator, caveat=None, weight=1.0):
+def driver_item(market, key, title, category, affected, evaluator, caveat=None, market_reach=1, news_importance=1):
     row = market.get("markets", {}).get(key, {}) if isinstance(market, dict) else {}
     if row.get("status") != "取得成功" or not isinstance(row.get("change_pct"), (int, float)):
-        return {"driver": title, "category": category, "assessment": "確認できず", "status": "unavailable", "reason": "確認済みの同系列データがない", "affected_sectors": affected, "impact_score": -1}
+        return {"driver": title, "category": category, "assessment": "確認できず", "status": "unavailable", "reason": "確認済みの同系列データがない", "affected_sectors": affected}
     assessment, transmission = evaluator(row)
     reason = f"{row.get('name', title)} {row.get('price')}、前日比 {row['change_pct']:+.2f}%（{row.get('market_date', '日付不明')}）→ {transmission}"
     if caveat:
         reason += f"。{caveat}"
-    raw_move = abs(row.get("change_pct") or 0)
+    move = abs(row.get("change_pct") or 0)
     if key == "us10y":
-        raw_move = abs(row.get("change") or 0) * 20
-    return {"driver": title, "category": category, "assessment": assessment, "status": "observed", "market_value": row.get("price"), "change_pct": row.get("change_pct"), "transmission_path": transmission, "reason": reason, "affected_sectors": affected, "market_date": row.get("market_date"), "impact_score": round(raw_move * weight, 3)}
+        move = abs(row.get("change") or 0) * 20
+    move_level = 3 if move >= 1.5 else 2 if move >= 0.5 else 1
+    return {"driver": title, "category": category, "assessment": assessment, "status": "observed", "market_value": row.get("price"), "change_pct": row.get("change_pct"), "transmission_path": transmission, "reason": reason, "affected_sectors": affected, "market_date": row.get("market_date"), "selection_factors": {"日本株への波及範囲": market_reach, "影響業種数": len(affected), "ニュース重要度": news_importance, "値動き": move_level}}
 
 
 def build_key_drivers(market, japan_market_date):
     candidates = [
-        driver_item(market, "usdjpy", "ドル円", "為替", ["自動車・輸送機", "機械", "小売"], lambda row: ("外需に追い風／輸入コストに向かい風" if row["change_pct"] > 0.3 else "外需に向かい風／輸入コストに追い風" if row["change_pct"] < -0.3 else "中立", "輸出採算と輸入コストが変化"), weight=2.0),
-        driver_item(market, "us10y", "米10年金利", "金利", ["電機・精密", "情報通信・サービス", "銀行"], lambda row: ("高PER株に追い風" if row.get("change", 0) < -0.02 else "高PER株に向かい風" if row.get("change", 0) > 0.02 else "中立", "高PER株の割引率と銀行収益期待が変化"), weight=2.0),
-        driver_item(market, "sox", "米国半導体株", "海外株", ["電機・精密", "機械"], lambda row: ("追い風" if row["change_pct"] > 0.5 else "向かい風" if row["change_pct"] < -0.5 else "中立", "国内半導体関連の投資家心理に波及"), weight=1.5),
-        driver_item(market, "nasdaq100", "米国大型ハイテク株", "海外株", ["電機・精密", "情報通信・サービス"], lambda row: ("追い風" if row["change_pct"] > 0.5 else "向かい風" if row["change_pct"] < -0.5 else "中立", "国内グロース株の投資家心理に波及")),
-        driver_item(market, "wti", "原油", "商品", ["エネルギー資源", "運輸・物流", "素材・化学"], lambda row: ("運輸に追い風／資源に向かい風" if row["change_pct"] < -0.5 else "資源に追い風／運輸に向かい風" if row["change_pct"] > 0.5 else "中立", "資源収益と燃料コストが変化"), "継続先物のため限月付き清算値としては扱いません"),
+        driver_item(market, "usdjpy", "ドル円", "為替", ["自動車・輸送機", "機械", "小売"], lambda row: ("外需に追い風／輸入コストに向かい風" if row["change_pct"] > 0.3 else "外需に向かい風／輸入コストに追い風" if row["change_pct"] < -0.3 else "中立", "輸出採算と輸入コストが変化"), market_reach=3, news_importance=3),
+        driver_item(market, "us10y", "米10年金利", "金利", ["電機・精密", "情報通信・サービス", "銀行"], lambda row: ("高PER株に追い風" if row.get("change", 0) < -0.02 else "高PER株に向かい風" if row.get("change", 0) > 0.02 else "中立", "高PER株の割引率と銀行収益期待が変化"), market_reach=3, news_importance=3),
+        driver_item(market, "sox", "米国半導体株", "海外株", ["電機・精密", "機械"], lambda row: ("追い風" if row["change_pct"] > 0.5 else "向かい風" if row["change_pct"] < -0.5 else "中立", "国内半導体関連の投資家心理に波及"), market_reach=3, news_importance=3),
+        driver_item(market, "nasdaq100", "米国大型ハイテク株", "海外株", ["電機・精密", "情報通信・サービス"], lambda row: ("追い風" if row["change_pct"] > 0.5 else "向かい風" if row["change_pct"] < -0.5 else "中立", "国内グロース株の投資家心理に波及"), market_reach=2, news_importance=2),
+        driver_item(market, "wti", "原油", "商品", ["エネルギー資源", "運輸・物流", "素材・化学"], lambda row: ("運輸に追い風／資源に向かい風" if row["change_pct"] < -0.5 else "資源に追い風／運輸に向かい風" if row["change_pct"] > 0.5 else "中立", "資源収益と燃料コストが変化"), "継続先物のため限月付き清算値としては扱いません", market_reach=2, news_importance=2),
         driver_item(market, "gold", "金", "商品", ["鉄鋼・非鉄", "商社・卸売"], lambda row: ("関連株に追い風候補" if row["change_pct"] > 0.7 else "関連株に向かい風候補" if row["change_pct"] < -0.7 else "影響限定", "貴金属関連の収益期待が変化")),
         driver_item(market, "copper", "銅", "商品", ["鉄鋼・非鉄", "機械", "商社・卸売"], lambda row: ("関連株に追い風候補" if row["change_pct"] > 0.7 else "関連株に向かい風候補" if row["change_pct"] < -0.7 else "影響限定", "非鉄・設備投資関連の収益期待が変化"), "継続先物だけで中国実需を断定しません"),
     ]
-    drivers = sorted(candidates, key=lambda item: item.get("impact_score", -1), reverse=True)[:4]
+    # 不透明な合算点は作らず、未反映 → 波及範囲 → ニュース重要度 → 値動きの順で選ぶ。
+    for item in candidates:
+        item["pricing_status"] = "日本株現物に未反映" if item.get("market_date") and japan_market_date and item["market_date"] > japan_market_date else "同日または既反映の参考値"
+        item["selection_factors"] = {"日本株現物への織り込み": item["pricing_status"], **item.get("selection_factors", {})}
+    def selection_key(item):
+        factors = item.get("selection_factors", {})
+        return (item.get("status") == "observed", item.get("pricing_status") == "日本株現物に未反映", factors.get("日本株への波及範囲", 0), factors.get("ニュース重要度", 0), factors.get("値動き", 0))
+    drivers = sorted(candidates, key=selection_key, reverse=True)[:4]
     change_conditions = {
         "ドル円": "為替が反転し、自動車・機械の相対方向も変われば見方を修正する",
         "米10年金利": "金利の方向が反転し、電機・精密や銀行の反応も変われば見方を修正する",
@@ -166,11 +174,8 @@ def build_key_drivers(market, japan_market_date):
     }
     for item in drivers:
         item["change_condition"] = change_conditions[item["driver"]]
-        if item.get("market_date") and japan_market_date and item["market_date"] > japan_market_date:
-            item["pricing_status"] = "日本株現物に未反映"
+        if item.get("pricing_status") == "日本株現物に未反映":
             item["reason"] += f"。日本株現物の基準日{japan_market_date}より新しく、次回取引の監視材料"
-        else:
-            item["pricing_status"] = "同日または既反映の参考値"
     return drivers
 
 
@@ -186,16 +191,19 @@ def build_sector_quality(sector_rows, stock_rows, topix):
     topix_5d = topix.get("return_5d_pct") if topix else None
     for sector in sector_rows:
         volume_ratio = sector.get("volume_ratio_20d")
-        volume_label = "出来高増" if isinstance(volume_ratio, (int, float)) and volume_ratio >= 1.2 else "商い低調" if isinstance(volume_ratio, (int, float)) and volume_ratio <= 0.8 else "平常圏" if volume_ratio is not None else "確認できず"
+        volume_label = f"出来高：普段の{volume_ratio:.2f}倍" if isinstance(volume_ratio, (int, float)) else "出来高：確認できず"
         return_5d = sector.get("return_5d_pct")
+        relative_today = round(sector.get("change_pct") - topix.get("change_pct"), 2) if isinstance(sector.get("change_pct"), (int, float)) and topix and isinstance(topix.get("change_pct"), (int, float)) else None
+        relative_5d = None
         persistence = "確認できず"
         if isinstance(return_5d, (int, float)) and isinstance(topix_5d, (int, float)):
             relative_5d = round(return_5d - topix_5d, 2)
-            persistence = "5日相対優位" if relative_5d >= 0.5 else "5日相対劣後" if relative_5d <= -0.5 else "5日ほぼ同等"
-        quality = "強い" if sector.get("change_pct", 0) >= 0.7 else "弱い" if sector.get("change_pct", 0) <= -0.7 else "小動き"
-        momentum = "強い" if sector.get("change_pct", 0) >= 0.7 else "弱い" if sector.get("change_pct", 0) <= -0.7 else "中立"
-        output.append({"sector": sector.get("name"), "change_pct": sector.get("change_pct"), "quality": quality, "volume_confirmation": volume_label, "volume_ratio_20d": volume_ratio, "persistence": persistence, "return_5d_pct": return_5d, "axes": {"momentum": {"label": momentum, "value": sector.get("change_pct"), "rule": "業種ETFの当日騰落が+0.7%以上で強い、-0.7%以下で弱い"}, "activity": {"label": volume_label, "value": volume_ratio, "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"}, "persistence": {"label": persistence, "value": return_5d, "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"}}, "comment": f"業種ETFは当日{sector.get('change_pct', 0):+.2f}%で{momentum}。{volume_label}、{persistence}。", "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"})
-    return sorted(output, key=lambda row: row.get("change_pct") if row.get("change_pct") is not None else -999, reverse=True)
+            persistence = "直近5日：TOPIXより強い" if relative_5d >= 0.5 else "直近5日：TOPIXより弱い" if relative_5d <= -0.5 else "直近5日：TOPIXと同程度"
+        quality = "強い" if relative_today is not None and relative_today >= 0.5 else "弱い" if relative_today is not None and relative_today <= -0.5 else "市場並み"
+        momentum = f"TOPIXより{abs(relative_today):.2f}pt強い" if relative_today is not None and relative_today > 0 else f"TOPIXより{abs(relative_today):.2f}pt弱い" if relative_today is not None and relative_today < 0 else "TOPIX並み"
+        attention = bool((relative_today is not None and abs(relative_today) >= 1.5) or (isinstance(volume_ratio, (int, float)) and volume_ratio >= 2.0))
+        output.append({"sector": sector.get("name"), "change_pct": sector.get("change_pct"), "relative_today_pct": relative_today, "quality": quality, "attention": attention, "volume_confirmation": volume_label, "volume_ratio_20d": volume_ratio, "persistence": persistence, "return_5d_pct": return_5d, "relative_5d_pct": relative_5d, "axes": {"momentum": {"label": momentum, "value": relative_today, "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"}, "activity": {"label": volume_label, "value": volume_ratio, "rule": "業種ETFの出来高を直近20日平均と比較"}, "persistence": {"label": persistence, "value": relative_5d, "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"}}, "comment": f"当日{sector.get('change_pct', 0):+.2f}%（TOPIX比{relative_today:+.2f}pt）。{volume_label}。{persistence}。" if relative_today is not None else f"当日{sector.get('change_pct', 0):+.2f}%。TOPIX比は確認できません。", "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"})
+    return sorted(output, key=lambda row: row.get("relative_today_pct") if row.get("relative_today_pct") is not None else -999, reverse=True)
 
 
 def dominant_market_date(rows):
@@ -263,8 +271,11 @@ def scenario_review(report, sector_rows, market_date, ready=True, blocked_reason
         "basis": "前回レポートの注目業種をTOPIX-17業種ETFの実績と照合し、次の取引日へ見方を修正",
         "status": "検証可能" if checks else "対象なし",
         "checks": checks,
-        "previous_view": " / ".join(focus) if focus else "前回レポートに注目業種なし",
-        "market_result": " / ".join(f"{row['name']} {row['change_pct']:+.2f}%" for row in ranked[:3]) if ranked else "確認できず",
+        "previous_condition": " / ".join(report.get("japan_quick_view", {}).get("unpriced_materials", [])) if isinstance(report, dict) and report.get("japan_quick_view", {}).get("unpriced_materials") else "前回レポートに明示された条件なし",
+        "condition_result": "発生条件を自動判定できる一次データがないため、確認できず",
+        "market_reaction": " / ".join(f"{row['name']} {row['change_pct']:+.2f}%" for row in ranked[:3]) if ranked else "確認できず",
+        "unexpected_gap": " / ".join(f"{item['sector']}は{item['result']}" for item in checks) if checks else "比較対象なし",
+        "gap_reason": "業種ETFの結果だけでは個別ニュースとの因果を分離できないため、理由は断定しません",
         "revision": "注目業種の相対順位を踏まえて強弱判断を更新" if checks else "修正対象なし",
         "today_watch": report.get("japan_quick_view", {}).get("unpriced_materials", []) if isinstance(report, dict) else [],
         "note": "予想の○×採点ではありません。前回の見方と実績の差から、今日の監視点を修正します。",
@@ -273,19 +284,33 @@ def scenario_review(report, sector_rows, market_date, ready=True, blocked_reason
         result["status"] = "休場・検証保留"
         result["checks"] = []
         result["note"] = "東証現物は休場です。前営業日の実績は保持し、次の取引日に見方を修正します。"
-        result["market_result"] = "休場のため新しい現物株の結果はありません"
+        result["market_reaction"] = "休場のため新しい現物株の結果はありません"
         result["revision"] = "先物・海外材料は監視し、現物株の判断は次の取引日まで保留"
     elif blocked_reason:
         result["status"] = "判定保留"
         result["checks"] = []
         result["note"] = blocked_reason
-        result["market_result"] = "日付不一致のため比較しません"
+        result["market_reaction"] = "日付不一致のため比較しません"
         result["revision"] = "データ整合後に再検証"
     elif not ready:
         result["status"] = "大引け待ち"
         result["checks"] = []
         result["note"] = "取引中のため検証しません。大引け後の更新で前回の見方を再点検します"
     return result
+
+
+def build_morning_summary(regime, drivers, sector_quality):
+    observed = [item for item in drivers if item.get("status") == "observed"]
+    tailwinds = [f"{item['driver']}：{item['assessment']}" for item in observed if "追い風" in item.get("assessment", "")][:2]
+    headwinds = [f"{item['driver']}：{item['assessment']}" for item in observed if "向かい風" in item.get("assessment", "")][:2]
+    focus = [row["sector"] for row in sector_quality if row.get("quality") == "強い"][:3]
+    return {
+        "stance": regime.get("headline", "確認できず"),
+        "reason": regime.get("headline_reason", "主要指数のデータを確認できません"),
+        "tailwinds": tailwinds or ["明確な追い風は確認できず"],
+        "headwinds": headwinds or ["明確な向かい風は確認できず"],
+        "focus_sectors": focus or ["TOPIX比で明確に強い業種は確認できず"],
+    }
 
 
 def enrich_investor_view(result, market, report):
@@ -298,11 +323,18 @@ def enrich_investor_view(result, market, report):
     result["rotation_read"] = build_rotation(sector_rows, internals)
     benchmark_rows = result.get("benchmark_rows", [])
     topix_benchmark = next((row for row in benchmark_rows if row.get("ticker") == "1306.T"), topix)
+    if topix_benchmark is None and isinstance(internals.get("topix_proxy_change_pct"), (int, float)):
+        topix_benchmark = {"change_pct": internals["topix_proxy_change_pct"], "return_5d_pct": None}
     result["sector_quality"] = build_sector_quality(sector_rows, stock_rows, topix_benchmark)
-    result["monitoring_points"] = [
-        {"watch": item["driver"], "current_view": item["assessment"], "change_condition": item.get("change_condition", "確認できず"), "pricing_status": item.get("pricing_status", "確認できず")}
-        for item in result["key_drivers"] if item.get("status") == "observed"
-    ][:5]
+    result["morning_summary"] = build_morning_summary(result["market_regime"], result["key_drivers"], result["sector_quality"])
+    current_review = result.get("scenario_review", {})
+    result["scenario_review"] = scenario_review(
+        report, sector_rows, result.get("market_date"),
+        ready=current_review.get("status") != "大引け待ち",
+        blocked_reason=current_review.get("note") if current_review.get("status") == "判定保留" else None,
+        holiday=result.get("data_state", {}).get("kind") == "holiday",
+    )
+    result.pop("monitoring_points", None)
     result["methodology"] = {
         "tier_1_existing_data": ["今日の市場観", "主要材料", "外需と内需の比較", "業種ETFのセクター3軸評価", "昨日のシナリオ検証と今日への修正"],
         "tier_2_light_fetch": ["Growth/Value指数", "小型株指数", "半導体専用指数・ETF"],

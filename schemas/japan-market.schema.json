@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "required": ["updated_at", "market_date", "data_phase", "data_state", "source", "scope", "sector_ranking", "sector_stock_ranking", "trading_value_ranking", "volume_surge_ranking", "market_internals", "market_regime", "key_drivers", "rotation_read", "sector_quality", "scenario_review", "monitoring_points", "methodology", "data_quality"],
+  "required": ["updated_at", "market_date", "data_phase", "data_state", "source", "scope", "sector_ranking", "sector_stock_ranking", "trading_value_ranking", "volume_surge_ranking", "market_internals", "market_regime", "morning_summary", "key_drivers", "rotation_read", "sector_quality", "scenario_review", "methodology", "data_quality"],
   "properties": {
     "updated_at": {"type": ["string", "null"]},
     "market_date": {"type": ["string", "null"]},
@@ -24,7 +24,8 @@
         "method_note": {"type": "string"}
       }
     },
-    "key_drivers": {"type": "array", "minItems": 1, "maxItems": 4, "items": {"type": "object", "required": ["driver", "category", "assessment", "status", "reason", "affected_sectors", "impact_score"]}},
+    "morning_summary": {"type": "object", "required": ["stance", "reason", "tailwinds", "headwinds", "focus_sectors"]},
+    "key_drivers": {"type": "array", "minItems": 3, "maxItems": 5, "items": {"type": "object", "required": ["driver", "category", "assessment", "status", "reason", "affected_sectors", "selection_factors", "pricing_status", "change_condition"]}},
     "rotation_read": {
       "type": "object",
       "required": ["label", "items", "note"],
@@ -34,9 +35,8 @@
         "note": {"type": "string"}
       }
     },
-    "sector_quality": {"type": "array", "items": {"type": "object", "required": ["sector", "change_pct", "quality", "axes", "comment", "coverage_note"], "properties": {"axes": {"type": "object", "required": ["momentum", "activity", "persistence"], "not": {"required": ["breadth"]}}}}},
-    "scenario_review": {"type": "object", "required": ["title", "status", "previous_view", "market_result", "revision", "today_watch", "note"]},
-    "monitoring_points": {"type": "array", "items": {"type": "object", "required": ["watch", "current_view", "change_condition", "pricing_status"]}},
+    "sector_quality": {"type": "array", "items": {"type": "object", "required": ["sector", "change_pct", "relative_today_pct", "quality", "attention", "axes", "comment", "coverage_note"], "properties": {"axes": {"type": "object", "required": ["momentum", "activity", "persistence"], "not": {"required": ["breadth"]}}}}},
+    "scenario_review": {"type": "object", "required": ["title", "status", "previous_condition", "condition_result", "market_reaction", "unexpected_gap", "gap_reason", "revision", "today_watch", "note"]},
     "methodology": {
       "type": "object",
       "required": ["tier_1_existing_data", "tier_2_light_fetch", "tier_3_new_api_or_ai", "implemented_tier"],

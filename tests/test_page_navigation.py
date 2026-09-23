@@ -44,7 +44,7 @@ class PageNavigationTests(unittest.TestCase):
         japan = self.read("japan-stocks.html")
         self.assertNotIn('id="japan-equities-preview"', world)
         self.assertNotIn('id="japan-equities-section"', world)
-        self.assertIn('id="top-materials"', japan)
+        self.assertIn('id="morning-summary"', japan)
         self.assertIn('id="story-sections"', japan)
 
     def test_reader_facing_headings_are_localized(self):
@@ -54,7 +54,7 @@ class PageNavigationTests(unittest.TestCase):
         self.assertIn("市場概況", world)
         self.assertIn("市場横断分析", world)
         self.assertNotIn(">QUICK VIEW<", japan)
-        self.assertIn("朝3分の要点", japan)
+        self.assertIn("朝3分で分かる今日の日本株", japan)
 
     def test_copper_chart_identifies_instrument_and_unit(self):
         world = self.read("index.html")
@@ -74,16 +74,16 @@ class PageNavigationTests(unittest.TestCase):
         for element_id in (
             "market-ranking-section", "stock-ranking-section", "liquidity-section",
             "scenario-review-section", "regime-section",
-            "driver-section", "rotation-section", "sector-quality-section", "monitoring-section"
+            "driver-section", "rotation-section", "sector-quality-section"
         ):
             self.assertIn(f'id="{element_id}"', japan)
         self.assertIn("全構成銘柄の順位ではありません", japan)
         self.assertIn("終値×出来高の概算値", japan)
         self.assertIn("どちらが強い？", japan)
-        self.assertLess(japan.index('id="regime-section"'), japan.index('id="quick-view"'))
+        self.assertNotIn('id="quick-view"', japan)
         self.assertIn("実測値と推定評価を分けて表示", japan)
-        self.assertIn("昨日までの見方", japan)
-        self.assertIn("今日の監視材料", japan)
+        self.assertIn("昨日考えていた条件", japan)
+        self.assertIn("今日の確認点", japan)
         self.assertIn("data/glossary.json", japan)
         self.assertIn("市場データ表示には影響しません", japan)
 

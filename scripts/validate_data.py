@@ -304,19 +304,20 @@ def validate_japan_investor_view(data: dict[str, dict], result: ValidationResult
             result.error(f"japan-market.key_drivers[{index}]: 日本株市場日より新しい材料は未反映と明示してください")
     drivers = japan_market.get("key_drivers", [])
     names = {item.get("driver") for item in drivers if isinstance(item, dict)}
-    if 1 <= len(drivers) <= 4 and not ({"銅", "金"} <= names):
-        result.ok("日本株主要材料は影響度順・最大4件（銅・金の固定枠なし）")
+    if 3 <= len(drivers) <= 5 and not ({"銅", "金"} <= names) and all("selection_factors" in item and "change_condition" in item for item in drivers):
+        result.ok("日本株主要材料は波及範囲・重要度・値動き・織り込みを明示して3〜5件選定")
     else:
         result.error("japan-market.key_drivers: 影響度順で最大4件とし、銅・金を同時に固定表示しないでください")
 
     qualities = japan_market.get("sector_quality", [])
-    if qualities and all(set((item.get("axes") or {}).keys()) == {"momentum", "activity", "persistence"} for item in qualities):
-        result.ok("セクター3軸評価（業種ETFの勢い・商い・継続力）")
+    if qualities and all(set((item.get("axes") or {}).keys()) == {"momentum", "activity", "persistence"} and isinstance(item.get("relative_today_pct"), (int, float)) for item in qualities):
+        result.ok("セクター3軸評価（TOPIX比・出来高・5日比較）")
     else:
         result.error("japan-market.sector_quality: 監視2銘柄ベースの広がりを除き、業種ETFの3軸だけで評価してください")
 
     review = japan_market.get("scenario_review", {})
-    if "○×" in str(review) or review.get("title") != "昨日のシナリオ検証 → 今日への修正":
+    review_fields = {"previous_condition", "condition_result", "market_reaction", "unexpected_gap", "gap_reason", "revision"}
+    if "○×" in str(review) or review.get("title") != "昨日のシナリオ検証 → 今日への修正" or not review_fields <= set(review):
         result.error("japan-market.scenario_review: 予想採点ではなく今日への修正として表示してください")
     else:
         result.ok("昨日のシナリオ検証から今日への修正")

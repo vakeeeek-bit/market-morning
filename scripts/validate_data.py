@@ -279,24 +279,22 @@ def validate_market_context(data: dict[str, dict], result: ValidationResult) -> 
 
 def validate_japan_investor_view(data: dict[str, dict], result: ValidationResult) -> None:
     japan_market = data["japan-market"]
-    dimensions = japan_market.get("market_regime", {}).get("dimensions", [])
-    by_axis = {item.get("axis"): item for item in dimensions if isinstance(item, dict)}
-    for axis in ("成長株と割安株", "大型株と小型株", "国内半導体"):
-        item = by_axis.get(axis)
-        if not item or item.get("status") != "unavailable":
-            result.error(f"japan-market.market_regime: {axis}は現行データでは判定対象外であることを明示してください")
-    if by_axis.get("上昇・下落の広がり", {}).get("status") != "observed":
-        result.error("japan-market.market_regime: 上昇・下落の広がりは実測として区別してください")
+    market_view = japan_market.get("market_regime", {})
+    serialized_view = json.dumps(market_view, ensure_ascii=False)
+    if any(term in serialized_view for term in ("Breadth", "上昇・下落の広がり", "主要監視34銘柄の内訳")):
+        result.error("japan-market.market_regime: 34銘柄を市場全体の広がり評価に使用しないでください")
+    elif len(market_view.get("scoreboard", [])) != 2:
+        result.error("japan-market.market_regime: 冒頭は日経平均とTOPIXの2指標に限定してください")
     else:
-        result.ok("日本株レジームの実測・推定・判定対象外の区別")
+        result.ok("今日の市場観は主要2指数に限定（34銘柄Breadthなし）")
 
     rotation = japan_market.get("rotation_read", {})
-    if rotation.get("label") != "値動きから見たローテーション（推定）":
-        result.error("japan-market.rotation_read: 実フローと誤認しない名称が必要です")
+    if rotation.get("label") != "どちらが強い？":
+        result.error("japan-market.rotation_read: 一般読者に分かる名称が必要です")
     elif "投資主体別" not in str(rotation.get("note", "")):
         result.error("japan-market.rotation_read: 投資主体別売買ではない旨が必要です")
     else:
-        result.ok("ローテーション推定の明示")
+        result.ok("比較結果と推定範囲の明示")
 
     japan_date = parse_iso_date(japan_market.get("market_date"), "japan-market.market_date", result)
     for index, driver in enumerate(japan_market.get("key_drivers", [])):
@@ -312,10 +310,10 @@ def validate_japan_investor_view(data: dict[str, dict], result: ValidationResult
         result.error("japan-market.key_drivers: 影響度順で最大4件とし、銅・金を同時に固定表示しないでください")
 
     qualities = japan_market.get("sector_quality", [])
-    if qualities and all(set((item.get("axes") or {}).keys()) == {"momentum", "breadth", "activity", "persistence"} for item in qualities):
-        result.ok("セクター4軸評価（勢い・広がり・商い・継続力）")
+    if qualities and all(set((item.get("axes") or {}).keys()) == {"momentum", "activity", "persistence"} for item in qualities):
+        result.ok("セクター3軸評価（業種ETFの勢い・商い・継続力）")
     else:
-        result.error("japan-market.sector_quality: 4軸評価が不足しています")
+        result.error("japan-market.sector_quality: 監視2銘柄ベースの広がりを除き、業種ETFの3軸だけで評価してください")
 
     review = japan_market.get("scenario_review", {})
     if "○×" in str(review) or review.get("title") != "昨日のシナリオ検証 → 今日への修正":

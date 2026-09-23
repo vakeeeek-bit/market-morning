@@ -22,8 +22,6 @@ HISTORY_ROOT = ROOT / "data" / "history"
 
 EXTERNAL_SECTORS = {"自動車・輸送機", "鉄鋼・非鉄", "機械", "電機・精密", "商社・卸売"}
 DOMESTIC_SECTORS = {"食品", "建設・資材", "医薬品", "情報通信・サービス", "電力・ガス", "運輸・物流", "小売", "銀行", "金融（銀行除く）", "不動産"}
-CYCLICAL_SECTORS = {"エネルギー資源", "建設・資材", "素材・化学", "自動車・輸送機", "鉄鋼・非鉄", "機械", "電機・精密", "運輸・物流", "商社・卸売", "銀行", "金融（銀行除く）", "不動産"}
-DEFENSIVE_SECTORS = {"食品", "医薬品", "情報通信・サービス", "電力・ガス", "小売"}
 
 
 def finite(value):
@@ -101,51 +99,34 @@ def comparison_axis(name, left_label, right_label, left_value, right_value, cove
 
 
 def build_market_regime(sector_rows, stock_rows, internals):
-    external = average_change(sector_rows, EXTERNAL_SECTORS)
-    domestic = average_change(sector_rows, DOMESTIC_SECTORS)
-    cyclical = average_change(sector_rows, CYCLICAL_SECTORS)
-    defensive = average_change(sector_rows, DEFENSIVE_SECTORS)
-    breadth = internals.get("breadth_pct")
     nikkei = internals.get("nikkei_proxy_change_pct")
     topix = internals.get("topix_proxy_change_pct")
-    dimensions = [
-        {"axis": "成長株と割安株", "label": "判定対象外", "status": "unavailable", "reason": "同じ基準で比較できる成長株・割安株指数がないため"},
-        {"axis": "大型株と小型株", "label": "判定対象外", "status": "unavailable", "reason": "小型株指数を取得しておらず、日経平均とTOPIXの差を規模差と断定できないため"},
-        comparison_axis("外需と内需", "外需", "内需", external, domestic, "固定17業種ETFのうち外需5・内需10業種の代理比較"),
-        comparison_axis("景気敏感とディフェンシブ", "景気敏感", "ディフェンシブ", cyclical, defensive, "固定17業種ETFのうち景気敏感12・ディフェンシブ5業種の代理比較"),
-    ]
-    financial = average_change(sector_rows, {"銀行", "金融（銀行除く）"})
-    dimensions.extend([
-        {"axis": "国内半導体", "label": "判定対象外", "status": "unavailable", "reason": "電機・精密ETFを半導体だけの値動きとして扱えないため。米国半導体は主要材料欄で確認"},
-        {"axis": "金融", "label": "強い" if financial is not None and financial >= 0.3 else "弱い" if financial is not None and financial <= -0.3 else "中立", "status": "observed" if financial is not None else "unavailable", "reason": f"銀行・金融（銀行除く）ETFの平均騰落 {financial:+.2f}%" if financial is not None else "同日データ不足"},
-        {"axis": "上昇・下落の広がり", "label": "広い上昇" if breadth is not None and breadth >= 20 else "広い下落" if breadth is not None and breadth <= -20 else "まちまち", "status": "observed" if breadth is not None else "unavailable", "value": breadth, "reason": f"主要監視34銘柄の値上がり{internals.get('advancing', 0)}・値下がり{internals.get('declining', 0)}、広がり指数 {breadth:+.1f}" if breadth is not None else "同日データ不足"},
-    ])
-    divergence = bool(nikkei is not None and topix is not None and breadth is not None and nikkei > 0 and (topix < 0 or breadth < -20))
-    if divergence:
-        posture = "指数主導の選別相場"
-        posture_reason = f"日経225連動ETF {nikkei:+.2f}%に対しTOPIX連動ETF {topix:+.2f}%、Breadth {breadth:+.1f}"
-    elif breadth is not None and breadth >= 20 and cyclical is not None and defensive is not None and cyclical > defensive:
-        posture = "リスクオン寄り"
-        posture_reason = "値上がりの広がりと景気敏感優位が同時に確認されたため"
-    elif breadth is not None and breadth <= -20:
-        posture = "リスクオフ寄り"
-        posture_reason = "主要監視銘柄で値下がりが広がっているため"
+    divergence = bool(nikkei is not None and topix is not None and nikkei * topix < 0)
+    if nikkei is None or topix is None:
+        posture = "確認できず"
+        posture_reason = "日経平均またはTOPIXの同日データが不足しています"
+    elif divergence:
+        posture = "指数ごとに強弱が分かれる相場"
+        posture_reason = f"日経平均 {nikkei:+.2f}%に対しTOPIX {topix:+.2f}%"
+    elif nikkei >= 0.3 and topix >= 0.3:
+        posture = "主要指数がそろって上昇"
+        posture_reason = f"日経平均 {nikkei:+.2f}%、TOPIX {topix:+.2f}%"
+    elif nikkei <= -0.3 and topix <= -0.3:
+        posture = "主要指数がそろって下落"
+        posture_reason = f"日経平均 {nikkei:+.2f}%、TOPIX {topix:+.2f}%"
     else:
-        posture = "中立・方向感限定"
-        posture_reason = "Breadthと業種間比較に明確な同方向シグナルがないため"
-    dimensions.append({"axis": "市場全体の姿勢", "label": posture, "status": "estimated", "reason": posture_reason})
+        posture = "方向感は限定的"
+        posture_reason = f"日経平均 {nikkei:+.2f}%、TOPIX {topix:+.2f}%で値動きが小幅です"
     return {
         "headline": posture,
         "headline_reason": posture_reason,
         "scoreboard": [
             {"label": "日経平均", "value": nikkei, "unit": "%", "meaning": "プラスなら日経平均型が上昇"},
             {"label": "TOPIX", "value": topix, "unit": "%", "meaning": "市場全体の方向"},
-            {"label": "上昇・下落の広がり", "value": breadth, "unit": "", "meaning": "プラスほど上昇銘柄が多い"},
-            {"label": "値上がり／値下がり", "value": f"{internals.get('advancing', 0)}／{internals.get('declining', 0)}", "unit": "銘柄", "meaning": "主要監視34銘柄の内訳"},
         ],
         "divergence_alert": f"指数と市場内部が乖離：{posture_reason}" if divergence else None,
-        "dimensions": dimensions,
-        "method_note": "実測は固定17業種ETF・主要監視34銘柄。分類軸とリスク姿勢は値動きからの推定で、投資主体別フローではありません。",
+        "dimensions": [],
+        "method_note": "市場観は日経平均・TOPIX連動ETFの同日騰落だけで判定します。34銘柄を市場全体の広がりには使用しません。",
     }
 
 
@@ -165,13 +146,13 @@ def driver_item(market, key, title, category, affected, evaluator, caveat=None, 
 
 def build_key_drivers(market, japan_market_date):
     candidates = [
-        driver_item(market, "usdjpy", "ドル円", "為替", ["自動車・輸送機", "機械", "小売"], lambda row: ("外需に追い風／輸入コストに向かい風" if row["change_pct"] > 0.3 else "外需に向かい風／輸入コストに追い風" if row["change_pct"] < -0.3 else "中立", "円安・円高 → 輸出採算と輸入コスト"), weight=2.0),
-        driver_item(market, "us10y", "米10年金利", "金利", ["電機・精密", "情報通信・サービス", "銀行"], lambda row: ("高PER株に追い風" if row.get("change", 0) < -0.02 else "高PER株に向かい風" if row.get("change", 0) > 0.02 else "中立", "米金利 → 株式の割引率と銀行収益期待"), weight=2.0),
-        driver_item(market, "sox", "米国半導体株", "海外株", ["電機・精密", "機械"], lambda row: ("追い風" if row["change_pct"] > 0.5 else "向かい風" if row["change_pct"] < -0.5 else "中立", "米半導体株 → 国内半導体関連の初期センチメント"), weight=1.5),
-        driver_item(market, "nasdaq100", "米国大型ハイテク株", "海外株", ["電機・精密", "情報通信・サービス"], lambda row: ("追い風" if row["change_pct"] > 0.5 else "向かい風" if row["change_pct"] < -0.5 else "中立", "米国ハイテク株 → 国内グロース株の投資家心理")),
-        driver_item(market, "wti", "原油", "商品", ["エネルギー資源", "運輸・物流", "素材・化学"], lambda row: ("運輸に追い風／資源に向かい風" if row["change_pct"] < -0.5 else "資源に追い風／運輸に向かい風" if row["change_pct"] > 0.5 else "中立", "原油価格 → 資源収益と燃料コスト"), "継続先物のため限月付き清算値としては扱いません"),
-        driver_item(market, "gold", "金", "商品", ["鉄鋼・非鉄", "商社・卸売"], lambda row: ("関連株に追い風候補" if row["change_pct"] > 0.7 else "関連株に向かい風候補" if row["change_pct"] < -0.7 else "影響限定", "金価格 → 貴金属関連の収益期待")),
-        driver_item(market, "copper", "銅", "商品", ["鉄鋼・非鉄", "機械", "商社・卸売"], lambda row: ("関連株に追い風候補" if row["change_pct"] > 0.7 else "関連株に向かい風候補" if row["change_pct"] < -0.7 else "影響限定", "銅価格 → 非鉄・設備投資関連の収益期待"), "継続先物だけで中国実需を断定しません"),
+        driver_item(market, "usdjpy", "ドル円", "為替", ["自動車・輸送機", "機械", "小売"], lambda row: ("外需に追い風／輸入コストに向かい風" if row["change_pct"] > 0.3 else "外需に向かい風／輸入コストに追い風" if row["change_pct"] < -0.3 else "中立", "輸出採算と輸入コストが変化"), weight=2.0),
+        driver_item(market, "us10y", "米10年金利", "金利", ["電機・精密", "情報通信・サービス", "銀行"], lambda row: ("高PER株に追い風" if row.get("change", 0) < -0.02 else "高PER株に向かい風" if row.get("change", 0) > 0.02 else "中立", "高PER株の割引率と銀行収益期待が変化"), weight=2.0),
+        driver_item(market, "sox", "米国半導体株", "海外株", ["電機・精密", "機械"], lambda row: ("追い風" if row["change_pct"] > 0.5 else "向かい風" if row["change_pct"] < -0.5 else "中立", "国内半導体関連の投資家心理に波及"), weight=1.5),
+        driver_item(market, "nasdaq100", "米国大型ハイテク株", "海外株", ["電機・精密", "情報通信・サービス"], lambda row: ("追い風" if row["change_pct"] > 0.5 else "向かい風" if row["change_pct"] < -0.5 else "中立", "国内グロース株の投資家心理に波及")),
+        driver_item(market, "wti", "原油", "商品", ["エネルギー資源", "運輸・物流", "素材・化学"], lambda row: ("運輸に追い風／資源に向かい風" if row["change_pct"] < -0.5 else "資源に追い風／運輸に向かい風" if row["change_pct"] > 0.5 else "中立", "資源収益と燃料コストが変化"), "継続先物のため限月付き清算値としては扱いません"),
+        driver_item(market, "gold", "金", "商品", ["鉄鋼・非鉄", "商社・卸売"], lambda row: ("関連株に追い風候補" if row["change_pct"] > 0.7 else "関連株に向かい風候補" if row["change_pct"] < -0.7 else "影響限定", "貴金属関連の収益期待が変化")),
+        driver_item(market, "copper", "銅", "商品", ["鉄鋼・非鉄", "機械", "商社・卸売"], lambda row: ("関連株に追い風候補" if row["change_pct"] > 0.7 else "関連株に向かい風候補" if row["change_pct"] < -0.7 else "影響限定", "非鉄・設備投資関連の収益期待が変化"), "継続先物だけで中国実需を断定しません"),
     ]
     drivers = sorted(candidates, key=lambda item: item.get("impact_score", -1), reverse=True)[:4]
     change_conditions = {
@@ -196,21 +177,14 @@ def build_key_drivers(market, japan_market_date):
 def build_rotation(sector_rows, internals):
     pairs = [
         comparison_axis("外需と内需", "外需", "内需", average_change(sector_rows, EXTERNAL_SECTORS), average_change(sector_rows, DOMESTIC_SECTORS), "固定セクターETFの相対騰落"),
-        comparison_axis("景気敏感とディフェンシブ", "景気敏感", "ディフェンシブ", average_change(sector_rows, CYCLICAL_SECTORS), average_change(sector_rows, DEFENSIVE_SECTORS), "固定セクターETFの相対騰落"),
     ]
-    nikkei, topix = internals.get("nikkei_proxy_change_pct"), internals.get("topix_proxy_change_pct")
-    pairs.append(comparison_axis("日経平均とTOPIX", "日経平均", "TOPIX", nikkei, topix, "指数連動ETFの相対騰落（大型株・小型株の代理ではない）", threshold=0.2))
-    pairs.append({"axis": "成長株と割安株", "label": "判定対象外", "status": "unavailable", "reason": "同じ基準のスタイル指数がないため"})
-    return {"label": "値動きから見たローテーション（推定）", "items": pairs, "note": "投資主体別売買を取得していないため『資金流入』とは表現しません。"}
+    return {"label": "どちらが強い？", "items": pairs, "note": "17業種ETFを外需型・内需型に分けた相対騰落です。投資主体別の資金流入を示すものではありません。"}
 
 
 def build_sector_quality(sector_rows, stock_rows, topix):
     output = []
     topix_5d = topix.get("return_5d_pct") if topix else None
     for sector in sector_rows:
-        members = [row for row in stock_rows if row.get("sector") == sector.get("name")]
-        up = sum(row.get("change_pct", 0) > 0 for row in members)
-        participation = "2銘柄とも上昇" if len(members) == 2 and up == 2 else "2銘柄とも下落" if len(members) == 2 and up == 0 else "まちまち"
         volume_ratio = sector.get("volume_ratio_20d")
         volume_label = "出来高増" if isinstance(volume_ratio, (int, float)) and volume_ratio >= 1.2 else "商い低調" if isinstance(volume_ratio, (int, float)) and volume_ratio <= 0.8 else "平常圏" if volume_ratio is not None else "確認できず"
         return_5d = sector.get("return_5d_pct")
@@ -218,10 +192,9 @@ def build_sector_quality(sector_rows, stock_rows, topix):
         if isinstance(return_5d, (int, float)) and isinstance(topix_5d, (int, float)):
             relative_5d = round(return_5d - topix_5d, 2)
             persistence = "5日相対優位" if relative_5d >= 0.5 else "5日相対劣後" if relative_5d <= -0.5 else "5日ほぼ同等"
-        quality = "広がりを伴う上昇" if sector.get("change_pct", 0) > 0 and up == 2 else "選別的な上昇" if sector.get("change_pct", 0) > 0 else "広がりを伴う下落" if sector.get("change_pct", 0) < 0 and up == 0 else "方向感まちまち"
+        quality = "強い" if sector.get("change_pct", 0) >= 0.7 else "弱い" if sector.get("change_pct", 0) <= -0.7 else "小動き"
         momentum = "強い" if sector.get("change_pct", 0) >= 0.7 else "弱い" if sector.get("change_pct", 0) <= -0.7 else "中立"
-        breadth_label = "広い" if up == 2 else "狭い" if up == 0 else "まちまち"
-        output.append({"sector": sector.get("name"), "change_pct": sector.get("change_pct"), "quality": quality, "participation": participation, "volume_confirmation": volume_label, "volume_ratio_20d": volume_ratio, "persistence": persistence, "return_5d_pct": return_5d, "axes": {"momentum": {"label": momentum, "value": sector.get("change_pct"), "rule": "当日騰落が+0.7%以上で強い、-0.7%以下で弱い"}, "breadth": {"label": breadth_label, "value": f"{up}/{len(members)}", "rule": "主要監視2銘柄のうち同方向に動いた銘柄数"}, "activity": {"label": volume_label, "value": volume_ratio, "rule": "20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"}, "persistence": {"label": persistence, "value": return_5d, "rule": "5日騰落をTOPIX連動ETFと比較"}}, "comment": f"{quality}。{participation}、{volume_label}、{persistence}。", "coverage_note": "主要監視2銘柄と業種ETFによる限定評価。総合点は算出しない"})
+        output.append({"sector": sector.get("name"), "change_pct": sector.get("change_pct"), "quality": quality, "volume_confirmation": volume_label, "volume_ratio_20d": volume_ratio, "persistence": persistence, "return_5d_pct": return_5d, "axes": {"momentum": {"label": momentum, "value": sector.get("change_pct"), "rule": "業種ETFの当日騰落が+0.7%以上で強い、-0.7%以下で弱い"}, "activity": {"label": volume_label, "value": volume_ratio, "rule": "業種ETFの20日平均出来高比1.2倍以上で増加、0.8倍以下で低調"}, "persistence": {"label": persistence, "value": return_5d, "rule": "業種ETFの5日騰落をTOPIX連動ETFと比較し、差±0.5ptで判定"}}, "comment": f"業種ETFは当日{sector.get('change_pct', 0):+.2f}%で{momentum}。{volume_label}、{persistence}。", "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用しません。総合点は算出しません"})
     return sorted(output, key=lambda row: row.get("change_pct") if row.get("change_pct") is not None else -999, reverse=True)
 
 
@@ -331,7 +304,7 @@ def enrich_investor_view(result, market, report):
         for item in result["key_drivers"] if item.get("status") == "observed"
     ][:5]
     result["methodology"] = {
-        "tier_1_existing_data": ["今日の市場観", "主要材料", "値動きから見たローテーション", "セクター4軸評価", "昨日のシナリオ検証と今日への修正"],
+        "tier_1_existing_data": ["今日の市場観", "主要材料", "外需と内需の比較", "業種ETFのセクター3軸評価", "昨日のシナリオ検証と今日への修正"],
         "tier_2_light_fetch": ["Growth/Value指数", "小型株指数", "半導体専用指数・ETF"],
         "tier_3_new_api_or_ai": ["投資主体別リアルタイム資金フロー", "ニュース因果の自動生成", "大規模な類似局面バックテスト"],
         "implemented_tier": 1,
@@ -393,9 +366,6 @@ def build(download, universe, report, market, now):
     for sector in universe["sectors"]:
         rows = sorted([row for row in valid_stocks if row["sector"] == sector["name"]], key=lambda row: row["change_pct"], reverse=True)
         stock_groups.append({"sector": sector["name"], "stocks": rows})
-    advancing = sum(row["change_pct"] > 0 for row in valid_stocks)
-    declining = sum(row["change_pct"] < 0 for row in valid_stocks)
-    unchanged = len(valid_stocks) - advancing - declining
     topix = next((row for row in valid_benchmarks if row["ticker"] == "1306.T"), None)
     nikkei = next((row for row in valid_benchmarks if row["ticker"] == "1321.T"), None)
     result = {
@@ -404,16 +374,13 @@ def build(download, universe, report, market, now):
         "data_phase": data_phase,
         "data_state": data_state,
         "source": "Yahoo Finance via yfinance（1回の一括取得）",
-        "scope": "TOPIX-17業種ETFと各業種の主要監視2銘柄。全上場銘柄・東証公式統計ではない",
+        "scope": "市場・セクター評価は指数連動ETFとTOPIX-17業種ETFを使用。主要監視34銘柄は銘柄ランキングだけに使用",
         "sector_ranking": sector_rank,
         "sector_stock_ranking": stock_groups,
         "benchmark_rows": valid_benchmarks,
         "trading_value_ranking": sorted(valid_stocks, key=lambda row: row.get("trading_value_proxy_yen") or -1, reverse=True)[:10],
         "volume_surge_ranking": sorted(valid_stocks, key=lambda row: row.get("volume_ratio_20d") or -1, reverse=True)[:10],
         "market_internals": {
-            "universe_size": len(stocks), "available": len(valid_stocks),
-            "advancing": advancing, "declining": declining, "unchanged": unchanged,
-            "breadth_pct": round((advancing - declining) / len(valid_stocks) * 100, 1) if valid_stocks else None,
             "nikkei_proxy_change_pct": nikkei.get("change_pct") if nikkei else None,
             "topix_proxy_change_pct": topix.get("change_pct") if topix else None,
             "relative": "日付不一致" if not benchmark_aligned else "日経225優位" if nikkei and topix and nikkei["change_pct"] > topix["change_pct"] else "TOPIX優位" if nikkei and topix else "確認できず",

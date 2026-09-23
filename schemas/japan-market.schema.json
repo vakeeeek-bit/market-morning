@@ -19,7 +19,7 @@
       "properties": {
         "headline": {"type": "string"},
         "divergence_alert": {"type": ["string", "null"]},
-        "scoreboard": {"type": "array", "minItems": 4, "items": {"type": "object", "required": ["label", "value", "unit", "meaning"]}},
+        "scoreboard": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "object", "required": ["label", "value", "unit", "meaning"]}},
         "dimensions": {"type": "array", "items": {"type": "object", "required": ["axis", "label", "status", "reason"]}},
         "method_note": {"type": "string"}
       }
@@ -29,12 +29,12 @@
       "type": "object",
       "required": ["label", "items", "note"],
       "properties": {
-        "label": {"const": "値動きから見たローテーション（推定）"},
+        "label": {"const": "どちらが強い？"},
         "items": {"type": "array", "items": {"type": "object", "required": ["axis", "label", "status", "reason"]}},
         "note": {"type": "string"}
       }
     },
-    "sector_quality": {"type": "array", "items": {"type": "object", "required": ["sector", "change_pct", "quality", "axes", "comment", "coverage_note"], "properties": {"axes": {"type": "object", "required": ["momentum", "breadth", "activity", "persistence"]}}}},
+    "sector_quality": {"type": "array", "items": {"type": "object", "required": ["sector", "change_pct", "quality", "axes", "comment", "coverage_note"], "properties": {"axes": {"type": "object", "required": ["momentum", "activity", "persistence"], "not": {"required": ["breadth"]}}}}},
     "scenario_review": {"type": "object", "required": ["title", "status", "previous_view", "market_result", "revision", "today_watch", "note"]},
     "monitoring_points": {"type": "array", "items": {"type": "object", "required": ["watch", "current_view", "change_condition", "pricing_status"]}},
     "methodology": {

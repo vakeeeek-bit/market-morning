@@ -73,6 +73,11 @@ body {
 .alert-card { margin-bottom: 12px; padding: 13px; border: 1px solid #f59e0b; border-left-width: 5px; border-radius: 11px; background: #fffbeb; color: #78350f; font-weight: 750; }
 .flow-card { position: relative; }
 .flow-path { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; margin: 7px 0; color: #334155; font-size: 12px; font-weight: 700; }
+.term-help { display: inline-block; position: relative; margin-left: 4px; vertical-align: middle; }
+.term-help summary { cursor: pointer; color: #2563eb; font-size: 12px; list-style: none; }
+.term-help summary::-webkit-details-marker { display: none; }
+.term-help[open] .term-help-body { display: block; }
+.term-help-body { position: absolute; z-index: 20; top: 22px; left: -12px; width: min(280px, 75vw); padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px; background: #fff; box-shadow: 0 8px 24px rgba(15,23,42,.16); color: #334155; font-size: 12px; font-weight: 500; line-height: 1.5; }
 .flow-arrow { color: #94a3b8; }
 .estimated-tag { color: #7c3aed; }
 .unavailable-tag { color: #64748b; }
@@ -151,7 +156,6 @@ body {
       <a class="page-switch-link" id="world-page-link" href="index.html">🌐 世界市場</a>
       <a class="page-switch-link" href="japan-stocks.html" aria-current="page">🇯🇵 日本株</a>
     </nav>
-    <div class="header-sub">3秒で強弱、その次に理由、最後に詳細数値</div>
     <div class="date" id="report-date">データを読み込み中...</div>
     <div class="history-nav" aria-label="履歴ナビゲーション">
       <button class="history-button" id="prev-day" type="button">← 前日</button>
@@ -176,7 +180,7 @@ body {
   </nav>
 
   <section class="section" id="regime-section">
-    <div class="section-title">🔥 今日の市場観｜数字で強弱を確認</div>
+    <div class="section-title">🔥 今日の市場観</div>
     <div id="data-state"></div>
     <div class="scoreboard" id="market-scoreboard">データ更新待ち</div>
     <div id="regime-alert"></div>
@@ -196,7 +200,7 @@ body {
       <div class="value" id="focus-sectors">確認中</div>
     </div>
     <details class="disclosure">
-      <summary>初心者向け用語解説を開く</summary>
+      <summary>このページに出てくる用語</summary>
       <div class="disclosure-body" id="japan-glossary">用語データを読み込み中...</div>
     </details>
   </section>
@@ -207,20 +211,15 @@ body {
     <div class="insight-grid" id="key-drivers">データ更新待ち</div>
   </section>
 
-  <section class="section" id="internals-section">
-    <div class="section-title">📐 上昇・下落はどこまで広がったか</div>
-    <div id="market-internals">確認中</div>
-  </section>
-
   <section class="section" id="rotation-section">
-    <div class="section-title">↔️ どちらが強い？｜比較結果 → 差 → 詳細数値</div>
-    <div class="market-note">投資主体別売買ではありません。セクター騰落・上昇と下落の広がり・相対的な値動きから見た推定です。</div>
+    <div class="section-title">↔️ どちらが強い？</div>
+    <div class="market-note">17業種ETFを外需型と内需型に分け、比較結果 → 差 → 詳細数値の順に表示します。</div>
     <div class="insight-grid" id="rotation-read">データ更新待ち</div>
   </section>
 
   <section class="section" id="sector-quality-section">
-    <div class="section-title">🔬 セクター強弱｜勢い・広がり・商い・継続力</div>
-    <div class="market-note">業種ETFと各業種の主要監視2銘柄による限定評価です。全構成銘柄への広がりとは断定しません。</div>
+    <div class="section-title">🔬 セクター強弱</div>
+    <div class="market-note">業種ETF自身の勢い・商い・継続力で評価します。監視2銘柄の動きはセクター評価に使いません。</div>
     <div id="sector-quality">データ更新待ち</div>
     <details class="disclosure" id="market-ranking-section">
       <summary>セクター騰落ランキングを開く</summary>
@@ -268,6 +267,20 @@ body {
 const text = (value, fallback = '確認できず') => value === null || value === undefined || value === '' ? fallback : String(value);
 let selectedHistoryDate = null;
 let japanHistoryDates = [];
+let glossaryByTerm = new Map();
+
+function appendTitleWithHelp(parent, className, value) {
+  const label = appendText(parent, className, value);
+  const aliases = {'米国半導体株':'SOX', '米10年金利':'米10年債', 'ドル円':'ドル円', 'TOPIX':'TOPIX', 'PER':'PER'};
+  const term = aliases[value] || value;
+  const item = glossaryByTerm.get(term);
+  if (!item) return label;
+  const details = document.createElement('details'); details.className = 'term-help';
+  const summary = document.createElement('summary'); summary.textContent = 'ⓘ'; summary.setAttribute('aria-label', `${term}の説明`);
+  const body = document.createElement('span'); body.className = 'term-help-body'; body.textContent = `${item.short} ${item.why_it_matters}`;
+  details.append(summary, body); parent.appendChild(details);
+  return label;
+}
 
 function isDateKey(value) {
   return /^20\d{2}-\d{2}-\d{2}$/.test(value || '');
@@ -495,7 +508,7 @@ function renderInsightCards(holderId, items, options = {}) {
     const card = document.createElement('article');
     card.className = `insight-card${options.flow ? ' flow-card' : ''}`;
     const head = document.createElement('div'); head.className = 'insight-head';
-    appendText(head, 'insight-title', item.axis || item.driver || item.watch || '確認項目');
+    appendTitleWithHelp(head, 'insight-title', item.axis || item.driver || item.watch || '確認項目');
     const label = appendText(head, 'insight-label', item.label || item.assessment || item.current_view || '確認できず');
     if (item.status === 'estimated') label.classList.add('estimated-tag');
     if (item.status === 'unavailable') label.classList.add('unavailable-tag');
@@ -519,8 +532,12 @@ function renderInsightCards(holderId, items, options = {}) {
 
 function renderRegime(regime) {
   const alert = document.getElementById('regime-alert'); alert.replaceChildren();
+  appendText(alert, 'summary-main', text(regime?.headline, '市場観を確認できません'));
+  appendText(alert, 'market-note', text(regime?.headline_reason, '主要指数のデータを確認できません'));
   if (regime?.divergence_alert) appendText(alert, 'alert-card', regime.divergence_alert);
-  renderInsightCards('market-regime', regime?.dimensions);
+  const detailHolder = document.getElementById('market-regime');
+  detailHolder.replaceChildren();
+  if (Array.isArray(regime?.dimensions) && regime.dimensions.length) renderInsightCards('market-regime', regime.dimensions);
   document.getElementById('regime-method').textContent = text(regime?.method_note, 'この履歴には市場レジーム分析がありません。実測と推定を混同せず、ランキングを参照してください。');
 }
 
@@ -536,7 +553,7 @@ function renderScoreboard(regime, dataState) {
     const value = appendText(card, 'score-value', display);
     if (numeric !== null && numeric > 0) value.classList.add('positive');
     if (numeric !== null && numeric < 0) value.classList.add('negative');
-    appendText(card, 'score-label', row.label);
+    appendTitleWithHelp(card, 'score-label', row.label);
     appendText(card, 'score-meaning', row.meaning);
     holder.appendChild(card);
   });
@@ -565,7 +582,7 @@ function sectorQualityCard(row) {
   if (Number(row.change_pct) < 0) change.classList.add('negative');
   card.appendChild(head);
   const axes = document.createElement('div'); axes.className = 'axis-grid';
-  const labels = {momentum:'勢い', breadth:'広がり', activity:'商い', persistence:'継続力'};
+  const labels = {momentum:'勢い', activity:'商い', persistence:'継続力'};
   Object.entries(row.axes || {}).forEach(([key, axis]) => {
     const chip = document.createElement('div'); chip.className = 'axis-chip';
     appendText(chip, '', labels[key] || key); appendText(chip, '', axis.label).className = 'value';
@@ -609,12 +626,6 @@ function renderJapanMarket(data) {
     const value = Number(row.volume_ratio_20d);
     return Number.isFinite(value) ? `${value.toFixed(2)}倍` : '確認できず';
   }, 10);
-  const internals = data.market_internals || {}; const internalHolder = document.getElementById('market-internals'); internalHolder.replaceChildren();
-  const grid = document.createElement('div'); grid.className = 'internals-grid';
-  [['値上がり', internals.advancing], ['値下がり', internals.declining], ['変わらず', internals.unchanged], ['広がり指数', Number.isFinite(Number(internals.breadth_pct)) ? internals.breadth_pct : '-']].forEach(([label, value]) => {
-    const card = document.createElement('div'); card.className = 'internal-card'; appendText(card, 'internal-number', value); appendText(card, 'internal-label', label); grid.appendChild(card);
-  });
-  internalHolder.appendChild(grid); appendText(internalHolder, 'market-note', `対象：主要監視${text(internals.universe_size, 34)}銘柄｜指数比較：${text(internals.relative)}`);
   const review = data.scenario_review || {}; const reviewHolder = document.getElementById('scenario-review'); reviewHolder.replaceChildren();
   appendText(reviewHolder, 'summary-main', `判定：${text(review.status, '更新待ち')}`); appendText(reviewHolder, 'market-note', text(review.note, '大引け後に更新します'));
   const reviewGrid = document.createElement('div'); reviewGrid.className = 'insight-grid';
@@ -683,8 +694,8 @@ async function loadJapanGlossary() {
     const response = await fetch('data/glossary.json', { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
-    const wanted = new Set(['SOX', 'Breadth', 'WTI', 'Copper', 'TOPIX']);
-    const terms = (Array.isArray(data.terms) ? data.terms : []).filter(item => wanted.has(item.term));
+    const terms = Array.isArray(data.terms) ? data.terms : [];
+    glossaryByTerm = new Map(terms.map(item => [item.term, item]));
     holder.replaceChildren();
     terms.forEach(item => {
       const box = document.createElement('div'); box.className = 'summary-box';
@@ -704,7 +715,8 @@ document.querySelectorAll('[data-jp-target]').forEach(button => {
     document.getElementById(button.dataset.jpTarget)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
-Promise.all([loadHistoryIndex(), load(), loadJapanMarket(), loadJapanGlossary()]);
+Promise.all([loadHistoryIndex(), load()]);
+loadJapanGlossary().then(loadJapanMarket);
 </script>
 </body>
 </html>

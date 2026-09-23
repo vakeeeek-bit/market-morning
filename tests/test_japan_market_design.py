@@ -52,17 +52,18 @@ class JapanMarketDesignTests(unittest.TestCase):
         self.assertIsNotNone(fallback)
         self.assertTrue(fallback["data_quality"]["date_alignment"]["aligned"])
 
-    def test_investor_view_does_not_overclaim_unavailable_style_axes(self):
+    def test_market_view_does_not_use_thirty_four_stock_breadth(self):
         data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))
-        dimensions = {item["axis"]: item for item in data["market_regime"]["dimensions"]}
-        for axis in ("成長株と割安株", "大型株と小型株", "国内半導体"):
-            self.assertEqual("unavailable", dimensions[axis]["status"])
-        self.assertEqual("observed", dimensions["上昇・下落の広がり"]["status"])
+        view = json.dumps(data["market_regime"], ensure_ascii=False)
+        self.assertEqual(2, len(data["market_regime"]["scoreboard"]))
+        self.assertNotIn("Breadth", view)
+        self.assertNotIn("上昇・下落の広がり", view)
 
     def test_rotation_is_labeled_as_price_action_estimate(self):
         data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))
-        self.assertEqual("値動きから見たローテーション（推定）", data["rotation_read"]["label"])
+        self.assertEqual("どちらが強い？", data["rotation_read"]["label"])
         self.assertIn("投資主体別", data["rotation_read"]["note"])
+        self.assertEqual(["外需と内需"], [item["axis"] for item in data["rotation_read"]["items"]])
 
     def test_newer_overseas_drivers_are_marked_unpriced(self):
         data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))
@@ -79,12 +80,13 @@ class JapanMarketDesignTests(unittest.TestCase):
         source = (ROOT / "scripts" / "update_japan_market.py").read_text(encoding="utf-8")
         self.assertIn('sorted(candidates, key=lambda item: item.get("impact_score", -1), reverse=True)[:4]', source)
 
-    def test_sector_quality_has_four_explained_axes_without_composite_score(self):
+    def test_sector_quality_uses_only_sector_etf_three_axes(self):
         data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))
         for item in data["sector_quality"]:
-            self.assertEqual({"momentum", "breadth", "activity", "persistence"}, set(item["axes"]))
+            self.assertEqual({"momentum", "activity", "persistence"}, set(item["axes"]))
             self.assertNotIn("combat_power", item)
             self.assertTrue(all(axis.get("rule") for axis in item["axes"].values()))
+            self.assertNotIn("2銘柄", json.dumps(item, ensure_ascii=False))
 
     def test_scenario_review_revises_view_instead_of_scoring_prediction(self):
         data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))

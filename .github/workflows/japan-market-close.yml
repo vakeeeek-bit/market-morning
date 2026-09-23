@@ -37,6 +37,10 @@ jobs:
           mkdir -p "data/history/$DATE_JST"
           cp data/japan-market.json "data/history/$DATE_JST/japan-market.json"
       - name: Commit calculated data
+        # Feature branches run the same calculation/validation as a quality gate,
+        # but only main may persist generated market data. Rebasing a feature
+        # branch from this step can replay the PR commits and create conflicts.
+        if: github.ref == 'refs/heads/main'
         run: |
           git config user.name "Market Morning Bot"
           git config user.email "actions@github.com"

@@ -124,7 +124,7 @@ def build_market_regime(sector_rows, stock_rows, internals):
             {"label": "日経平均", "value": nikkei, "unit": "%", "meaning": "プラスなら日経平均型が上昇"},
             {"label": "TOPIX", "value": topix, "unit": "%", "meaning": "市場全体の方向"},
         ],
-        "divergence_alert": f"指数と市場内部が乖離：{posture_reason}" if divergence else None,
+        "divergence_alert": f"主要指数が逆方向：{posture_reason}" if divergence else None,
         "dimensions": [],
         "method_note": "市場観は日経平均・TOPIX連動ETFの同日騰落だけで判定します。34銘柄を市場全体の広がりには使用しません。",
     }

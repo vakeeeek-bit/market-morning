@@ -73,7 +73,7 @@ class PageNavigationTests(unittest.TestCase):
         japan = self.read("japan-stocks.html")
         for element_id in (
             "market-ranking-section", "stock-ranking-section", "liquidity-section",
-            "internals-section", "scenario-review-section", "regime-section",
+            "scenario-review-section", "regime-section",
             "driver-section", "rotation-section", "sector-quality-section", "monitoring-section"
         ):
             self.assertIn(f'id="{element_id}"', japan)
@@ -89,11 +89,13 @@ class PageNavigationTests(unittest.TestCase):
 
     def test_japan_v2_progressive_disclosure_and_plain_japanese(self):
         japan = self.read("japan-stocks.html")
-        self.assertIn("3秒で強弱、その次に理由、最後に詳細数値", japan)
+        self.assertNotIn("数字で強弱を確認", japan)
         self.assertIn('id="market-scoreboard"', japan)
         self.assertIn("材料 → 伝達経路 → 影響業種", japan)
         self.assertIn("比較結果 → 差 → 詳細数値", japan)
-        self.assertIn("勢い・広がり・商い・継続力", japan)
+        self.assertIn("業種ETF自身の勢い・商い・継続力", japan)
+        self.assertNotIn('id="internals-section"', japan)
+        self.assertIn('className = \'term-help\'', japan)
         self.assertIn("昨日のシナリオ検証 → 今日への修正", japan)
         self.assertIn("総合戦闘力は算出しません", japan)
         self.assertNotIn("朝シナリオの答え合わせ", japan)

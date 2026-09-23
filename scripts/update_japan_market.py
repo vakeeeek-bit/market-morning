@@ -454,6 +454,10 @@ def refresh_closed_day_snapshot(snapshot, now, market, report):
     if not closure_name:
         return None
     result = dict(snapshot)
+    # Five-day relative strength needs benchmark history that is intentionally
+    # omitted from the published JSON. Keep the last verified cash-market
+    # sector assessment instead of degrading it during a closed-day refresh.
+    verified_sector_quality = snapshot.get("sector_quality")
     result["updated_at"] = now.strftime("%Y-%m-%d %H:%M:%S JST")
     result["data_phase"] = "休場"
     result["data_state"] = {
@@ -462,6 +466,8 @@ def refresh_closed_day_snapshot(snapshot, now, market, report):
         "message": f"{now.date().isoformat()}は{closure_name}で休場。{result.get('market_date') or '直近'}の前営業日データを表示",
     }
     enrich_investor_view(result, market, report)
+    if verified_sector_quality is not None:
+        result["sector_quality"] = verified_sector_quality
     return result
 
 

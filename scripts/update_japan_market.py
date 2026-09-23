@@ -11,6 +11,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import yfinance as yf
+import jpholiday
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,6 +23,18 @@ HISTORY_ROOT = ROOT / "data" / "history"
 
 EXTERNAL_SECTORS = {"自動車・輸送機", "鉄鋼・非鉄", "機械", "電機・精密", "商社・卸売"}
 DOMESTIC_SECTORS = {"食品", "建設・資材", "医薬品", "情報通信・サービス", "電力・ガス", "運輸・物流", "小売", "銀行", "金融（銀行除く）", "不動産"}
+
+
+def jpx_closure_name(day):
+    """Return the reason JPX cash equities are closed on a calendar day."""
+    if day.weekday() >= 5:
+        return "土曜日" if day.weekday() == 5 else "日曜日"
+    holiday_name = jpholiday.is_holiday_name(day)
+    if holiday_name:
+        return holiday_name
+    if (day.month, day.day) in {(1, 1), (1, 2), (1, 3), (12, 31)}:
+        return "年末年始休場"
+    return None
 
 
 def finite(value):
@@ -366,18 +379,13 @@ def build(download, universe, report, market, now):
         report.get("target_market_date") or report.get("report_date")
         if isinstance(report, dict) else None
     )
-    report_text = json.dumps(report, ensure_ascii=False) if isinstance(report, dict) else ""
-    report_date = report.get("report_date") if isinstance(report, dict) else None
-    holiday = bool(
-        report_date
-        and expected_market_date
-        and report_date != expected_market_date
-        and "休場" in report_text
-    )
+    today_date = now.date()
+    closure_name = jpx_closure_name(today_date)
+    holiday = bool(closure_name)
     market_date = stock_date or sector_date
     date_aligned = bool(expected_market_date and sector_date == stock_date == expected_market_date)
     benchmark_aligned = bool(stock_date and benchmark_date == stock_date)
-    today = now.strftime("%Y-%m-%d")
+    today = today_date.isoformat()
     after_close = (now.hour, now.minute) >= (15, 30)
     review_ready = bool(date_aligned and market_date and (market_date < today or after_close))
     blocked_reason = None
@@ -391,7 +399,7 @@ def build(download, universe, report, market, now):
     data_state = {
         "kind": "data_error" if blocked_reason else "holiday" if holiday else "normal",
         "label": "データ異常" if blocked_reason else "東証現物は休場" if holiday else "通常取引日",
-        "message": blocked_reason or (f"{report_date}は休場。{expected_market_date}の前営業日データを表示" if holiday else "取引日データを正常取得"),
+        "message": blocked_reason or (f"{today}は{closure_name}で休場。{market_date or expected_market_date}の前営業日データを表示" if holiday else "取引日データを正常取得"),
     }
     sector_rank = sorted(valid_sectors, key=lambda row: row["change_pct"], reverse=True)
     stock_groups = []
@@ -440,16 +448,41 @@ def meets_quality_gate(result):
     return quality.get("sector_available", 0) >= 12 and quality.get("stock_available", 0) >= 24
 
 
+def refresh_closed_day_snapshot(snapshot, now, market, report):
+    """Keep the last observed cash-market data and refresh only closed-day context."""
+    closure_name = jpx_closure_name(now.date())
+    if not closure_name:
+        return None
+    result = dict(snapshot)
+    result["updated_at"] = now.strftime("%Y-%m-%d %H:%M:%S JST")
+    result["data_phase"] = "休場"
+    result["data_state"] = {
+        "kind": "holiday",
+        "label": "東証現物は休場",
+        "message": f"{now.date().isoformat()}は{closure_name}で休場。{result.get('market_date') or '直近'}の前営業日データを表示",
+    }
+    enrich_investor_view(result, market, report)
+    return result
+
+
 def main():
     universe = json.loads(UNIVERSE_PATH.read_text(encoding="utf-8"))
     report = json.loads(JAPAN_REPORT_PATH.read_text(encoding="utf-8")) if JAPAN_REPORT_PATH.exists() else {}
     market = json.loads(MARKET_PATH.read_text(encoding="utf-8")) if MARKET_PATH.exists() else {}
+    now = datetime.now(ZoneInfo("Asia/Tokyo"))
+    if OUTPUT_PATH.exists():
+        existing = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
+        closed_day = refresh_closed_day_snapshot(existing, now, market, report)
+        if closed_day:
+            OUTPUT_PATH.write_text(json.dumps(closed_day, ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+            print(f"休場日のため、{closed_day.get('market_date')}の現物データを維持して休場情報を更新しました")
+            return
     tickers = list(universe["benchmarks"][key]["ticker"] for key in universe["benchmarks"])
     for sector in universe["sectors"]:
         tickers.append(sector["etf"])
         tickers.extend(stock["ticker"] for stock in sector["stocks"])
     download = yf.download(tickers=sorted(set(tickers)), period="35d", interval="1d", group_by="ticker", auto_adjust=False, progress=False, threads=8, timeout=10)
-    result = build(download, universe, report, market, datetime.now(ZoneInfo("Asia/Tokyo")))
+    result = build(download, universe, report, market, now)
     if not meets_quality_gate(result):
         quality = result["data_quality"]
         raise RuntimeError(

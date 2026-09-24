@@ -244,6 +244,8 @@ def aligned_fallback_snapshot(snapshot, expected_market_date, market=None, repor
     if not expected_market_date or sector_date != expected_market_date or stock_date != expected_market_date:
         return None
     result = dict(snapshot)
+    verified_sector_quality = snapshot.get("sector_quality")
+    fallback_message = f"取得日の不一致により、{expected_market_date}の整合済み保存データを表示"
     quality = dict(result.get("data_quality", {}))
     quality["date_alignment"] = {
         "expected_market_date": expected_market_date,
@@ -255,8 +257,19 @@ def aligned_fallback_snapshot(snapshot, expected_market_date, market=None, repor
     }
     result["data_quality"] = quality
     result["market_date"] = expected_market_date
-    result["data_phase"] = "大引け後"
+    result["data_phase"] = "データ異常・検証保留"
+    result["data_state"] = {
+        "kind": "data_error",
+        "label": "データ異常",
+        "message": fallback_message,
+    }
+    current_review = dict(result.get("scenario_review", {}))
+    current_review["status"] = "判定保留"
+    current_review["note"] = fallback_message
+    result["scenario_review"] = current_review
     enrich_investor_view(result, market or {}, report or {})
+    if verified_sector_quality is not None:
+        result["sector_quality"] = verified_sector_quality
     return result
 
 

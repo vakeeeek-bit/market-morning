@@ -1,6 +1,7 @@
 import json
 import math
 from datetime import datetime
+from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import yfinance as yf
@@ -65,7 +66,7 @@ def finite_float(value, label):
     return number
 
 
-def get_market_data(info):
+def get_market_data(info, prior_snapshots=None):
     ticker = yf.Ticker(info["ticker"])
     hist = ticker.history(period="7d", interval="1d")
 
@@ -81,11 +82,35 @@ def get_market_data(info):
     previous = hist.iloc[-2]
     price = finite_float(latest["Close"], "最新終値")
     previous_price = finite_float(previous["Close"], "前日終値")
-    change = price - previous_price
-    change_pct = (change / previous_price) * 100 if previous_price != 0 else None
-
     latest_index = hist.index[-1]
     previous_index = hist.index[-2]
+    latest_market_date = latest_index.strftime("%Y-%m-%d")
+    previous_market_date = previous_index.strftime("%Y-%m-%d")
+
+    # Yahooの短期履歴が中間営業日を一時的に欠落させる場合がある。
+    # 直前に検証・保存した同一tickerの終値が履歴より新しければ、
+    # それを前日終値として使い、複数日変化を「前日比」と誤表示しない。
+    if isinstance(prior_snapshots, dict):
+        prior_snapshots = [prior_snapshots]
+    candidates = []
+    for prior_snapshot in prior_snapshots or []:
+        if not isinstance(prior_snapshot, dict):
+            continue
+        prior_date = prior_snapshot.get("market_date")
+        prior_price = prior_snapshot.get("price")
+        if (
+            prior_snapshot.get("status") == "取得成功"
+            and prior_snapshot.get("ticker") == info["ticker"]
+            and isinstance(prior_date, str)
+            and previous_market_date < prior_date < latest_market_date
+            and isinstance(prior_price, (int, float))
+        ):
+            candidates.append((prior_date, finite_float(prior_price, "保存済み前日終値")))
+    if candidates:
+        previous_market_date, previous_price = max(candidates, key=lambda item: item[0])
+
+    change = price - previous_price
+    change_pct = (change / previous_price) * 100 if previous_price != 0 else None
 
     return {
         "name": info["name"],
@@ -95,8 +120,8 @@ def get_market_data(info):
         "change": round(change, 4),
         "change_pct": round(change_pct, 2) if change_pct is not None else None,
         "status": "取得成功",
-        "market_date": latest_index.strftime("%Y-%m-%d"),
-        "previous_market_date": previous_index.strftime("%Y-%m-%d"),
+        "market_date": latest_market_date,
+        "previous_market_date": previous_market_date,
     }
 
 
@@ -215,6 +240,19 @@ def build_data_quality(markets):
 
 def main():
     now = datetime.now(ZoneInfo("Asia/Tokyo"))
+    previous_market_sets = []
+    market_path = Path("data/market.json")
+    if market_path.exists():
+        try:
+            previous_market_sets.append(json.loads(market_path.read_text(encoding="utf-8")).get("markets", {}))
+        except (json.JSONDecodeError, OSError):
+            pass
+    history_root = Path("data/history")
+    for archive_path in sorted(history_root.glob("*/market.json"), reverse=True)[:7]:
+        try:
+            previous_market_sets.append(json.loads(archive_path.read_text(encoding="utf-8")).get("markets", {}))
+        except (json.JSONDecodeError, OSError):
+            continue
     result = {
         "updated_at": now.strftime("%Y-%m-%d %H:%M:%S"),
         "timezone": "Asia/Tokyo",
@@ -236,7 +274,10 @@ def main():
 
     for key, info in SYMBOLS.items():
         try:
-            result["markets"][key] = get_market_data(info)
+            result["markets"][key] = get_market_data(
+                info,
+                [market_set.get(key) for market_set in previous_market_sets],
+            )
         except Exception as error:
             result["markets"][key] = empty_market(info, "取得失敗", str(error))
 

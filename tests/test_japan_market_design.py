@@ -103,6 +103,14 @@ class JapanMarketDesignTests(unittest.TestCase):
             self.assertIn(key, review)
         self.assertNotIn("○×", json.dumps(review, ensure_ascii=False))
 
+    def test_generated_scenario_review_does_not_trigger_scoring_guard(self):
+        sys.modules.setdefault("yfinance", types.SimpleNamespace(download=None))
+        module = importlib.import_module("scripts.update_japan_market")
+        review = module.scenario_review({}, [], "2026-09-24")
+        serialized = json.dumps(review, ensure_ascii=False)
+        self.assertNotIn("○×", serialized)
+        self.assertIn("的中・外れを採点するものではありません", review["note"])
+
     def test_holiday_and_data_error_have_distinct_states(self):
         data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))
         self.assertIn(data["data_state"]["kind"], {"normal", "holiday", "data_error"})

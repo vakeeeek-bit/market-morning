@@ -1,6 +1,10 @@
 import ast
+import importlib
+import types
 import unittest
 from pathlib import Path
+
+import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,6 +44,34 @@ class MarketUniverseTests(unittest.TestCase):
             "sector_xlu",
         }
         self.assertEqual(expected, {key for key in self.symbols if key.startswith("sector_")})
+
+    def test_saved_close_fills_missing_intermediate_market_day(self):
+        module = importlib.import_module("scripts.update_market")
+        history = pd.DataFrame(
+            {"Close": [100.0, 120.0]},
+            index=pd.to_datetime(["2026-09-21", "2026-09-23"]),
+        )
+        original_yf = module.yf
+        module.yf = types.SimpleNamespace(
+            Ticker=lambda ticker: types.SimpleNamespace(history=lambda **kwargs: history)
+        )
+        try:
+            result = module.get_market_data(
+                {"name": "Test", "ticker": "TEST"},
+                {
+                    "name": "Test",
+                    "ticker": "TEST",
+                    "price": 110.0,
+                    "status": "取得成功",
+                    "market_date": "2026-09-22",
+                },
+            )
+        finally:
+            module.yf = original_yf
+
+        self.assertEqual("2026-09-22", result["previous_market_date"])
+        self.assertEqual(110.0, result["previous"])
+        self.assertEqual(9.09, result["change_pct"])
 
 
 if __name__ == "__main__":

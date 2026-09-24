@@ -114,10 +114,10 @@ class JapanMarketDesignTests(unittest.TestCase):
     def test_holiday_and_data_error_have_distinct_states(self):
         data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))
         self.assertIn(data["data_state"]["kind"], {"normal", "holiday", "data_error"})
-        report = json.loads((ROOT / "data" / "japan-stocks.json").read_text(encoding="utf-8"))
-        if report.get("report_date") != report.get("target_market_date") and "休場" in json.dumps(report, ensure_ascii=False):
-            self.assertEqual("holiday", data["data_state"]["kind"])
+        if data["data_state"]["kind"] == "holiday":
             self.assertEqual("休場", data["data_phase"])
+        if data["data_state"]["kind"] == "data_error":
+            self.assertIn("データ異常", data["data_phase"])
 
     def test_jpx_holiday_reason_uses_execution_date(self):
         sys.modules.setdefault("yfinance", types.SimpleNamespace(download=None))

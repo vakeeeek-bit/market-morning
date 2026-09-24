@@ -291,7 +291,7 @@ def scenario_review(report, sector_rows, market_date, ready=True, blocked_reason
         "gap_reason": "業種ETFの結果だけでは個別ニュースとの因果を分離できないため、理由は断定しません",
         "revision": "注目業種の相対順位を踏まえて強弱判断を更新" if checks else "修正対象なし",
         "today_watch": report.get("japan_quick_view", {}).get("unpriced_materials", []) if isinstance(report, dict) else [],
-        "note": "予想の○×採点ではありません。前回の見方と実績の差から、今日の監視点を修正します。",
+        "note": "的中・外れを採点するものではありません。前回の見方と実績の差から、今日の監視点を修正します。",
     }
     if holiday:
         result["status"] = "休場・検証保留"

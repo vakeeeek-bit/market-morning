@@ -88,7 +88,8 @@
       "change_pct": 1.38,
       "status": "取得成功",
       "market_date": "2026-09-18",
-      "previous_market_date": "2026-09-17"
+      "previous_market_date": "2026-09-17",
+      "stale_reason": "Yahoo Financeの日経225日足が9月18日以降更新されていないため保存値を維持。今日の方向判断には使用しません"
     },
     "topix": {
       "name": "TOPIX参考（1306 ETF）",
@@ -363,7 +364,8 @@
       "change_pct": 2.97,
       "status": "取得成功",
       "market_date": "2026-09-23",
-      "previous_market_date": "2026-09-22"
+      "previous_market_date": "2026-09-22",
+      "stale_reason": "FRED DGS2の公表タイミング差。最新公表値を維持し、同日でない米10年債とのスプレッドは算出しません"
     }
   },
   "derived": {

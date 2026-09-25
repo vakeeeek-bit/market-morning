@@ -2,6 +2,8 @@ import ast
 import importlib
 import types
 import unittest
+from datetime import datetime
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 import pandas as pd
@@ -72,6 +74,15 @@ class MarketUniverseTests(unittest.TestCase):
         self.assertEqual("2026-09-22", result["previous_market_date"])
         self.assertEqual(110.0, result["previous"])
         self.assertEqual(9.09, result["change_pct"])
+
+    def test_fred_publication_lag_is_explicit(self):
+        module = importlib.import_module("scripts.update_market")
+        markets = {
+            "sp500": {"market_date": "2026-09-23"},
+            "us2y": {"market_date": "2026-09-22", "status": "取得成功"},
+        }
+        module.mark_fred_publication_lag(markets)
+        self.assertIn("FRED DGS2", markets["us2y"]["stale_reason"])
 
 
 if __name__ == "__main__":

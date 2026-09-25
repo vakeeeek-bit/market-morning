@@ -185,7 +185,7 @@ def validate_relationships(data: dict[str, dict], result: ValidationResult) -> N
             if parsed and parsed < target:
                 reason = item.get("stale_reason")
                 status = str(item.get("status", ""))
-                if isinstance(reason, str) and reason.strip() and status != "取得成功":
+                if isinstance(reason, str) and reason.strip():
                     result.warning(f"{key}: {value}を維持（{reason.strip()}）")
                 else:
                     stale.append(f"{key}={value}")

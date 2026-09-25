@@ -238,6 +238,21 @@ def build_data_quality(markets):
     }
 
 
+def mark_fred_publication_lag(markets):
+    """Explain a legitimate FRED publication delay without inventing a value."""
+    us_equity_date = markets.get("sp500", {}).get("market_date")
+    us2y = markets.get("us2y", {})
+    if (
+        isinstance(us_equity_date, str)
+        and isinstance(us2y.get("market_date"), str)
+        and us2y["market_date"] < us_equity_date
+    ):
+        us2y["stale_reason"] = (
+            "FRED DGS2の公表タイミング差。最新公表値を維持し、"
+            "同日でない米10年債とのスプレッドは算出しません"
+        )
+
+
 def main():
     now = datetime.now(ZoneInfo("Asia/Tokyo"))
     previous_market_sets = []
@@ -296,6 +311,8 @@ def main():
             "previous_market_date": None,
             "error": str(error),
         }
+
+    mark_fred_publication_lag(result["markets"])
 
     result["derived"]["us_2s10s"] = calculate_2s10s(
         result["markets"]["us2y"],

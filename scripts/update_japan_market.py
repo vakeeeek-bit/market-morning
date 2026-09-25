@@ -6,7 +6,7 @@ from __future__ import annotations
 import json
 import math
 from collections import Counter
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -37,6 +37,16 @@ def jpx_closure_name(day):
     return None
 
 
+def expected_jpx_market_date(now):
+    """Return the latest JPX cash-market date that may be treated as complete."""
+    candidate = now.date()
+    if jpx_closure_name(candidate) or (now.hour, now.minute) < (15, 30):
+        candidate -= timedelta(days=1)
+    while jpx_closure_name(candidate):
+        candidate -= timedelta(days=1)
+    return candidate.isoformat()
+
+
 def finite(value):
     number = float(value)
     return number if math.isfinite(number) else None
@@ -50,9 +60,14 @@ def series_for(download, ticker, field):
         return None
 
 
-def calculate_row(download, ticker, name, sector=None):
+def calculate_row(download, ticker, name, sector=None, as_of_date=None):
     close = series_for(download, ticker, "Close")
     volume = series_for(download, ticker, "Volume")
+    if as_of_date:
+        if close is not None:
+            close = close[[item.strftime("%Y-%m-%d") <= as_of_date for item in close.index]]
+        if volume is not None:
+            volume = volume[[item.strftime("%Y-%m-%d") <= as_of_date for item in volume.index]]
     if close is None or len(close) < 2:
         return {"ticker": ticker, "name": name, "sector": sector, "status": "確認できず"}
     latest, previous = finite(close.iloc[-1]), finite(close.iloc[-2])
@@ -372,13 +387,17 @@ def enrich_investor_view(result, market, report):
 
 
 def build(download, universe, report, market, now):
+    expected_market_date = expected_jpx_market_date(now)
     sectors = []
     stocks = []
     for sector in universe["sectors"]:
-        sectors.append(calculate_row(download, sector["etf"], sector["name"], sector["name"]))
+        sectors.append(calculate_row(download, sector["etf"], sector["name"], sector["name"], expected_market_date))
         for stock in sector["stocks"]:
-            stocks.append(calculate_row(download, stock["ticker"], stock["name"], sector["name"]))
-    benchmarks = [calculate_row(download, value["ticker"], value["name"]) for value in universe["benchmarks"].values()]
+            stocks.append(calculate_row(download, stock["ticker"], stock["name"], sector["name"], expected_market_date))
+    benchmarks = [
+        calculate_row(download, value["ticker"], value["name"], as_of_date=expected_market_date)
+        for value in universe["benchmarks"].values()
+    ]
     fetched_sectors = [row for row in sectors if row.get("status") == "取得成功"]
     fetched_stocks = [row for row in stocks if row.get("status") == "取得成功"]
     fetched_benchmarks = [row for row in benchmarks if row.get("status") == "取得成功"]
@@ -388,7 +407,7 @@ def build(download, universe, report, market, now):
     valid_sectors = rows_for_date(fetched_sectors, sector_date)
     valid_stocks = rows_for_date(fetched_stocks, stock_date)
     valid_benchmarks = rows_for_date(fetched_benchmarks, benchmark_date)
-    expected_market_date = (
+    report_target_market_date = (
         report.get("target_market_date") or report.get("report_date")
         if isinstance(report, dict) else None
     )
@@ -400,7 +419,13 @@ def build(download, universe, report, market, now):
     benchmark_aligned = bool(stock_date and benchmark_date == stock_date)
     today = today_date.isoformat()
     after_close = (now.hour, now.minute) >= (15, 30)
-    review_ready = bool(date_aligned and market_date and (market_date < today or after_close))
+    session_in_progress = not holiday and (9, 0) <= (now.hour, now.minute) < (15, 30)
+    review_ready = bool(
+        date_aligned
+        and market_date
+        and not session_in_progress
+        and (not report_target_market_date or market_date >= report_target_market_date)
+    )
     blocked_reason = None
     if not date_aligned:
         blocked_reason = (
@@ -408,7 +433,13 @@ def build(download, universe, report, market, now):
             f"朝レポート={expected_market_date or '確認できず'}、"
             f"セクター={sector_date or '確認できず'}、銘柄={stock_date or '確認できず'}"
         )
-    data_phase = "休場" if holiday and not blocked_reason else "データ異常・検証保留" if blocked_reason else "大引け後" if review_ready else "取引中暫定"
+    data_phase = (
+        "休場" if holiday and not blocked_reason
+        else "データ異常・検証保留" if blocked_reason
+        else "取引中暫定" if session_in_progress
+        else "取引開始前" if (now.hour, now.minute) < (9, 0)
+        else "大引け後"
+    )
     data_state = {
         "kind": "data_error" if blocked_reason else "holiday" if holiday else "normal",
         "label": "データ異常" if blocked_reason else "東証現物は休場" if holiday else "通常取引日",
@@ -444,6 +475,7 @@ def build(download, universe, report, market, now):
             "stock_total": len(stocks), "stock_available": len(valid_stocks),
             "date_alignment": {
                 "expected_market_date": expected_market_date,
+                "report_target_market_date": report_target_market_date,
                 "sector_market_date": sector_date,
                 "stock_market_date": stock_date,
                 "benchmark_market_date": benchmark_date,

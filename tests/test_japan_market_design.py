@@ -27,10 +27,10 @@ class JapanMarketDesignTests(unittest.TestCase):
         self.assertIn('period="35d"', source)
         self.assertIn("meets_quality_gate", source)
         self.assertIn("既存データを維持します", source)
-        self.assertIn('"大引け後" if review_ready else "取引中暫定"', source)
+        self.assertIn('"取引中暫定" if session_in_progress', source)
         self.assertIn('result["status"] = "大引け待ち"', source)
         self.assertIn('"データ異常・検証保留" if blocked_reason', source)
-        self.assertIn('data_phase = "休場" if holiday', source)
+        self.assertIn('"休場" if holiday and not blocked_reason', source)
         self.assertIn('result["status"] = "判定保留"', source)
         self.assertIn('sector_date == stock_date == expected_market_date', source)
         self.assertIn("aligned_fallback_snapshot", source)
@@ -142,6 +142,22 @@ class JapanMarketDesignTests(unittest.TestCase):
         self.assertEqual("holiday", refreshed["data_state"]["kind"])
         self.assertEqual("2026-09-23は秋分の日で休場。2026-09-18の前営業日データを表示", refreshed["data_state"]["message"])
         self.assertEqual(snapshot["sector_quality"], refreshed["sector_quality"])
+
+    def test_expected_jpx_date_uses_last_completed_cash_session(self):
+        sys.modules.setdefault("yfinance", types.SimpleNamespace(download=None))
+        module = importlib.import_module("scripts.update_japan_market")
+        self.assertEqual(
+            "2026-09-18",
+            module.expected_jpx_market_date(
+                datetime(2026, 9, 24, 14, 0, tzinfo=ZoneInfo("Asia/Tokyo"))
+            ),
+        )
+        self.assertEqual(
+            "2026-09-24",
+            module.expected_jpx_market_date(
+                datetime(2026, 9, 24, 15, 45, tzinfo=ZoneInfo("Asia/Tokyo"))
+            ),
+        )
 
     def test_close_workflow_runs_after_tokyo_close(self):
         source = (ROOT / ".github" / "workflows" / "japan-market-close.yml").read_text(encoding="utf-8")

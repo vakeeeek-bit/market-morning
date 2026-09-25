@@ -1,0 +1,242 @@
+{
+  "report_date": "2026-09-25",
+  "target_market_date": "2026-09-24",
+  "updated_at": "2026-09-25 11:55 JST",
+  "report_type": "japan_stocks",
+  "japan_quick_view": {
+    "headline": "今日は方向感がまちまち。円安は輸出株に追い風だが、原油高・米金利高・SOX安が成長株と運輸の重し。",
+    "top_materials": [
+      "米10年金利が5.162%へ上昇 → 高PER株の割引率負担が増す → 半導体・情報通信に向かい風",
+      "SOXが-0.33% → 米半導体株の勢いが鈍る → 国内半導体・電機に弱い追い風しかない",
+      "円安（1ドル158.793円） → 輸出採算を支える → 自動車・機械に追い風。ただし介入警戒",
+      "Brentが+3.83% → 燃料・原料コスト懸念が再上昇 → 空運・陸運・化学に向かい風",
+      "米・イランの段階的協議観測 → 原油高が一服する可能性 → 合意確認までは中立"
+    ],
+    "focus_sectors": [
+      "自動車・輸送機",
+      "機械",
+      "電機・精密",
+      "運輸・物流",
+      "エネルギー資源"
+    ],
+    "unpriced_materials": [
+      "米中首脳会談の最終成果",
+      "米・イラン協議の合意",
+      "9月25日の日本株大引け反応"
+    ]
+  },
+  "top_stories": [
+    {
+      "company": "半導体・高PER株",
+      "ticker": "-",
+      "headline": "米10年金利5.162%とSOX -0.33%が向かい風",
+      "category": "海外市場",
+      "fact": "米金利上昇と米半導体株下落が同時発生。",
+      "announced_at": "2026-09-25 11:55 JST",
+      "timing": "9月25日取引中",
+      "market_pricing_status": "取引中",
+      "price_reaction": "大引け未確認",
+      "related_stocks": [],
+      "related_sectors": [
+        "電機・精密",
+        "情報通信・サービス"
+      ],
+      "importance": "★★★★★",
+      "confidence": "高",
+      "source_url": "https://www.reuters.com/business/wall-st-futures-fall-middle-east-uncertainties-ahead-trump-xi-talks-2026-09-24/",
+      "analysis": "割引率と米半導体株心理の両面で逆風。",
+      "today_watch": "SOX反発と米10年金利5%割れ",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "company": "輸出株",
+      "ticker": "-",
+      "headline": "円安158.793円は追い風だが介入警戒",
+      "category": "為替",
+      "fact": "USD/JPYは前日比+0.84%。",
+      "announced_at": "2026-09-25 11:55 JST",
+      "timing": "9月25日取引中",
+      "market_pricing_status": "一部織り込み中",
+      "price_reaction": "大引け未確認",
+      "related_stocks": [],
+      "related_sectors": [
+        "自動車・輸送機",
+        "機械"
+      ],
+      "importance": "★★★★★",
+      "confidence": "高",
+      "source_url": "https://www.reuters.com/world/asia-pacific/volatile-yen-draws-intervention-watch-other-currencies-subdued-2026-09-21/",
+      "analysis": "輸出採算を支える一方、160円接近では円高反転リスクが増す。",
+      "today_watch": "円相場と輸出株の相対強弱",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "company": "運輸・化学",
+      "ticker": "-",
+      "headline": "Brent 107.03ドルでコスト懸念が再上昇",
+      "category": "原油",
+      "fact": "Brent +3.83%、WTI +2.82%。",
+      "announced_at": "2026-09-25 11:55 JST",
+      "timing": "9月25日取引中",
+      "market_pricing_status": "取引中",
+      "price_reaction": "大引け未確認",
+      "related_stocks": [],
+      "related_sectors": [
+        "運輸・物流",
+        "素材・化学"
+      ],
+      "importance": "★★★★★",
+      "confidence": "高",
+      "source_url": "https://www.reuters.com/business/wall-st-futures-fall-middle-east-uncertainties-ahead-trump-xi-talks-2026-09-24/",
+      "analysis": "燃料・原料コストの逆風。米・イラン合意で反転する可能性もある。",
+      "today_watch": "原油と米・イラン協議",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "company": "エネルギー資源",
+      "ticker": "-",
+      "headline": "原油高は追い風候補、ただし外交で反転リスク",
+      "category": "原油",
+      "fact": "米エネルギーETFは+0.37%。",
+      "announced_at": "2026-09-25 11:55 JST",
+      "timing": "9月25日取引中",
+      "market_pricing_status": "取引中",
+      "price_reaction": "大引け未確認",
+      "related_stocks": [],
+      "related_sectors": [
+        "エネルギー資源",
+        "商社・卸売"
+      ],
+      "importance": "★★★★☆",
+      "confidence": "高",
+      "source_url": "https://www.reuters.com/business/wall-st-futures-fall-middle-east-uncertainties-ahead-trump-xi-talks-2026-09-24/",
+      "analysis": "原油高は採算面の追い風だが、協議進展で急反落し得る。",
+      "today_watch": "Brentの方向と業種ETFの相対騰落",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    }
+  ],
+  "important_stories": [
+    {
+      "company": "中国関連株",
+      "ticker": "-",
+      "headline": "米中首脳会談の最終成果は確認待ち",
+      "category": "米中政策",
+      "fact": "貿易休戦延長は前進したが、半導体・重要鉱物の具体策は確認待ち。",
+      "announced_at": "2026-09-25 11:55 JST",
+      "timing": "9月25日取引中",
+      "market_pricing_status": "結果待ち",
+      "price_reaction": "大引け未確認",
+      "related_stocks": [],
+      "related_sectors": [
+        "機械",
+        "電機・精密",
+        "鉄鋼・非鉄"
+      ],
+      "importance": "★★★★☆",
+      "confidence": "高",
+      "source_url": "https://www.reuters.com/markets/europe/global-markets-view-europe-2026-09-24/",
+      "analysis": "会談開催だけで好材料とは判定しない。",
+      "today_watch": "共同発表と中国株の反応",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "company": "非鉄・商社",
+      "ticker": "-",
+      "headline": "Copper +1.43%、在庫未確認のため需給は断定しない",
+      "category": "Copper",
+      "fact": "連続先物の参考日足は上昇。",
+      "announced_at": "2026-09-25 11:55 JST",
+      "timing": "9月25日取引中",
+      "market_pricing_status": "一部織り込み中",
+      "price_reaction": "大引け未確認",
+      "related_stocks": [],
+      "related_sectors": [
+        "鉄鋼・非鉄",
+        "商社・卸売"
+      ],
+      "importance": "★★★☆☆",
+      "confidence": "高",
+      "source_url": "https://www.reuters.com/markets/europe/global-markets-view-europe-2026-09-24/",
+      "analysis": "価格は追い風候補だが、日本株主要材料の固定枠にはしない。",
+      "today_watch": "業種ETFのTOPIX比と取引所在庫",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    }
+  ],
+  "other_stories": [],
+  "company_events": [],
+  "sector_implications": [
+    {
+      "driver": "円安",
+      "affected_sectors": [
+        "自動車・輸送機",
+        "機械"
+      ],
+      "possible_impact": "輸出採算に追い風",
+      "confirmation_condition": "大引け後の業種ETFがTOPIXを上回るか"
+    },
+    {
+      "driver": "米金利高・SOX安",
+      "affected_sectors": [
+        "電機・精密",
+        "情報通信・サービス"
+      ],
+      "possible_impact": "向かい風",
+      "confirmation_condition": "SOX反発と米10年金利5%割れ"
+    },
+    {
+      "driver": "原油高",
+      "affected_sectors": [
+        "エネルギー資源",
+        "運輸・物流",
+        "素材・化学"
+      ],
+      "possible_impact": "資源に追い風、運輸・化学に向かい風",
+      "confirmation_condition": "Brentと各業種ETFの相対騰落"
+    }
+  ],
+  "data_quality": {
+    "overall": "要確認項目あり",
+    "missing": [
+      "日経225の9月24日正本値",
+      "9月25日大引け値",
+      "TDnet全件の完全網羅"
+    ],
+    "differences": [
+      "海外市場の主対象日は9月24日、日本株は9月25日取引中",
+      "TOPIXは1306 ETF参考値"
+    ],
+    "unpriced": [
+      "米中首脳会談最終成果",
+      "米・イラン合意",
+      "9月25日日本株終値"
+    ],
+    "cautions": [
+      "取引中値を終値として扱わない",
+      "34監視銘柄から日本市場全体を評価しない",
+      "セクター全体を主要2銘柄で評価しない"
+    ]
+  },
+  "source_notes": [
+    "https://www.reuters.com/business/wall-st-futures-fall-middle-east-uncertainties-ahead-trump-xi-talks-2026-09-24/",
+    "https://www.reuters.com/markets/europe/global-markets-view-europe-2026-09-24/",
+    "https://www.reuters.com/world/asia-pacific/volatile-yen-draws-intervention-watch-other-currencies-subdued-2026-09-21/"
+  ]
+}

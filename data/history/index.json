@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-18T23:16:43+00:00",
-  "latest": "2026-09-19",
+  "updated_at": "2026-09-25T03:51:18+00:00",
+  "latest": "2026-09-25",
   "dates": [
     "2026-08-28",
     "2026-08-29",
@@ -24,7 +24,11 @@
     "2026-09-16",
     "2026-09-17",
     "2026-09-18",
-    "2026-09-19"
+    "2026-09-19",
+    "2026-09-22",
+    "2026-09-23",
+    "2026-09-24",
+    "2026-09-25"
   ],
   "entries": [
     {
@@ -232,6 +236,42 @@
       "has_market": true,
       "has_japan_stocks": true,
       "has_japan_market": false,
+      "report_type": "daily"
+    },
+    {
+      "date": "2026-09-22",
+      "status": "market_only",
+      "has_report": false,
+      "has_market": true,
+      "has_japan_stocks": false,
+      "has_japan_market": true,
+      "report_type": null
+    },
+    {
+      "date": "2026-09-23",
+      "status": "market_only",
+      "has_report": false,
+      "has_market": true,
+      "has_japan_stocks": false,
+      "has_japan_market": true,
+      "report_type": null
+    },
+    {
+      "date": "2026-09-24",
+      "status": "market_only",
+      "has_report": false,
+      "has_market": true,
+      "has_japan_stocks": false,
+      "has_japan_market": true,
+      "report_type": null
+    },
+    {
+      "date": "2026-09-25",
+      "status": "complete",
+      "has_report": true,
+      "has_market": true,
+      "has_japan_stocks": true,
+      "has_japan_market": true,
       "report_type": "daily"
     }
   ]

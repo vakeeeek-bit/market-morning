@@ -1,0 +1,753 @@
+{
+  "report_date": "2026-09-25",
+  "target_market_date": "2026-09-24",
+  "updated_at": "2026-09-25 11:55 JST",
+  "report_type": "daily",
+  "week_period": null,
+  "quick_view": {
+    "headline": "今日の日本株は方向感がまちまち。円安は輸出株の追い風だが、原油高・米長期金利高・SOX安が成長株と運輸の重し。",
+    "top_news": [
+      {
+        "title": "原油高と米長期金利上昇が重し。米株は方向感まちまち"
+      },
+      {
+        "title": "米・イランが戦争終結へ段階案を協議との報道。合意は未確認"
+      },
+      {
+        "title": "円安は輸出株を支える一方、1ドル160円接近で介入警戒"
+      }
+    ],
+    "important_today": [
+      "米・イラン協議の具体的進展",
+      "米10年金利が5.1%台を維持するか",
+      "SOX反発と円相場の組み合わせ"
+    ]
+  },
+  "executive_summary": {
+    "headline": "円安の追い風だけで全面高とは見にくい。原油・金利・SOXを業種別に読む日。",
+    "market_mood": "方向感まちまち。米主要指数は小動きだが、S&P500内では下落銘柄が多い。",
+    "main_driver": "原油高と米10年金利5.162%",
+    "winners": [
+      "米通信サービス",
+      "米ヘルスケア",
+      "円安恩恵の輸出株候補"
+    ],
+    "losers": [
+      "米素材・公益",
+      "米半導体",
+      "原油高に弱い運輸"
+    ],
+    "important_today": [
+      "米・イラン協議",
+      "米中首脳会談の最終成果",
+      "米金利とSOX"
+    ],
+    "watch_markets": [
+      "Brent",
+      "米10年債",
+      "SOX",
+      "USD/JPY"
+    ],
+    "current_environment": [
+      "米10年金利5.162%",
+      "Brent 107.03ドル",
+      "円安158円台",
+      "SOX -0.33%"
+    ]
+  },
+  "main_story": {
+    "title": "原油高と米金利上昇が、日本株への円安効果を相殺",
+    "fact": "Brent +3.83%、米10年債利回り5.162%、USD/JPY 158.793円、SOX -0.33%。",
+    "market_reaction": "S&P500はほぼ横ばいだが、構成銘柄では下落が優勢。",
+    "importance_reason": "円安は輸出株に追い風でも、金利は高PER株、原油は運輸・化学の負担になるため、指数一括ではなく業種別に見る必要がある。",
+    "confidence": "高"
+  },
+  "news": [
+    {
+      "title": "原油高と米長期金利上昇で米株は方向感まちまち",
+      "fact": "9月24日はS&P500 -0.02%、NASDAQ総合 +0.01%、NASDAQ100 +0.03%、SOX -0.33%、NYダウ -0.31%。米10年債利回りは5.162%。",
+      "published_at": "2026-09-24 US close",
+      "market_reaction": "主要指数は小幅まちまちだが、S&P500内では下落銘柄が上昇銘柄の約1.9倍。VIXは+3.23%。",
+      "analysis": "指数の小動きに対して内部は弱い。日本では円安だけで全面高を想定せず、半導体・高PER株と輸出株を分けて見る。",
+      "related_assets": [
+        "米10年債",
+        "S&P500",
+        "SOX",
+        "VIX"
+      ],
+      "related_japan_sectors": [
+        "電機・精密",
+        "情報通信・サービス",
+        "自動車・輸送機"
+      ],
+      "importance": "★★★★★",
+      "source_url": "https://www.reuters.com/business/wall-st-futures-fall-middle-east-uncertainties-ahead-trump-xi-talks-2026-09-24/",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "title": "米・イランが段階的な戦争終結案を協議との報道",
+      "fact": "Reutersは、イランのホルムズ海峡再開と米国の経済封鎖解除を含む段階案を米・イラン交渉担当者が検討していると報道。最終合意は確認できていない。",
+      "published_at": "2026-09-24 US",
+      "market_reaction": "米株は安値から戻した一方、Brentは終値ベースで107.03ドル、前日比+3.83%。",
+      "analysis": "合意なら原油・金利・輸送コストの逆風が和らぐ可能性があるが、報道だけで供給正常化を織り込まない。",
+      "related_assets": [
+        "Brent",
+        "WTI",
+        "米10年債"
+      ],
+      "related_japan_sectors": [
+        "エネルギー資源",
+        "空運",
+        "陸運",
+        "素材・化学"
+      ],
+      "importance": "★★★★★",
+      "source_url": "https://www.reuters.com/business/wall-st-futures-fall-middle-east-uncertainties-ahead-trump-xi-talks-2026-09-24/",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "title": "円は1ドル158円台後半、輸出支援と介入警戒が同居",
+      "fact": "USD/JPYの日足終値は158.793円、前日比+0.84%。",
+      "published_at": "2026-09-24 US close",
+      "market_reaction": "円安が続いた一方、160円接近では日本当局の対応への警戒が強まりやすい。",
+      "analysis": "自動車・機械の採算には追い風だが、輸入コスト上昇と急な円高反転の両方を監視する。",
+      "related_assets": [
+        "USD/JPY",
+        "DXY"
+      ],
+      "related_japan_sectors": [
+        "自動車・輸送機",
+        "機械",
+        "小売",
+        "運輸・物流"
+      ],
+      "importance": "★★★★☆",
+      "source_url": "https://www.reuters.com/world/asia-pacific/volatile-yen-draws-intervention-watch-other-currencies-subdued-2026-09-21/",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "title": "米中首脳会談は貿易休戦延長が焦点、最終成果は確認待ち",
+      "fact": "米中は首脳会談に先立ち貿易休戦延長で合意したと米財務長官が説明。AI、重要鉱物、台湾、イランも論点。更新時点で首脳会談の最終共同発表は確認できていない。",
+      "published_at": "2026-09-24",
+      "market_reaction": "最終成果への市場反応は確認できず。",
+      "analysis": "会談開催ではなく、半導体規制・重要鉱物・関税の具体策で日本の機械、電機、非鉄への影響を判定する。",
+      "related_assets": [
+        "中国株",
+        "半導体",
+        "Copper"
+      ],
+      "related_japan_sectors": [
+        "機械",
+        "電機・精密",
+        "鉄鋼・非鉄",
+        "自動車・輸送機"
+      ],
+      "importance": "★★★★☆",
+      "source_url": "https://www.reuters.com/markets/europe/global-markets-view-europe-2026-09-24/",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    }
+  ],
+  "policy": {
+    "fed": {
+      "fact": "米10年金利は5.162%。Fed高官は年内の追加利上げ余地を示唆。",
+      "market_reaction": "高PER株の上値を抑え、VIXは上昇。",
+      "outlook": "金利が5%を下回るまでは成長株の負担が残る。"
+    },
+    "us_iran": {
+      "fact": "段階的な戦争終結案の協議が報じられたが、合意は未確認。",
+      "market_reaction": "米株は安値から戻したが、原油はなお上昇。",
+      "outlook": "ホルムズ海峡再開と封鎖解除の具体化を確認する。"
+    },
+    "us_china": {
+      "fact": "貿易休戦延長は前進したが、首脳会談の最終成果は確認待ち。",
+      "market_reaction": "最終成果への反応は未確認。",
+      "outlook": "半導体規制・重要鉱物・関税の具体策で判断する。"
+    }
+  },
+  "scenarios": [
+    {
+      "name": "基本シナリオ",
+      "conditions": "米10年金利が5.1%台、原油が高止まり、SOXが戻り切らない。",
+      "impact_on_japan": "円安が輸出株を支える一方、半導体・高PER株と運輸には逆風が残り、方向感はまちまち。",
+      "strong_sectors": [
+        "自動車・輸送機",
+        "機械"
+      ],
+      "weak_sectors": [
+        "情報通信・サービス",
+        "空運",
+        "不動産"
+      ],
+      "invalidation": "米10年金利5%割れ、原油反落、SOX反発が同時に確認される。"
+    },
+    {
+      "name": "上振れシナリオ",
+      "conditions": "米・イラン合意で原油が反落し、米金利低下とSOX反発が続く。",
+      "impact_on_japan": "半導体・電機と運輸へ追い風が広がる。",
+      "strong_sectors": [
+        "電機・精密",
+        "情報通信・サービス",
+        "運輸・物流"
+      ],
+      "weak_sectors": [
+        "エネルギー資源"
+      ],
+      "invalidation": "協議決裂または原油・金利の再上昇。"
+    },
+    {
+      "name": "下振れシナリオ",
+      "conditions": "中東緊張激化で原油と米金利が一段高、SOX続落、円が急反発。",
+      "impact_on_japan": "成長株、輸出株、運輸が同時に弱くなる。",
+      "strong_sectors": [
+        "確認できず"
+      ],
+      "weak_sectors": [
+        "電機・精密",
+        "自動車・輸送機",
+        "運輸・物流"
+      ],
+      "invalidation": "原油と米金利が反落し、SOXが反発。"
+    }
+  ],
+  "events": [
+    {
+      "event": "米中首脳会談の最終発表",
+      "jst_time": "2026-09-25（確認時刻未定）",
+      "consensus": "大規模合意より関係安定化",
+      "previous": "貿易休戦延長で事前合意",
+      "focus": "半導体規制、重要鉱物、関税、イラン",
+      "affected_markets": [
+        "中国株",
+        "半導体",
+        "Copper",
+        "日本株"
+      ],
+      "importance": "★★★★★"
+    },
+    {
+      "event": "米・イラン協議",
+      "jst_time": "時刻確認できず",
+      "consensus": "確認できず",
+      "previous": "段階案を検討との報道",
+      "focus": "ホルムズ海峡再開と米国の封鎖解除",
+      "affected_markets": [
+        "原油",
+        "米金利",
+        "運輸株"
+      ],
+      "importance": "★★★★★"
+    }
+  ],
+  "market_data": [
+    {
+      "market": "S&P500",
+      "price": "7704.1299",
+      "change": "-0.02%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "NASDAQ総合",
+      "price": "26939.373",
+      "change": "+0.01%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "NASDAQ100",
+      "price": "30478.8555",
+      "change": "+0.03%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "PHLX半導体株指数（SOX）",
+      "price": "12492.5361",
+      "change": "-0.33%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "NYダウ",
+      "price": "51349.9805",
+      "change": "-0.31%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "Russell2000",
+      "price": "2835.5742",
+      "change": "-0.11%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "日経225",
+      "price": "65018.9492",
+      "change": "+1.38%",
+      "basis_time": "2026-09-18",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "TOPIX参考（1306 ETF）",
+      "price": "424.8",
+      "change": "-0.35%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "DXY",
+      "price": "101.265",
+      "change": "+0.16%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "USD/JPY",
+      "price": "158.793",
+      "change": "+0.84%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "EUR/USD",
+      "price": "1.1382",
+      "change": "-0.58%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米10年債利回り",
+      "price": "5.162",
+      "change": "+0.94%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "VIX",
+      "price": "15.67",
+      "change": "+3.23%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米コミュニケーション・サービス（XLC）",
+      "price": "113.99",
+      "change": "+1.27%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米一般消費財（XLY）",
+      "price": "110.32",
+      "change": "-0.30%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米生活必需品（XLP）",
+      "price": "81.7",
+      "change": "-0.89%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米エネルギー（XLE）",
+      "price": "62.6",
+      "change": "+0.37%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米金融（XLF）",
+      "price": "54.53",
+      "change": "-0.02%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米ヘルスケア（XLV）",
+      "price": "169.87",
+      "change": "+0.63%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米資本財（XLI）",
+      "price": "168.83",
+      "change": "-0.75%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米素材（XLB）",
+      "price": "49.68",
+      "change": "-1.19%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米不動産（XLRE）",
+      "price": "41.65",
+      "change": "-0.45%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米情報技術（XLK）",
+      "price": "194.71",
+      "change": "-0.32%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米公益（XLU）",
+      "price": "39.36",
+      "change": "-0.98%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "Gold",
+      "price": "4310.1001",
+      "change": "-0.19%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "Silver",
+      "price": "64.275",
+      "change": "-0.17%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "Copper",
+      "price": "6.7735",
+      "change": "+1.43%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "WTI",
+      "price": "94.76",
+      "change": "+2.82%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "Brent",
+      "price": "107.03",
+      "change": "+3.83%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "BTC",
+      "price": "84438.5391",
+      "change": "+0.07%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "ETH",
+      "price": "2689.73",
+      "change": "+0.19%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米2年債利回り",
+      "price": "4.85",
+      "change": "+2.97%",
+      "basis_time": "2026-09-23",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    }
+  ],
+  "market_overview": [
+    {
+      "market": "米大型株",
+      "move": "S&P500 -0.02% / NYダウ -0.31%",
+      "relative_strength": "やや弱い",
+      "background": "原油・金利上昇",
+      "impact_on_japan": "全面高を支持しない"
+    },
+    {
+      "market": "米ハイテク・半導体",
+      "move": "NASDAQ100 +0.03% / SOX -0.33%",
+      "relative_strength": "半導体が弱い",
+      "background": "長期金利5.162%",
+      "impact_on_japan": "半導体・高PER株に向かい風"
+    },
+    {
+      "market": "為替",
+      "move": "USD/JPY 158.793（+0.84%）",
+      "relative_strength": "円安",
+      "background": "日米金利差",
+      "impact_on_japan": "輸出に追い風、輸入コストと介入警戒"
+    },
+    {
+      "market": "原油",
+      "move": "WTI 94.76 / Brent 107.03",
+      "relative_strength": "強い",
+      "background": "供給不安",
+      "impact_on_japan": "資源に追い風、運輸・化学に向かい風"
+    }
+  ],
+  "changes_from_previous": [
+    "米株の全面安から主要指数の小動きへ",
+    "SOXは-1.23%から-0.33%へ下げ幅縮小",
+    "米10年金利は5.114%から5.162%へ上昇",
+    "Brentは下落から+3.83%へ反発",
+    "米・イラン段階協議観測が浮上"
+  ],
+  "internal_strength": {
+    "large_vs_small": "S&P500 -0.02%、Russell2000 -0.11%。小型株がやや弱い。",
+    "sectors": "通信サービス+1.27%、ヘルスケア+0.63%が上位。素材-1.19%、公益-0.98%、生活必需品-0.89%が下位。",
+    "assessment": "指数は横ばいでもS&P500内の下落銘柄が上昇銘柄の約1.9倍。表面より弱い。"
+  },
+  "japan_market_links": [
+    {
+      "pair": "米10年金利 → 高PER株",
+      "fact": "5.162%へ上昇",
+      "usual_relation": "金利上昇は将来利益の現在価値を下げやすい",
+      "consistency": "SOX下落で整合",
+      "interpretation": "半導体・情報通信に向かい風",
+      "confidence": "高"
+    },
+    {
+      "pair": "円安 → 輸出採算",
+      "fact": "USD/JPY 158.793円",
+      "usual_relation": "円安は海外売上の円換算と輸出採算を支えやすい",
+      "consistency": "日本株の当日反応は取引中",
+      "interpretation": "自動車・機械に追い風。ただし160円接近で介入警戒",
+      "confidence": "高"
+    },
+    {
+      "pair": "原油高 → コスト",
+      "fact": "Brent +3.83%",
+      "usual_relation": "燃料・原料コストを押し上げやすい",
+      "consistency": "米エネルギー株上昇で整合",
+      "interpretation": "資源に追い風、運輸・化学に向かい風",
+      "confidence": "高"
+    }
+  ],
+  "commodities_crypto": {
+    "commodities": {
+      "gold": {
+        "price": "4310.1001",
+        "change": "-0.19%",
+        "analysis": "ドル高・金利高の重し。日本株の固定主要材料にはしない。"
+      },
+      "oil": {
+        "price": "WTI 94.76 / Brent 107.03",
+        "change": "WTI +2.82% / Brent +3.83%",
+        "analysis": "中東供給不安で上昇。米・イラン合意確認までは高止まりリスク。"
+      },
+      "other": "Copper 6.7735（+1.43%）。価格上昇は確認するが、在庫同日値を確認できないため需給を断定しない。"
+    },
+    "crypto": {
+      "btc": "84438.54（+0.07%）",
+      "eth": "2689.73（+0.19%）",
+      "xrp": "確認できず",
+      "basis_time": "2026-09-24日足",
+      "assessment": "小幅高で方向感は限定的。"
+    }
+  },
+  "unusual_moves": [
+    {
+      "move": "原油・金利上昇でもNASDAQ100は小幅高",
+      "usual_relation": "原油・金利上昇は高PER株の逆風になりやすい",
+      "possible_reason": "Metaなど一部大型株の上昇が指数を支えた",
+      "confidence": "中"
+    }
+  ],
+  "monitoring_points": [
+    {
+      "target": "原油と米・イラン協議",
+      "current_view": "運輸・化学に向かい風",
+      "today_check": "合意とホルムズ海峡再開の具体化",
+      "view_change_condition": "Brent反落と合意確認で逆風を縮小"
+    },
+    {
+      "target": "米10年金利とSOX",
+      "current_view": "半導体・高PER株に向かい風",
+      "today_check": "5.1%台とSOX反発の有無",
+      "view_change_condition": "5%割れとSOX反発が同時に確認"
+    },
+    {
+      "target": "USD/JPY",
+      "current_view": "輸出に追い風、介入警戒",
+      "today_check": "160円接近と当局対応",
+      "view_change_condition": "急な円高反転で輸出株の見方を引き下げ"
+    }
+  ],
+  "strength": [
+    {
+      "asset": "米大型株",
+      "rating": 3,
+      "comment": "指数はほぼ横ばい、内部は弱い"
+    },
+    {
+      "asset": "米半導体",
+      "rating": 2,
+      "comment": "SOX -0.33%"
+    },
+    {
+      "asset": "原油",
+      "rating": 5,
+      "comment": "WTI・Brentが上昇"
+    },
+    {
+      "asset": "円",
+      "rating": 1,
+      "comment": "対ドルで下落"
+    }
+  ],
+  "data_quality": {
+    "overall": "要確認項目あり",
+    "missing": [
+      "日経225の9月24日正本値",
+      "OSE日経平均先物の限月付き正式値",
+      "CopperのLME・SHFE・COMEX同日在庫",
+      "米中首脳会談の最終共同発表"
+    ],
+    "differences": [
+      "米2年債は9月23日、米10年債は9月24日。2年-10年差は算出しない",
+      "TOPIXは指数そのものではなく1306 ETF参考値"
+    ],
+    "excluded": [
+      "限月を確認できない商品先物の厳密な終値解釈",
+      "34監視銘柄による日本市場全体の上昇・下落の広がり判定",
+      "外部記事の数値によるdata/market.json正本の置換"
+    ],
+    "cautions": [
+      "日本株は9月25日取引中のため当日値を終値として扱わない",
+      "日経225の自動取得値は9月18日のため、今日の方向判断には使用しない",
+      "商品値は連続先物の参考日足で、限月情報がない"
+    ]
+  },
+  "final_conclusion": {
+    "headline": "方向感はまちまち。円安は輸出株を支えるが、原油高・米金利高・SOX安が相殺。",
+    "winners": [
+      "円安恩恵の輸出株候補",
+      "資源株候補"
+    ],
+    "losers": [
+      "半導体・高PER株",
+      "運輸・化学"
+    ],
+    "top_three": [
+      "原油と米・イラン協議",
+      "米10年金利とSOX",
+      "USD/JPYと介入警戒"
+    ],
+    "triggers": [
+      "Brent反落",
+      "米10年金利5%割れ",
+      "SOX反発",
+      "急な円高反転"
+    ],
+    "disclaimer": "確認できない数値は補完せず、取引中値を終値として扱いません。"
+  },
+  "japan_equities_preview": {
+    "summary": "円安は輸出に追い風。ただし原油高・米金利高・SOX安で、日本株全体は方向感がまちまち。",
+    "top_materials": [
+      "米10年金利が5.162%へ上昇 → 高PER株の割引率負担が増す → 半導体・情報通信に向かい風",
+      "SOXが-0.33% → 米半導体株の勢いが鈍る → 国内半導体・電機に弱い追い風しかない",
+      "円安（1ドル158.793円） → 輸出採算を支える → 自動車・機械に追い風。ただし介入警戒",
+      "Brentが+3.83% → 燃料・原料コスト懸念が再上昇 → 空運・陸運・化学に向かい風",
+      "米・イランの段階的協議観測 → 原油高が一服する可能性 → 合意確認までは中立"
+    ],
+    "focus_sectors": [
+      "自動車・輸送機",
+      "機械",
+      "電機・精密",
+      "運輸・物流",
+      "エネルギー資源"
+    ],
+    "top_stories": [],
+    "total_story_count": 6
+  },
+  "source_notes": [
+    "https://www.reuters.com/business/wall-st-futures-fall-middle-east-uncertainties-ahead-trump-xi-talks-2026-09-24/",
+    "https://www.reuters.com/markets/europe/global-markets-view-europe-2026-09-24/",
+    "https://www.reuters.com/world/asia-pacific/volatile-yen-draws-intervention-watch-other-currencies-subdued-2026-09-21/"
+  ]
+}

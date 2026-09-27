@@ -85,6 +85,18 @@ class JapanMarketDesignTests(unittest.TestCase):
         source = (ROOT / "scripts" / "update_japan_market.py").read_text(encoding="utf-8")
         self.assertIn("def selection_key(item):", source)
 
+    def test_scheduled_boj_release_is_kept_as_selected_driver(self):
+        module = importlib.import_module("scripts.update_japan_market")
+        market = json.loads((ROOT / "data" / "market.json").read_text(encoding="utf-8"))
+        report = {
+            "report_date": "2026-09-28",
+            "japan_quick_view": {"unpriced_materials": ["8時50分の日銀資料"]},
+        }
+        drivers = module.build_key_drivers(market, "2026-09-25", report)
+        boj = next(item for item in drivers if item["driver"] == "日銀資料")
+        self.assertEqual("scheduled", boj["status"])
+        self.assertEqual("日本株現物に未反映", boj["pricing_status"])
+
     def test_sector_quality_uses_only_sector_etf_three_axes(self):
         data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))
         for item in data["sector_quality"]:

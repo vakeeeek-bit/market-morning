@@ -10,7 +10,8 @@
     "us10y": "^TNXを米10年債利回りとして使用",
     "us2y": "米2年債利回りはFRED DGS2を使用。公表タイミングの違いにより、米10年債と基準日がずれる場合があります",
     "us_2s10s": "米10年債利回り - 米2年債利回り。両系列のmarket_dateも確認してください",
-    "vix": "^VIXをVIX指数として使用"
+    "vix": "^VIXをVIX指数として使用",
+    "same_date_stability": "9月28日朝の再取得で同じ9月25日の先物値が変わったSilver・Copper・Brentは、前日までに検証済みの同日スナップショットを維持"
   },
   "markets": {
     "sp500": {
@@ -291,10 +292,10 @@
     "silver": {
       "name": "Silver",
       "ticker": "SI=F",
-      "price": 64.801,
+      "price": 64.245,
       "previous": 63.457,
-      "change": 1.344,
-      "change_pct": 2.12,
+      "change": 0.788,
+      "change_pct": 1.24,
       "status": "取得成功",
       "market_date": "2026-09-25",
       "previous_market_date": "2026-09-24"
@@ -302,10 +303,10 @@
     "copper": {
       "name": "Copper",
       "ticker": "HG=F",
-      "price": 6.766,
+      "price": 6.6955,
       "previous": 6.7185,
-      "change": 0.0475,
-      "change_pct": 0.71,
+      "change": -0.023,
+      "change_pct": -0.34,
       "status": "取得成功",
       "market_date": "2026-09-25",
       "previous_market_date": "2026-09-24"
@@ -324,10 +325,10 @@
     "brent": {
       "name": "Brent",
       "ticker": "BZ=F",
-      "price": 97.44,
+      "price": 104.32,
       "previous": 106.6,
-      "change": -9.16,
-      "change_pct": -8.59,
+      "change": -2.28,
+      "change_pct": -2.14,
       "status": "取得成功",
       "market_date": "2026-09-25",
       "previous_market_date": "2026-09-24"

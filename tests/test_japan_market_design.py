@@ -111,6 +111,22 @@ class JapanMarketDesignTests(unittest.TestCase):
         self.assertNotIn("○×", serialized)
         self.assertIn("的中・外れを採点するものではありません", review["note"])
 
+    def test_preopen_review_does_not_score_previous_session(self):
+        sys.modules.setdefault("yfinance", types.SimpleNamespace(download=None))
+        module = importlib.import_module("scripts.update_japan_market")
+        report = {
+            "report_date": "2026-09-28",
+            "japan_quick_view": {
+                "focus_sectors": ["銀行"],
+                "unpriced_materials": ["本日の原油初動"],
+            },
+        }
+        sectors = [{"name": "銀行", "change_pct": 3.49, "status": "取得成功"}]
+        review = module.scenario_review(report, sectors, "2026-09-25")
+        self.assertEqual("寄り付き前・検証保留", review["status"])
+        self.assertEqual([], review["checks"])
+        self.assertIn("前営業日", review["note"])
+
     def test_holiday_and_data_error_have_distinct_states(self):
         data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))
         self.assertIn(data["data_state"]["kind"], {"normal", "holiday", "data_error"})

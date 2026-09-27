@@ -41,6 +41,8 @@ SYMBOLS = {
     "eth": {"name": "ETH", "ticker": "ETH-USD"},
 }
 
+CLOSED_SESSION_FUTURES = {"GC=F", "SI=F", "HG=F", "CL=F", "BZ=F"}
+
 
 def empty_market(info, status, error=None):
     result = {
@@ -87,11 +89,34 @@ def get_market_data(info, prior_snapshots=None):
     latest_market_date = latest_index.strftime("%Y-%m-%d")
     previous_market_date = previous_index.strftime("%Y-%m-%d")
 
+    if isinstance(prior_snapshots, dict):
+        prior_snapshots = [prior_snapshots]
+
+    # Yahoo can rewrite continuous-futures history when the front contract
+    # rolls. Do not silently change an already validated closed-session value.
+    if info["ticker"] in CLOSED_SESSION_FUTURES:
+        for prior_snapshot in prior_snapshots or []:
+            if not isinstance(prior_snapshot, dict):
+                continue
+            if (
+                prior_snapshot.get("status") == "取得成功"
+                and prior_snapshot.get("ticker") == info["ticker"]
+                and prior_snapshot.get("market_date") == latest_market_date
+                and isinstance(prior_snapshot.get("price"), (int, float))
+                and isinstance(prior_snapshot.get("previous"), (int, float))
+            ):
+                result = dict(prior_snapshot)
+                if not math.isclose(
+                    price, float(prior_snapshot["price"]), rel_tol=0, abs_tol=1e-9
+                ):
+                    result["stability_note"] = (
+                        "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
+                    )
+                return result
+
     # Yahooの短期履歴が中間営業日を一時的に欠落させる場合がある。
     # 直前に検証・保存した同一tickerの終値が履歴より新しければ、
     # それを前日終値として使い、複数日変化を「前日比」と誤表示しない。
-    if isinstance(prior_snapshots, dict):
-        prior_snapshots = [prior_snapshots]
     candidates = []
     for prior_snapshot in prior_snapshots or []:
         if not isinstance(prior_snapshot, dict):

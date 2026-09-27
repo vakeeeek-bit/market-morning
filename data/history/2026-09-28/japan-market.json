@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28 06:32:48 JST",
+  "updated_at": "2026-09-28 07:19:31 JST",
   "market_date": "2026-09-25",
   "data_phase": "取引開始前",
   "data_state": {
@@ -744,19 +744,6 @@
           "trading_value_proxy_yen": 14047992500,
           "market_date": "2026-09-25",
           "status": "取得成功"
-        },
-        {
-          "ticker": "8801.T",
-          "name": "三井不動産",
-          "sector": "不動産",
-          "price": 1507.5,
-          "change_pct": 0.43,
-          "return_5d_pct": 2.45,
-          "volume": 10088600,
-          "volume_ratio_20d": 1.1,
-          "trading_value_proxy_yen": 15208564500,
-          "market_date": "2026-09-25",
-          "status": "取得成功"
         }
       ]
     }
@@ -1034,47 +1021,26 @@
     "market_date": "2026-09-25",
     "title": "昨日のシナリオ検証 → 今日への修正",
     "basis": "前回レポートの注目業種をTOPIX-17業種ETFの実績と照合し、次の取引日へ見方を修正",
-    "status": "検証可能",
-    "checks": [
-      {
-        "sector": "電機・精密",
-        "result": "上位3"
-      },
-      {
-        "sector": "機械",
-        "result": "中位"
-      },
-      {
-        "sector": "銀行",
-        "result": "上位3"
-      },
-      {
-        "sector": "運輸・物流",
-        "result": "上位3"
-      },
-      {
-        "sector": "自動車・輸送機",
-        "result": "中位"
-      }
-    ],
-    "previous_condition": "米国のイラン案拒否後の原油反応 / 月曜の日本株現物 / 円高とSOX高のどちらを重く見るか",
-    "condition_result": "発生条件を自動判定できる一次データがないため、確認できず",
-    "market_reaction": "銀行 +3.49% / 電機・精密 +1.57% / 運輸・物流 +1.52%",
-    "unexpected_gap": "電機・精密は上位3 / 機械は中位 / 銀行は上位3 / 運輸・物流は上位3 / 自動車・輸送機は中位",
+    "status": "寄り付き前・検証保留",
+    "checks": [],
+    "previous_condition": "米国のイラン案拒否後の原油反応 / 8時50分の日銀資料 / 本日の日本株現物",
+    "condition_result": "本日の条件と日本株現物の反応はまだ発生・確認していません",
+    "market_reaction": "本日の日本株現物は寄り付き前",
+    "unexpected_gap": "新しい取引結果がないため比較しません",
     "gap_reason": "業種ETFの結果だけでは個別ニュースとの因果を分離できないため、理由は断定しません",
-    "revision": "注目業種の相対順位を踏まえて強弱判断を更新",
+    "revision": "本日の大引け後、実際の条件・市場反応・想定との差を確認して修正",
     "today_watch": [
       "米国のイラン案拒否後の原油反応",
-      "月曜の日本株現物",
-      "円高とSOX高のどちらを重く見るか"
+      "8時50分の日銀資料",
+      "本日の日本株現物"
     ],
-    "note": "的中・外れを採点するものではありません。前回の見方と実績の差から、今日の監視点を修正します。"
+    "note": "前営業日の値動きを、本日シナリオの結果として採点しません。"
   },
   "data_quality": {
     "sector_total": 17,
     "sector_available": 17,
     "stock_total": 34,
-    "stock_available": 34,
+    "stock_available": 33,
     "date_alignment": {
       "expected_market_date": "2026-09-25",
       "report_target_market_date": "2026-09-25",

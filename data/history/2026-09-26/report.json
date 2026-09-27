@@ -1,11 +1,11 @@
 {
-  "report_date": "2026-09-27",
+  "report_date": "2026-09-26",
   "target_market_date": "2026-09-25",
-  "updated_at": "2026-09-27 10:25 JST",
+  "updated_at": "2026-09-27 10:25 JST（9月26日分を後日作成）",
   "report_type": "weekend",
   "week_period": null,
   "quick_view": {
-    "headline": "金曜は日米株が上昇。ただし米国のイラン案拒否で、原油安という追い風は月曜まで続くと決めつけない。",
+    "headline": "金曜は日米株が上昇。半導体株高と原油安が追い風だが、円高と週末の中東情勢が月曜の注意点。",
     "top_news": [
       {
         "title": "日経平均+1.30%、TOPIX参考値+1.29%。金曜の日本株は主要指数がそろって上昇"
@@ -24,7 +24,7 @@
     ]
   },
   "executive_summary": {
-    "headline": "金曜は日米株が上昇。ただし米国のイラン案拒否で、原油安という追い風は月曜まで続くと決めつけない。",
+    "headline": "金曜は日米株が上昇。半導体株高と原油安が追い風だが、円高と週末の中東情勢が月曜の注意点。",
     "market_mood": "金曜は日米とも株高。月曜は週末の中東材料を織り込むため、金曜の原油安をそのまま延長しない。",
     "main_driver": "SOX高と原油安。ただしイラン案拒否は未反映",
     "winners": [
@@ -91,8 +91,8 @@
     },
     {
       "title": "米国がイランの7日間案を拒否、中東リスクは月曜に未反映",
-      "fact": "トランプ米大統領がイラン案を拒否したと表明し、イランは外交解決を主張。金曜の原油反落後に判明したため、月曜の価格には未反映。",
-      "published_at": "2026-09-27",
+      "fact": "イランの7日間案をトランプ米大統領が拒否したとの報道。イランは正式回答を待つとしており、金曜終値には未反映。",
+      "published_at": "2026-09-26",
       "market_reaction": "WTI -2.33%、Brent -2.14%は9月25日終値。拒否表明後の新しい日足反応はまだない。",
       "analysis": "金曜の原油安を運輸・化学への恒久的な追い風と見なさない。月曜は原油の窓開けと海峡再開交渉を優先確認する。",
       "related_assets": [
@@ -106,7 +106,7 @@
         "素材・化学"
       ],
       "importance": "★★★★★",
-      "source_url": "https://www.reuters.com/world/middle-east/iran-insists-diplomatic-solution-after-trump-rejects-peace-plan-2026-09-27/",
+      "source_url": "https://www.reuters.com/world/middle-east/iran-awaits-us-move-after-wsj-report-says-trump-rejects-peace-plan-2026-09-26/",
       "image_url": null,
       "image_alt": null,
       "image_credit": null,
@@ -161,7 +161,7 @@
   ],
   "policy": {
     "us_iran": {
-      "fact": "トランプ米大統領がイラン案を拒否したと表明し、イランは外交解決を主張。金曜の原油反落後に判明したため、月曜の価格には未反映。",
+      "fact": "イランの7日間案をトランプ米大統領が拒否したとの報道。イランは正式回答を待つとしており、金曜終値には未反映。",
       "market_reaction": "金曜終値には未反映",
       "outlook": "原油とホルムズ海峡交渉の初動で判断"
     },
@@ -653,7 +653,7 @@
       "eth": "2694.19（+0.14%）",
       "xrp": "確認できず",
       "basis_time": "2026-09-27日足",
-      "assessment": "週末も小幅高。日本株への波及は限定的。"
+      "assessment": "9月26日分を後日作成したため、9月27日付の暗号資産値は当日の判断に使用しない。"
     }
   },
   "unusual_moves": [
@@ -730,7 +730,7 @@
     ]
   },
   "final_conclusion": {
-    "headline": "金曜は日米株が上昇。ただし米国のイラン案拒否で、原油安という追い風は月曜まで続くと決めつけない。",
+    "headline": "金曜は日米株が上昇。半導体株高と原油安が追い風だが、円高と週末の中東情勢が月曜の注意点。",
     "winners": [
       "半導体・電機候補",
       "機械候補",
@@ -755,7 +755,7 @@
     "disclaimer": "休場中のため、週末ニュースの価格反応は確認できません。確認できない値は補完しません。"
   },
   "japan_equities_preview": {
-    "summary": "金曜は日米株が上昇。ただし米国のイラン案拒否で、原油安という追い風は月曜まで続くと決めつけない。",
+    "summary": "金曜は日米株が上昇。半導体株高と原油安が追い風だが、円高と週末の中東情勢が月曜の注意点。",
     "top_materials": [
       "SOX +1.41% → 米半導体株の地合い改善 → 電機・精密、機械に追い風",
       "円高（1ドル157.185円、-1.02%）→ 輸出採算の追い風が弱まる → 自動車・機械に向かい風",
@@ -776,7 +776,7 @@
   "source_notes": [
     "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-advances-a-fair-and-reciprocal-relationship-with-china-while-hosting-historic-state-visit/",
     "https://www.reuters.com/world/middle-east/iran-ready-reopen-strait-hormuz-if-us-eases-military-pressure-lifts-blockade-2026-09-22/",
-    "https://www.reuters.com/world/middle-east/iran-insists-diplomatic-solution-after-trump-rejects-peace-plan-2026-09-27/",
+    "https://www.reuters.com/world/middle-east/iran-awaits-us-move-after-wsj-report-says-trump-rejects-peace-plan-2026-09-26/",
     "https://www.boj.or.jp/en/about/calendar/index.htm",
     "https://www.bea.gov/news/schedule",
     "https://www.bls.gov/schedule/news_release/empsit.htm",

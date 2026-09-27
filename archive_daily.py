@@ -241,9 +241,13 @@ def archive_japan_market() -> None:
         return
     destination = HISTORY_DIR / date_key
     destination.mkdir(parents=True, exist_ok=True)
+    archive_path = destination / "japan-market.json"
+    if archive_path.exists():
+        print(f"Preserved {date_key}: existing japan-market.json")
+        return
     temp_path = destination / "japan-market.json.tmp"
     shutil.copy2(JAPAN_MARKET_PATH, temp_path)
-    temp_path.replace(destination / "japan-market.json")
+    temp_path.replace(archive_path)
     print(f"Archived {date_key}: japan-market.json")
 
 
@@ -305,7 +309,8 @@ def main() -> None:
     archive_japan_stocks()
     archive_japan_market()
 
-    if market_date and market_date != date_key:
+    is_weekend_report = report.get("report_type") == "weekend"
+    if market_date and market_date != date_key and not is_weekend_report:
         refresh_history_index()
         print(
             "保存待ち: report.jsonの日付 "

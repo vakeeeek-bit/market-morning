@@ -1,51 +1,77 @@
 {
-  "report_date": "2026-09-25",
-  "target_market_date": "2026-09-24",
-  "updated_at": "2026-09-25 11:55 JST",
+  "report_date": "2026-09-27",
+  "target_market_date": "2026-09-25",
+  "updated_at": "2026-09-27 10:25 JST",
   "report_type": "japan_stocks",
   "japan_quick_view": {
-    "headline": "今日は方向感がまちまち。円安は輸出株に追い風だが、原油高・米金利高・SOX安が成長株と運輸の重し。",
+    "headline": "金曜は日米株が上昇。ただし米国のイラン案拒否で、原油安という追い風は月曜まで続くと決めつけない。",
     "top_materials": [
-      "米10年金利が5.162%へ上昇 → 高PER株の割引率負担が増す → 半導体・情報通信に向かい風",
-      "SOXが-0.33% → 米半導体株の勢いが鈍る → 国内半導体・電機に弱い追い風しかない",
-      "円安（1ドル158.793円） → 輸出採算を支える → 自動車・機械に追い風。ただし介入警戒",
-      "Brentが+3.83% → 燃料・原料コスト懸念が再上昇 → 空運・陸運・化学に向かい風",
-      "米・イランの段階的協議観測 → 原油高が一服する可能性 → 合意確認までは中立"
+      "SOX +1.41% → 米半導体株の地合い改善 → 電機・精密、機械に追い風",
+      "円高（1ドル157.185円、-1.02%）→ 輸出採算の追い風が弱まる → 自動車・機械に向かい風",
+      "WTI -2.33% → 燃料・原料コストが低下 → 運輸・素材に追い風。ただし週末のイラン情勢は未反映",
+      "米10年金利5.184%へ上昇 → 高PER株の割引率負担が増す → 情報通信・高PER株に向かい風",
+      "米中首脳会談で限定的な通商前進 → 中国関連需要の不透明感が一部後退 → 機械・素材を監視。レアアース問題は未解決"
     ],
     "focus_sectors": [
-      "自動車・輸送機",
-      "機械",
       "電機・精密",
+      "機械",
+      "銀行",
       "運輸・物流",
-      "エネルギー資源"
+      "自動車・輸送機"
     ],
     "unpriced_materials": [
-      "米中首脳会談の最終成果",
-      "米・イラン協議の合意",
-      "9月25日の日本株大引け反応"
+      "米国のイラン案拒否後の原油反応",
+      "月曜の日本株現物",
+      "円高とSOX高のどちらを重く見るか"
     ]
   },
   "top_stories": [
     {
-      "company": "半導体・高PER株",
+      "company": "半導体・電機",
       "ticker": "-",
-      "headline": "米10年金利5.162%とSOX -0.33%が向かい風",
+      "headline": "SOX +1.41%は月曜の追い風候補",
       "category": "海外市場",
-      "fact": "米金利上昇と米半導体株下落が同時発生。",
-      "announced_at": "2026-09-25 11:55 JST",
-      "timing": "9月25日取引中",
-      "market_pricing_status": "取引中",
-      "price_reaction": "大引け未確認",
+      "fact": "米半導体株は金曜に上昇。日本の電機・精密ETFも金曜+1.57%。",
+      "announced_at": "2026-09-27 10:25 JST",
+      "timing": "週末・東証休場",
+      "market_pricing_status": "金曜分は織り込み済み・月曜分は未反映",
+      "price_reaction": "東証休場のため未確認",
       "related_stocks": [],
       "related_sectors": [
         "電機・精密",
-        "情報通信・サービス"
+        "機械"
       ],
       "importance": "★★★★★",
       "confidence": "高",
-      "source_url": "https://www.reuters.com/business/wall-st-futures-fall-middle-east-uncertainties-ahead-trump-xi-talks-2026-09-24/",
-      "analysis": "割引率と米半導体株心理の両面で逆風。",
-      "today_watch": "SOX反発と米10年金利5%割れ",
+      "source_url": "https://finance.yahoo.com/quote/%5ESOX/history/",
+      "analysis": "米半導体高は追い風だが、日本株も金曜に上昇済み。月曜は追加上昇の有無をTOPIX比で確認する。",
+      "today_watch": "SOXの続伸と電機・精密ETFのTOPIX比",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "company": "運輸・資源・素材",
+      "ticker": "-",
+      "headline": "原油安の追い風に週末のイラン案拒否が重なる",
+      "category": "原油・外交",
+      "fact": "トランプ米大統領がイラン案を拒否したと表明し、イランは外交解決を主張。金曜の原油反落後に判明したため、月曜の価格には未反映。",
+      "announced_at": "2026-09-27 10:25 JST",
+      "timing": "週末・東証休場",
+      "market_pricing_status": "週末材料は未反映",
+      "price_reaction": "東証休場のため未確認",
+      "related_stocks": [],
+      "related_sectors": [
+        "運輸・物流",
+        "エネルギー資源",
+        "素材・化学"
+      ],
+      "importance": "★★★★★",
+      "confidence": "高",
+      "source_url": "https://www.reuters.com/world/middle-east/iran-insists-diplomatic-solution-after-trump-rejects-peace-plan-2026-09-27/",
+      "analysis": "原油の方向が業種間の勝ち負けを反転させ得る。金曜の原油安だけで月曜を決めない。",
+      "today_watch": "拒否表明後のWTI・Brentと業種ETF",
       "image_url": null,
       "image_alt": null,
       "image_credit": null,
@@ -54,13 +80,13 @@
     {
       "company": "輸出株",
       "ticker": "-",
-      "headline": "円安158.793円は追い風だが介入警戒",
+      "headline": "円高157円台で米株高の追い風を一部相殺",
       "category": "為替",
-      "fact": "USD/JPYは前日比+0.84%。",
-      "announced_at": "2026-09-25 11:55 JST",
-      "timing": "9月25日取引中",
-      "market_pricing_status": "一部織り込み中",
-      "price_reaction": "大引け未確認",
+      "fact": "USD/JPYは157.185円、前日比-1.02%。",
+      "announced_at": "2026-09-27 10:25 JST",
+      "timing": "週末・東証休場",
+      "market_pricing_status": "月曜の日本株には未反映",
+      "price_reaction": "東証休場のため未確認",
       "related_stocks": [],
       "related_sectors": [
         "自動車・輸送機",
@@ -68,59 +94,35 @@
       ],
       "importance": "★★★★★",
       "confidence": "高",
-      "source_url": "https://www.reuters.com/world/asia-pacific/volatile-yen-draws-intervention-watch-other-currencies-subdued-2026-09-21/",
-      "analysis": "輸出採算を支える一方、160円接近では円高反転リスクが増す。",
-      "today_watch": "円相場と輸出株の相対強弱",
+      "source_url": "https://finance.yahoo.com/quote/JPY=X/history/",
+      "analysis": "自動車・機械はSOXや米工業株高だけでなく、円高の逆風も同時に評価する。",
+      "today_watch": "ドル円と輸出型ETFのTOPIX比",
       "image_url": null,
       "image_alt": null,
       "image_credit": null,
       "image_source_url": null
     },
     {
-      "company": "運輸・化学",
+      "company": "銀行・高PER株",
       "ticker": "-",
-      "headline": "Brent 107.03ドルでコスト懸念が再上昇",
-      "category": "原油",
-      "fact": "Brent +3.83%、WTI +2.82%。",
-      "announced_at": "2026-09-25 11:55 JST",
-      "timing": "9月25日取引中",
-      "market_pricing_status": "取引中",
-      "price_reaction": "大引け未確認",
+      "headline": "米10年金利5.184%、銀行には追い風候補・高PER株には逆風",
+      "category": "金利",
+      "fact": "米10年金利は上昇。米2年金利は1日古いため長短金利差は算出しない。",
+      "announced_at": "2026-09-27 10:25 JST",
+      "timing": "週末・東証休場",
+      "market_pricing_status": "金曜分は一部織り込み済み",
+      "price_reaction": "東証休場のため未確認",
       "related_stocks": [],
       "related_sectors": [
-        "運輸・物流",
-        "素材・化学"
-      ],
-      "importance": "★★★★★",
-      "confidence": "高",
-      "source_url": "https://www.reuters.com/business/wall-st-futures-fall-middle-east-uncertainties-ahead-trump-xi-talks-2026-09-24/",
-      "analysis": "燃料・原料コストの逆風。米・イラン合意で反転する可能性もある。",
-      "today_watch": "原油と米・イラン協議",
-      "image_url": null,
-      "image_alt": null,
-      "image_credit": null,
-      "image_source_url": null
-    },
-    {
-      "company": "エネルギー資源",
-      "ticker": "-",
-      "headline": "原油高は追い風候補、ただし外交で反転リスク",
-      "category": "原油",
-      "fact": "米エネルギーETFは+0.37%。",
-      "announced_at": "2026-09-25 11:55 JST",
-      "timing": "9月25日取引中",
-      "market_pricing_status": "取引中",
-      "price_reaction": "大引け未確認",
-      "related_stocks": [],
-      "related_sectors": [
-        "エネルギー資源",
-        "商社・卸売"
+        "銀行",
+        "情報通信・サービス",
+        "電機・精密"
       ],
       "importance": "★★★★☆",
       "confidence": "高",
-      "source_url": "https://www.reuters.com/business/wall-st-futures-fall-middle-east-uncertainties-ahead-trump-xi-talks-2026-09-24/",
-      "analysis": "原油高は採算面の追い風だが、協議進展で急反落し得る。",
-      "today_watch": "Brentの方向と業種ETFの相対騰落",
+      "source_url": "https://fred.stlouisfed.org/series/DGS10",
+      "analysis": "金利上昇の影響は銀行と高PER株で方向が異なる。",
+      "today_watch": "米10年金利と銀行ETF・情報通信ETFの相対方向",
       "image_url": null,
       "image_alt": null,
       "image_credit": null,
@@ -131,49 +133,51 @@
     {
       "company": "中国関連株",
       "ticker": "-",
-      "headline": "米中首脳会談の最終成果は確認待ち",
+      "headline": "米中会談は限定前進、レアアースは未解決",
       "category": "米中政策",
-      "fact": "貿易休戦延長は前進したが、半導体・重要鉱物の具体策は確認待ち。",
-      "announced_at": "2026-09-25 11:55 JST",
-      "timing": "9月25日取引中",
-      "market_pricing_status": "結果待ち",
-      "price_reaction": "大引け未確認",
+      "fact": "有利な関税待遇、農業作業部会、石炭輸入目標が発表された一方、レアアース供給不足は協議継続。",
+      "announced_at": "2026-09-27 10:25 JST",
+      "timing": "週末・東証休場",
+      "market_pricing_status": "金曜分は一部織り込み済み",
+      "price_reaction": "東証休場のため未確認",
       "related_stocks": [],
       "related_sectors": [
         "機械",
-        "電機・精密",
-        "鉄鋼・非鉄"
+        "鉄鋼・非鉄",
+        "商社・卸売"
       ],
       "importance": "★★★★☆",
       "confidence": "高",
-      "source_url": "https://www.reuters.com/markets/europe/global-markets-view-europe-2026-09-24/",
-      "analysis": "会談開催だけで好材料とは判定しない。",
-      "today_watch": "共同発表と中国株の反応",
+      "source_url": "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-advances-a-fair-and-reciprocal-relationship-with-china-while-hosting-historic-state-visit/",
+      "analysis": "会談開催そのものではなく、具体策と未解決点を分けて評価する。",
+      "today_watch": "中国市場と重要鉱物の続報",
       "image_url": null,
       "image_alt": null,
       "image_credit": null,
       "image_source_url": null
     },
     {
-      "company": "非鉄・商社",
+      "company": "金曜の業種ETF",
       "ticker": "-",
-      "headline": "Copper +1.43%、在庫未確認のため需給は断定しない",
-      "category": "Copper",
-      "fact": "連続先物の参考日足は上昇。",
-      "announced_at": "2026-09-25 11:55 JST",
-      "timing": "9月25日取引中",
-      "market_pricing_status": "一部織り込み中",
-      "price_reaction": "大引け未確認",
+      "headline": "銀行+3.49%が首位、電機・精密+1.57%、運輸+1.52%",
+      "category": "セクター",
+      "fact": "TOPIX-17業種ETF自身の9月25日騰落。金融（銀行除く）は-0.72%、電力・ガスは-0.36%。",
+      "announced_at": "2026-09-27 10:25 JST",
+      "timing": "週末・東証休場",
+      "market_pricing_status": "金曜終値で確認済み",
+      "price_reaction": "東証休場のため未確認",
       "related_stocks": [],
       "related_sectors": [
-        "鉄鋼・非鉄",
-        "商社・卸売"
+        "銀行",
+        "電機・精密",
+        "運輸・物流",
+        "金融（銀行除く）"
       ],
-      "importance": "★★★☆☆",
+      "importance": "★★★★☆",
       "confidence": "高",
-      "source_url": "https://www.reuters.com/markets/europe/global-markets-view-europe-2026-09-24/",
-      "analysis": "価格は追い風候補だが、日本株主要材料の固定枠にはしない。",
-      "today_watch": "業種ETFのTOPIX比と取引所在庫",
+      "source_url": "https://finance.yahoo.co.jp/quote/1631.T/history",
+      "analysis": "2銘柄の代理ではなく、業種ETF自身の価格・出来高・5日推移を使用。",
+      "today_watch": "月曜のTOPIX比と出来高",
       "image_url": null,
       "image_alt": null,
       "image_credit": null,
@@ -184,59 +188,64 @@
   "company_events": [],
   "sector_implications": [
     {
-      "driver": "円安",
+      "driver": "SOX高",
+      "affected_sectors": [
+        "電機・精密",
+        "機械"
+      ],
+      "possible_impact": "追い風候補",
+      "confirmation_condition": "月曜の業種ETFがTOPIXを上回る"
+    },
+    {
+      "driver": "円高",
       "affected_sectors": [
         "自動車・輸送機",
         "機械"
       ],
-      "possible_impact": "輸出採算に追い風",
-      "confirmation_condition": "大引け後の業種ETFがTOPIXを上回るか"
+      "possible_impact": "輸出採算に向かい風",
+      "confirmation_condition": "円高継続と外需ETFのTOPIX比低下"
     },
     {
-      "driver": "米金利高・SOX安",
+      "driver": "原油とイラン情勢",
       "affected_sectors": [
-        "電機・精密",
-        "情報通信・サービス"
-      ],
-      "possible_impact": "向かい風",
-      "confirmation_condition": "SOX反発と米10年金利5%割れ"
-    },
-    {
-      "driver": "原油高",
-      "affected_sectors": [
-        "エネルギー資源",
         "運輸・物流",
+        "エネルギー資源",
         "素材・化学"
       ],
-      "possible_impact": "資源に追い風、運輸・化学に向かい風",
-      "confirmation_condition": "Brentと各業種ETFの相対騰落"
+      "possible_impact": "原油が反発すれば金曜の関係が逆転",
+      "confirmation_condition": "月曜のWTI・Brent初動と業種ETF"
     }
   ],
   "data_quality": {
-    "overall": "要確認項目あり",
+    "overall": "正常（注意事項あり）",
     "missing": [
-      "日経225の9月24日正本値",
-      "9月25日大引け値",
+      "週末ニュース後の月曜価格反応",
+      "OSE先物の限月付き正式値",
       "TDnet全件の完全網羅"
     ],
     "differences": [
-      "海外市場の主対象日は9月24日、日本株は9月25日取引中",
+      "日本株・米株は9月25日終値、USD/JPYは9月26日付、暗号資産は9月27日付",
       "TOPIXは1306 ETF参考値"
     ],
     "unpriced": [
-      "米中首脳会談最終成果",
-      "米・イラン合意",
-      "9月25日日本株終値"
+      "米国のイラン案拒否",
+      "週末の外交続報",
+      "月曜の日本株現物"
     ],
     "cautions": [
-      "取引中値を終値として扱わない",
       "34監視銘柄から日本市場全体を評価しない",
-      "セクター全体を主要2銘柄で評価しない"
+      "セクター全体を主要2銘柄で評価しない",
+      "休場とデータ異常を区別する"
     ]
   },
   "source_notes": [
-    "https://www.reuters.com/business/wall-st-futures-fall-middle-east-uncertainties-ahead-trump-xi-talks-2026-09-24/",
-    "https://www.reuters.com/markets/europe/global-markets-view-europe-2026-09-24/",
-    "https://www.reuters.com/world/asia-pacific/volatile-yen-draws-intervention-watch-other-currencies-subdued-2026-09-21/"
+    "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-advances-a-fair-and-reciprocal-relationship-with-china-while-hosting-historic-state-visit/",
+    "https://www.reuters.com/world/middle-east/iran-ready-reopen-strait-hormuz-if-us-eases-military-pressure-lifts-blockade-2026-09-22/",
+    "https://www.reuters.com/world/middle-east/iran-insists-diplomatic-solution-after-trump-rejects-peace-plan-2026-09-27/",
+    "https://www.boj.or.jp/en/about/calendar/index.htm",
+    "https://www.bea.gov/news/schedule",
+    "https://www.bls.gov/schedule/news_release/empsit.htm",
+    "data/market.json",
+    "data/japan-market.json"
   ]
 }

@@ -164,6 +164,11 @@ class JapanMarketDesignTests(unittest.TestCase):
         self.assertIn('cron: "45 6 * * 1-5"', source)
         self.assertIn("update_japan_market.py", source)
 
+    def test_weekend_history_uses_its_target_market_date_snapshot(self):
+        source = (ROOT / "japan-stocks.html").read_text(encoding="utf-8")
+        self.assertIn("report.target_market_date", source)
+        self.assertIn("data/history/${targetMarketDate}/japan-market.json", source)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -38,6 +38,19 @@ class PreparePublishTests(unittest.TestCase):
         published = json.loads((self.root / "data" / "report.json").read_text(encoding="utf-8"))
         self.assertEqual(published["title"], "公開テスト")
 
+    def test_optional_japan_market_is_published_with_bundle(self):
+        shutil.copy2(ROOT / "data" / "japan-market.json", self.source / "japan-market.json")
+        payload = json.loads((self.source / "japan-market.json").read_text(encoding="utf-8"))
+        payload["updated_at"] = "2026-09-28 07:25 JST"
+        (self.source / "japan-market.json").write_text(
+            json.dumps(payload, ensure_ascii=False), encoding="utf-8"
+        )
+
+        prepare(self.source, self.root)
+
+        published = json.loads((self.root / "data" / "japan-market.json").read_text(encoding="utf-8"))
+        self.assertEqual("2026-09-28 07:25 JST", published["updated_at"])
+
     def test_mismatched_bundle_does_not_modify_data(self):
         before = (self.root / "data" / "report.json").read_bytes()
         japan = json.loads((self.source / "japan-stocks.json").read_text(encoding="utf-8"))

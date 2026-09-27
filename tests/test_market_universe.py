@@ -75,6 +75,38 @@ class MarketUniverseTests(unittest.TestCase):
         self.assertEqual(110.0, result["previous"])
         self.assertEqual(9.09, result["change_pct"])
 
+    def test_closed_futures_same_date_keeps_validated_snapshot(self):
+        module = importlib.import_module("scripts.update_market")
+        history = pd.DataFrame(
+            {"Close": [106.6, 97.44]},
+            index=pd.to_datetime(["2026-09-24", "2026-09-25"]),
+        )
+        prior = {
+            "name": "Brent",
+            "ticker": "BZ=F",
+            "price": 104.32,
+            "previous": 106.6,
+            "change": -2.28,
+            "change_pct": -2.14,
+            "status": "取得成功",
+            "market_date": "2026-09-25",
+            "previous_market_date": "2026-09-24",
+        }
+        original_yf = module.yf
+        module.yf = types.SimpleNamespace(
+            Ticker=lambda ticker: types.SimpleNamespace(history=lambda **kwargs: history)
+        )
+        try:
+            result = module.get_market_data(
+                {"name": "Brent", "ticker": "BZ=F"}, [prior]
+            )
+        finally:
+            module.yf = original_yf
+
+        self.assertEqual(104.32, result["price"])
+        self.assertEqual(-2.14, result["change_pct"])
+        self.assertIn("検証済み", result["stability_note"])
+
     def test_fred_publication_lag_is_explicit(self):
         module = importlib.import_module("scripts.update_market")
         markets = {

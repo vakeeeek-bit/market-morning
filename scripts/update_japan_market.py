@@ -321,12 +321,26 @@ def scenario_review(report, sector_rows, market_date, ready=True, blocked_reason
         "today_watch": report.get("japan_quick_view", {}).get("unpriced_materials", []) if isinstance(report, dict) else [],
         "note": "的中・外れを採点するものではありません。前回の見方と実績の差から、今日の監視点を修正します。",
     }
+    report_date = report.get("report_date") if isinstance(report, dict) else None
+    awaiting_new_session = (
+        isinstance(report_date, str)
+        and isinstance(market_date, str)
+        and report_date > market_date
+    )
     if holiday:
         result["status"] = "休場・検証保留"
         result["checks"] = []
         result["note"] = "東証現物は休場です。前営業日の実績は保持し、次の取引日に見方を修正します。"
         result["market_reaction"] = "休場のため新しい現物株の結果はありません"
         result["revision"] = "先物・海外材料は監視し、現物株の判断は次の取引日まで保留"
+    elif awaiting_new_session:
+        result["status"] = "寄り付き前・検証保留"
+        result["checks"] = []
+        result["condition_result"] = "本日の条件と日本株現物の反応はまだ発生・確認していません"
+        result["market_reaction"] = "本日の日本株現物は寄り付き前"
+        result["unexpected_gap"] = "新しい取引結果がないため比較しません"
+        result["revision"] = "本日の大引け後、実際の条件・市場反応・想定との差を確認して修正"
+        result["note"] = "前営業日の値動きを、本日シナリオの結果として採点しません。"
     elif blocked_reason:
         result["status"] = "判定保留"
         result["checks"] = []

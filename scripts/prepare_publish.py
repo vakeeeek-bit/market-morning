@@ -15,7 +15,7 @@ from validate_data import run
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED_FILES = ("report.json", "japan-stocks.json")
-OPTIONAL_FILES = ("market.json", "status.json")
+OPTIONAL_FILES = ("market.json", "japan-market.json", "status.json")
 
 
 def prepare(source: Path, root: Path = ROOT, check_only: bool = False) -> list[Path]:

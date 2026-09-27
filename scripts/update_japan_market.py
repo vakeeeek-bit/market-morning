@@ -173,7 +173,7 @@ def driver_item(market, key, title, category, affected, evaluator, caveat=None, 
     return {"driver": title, "category": category, "assessment": assessment, "status": "observed", "market_value": row.get("price"), "change_pct": row.get("change_pct"), "transmission_path": transmission, "reason": reason, "affected_sectors": affected, "market_date": row.get("market_date"), "selection_factors": {"日本株への波及範囲": market_reach, "影響業種数": len(affected), "ニュース重要度": news_importance, "値動き": move_level}}
 
 
-def build_key_drivers(market, japan_market_date):
+def build_key_drivers(market, japan_market_date, report=None):
     candidates = [
         driver_item(market, "usdjpy", "ドル円", "為替", ["自動車・輸送機", "機械", "小売"], lambda row: ("外需に追い風／輸入コストに向かい風" if row["change_pct"] > 0.3 else "外需に向かい風／輸入コストに追い風" if row["change_pct"] < -0.3 else "中立", "輸出採算と輸入コストが変化"), market_reach=3, news_importance=3),
         driver_item(market, "us10y", "米10年金利", "金利", ["電機・精密", "情報通信・サービス", "銀行"], lambda row: ("高PER株に追い風" if row.get("change", 0) < -0.02 else "高PER株に向かい風" if row.get("change", 0) > 0.02 else "中立", "高PER株の割引率と銀行収益期待が変化"), market_reach=3, news_importance=3),
@@ -204,6 +204,29 @@ def build_key_drivers(market, japan_market_date):
         item["change_condition"] = change_conditions[item["driver"]]
         if item.get("pricing_status") == "日本株現物に未反映":
             item["reason"] += f"。日本株現物の基準日{japan_market_date}より新しく、次回取引の監視材料"
+    unpriced = report.get("japan_quick_view", {}).get("unpriced_materials", []) if isinstance(report, dict) else []
+    if any("日銀資料" in str(item) for item in unpriced):
+        drivers.append({
+            "driver": "日銀資料",
+            "category": "金融政策・物価",
+            "assessment": "公表前・方向保留",
+            "status": "scheduled",
+            "market_value": None,
+            "change_pct": None,
+            "transmission_path": "追加利上げ観測 → 円・国内金利 → 銀行・不動産・高PER株",
+            "reason": "8時50分に7月会合議事要旨と8月企業向けサービス価格指数を公表予定。内容と価格反応が出る前は方向を決めません",
+            "affected_sectors": ["銀行", "不動産", "情報通信・サービス"],
+            "market_date": report.get("report_date"),
+            "selection_factors": {
+                "日本株現物への織り込み": "公表前",
+                "日本株への波及範囲": 3,
+                "影響業種数": 3,
+                "ニュース重要度": 3,
+                "値動き": 0,
+            },
+            "pricing_status": "日本株現物に未反映",
+            "change_condition": "公表後の円・国内金利・銀行・不動産の反応がそろえば見方を修正する",
+        })
     return drivers
 
 
@@ -374,7 +397,7 @@ def enrich_investor_view(result, market, report):
     internals = result.get("market_internals", {})
     topix = next((row for row in sector_rows if row.get("ticker") == "1306.T"), None)
     result["market_regime"] = build_market_regime(sector_rows, stock_rows, internals)
-    result["key_drivers"] = build_key_drivers(market, result.get("market_date"))
+    result["key_drivers"] = build_key_drivers(market, result.get("market_date"), report)
     result["rotation_read"] = build_rotation(sector_rows, internals)
     benchmark_rows = result.get("benchmark_rows", [])
     topix_benchmark = next((row for row in benchmark_rows if row.get("ticker") == "1306.T"), topix)

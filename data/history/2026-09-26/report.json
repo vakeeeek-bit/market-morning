@@ -1,0 +1,786 @@
+{
+  "report_date": "2026-09-26",
+  "target_market_date": "2026-09-25",
+  "updated_at": "2026-09-27 10:25 JST（9月26日分を後日作成）",
+  "report_type": "weekend",
+  "week_period": null,
+  "quick_view": {
+    "headline": "金曜は日米株が上昇。半導体株高と原油安が追い風だが、円高と週末の中東情勢が月曜の注意点。",
+    "top_news": [
+      {
+        "title": "日経平均+1.30%、TOPIX参考値+1.29%。金曜の日本株は主要指数がそろって上昇"
+      },
+      {
+        "title": "SOX+1.41%、米工業株+0.95%。月曜の電機・機械に追い風候補"
+      },
+      {
+        "title": "米国がイラン案を拒否。金曜の原油-2%台は月曜にそのまま引き継がれない可能性"
+      }
+    ],
+    "important_today": [
+      "イラン情勢後の原油初動",
+      "円相場と輸出株",
+      "SOX高が日本の電機・精密へ続くか"
+    ]
+  },
+  "executive_summary": {
+    "headline": "金曜は日米株が上昇。半導体株高と原油安が追い風だが、円高と週末の中東情勢が月曜の注意点。",
+    "market_mood": "金曜は日米とも株高。月曜は週末の中東材料を織り込むため、金曜の原油安をそのまま延長しない。",
+    "main_driver": "SOX高と原油安。ただしイラン案拒否は未反映",
+    "winners": [
+      "米半導体",
+      "米工業株",
+      "金曜の日本の銀行・電機・運輸"
+    ],
+    "losers": [
+      "米エネルギー",
+      "米通信サービス",
+      "円高に弱い輸出株候補"
+    ],
+    "important_today": [
+      "イラン情勢",
+      "米中会談の具体策",
+      "月曜の原油・円・SOX"
+    ],
+    "watch_markets": [
+      "WTI・Brent",
+      "SOX",
+      "USD/JPY",
+      "米10年債"
+    ],
+    "current_environment": [
+      "日経平均+1.30%",
+      "SOX+1.41%",
+      "WTI-2.33%",
+      "円高157円台",
+      "米10年5.184%"
+    ]
+  },
+  "main_story": {
+    "title": "金曜の株高に、週末の中東リスクが重なる",
+    "fact": "日米株は上昇し原油は下落したが、その後に米国のイラン案拒否が判明。",
+    "market_reaction": "拒否表明後の日本株と主要商品の日足反応はまだ確認できない。",
+    "importance_reason": "月曜は金曜終値の延長ではなく、原油の新しい価格反応で運輸・資源・素材の見方を更新する必要がある。",
+    "confidence": "高"
+  },
+  "news": [
+    {
+      "title": "金曜の日米株は上昇、半導体と景気敏感株が優位",
+      "fact": "9月25日はS&P500 +0.51%、NYダウ +0.93%、SOX +1.41%。日経平均は+1.30%、TOPIX参考値は+1.29%。",
+      "published_at": "2026-09-25 close",
+      "market_reaction": "VIXは-5.11%。米国では工業+0.95%、情報技術+0.80%が上位だった。",
+      "analysis": "月曜の日本株には電機・精密と機械への追い風候補。ただし金曜に日本株も上昇済みで、追随余地は個別確認が必要。",
+      "related_assets": [
+        "日経平均",
+        "TOPIX",
+        "S&P500",
+        "SOX",
+        "VIX"
+      ],
+      "related_japan_sectors": [
+        "電機・精密",
+        "機械",
+        "銀行"
+      ],
+      "importance": "★★★★★",
+      "source_url": "https://finance.yahoo.com/quote/%5EN225/history/",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "title": "米国がイランの7日間案を拒否、中東リスクは月曜に未反映",
+      "fact": "イランの7日間案をトランプ米大統領が拒否したとの報道。イランは正式回答を待つとしており、金曜終値には未反映。",
+      "published_at": "2026-09-26",
+      "market_reaction": "WTI -2.33%、Brent -2.14%は9月25日終値。拒否表明後の新しい日足反応はまだない。",
+      "analysis": "金曜の原油安を運輸・化学への恒久的な追い風と見なさない。月曜は原油の窓開けと海峡再開交渉を優先確認する。",
+      "related_assets": [
+        "WTI",
+        "Brent",
+        "米10年債"
+      ],
+      "related_japan_sectors": [
+        "運輸・物流",
+        "エネルギー資源",
+        "素材・化学"
+      ],
+      "importance": "★★★★★",
+      "source_url": "https://www.reuters.com/world/middle-east/iran-awaits-us-move-after-wsj-report-says-trump-rejects-peace-plan-2026-09-26/",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "title": "米中首脳会談は限定的な通商前進、レアアース問題は未解決",
+      "fact": "米政府は双方300億ドル分の非センシティブ品への有利な関税待遇、農業作業部会、中国による2027・2028年の米国産石炭各1000万トン以上の輸入などを発表。一方、レアアース供給不足は協議継続。",
+      "published_at": "2026-09-25",
+      "market_reaction": "会談後の金曜米株は上昇したが、個別施策だけの寄与は分離できない。",
+      "analysis": "中国関連株には不透明感後退の材料だが、重要鉱物の供給制約が解消したとは扱わない。",
+      "related_assets": [
+        "中国株",
+        "石炭",
+        "レアアース"
+      ],
+      "related_japan_sectors": [
+        "機械",
+        "鉄鋼・非鉄",
+        "商社・卸売"
+      ],
+      "importance": "★★★★☆",
+      "source_url": "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-advances-a-fair-and-reciprocal-relationship-with-china-while-hosting-historic-state-visit/",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "title": "円高と米長期金利上昇が株高の中の逆風",
+      "fact": "USD/JPYは157.185円（-1.02%）、米10年債利回りは5.184%（+0.43%）。",
+      "published_at": "2026-09-26 FX close",
+      "market_reaction": "ドル指数は-0.32%。円高方向と米長期金利上昇が同時に進んだ。",
+      "analysis": "輸出株は米株高だけで一括評価せず、為替感応度を確認。高PER株には金利面の負担が残る。",
+      "related_assets": [
+        "USD/JPY",
+        "米10年債",
+        "DXY"
+      ],
+      "related_japan_sectors": [
+        "自動車・輸送機",
+        "機械",
+        "情報通信・サービス"
+      ],
+      "importance": "★★★★☆",
+      "source_url": "https://finance.yahoo.com/quote/JPY=X/history/",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    }
+  ],
+  "policy": {
+    "us_iran": {
+      "fact": "イランの7日間案をトランプ米大統領が拒否したとの報道。イランは正式回答を待つとしており、金曜終値には未反映。",
+      "market_reaction": "金曜終値には未反映",
+      "outlook": "原油とホルムズ海峡交渉の初動で判断"
+    },
+    "us_china": {
+      "fact": "関税・農業・石炭で限定的な合意。レアアース供給不足は協議継続。",
+      "market_reaction": "金曜米株は上昇したが寄与は分離できない",
+      "outlook": "実施時期と重要鉱物の進展を確認"
+    },
+    "fed": {
+      "fact": "米10年金利は5.184%。米2年金利は公表が1日遅れ。",
+      "market_reaction": "SOXは上昇したが高PER株の割引率負担は残る",
+      "outlook": "長短金利差は算出せず、10年金利の方向を確認"
+    }
+  },
+  "scenarios": [
+    {
+      "name": "基本シナリオ",
+      "conditions": "原油が金曜終値付近にとどまり、SOX高の流れが続く一方、円は157円台、米10年金利は5.1%台。",
+      "impact_on_japan": "電機・精密と機械が相対的に支えられるが、輸出株は円高、高PER株は金利高で上値が限られる。",
+      "strong_sectors": [
+        "電機・精密",
+        "機械",
+        "銀行"
+      ],
+      "weak_sectors": [
+        "情報通信・サービス",
+        "自動車・輸送機"
+      ],
+      "invalidation": "原油急騰、SOX反落、円高加速のうち2つ以上が同時に発生。"
+    },
+    {
+      "name": "上振れシナリオ",
+      "conditions": "外交協議が再開し原油が続落、米金利も低下、SOXが続伸。",
+      "impact_on_japan": "半導体・機械に加え、運輸・素材にも追い風が広がる。",
+      "strong_sectors": [
+        "電機・精密",
+        "機械",
+        "運輸・物流",
+        "素材・化学"
+      ],
+      "weak_sectors": [
+        "エネルギー資源"
+      ],
+      "invalidation": "イラン情勢悪化による原油反発、またはSOX反落。"
+    },
+    {
+      "name": "下振れシナリオ",
+      "conditions": "イラン情勢悪化で原油が急反発し、円高と米金利高が継続、SOXも反落。",
+      "impact_on_japan": "輸出、成長、運輸が同時に弱くなり、金曜高の反動が出る。",
+      "strong_sectors": [
+        "エネルギー資源"
+      ],
+      "weak_sectors": [
+        "自動車・輸送機",
+        "情報通信・サービス",
+        "運輸・物流"
+      ],
+      "invalidation": "原油反落とSOX反発が同時に確認される。"
+    }
+  ],
+  "events": [
+    {
+      "event": "日銀会合議事要旨・企業向けサービス価格指数",
+      "jst_time": "2026-09-28 08:50 JST",
+      "consensus": "確認できず",
+      "previous": "確認できず",
+      "focus": "金利・賃金・サービス価格の示唆",
+      "affected_markets": [
+        "円",
+        "銀行",
+        "不動産"
+      ],
+      "importance": "★★★★☆"
+    },
+    {
+      "event": "米個人所得・支出（8月）",
+      "jst_time": "2026-09-30 21:30 JST",
+      "consensus": "確認できず",
+      "previous": "確認できず",
+      "focus": "PCE物価と消費",
+      "affected_markets": [
+        "米金利",
+        "ドル",
+        "日本株"
+      ],
+      "importance": "★★★★★"
+    },
+    {
+      "event": "日銀短観（9月）・金融政策決定会合の主な意見",
+      "jst_time": "2026-10-01 08:50 JST",
+      "consensus": "確認できず",
+      "previous": "確認できず",
+      "focus": "企業景況感、設備投資、物価見通し",
+      "affected_markets": [
+        "日本株",
+        "円",
+        "銀行"
+      ],
+      "importance": "★★★★★"
+    },
+    {
+      "event": "米雇用統計（9月）",
+      "jst_time": "2026-10-02 21:30 JST",
+      "consensus": "確認できず",
+      "previous": "確認できず",
+      "focus": "雇用者数、失業率、賃金",
+      "affected_markets": [
+        "米金利",
+        "ドル",
+        "世界株"
+      ],
+      "importance": "★★★★★"
+    }
+  ],
+  "market_data": [
+    {
+      "market": "S&P500",
+      "price": "7743.4102",
+      "change": "+0.51%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "NASDAQ総合",
+      "price": "27068.7207",
+      "change": "+0.48%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "NASDAQ100",
+      "price": "30608.1309",
+      "change": "+0.42%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "PHLX半導体株指数（SOX）",
+      "price": "12668.9297",
+      "change": "+1.41%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "NYダウ",
+      "price": "51828.6211",
+      "change": "+0.93%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "Russell2000",
+      "price": "2837.55",
+      "change": "+0.07%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "日経225",
+      "price": "66364.2031",
+      "change": "+1.30%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "TOPIX参考（1306 ETF）",
+      "price": "430.3",
+      "change": "+1.29%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "DXY",
+      "price": "100.97",
+      "change": "-0.32%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "USD/JPY",
+      "price": "157.185",
+      "change": "-1.02%",
+      "basis_time": "2026-09-26",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "EUR/USD",
+      "price": "1.1401",
+      "change": "+0.23%",
+      "basis_time": "2026-09-26",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米10年債利回り",
+      "price": "5.184",
+      "change": "+0.43%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "VIX",
+      "price": "14.87",
+      "change": "-5.11%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米コミュニケーション・サービス（XLC）",
+      "price": "112.96",
+      "change": "-0.90%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米一般消費財（XLY）",
+      "price": "110.56",
+      "change": "+0.22%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米生活必需品（XLP）",
+      "price": "82.06",
+      "change": "+0.44%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米エネルギー（XLE）",
+      "price": "62.04",
+      "change": "-0.89%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米金融（XLF）",
+      "price": "54.84",
+      "change": "+0.57%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米ヘルスケア（XLV）",
+      "price": "170.7",
+      "change": "+0.49%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米資本財（XLI）",
+      "price": "170.43",
+      "change": "+0.95%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米素材（XLB）",
+      "price": "49.8",
+      "change": "+0.24%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米不動産（XLRE）",
+      "price": "41.56",
+      "change": "-0.22%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米情報技術（XLK）",
+      "price": "196.27",
+      "change": "+0.80%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米公益（XLU）",
+      "price": "39.51",
+      "change": "+0.38%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "Gold",
+      "price": "4321.2002",
+      "change": "+0.54%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "Silver",
+      "price": "64.245",
+      "change": "+1.24%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "Copper",
+      "price": "6.6955",
+      "change": "-0.34%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "WTI",
+      "price": "92.41",
+      "change": "-2.33%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "Brent",
+      "price": "104.32",
+      "change": "-2.14%",
+      "basis_time": "2026-09-25",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "BTC",
+      "price": "84364.8594",
+      "change": "+0.39%",
+      "basis_time": "2026-09-27",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "ETH",
+      "price": "2694.1899",
+      "change": "+0.14%",
+      "basis_time": "2026-09-27",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "米2年債利回り",
+      "price": "4.87",
+      "change": "+0.41%",
+      "basis_time": "2026-09-24",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    }
+  ],
+  "market_overview": [
+    {
+      "market": "日本株（金曜終値）",
+      "move": "日経平均 +1.30% / TOPIX参考値 +1.29%",
+      "relative_strength": "強い",
+      "background": "主要指数がそろって上昇",
+      "impact_on_japan": "金曜時点は広く買い優勢"
+    },
+    {
+      "market": "米半導体・工業",
+      "move": "SOX +1.41% / 米工業ETF +0.95%",
+      "relative_strength": "強い",
+      "background": "リスク選好",
+      "impact_on_japan": "電機・精密、機械に追い風候補"
+    },
+    {
+      "market": "為替・金利",
+      "move": "USD/JPY -1.02% / 米10年 5.184%",
+      "relative_strength": "円高・金利高",
+      "background": "ドル安と長期金利上昇が併存",
+      "impact_on_japan": "輸出と高PER株に逆風"
+    },
+    {
+      "market": "原油",
+      "move": "WTI -2.33% / Brent -2.14%",
+      "relative_strength": "金曜は下落",
+      "background": "外交期待。ただし拒否表明は未反映",
+      "impact_on_japan": "月曜の初動確認まで運輸追い風を保留"
+    }
+  ],
+  "changes_from_previous": [
+    "日経平均の取得値が9月25日終値へ更新され、古い9月18日値の問題は解消",
+    "SOXは+1.41%へ反発",
+    "WTI・Brentは2%台下落",
+    "USD/JPYは1.02%下落し円高",
+    "米国のイラン案拒否が週末に判明"
+  ],
+  "internal_strength": {
+    "large_vs_small": "S&P500 +0.51%、Russell2000 +0.07%。大型株が相対優位。",
+    "sectors": "米工業+0.95%、情報技術+0.80%、金融+0.57%が上位。通信サービス-0.90%、エネルギー-0.89%が下位。",
+    "assessment": "金曜の米国は指数上昇とVIX低下でリスク選好。ただし小型株はほぼ横ばい。"
+  },
+  "japan_market_links": [
+    {
+      "pair": "SOX高 → 国内半導体",
+      "fact": "SOX +1.41%",
+      "usual_relation": "米半導体株の投資家心理が国内関連株へ波及しやすい",
+      "consistency": "金曜の電機・精密ETFは+1.57%",
+      "interpretation": "電機・精密、機械に追い風候補",
+      "confidence": "高"
+    },
+    {
+      "pair": "円高 → 輸出採算",
+      "fact": "USD/JPY 157.185円、-1.02%",
+      "usual_relation": "円高は海外売上の円換算と輸出採算を押し下げやすい",
+      "consistency": "月曜の日本株反応は未確認",
+      "interpretation": "自動車・機械に向かい風",
+      "confidence": "高"
+    },
+    {
+      "pair": "原油安 → 燃料・原料コスト",
+      "fact": "WTI -2.33%、Brent -2.14%",
+      "usual_relation": "原油安は運輸・素材のコストを下げやすい",
+      "consistency": "週末のイラン案拒否は金曜価格に未反映",
+      "interpretation": "月曜の原油初動まで判断を保留",
+      "confidence": "高"
+    }
+  ],
+  "commodities_crypto": {
+    "commodities": {
+      "gold": {
+        "price": "4321.2002",
+        "change": "+0.54%",
+        "analysis": "小幅高。日本株の固定主要材料にはしない。"
+      },
+      "oil": {
+        "price": "WTI 92.41 / Brent 104.32",
+        "change": "WTI -2.33% / Brent -2.14%",
+        "analysis": "金曜は下落したが、週末のイラン案拒否は未反映。"
+      },
+      "other": "Copper 6.6955（-0.34%）。小幅安で、日本株の主要材料には選ばない。"
+    },
+    "crypto": {
+      "btc": "84364.86（+0.39%）",
+      "eth": "2694.19（+0.14%）",
+      "xrp": "確認できず",
+      "basis_time": "2026-09-27日足",
+      "assessment": "9月26日分を後日作成したため、9月27日付の暗号資産値は当日の判断に使用しない。"
+    }
+  },
+  "unusual_moves": [
+    {
+      "move": "米10年金利上昇でもSOXが+1.41%",
+      "usual_relation": "長期金利上昇は高PER株の逆風になりやすい",
+      "possible_reason": "金曜は半導体・工業への買いが金利負担を上回った可能性",
+      "confidence": "中"
+    }
+  ],
+  "monitoring_points": [
+    {
+      "target": "イラン情勢と原油",
+      "current_view": "金曜の原油安は運輸・素材に追い風",
+      "today_check": "拒否表明後のWTI・Brent初動",
+      "view_change_condition": "原油急反発なら運輸追い風を撤回し、資源を上方修正"
+    },
+    {
+      "target": "SOXと電機・精密",
+      "current_view": "追い風候補",
+      "today_check": "SOXの続伸と国内ETFのTOPIX比",
+      "view_change_condition": "SOX反落または国内ETFがTOPIXを下回れば影響を弱く見る"
+    },
+    {
+      "target": "USD/JPY",
+      "current_view": "輸出株に向かい風",
+      "today_check": "157円台からの方向",
+      "view_change_condition": "円安へ反転し輸出ETFも上向けば見方を修正"
+    }
+  ],
+  "strength": [
+    {
+      "asset": "日本株（金曜）",
+      "rating": 4,
+      "comment": "日経平均・TOPIX参考値がともに約1.3%上昇"
+    },
+    {
+      "asset": "米半導体",
+      "rating": 4,
+      "comment": "SOX +1.41%"
+    },
+    {
+      "asset": "原油（金曜）",
+      "rating": 2,
+      "comment": "2%台下落。ただし週末材料は未反映"
+    },
+    {
+      "asset": "円",
+      "rating": 4,
+      "comment": "対ドルで1.02%上昇"
+    }
+  ],
+  "data_quality": {
+    "overall": "正常（注意事項あり）",
+    "missing": [
+      "OSE日経平均先物の限月付き正式値",
+      "週末のイラン情勢を反映した原油・日本株の価格反応"
+    ],
+    "differences": [
+      "米2年債は9月24日、米10年債は9月25日。長短金利差は算出しない",
+      "TOPIXは指数そのものではなく1306 ETF参考値",
+      "USD/JPYは9月26日付、現物日本株は9月25日終値"
+    ],
+    "excluded": [
+      "34監視銘柄による日本市場全体の上昇・下落の広がり判定",
+      "各業種2銘柄によるセクター全体評価",
+      "推定値の実測値扱い",
+      "Copper・Goldの固定主要材料化"
+    ],
+    "cautions": [
+      "土日は東証休場。金曜終値を週末当日の値動きとして扱わない",
+      "商品値は連続先物の参考日足で限月付き清算値ではない",
+      "週末ニュースは月曜市場に未反映"
+    ]
+  },
+  "final_conclusion": {
+    "headline": "金曜は日米株が上昇。半導体株高と原油安が追い風だが、円高と週末の中東情勢が月曜の注意点。",
+    "winners": [
+      "半導体・電機候補",
+      "機械候補",
+      "原油安が続く場合の運輸・素材"
+    ],
+    "losers": [
+      "円高に弱い輸出株候補",
+      "高PER株",
+      "原油が反発した場合の運輸"
+    ],
+    "top_three": [
+      "原油の月曜初動",
+      "SOXと国内電機・精密",
+      "USD/JPY"
+    ],
+    "triggers": [
+      "原油急反発",
+      "SOX反落",
+      "156円台への円高",
+      "米10年金利5%割れ"
+    ],
+    "disclaimer": "休場中のため、週末ニュースの価格反応は確認できません。確認できない値は補完しません。"
+  },
+  "japan_equities_preview": {
+    "summary": "金曜は日米株が上昇。半導体株高と原油安が追い風だが、円高と週末の中東情勢が月曜の注意点。",
+    "top_materials": [
+      "SOX +1.41% → 米半導体株の地合い改善 → 電機・精密、機械に追い風",
+      "円高（1ドル157.185円、-1.02%）→ 輸出採算の追い風が弱まる → 自動車・機械に向かい風",
+      "WTI -2.33% → 燃料・原料コストが低下 → 運輸・素材に追い風。ただし週末のイラン情勢は未反映",
+      "米10年金利5.184%へ上昇 → 高PER株の割引率負担が増す → 情報通信・高PER株に向かい風",
+      "米中首脳会談で限定的な通商前進 → 中国関連需要の不透明感が一部後退 → 機械・素材を監視。レアアース問題は未解決"
+    ],
+    "focus_sectors": [
+      "電機・精密",
+      "機械",
+      "銀行",
+      "運輸・物流",
+      "自動車・輸送機"
+    ],
+    "top_stories": [],
+    "total_story_count": 6
+  },
+  "source_notes": [
+    "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-advances-a-fair-and-reciprocal-relationship-with-china-while-hosting-historic-state-visit/",
+    "https://www.reuters.com/world/middle-east/iran-ready-reopen-strait-hormuz-if-us-eases-military-pressure-lifts-blockade-2026-09-22/",
+    "https://www.reuters.com/world/middle-east/iran-awaits-us-move-after-wsj-report-says-trump-rejects-peace-plan-2026-09-26/",
+    "https://www.boj.or.jp/en/about/calendar/index.htm",
+    "https://www.bea.gov/news/schedule",
+    "https://www.bls.gov/schedule/news_release/empsit.htm",
+    "data/market.json",
+    "data/japan-market.json"
+  ]
+}

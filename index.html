@@ -1627,6 +1627,12 @@ td.nowrap {
 
 </div>
 
+<div class="section" id="japan-equities-section">
+  <div class="section-title">🇯🇵 今日の重要な個別株ニュース</div>
+  <div class="section-sub">企業固有の決算・業績修正・還元・受注から、重要度の高いものだけを表示します。</div>
+  <div id="japan-equities-preview">確認中</div>
+</div>
+
 
 <!-- =====================================================
      POLICY / CENTRAL BANK
@@ -4617,30 +4623,6 @@ function renderJapanEquitiesPreview(preview) {
     return;
   }
 
-  const summary = document.createElement('div');
-  summary.className = 'summary-main';
-  summary.textContent = safeText(preview.summary, '該当材料なし');
-  element.appendChild(summary);
-
-  const groups = [
-    ['重要材料 5件', preview.top_materials],
-    ['注目業種', preview.focus_sectors]
-  ];
-
-  groups.forEach(([label, values]) => {
-    if (!Array.isArray(values) || !values.length) return;
-    const box = document.createElement('div');
-    box.className = 'summary-box';
-    const heading = document.createElement('div');
-    heading.className = 'label';
-    heading.textContent = label;
-    const body = document.createElement('div');
-    body.className = 'value';
-    body.textContent = values.join(' / ');
-    box.append(heading, body);
-    element.appendChild(box);
-  });
-
   if (Array.isArray(preview.top_stories) && preview.top_stories.length) {
     const stories = preview.top_stories.map(item => ({
       title: [item.company, item.ticker ? `（${item.ticker}）` : ''].join('') +
@@ -4659,6 +4641,12 @@ function renderJapanEquitiesPreview(preview) {
   count.textContent = `詳細版掲載：${safeText(preview.total_story_count, 0)}件`;
   element.appendChild(count);
 
+  const link = document.createElement('a');
+  link.className = 'page-switch-link';
+  link.href = document.getElementById('japan-page-link')?.href || 'japan-stocks.html';
+  link.textContent = '日本株ページで根拠と全件を見る →';
+  element.appendChild(link);
+
 }
 
 function applyReportSectionOrder() {
@@ -4669,6 +4657,7 @@ function applyReportSectionOrder() {
     'executive-section',
     'main-story-section',
     'market-news-section',
+    'japan-equities-section',
     'policy-wrapper-section',
     'scenarios-section',
     'events-section',
@@ -5506,7 +5495,7 @@ function setupVer3UX() {
 
   const sectionGroups = {
     executive: ['executive-section', 'what-changed-section'],
-    news: ['main-story-section', 'market-news-section', 'policy-wrapper-section'],
+    news: ['main-story-section', 'market-news-section', 'japan-equities-section', 'policy-wrapper-section'],
     market: ['asset-history-section', 'market-data-section', 'price-ranking-section', 'relative-ranking-section', 'market-overview-section', 'internal-strength-section', 'cross-asset-section', 'asset-analysis-section'],
     commodity: ['commodities-section', 'copper-section'],
     crypto: ['crypto-section'],

@@ -742,8 +742,30 @@
       "運輸・物流",
       "エネルギー資源"
     ],
-    "top_stories": [],
-    "total_story_count": 6
+    "top_stories": [
+      {
+        "company": "日本オラクル",
+        "ticker": "4716",
+        "headline": "第1四半期は増収増益、営業利益22.7%増",
+        "importance": "★★★★★",
+        "market_pricing_status": "9月25日終値に反映済み"
+      },
+      {
+        "company": "生化学工業",
+        "ticker": "4548",
+        "headline": "通期予想を営業赤字へ下方修正、減配も発表",
+        "importance": "★★★★★",
+        "market_pricing_status": "9月25日終値に反映済み"
+      },
+      {
+        "company": "清水建設",
+        "ticker": "1803",
+        "headline": "自己株式取得枠を最大200億円へ拡大",
+        "importance": "★★★★★",
+        "market_pricing_status": "9月25日終値に反映済み"
+      }
+    ],
+    "total_story_count": 4
   },
   "source_notes": [
     "https://www.reuters.com/business/wall-st-futures-fall-middle-east-uncertainties-ahead-trump-xi-talks-2026-09-24/",

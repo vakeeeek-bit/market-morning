@@ -36,8 +36,21 @@
         "unpriced_materials": {
           "type": "array",
           "items": {}
+        },
+        "individual_news_review": {
+          "type": "object",
+          "properties": {
+            "status": {"type": "string"},
+            "reviewed_at": {"type": "string"},
+            "source": {"type": "string"},
+            "story_count": {"type": "integer"},
+            "scope": {"type": "string"}
+          },
+          "required": ["status", "reviewed_at", "source", "story_count", "scope"],
+          "additionalProperties": true
         }
       },
+      "required": ["headline", "top_materials", "individual_news_review"],
       "additionalProperties": true
     },
     "top_stories": {
@@ -142,6 +155,11 @@
             "type": "null"
           }
         },
+        "required": [
+          "company", "ticker", "headline", "category", "fact", "announced_at",
+          "timing", "market_pricing_status", "price_reaction", "importance",
+          "confidence", "source_url", "analysis", "today_watch"
+        ],
         "additionalProperties": true
       }
     },
@@ -197,6 +215,11 @@
             "type": "string"
           }
         },
+        "required": [
+          "company", "ticker", "headline", "category", "fact", "announced_at",
+          "timing", "market_pricing_status", "price_reaction", "importance",
+          "confidence", "source_url", "analysis", "today_watch"
+        ],
         "additionalProperties": true
       }
     },
@@ -266,6 +289,11 @@
             "type": "string"
           }
         },
+        "required": [
+          "company", "ticker", "headline", "category", "fact", "announced_at",
+          "timing", "market_pricing_status", "price_reaction", "importance",
+          "confidence", "source_url", "analysis", "today_watch"
+        ],
         "additionalProperties": true
       }
     },

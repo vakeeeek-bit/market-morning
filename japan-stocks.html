@@ -171,9 +171,7 @@ body {
     <button type="button" data-jp-target="rotation-section">比較</button>
     <button type="button" data-jp-target="sector-quality-section">セクター</button>
     <button type="button" data-jp-target="scenario-review-section">見方の修正</button>
-    <button type="button" data-jp-target="story-most-important">最重要</button>
-    <button type="button" data-jp-target="story-important">重要</button>
-    <button type="button" data-jp-target="story-other">その他</button>
+    <button type="button" data-jp-target="company-news-section">個別ニュース</button>
     <button type="button" data-jp-target="quality-section">品質</button>
   </nav>
 
@@ -236,7 +234,12 @@ body {
     <div id="scenario-review">大引け後の更新を待っています。</div>
   </section>
 
-  <div id="story-sections"></div>
+  <section class="section" id="company-news-section">
+    <div class="section-title">📰 個別株ニュース</div>
+    <div class="market-note">決算・業績修正・還元・受注など、企業固有の重要材料だけを掲載します。海外・為替・業種材料は上の主要材料に集約しています。</div>
+    <div id="individual-news-review">確認状況を読み込み中...</div>
+    <div id="story-sections"></div>
+  </section>
   <section class="section" id="quality-section">
     <div class="section-title">🔎 データ品質</div>
     <div id="quality">データ状態：確認中</div>
@@ -656,9 +659,21 @@ async function load() {
     document.getElementById('report-date').textContent = `公開日：${text(data.report_date)} ｜ 対象市場日：${text(data.target_market_date)} ｜ 更新：${text(data.updated_at)}`;
     const holder = document.getElementById('story-sections');
     holder.replaceChildren();
-    renderGroup(holder, '最重要', Array.isArray(data.top_stories) ? data.top_stories : [], '🔥', 'story-most-important');
-    renderGroup(holder, '重要', Array.isArray(data.important_stories) ? data.important_stories : [], '📌', 'story-important');
-    renderGroup(holder, 'その他', Array.isArray(data.other_stories) ? data.other_stories : [], '🗂️', 'story-other');
+    const groups = [
+      ['最重要', Array.isArray(data.top_stories) ? data.top_stories : [], '🔥', 'story-most-important'],
+      ['重要', Array.isArray(data.important_stories) ? data.important_stories : [], '📌', 'story-important'],
+      ['その他', Array.isArray(data.other_stories) ? data.other_stories : [], '🗂️', 'story-other']
+    ];
+    const storyCount = groups.reduce((sum, group) => sum + group[1].length, 0);
+    const review = data.japan_quick_view?.individual_news_review || {};
+    document.getElementById('individual-news-review').textContent = review.status === 'reviewed'
+      ? `確認済み：${text(review.source)}｜掲載 ${storyCount}件`
+      : '個別企業の開示確認状況を確認できません';
+    if (!storyCount) {
+      appendText(holder, 'empty', '確認範囲内に掲載基準を満たす重要な個別株ニュースはありません');
+    } else {
+      groups.filter(([, stories]) => stories.length).forEach(group => renderGroup(holder, ...group));
+    }
   } catch (error) {
     document.getElementById('report-date').textContent = '日本株詳細データを読み込めませんでした';
     document.getElementById('story-sections').textContent = `読み込みエラー：${error.message}`;

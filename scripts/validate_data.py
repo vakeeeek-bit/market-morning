@@ -145,6 +145,58 @@ def validate_relationships(data: dict[str, dict], result: ValidationResult) -> N
     else:
         result.ok(f"日本株詳細件数（{stories}件）")
 
+    story_items = [
+        item
+        for key in ("top_stories", "important_stories", "other_stories")
+        for item in japan.get(key, [])
+        if isinstance(item, dict)
+    ]
+    ticker_pattern = re.compile(r"^(?:\d{4}|\d{3}[A-Z])$")
+    required_story_text = (
+        "company", "ticker", "headline", "category", "fact", "announced_at",
+        "timing", "market_pricing_status", "price_reaction", "importance",
+        "confidence", "source_url", "analysis", "today_watch",
+    )
+    for index, item in enumerate(story_items):
+        location = f"japan-stocks story[{index}]"
+        for key in required_story_text:
+            value = item.get(key)
+            if not isinstance(value, str) or not value.strip():
+                result.error(f"{location}.{key}: 空でない文字列が必要です")
+        ticker = str(item.get("ticker", "")).strip().upper()
+        if not ticker_pattern.fullmatch(ticker):
+            result.error(
+                f"{location}.ticker: 個別上場会社の銘柄コードが必要です（{ticker or '空'}）"
+            )
+        source_url = str(item.get("source_url", ""))
+        if not source_url.startswith("https://"):
+            result.error(f"{location}.source_url: HTTPSの一次情報URLが必要です")
+        if any(domain in source_url for domain in ("finance.yahoo.", "reuters.com")):
+            result.error(f"{location}.source_url: 個別株ニュースは企業IR・TDnet等の一次情報を使用してください")
+
+    review = japan.get("japan_quick_view", {}).get("individual_news_review", {})
+    if review.get("status") != "reviewed":
+        result.error("japan_quick_view.individual_news_review.status: reviewed が必要です")
+    elif review.get("story_count") != stories:
+        result.error("個別株ニュースの監査件数と実数が一致しません")
+    else:
+        result.ok("個別株ニュースの一次情報・銘柄コード監査")
+
+    expected_preview = [
+        {
+            "company": item.get("company"),
+            "ticker": item.get("ticker"),
+            "headline": item.get("headline"),
+            "importance": item.get("importance"),
+            "market_pricing_status": item.get("market_pricing_status"),
+        }
+        for item in japan.get("top_stories", [])[:3]
+    ]
+    if preview.get("top_stories") != expected_preview:
+        result.error("report.jsonの個別株プレビューがjapan-stocks.jsonと一致しません")
+    else:
+        result.ok("個別株ニュースのトップページ連携")
+
     if report.get("report_date") != japan.get("report_date"):
         result.error("report.jsonとjapan-stocks.jsonのreport_dateが一致しません")
     elif report.get("target_market_date") != japan.get("target_market_date"):

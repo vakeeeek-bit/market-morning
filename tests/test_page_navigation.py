@@ -89,6 +89,8 @@ class PageNavigationTests(unittest.TestCase):
         self.assertIn('id="research-quality-detail"', world)
         self.assertIn("loadResearchQuality", world)
         self.assertIn("全9項目 PASS", world)
+        self.assertNotIn("appendText(holder, 'summary-main', allPass", world)
+        self.assertIn("holder.appendChild(elementWithClass('div', 'summary-main'", world)
 
     def test_japan_market_enrichment_sections_are_present(self):
         japan = self.read("japan-stocks.html")

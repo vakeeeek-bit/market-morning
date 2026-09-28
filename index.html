@@ -2404,12 +2404,12 @@ async function loadResearchQuality() {
     const statuses = Object.entries(labels).map(([key, label]) => `${label}：${safeText(gates[key], '未確認')}`);
     const allPass = statuses.length === 9 && Object.keys(labels).every(key => gates[key] === 'PASS');
     const coverage = evidence.research_coverage?.items || [];
-    appendText(holder, 'summary-main', allPass ? '調査・分析品質：全9項目 PASS ✓' : '調査・分析品質：要確認');
-    appendText(holder, 'market-note', `調査項目 ${coverage.length}件｜${statuses.join('｜')}`);
+    holder.appendChild(elementWithClass('div', 'summary-main', allPass ? '調査・分析品質：全9項目 PASS ✓' : '調査・分析品質：要確認'));
+    holder.appendChild(elementWithClass('div', 'market-note', `調査項目 ${coverage.length}件｜${statuses.join('｜')}`));
     const unavailable = coverage.filter(item => item.status === '十分調査したが取得不能');
-    if (unavailable.length) appendText(holder, 'market-note', `取得不能（証跡・影響評価あり）：${unavailable.map(item => item.label).join(' / ')}`);
+    if (unavailable.length) holder.appendChild(elementWithClass('div', 'market-note', `取得不能（証跡・影響評価あり）：${unavailable.map(item => item.label).join(' / ')}`));
   } catch (error) {
-    appendText(holder, 'market-note', selectedHistoryDate ? 'この履歴には調査・分析証跡が保存されていません。' : '調査・分析証跡を確認できません。');
+    holder.appendChild(elementWithClass('div', 'market-note', selectedHistoryDate ? 'この履歴には調査・分析証跡が保存されていません。' : '調査・分析証跡を確認できません。'));
   }
 }
 

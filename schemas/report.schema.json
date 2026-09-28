@@ -168,7 +168,22 @@
     "policy": {
       "type": "object",
       "properties": {
-        "trump_us_government": {
+        "us_iran": {
+          "type": "object",
+          "properties": {
+            "fact": {
+              "type": "string"
+            },
+            "market_reaction": {
+              "type": "string"
+            },
+            "outlook": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": true
+        },
+        "us_china": {
           "type": "object",
           "properties": {
             "fact": {
@@ -184,21 +199,6 @@
           "additionalProperties": true
         },
         "fed": {
-          "type": "object",
-          "properties": {
-            "fact": {
-              "type": "string"
-            },
-            "market_reaction": {
-              "type": "string"
-            },
-            "outlook": {
-              "type": "string"
-            }
-          },
-          "additionalProperties": true
-        },
-        "boj_japan": {
           "type": "object",
           "properties": {
             "fact": {
@@ -345,19 +345,10 @@
     "internal_strength": {
       "type": "object",
       "properties": {
-        "nikkei_vs_topix": {
-          "type": "string"
-        },
         "large_vs_small": {
           "type": "string"
         },
-        "breadth": {
-          "type": "string"
-        },
         "sectors": {
-          "type": "string"
-        },
-        "turnover": {
           "type": "string"
         },
         "assessment": {
@@ -620,22 +611,10 @@
               "headline": {
                 "type": "string"
               },
-              "fact": {
-                "type": "string"
-              },
-              "announced_at": {
-                "type": "string"
-              },
-              "market_pricing_status": {
-                "type": "string"
-              },
-              "price_reaction": {
-                "type": "string"
-              },
               "importance": {
                 "type": "string"
               },
-              "source_url": {
+              "market_pricing_status": {
                 "type": "string"
               }
             },

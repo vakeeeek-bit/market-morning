@@ -31,6 +31,7 @@ class ArchiveDailyWeekendTests(unittest.TestCase):
                 "MARKET_PATH": root / "data" / "market.json",
                 "JAPAN_STOCKS_PATH": root / "data" / "japan-stocks.json",
                 "JAPAN_MARKET_PATH": root / "data" / "japan-market.json",
+                "RESEARCH_EVIDENCE_PATH": root / "data" / "research-evidence.json",
                 "HISTORY_DIR": root / "data" / "history",
                 "INDEX_PATH": root / "data" / "history" / "index.json",
             }
@@ -39,6 +40,7 @@ class ArchiveDailyWeekendTests(unittest.TestCase):
 
             self.assertTrue((root / "data" / "history" / "2026-09-26" / "report.json").exists())
             self.assertTrue((root / "data" / "history" / "2026-09-26" / "market.json").exists())
+            self.assertTrue((root / "data" / "history" / "2026-09-28" / "research-evidence.json").exists())
 
 
 if __name__ == "__main__":

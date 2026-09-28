@@ -16,7 +16,7 @@ class ValidateDataTest(unittest.TestCase):
         (temporary / "schemas").mkdir()
         for name in (
             "report", "market", "japan-stocks", "japan-market", "status",
-            "market-context", "glossary"
+            "market-context", "glossary", "research-evidence"
         ):
             data = json.loads((ROOT / "data" / f"{name}.json").read_text())
             if mutate:
@@ -102,6 +102,67 @@ class ValidateDataTest(unittest.TestCase):
 
         result = run(self.make_root(mutate))
         self.assertTrue(any("プレビュー" in message for message in result.errors))
+
+    def test_actual_omission_is_blocked_by_research_gate(self):
+        """Regression: the old flow passed despite skipping individual-stock research."""
+        def mutate(name, data):
+            if name == "research-evidence":
+                item = next(row for row in data["research_coverage"]["items"] if row["id"] == "company_disclosures")
+                item["status"] = "未調査"
+            return data
+
+        result = run(self.make_root(mutate))
+        self.assertTrue(any("未調査は公開不可" in message for message in result.errors))
+
+    def test_analysis_gate_rejects_sox_only_semiconductor_claim(self):
+        """Regression: SOX alone cannot establish a broad Japan semiconductor tailwind."""
+        def mutate(name, data):
+            if name == "research-evidence":
+                material = data["analysis_quality"]["materials"][0]
+                material["observed_market_reaction"]["assets_checked"] = ["SOX"]
+                material["japan_transmission"]["intermediate_reactions"] = []
+                material["counter_evidence"] = []
+                material["chronology_check"] = "FAIL"
+                data["quality_gates"]["analysis_logic"] = "FAIL"
+            return data
+
+        result = run(self.make_root(mutate))
+        joined = "\n".join(result.errors)
+        self.assertIn("途中経路", joined)
+        self.assertIn("反証材料", joined)
+        self.assertIn("時系列", joined)
+        self.assertIn("analysis_logic", joined)
+
+    def test_required_unavailable_needs_two_attempts_and_impact(self):
+        def mutate(name, data):
+            if name == "research-evidence":
+                item = next(row for row in data["research_coverage"]["items"] if row["id"] == "analyst_rating_changes")
+                item["attempts"] = item["attempts"][:1]
+                item["impact_if_unavailable"] = ""
+            return data
+
+        result = run(self.make_root(mutate))
+        joined = "\n".join(result.errors)
+        self.assertIn("調査試行が2件以上", joined)
+        self.assertIn("分析影響評価", joined)
+
+    def test_counter_evidence_cannot_be_empty(self):
+        def mutate(name, data):
+            if name == "research-evidence":
+                data["counter_evidence_audit"]["conclusions"] = []
+            return data
+
+        result = run(self.make_root(mutate))
+        self.assertTrue(any("Counter-Evidence Auditが空" in message for message in result.errors))
+
+    def test_unavailable_analyst_coverage_cannot_claim_no_changes(self):
+        def mutate(name, data):
+            if name == "japan-stocks":
+                data["analyst_rating_changes"]["headline"] = "本日の変更なし"
+            return data
+
+        result = run(self.make_root(mutate))
+        self.assertTrue(any("『変更なし』と断定" in message for message in result.errors))
 
 
 if __name__ == "__main__":

@@ -78,6 +78,18 @@ class PageNavigationTests(unittest.TestCase):
         self.assertIn("海外・為替・業種材料は上の主要材料に集約", japan)
         self.assertIn("individual_news_review", japan)
 
+    def test_analyst_rating_changes_show_coverage_limits(self):
+        japan = self.read("japan-stocks.html")
+        self.assertIn('id="rating-section"', japan)
+        self.assertIn("renderRatingChanges", japan)
+        self.assertIn("網羅できない日は「変更なし」と断定しません", japan)
+
+    def test_home_shows_nine_research_analysis_gates(self):
+        world = self.read("index.html")
+        self.assertIn('id="research-quality-detail"', world)
+        self.assertIn("loadResearchQuality", world)
+        self.assertIn("全9項目 PASS", world)
+
     def test_japan_market_enrichment_sections_are_present(self):
         japan = self.read("japan-stocks.html")
         for element_id in (

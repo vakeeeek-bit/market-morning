@@ -7,6 +7,7 @@ on:
       - "data/report.json"
       - "data/market.json"
       - "data/japan-stocks.json"
+      - "data/research-evidence.json"
       - "archive_daily.py"
       - ".github/workflows/archive-daily.yml"
   workflow_dispatch:

@@ -13,7 +13,16 @@
     "notes": {
       "type": "object",
       "properties": {
+        "basis": {
+          "type": "string"
+        },
         "topix": {
+          "type": "string"
+        },
+        "sox": {
+          "type": "string"
+        },
+        "us_sectors": {
           "type": "string"
         },
         "us10y": {
@@ -26,6 +35,9 @@
           "type": "string"
         },
         "vix": {
+          "type": "string"
+        },
+        "same_date_stability": {
           "type": "string"
         }
       },
@@ -105,6 +117,41 @@
           "additionalProperties": true
         },
         "nasdaq100": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "ticker": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "previous": {
+              "type": "number"
+            },
+            "change": {
+              "type": "number"
+            },
+            "change_pct": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            },
+            "previous_market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            }
+          },
+          "additionalProperties": true
+        },
+        "sox": {
           "type": "object",
           "properties": {
             "name": {
@@ -454,6 +501,391 @@
           },
           "additionalProperties": true
         },
+        "sector_xlc": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "ticker": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "previous": {
+              "type": "number"
+            },
+            "change": {
+              "type": "number"
+            },
+            "change_pct": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            },
+            "previous_market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            }
+          },
+          "additionalProperties": true
+        },
+        "sector_xly": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "ticker": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "previous": {
+              "type": "number"
+            },
+            "change": {
+              "type": "number"
+            },
+            "change_pct": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            },
+            "previous_market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            }
+          },
+          "additionalProperties": true
+        },
+        "sector_xlp": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "ticker": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "previous": {
+              "type": "number"
+            },
+            "change": {
+              "type": "number"
+            },
+            "change_pct": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            },
+            "previous_market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            }
+          },
+          "additionalProperties": true
+        },
+        "sector_xle": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "ticker": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "previous": {
+              "type": "number"
+            },
+            "change": {
+              "type": "number"
+            },
+            "change_pct": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            },
+            "previous_market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            }
+          },
+          "additionalProperties": true
+        },
+        "sector_xlf": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "ticker": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "previous": {
+              "type": "number"
+            },
+            "change": {
+              "type": "number"
+            },
+            "change_pct": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            },
+            "previous_market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            }
+          },
+          "additionalProperties": true
+        },
+        "sector_xlv": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "ticker": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "previous": {
+              "type": "number"
+            },
+            "change": {
+              "type": "number"
+            },
+            "change_pct": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            },
+            "previous_market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            }
+          },
+          "additionalProperties": true
+        },
+        "sector_xli": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "ticker": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "previous": {
+              "type": "number"
+            },
+            "change": {
+              "type": "number"
+            },
+            "change_pct": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            },
+            "previous_market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            }
+          },
+          "additionalProperties": true
+        },
+        "sector_xlb": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "ticker": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "previous": {
+              "type": "number"
+            },
+            "change": {
+              "type": "number"
+            },
+            "change_pct": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            },
+            "previous_market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            }
+          },
+          "additionalProperties": true
+        },
+        "sector_xlre": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "ticker": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "previous": {
+              "type": "number"
+            },
+            "change": {
+              "type": "number"
+            },
+            "change_pct": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            },
+            "previous_market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            }
+          },
+          "additionalProperties": true
+        },
+        "sector_xlk": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "ticker": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "previous": {
+              "type": "number"
+            },
+            "change": {
+              "type": "number"
+            },
+            "change_pct": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            },
+            "previous_market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            }
+          },
+          "additionalProperties": true
+        },
+        "sector_xlu": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "ticker": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "previous": {
+              "type": "number"
+            },
+            "change": {
+              "type": "number"
+            },
+            "change_pct": {
+              "type": "number"
+            },
+            "status": {
+              "type": "string"
+            },
+            "market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            },
+            "previous_market_date": {
+              "type": "string",
+              "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            }
+          },
+          "additionalProperties": true
+        },
         "gold": {
           "type": "object",
           "properties": {
@@ -730,6 +1162,9 @@
             "previous_market_date": {
               "type": "string",
               "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            },
+            "stale_reason": {
+              "type": "string"
             }
           },
           "additionalProperties": true

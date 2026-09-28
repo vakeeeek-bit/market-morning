@@ -29,21 +29,22 @@
 
 1. ChatGPTタスクを平日6:45 JSTに開始し、当日成功の`status.json`と検証済み`market.json`を読み込む。
 2. `market.json`に存在する数値は同ファイルを正本とし、Web検索値で置換しない。
-3. 公開候補用の同一ディレクトリに`report.json`と`japan-stocks.json`を置く。
-4. 次のコマンドで、スキーマ、重要ニュースTOP3、日本株重要材料TOP5、詳細件数、日付をまとめて検証する。
+3. `python scripts/create_research_evidence.py`でFAIL状態の調査ワークシートを作り、4方向調査、分析経路、反証監査、前日認識差分を記録する。
+4. 公開候補用の同一ディレクトリに`report.json`、`japan-stocks.json`、`research-evidence.json`を置く。
+5. 次のコマンドで、スキーマ、重要ニュースTOP3、日本株重要材料TOP5、詳細件数、日付、調査・分析品質9ゲートをまとめて検証する。
 
    ```bash
    python scripts/prepare_publish.py /path/to/candidate --check-only
    ```
 
-5. 内容確認後、`--check-only`を外して2ファイルを`data/`へ配置する。
+6. 内容確認後、`--check-only`を外して3ファイルを`data/`へ配置する。
 
    ```bash
    python scripts/prepare_publish.py /path/to/candidate
    ```
 
-6. `report.json`と`japan-stocks.json`を必ず同じGitコミットで`main`へ反映する。
-7. GitHub Actionsの`Validate Market Morning Data`が成功したことと、本番URLの表示を確認する。
+7. `report.json`、`japan-stocks.json`、`research-evidence.json`を必ず同じGitコミットで`main`へ反映する。
+8. GitHub Actionsの`Validate Market Morning Data`が成功したことと、本番URLの表示を確認する。
 
 候補ディレクトリに`market.json`または`status.json`がある場合は、それらも同じ検証・配置対象になる。検証失敗時は`data/`を変更しない。
 
@@ -57,6 +58,8 @@
 - 終値、清算値、現在値、日中高安または先物限月が区別されていない。
 - `report.json`と`japan-stocks.json`が正式スキーマに適合しない、または日付・TOP5が一致しない。
 - 重要な経済指標、中央銀行、関税、制裁の確認結果または「該当なし」の記録がない。
+- Research Coverage、Source Quality、Data Integrity、Analysis Logic、Cross-Asset Consistency、Japan Transmission、Counter-Evidence Audit、Previous-Day Change、Final Content Auditの1つでもPASSでない。
+- 個別企業開示またはアナリスト評価変更が未調査。
 
 品質ゲート不合格時は、理由を出力して既存の正常な公開データを維持する。
 

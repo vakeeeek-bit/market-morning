@@ -1,5 +1,7 @@
 # Market Morning Quality Gate Rules
 
+調査・分析品質の機械検証は [Research & Analysis Quality Gate](RESEARCH_ANALYSIS_QUALITY_GATE.md) を正本とする。`data/research-evidence.json` と最終9ゲートの全PASSを日次レポート公開の必須条件とする。
+
 ## Completion gate
 
 Schema Validation PASS alone is not a completion condition.

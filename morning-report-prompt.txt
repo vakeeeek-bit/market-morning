@@ -45,6 +45,20 @@
 【調査順序】
 Web検索 → 市場データ確認 → 数値・日付・時刻確認 → 事実整理 → 実際の市場反応 → 市場内部の強弱 → クロスアセット分析 → 今日以降の材料 → 条件付きシナリオ
 
+【Research & Analysis Quality Gate｜公開必須】
+- 本文とは別にdata/research-evidence.jsonを作成する。最初にscripts/create_research_evidence.pyでFAIL状態のワークシートを作り、調査後に証拠を入力する。
+- 固定Universe、当日ニュース横断、市場異常値からの逆引き、前日認識との差分の4方向を必ず調査する。
+- 各項目を「取得済 / 十分調査したが取得不能 / 該当材料なし / 未調査」で管理する。未調査は1件でも公開FAIL。
+- Criticalの取得不能はFAIL。Requiredの取得不能は2件以上の調査試行と分析影響評価がある場合だけ許容する。
+- 個別企業開示と、格上げ・格下げ・新規カバレッジ・目標株価・EPS/業績予想変更を毎日明示的に確認する。レーティングを網羅できない日に「変更なし」と断定しない。
+- 重要材料は「事実→実際の市場反応→市場内部→織り込み→解釈→日本株への伝達経路→影響業種・銘柄→変更条件」の全段階を記録する。
+- ニュース発生と、そのニュースが原因で市場が動いたことを分離する。時系列不一致を禁止する。
+- 株・金利・為替・商品・暗号資産を横断し、一見矛盾する動きを説明する。単一資産だけで市場全体を結論づけない。
+- 確信度をconfirmed / supported / tentative / unknownで管理し、根拠と不確実性を記録する。
+- 各主要結論を正しい前提にせず、否定・弱化する材料を確認する。両方向の力のどちらが強いか、根拠と不確実性を記録する。
+- 前日文章の数字だけを変えていないかを監査し、当日固有の変更点を記録する。
+- 公開前にResearch Coverage / Source Quality / Data Integrity / Analysis Logic / Cross-Asset Consistency / Japan Transmission / Counter-Evidence Audit / Previous-Day Change / Final Content Auditの9項目をすべてPASSにする。1項目でもFAILなら公開しない。
+
 【必須市場】
 - 株式：S&P500、NASDAQ100、NASDAQ総合、Dow、Russell2000、日経225、TOPIX、STOXX600、上海総合、香港ハンセン
 - 為替：DXY、USD/JPY、EUR/USD、USD/CNY、GBP/USD

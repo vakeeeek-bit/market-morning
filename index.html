@@ -1948,6 +1948,11 @@ td.nowrap {
     確認中
   </div>
 
+  <details class="disclosure">
+    <summary>調査・分析品質の詳細</summary>
+    <div class="disclosure-body" id="research-quality-detail">確認中</div>
+  </details>
+
 </div>
 
 
@@ -2376,6 +2381,38 @@ function reportDataUrl() {
   return '/data/report.json?ts=' + Date.now();
 }
 
+function researchEvidenceUrl() {
+  if (selectedHistoryDate) return `/data/history/${selectedHistoryDate}/research-evidence.json?ts=${Date.now()}`;
+  return `/data/research-evidence.json?ts=${Date.now()}`;
+}
+
+async function loadResearchQuality() {
+  const holder = document.getElementById('research-quality-detail');
+  if (!holder) return;
+  clearElement(holder);
+  try {
+    const response = await fetch(researchEvidenceUrl());
+    if (!response.ok) throw new Error('evidence not found');
+    const evidence = await response.json();
+    const gates = evidence.quality_gates || {};
+    const labels = {
+      research_coverage: '調査範囲', source_quality: '情報源', data_integrity: 'データ整合性',
+      analysis_logic: '分析ロジック', cross_asset_consistency: '市場間の整合性',
+      japan_transmission: '日本株への伝達', counter_evidence_audit: '反証確認',
+      previous_day_change: '前日認識との差分', final_content_audit: '最終内容監査'
+    };
+    const statuses = Object.entries(labels).map(([key, label]) => `${label}：${safeText(gates[key], '未確認')}`);
+    const allPass = statuses.length === 9 && Object.keys(labels).every(key => gates[key] === 'PASS');
+    const coverage = evidence.research_coverage?.items || [];
+    appendText(holder, 'summary-main', allPass ? '調査・分析品質：全9項目 PASS ✓' : '調査・分析品質：要確認');
+    appendText(holder, 'market-note', `調査項目 ${coverage.length}件｜${statuses.join('｜')}`);
+    const unavailable = coverage.filter(item => item.status === '十分調査したが取得不能');
+    if (unavailable.length) appendText(holder, 'market-note', `取得不能（証跡・影響評価あり）：${unavailable.map(item => item.label).join(' / ')}`);
+  } catch (error) {
+    appendText(holder, 'market-note', selectedHistoryDate ? 'この履歴には調査・分析証跡が保存されていません。' : '調査・分析証跡を確認できません。');
+  }
+}
+
 function updateJapanDetailLink() {
   const href = selectedHistoryDate
     ? 'japan-stocks.html?date=' + encodeURIComponent(selectedHistoryDate)
@@ -2529,7 +2566,8 @@ async function loadSelectedDay() {
 
   await Promise.all([
     loadMarketData(),
-    loadMarketReport()
+    loadMarketReport(),
+    loadResearchQuality()
   ]);
 
   updateHistoryButtons();

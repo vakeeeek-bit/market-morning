@@ -14,7 +14,7 @@ from validate_data import run
 
 
 ROOT = Path(__file__).resolve().parents[1]
-REQUIRED_FILES = ("report.json", "japan-stocks.json")
+REQUIRED_FILES = ("report.json", "japan-stocks.json", "research-evidence.json")
 OPTIONAL_FILES = ("market.json", "japan-market.json", "status.json")
 
 
@@ -58,7 +58,7 @@ def prepare(source: Path, root: Path = ROOT, check_only: bool = False) -> list[P
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="report.jsonとjapan-stocks.jsonを組み合わせ検証してdata/へ配置します"
+        description="レポート・日本株・調査分析証跡を組み合わせ検証してdata/へ配置します"
     )
     parser.add_argument("source", type=Path, help="公開候補JSONを置いたディレクトリ")
     parser.add_argument("--root", type=Path, default=ROOT)

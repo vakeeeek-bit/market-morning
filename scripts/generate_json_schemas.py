@@ -19,6 +19,7 @@ FILES = {
     "status": DATA_DIR / "status.json",
     "market-context": DATA_DIR / "market-context.json",
     "glossary": DATA_DIR / "glossary.json",
+    "research-evidence": DATA_DIR / "research-evidence.json",
 }
 
 TOP_LEVEL_REQUIRED = {
@@ -46,6 +47,7 @@ TOP_LEVEL_REQUIRED = {
         "important_stories",
         "other_stories",
         "data_quality",
+        "analyst_rating_changes",
     ],
     "status": ["status", "updated_at", "message"],
     "market-context": [
@@ -62,6 +64,12 @@ TOP_LEVEL_REQUIRED = {
         "sources",
     ],
     "glossary": ["updated_at", "terms"],
+    "research-evidence": [
+        "version", "report_date", "target_market_date", "updated_at",
+        "research_coverage", "analysis_quality", "counter_evidence_audit",
+        "cross_asset_consistency", "previous_day_change", "source_quality",
+        "data_integrity", "quality_gates",
+    ],
 }
 
 

@@ -8,6 +8,7 @@ Expected repository layout:
   data/history/YYYY-MM-DD/report.json
   data/history/YYYY-MM-DD/market.json
   data/history/YYYY-MM-DD/japan-stocks.json
+  data/history/YYYY-MM-DD/research-evidence.json
   data/history/index.json
 """
 
@@ -28,6 +29,7 @@ REPORT_PATH = DATA_DIR / "report.json"
 MARKET_PATH = DATA_DIR / "market.json"
 JAPAN_STOCKS_PATH = DATA_DIR / "japan-stocks.json"
 JAPAN_MARKET_PATH = DATA_DIR / "japan-market.json"
+RESEARCH_EVIDENCE_PATH = DATA_DIR / "research-evidence.json"
 HISTORY_DIR = DATA_DIR / "history"
 INDEX_PATH = HISTORY_DIR / "index.json"
 
@@ -98,6 +100,7 @@ def history_entry(path: Path) -> dict:
     market_path = path / "market.json"
     japan_stocks_path = path / "japan-stocks.json"
     japan_market_path = path / "japan-market.json"
+    research_evidence_path = path / "research-evidence.json"
     report_exists = report_path.exists()
     market_exists = market_path.exists()
     report_valid = False
@@ -147,6 +150,7 @@ def history_entry(path: Path) -> dict:
         "has_market": market_valid,
         "has_japan_stocks": japan_stocks_valid,
         "has_japan_market": japan_market_path.exists(),
+        "has_research_evidence": research_evidence_path.exists(),
         "report_type": report_type,
     }
 
@@ -251,6 +255,20 @@ def archive_japan_market() -> None:
     print(f"Archived {date_key}: japan-market.json")
 
 
+def archive_research_evidence() -> None:
+    """Archive the evidence bundle used to authorize the published report."""
+    if not RESEARCH_EVIDENCE_PATH.exists():
+        raise FileNotFoundError("data/research-evidence.json が必要です")
+    evidence = load_json(RESEARCH_EVIDENCE_PATH)
+    date_key = extract_date(evidence)
+    destination = HISTORY_DIR / date_key
+    destination.mkdir(parents=True, exist_ok=True)
+    temp_path = destination / "research-evidence.json.tmp"
+    shutil.copy2(RESEARCH_EVIDENCE_PATH, temp_path)
+    temp_path.replace(destination / "research-evidence.json")
+    print(f"Archived {date_key}: research-evidence.json")
+
+
 def refresh_history_index() -> None:
     """現在の履歴フォルダから、表示用の履歴一覧を必ず再作成する。"""
     HISTORY_DIR.mkdir(parents=True, exist_ok=True)
@@ -308,6 +326,7 @@ def main() -> None:
     backfill_from_git()
     archive_japan_stocks()
     archive_japan_market()
+    archive_research_evidence()
 
     is_weekend_report = report.get("report_type") == "weekend"
     if market_date and market_date != date_key and not is_weekend_report:

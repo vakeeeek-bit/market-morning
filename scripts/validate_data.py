@@ -14,6 +14,11 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
+try:
+    from research_quality import COVERAGE_STATUSES, validate_research_quality
+except ModuleNotFoundError:  # imported as scripts.validate_data in unit tests
+    from scripts.research_quality import COVERAGE_STATUSES, validate_research_quality
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
@@ -26,6 +31,7 @@ DATA_NAMES = (
     "status",
     "market-context",
     "glossary",
+    "research-evidence",
 )
 
 
@@ -196,6 +202,20 @@ def validate_relationships(data: dict[str, dict], result: ValidationResult) -> N
         result.error("report.jsonの個別株プレビューがjapan-stocks.jsonと一致しません")
     else:
         result.ok("個別株ニュースのトップページ連携")
+
+    ratings = japan.get("analyst_rating_changes")
+    if not isinstance(ratings, dict):
+        result.error("japan-stocks.analyst_rating_changes: 毎日の調査状態が必要です")
+    else:
+        rating_status = ratings.get("coverage_status")
+        if rating_status not in COVERAGE_STATUSES - {"未調査"}:
+            result.error("japan-stocks.analyst_rating_changes.coverage_status: 未調査は公開不可です")
+        elif rating_status != "取得済" and "変更なし" in str(ratings.get("headline", "")):
+            result.error("アナリスト評価を網羅できない日に『変更なし』と断定できません")
+        elif not isinstance(ratings.get("items"), list) or not isinstance(ratings.get("source_review"), list):
+            result.error("アナリスト評価変更にはitemsとsource_reviewが必要です")
+        else:
+            result.ok("アナリスト評価変更の調査状態・非断定表示")
 
     if report.get("report_date") != japan.get("report_date"):
         result.error("report.jsonとjapan-stocks.jsonのreport_dateが一致しません")
@@ -422,6 +442,14 @@ def run(root: Path = ROOT) -> ValidationResult:
         validate_relationships(data, result)
         validate_market_context(data, result)
         validate_japan_investor_view(data, result)
+        quality_errors = validate_research_quality(
+            data["research-evidence"], data["report"], data["japan-stocks"]
+        )
+        if quality_errors:
+            for message in quality_errors:
+                result.error(message)
+        else:
+            result.ok("Research & Analysis Quality Gate（最終9項目）")
     return result
 
 

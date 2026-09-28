@@ -158,6 +158,17 @@
     }
   ],
   "other_stories": [],
+  "analyst_rating_changes": {
+    "coverage_status": "十分調査したが取得不能",
+    "headline": "網羅的な評価変更一覧は未掲載",
+    "summary": "無料公開情報だけでは、全証券会社の格上げ・格下げ・新規カバレッジ・目標株価・EPS変更を同一基準で網羅できません。確認できた変更だけを掲載し、確認できない日に『変更なし』とは表示しません。",
+    "items": [],
+    "methodology": "Research Coverage MatrixでRequired項目として毎日確認。QUICKまたはIFISの契約データ導入後に自動取得を検討します。",
+    "source_review": [
+      {"name": "QUICK Analyst Rating and Target Price", "coverage": "日本上場企業、複数証券会社・調査機関", "freshness": "更新日時を収録", "automation": "契約データ", "rights": "契約条件の確認が必要", "url": "https://corporate.quick.co.jp/data-factory/en/product/data054/"},
+      {"name": "IFIS News / Consensus Data Service", "coverage": "レーティング・目標株価・業績予想変更", "freshness": "速報・バルク提供", "automation": "契約サービス", "rights": "契約条件の確認が必要", "url": "https://www.ifis.co.jp/investment/ifis_news.php"}
+    ]
+  },
   "company_events": [],
   "sector_implications": [
     {

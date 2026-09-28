@@ -1,0 +1,169 @@
+{
+  "version": "1.0",
+  "report_date": "2026-09-28",
+  "target_market_date": "2026-09-25",
+  "updated_at": "2026-09-28 14:40 JST",
+  "research_coverage": {
+    "status": "PASS",
+    "directions": [
+      {"id": "fixed_universe", "status": "PASS", "evidence": "必須市場をmarket.jsonと公式・主要情報源で照合"},
+      {"id": "cross_news", "status": "PASS", "evidence": "政策・中央銀行・企業開示・地政学を横断検索"},
+      {"id": "reverse_from_anomalies", "status": "PASS", "evidence": "SOX、VIX、原油、米金利、ドル円の目立つ変化から逆引き"},
+      {"id": "previous_day_change", "status": "PASS", "evidence": "9月27日版と9月28日版の認識差を比較"}
+    ],
+    "items": [
+      {
+        "id": "fixed_market_universe",
+        "label": "固定Universe（株・金利・為替・商品・暗号資産）",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "必須22系列の対象日・基準時刻・休場理由を確認",
+        "attempts": [{"method": "保存済み市場データと各データ系列の対象日確認", "result": "取得済み。米2年債のみ公表日差を明示", "source_urls": ["https://finance.yahoo.com/markets/"]}],
+        "impact_if_unavailable": "必須市場の欠落は市場全体判断を不可能にする",
+        "publication_use": "used"
+      },
+      {
+        "id": "policy_and_macro_news",
+        "label": "政策・中央銀行・マクロニュース",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "米中会談、日銀予定、米統計予定を一次情報中心に確認",
+        "attempts": [{"method": "政府・中央銀行・統計機関の発表確認", "result": "米中会談と日銀公表予定を取得", "source_urls": ["https://www.whitehouse.gov/", "https://www.boj.or.jp/en/about/calendar/index.htm"]}],
+        "impact_if_unavailable": "政策イベントの見落としはシナリオ変更条件を損なう",
+        "publication_use": "used"
+      },
+      {
+        "id": "market_anomaly_reverse_search",
+        "label": "市場異常値からの逆引き",
+        "tier": "Required",
+        "status": "取得済",
+        "evidence": "SOX上昇、VIX低下、原油下落、米金利上昇の同時発生を確認",
+        "attempts": [{"method": "値動き上位系列から関連ニュースと他資産反応を逆引き", "result": "単一材料では説明せず複合要因として整理", "source_urls": ["https://finance.yahoo.com/markets/stocks/most-active/"]}],
+        "impact_if_unavailable": "値動きとニュースの不一致を見落とす",
+        "publication_use": "used"
+      },
+      {
+        "id": "previous_day_view",
+        "label": "前日までの市場認識との差分",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "前日版に無かったイラン案拒否と月曜寄り付き前の未反映状態を追加",
+        "attempts": [{"method": "前日レポートと当日レポートの主要材料・監視条件比較", "result": "原油の見方を確定から条件付きへ修正", "source_urls": ["https://www.reuters.com/world/middle-east/iran-insists-diplomatic-solution-after-trump-rejects-peace-plan-2026-09-27/"]}],
+        "impact_if_unavailable": "前日の文章を数字だけ更新する劣化を検出できない",
+        "publication_use": "used"
+      },
+      {
+        "id": "company_disclosures",
+        "label": "日本株の個別企業開示・ニュース",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "直近取引日大引け後までのTDnet・企業IRを銘柄コード付きで確認",
+        "attempts": [{"method": "TDnet・企業IR一次情報確認", "result": "重要5件をjapan-stocks.jsonへ収録", "source_urls": ["https://www.release.tdnet.info/inbs/I_main_00.html"]}],
+        "impact_if_unavailable": "指数材料だけになり個別株の重要情報が欠落する",
+        "publication_use": "used"
+      },
+      {
+        "id": "analyst_rating_changes",
+        "label": "アナリスト評価変更（格上げ・格下げ・新規・目標株価・EPS）",
+        "tier": "Required",
+        "status": "十分調査したが取得不能",
+        "evidence": "無料公開情報では全証券会社を同一基準・同日で網羅できない。QUICK/IFISの契約データが継続自動取得の候補",
+        "attempts": [
+          {"method": "QUICKの日本株レーティング・目標株価データ仕様を確認", "result": "現行・前回レーティング、目標株価、更新日時を提供する契約データを確認", "source_urls": ["https://corporate.quick.co.jp/data-factory/en/product/data054/"]},
+          {"method": "IFISの速報・コンセンサス提供範囲を確認", "result": "レーティング・目標株価・業績予想変化を提供する契約サービスを確認", "source_urls": ["https://www.ifis.co.jp/investment/ifis_news.php", "https://www.ifis.co.jp/investment/consensus_data.php"]}
+        ],
+        "impact_if_unavailable": "公開情報で確認できた変更だけ掲載できるが、変更なしとは断定できず、網羅的な日次ランキングは公開しない",
+        "publication_use": "not_selected"
+      },
+      {
+        "id": "weekend_unpriced_news",
+        "label": "週末ニュースの現物未反映確認",
+        "tier": "Required",
+        "status": "取得済",
+        "evidence": "イラン案拒否は9月25日終値後であり、原油・日本株現物の反応は未確認と分離",
+        "attempts": [{"method": "発生時刻と各市場終値時刻の照合", "result": "金曜終値へ未反映", "source_urls": ["https://www.reuters.com/world/middle-east/iran-insists-diplomatic-solution-after-trump-rejects-peace-plan-2026-09-27/"]}],
+        "impact_if_unavailable": "時系列が逆転した因果説明になる",
+        "publication_use": "used"
+      }
+    ]
+  },
+  "analysis_quality": {
+    "status": "PASS",
+    "materials": [
+      {
+        "id": "us_japan_equity_strength",
+        "headline": "金曜の株高とSOX高は月曜日本株の支え候補だが、全面高とは断定しない",
+        "fact": {"text": "9月25日はS&P500、NYダウ、SOX、日経平均が上昇した", "source_urls": ["https://finance.yahoo.com/quote/%5EN225/history/"]},
+        "observed_market_reaction": {"text": "SOXは+1.41%、VIXは-5.11%。一方、米10年金利は上昇し、ドル円は金曜中に円高方向へ動いた", "assets_checked": ["SOX", "VIX", "米10年債", "USD/JPY", "日経平均"]},
+        "market_internals": {"text": "米国では工業と情報技術が上位。日本では銀行と電機・精密が強かった", "source_data_keys": ["report.news[0]", "japan-market.sector_quality"]},
+        "market_pricing": {"status": "partially_priced", "text": "金曜の日本株上昇に一部織り込み済みで、月曜の追加反応は未確認"},
+        "interpretation": {"text": "半導体関連には支え候補だが、金利高と円高が相反するため全面追い風ではない", "confidence": "supported", "evidence": "SOX・VIX・業種反応は整合するが、米金利と為替は逆方向", "uncertainty": "月曜寄り付き後の日本半導体株のTOPIX比反応は未確認"},
+        "japan_transmission": {"overseas_input": "米半導体株上昇", "intermediate_reactions": ["SOX上昇", "VIX低下", "米10年金利上昇", "円高方向"], "economic_channel": "米半導体需要・リスク選好は装置株を支える一方、金利高は高PER株評価を抑え、円高は輸出採算期待を弱める", "affected_sectors": ["電機・精密", "情報通信・サービス"], "affected_stocks": [], "pricing_in_japan": "金曜上昇に一部織り込み済み", "assessment": "追い風候補だが寄り付き後の相対反応確認が必要"},
+        "counter_evidence": ["米10年金利5.184%", "ドル円が金曜中に158円台から157円台へ円高", "日本株は金曜時点ですでに上昇"],
+        "conflict_resolution": "SOXとVIXの支えは確認できるが、金利・為替・既織り込みが上値を抑えるため条件付き評価とした",
+        "change_conditions": ["SOX高を維持して日本の電機・精密がTOPIXを上回る", "米10年金利上昇と円高が同時進行し電機・精密がTOPIXを下回る"],
+        "chronology_check": "PASS"
+      },
+      {
+        "id": "iran_oil_unpriced",
+        "headline": "イラン情勢は大きなニュースだが、日本株評価は原油初動確認まで保留",
+        "fact": {"text": "米大統領がイランの7日間案を拒否したとの報道は金曜終値後に発生した", "source_urls": ["https://www.reuters.com/world/middle-east/iran-insists-diplomatic-solution-after-trump-rejects-peace-plan-2026-09-27/"]},
+        "observed_market_reaction": {"text": "表示中のWTI・Brent下落は9月25日終値であり、拒否表明後の新しい日足反応ではない", "assets_checked": ["WTI", "Brent", "米10年債", "USD/JPY", "日本株現物"]},
+        "market_internals": {"text": "日本の運輸・資源株の新しい反応は寄り付き前で未確認", "source_data_keys": ["report.data_quality.unpriced"]},
+        "market_pricing": {"status": "unpriced", "text": "週末材料は日本株現物と金曜原油終値に未反映"},
+        "interpretation": {"text": "原油反発なら運輸の追い風を弱め資源を上方修正するが、現時点では方向を決めない", "confidence": "tentative", "evidence": "ニュース発生は確認済みだが価格反応は未確認", "uncertainty": "外交継続と供給障害の有無が不明"},
+        "japan_transmission": {"overseas_input": "中東外交の不確実性上昇", "intermediate_reactions": ["原油初動は未確認", "期待インフレ・金利反応は未確認"], "economic_channel": "原油高なら燃料コストを通じ運輸に逆風、資源価格を通じエネルギー資源に追い風となり得る", "affected_sectors": ["運輸・物流", "エネルギー資源"], "affected_stocks": [], "pricing_in_japan": "日本株現物に未反映", "assessment": "原油と日本側の反応確認まで保留"},
+        "counter_evidence": ["イランは外交解決を主張", "供給障害は確認されていない", "直前の原油終値は下落"],
+        "conflict_resolution": "ニュースの大きさと日本株への確定影響を分離し、原油初動を条件にした",
+        "change_conditions": ["WTI・Brentが反発し期待インフレも上昇", "原油が下落を維持し運輸がTOPIXを上回る"],
+        "chronology_check": "PASS"
+      }
+    ],
+    "template_degradation_audit": {
+      "today_specific": true,
+      "previous_report_compared": true,
+      "actual_market_reaction_checked": true,
+      "multi_asset_checked": true,
+      "conflicting_materials_compared": true,
+      "transmission_explained": true,
+      "observable_change_conditions": true,
+      "comparison_note": "前日版の一般的な原油安説明を、週末ニュース未反映と原油初動確認へ修正。SOX高も金利・為替・既織り込みと比較した"
+    }
+  },
+  "counter_evidence_audit": {
+    "status": "PASS",
+    "conclusions": [
+      {"conclusion": "半導体に追い風候補", "checks": ["SOX", "NASDAQ100", "米10年債", "USD/JPY", "日本の電機・精密"], "weighing": "SOXと業種反応は支えるが金利・為替は相反。全面追い風から条件付きへ弱めた", "uncertainty": "月曜現物反応待ち"},
+      {"conclusion": "原油安は運輸に追い風", "checks": ["週末イラン報道", "WTI", "Brent", "日本株の織り込み"], "weighing": "金曜原油安は事実だが週末材料が未反映のため、追い風評価を保留", "uncertainty": "原油初動と供給障害の有無"}
+    ]
+  },
+  "cross_asset_consistency": {
+    "status": "PASS",
+    "assets_checked": ["equities", "rates", "fx", "commodities", "crypto"],
+    "relationships": [
+      {"combination": "株高＋金利上昇", "observations": ["S&P500上昇", "SOX上昇", "米10年金利上昇"], "explanation": "成長期待・景気敏感株の強さと高金利負担が同居。株高だけで全面リスクオンとは判定しない", "confidence": "supported", "unresolved": false, "uncertainty": ""},
+      {"combination": "円高方向＋日本株高", "observations": ["金曜中にドル円が円高方向", "日経平均・TOPIX参考が上昇"], "explanation": "銀行・電機などの強さが為替逆風を上回った可能性があるが、月曜の持続は未確認", "confidence": "tentative", "unresolved": true, "uncertainty": "市場間の時間帯差と月曜現物反応"}
+    ]
+  },
+  "previous_day_change": {
+    "status": "PASS",
+    "prior_view": "金曜の株高・原油安・SOX高を月曜の主な手掛かりとしていた",
+    "new_events": ["週末に米国がイラン案を拒否", "月曜8時50分の日銀資料が接近"],
+    "changed": ["運輸への原油安追い風を確定評価から初動確認へ変更", "半導体を全面追い風ではなく金利・為替との条件付き評価へ変更"],
+    "unchanged": ["金曜の株高とSOX高は支え候補", "米10年金利高は高PER株の逆風"],
+    "japan_revision": "寄り付き前は強弱まちまちとし、原油初動と日本側の相対反応で更新する"
+  },
+  "source_quality": {"status": "PASS", "checks": ["政策は政府・中央銀行の一次情報を優先", "企業ニュースはTDnet・企業IRを使用", "週末外交報道は主要報道機関で発生時刻を確認"]},
+  "data_integrity": {"status": "PASS", "checks": ["report/japan-stocks/research-evidenceの日付一致", "休場・公表日差を欠損と区別", "週末ニュースの未反映を明示"]},
+  "quality_gates": {
+    "research_coverage": "PASS",
+    "source_quality": "PASS",
+    "data_integrity": "PASS",
+    "analysis_logic": "PASS",
+    "cross_asset_consistency": "PASS",
+    "japan_transmission": "PASS",
+    "counter_evidence_audit": "PASS",
+    "previous_day_change": "PASS",
+    "final_content_audit": "PASS"
+  }
+}

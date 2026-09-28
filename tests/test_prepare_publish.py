@@ -20,7 +20,7 @@ class PreparePublishTests(unittest.TestCase):
         shutil.copytree(ROOT / "schemas", self.root / "schemas")
         self.source = Path(self.temporary.name) / "candidate"
         self.source.mkdir()
-        for name in ("report.json", "japan-stocks.json"):
+        for name in ("report.json", "japan-stocks.json", "research-evidence.json"):
             shutil.copy2(ROOT / "data" / name, self.source / name)
 
     def tearDown(self):
@@ -68,6 +68,22 @@ class PreparePublishTests(unittest.TestCase):
         (self.source / "japan-stocks.json").unlink()
         with self.assertRaises(ValueError):
             prepare(self.source, self.root)
+
+    def test_missing_research_evidence_is_rejected(self):
+        (self.source / "research-evidence.json").unlink()
+        with self.assertRaisesRegex(ValueError, "research-evidence.json"):
+            prepare(self.source, self.root)
+
+    def test_failed_quality_gate_does_not_modify_data(self):
+        before = (self.root / "data" / "report.json").read_bytes()
+        evidence_path = self.source / "research-evidence.json"
+        evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+        evidence["quality_gates"]["counter_evidence_audit"] = "FAIL"
+        evidence_path.write_text(json.dumps(evidence, ensure_ascii=False), encoding="utf-8")
+
+        with self.assertRaises(ValueError):
+            prepare(self.source, self.root)
+        self.assertEqual((self.root / "data" / "report.json").read_bytes(), before)
 
 
 if __name__ == "__main__":

@@ -75,6 +75,34 @@ class ValidateDataTest(unittest.TestCase):
         result = run(self.make_root(mutate))
         self.assertTrue(any("重複" in message for message in result.errors))
 
+    def test_sector_or_macro_label_cannot_pass_as_company_news(self):
+        def mutate(name, data):
+            if name == "japan-stocks":
+                data["top_stories"][0]["company"] = "半導体・高PER株"
+                data["top_stories"][0]["ticker"] = "-"
+            return data
+
+        result = run(self.make_root(mutate))
+        self.assertTrue(any("銘柄コード" in message for message in result.errors))
+
+    def test_secondary_market_article_cannot_replace_primary_company_source(self):
+        def mutate(name, data):
+            if name == "japan-stocks":
+                data["top_stories"][0]["source_url"] = "https://www.reuters.com/example"
+            return data
+
+        result = run(self.make_root(mutate))
+        self.assertTrue(any("一次情報" in message for message in result.errors))
+
+    def test_company_news_preview_must_match_detail(self):
+        def mutate(name, data):
+            if name == "report":
+                data["japan_equities_preview"]["top_stories"][0]["headline"] = "不一致"
+            return data
+
+        result = run(self.make_root(mutate))
+        self.assertTrue(any("プレビュー" in message for message in result.errors))
+
 
 if __name__ == "__main__":
     unittest.main()

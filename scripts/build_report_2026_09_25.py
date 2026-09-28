@@ -4,6 +4,8 @@
 import json
 from pathlib import Path
 
+from company_news_2026_09_25_28 import apply_company_news
+
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "candidate-2026-09-25"
@@ -174,6 +176,8 @@ japan = {
     "data_quality": {"overall": "要確認項目あり", "missing": ["日経225の9月24日正本値", "9月25日大引け値", "TDnet全件の完全網羅"], "differences": ["海外市場の主対象日は9月24日、日本株は9月25日取引中", "TOPIXは1306 ETF参考値"], "unpriced": ["米中首脳会談最終成果", "米・イラン合意", "9月25日日本株終値"], "cautions": ["取引中値を終値として扱わない", "34監視銘柄から日本市場全体を評価しない", "セクター全体を主要2銘柄で評価しない"]},
     "source_notes": report["source_notes"],
 }
+
+apply_company_news(report, japan, "2026-09-25")
 
 OUT.mkdir(exist_ok=True)
 us2y = MARKET["markets"].get("us2y", {})

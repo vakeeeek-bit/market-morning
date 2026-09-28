@@ -7,6 +7,8 @@ import copy
 import json
 from pathlib import Path
 
+from company_news_2026_09_25_28 import apply_company_news
+
 
 ROOT = Path(__file__).resolve().parents[1]
 MARKET = json.loads((ROOT / "data" / "market.json").read_text(encoding="utf-8"))
@@ -285,6 +287,7 @@ def base_report(report_date: str, updated: str, sunday: bool) -> tuple[dict, dic
         "data_quality": {"overall": "正常（注意事項あり）", "missing": ["週末ニュース後の月曜価格反応", "OSE先物の限月付き正式値", "TDnet全件の完全網羅"], "differences": ["日本株・米株は9月25日終値、USD/JPYは9月26日付、暗号資産は9月27日付", "TOPIXは1306 ETF参考値"], "unpriced": ["米国のイラン案拒否", "週末の外交続報", "月曜の日本株現物"], "cautions": ["34監視銘柄から日本市場全体を評価しない", "セクター全体を主要2銘柄で評価しない", "休場とデータ異常を区別する"]},
         "source_notes": report["source_notes"],
     }
+    apply_company_news(report, japan, report_date)
     return report, japan
 
 

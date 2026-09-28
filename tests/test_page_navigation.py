@@ -39,11 +39,13 @@ class PageNavigationTests(unittest.TestCase):
         self.assertIn("encodeURIComponent(selectedHistoryDate)", world)
         self.assertIn("encodeURIComponent(selectedHistoryDate)", japan)
 
-    def test_japan_detail_is_not_duplicated_on_world_page(self):
+    def test_world_page_has_concise_company_news_preview_and_detail_link(self):
         world = self.read("index.html")
         japan = self.read("japan-stocks.html")
-        self.assertNotIn('id="japan-equities-preview"', world)
-        self.assertNotIn('id="japan-equities-section"', world)
+        self.assertIn('id="japan-equities-preview"', world)
+        self.assertIn('id="japan-equities-section"', world)
+        self.assertIn("日本株ページで根拠と全件を見る", world)
+        self.assertNotIn("['重要材料 5件', preview.top_materials]", world)
         self.assertIn('id="morning-summary"', japan)
         self.assertIn('id="story-sections"', japan)
 
@@ -67,7 +69,14 @@ class PageNavigationTests(unittest.TestCase):
         japan = self.read("japan-stocks.html")
         self.assertIn('data-mm-group', world)
         self.assertIn('class="mobile-section-nav"', japan)
-        self.assertIn('data-jp-target="story-most-important"', japan)
+        self.assertIn('data-jp-target="company-news-section"', japan)
+
+    def test_company_news_is_distinct_from_market_and_sector_materials(self):
+        japan = self.read("japan-stocks.html")
+        self.assertIn('id="company-news-section"', japan)
+        self.assertIn("企業固有の重要材料だけを掲載", japan)
+        self.assertIn("海外・為替・業種材料は上の主要材料に集約", japan)
+        self.assertIn("individual_news_review", japan)
 
     def test_japan_market_enrichment_sections_are_present(self):
         japan = self.read("japan-stocks.html")

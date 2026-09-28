@@ -7,6 +7,7 @@ import copy
 import json
 from pathlib import Path
 
+from company_news_2026_09_25_28 import apply_company_news
 from update_japan_market import enrich_investor_view
 
 
@@ -260,6 +261,8 @@ def main() -> None:
         "cautions": ["Brentの同日再取得不整合は除外し検証済み値を維持", "34監視銘柄から日本市場全体を評価しない", "セクター全体を主要2銘柄で評価しない"],
     }
     japan["source_notes"] = report["source_notes"]
+
+    apply_company_news(report, japan, REPORT_DATE)
 
     # The market is still pre-open, so reuse the verified 9/25 cash-session
     # rows and refresh only the report-driven context. This avoids a second

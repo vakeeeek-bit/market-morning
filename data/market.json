@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-29 09:06:01",
+  "updated_at": "2026-09-29 10:03:55",
   "timezone": "Asia/Tokyo",
   "source": "Yahoo Finance via yfinance for market closes; FRED DGS2 for US 2Y Treasury yield",
   "notes": {
@@ -82,33 +82,32 @@
     "nikkei225": {
       "name": "日経225",
       "ticker": "^N225",
-      "price": 66364.2031,
-      "previous": 65513.9883,
-      "change": 850.2148,
-      "change_pct": 1.3,
+      "price": 65365.4883,
+      "previous": 66364.2031,
+      "change": -998.7148,
+      "change_pct": -1.5,
       "status": "取得成功",
-      "market_date": "2026-09-25",
-      "previous_market_date": "2026-09-24",
-      "stale_reason": "日経平均指数は9月28日分を取得できず、公式日次サマリーで9月28日終値を別途確認。表示用の保存値は更新せず、本文では公式値を使用"
+      "market_date": "2026-09-29",
+      "previous_market_date": "2026-09-25"
     },
     "topix": {
       "name": "TOPIX参考（1306 ETF）",
       "ticker": "1306.T",
-      "price": 428.2,
-      "previous": 430.3,
-      "change": -2.1,
-      "change_pct": -0.49,
+      "price": 425.6,
+      "previous": 428.2,
+      "change": -2.6,
+      "change_pct": -0.61,
       "status": "取得成功",
-      "market_date": "2026-09-28",
-      "previous_market_date": "2026-09-25"
+      "market_date": "2026-09-29",
+      "previous_market_date": "2026-09-28"
     },
     "dxy": {
       "name": "DXY",
       "ticker": "DX-Y.NYB",
-      "price": 101.19,
+      "price": 101.248,
       "previous": 100.97,
-      "change": 0.22,
-      "change_pct": 0.22,
+      "change": 0.278,
+      "change_pct": 0.28,
       "status": "取得成功",
       "market_date": "2026-09-28",
       "previous_market_date": "2026-09-25"
@@ -116,10 +115,10 @@
     "usdjpy": {
       "name": "USD/JPY",
       "ticker": "JPY=X",
-      "price": 157.417,
+      "price": 157.26,
       "previous": 157.463,
-      "change": -0.046,
-      "change_pct": -0.03,
+      "change": -0.203,
+      "change_pct": -0.13,
       "status": "取得成功",
       "market_date": "2026-09-29",
       "previous_market_date": "2026-09-28"
@@ -287,7 +286,8 @@
       "change_pct": -3.8,
       "status": "取得成功",
       "market_date": "2026-09-28",
-      "previous_market_date": "2026-09-25"
+      "previous_market_date": "2026-09-25",
+      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
     },
     "silver": {
       "name": "Silver",
@@ -298,7 +298,8 @@
       "change_pct": -4.82,
       "status": "取得成功",
       "market_date": "2026-09-28",
-      "previous_market_date": "2026-09-25"
+      "previous_market_date": "2026-09-25",
+      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
     },
     "copper": {
       "name": "Copper",
@@ -309,7 +310,8 @@
       "change_pct": -1.09,
       "status": "取得成功",
       "market_date": "2026-09-28",
-      "previous_market_date": "2026-09-25"
+      "previous_market_date": "2026-09-25",
+      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
     },
     "wti": {
       "name": "WTI",
@@ -320,7 +322,8 @@
       "change_pct": 0.91,
       "status": "取得成功",
       "market_date": "2026-09-28",
-      "previous_market_date": "2026-09-25"
+      "previous_market_date": "2026-09-25",
+      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
     },
     "brent": {
       "name": "Brent",
@@ -331,15 +334,16 @@
       "change_pct": -5.44,
       "status": "取得成功",
       "market_date": "2026-09-28",
-      "previous_market_date": "2026-09-25"
+      "previous_market_date": "2026-09-25",
+      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
     },
     "btc": {
       "name": "BTC",
       "ticker": "BTC-USD",
-      "price": 83462.7812,
+      "price": 83173.2891,
       "previous": 84458.0859,
-      "change": -995.3047,
-      "change_pct": -1.18,
+      "change": -1284.7969,
+      "change_pct": -1.52,
       "status": "取得成功",
       "market_date": "2026-09-29",
       "previous_market_date": "2026-09-27"
@@ -347,10 +351,10 @@
     "eth": {
       "name": "ETH",
       "ticker": "ETH-USD",
-      "price": 2688.9099,
+      "price": 2678.8201,
       "previous": 2686.9268,
-      "change": 1.9832,
-      "change_pct": 0.07,
+      "change": -8.1067,
+      "change_pct": -0.3,
       "status": "取得成功",
       "market_date": "2026-09-29",
       "previous_market_date": "2026-09-27"

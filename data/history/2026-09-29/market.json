@@ -88,7 +88,8 @@
       "change_pct": 1.3,
       "status": "取得成功",
       "market_date": "2026-09-25",
-      "previous_market_date": "2026-09-24"
+      "previous_market_date": "2026-09-24",
+      "stale_reason": "日経平均指数は9月28日分を取得できず、公式日次サマリーで9月28日終値を別途確認。表示用の保存値は更新せず、本文では公式値を使用"
     },
     "topix": {
       "name": "TOPIX参考（1306 ETF）",

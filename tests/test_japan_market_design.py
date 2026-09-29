@@ -44,6 +44,13 @@ class JapanMarketDesignTests(unittest.TestCase):
         if alignment and not alignment.get("aligned"):
             self.assertNotEqual("判定可能", data.get("scenario_review", {}).get("status"))
 
+    def test_quality_metadata_matches_report_target_date(self):
+        data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))
+        report = json.loads((ROOT / "data" / "report.json").read_text(encoding="utf-8"))
+        alignment = data["data_quality"]["date_alignment"]
+        self.assertEqual(report["target_market_date"], alignment["expected_market_date"])
+        self.assertEqual(report["target_market_date"], alignment["report_target_market_date"])
+
     def test_aligned_history_can_be_used_as_fallback(self):
         sys.modules.setdefault("yfinance", types.SimpleNamespace(download=None))
         spec = importlib.util.spec_from_file_location("update_japan_market_test", ROOT / "scripts" / "update_japan_market.py")

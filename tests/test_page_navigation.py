@@ -81,6 +81,12 @@ class PageNavigationTests(unittest.TestCase):
     def test_analyst_rating_changes_show_coverage_limits(self):
         japan = self.read("japan-stocks.html")
         self.assertIn('id="rating-section"', japan)
+
+    def test_rating_and_scenario_rows_render_their_actual_fields(self):
+        japan = (ROOT / "japan-stocks.html").read_text(encoding="utf-8")
+        self.assertIn("headline: item.headline || item.change", japan)
+        self.assertIn("item.target_price ? `目標株価：${item.target_price}`", japan)
+        self.assertIn("row.condition || row.label", japan)
         self.assertIn("renderRatingChanges", japan)
         self.assertIn("網羅できない日は「変更なし」と断定しません", japan)
 

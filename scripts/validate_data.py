@@ -351,6 +351,21 @@ def validate_market_context(data: dict[str, dict], result: ValidationResult) -> 
 
 def validate_japan_investor_view(data: dict[str, dict], result: ValidationResult) -> None:
     japan_market = data["japan-market"]
+    report = data["report"]
+    alignment = japan_market.get("data_quality", {}).get("date_alignment", {})
+    expected_target = report.get("target_market_date")
+    if alignment.get("report_target_market_date") != expected_target:
+        result.error(
+            "japan-market.data_quality.date_alignment.report_target_market_date: "
+            "report.jsonのtarget_market_dateと一致させてください"
+        )
+    elif alignment.get("expected_market_date") != expected_target:
+        result.error(
+            "japan-market.data_quality.date_alignment.expected_market_date: "
+            "report.jsonのtarget_market_dateと一致させてください"
+        )
+    else:
+        result.ok("日本株品質メタデータとレポート対象日の一致")
     market_view = japan_market.get("market_regime", {})
     serialized_view = json.dumps(market_view, ensure_ascii=False)
     if any(term in serialized_view for term in ("Breadth", "上昇・下落の広がり", "主要監視34銘柄の内訳")):

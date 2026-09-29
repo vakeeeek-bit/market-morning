@@ -480,7 +480,13 @@ function renderRatingChanges(rating) {
   appendText(holder, 'summary-main', text(rating.headline, rating.coverage_status));
   appendText(holder, 'market-note', text(rating.summary));
   const items = Array.isArray(rating.items) ? rating.items : [];
-  items.forEach(item => holder.appendChild(renderStory(item)));
+  items.forEach(item => holder.appendChild(renderStory({
+    ...item,
+    headline: item.headline || item.change,
+    category: item.category || 'アナリスト評価',
+    fact: item.fact || (item.target_price ? `目標株価：${item.target_price}` : item.note),
+    analysis: item.analysis || item.note
+  })));
   if (!items.length) appendText(holder, 'empty', `掲載0件｜調査状態：${text(rating.coverage_status)}`);
   const details = document.createElement('details'); details.className = 'disclosure';
   const summary = document.createElement('summary'); summary.textContent = '調査範囲と取得条件';
@@ -508,7 +514,7 @@ function rankingRows(holder, rows, valueFormatter, limit = 5) {
   valid.forEach((row, index) => {
     const item = document.createElement('div'); item.className = 'ranking-row';
     appendText(item, 'ranking-rank', `${index + 1}`);
-    appendText(item, 'ranking-name', row.name || row.sector || row.ticker);
+    appendText(item, 'ranking-name', row.name || row.sector || row.ticker || row.condition || row.label);
     const value = appendText(item, 'ranking-value', valueFormatter(row));
     if (Number(row.change_pct) > 0) value.classList.add('positive');
     if (Number(row.change_pct) < 0) value.classList.add('negative');

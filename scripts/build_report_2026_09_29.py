@@ -228,7 +228,7 @@ def main() -> None:
     report["source_notes"] = [REUTERS_MARKETS, NIKKEI_DAILY, BOJ_MINUTES, BOJ_CSPI, JPX_EX, EX_DIVIDEND_ESTIMATE, TDNET_NAITO, TDNET_AXELL, TDNET_HAPPINET, RATING_UP, RATING_DOWN, RATING_TARGETS, "data/market.json", "data/japan-market.json"]
 
     japan.update(report_date=REPORT_DATE, target_market_date=TARGET_DATE, updated_at=UPDATED)
-    japan["japan_quick_view"] = {"headline": headline, "top_materials": top_materials, "focus_sectors": ["銀行", "金融（銀行除く）", "電機・精密", "情報通信・サービス", "不動産"], "unpriced_materials": ["本日の配当落ち調整後の日本株", "米株安の日本側反応", "9月28日大引け後の企業開示"], "individual_news_review": {"status": "reviewed", "story_count": 3, "scope": "9月28日大引け後までのTDnet重要開示を一次資料で確認"}}
+    japan["japan_quick_view"] = {"headline": headline, "top_materials": top_materials, "focus_sectors": ["銀行", "金融（銀行除く）", "電機・精密", "情報通信・サービス", "不動産"], "unpriced_materials": ["本日の配当落ち調整後の日本株", "米株安の日本側反応", "9月28日大引け後の企業開示"], "individual_news_review": {"status": "reviewed", "reviewed_at": UPDATED, "source": "TDnet・企業開示（一次情報）", "story_count": 3, "scope": "9月28日大引け後までのTDnet重要開示を一次資料で確認"}}
     japan["top_stories"] = [
         company_story("NaITO", "7624", "通期営業利益予想を3.1倍へ上方修正", "通期営業利益を4億円から12.5億円へ、純利益を2.7億円から9億円へ修正。切削工具の値上げと需要前倒しが背景。", ["商社・卸売", "機械"], TDNET_NAITO, "需要前倒しを含むため、上方修正幅をそのまま持続成長とみなさない。", "寄り付きの株価・出来高、次四半期の反動"),
         company_story("アクセル", "6730", "通期営業利益を90.8%上方修正、年間配当79円へ", "通期売上高を150億円から204億円、営業利益を12億円から22.9億円へ修正。年間配当は41円から79円へ。", ["電機・精密"], TDNET_AXELL, "遊技機向けLSIとメモリ販売増が寄与。一方、メモリ価格高騰で利益率低下見通しもある。", "寄り付き反応、粗利率とメモリ価格"),

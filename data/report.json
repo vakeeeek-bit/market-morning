@@ -1,158 +1,184 @@
 {
-  "report_date": "2026-09-29",
-  "target_market_date": "2026-09-28",
-  "updated_at": "2026-09-29 09:25 JST",
+  "report_date": "2026-10-01",
+  "target_market_date": "2026-09-30",
+  "updated_at": "2026-10-01 08:10 JST",
   "report_type": "daily",
   "week_period": null,
   "quick_view": {
-    "headline": "今日は弱含み。米株安・米金利上昇・SOX安が重く、約350～385円の配当落ちも指数を機械的に押し下げる。",
+    "headline": "日本株は前日の全面反発を引き継げるかが焦点。米大型テックは支えだが、米10年5.29%・原油再上昇・米株Breadth悪化が上値を試す。",
     "top_news": [
       {
-        "title": "米株は全面安。SOX-1.61%と米10年5.24%が日本の高PER株に重い"
+        "title": "日本株は3日ぶり急反発。日経平均+1.94%、TOPIX+1.67%、鉄鋼・非鉄と銀行が上位"
       },
       {
-        "title": "今日は権利落ち日。日経平均の約350～385円安は機械的要因として分けて見る"
+        "title": "米株はNASDAQのみ上昇。大型テック優位とS&P500の広い下落が同居"
       },
       {
-        "title": "昨日は金融が逆行高。銀行の強さが続くかが市場内部の確認点"
+        "title": "PCEは予想下振れでも米10年は5.29%。原油反発と金利高がQ4初日の重し"
       }
     ],
     "important_today": [
-      "配当落ち分を除いた日経平均の実質方向",
-      "電機・精密と銀行の相対方向",
-      "NaITO・アクセル・ハピネットの開示反応"
+      "日銀短観",
+      "日本株の上昇業種数",
+      "電機・精密のTOPIX比",
+      "米ISM製造業と新規失業保険",
+      "原油と米10年"
     ]
   },
   "executive_summary": {
-    "headline": "今日は弱含み。米株安・米金利上昇・SOX安が重く、約350～385円の配当落ちも指数を機械的に押し下げる。",
-    "market_mood": "昨日の日本株は下落、夜間の米国株も下落。銀行は相対的に強いが、指数全体は弱含み。",
-    "main_driver": "米金利上昇、米半導体安、9月末の配当落ち、日銀の追加利上げ観測",
+    "headline": "日本株は前日の全面反発を引き継げるかが焦点。米大型テックは支えだが、米10年5.29%・原油再上昇・米株Breadth悪化が上値を試す。",
+    "market_mood": "日本株は半導体を中心に急反発したが、夜間の米国は大型テック以外が弱い。PCE下振れでも長期金利は高止まりし、全面的なリスクオンではない。",
+    "main_driver": "日本株の反発持続性、大型テック偏重、米長期金利、原油反発、日銀短観・米ISM",
     "winners": [
+      "米大型テック",
+      "日本の鉄鋼・非鉄",
       "銀行",
-      "金融（銀行除く）",
-      "個別好材料のNaITO・アクセル・ハピネット"
+      "原油関連"
     ],
     "losers": [
-      "高PERの半導体・情報通信",
-      "米ハイテク安の影響を受ける電機・精密",
-      "金利上昇に弱い不動産"
+      "米生活必需品",
+      "ヘルスケア",
+      "資本財",
+      "長期金利に弱い不動産"
     ],
     "important_today": [
-      "配当落ち調整",
-      "米10年金利",
-      "SOX",
-      "日銀短観前の金利観測"
+      "日銀短観",
+      "米10年債",
+      "NASDAQ100",
+      "WTI",
+      "米ISM製造業"
     ],
     "watch_markets": [
-      "日経平均の配当落ち調整後",
-      "電機・精密ETF",
-      "銀行ETF",
+      "東証17業種ETF",
+      "電機・精密",
+      "銀行",
+      "鉄鋼・非鉄",
       "USD/JPY"
     ],
     "current_environment": [
-      "日経平均 -0.73%",
-      "TOPIX参考 -0.49%",
-      "S&P500 -0.77%",
-      "SOX -1.61%",
-      "米10年 5.24%",
-      "VIX +8.07%"
+      "日経平均 +1.94%",
+      "TOPIX +1.67%",
+      "S&P500 -0.25%",
+      "NASDAQ +0.24%",
+      "米10年 5.29%",
+      "WTI +1.16%"
     ]
   },
   "main_story": {
-    "title": "米金利と半導体安に、配当落ちの見かけの下げが重なる",
-    "fact": "9月28日の米国株は主要指数が下落し、米10年債利回りは5.24%へ上昇。9月29日の日本株は9月末配当の権利落ち日。",
-    "market_reaction": "S&P500-0.77%、NASDAQ100-1.08%、SOX-1.61%、VIX+8.07%。日本では前日に銀行と金融（銀行除く）が逆行高。",
-    "importance_reason": "指数の機械的な配当落ちと、実際の売り圧力を分けないと市場の強弱を誤読するため。",
+    "title": "日本の全面反発と米国の大型テック偏重は同じ強気相場ではない",
+    "fact": "9月30日の日本株は日経平均+1.94%、TOPIX+1.67%。夜間はNASDAQ+0.24%に対しS&P500-0.25%、Dow-0.86%、Russell2000-0.39%。",
+    "market_reaction": "日本では鉄鋼・非鉄+3.64%、銀行+3.28%が上位。米国は情報技術+0.61%のみ明確に強く、生活必需品-1.51%、ヘルスケア-1.34%、資本財-1.27%。",
+    "importance_reason": "日本の反発を米NASDAQ高だけで延長すると、米国のBreadth悪化と5.29%の長期金利を見落とすため。",
     "confidence": "高"
   },
   "news": [
     {
-      "title": "米株安と金利上昇、高い金利が長く続く見方が重し",
-      "fact": "9月28日はS&P500-0.77%、NASDAQ-0.92%、米10年債利回りは5.24%。",
-      "published_at": "2026-09-28",
-      "market_reaction": "SOX-1.61%、VIX+8.07%、Goldも大幅安。株・高PER資産・貴金属が同時に金利上昇の影響を受けた。",
-      "analysis": "日本の高PER株には向かい風。ただし景気・企業利益の底堅さが株安を限定する可能性も残る。",
+      "title": "日本株は半導体主導で急反発",
+      "fact": "日経平均は66,753.72（+1.94%）、TOPIXは4,108.65（+1.67%）。",
+      "published_at": "2026-09-30",
+      "market_reaction": "鉄鋼・非鉄+3.64%、銀行+3.28%、建設・資材+2.41%が上位。",
+      "analysis": "前日のBreadth悪化から反発したが、持続性は本日の上昇業種数と出来高で確認する。",
       "related_assets": [
+        "日経平均",
+        "TOPIX"
+      ],
+      "related_japan_sectors": [
+        "鉄鋼・非鉄",
+        "銀行",
+        "電機・精密"
+      ],
+      "importance": "★★★★★",
+      "source_url": "https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20260930&idx=nk225",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "title": "米大型テック高と広い下落が同居",
+      "fact": "NASDAQ+0.24%、NASDAQ100+0.60%に対しS&P500-0.25%、Dow-0.86%、Russell2000-0.39%。",
+      "published_at": "2026-09-30",
+      "market_reaction": "XLK+0.61%だが10業種ETFは下落。",
+      "analysis": "日本の半導体には支えでも、市場全体の追い風とは扱わない。",
+      "related_assets": [
+        "NASDAQ100",
         "S&P500",
-        "NASDAQ",
-        "SOX",
-        "米10年債",
-        "VIX",
-        "Gold"
+        "Russell2000"
       ],
       "related_japan_sectors": [
         "電機・精密",
         "情報通信・サービス"
       ],
       "importance": "★★★★★",
-      "source_url": "https://www.investing.com/news/stock-market-news/stocks-cautious-in-asia-as-oil-gains-yields-rise-4919224",
+      "source_url": "https://www.reuters.com/business/us-stock-futures-inch-up-yields-ease-inflation-report-looms-2026-09-30/",
       "image_url": null,
       "image_alt": null,
       "image_credit": null,
       "image_source_url": null
     },
     {
-      "title": "今日は9月末の配当権利落ち日",
-      "fact": "JPXの権利落ち情報と市場推計では、9月29日は権利落ち日。日経平均への影響は約350～385円と推計される。",
-      "published_at": "2026-09-28",
-      "market_reaction": "寄り付き前のため実際の埋め戻しは未確認。",
-      "analysis": "日経平均が下落しても約350～385円分は機械的要因。配当落ち分を埋めるか、さらに下げるかで実質的な強弱を見る。",
+      "title": "PCE下振れでも長期金利は上昇",
+      "fact": "8月PCEは前年比+3.4%で予想+3.7%を下回り、コアは前月比+0.2%。GDP確定値は年率+2.2%。",
+      "published_at": "2026-09-30",
+      "market_reaction": "10月利上げ確率は約37%へ低下した一方、米10年は5.29%で終了。",
+      "analysis": "政策金利期待は和らいでも、強い成長・財政・供給要因が長期金利を押し上げるねじれ。",
       "related_assets": [
-        "日経平均",
-        "TOPIX"
+        "米2年債",
+        "米10年債",
+        "ドル"
       ],
       "related_japan_sectors": [
         "銀行",
-        "商社・卸売",
-        "自動車・輸送機"
+        "不動産",
+        "電機・精密"
       ],
       "importance": "★★★★★",
-      "source_url": "https://www.radionikkei.jp/marketpress/post_16223.html",
+      "source_url": "https://www.reuters.com/markets/us/us-inflation-rises-less-than-expected-august-consumer-spending-surges-2026-09-30/",
       "image_url": null,
       "image_alt": null,
       "image_credit": null,
       "image_source_url": null
     },
     {
-      "title": "日銀資料は追加利上げ観測を支える内容",
-      "fact": "7月会合議事要旨では利上げペース加速に前向きな意見が確認され、8月企業向けサービス価格は前年比+3.7%。",
-      "published_at": "2026-09-28",
-      "market_reaction": "9月28日の銀行ETFは+0.76%、金融（銀行除く）は+2.17%。不動産は-0.82%。",
-      "analysis": "金融株の相対優位と金利敏感株の弱さは整合するが、米金利上昇も同時発生しており日銀資料だけを原因とは断定しない。",
-      "related_assets": [
-        "銀行ETF",
-        "不動産ETF",
-        "USD/JPY"
-      ],
-      "related_japan_sectors": [
-        "銀行",
-        "金融（銀行除く）",
-        "不動産"
-      ],
-      "importance": "★★★★★",
-      "source_url": "https://www.boj.or.jp/mopo/mpmsche_minu/minu_2026/index.htm",
-      "image_url": null,
-      "image_alt": null,
-      "image_credit": null,
-      "image_source_url": null
-    },
-    {
-      "title": "原油は上昇後に伸び悩み、外交の不確実性が継続",
-      "fact": "米国がイラン案を拒否した後に原油は一時大幅上昇したが、仲介協議継続で上げ幅を縮小した。",
-      "published_at": "2026-09-28",
-      "market_reaction": "主要報道ではWTI・Brentとも小幅高で終了。一方、保存済みBrent連続先物は限月差が疑われるため前日比を除外。",
-      "analysis": "資源全面高や運輸全面安を決め打ちせず、本日の業種ETF反応まで保留する。",
+      "title": "原油反発で前日のコスト低下期待が後退",
+      "fact": "WTIは90.42ドル（+1.04ドル）、Brentは103.50ドル（+0.91ドル）。",
+      "published_at": "2026-09-30",
+      "market_reaction": "停滞する米イラン協議と製品在庫の減少が支え。",
+      "analysis": "資源には支え、運輸・小売にはコスト面の逆風。輸出回復が続けば再び反落する反証も残る。",
       "related_assets": [
         "WTI",
         "Brent",
-        "米10年債"
+        "XLE"
       ],
       "related_japan_sectors": [
         "エネルギー資源",
-        "運輸・物流"
+        "運輸・物流",
+        "小売"
+      ],
+      "importance": "★★★★★",
+      "source_url": "https://www.reuters.com/business/energy/oil-climbs-after-trump-denies-he-is-willing-ease-sanctions-iran-2026-09-30/",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "title": "ADPは予想を上回るが雇用統計の代替ではない",
+      "fact": "9月ADP民間雇用は+9.0万人で予想+7.0万人を上回った。",
+      "published_at": "2026-09-30",
+      "market_reaction": "成長の底堅さが長期金利を支えた。",
+      "analysis": "ADPとBLS雇用統計の連動は弱く、2日の雇用統計までは断定しない。",
+      "related_assets": [
+        "米金利",
+        "ドル",
+        "S&P500"
+      ],
+      "related_japan_sectors": [
+        "銀行",
+        "景気敏感"
       ],
       "importance": "★★★★☆",
-      "source_url": "https://www.investing.com/news/stock-market-news/stocks-cautious-in-asia-as-oil-gains-yields-rise-4919224",
+      "source_url": "https://www.reuters.com/business/us-private-payrolls-growth-picks-up-september-adp-says-2026-09-30/",
       "image_url": null,
       "image_alt": null,
       "image_credit": null,
@@ -161,127 +187,117 @@
   ],
   "policy": {
     "us_iran": {
-      "fact": "米国によるイラン案拒否後も仲介協議が続き、原油は一時上昇後に伸び悩んだ。",
-      "market_reaction": "米株は下落、米金利は上昇。原油は主要報道で小幅高。",
-      "outlook": "同一限月の原油と運輸・資源ETFが同方向に反応するか確認"
+      "fact": "米・イラン協議は進展せず、Saudiの輸出回復と製品在庫減が併存。",
+      "market_reaction": "WTI+1.16%、Brent+0.89%。",
+      "outlook": "供給回復と外交停滞のどちらが優勢になるか確認。"
     },
     "boj": {
-      "fact": "7月会合議事要旨は利上げペース加速に前向きな意見を含み、8月企業向けサービス価格は前年比+3.7%。",
-      "market_reaction": "銀行・金融が上昇、不動産が下落。円は157円台で小動き。",
-      "outlook": "10月1日の短観と9月会合の主な意見で追加利上げ観測を再確認"
+      "fact": "本日8:50に日銀短観。9月30日の国内銀行ETFは+3.28%。",
+      "market_reaction": "銀行が17業種ETF上位。",
+      "outlook": "大企業製造業の現況・先行きと設備投資計画を確認。"
     },
     "fed": {
-      "fact": "米10年金利は5.24%。米2年金利は9月25日値のため同日スプレッドは算出しない。",
-      "market_reaction": "NASDAQ100・SOX・Goldが下落しVIXが上昇。",
-      "outlook": "9月30日のPCE、10月2日の雇用統計で高い金利が長く続く見方が変わるか確認"
+      "fact": "PCEは予想下振れ、10月利上げ確率は約37%へ低下。",
+      "market_reaction": "短期金利期待は低下したが、米10年は5.29%。",
+      "outlook": "本日のISMと新規失業保険、翌日の雇用統計で再評価。"
     }
   },
   "scenarios": [
     {
       "name": "基本シナリオ",
-      "conditions": "配当落ち分を除いても日本株が弱く、SOX安と米金利高の影響が続く。",
-      "impact_on_japan": "半導体・高PER株が弱く、銀行・金融が相対的に支える。",
+      "conditions": "日本の反発は続くが米Breadthと金利高が上値を抑える。",
+      "impact_on_japan": "半導体・非鉄・銀行を中心に選別、指数は高値もみ合い。",
       "strong_sectors": [
-        "銀行",
-        "金融（銀行除く）"
+        "電機・精密",
+        "鉄鋼・非鉄",
+        "銀行"
       ],
       "weak_sectors": [
-        "電機・精密",
-        "情報通信・サービス",
-        "不動産"
+        "不動産",
+        "運輸・物流"
       ],
-      "invalidation": "配当落ち分を早期に埋め、電機・精密がTOPIXを上回る。"
+      "invalidation": "日銀短観悪化、または値下がり業種が再拡大。"
     },
     {
       "name": "上振れシナリオ",
-      "conditions": "米金利が低下し、SOX先物・日本の電機・精密が反発。日経平均が配当落ち分を埋める。",
-      "impact_on_japan": "指数の実質方向が上向き、半導体と銀行がともに支える。",
+      "conditions": "日銀短観が底堅く、米10年が5.25%以下へ低下、NASDAQ100高が波及。",
+      "impact_on_japan": "半導体主導から広い業種へ上昇が拡大。",
       "strong_sectors": [
         "電機・精密",
         "機械",
-        "銀行"
+        "情報通信・サービス"
       ],
-      "weak_sectors": [],
-      "invalidation": "米10年金利が5.24%を明確に上回り、電機・精密がTOPIXを下回る。"
+      "weak_sectors": [
+        "電力・ガス"
+      ],
+      "invalidation": "米10年5.30%超とSOX下落。"
     },
     {
       "name": "下振れシナリオ",
-      "conditions": "米金利高とSOX安が続き、配当落ち推計を超えて日経平均の下げが拡大。銀行優位も崩れる。",
-      "impact_on_japan": "高PER株だけでなく市場全体へ売りが広がる。",
-      "strong_sectors": [],
-      "weak_sectors": [
-        "電機・精密",
-        "情報通信・サービス",
-        "不動産",
-        "自動車・輸送機"
+      "conditions": "米金利・原油が同時上昇し、米ISMがインフレ的に強い。",
+      "impact_on_japan": "高PERと内需コスト業種が下落し、前日の反発を打ち消す。",
+      "strong_sectors": [
+        "エネルギー資源",
+        "銀行"
       ],
-      "invalidation": "日経平均が配当落ち分を埋め、銀行か電機・精密が明確に上昇。"
+      "weak_sectors": [
+        "不動産",
+        "小売",
+        "運輸・物流"
+      ],
+      "invalidation": "原油反落とBreadth改善。"
     }
   ],
   "events": [
     {
-      "event": "9月末配当の権利落ち",
-      "jst_time": "2026-09-29 寄り付き",
-      "consensus": "日経平均への影響 約350～385円（市場推計）",
-      "previous": "確認できず",
-      "focus": "配当落ち分を埋めるか",
+      "event": "日銀短観（9月調査）",
+      "jst_time": "2026-10-01 08:50 JST",
+      "consensus": "大企業製造業先行き22",
+      "previous": "17",
+      "focus": "企業景況感・設備投資・価格判断",
       "affected_markets": [
-        "日経平均",
-        "TOPIX",
-        "高配当株"
+        "日本株",
+        "円",
+        "日本国債"
       ],
       "importance": "★★★★★"
     },
     {
-      "event": "米個人所得・支出／PCE物価（8月）",
-      "jst_time": "2026-09-30 21:30 JST",
+      "event": "米新規失業保険申請件数",
+      "jst_time": "2026-10-01 21:30 JST",
       "consensus": "確認できず",
       "previous": "確認できず",
-      "focus": "追加利上げ観測と米金利",
+      "focus": "雇用統計前の労働市場",
       "affected_markets": [
         "米金利",
         "ドル",
-        "日本株"
-      ],
-      "importance": "★★★★★"
-    },
-    {
-      "event": "中国PMI（9月）",
-      "jst_time": "2026-09-30",
-      "consensus": "確認できず",
-      "previous": "確認できず",
-      "focus": "中国景気の方向",
-      "affected_markets": [
-        "中国株",
-        "機械",
-        "素材",
-        "商社"
+        "米株"
       ],
       "importance": "★★★★☆"
     },
     {
-      "event": "日銀短観（9月）・9月会合の主な意見",
-      "jst_time": "2026-10-01 08:50 JST",
+      "event": "米S&P Global製造業PMI確報",
+      "jst_time": "2026-10-01 22:45 JST",
       "consensus": "確認できず",
       "previous": "確認できず",
-      "focus": "企業景況感と追加利上げの議論",
+      "focus": "成長と価格圧力",
       "affected_markets": [
-        "日本株",
-        "円",
-        "銀行"
+        "米金利",
+        "米株"
       ],
-      "importance": "★★★★★"
+      "importance": "★★★☆☆"
     },
     {
-      "event": "米雇用統計（9月）",
-      "jst_time": "2026-10-02 21:30 JST",
-      "consensus": "雇用者数+8.5万人の市場予想報道",
+      "event": "米ISM製造業景況指数",
+      "jst_time": "2026-10-01 23:00 JST",
+      "consensus": "確認できず",
       "previous": "確認できず",
-      "focus": "雇用・賃金と追加利上げ観測",
+      "focus": "新規受注・価格・雇用",
       "affected_markets": [
         "米金利",
         "ドル",
-        "世界株"
+        "米株",
+        "日本株"
       ],
       "importance": "★★★★★"
     }
@@ -289,288 +305,189 @@
   "market_data": [
     {
       "market": "S&P500",
-      "price": "7683.6899",
-      "change": "-0.77%",
-      "basis_time": "2026-09-28",
+      "price": "7651.54",
+      "change": "-0.25%",
+      "basis_time": "2026-09-30",
       "source": "data/market.json",
       "confidence": "高",
       "status": "取得成功"
     },
     {
       "market": "NASDAQ総合",
-      "price": "26820.3809",
-      "change": "-0.92%",
-      "basis_time": "2026-09-28",
+      "price": "26861.06",
+      "change": "+0.24%",
+      "basis_time": "2026-09-30",
       "source": "data/market.json",
       "confidence": "高",
       "status": "取得成功"
     },
     {
       "market": "NASDAQ100",
-      "price": "30276.8105",
-      "change": "-1.08%",
-      "basis_time": "2026-09-28",
+      "price": "30520.92",
+      "change": "+0.60%",
+      "basis_time": "2026-09-30",
       "source": "data/market.json",
       "confidence": "高",
       "status": "取得成功"
     },
     {
       "market": "PHLX半導体株指数（SOX）",
-      "price": "12465.2412",
-      "change": "-1.61%",
-      "basis_time": "2026-09-28",
+      "price": "12628.62",
+      "change": "-0.00%",
+      "basis_time": "2026-09-30",
       "source": "data/market.json",
       "confidence": "高",
       "status": "取得成功"
     },
     {
       "market": "NYダウ",
-      "price": "51481.5117",
-      "change": "-0.67%",
-      "basis_time": "2026-09-28",
+      "price": "50906.05",
+      "change": "-0.86%",
+      "basis_time": "2026-09-30",
       "source": "data/market.json",
       "confidence": "高",
       "status": "取得成功"
     },
     {
       "market": "Russell2000",
-      "price": "2817.9121",
-      "change": "-0.69%",
-      "basis_time": "2026-09-28",
+      "price": "2796.86",
+      "change": "-0.39%",
+      "basis_time": "2026-09-30",
       "source": "data/market.json",
       "confidence": "高",
       "status": "取得成功"
     },
     {
       "market": "日経225",
-      "price": "66364.2031",
-      "change": "+1.30%",
-      "basis_time": "2026-09-25",
+      "price": "66753.72",
+      "change": "+1.94%",
+      "basis_time": "2026-09-30",
       "source": "data/market.json",
       "confidence": "高",
       "status": "取得成功"
     },
     {
       "market": "TOPIX参考（1306 ETF）",
-      "price": "428.2",
-      "change": "-0.49%",
-      "basis_time": "2026-09-28",
-      "source": "data/market.json",
-      "confidence": "高",
-      "status": "取得成功"
-    },
-    {
-      "market": "DXY",
-      "price": "101.19",
-      "change": "+0.22%",
-      "basis_time": "2026-09-28",
-      "source": "data/market.json",
-      "confidence": "高",
-      "status": "取得成功"
-    },
-    {
-      "market": "USD/JPY",
-      "price": "157.417",
-      "change": "-0.03%",
-      "basis_time": "2026-09-29",
-      "source": "data/market.json",
-      "confidence": "高",
-      "status": "取得成功"
-    },
-    {
-      "market": "EUR/USD",
-      "price": "1.137",
-      "change": "-0.07%",
-      "basis_time": "2026-09-29",
+      "price": "431.48",
+      "change": "+1.43%",
+      "basis_time": "2026-09-30",
       "source": "data/market.json",
       "confidence": "高",
       "status": "取得成功"
     },
     {
       "market": "米10年債利回り",
-      "price": "5.24",
-      "change": "+1.08%",
-      "basis_time": "2026-09-28",
-      "source": "data/market.json",
-      "confidence": "高",
-      "status": "取得成功"
-    },
-    {
-      "market": "VIX",
-      "price": "16.07",
-      "change": "+8.07%",
-      "basis_time": "2026-09-28",
-      "source": "data/market.json",
-      "confidence": "高",
-      "status": "取得成功"
-    },
-    {
-      "market": "米コミュニケーション・サービス（XLC）",
-      "price": "112.96",
-      "change": "-0.90%",
-      "basis_time": "2026-09-25",
-      "source": "data/market.json",
-      "confidence": "高",
-      "status": "取得成功"
-    },
-    {
-      "market": "米一般消費財（XLY）",
-      "price": "110.56",
-      "change": "+0.22%",
-      "basis_time": "2026-09-25",
-      "source": "data/market.json",
-      "confidence": "高",
-      "status": "取得成功"
-    },
-    {
-      "market": "米生活必需品（XLP）",
-      "price": "82.06",
-      "change": "+0.44%",
-      "basis_time": "2026-09-25",
-      "source": "data/market.json",
-      "confidence": "高",
-      "status": "取得成功"
-    },
-    {
-      "market": "米エネルギー（XLE）",
-      "price": "62.04",
-      "change": "-0.89%",
-      "basis_time": "2026-09-25",
-      "source": "data/market.json",
-      "confidence": "高",
-      "status": "取得成功"
-    },
-    {
-      "market": "米金融（XLF）",
-      "price": "54.84",
-      "change": "+0.57%",
-      "basis_time": "2026-09-25",
-      "source": "data/market.json",
-      "confidence": "高",
-      "status": "取得成功"
-    },
-    {
-      "market": "米ヘルスケア（XLV）",
-      "price": "170.7",
-      "change": "+0.49%",
-      "basis_time": "2026-09-25",
-      "source": "data/market.json",
-      "confidence": "高",
-      "status": "取得成功"
-    },
-    {
-      "market": "米資本財（XLI）",
-      "price": "170.43",
-      "change": "+0.95%",
-      "basis_time": "2026-09-25",
-      "source": "data/market.json",
-      "confidence": "高",
-      "status": "取得成功"
-    },
-    {
-      "market": "米素材（XLB）",
-      "price": "49.8",
-      "change": "+0.24%",
-      "basis_time": "2026-09-25",
-      "source": "data/market.json",
-      "confidence": "高",
-      "status": "取得成功"
-    },
-    {
-      "market": "米不動産（XLRE）",
-      "price": "41.56",
-      "change": "-0.22%",
-      "basis_time": "2026-09-25",
-      "source": "data/market.json",
-      "confidence": "高",
-      "status": "取得成功"
-    },
-    {
-      "market": "米情報技術（XLK）",
-      "price": "196.27",
-      "change": "+0.80%",
-      "basis_time": "2026-09-25",
-      "source": "data/market.json",
-      "confidence": "高",
-      "status": "取得成功"
-    },
-    {
-      "market": "米公益（XLU）",
-      "price": "39.51",
-      "change": "+0.38%",
-      "basis_time": "2026-09-25",
-      "source": "data/market.json",
-      "confidence": "高",
-      "status": "取得成功"
-    },
-    {
-      "market": "Gold",
-      "price": "4157.1001",
-      "change": "-3.80%",
-      "basis_time": "2026-09-28",
-      "source": "data/market.json",
-      "confidence": "高",
-      "status": "取得成功"
-    },
-    {
-      "market": "Silver",
-      "price": "61.15",
-      "change": "-4.82%",
-      "basis_time": "2026-09-28",
-      "source": "data/market.json",
-      "confidence": "高",
-      "status": "取得成功"
-    },
-    {
-      "market": "Copper",
-      "price": "6.6225",
-      "change": "-1.09%",
-      "basis_time": "2026-09-28",
-      "source": "data/market.json",
-      "confidence": "高",
-      "status": "取得成功"
-    },
-    {
-      "market": "WTI",
-      "price": "93.25",
-      "change": "+0.91%",
-      "basis_time": "2026-09-28",
-      "source": "data/market.json",
-      "confidence": "高",
-      "status": "取得成功"
-    },
-    {
-      "market": "Brent",
-      "price": "98.65",
-      "change": "-5.44%",
-      "basis_time": "2026-09-28",
-      "source": "data/market.json",
-      "confidence": "高",
-      "status": "取得成功"
-    },
-    {
-      "market": "BTC",
-      "price": "83462.7812",
-      "change": "-1.18%",
-      "basis_time": "2026-09-29",
-      "source": "data/market.json",
-      "confidence": "高",
-      "status": "取得成功"
-    },
-    {
-      "market": "ETH",
-      "price": "2688.9099",
-      "change": "+0.07%",
-      "basis_time": "2026-09-29",
+      "price": "5.29",
+      "change": "+0.67%",
+      "basis_time": "2026-09-30",
       "source": "data/market.json",
       "confidence": "高",
       "status": "取得成功"
     },
     {
       "market": "米2年債利回り",
-      "price": "4.81",
-      "change": "-1.23%",
-      "basis_time": "2026-09-25",
+      "price": "4.89",
+      "change": "-0.61%",
+      "basis_time": "2026-09-29",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "DXY",
+      "price": "101.47",
+      "change": "+0.10%",
+      "basis_time": "2026-09-30",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "USD/JPY",
+      "price": "156.92",
+      "change": "-0.32%",
+      "basis_time": "2026-09-30",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "EUR/USD",
+      "price": "1.133",
+      "change": "-0.10%",
+      "basis_time": "2026-09-30",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "VIX",
+      "price": "16.13",
+      "change": "+0.56%",
+      "basis_time": "2026-09-30",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "Gold",
+      "price": "4154.17",
+      "change": "-0.68%",
+      "basis_time": "2026-09-30",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "Silver",
+      "price": "60.668",
+      "change": "+0.00%",
+      "basis_time": "2026-09-30",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "Copper",
+      "price": "6.6545",
+      "change": "+0.00%",
+      "basis_time": "2026-09-30",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "WTI",
+      "price": "90.42",
+      "change": "+1.16%",
+      "basis_time": "2026-09-30",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "Brent",
+      "price": "103.5",
+      "change": "+0.89%",
+      "basis_time": "2026-09-30",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "BTC",
+      "price": "83642.6",
+      "change": "-0.02%",
+      "basis_time": "2026-09-30",
+      "source": "data/market.json",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "ETH",
+      "price": "2670.8899",
+      "change": "+0.00%",
+      "basis_time": "2026-09-30",
       "source": "data/market.json",
       "confidence": "高",
       "status": "取得成功"
@@ -578,267 +495,246 @@
   ],
   "market_overview": [
     {
-      "market": "日本株（9月28日）",
-      "move": "日経平均 -0.73% / TOPIX参考 -0.49%",
-      "relative_strength": "弱い",
-      "background": "朝高後に失速し安値引け",
-      "impact_on_japan": "本日も上値の重さを確認。ただし配当落ち分を分離"
+      "market": "日本株（9月30日）",
+      "move": "日経平均+1.94% / TOPIX+1.67%",
+      "relative_strength": "広く反発",
+      "background": "半導体買いと前日急落の反動",
+      "impact_on_japan": "2日目のBreadthで持続性確認"
     },
     {
-      "market": "米国株・半導体",
-      "move": "S&P500 -0.77% / SOX -1.61%",
-      "relative_strength": "弱い",
-      "background": "米金利上昇が高PER株を圧迫",
-      "impact_on_japan": "電機・精密と情報通信に向かい風"
+      "market": "米国株",
+      "move": "NASDAQ+0.24% / S&P500-0.25%",
+      "relative_strength": "大型テック偏重",
+      "background": "PCE下振れと長期金利高が綱引き",
+      "impact_on_japan": "半導体は支え、市場全体は中立"
     },
     {
-      "market": "為替・金利",
-      "move": "USD/JPY 157.417円 / 米10年 5.24%",
-      "relative_strength": "高PER株には重い",
-      "background": "為替はほぼ横ばい、米金利は上昇",
-      "impact_on_japan": "輸出株への追加追い風は弱く、高PER株には逆風"
-    },
-    {
-      "market": "日本の業種",
-      "move": "金融（銀行除く）+2.17% / 銀行+0.76% / 医薬品-1.86%",
-      "relative_strength": "金融優位",
-      "background": "日銀の利上げ観測と金利環境",
-      "impact_on_japan": "銀行優位が続くか、米株安で崩れるかを確認"
+      "market": "原油・金利",
+      "move": "WTI+1.16% / 米10年5.29%",
+      "relative_strength": "再上昇",
+      "background": "外交停滞と強い成長",
+      "impact_on_japan": "資源・銀行に支え、運輸・不動産に逆風"
     }
   ],
   "changes_from_previous": [
-    "昨日の『強弱まちまち』から『弱含み』へ下方修正。米株・SOX・NASDAQ100がそろって下落した",
-    "原油は拒否報道後に上昇したが仲介協議で伸び悩み。運輸・資源の方向は引き続き条件付き",
-    "日銀資料は追加利上げ観測を支え、昨日の金融株優位と整合。ただし単一要因とは断定しない",
-    "本日は権利落ち日。日経平均の見かけの下げ約350～385円を実質方向から分離する"
+    "日本株内部は弱いとの前日判断に対し、日経平均・TOPIXとも大幅反発し、鉄鋼・非鉄と銀行が上位へ転換。",
+    "米半導体は全面高ではなくSOX横ばい。NASDAQ100とXLKの大型テック優位へ見方を絞る。",
+    "原油は前日の急落から反発し、運輸・消費のコスト追い風を弱め、資源を再び支え候補へ修正。"
   ],
   "internal_strength": {
-    "large_vs_small": "S&P500-0.77%、NASDAQ100-1.08%、Russell2000-0.69%。大型ハイテクの弱さが相対的に目立つ。",
-    "sectors": "米業種ETFの保存値は9月25日で止まっているため、9月28日の業種順位には使用しない。SOX-1.61%を半導体の実測反応として確認。",
-    "assessment": "主要指数がそろって下落しVIXが上昇。全面リスクオンではなく、高金利に弱い高PER株の負担が大きい。"
+    "large_vs_small": "NASDAQ100+0.60%に対しRussell2000-0.39%。大型グロース優位。",
+    "sectors": "XLK+0.61%のみ上昇。XLP-1.51%、XLV-1.34%、XLI-1.27%、XLF-1.16%。日本は17業種ETFが広く上昇。",
+    "assessment": "日本は広い反発、米国は狭いテック主導。翌日の日本へ同じ形で延長しない。"
   },
   "japan_market_links": [
     {
-      "pair": "米金利上昇 → 高PER株",
-      "fact": "米10年5.24%、NASDAQ100-1.08%",
-      "usual_relation": "割引率上昇は将来利益の現在価値を下げやすい",
-      "consistency": "SOXとNASDAQ100が下落",
-      "interpretation": "電機・精密、情報通信に向かい風",
-      "confidence": "高"
-    },
-    {
-      "pair": "SOX安 → 国内半導体",
-      "fact": "SOX -1.61%",
-      "usual_relation": "米半導体株の心理が国内関連株へ波及しやすい",
-      "consistency": "日本側の本日反応は未確認",
-      "interpretation": "追随安なら向かい風確認、逆行高なら影響を弱く見る",
-      "confidence": "高"
-    },
-    {
-      "pair": "日銀資料 → 金融株",
-      "fact": "議事要旨は利上げペース加速の意見、サービス価格+3.7%",
-      "usual_relation": "国内金利上昇期待は銀行利ざやに追い風、不動産に逆風となりやすい",
-      "consistency": "昨日は銀行高・不動産安",
-      "interpretation": "昨日は整合したが本日の持続を確認",
+      "pair": "米大型テック → 国内半導体",
+      "fact": "NASDAQ100+0.60%、XLK+0.61%、SOXほぼ横ばい",
+      "usual_relation": "大型テック高は国内半導体心理を支えやすい",
+      "consistency": "日本の前日は半導体中心に反発",
+      "interpretation": "電機・精密がTOPIXを上回れば波及継続",
       "confidence": "中"
     },
     {
-      "pair": "配当落ち → 指数",
-      "fact": "日経平均への推計影響 約350～385円",
-      "usual_relation": "配当権利が外れる分だけ指数が機械的に低下",
-      "consistency": "本日は寄り付き前",
-      "interpretation": "下落幅から推計分を分けて実質方向を判断",
-      "confidence": "高"
+      "pair": "原油反発 → 資源・運輸",
+      "fact": "WTI+1.16%、Brent+0.89%",
+      "usual_relation": "資源に追い風、燃料コスト業種に逆風",
+      "consistency": "米XLEは横ばいで株価追随は弱い",
+      "interpretation": "日本の資源優位は条件付き",
+      "confidence": "中"
+    },
+    {
+      "pair": "長期金利高 → 銀行・不動産",
+      "fact": "米10年5.29%、XLF-1.16%、XLRE-1.04%",
+      "usual_relation": "銀行利ざや期待と不動産割引率に逆方向",
+      "consistency": "米金融も下落し単純な銀行追い風ではない",
+      "interpretation": "日本銀行株は国内金利・短観との組み合わせで判断",
+      "confidence": "中"
     }
   ],
   "commodities_crypto": {
     "commodities": {
       "gold": {
-        "price": "4157.1001",
-        "change": "-3.80%",
-        "analysis": "米金利上昇とドル高の影響が優勢。日本株の固定主要材料にはしない。"
+        "price": "Spot 4,154.17",
+        "change": "-0.64%",
+        "analysis": "PCE下振れでも長期金利上昇が上値を抑制。"
       },
       "oil": {
-        "price": "WTIは小幅高で終了（主要報道）",
-        "change": "Brent連続先物の前日比は除外",
-        "analysis": "外交報道で上下。限月差が疑われる保存値は方向判断に使わない。"
+        "price": "WTI 90.42 / Brent 103.50",
+        "change": "+1.16% / +0.89%",
+        "analysis": "外交停滞と製品在庫減で反発。輸出回復は反証。"
       },
-      "other": "Copper -1.09%、Silver -4.82%。日本株の固定主要材料には選ばない。"
+      "other": "Copper在庫とSilverの9月30日統一基準終値は取得不能のため方向判断から除外。"
     },
     "crypto": {
-      "btc": "83462.78（-1.18%）",
-      "eth": "2688.91（+0.07%）",
+      "btc": "83,642.6（ほぼ横ばい）",
+      "eth": "確認できず",
       "xrp": "確認できず",
-      "basis_time": "2026-09-29日足",
-      "assessment": "BTCは下落したがETHは横ばいで、暗号資産だけから全面リスクオフとは判定しない。"
+      "basis_time": "2026-09-30終値参考",
+      "assessment": "Bitcoinは一時86,000ドル近辺へ上昇後に伸び悩み、全面リスクオンの確認材料にならない。"
     }
   },
   "unusual_moves": [
     {
-      "move": "株安でも銀行・金融株は上昇",
-      "usual_relation": "市場全体が下がる日は多くの業種も下げやすい",
-      "possible_reason": "日銀の追加利上げ観測と金利環境が金融株を相対的に支えた可能性。ただし配当取りや個別要因も混在",
+      "move": "PCE下振れでも米10年が5.29%へ上昇",
+      "usual_relation": "インフレ下振れは金利低下要因",
+      "possible_reason": "GDP上方修正・強い消費・財政と供給要因が短期の利上げ期待低下を上回った可能性。",
       "confidence": "中"
     },
     {
-      "move": "株安と同時にGoldも-3.80%",
-      "usual_relation": "株安では安全資産としてGoldが買われる場合がある",
-      "possible_reason": "米金利上昇とドル高の負担が安全需要を上回った可能性",
-      "confidence": "中"
+      "move": "NASDAQ上昇でも10業種ETFが下落",
+      "usual_relation": "指数高は市場全体改善と受け取られやすい",
+      "possible_reason": "Microsoft、Apple、Nvidiaなど大型テックへの集中。",
+      "confidence": "高"
     }
   ],
   "monitoring_points": [
     {
-      "target": "配当落ち調整後の日経平均",
-      "current_view": "見かけ上は下落しやすい",
-      "today_check": "約350～385円の推計落ち分を埋めるか",
-      "view_change_condition": "落ち分を早期に埋めれば市場の強さを上方修正"
+      "target": "日本株Breadth",
+      "current_view": "反発",
+      "today_check": "上昇業種数とTOPIX",
+      "view_change_condition": "値下がり業種が過半なら反発持続を否定"
     },
     {
-      "target": "SOXと電機・精密",
-      "current_view": "向かい風",
-      "today_check": "電機・精密ETFのTOPIX比",
-      "view_change_condition": "TOPIXを上回れば米半導体安の波及を弱く見る"
+      "target": "大型テックと電機・精密",
+      "current_view": "支え候補",
+      "today_check": "電機・精密のTOPIX比",
+      "view_change_condition": "TOPIXを下回れば波及を弱める"
     },
     {
-      "target": "銀行と不動産",
-      "current_view": "銀行優位",
-      "today_check": "昨日の相対差が継続するか",
-      "view_change_condition": "銀行がTOPIXを下回り不動産が上回れば金利テーマの持続性を下方修正"
+      "target": "米10年",
+      "current_view": "高PER株に逆風",
+      "today_check": "5.30%と米ISM",
+      "view_change_condition": "5.25%以下なら負担を下方修正"
     },
     {
-      "target": "原油と運輸・資源",
-      "current_view": "方向保留",
-      "today_check": "確認可能な同一限月価格と両業種ETF",
-      "view_change_condition": "原油高と資源高・運輸安が同時に確認できれば方向を確定"
+      "target": "原油",
+      "current_view": "資源に支え、運輸に逆風",
+      "today_check": "WTI90ドルと日本の資源・運輸",
+      "view_change_condition": "90ドル割れなら前日のコスト低下経路へ戻す"
     }
   ],
   "strength": [
     {
-      "asset": "日本株（9月28日）",
+      "asset": "日本株",
+      "rating": 4,
+      "comment": "日経平均+1.94%、TOPIX+1.67%"
+    },
+    {
+      "asset": "米大型テック",
+      "rating": 4,
+      "comment": "NASDAQ100+0.60%、XLK+0.61%"
+    },
+    {
+      "asset": "米株Breadth",
       "rating": 2,
-      "comment": "日経平均-0.73%、TOPIX参考-0.49%。金融は逆行高"
+      "comment": "S&P500・Dow・Russell2000と10業種ETFが下落"
     },
     {
-      "asset": "米半導体",
-      "rating": 1,
-      "comment": "SOX-1.61%。本日の国内半導体に向かい風"
-    },
-    {
-      "asset": "米金利",
+      "asset": "米長期金利",
       "rating": 5,
-      "comment": "米10年5.24%。高PER株の評価負担が大きい"
-    },
-    {
-      "asset": "円",
-      "rating": 3,
-      "comment": "ドル円157.417円でほぼ横ばい。方向感は限定的"
+      "comment": "米10年5.29%、評価負担が継続"
     }
   ],
   "data_quality": {
-    "overall": "正常（Brent前日比を除外）",
+    "overall": "条件付き正常",
     "missing": [
-      "OSE日経平均先物の限月付き正式値",
-      "本日の日本株現物反応",
-      "全証券会社を網羅する契約レーティングデータ"
+      "LME・SHFE・COMEXの9月30日銅在庫統一値",
+      "Silver・ETHの9月30日同一基準終値",
+      "全証券会社を網羅する契約レーティング・EPS変更データ"
     ],
     "differences": [
-      "米2年債は9月25日、米10年債は9月28日。長短金利差は算出しない",
-      "TOPIXは1306 ETF参考値",
-      "Brent連続先物と主要報道の同日清算値に限月差が疑われる不一致"
+      "米2年FREDは公表ラグのため9月28日、9月30日市場参考4.89%と混在させない",
+      "Goldはスポット終盤値とCOMEX12月限を区別",
+      "NASDAQ高に対し10業種ETFが下落"
     ],
     "excluded": [
-      "Brent連続先物の-5.44%を原油方向の判定から除外",
-      "34監視銘柄による市場全体の広がり判定",
-      "各業種2銘柄によるセクター全体評価",
-      "Copper・Goldの固定主要材料化"
+      "Copperの比較不能な前日比",
+      "34監視銘柄による市場全体Breadth判定",
+      "Silver・ETHの未検証方向"
     ],
     "cautions": [
-      "今日は権利落ち日で指数に機械的下押し",
-      "商品は同一限月でない値を比較しない",
-      "アナリスト評価は公開情報で確認できた範囲のみ"
+      "日銀短観は発表前の予定情報",
+      "レーティングは公開情報で確認できた範囲のみ",
+      "米雇用統計前で金利シナリオの不確実性が高い"
     ]
   },
   "final_conclusion": {
-    "headline": "今日は弱含み。米株安・米金利上昇・SOX安が重く、約350～385円の配当落ちも指数を機械的に押し下げる。",
+    "headline": "日本株は前日の全面反発を引き継げるかが焦点。米大型テックは支えだが、米10年5.29%・原油再上昇・米株Breadth悪化が上値を試す。",
     "winners": [
+      "日本の鉄鋼・非鉄",
       "銀行",
-      "金融（銀行除く）",
-      "大幅上方修正・増配の個別株"
+      "米大型テック",
+      "原油関連"
     ],
     "losers": [
-      "半導体・電機",
-      "情報通信・高PER株",
-      "不動産"
+      "米ディフェンシブ",
+      "米資本財",
+      "金利敏感不動産",
+      "燃料コスト業種"
     ],
     "top_three": [
-      "配当落ち分を除いた実質方向",
-      "電機・精密と銀行の相対方向",
-      "米10年金利とドル円"
+      "日銀短観と日本株Breadth",
+      "NASDAQ100と電機・精密",
+      "米10年・WTI・米ISM"
     ],
     "triggers": [
-      "配当落ち分の早期埋め",
-      "電機・精密のTOPIX比反転",
-      "米10年金利低下",
-      "銀行優位の崩れ"
+      "電機・精密のTOPIX超過",
+      "米10年5.30%",
+      "WTI90ドル",
+      "米ISMの価格指数"
     ],
-    "disclaimer": "寄り付き前レポートです。配当落ちの機械的影響と実際の売買を分け、確認できない因果や価格は補完しません。"
+    "disclaimer": "9月30日終値を基準とするレポートです。未確認の銅在庫・Silver・ETH・完全レーティングは補完していません。"
   },
   "japan_equities_preview": {
-    "summary": "今日は弱含み。米株安・米金利上昇・SOX安が重く、約350～385円の配当落ちも指数を機械的に押し下げる。",
+    "summary": "日本株は前日の全面反発を引き継げるかが焦点。米大型テックは支えだが、米10年5.29%・原油再上昇・米株Breadth悪化が上値を試す。",
     "top_materials": [
-      "米10年金利5.24% → 高い金利が長く続くとの見方 → 高PERの半導体・情報通信に向かい風",
-      "SOX -1.61% → 米半導体株の投資家心理が悪化 → 電機・精密、機械に向かい風",
-      "9月末の配当落ち約350～385円 → 指数が機械的に低く始まりやすい → 下落幅からこの分を分けて判断",
-      "ドル円157.417円でほぼ横ばい → 輸出採算の追加改善は限定的 → 自動車・機械への為替追い風は弱い",
-      "日銀議事要旨とサービス価格+3.7% → 追加利上げ観測を支えやすい → 銀行には支え、不動産・高PER株には重し候補"
+      "日経平均+1.94%、TOPIX+1.67% → 半導体中心に全面反発 → 2日目も上昇業種が広がるか確認",
+      "NASDAQ+0.24%、NASDAQ100+0.60%、XLK+0.61% → 大型テック優位 → 電機・精密の追い風候補",
+      "S&P500-0.25%、Dow-0.86%、Russell2000-0.39% → 米国の内部は大型テック偏重 → 日本株全体への単純な追い風ではない",
+      "米10年5.29%、金融-1.16%、不動産-1.04% → 長期金利負担継続 → 高PER・金利敏感株を選別",
+      "WTI90.42ドル・Brent103.50ドルへ反発 → 資源株には支え、運輸・小売にはコスト逆風が戻る"
     ],
     "focus_sectors": [
-      "銀行",
-      "金融（銀行除く）",
       "電機・精密",
-      "情報通信・サービス",
-      "不動産"
+      "鉄鋼・非鉄",
+      "銀行",
+      "エネルギー資源",
+      "運輸・物流"
     ],
     "top_stories": [
       {
-        "company": "NaITO",
-        "ticker": "7624",
-        "headline": "通期営業利益予想を3.1倍へ上方修正",
+        "company": "三菱化工機／月島HD",
+        "ticker": "6331",
+        "headline": "2027年4月の経営統合契約を締結",
         "importance": "★★★★★",
         "market_pricing_status": "本日の取引に未反映"
       },
       {
-        "company": "アクセル",
-        "ticker": "6730",
-        "headline": "通期営業利益を90.8%上方修正、年間配当79円へ",
+        "company": "岡谷鋼機",
+        "ticker": "7485",
+        "headline": "通期業績・配当予想を上方修正",
         "importance": "★★★★★",
         "market_pricing_status": "本日の取引に未反映"
       },
       {
-        "company": "ハピネット",
-        "ticker": "7552",
-        "headline": "中間期営業利益予想を73.1%上方修正",
+        "company": "バイク王＆カンパニー",
+        "ticker": "3377",
+        "headline": "通期営業利益を7.1億円から8.6億円へ上方修正",
         "importance": "★★★★★",
         "market_pricing_status": "本日の取引に未反映"
       }
     ],
-    "total_story_count": 3
+    "total_story_count": 5
   },
   "source_notes": [
-    "https://www.investing.com/news/stock-market-news/stocks-cautious-in-asia-as-oil-gains-yields-rise-4919224",
-    "https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20260928&idx=nk225",
-    "https://www.boj.or.jp/mopo/mpmsche_minu/minu_2026/index.htm",
-    "https://www.boj.or.jp/statistics/pi/cspi_release/index.htm",
-    "https://www.jpx.co.jp/english/listing/others/ex-rights/index.html",
-    "https://www.radionikkei.jp/marketpress/post_16223.html",
-    "https://www.release.tdnet.info/inbs/140120260928541228.pdf",
-    "https://www.release.tdnet.info/inbs/140120260928540999.pdf",
-    "https://www.release.tdnet.info/inbs/140120260928541008.pdf",
-    "https://finance.yahoo.co.jp/news/detail/f182d9f79de4be5d265398b093cc59ef2c93d8c0",
-    "https://finance.yahoo.co.jp/news/detail/61e44efa01d53330c0c1161e0c4de3cc7f653e9c",
-    "https://finance.yahoo.co.jp/news/detail/9b71ef0808a347edb4a541f16ca21c8999c46e54",
-    "data/market.json",
-    "data/japan-market.json"
+    "https://www.reuters.com/business/us-stock-futures-inch-up-yields-ease-inflation-report-looms-2026-09-30/",
+    "https://www.reuters.com/markets/us/us-inflation-rises-less-than-expected-august-consumer-spending-surges-2026-09-30/",
+    "https://www.reuters.com/business/us-private-payrolls-growth-picks-up-september-adp-says-2026-09-30/",
+    "https://www.reuters.com/business/energy/oil-climbs-after-trump-denies-he-is-willing-ease-sanctions-iran-2026-09-30/",
+    "https://www.reuters.com/world/india/gold-track-monthly-decline-investors-brace-us-inflation-data-2026-09-30/",
+    "https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20260930&idx=nk225",
+    "https://finance.yahoo.co.jp/news/detail/2cbce7c428ef73ee9c11eaed9b2642d2aac28b01",
+    "https://www.release.tdnet.info/inbs/I_list_001_20260930.html"
   ]
 }

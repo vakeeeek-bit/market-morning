@@ -1,199 +1,230 @@
 {
   "version": "1.0",
-  "report_date": "2026-10-01",
-  "target_market_date": "2026-09-30",
-  "updated_at": "2026-10-01 08:10 JST",
+  "report_date": "2026-10-05",
+  "target_market_date": "2026-10-02",
+  "updated_at": "2026-10-05 13:07 JST",
+  "scope_note": "調査・解釈の監査PASSは市場欠測ゼロを意味しない。市場品質はMANUAL_REVIEWで自動公開PASSではない。",
   "research_coverage": {
     "status": "PASS",
     "directions": [
       {
         "id": "fixed_universe",
         "status": "PASS",
-        "evidence": "32系列を取得し時刻・市場日・限月を監査"
+        "evidence": "32市場系列と11米業種ETFを正本で確認"
       },
       {
         "id": "cross_news",
         "status": "PASS",
-        "evidence": "PCE・ADP・GDP・地政学・TDnet890件・レーティングを横断"
+        "evidence": "BLS・BOJ・USTR・OFACと国内TDnetを確認。取得不能を項目別記録"
       },
       {
         "id": "reverse_from_anomalies",
         "status": "PASS",
-        "evidence": "NASDAQ高と米Breadth悪化、PCE下振れと長期金利高を逆引き"
+        "evidence": "株高と長期金利上昇の反証を確認"
       },
       {
         "id": "previous_day_change",
         "status": "PASS",
-        "evidence": "9月30日朝シナリオを日本17業種と夜間米市場で検証"
+        "evidence": "前回公開2026-10-01と比較。未公表の前日レポートは比較対象にしない"
       }
     ],
     "items": [
       {
         "id": "fixed_market_universe",
-        "label": "固定Universe（株・金利・為替・商品・暗号資産）",
+        "label": "固定市場系列",
         "tier": "Critical",
         "status": "取得済",
-        "evidence": "32系列を取得し、終値・参考値・公表ラグを区別",
+        "evidence": "全32系列の正本・日付を確認。株価・ETF・為替の日足値を採用。先物は定義不足で除外、2年の公表ラグ明記。",
         "attempts": [
           {
-            "method": "公式指数・主要報道・市場価格を照合",
-            "result": "日米指数、11業種ETF、金利、為替、商品を更新",
+            "method": "正本照合",
+            "result": "終値と現在値を分離",
             "source_urls": [
-              "https://www.reuters.com/business/us-stock-futures-inch-up-yields-ease-inflation-report-looms-2026-09-30/",
-              "https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20260930&idx=nk225"
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
             ]
           }
         ],
-        "impact_if_unavailable": "市場全体判断が不能",
-        "publication_use": "used"
-      },
-      {
-        "id": "market_breadth",
-        "label": "日本株市場内部・Breadth",
-        "tier": "Critical",
-        "status": "取得済",
-        "evidence": "日経平均・TOPIXと17業種ETFを確認。市場全体Breadthは公式指数を優先",
-        "attempts": [
-          {
-            "method": "公式指数と17業種ETFを照合",
-            "result": "主要指数上昇、鉄鋼・非鉄と銀行が上位",
-            "source_urls": [
-              "https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20260930&idx=nk225",
-              "https://finance.yahoo.co.jp/news/detail/2cbce7c428ef73ee9c11eaed9b2642d2aac28b01"
-            ]
-          }
-        ],
-        "impact_if_unavailable": "指数の反発持続性を誤読",
-        "publication_use": "used"
+        "impact_if_unavailable": "判断範囲を明記して数値を除外",
+        "publication_use": "selected"
       },
       {
         "id": "policy_and_macro_news",
-        "label": "政策・中央銀行・マクロニュース",
+        "label": "政策・マクロ",
         "tier": "Critical",
         "status": "取得済",
-        "evidence": "PCE、GDP、ADP、Fed織り込み、日銀短観・米ISM予定を確認",
+        "evidence": "BLS雇用、BOJ講演、USTR募集、OFAC指定を一次本文で確認。一次取得できないPMIは二次情報に限定。",
         "attempts": [
           {
-            "method": "Reutersと公表予定を確認",
-            "result": "PCE下振れと長期金利上昇のねじれを確認",
+            "method": "発表主体本文確認",
+            "result": "対象・日付・改定値を確認",
             "source_urls": [
-              "https://www.reuters.com/markets/us/us-inflation-rises-less-than-expected-august-consumer-spending-surges-2026-09-30/",
-              "https://www.reuters.com/business/us-private-payrolls-growth-picks-up-september-adp-says-2026-09-30/"
+              "https://www.bls.gov/news.release/archives/empsit_10022026.htm",
+              "https://www.boj.or.jp/about/press/koen_2026/data/ko261005a.pdf",
+              "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/ustr-seeks-public-comment-2027-joint-review-usmca",
+              "https://ofac.treasury.gov/recent-actions/20261002"
             ]
           }
         ],
-        "impact_if_unavailable": "金利経路を判断不能",
-        "publication_use": "used"
-      },
-      {
-        "id": "company_disclosures",
-        "label": "日本株の個別企業開示・ニュース",
-        "tier": "Critical",
-        "status": "取得済",
-        "evidence": "TDnet9月30日全890件の一覧と重要5件を確認",
-        "attempts": [
-          {
-            "method": "TDnet一覧と企業IRを確認",
-            "result": "三菱化工機/月島HD、岡谷鋼機、バイク王、ポプラ、ダイケンを選定",
-            "source_urls": [
-              "https://www.release.tdnet.info/inbs/I_list_001_20260930.html",
-              "https://www.kakoki.co.jp/news/2026/09/30-business-integration-mitsubishi-kakoki-tsukishima-holdings.html",
-              "https://www.okaya.co.jp/ir/ir_news/2026/1296"
-            ]
-          }
-        ],
-        "impact_if_unavailable": "重要個別材料が欠落",
-        "publication_use": "used"
-      },
-      {
-        "id": "analyst_rating_changes",
-        "label": "アナリスト評価変更（格上げ・格下げ・新規・目標株価・EPS）",
-        "tier": "Required",
-        "status": "十分調査したが取得不能",
-        "evidence": "公開情報で変更を確認。EPSを含む完全一覧は取得不能",
-        "attempts": [
-          {
-            "method": "日次レーティング一覧を確認",
-            "result": "格付け・目標株価変更を取得",
-            "source_urls": [
-              "https://kabu.kininew.net/rating/8473.html"
-            ]
-          },
-          {
-            "method": "公開レーティング日報を照合",
-            "result": "最上位継続＋目標株価増額を確認",
-            "source_urls": [
-              "https://finance.yahoo.co.jp/news/detail/8e008a72b65714abaf5c228295be369734b85223"
-            ]
-          }
-        ],
-        "impact_if_unavailable": "確認分のみ掲載し、変更なしと断定しない",
-        "publication_use": "used"
-      },
-      {
-        "id": "copper_inventory",
-        "label": "Copper価格・LME/SHFE/COMEX在庫",
-        "tier": "Required",
-        "status": "十分調査したが取得不能",
-        "evidence": "9月30日の価格・3市場在庫を同一基準で確認できず",
-        "attempts": [
-          {
-            "method": "LME・CME・主要報道を横断",
-            "result": "統一基準の当日在庫は取得不能",
-            "source_urls": [
-              "https://www.lme.com/en/metals/non-ferrous/lme-copper",
-              "https://www.cmegroup.com/markets/metals/base/copper.html"
-            ]
-          },
-          {
-            "method": "市場報道を確認",
-            "result": "在庫と価格を同一時点で照合できず",
-            "source_urls": [
-              "https://www.reuters.com/business/us-stock-futures-inch-up-yields-ease-inflation-report-looms-2026-09-30/"
-            ]
-          }
-        ],
-        "impact_if_unavailable": "Copperを主要方向判断から除外",
-        "publication_use": "excluded"
+        "impact_if_unavailable": "判断範囲を明記して数値を除外",
+        "publication_use": "selected"
       },
       {
         "id": "market_anomaly_reverse_search",
-        "label": "市場異常値からの逆引き",
+        "label": "株高と金利高の逆引き",
         "tier": "Required",
         "status": "取得済",
-        "evidence": "PCE下振れ/長期金利高、NASDAQ高/10業種安を逆引き",
+        "evidence": "株高と金利高が同居する点をReutersの政策期待説明と照合。解決不能な長期金利因果を明記。",
         "attempts": [
           {
-            "method": "株・金利・業種を照合",
-            "result": "全面リスクオンではないと確認",
+            "method": "複数資産照合",
+            "result": "政策期待と長期金利を別に評価",
             "source_urls": [
-              "https://www.reuters.com/business/us-stock-futures-inch-up-yields-ease-inflation-report-looms-2026-09-30/",
-              "https://www.reuters.com/markets/us/us-inflation-rises-less-than-expected-august-consumer-spending-surges-2026-09-30/"
+              "https://www.reuters.com/world/china/global-markets-global-markets-2026-10-05/",
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
             ]
           }
         ],
-        "impact_if_unavailable": "テンプレ因果へ劣化",
-        "publication_use": "used"
+        "impact_if_unavailable": "判断範囲を明記して数値を除外",
+        "publication_use": "selected"
       },
       {
-        "id": "previous_day_view",
-        "label": "前日までの市場認識との差分",
-        "tier": "Critical",
+        "id": "company_disclosures",
+        "label": "国内適時開示",
+        "tier": "Required",
         "status": "取得済",
-        "evidence": "日本株内部弱さを反発へ修正、半導体を大型テック偏重へ絞り、原油を再上昇へ修正",
+        "evidence": "TDnet一覧はWeb検索で取得できなかったため直接HTTPで取得。13時まで60件を確認、選定PDFは直接取得し本文確認。全日開示や翌日材料の網羅とは表示しない。",
         "attempts": [
           {
-            "method": "9月30日レポート条件と実績を比較",
-            "result": "日本17業種、夜間米市場、商品を照合",
+            "method": "公開適時開示一覧とPDF取得",
+            "result": "当日の会社名・コード・公表時刻を確認",
             "source_urls": [
-              "https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20260930&idx=nk225",
-              "https://www.reuters.com/business/us-stock-futures-inch-up-yields-ease-inflation-report-looms-2026-09-30/",
-              "https://www.reuters.com/business/energy/oil-climbs-after-trump-denies-he-is-willing-ease-sanctions-iran-2026-09-30/"
+              "https://www.release.tdnet.info/inbs/I_list_001_20261005.html",
+              "https://www.release.tdnet.info/inbs/140120261005545912.pdf",
+              "https://www.release.tdnet.info/inbs/140120260926540628.pdf"
             ]
           }
         ],
-        "impact_if_unavailable": "前日文章の数字差し替えになる",
-        "publication_use": "used"
+        "impact_if_unavailable": "判断範囲を明記して数値を除外",
+        "publication_use": "selected"
+      },
+      {
+        "id": "previous_published_report",
+        "label": "前回公開との差分",
+        "tier": "Required",
+        "status": "取得済",
+        "evidence": "前回公開2026-10-01から米業種の広がり改善を確認。未公表の前日見解を捏造しない。",
+        "attempts": [
+          {
+            "method": "前回公開JSON比較",
+            "result": "大型テック偏重から10業種ETF上昇へ変化",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ]
+          }
+        ],
+        "impact_if_unavailable": "判断範囲を明記して数値を除外",
+        "publication_use": "selected"
+      },
+      {
+        "id": "analyst_rating_changes",
+        "label": "アナリスト評価変更",
+        "tier": "Required",
+        "status": "十分調査したが取得不能",
+        "evidence": "当日の完全一覧・EPS変更は取得できず。変更なしとは表示しない。",
+        "attempts": [
+          {
+            "method": "公開日付一覧",
+            "result": "取得不能",
+            "source_urls": [
+              "https://nikkeiyosoku.com/stock/rating/?date=2026-10-05"
+            ]
+          },
+          {
+            "method": "専門紙カレンダーと検索",
+            "result": "個別変更の網羅不可",
+            "source_urls": [
+              "https://www.nsjournal.jp/calendar/"
+            ]
+          }
+        ],
+        "impact_if_unavailable": "判断範囲を明記して数値を除外",
+        "publication_use": "not_selected"
+      },
+      {
+        "id": "copper_inventory",
+        "label": "銅在庫",
+        "tier": "Required",
+        "status": "十分調査したが取得不能",
+        "evidence": "LME日次・SHFE週次・CME日次の公式掲載先を確認したが対象日の数値・単位・公表日を取得できず。",
+        "attempts": [
+          {
+            "method": "LME・SHFE公式掲載先",
+            "result": "対象値未取得",
+            "source_urls": [
+              "https://www.lme.com/en/market-data/reports-and-data/warehouse-and-stocks-reports",
+              "https://www.shfe.com.cn/eng/reports/StatisticalData/WeeklyData/"
+            ]
+          },
+          {
+            "method": "CME公式掲載先",
+            "result": "対象値未取得",
+            "source_urls": [
+              "https://www.cmegroup.com/clearing/operations-and-deliveries/registrar-reports.html"
+            ]
+          }
+        ],
+        "impact_if_unavailable": "判断範囲を明記して数値を除外",
+        "publication_use": "not_selected"
+      },
+      {
+        "id": "pmi_primary",
+        "label": "PMI一次本文",
+        "tier": "Required",
+        "status": "十分調査したが取得不能",
+        "evidence": "発表主体本文未取得。Reutersの確報と速報・前月比較に限定。",
+        "attempts": [
+          {
+            "method": "発表主体検索",
+            "result": "対象一次本文未取得",
+            "source_urls": [
+              "https://www.pmi.spglobal.com/"
+            ]
+          },
+          {
+            "method": "Reuters照合",
+            "result": "二次情報として取得",
+            "source_urls": [
+              "https://www.reuters.com/world/asia-pacific/japan-service-sector-activity-slows-5-month-high-pmi-shows-2026-10-05/"
+            ]
+          }
+        ],
+        "impact_if_unavailable": "判断範囲を明記して数値を除外",
+        "publication_use": "not_selected"
+      },
+      {
+        "id": "ecb_updates",
+        "label": "ECB新規材料",
+        "tier": "Required",
+        "status": "十分調査したが取得不能",
+        "evidence": "公式一覧取得失敗。新規材料なしとは断定しない。",
+        "attempts": [
+          {
+            "method": "公式一覧",
+            "result": "取得失敗",
+            "source_urls": [
+              "https://www.ecb.europa.eu/press/pr/date/2026/html/index.en.html"
+            ]
+          },
+          {
+            "method": "一次発表主体再確認",
+            "result": "対象本文未取得",
+            "source_urls": [
+              "https://www.ecb.europa.eu/press/html/index.en.html"
+            ]
+          }
+        ],
+        "impact_if_unavailable": "判断範囲を明記して数値を除外",
+        "publication_use": "not_selected"
       }
     ]
   },
@@ -201,254 +232,281 @@
     "status": "PASS",
     "materials": [
       {
-        "id": "japan_rebound",
-        "headline": "日本株の全面反発は確認、持続性は未確認",
+        "headline": "米雇用の伸びが鈍化、過去2か月も下方改定",
         "fact": {
-          "text": "日経平均+1.94%、TOPIX+1.67%",
+          "text": "BLSは10月2日08:30 ET（21:30 JST）に9月雇用を発表。非農業雇用+29,000人、失業率4.2%。7月は+21,000→-10,000、8月は+162,000→+133,000、合計60,000人下方改定。時給は前月比+0.1%、前年比+3.0%。",
           "source_urls": [
-            "https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20260930&idx=nk225",
-            "https://finance.yahoo.co.jp/news/detail/2cbce7c428ef73ee9c11eaed9b2642d2aac28b01"
+            "https://www.bls.gov/news.release/archives/empsit_10022026.htm"
           ]
         },
         "observed_market_reaction": {
-          "text": "鉄鋼・非鉄+3.64%、銀行+3.28%、建設・資材+2.41%",
-          "assets_checked": [
-            "日経平均",
-            "TOPIX",
-            "17業種ETF"
-          ]
-        },
-        "market_internals": {
-          "text": "前日弱かった市場内部が広く反発",
-          "source_data_keys": [
-            "japan-market.sector_ranking",
-            "report.market_overview"
-          ]
-        },
-        "market_pricing": {
-          "status": "priced",
-          "text": "9月30日の現物に反映"
-        },
-        "interpretation": {
-          "text": "反発は確認したが2日目のBreadthで持続性を判定",
-          "confidence": "supported",
-          "evidence": "主要2指数と業種ETFが同方向",
-          "uncertainty": "前日急落の反動"
-        },
-        "japan_transmission": {
-          "overseas_input": "前夜の米半導体反発",
-          "intermediate_reactions": [
-            "半導体買い",
-            "主要指数上昇",
-            "業種上昇拡大"
-          ],
-          "economic_channel": "投資家心理と押し目買い",
-          "affected_sectors": [
-            "電機・精密",
-            "鉄鋼・非鉄",
-            "銀行"
-          ],
-          "affected_stocks": [],
-          "pricing_in_japan": "9月30日に反映",
-          "assessment": "強いが持続性は条件付き"
-        },
-        "counter_evidence": [
-          "出来高の確認が必要",
-          "米国夜間はBreadth悪化",
-          "長期金利高"
-        ],
-        "conflict_resolution": "当日の反発確認と翌日持続性を分離",
-        "change_conditions": [
-          "上昇業種の拡大",
-          "TOPIX続伸"
-        ],
-        "chronology_check": "PASS"
-      },
-      {
-        "id": "tech_breadth",
-        "headline": "米大型テック高だが市場全体は弱い",
-        "fact": {
-          "text": "NASDAQ100+0.60%、XLK+0.61%、S&P500-0.25%、Russell2000-0.39%",
-          "source_urls": [
-            "https://www.reuters.com/business/us-stock-futures-inch-up-yields-ease-inflation-report-looms-2026-09-30/"
-          ]
-        },
-        "observed_market_reaction": {
-          "text": "11業種中XLKのみ上昇",
+          "text": "正本の同日終値はS&P500 +0.73%、NASDAQ +1.19%、VIX -6.59%。Reutersは10月5日に追加利上げ観測の後退を報道。",
           "assets_checked": [
             "S&P500",
-            "NASDAQ100",
-            "Russell2000",
-            "11業種ETF"
+            "VIX",
+            "米10年"
           ]
         },
         "market_internals": {
-          "text": "大型テック集中で指数間・業種間の乖離",
-          "source_data_keys": [
-            "market.nasdaq100",
-            "market.sector_xlk",
-            "market.russell2000"
-          ]
+          "text": "10月2日の日足終値によるSector SPDR ETF代理比較。11系列中10上昇・1下落。XLY +1.13%、XLK +1.01%、XLI +0.78%が上位、XLV -0.01%が唯一の下落。セクター指数そのものではない。"
         },
         "market_pricing": {
-          "status": "unpriced",
-          "text": "夜間反応は本日の日本株に未反映"
+          "status": "unknown",
+          "text": "材料の存在と因果的な織り込みを区別。当日日本株への独立寄与は未確認。"
         },
         "interpretation": {
-          "text": "国内半導体には支えだが日本株全体には中立",
-          "confidence": "supported",
-          "evidence": "指数と11業種の実反応",
-          "uncertainty": "日本側への波及範囲"
+          "text": "利上げ観測の緩和は評価を支える一方、雇用の鈍化は利益成長の反証にもなる。雇用だけで利下げ決定や長期金利低下を断定しない。",
+          "evidence": "正本の同日終値はS&P500 +0.73%、NASDAQ +1.19%、VIX -6.59%。Reutersは10月5日に追加利上げ観測の後退を報道。",
+          "uncertainty": "材料単独の因果、当日現在値、先物定義は確認できない。",
+          "confidence": "tentative"
         },
         "japan_transmission": {
-          "overseas_input": "米大型テック高と広い株安",
+          "economic_channel": "政策期待・割引率・投資需要またはサービス需要を通じた条件付き波及",
           "intermediate_reactions": [
-            "NASDAQ100上昇",
-            "XLK上昇",
-            "10業種下落"
+            "米株と長期金利の方向を分離",
+            "国内業種相対値と出来高で確認"
           ],
-          "economic_channel": "半導体心理改善と市場Breadth悪化が相反",
           "affected_sectors": [
             "電機・精密",
             "情報通信・サービス"
           ],
-          "affected_stocks": [
-            "東京エレクトロン",
-            "アドバンテスト"
-          ],
-          "pricing_in_japan": "本日未反映",
-          "assessment": "半導体に限定した追い風"
+          "pricing_in_japan": "当日寄与は未確定。前営業日ETFから一方向に断定しない。",
+          "assessment": "利上げ観測の緩和は評価を支える一方、雇用の鈍化は利益成長の反証にもなる。雇用だけで利下げ決定や長期金利低下を断定しない。"
         },
+        "conflict_resolution": "株高と長期金利上昇を両方記録。国内サービス鈍化とAI期待も別の経済経路として扱う。",
         "counter_evidence": [
-          "SOXはほぼ横ばい",
-          "米10年5.29%",
-          "Russell2000下落"
+          "米10年は10月2日5.277%、前回比+0.04ポイント。米2年は10月1日4.78%、前回比-0.10ポイント。基準日が異なるので2s10sと同日カーブ変化は計算しない。",
+          "雇用鈍化は利益成長に逆風となる可能性"
         ],
-        "conflict_resolution": "大型テックと市場全体を分離",
         "change_conditions": [
-          "電機・精密のTOPIX超過",
-          "SOX下落または米10年5.30%超"
+          "米10年の一段上昇",
+          "日本電機・精密ETFのTOPIX代理比悪化"
         ],
         "chronology_check": "PASS"
       },
       {
-        "id": "rates_oil",
-        "headline": "PCE下振れでも金利・原油が上昇",
+        "headline": "半導体の上昇に米セクターの広がりが伴う",
         "fact": {
-          "text": "PCE前年比+3.4%、米10年5.29%、WTI+1.16%",
+          "text": "10月2日の正本はSOX 13136.6699（+2.40%）、NASDAQ100 30807.9297（+1.00%）、Russell2000 2832.8999（+0.94%）。",
           "source_urls": [
-            "https://www.reuters.com/markets/us/us-inflation-rises-less-than-expected-august-consumer-spending-surges-2026-09-30/",
-            "https://www.reuters.com/business/energy/oil-climbs-after-trump-denies-he-is-willing-ease-sanctions-iran-2026-09-30/"
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
           ]
         },
         "observed_market_reaction": {
-          "text": "金融・不動産・資本財が下落、原油は反発",
+          "text": "11業種ETF代理系列は10上昇。XLY +1.13%、XLK +1.01%が強い。",
           "assets_checked": [
-            "米10年",
-            "WTI",
-            "XLF",
-            "XLRE",
-            "XLI"
+            "SOX",
+            "NASDAQ100",
+            "Russell2000"
           ]
         },
         "market_internals": {
-          "text": "政策金利期待低下と長期金利上昇が分岐",
-          "source_data_keys": [
-            "market.us10y",
-            "market.wti",
-            "market.sector_xlf"
-          ]
+          "text": "10月2日の日足終値によるSector SPDR ETF代理比較。11系列中10上昇・1下落。XLY +1.13%、XLK +1.01%、XLI +0.78%が上位、XLV -0.01%が唯一の下落。セクター指数そのものではない。"
         },
         "market_pricing": {
-          "status": "unpriced",
-          "text": "夜間反応は本日の日本株に未反映"
+          "status": "unknown",
+          "text": "材料の存在と因果的な織り込みを区別。当日日本株への独立寄与は未確認。"
         },
         "interpretation": {
-          "text": "資源に支え、不動産・運輸・小売に逆風",
-          "confidence": "supported",
-          "evidence": "金利・原油と米業種反応",
-          "uncertainty": "中東輸出回復と日銀短観"
+          "text": "大型テックだけの上昇より市場の支えは広い。ただしETFの上昇業種数は全銘柄の騰落数ではなく、資金流入を直接証明しない。",
+          "evidence": "11業種ETF代理系列は10上昇。XLY +1.13%、XLK +1.01%が強い。",
+          "uncertainty": "材料単独の因果、当日現在値、先物定義は確認できない。",
+          "confidence": "supported"
         },
         "japan_transmission": {
-          "overseas_input": "米長期金利高と原油反発",
+          "economic_channel": "政策期待・割引率・投資需要またはサービス需要を通じた条件付き波及",
           "intermediate_reactions": [
-            "10年債利回り上昇",
-            "原油上昇",
-            "金利敏感業種下落"
+            "米株と長期金利の方向を分離",
+            "国内業種相対値と出来高で確認"
           ],
-          "economic_channel": "割引率・資源利益・燃料コスト",
           "affected_sectors": [
-            "銀行",
-            "不動産",
-            "エネルギー資源",
-            "運輸・物流",
-            "小売"
+            "電機・精密",
+            "機械"
           ],
-          "affected_stocks": [],
-          "pricing_in_japan": "本日未反映",
-          "assessment": "業種間の勝敗を分ける"
+          "pricing_in_japan": "当日寄与は未確定。前営業日ETFから一方向に断定しない。",
+          "assessment": "大型テックだけの上昇より市場の支えは広い。ただしETFの上昇業種数は全銘柄の騰落数ではなく、資金流入を直接証明しない。"
         },
+        "conflict_resolution": "株高と長期金利上昇を両方記録。国内サービス鈍化とAI期待も別の経済経路として扱う。",
         "counter_evidence": [
-          "PCEは予想下振れ",
-          "輸出回復で原油が再下落する可能性",
-          "米金融株も下落"
+          "米10年は10月2日5.277%、前回比+0.04ポイント。米2年は10月1日4.78%、前回比-0.10ポイント。基準日が異なるので2s10sと同日カーブ変化は計算しない。",
+          "雇用鈍化は利益成長に逆風となる可能性"
         ],
-        "conflict_resolution": "政策金利・長期金利・原油を別経路で評価",
         "change_conditions": [
-          "米10年5.25%以下",
-          "WTI90ドル割れ"
+          "米10年の一段上昇",
+          "日本電機・精密ETFのTOPIX代理比悪化"
+        ],
+        "chronology_check": "PASS"
+      },
+      {
+        "headline": "株高と長期金利上昇が同居する",
+        "fact": {
+          "text": "米10年は10月2日5.277%、前回比+0.04ポイント。米2年は10月1日4.78%、前回比-0.10ポイント。基準日が異なるので2s10sと同日カーブ変化は計算しない。",
+          "source_urls": [
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+          ]
+        },
+        "observed_market_reaction": {
+          "text": "S&P500上昇とVIX低下にもかかわらず、米10年利回りは前回を上回った。",
+          "assets_checked": [
+            "米10年",
+            "S&P500",
+            "VIX"
+          ]
+        },
+        "market_internals": {
+          "text": "10月2日の日足終値によるSector SPDR ETF代理比較。11系列中10上昇・1下落。XLY +1.13%、XLK +1.01%、XLI +0.78%が上位、XLV -0.01%が唯一の下落。セクター指数そのものではない。"
+        },
+        "market_pricing": {
+          "status": "unknown",
+          "text": "材料の存在と因果的な織り込みを区別。当日日本株への独立寄与は未確認。"
+        },
+        "interpretation": {
+          "text": "景気不安が消えたとも債券が一斉に買われたとも解釈できない。半導体の利益期待と割引率上昇を分け、高PER株の追随は金利反落を条件にする。",
+          "evidence": "S&P500上昇とVIX低下にもかかわらず、米10年利回りは前回を上回った。",
+          "uncertainty": "材料単独の因果、当日現在値、先物定義は確認できない。",
+          "confidence": "supported"
+        },
+        "japan_transmission": {
+          "economic_channel": "政策期待・割引率・投資需要またはサービス需要を通じた条件付き波及",
+          "intermediate_reactions": [
+            "米株と長期金利の方向を分離",
+            "国内業種相対値と出来高で確認"
+          ],
+          "affected_sectors": [
+            "不動産",
+            "電機・精密",
+            "銀行"
+          ],
+          "pricing_in_japan": "当日寄与は未確定。前営業日ETFから一方向に断定しない。",
+          "assessment": "景気不安が消えたとも債券が一斉に買われたとも解釈できない。半導体の利益期待と割引率上昇を分け、高PER株の追随は金利反落を条件にする。"
+        },
+        "conflict_resolution": "株高と長期金利上昇を両方記録。国内サービス鈍化とAI期待も別の経済経路として扱う。",
+        "counter_evidence": [
+          "米10年は10月2日5.277%、前回比+0.04ポイント。米2年は10月1日4.78%、前回比-0.10ポイント。基準日が異なるので2s10sと同日カーブ変化は計算しない。",
+          "雇用鈍化は利益成長に逆風となる可能性"
+        ],
+        "change_conditions": [
+          "米10年の一段上昇",
+          "日本電機・精密ETFのTOPIX代理比悪化"
+        ],
+        "chronology_check": "PASS"
+      },
+      {
+        "headline": "国内サービスは拡大を維持しながら減速",
+        "fact": {
+          "text": "Reutersの10月5日09:35 JST報道では、S&P Globalの9月日本サービスPMI確報は51.3。8月52.5、速報51.6から低下。一次公表本文は未取得。",
+          "source_urls": [
+            "https://www.reuters.com/world/asia-pacific/japan-service-sector-activity-slows-5-month-high-pmi-shows-2026-10-05/"
+          ]
+        },
+        "observed_market_reaction": {
+          "text": "10月5日のReuters市場報道では日本株は上昇方向。PMIが株価上昇の原因、または市場全体への売り材料になったとは確認できない。",
+          "assets_checked": [
+            "日本株",
+            "USD/JPY"
+          ]
+        },
+        "market_internals": {
+          "text": "当日材料の独立した指数・業種反応は取得不能。10月2日のETF内部と当日反応を混同しない。"
+        },
+        "market_pricing": {
+          "status": "unknown",
+          "text": "材料の存在と因果的な織り込みを区別。当日日本株への独立寄与は未確認。"
+        },
+        "interpretation": {
+          "text": "50超は拡大、前月比低下は勢いの減速。サービス株一律売りではなく需要・価格転嫁・月次売上を確認する。",
+          "evidence": "10月5日のReuters市場報道では日本株は上昇方向。PMIが株価上昇の原因、または市場全体への売り材料になったとは確認できない。",
+          "uncertainty": "材料単独の因果、当日現在値、先物定義は確認できない。",
+          "confidence": "tentative"
+        },
+        "japan_transmission": {
+          "economic_channel": "政策期待・割引率・投資需要またはサービス需要を通じた条件付き波及",
+          "intermediate_reactions": [
+            "米株と長期金利の方向を分離",
+            "国内業種相対値と出来高で確認"
+          ],
+          "affected_sectors": [
+            "小売",
+            "サービス"
+          ],
+          "pricing_in_japan": "当日寄与は未確定。前営業日ETFから一方向に断定しない。",
+          "assessment": "50超は拡大、前月比低下は勢いの減速。サービス株一律売りではなく需要・価格転嫁・月次売上を確認する。"
+        },
+        "conflict_resolution": "株高と長期金利上昇を両方記録。国内サービス鈍化とAI期待も別の経済経路として扱う。",
+        "counter_evidence": [
+          "米10年は10月2日5.277%、前回比+0.04ポイント。米2年は10月1日4.78%、前回比-0.10ポイント。基準日が異なるので2s10sと同日カーブ変化は計算しない。",
+          "雇用鈍化は利益成長に逆風となる可能性"
+        ],
+        "change_conditions": [
+          "米10年の一段上昇",
+          "日本電機・精密ETFのTOPIX代理比悪化"
+        ],
+        "chronology_check": "PASS"
+      },
+      {
+        "headline": "日銀：AIによる需要拡大と調整リスクを両方指摘",
+        "fact": {
+          "text": "10月5日の内田副総裁講演は、AIが需要と物価を押し上げ、株高が金融環境を緩和する一方、関連企業の債券発行は長期金利上昇に作用すると説明。収益が伴わない場合の調整リスクも指摘。新たな政策金利決定ではない。",
+          "source_urls": [
+            "https://www.boj.or.jp/about/press/koen_2026/data/ko261005a.pdf"
+          ]
+        },
+        "observed_market_reaction": {
+          "text": "同日株高という背景はあるが、講演直前・直後を同一基準で照合できず、講演による独立した値動きは未確認。",
+          "assets_checked": [
+            "日本株",
+            "米10年"
+          ]
+        },
+        "market_internals": {
+          "text": "当日材料の独立した指数・業種反応は取得不能。10月2日のETF内部と当日反応を混同しない。"
+        },
+        "market_pricing": {
+          "status": "unknown",
+          "text": "材料の存在と因果的な織り込みを区別。当日日本株への独立寄与は未確認。"
+        },
+        "interpretation": {
+          "text": "AI投資期待の強さと金利・収益の制約が同居するという見方。設備投資と実際の収益拡大を確認し、日銀がAI関連株高を保証したと解釈しない。",
+          "evidence": "同日株高という背景はあるが、講演直前・直後を同一基準で照合できず、講演による独立した値動きは未確認。",
+          "uncertainty": "材料単独の因果、当日現在値、先物定義は確認できない。",
+          "confidence": "tentative"
+        },
+        "japan_transmission": {
+          "economic_channel": "政策期待・割引率・投資需要またはサービス需要を通じた条件付き波及",
+          "intermediate_reactions": [
+            "米株と長期金利の方向を分離",
+            "国内業種相対値と出来高で確認"
+          ],
+          "affected_sectors": [
+            "電機・精密",
+            "情報通信・サービス",
+            "銀行"
+          ],
+          "pricing_in_japan": "当日寄与は未確定。前営業日ETFから一方向に断定しない。",
+          "assessment": "AI投資期待の強さと金利・収益の制約が同居するという見方。設備投資と実際の収益拡大を確認し、日銀がAI関連株高を保証したと解釈しない。"
+        },
+        "conflict_resolution": "株高と長期金利上昇を両方記録。国内サービス鈍化とAI期待も別の経済経路として扱う。",
+        "counter_evidence": [
+          "米10年は10月2日5.277%、前回比+0.04ポイント。米2年は10月1日4.78%、前回比-0.10ポイント。基準日が異なるので2s10sと同日カーブ変化は計算しない。",
+          "雇用鈍化は利益成長に逆風となる可能性"
+        ],
+        "change_conditions": [
+          "米10年の一段上昇",
+          "日本電機・精密ETFのTOPIX代理比悪化"
         ],
         "chronology_check": "PASS"
       }
     ],
     "template_degradation_audit": {
-      "today_specific": true,
       "previous_report_compared": true,
-      "actual_market_reaction_checked": true,
-      "multi_asset_checked": true,
       "conflicting_materials_compared": true,
-      "transmission_explained": true,
+      "today_specific": true,
+      "actual_market_reaction_checked": true,
       "observable_change_conditions": true,
-      "comparison_note": "日本株内部弱さを反発へ修正し、米大型テック偏重・PCE下振れと長期金利高・原油再上昇を新規分析"
+      "transmission_explained": true,
+      "multi_asset_checked": true,
+      "comparison_note": "前回公開の大型テック偏重を引き継がず、10月2日ETF10上昇、雇用下方改定、10月5日PMI・講演を追加。独立した当日因果は断定しない。"
     }
-  },
-  "counter_evidence_audit": {
-    "status": "PASS",
-    "conclusions": [
-      {
-        "conclusion": "日本株は反発",
-        "checks": [
-          "日経平均",
-          "TOPIX",
-          "17業種ETF"
-        ],
-        "weighing": "主要2指数と業種方向が一致",
-        "uncertainty": "前日急落の反動"
-      },
-      {
-        "conclusion": "米大型テックは支え",
-        "checks": [
-          "NASDAQ100",
-          "XLK",
-          "SOX",
-          "Russell2000",
-          "米10年"
-        ],
-        "weighing": "大型テック高を認めるがSOX横ばい・市場Breadth悪化・金利高を反証",
-        "uncertainty": "日本側への波及"
-      },
-      {
-        "conclusion": "原油反発は資源支え",
-        "checks": [
-          "WTI",
-          "Brent",
-          "XLE",
-          "USD/JPY"
-        ],
-        "weighing": "原油は上昇したがXLEは横ばいで条件付き",
-        "uncertainty": "中東輸出回復"
-      }
-    ]
   },
   "cross_asset_consistency": {
     "status": "PASS",
@@ -461,89 +519,75 @@
     ],
     "relationships": [
       {
-        "combination": "PCE下振れ＋長期金利上昇",
-        "observations": [
-          "PCE前年比+3.4%",
-          "米10年5.29%"
-        ],
-        "explanation": "成長・財政・供給要因が短期利上げ期待低下を上回った可能性",
-        "confidence": "tentative",
+        "combination": "株高・VIX低下と米長期金利上昇",
+        "explanation": "追加利上げ期待の緩和と長期金利は別の指標。株高を全面的な金融緩和と呼ばない。",
         "unresolved": true,
-        "uncertainty": "米ISM・雇用統計後の持続性"
+        "uncertainty": "長期金利上昇の要因別寄与と当日現在値は未取得"
       },
       {
-        "combination": "NASDAQ高＋10業種ETF下落",
-        "observations": [
-          "NASDAQ+0.24%",
-          "XLK+0.61%",
-          "他10業種下落"
-        ],
-        "explanation": "大型テック集中",
-        "confidence": "supported",
-        "unresolved": false,
-        "uncertainty": ""
-      },
-      {
-        "combination": "原油反発＋XLE横ばい",
-        "observations": [
-          "WTI+1.16%",
-          "XLE-0.08%"
-        ],
-        "explanation": "供給回復観測と長期的な需要・利益懸念が株価反応を抑制",
-        "confidence": "tentative",
+        "combination": "商品・暗号資産と株",
+        "explanation": "商品先物の定義不足により数値不採用。暗号資産は日足のみで独立した日本株因果を保留。",
         "unresolved": true,
-        "uncertainty": "原油90ドル台の持続性"
+        "uncertainty": "先物限月・現在値時刻未確認"
+      }
+    ]
+  },
+  "counter_evidence_audit": {
+    "status": "PASS",
+    "conclusions": [
+      {
+        "checks": [
+          "米10年の上昇",
+          "雇用鈍化と国内サービス減速"
+        ],
+        "weighing": "SOX高と10業種ETF上昇は支えだが、高PER株を無条件に強気としない。",
+        "uncertainty": "当日の業種反応・収益見通しの寄与は未確定"
       }
     ]
   },
   "previous_day_change": {
     "status": "PASS",
-    "prior_view": "日本株内部弱さを警戒、米半導体と原油安を支え候補",
+    "prior_view": "前回公開2026-10-01は大型テック優位と広い市場の弱さを併記。",
     "new_events": [
-      "日本株主要指数と17業種が反発",
-      "米大型テックのみ上昇",
-      "PCE下振れでも長期金利上昇",
-      "原油反発"
+      "BLS雇用鈍化と下方改定",
+      "ETF10業種上昇",
+      "本日のPMI・BOJ講演"
     ],
     "changed": [
-      "日本株内部を弱いから反発確認へ",
-      "半導体を全面追い風から大型テック限定へ",
-      "原油安恩恵を弱め資源支えへ"
+      "米株の上昇範囲が改善"
     ],
     "unchanged": [
-      "米長期金利は高PER株の負担",
-      "Copper在庫未確認は方向判断から除外"
+      "金利負担",
+      "先物・在庫確認制約"
     ],
-    "japan_revision": "前日の反発を認めつつ、米Breadth・金利・原油から本日の持続性は選別的と判断"
+    "japan_revision": "半導体の支援を認めつつ、金利と国内需要の反証を併記する。"
   },
   "source_quality": {
     "status": "PASS",
     "checks": [
-      "日経指数・企業IR・TDnet一次情報を優先",
-      "市場反応はReuters・AP・実測価格を照合",
-      "レーティングの網羅限界を明示",
-      "商品はスポット・限月差を分離"
+      "BLS・BOJ・USTR・OFAC一次本文",
+      "TDnet一覧・選定PDF本文",
+      "PMI一次未取得と二次報道を区別"
     ]
   },
   "data_integrity": {
     "status": "PASS",
     "checks": [
-      "report/japan/evidence日付一致",
-      "32系列取得",
-      "米2年FRED公表ラグを明示",
-      "Copper・Silver・ETH未検証方向を除外",
-      "日経平均とTOPIXの公式終値を照合"
+      "正本市場値を置換していない",
+      "定義不明の先物数値を除外",
+      "2年と10年の異なる日付でスプレッドを算出しない",
+      "市場品質MANUAL_REVIEWを維持"
     ]
   },
   "quality_gates": {
-    "research_coverage": "PASS",
-    "source_quality": "PASS",
+    "previous_day_change": "PASS",
     "data_integrity": "PASS",
     "analysis_logic": "PASS",
-    "cross_asset_consistency": "PASS",
     "japan_transmission": "PASS",
+    "research_coverage": "PASS",
+    "cross_asset_consistency": "PASS",
+    "source_quality": "PASS",
     "counter_evidence_audit": "PASS",
-    "previous_day_change": "PASS",
     "final_content_audit": "PASS"
   }
 }

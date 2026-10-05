@@ -1034,16 +1034,18 @@
     "market_date": "2026-10-02",
     "title": "昨日のシナリオ検証 → 今日への修正",
     "basis": "前回レポートの注目業種をTOPIX-17業種ETFの実績と照合し、次の取引日へ見方を修正",
-    "status": "大引け待ち",
+    "status": "寄り付き前・検証保留",
     "checks": [],
-    "previous_condition": "前回レポートに明示された条件なし",
-    "condition_result": "発生条件を自動判定できる一次データがないため、確認できず",
-    "market_reaction": "鉄鋼・非鉄 +2.29% / エネルギー資源 +0.82% / 食品 -0.23%",
-    "unexpected_gap": "電機・精密は中位 / 鉄鋼・非鉄は上位3 / 銀行は中位 / エネルギー資源は上位3 / 運輸・物流は中位",
+    "previous_condition": "当日講演とPMIの独立した市場反応は未確認",
+    "condition_result": "本日の条件と日本株現物の反応はまだ発生・確認していません",
+    "market_reaction": "本日の日本株現物は寄り付き前",
+    "unexpected_gap": "新しい取引結果がないため比較しません",
     "gap_reason": "業種ETFの結果だけでは個別ニュースとの因果を分離できないため、理由は断定しません",
-    "revision": "注目業種の相対順位を踏まえて強弱判断を更新",
-    "today_watch": [],
-    "note": "取引中のため検証しません。大引け後の更新で前回の見方を再点検します"
+    "revision": "本日の大引け後、実際の条件・市場反応・想定との差を確認して修正",
+    "today_watch": [
+      "当日講演とPMIの独立した市場反応は未確認"
+    ],
+    "note": "前営業日の値動きを、本日シナリオの結果として採点しません。"
   },
   "data_quality": {
     "sector_total": 17,
@@ -1052,7 +1054,7 @@
     "stock_available": 34,
     "date_alignment": {
       "expected_market_date": "2026-10-02",
-      "report_target_market_date": "2026-09-30",
+      "report_target_market_date": "2026-10-02",
       "sector_market_date": "2026-10-02",
       "stock_market_date": "2026-10-02",
       "benchmark_market_date": "2026-10-02",
@@ -1210,9 +1212,9 @@
       "attention": true,
       "volume_confirmation": "出来高：普段の1.75倍",
       "volume_ratio_20d": 1.75,
-      "persistence": "直近5日：TOPIXより強い",
+      "persistence": "確認できず",
       "return_5d_pct": 6.08,
-      "relative_5d_pct": 6.1,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより3.26pt強い",
@@ -1225,12 +1227,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 6.1,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日+2.29%（TOPIX比+3.26pt）。出来高：普段の1.75倍。直近5日：TOPIXより強い。",
+      "comment": "当日+2.29%（TOPIX比+3.26pt）。出来高：普段の1.75倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1241,9 +1243,9 @@
       "attention": true,
       "volume_confirmation": "出来高：普段の0.26倍",
       "volume_ratio_20d": 0.26,
-      "persistence": "直近5日：TOPIXより弱い",
+      "persistence": "確認できず",
       "return_5d_pct": -4.18,
-      "relative_5d_pct": -4.16,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより1.79pt強い",
@@ -1256,12 +1258,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより弱い",
-          "value": -4.16,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日+0.82%（TOPIX比+1.79pt）。出来高：普段の0.26倍。直近5日：TOPIXより弱い。",
+      "comment": "当日+0.82%（TOPIX比+1.79pt）。出来高：普段の0.26倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1272,9 +1274,9 @@
       "attention": false,
       "volume_confirmation": "出来高：普段の0.65倍",
       "volume_ratio_20d": 0.65,
-      "persistence": "直近5日：TOPIXより弱い",
+      "persistence": "確認できず",
       "return_5d_pct": -0.98,
-      "relative_5d_pct": -0.96,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより0.74pt強い",
@@ -1287,12 +1289,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより弱い",
-          "value": -0.96,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日-0.23%（TOPIX比+0.74pt）。出来高：普段の0.65倍。直近5日：TOPIXより弱い。",
+      "comment": "当日-0.23%（TOPIX比+0.74pt）。出来高：普段の0.65倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1303,9 +1305,9 @@
       "attention": false,
       "volume_confirmation": "出来高：普段の1.03倍",
       "volume_ratio_20d": 1.03,
-      "persistence": "直近5日：TOPIXより強い",
+      "persistence": "確認できず",
       "return_5d_pct": 3.38,
-      "relative_5d_pct": 3.4,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより0.59pt強い",
@@ -1318,12 +1320,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 3.4,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日-0.38%（TOPIX比+0.59pt）。出来高：普段の1.03倍。直近5日：TOPIXより強い。",
+      "comment": "当日-0.38%（TOPIX比+0.59pt）。出来高：普段の1.03倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1334,9 +1336,9 @@
       "attention": false,
       "volume_confirmation": "出来高：普段の0.29倍",
       "volume_ratio_20d": 0.29,
-      "persistence": "直近5日：TOPIXより強い",
+      "persistence": "確認できず",
       "return_5d_pct": 1.4,
-      "relative_5d_pct": 1.42,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより0.47pt強い",
@@ -1349,12 +1351,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 1.42,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日-0.50%（TOPIX比+0.47pt）。出来高：普段の0.29倍。直近5日：TOPIXより強い。",
+      "comment": "当日-0.50%（TOPIX比+0.47pt）。出来高：普段の0.29倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1365,9 +1367,9 @@
       "attention": false,
       "volume_confirmation": "出来高：普段の0.88倍",
       "volume_ratio_20d": 0.88,
-      "persistence": "直近5日：TOPIXより弱い",
+      "persistence": "確認できず",
       "return_5d_pct": -3.38,
-      "relative_5d_pct": -3.36,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより0.42pt強い",
@@ -1380,12 +1382,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより弱い",
-          "value": -3.36,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日-0.55%（TOPIX比+0.42pt）。出来高：普段の0.88倍。直近5日：TOPIXより弱い。",
+      "comment": "当日-0.55%（TOPIX比+0.42pt）。出来高：普段の0.88倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1396,9 +1398,9 @@
       "attention": false,
       "volume_confirmation": "出来高：普段の0.67倍",
       "volume_ratio_20d": 0.67,
-      "persistence": "直近5日：TOPIXより弱い",
+      "persistence": "確認できず",
       "return_5d_pct": -2.18,
-      "relative_5d_pct": -2.16,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより0.39pt強い",
@@ -1411,12 +1413,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより弱い",
-          "value": -2.16,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日-0.58%（TOPIX比+0.39pt）。出来高：普段の0.67倍。直近5日：TOPIXより弱い。",
+      "comment": "当日-0.58%（TOPIX比+0.39pt）。出来高：普段の0.67倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1427,9 +1429,9 @@
       "attention": false,
       "volume_confirmation": "出来高：普段の0.36倍",
       "volume_ratio_20d": 0.36,
-      "persistence": "直近5日：TOPIXと同程度",
+      "persistence": "確認できず",
       "return_5d_pct": 0.04,
-      "relative_5d_pct": 0.06,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより0.31pt強い",
@@ -1442,12 +1444,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXと同程度",
-          "value": 0.06,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日-0.66%（TOPIX比+0.31pt）。出来高：普段の0.36倍。直近5日：TOPIXと同程度。",
+      "comment": "当日-0.66%（TOPIX比+0.31pt）。出来高：普段の0.36倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1458,9 +1460,9 @@
       "attention": false,
       "volume_confirmation": "出来高：普段の0.21倍",
       "volume_ratio_20d": 0.21,
-      "persistence": "直近5日：TOPIXより強い",
+      "persistence": "確認できず",
       "return_5d_pct": 0.68,
-      "relative_5d_pct": 0.7,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより0.20pt強い",
@@ -1473,12 +1475,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 0.7,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日-0.77%（TOPIX比+0.20pt）。出来高：普段の0.21倍。直近5日：TOPIXより強い。",
+      "comment": "当日-0.77%（TOPIX比+0.20pt）。出来高：普段の0.21倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1489,9 +1491,9 @@
       "attention": false,
       "volume_confirmation": "出来高：普段の0.17倍",
       "volume_ratio_20d": 0.17,
-      "persistence": "直近5日：TOPIXと同程度",
+      "persistence": "確認できず",
       "return_5d_pct": -0.14,
-      "relative_5d_pct": -0.12,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより0.02pt強い",
@@ -1504,12 +1506,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXと同程度",
-          "value": -0.12,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日-0.95%（TOPIX比+0.02pt）。出来高：普段の0.17倍。直近5日：TOPIXと同程度。",
+      "comment": "当日-0.95%（TOPIX比+0.02pt）。出来高：普段の0.17倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1520,9 +1522,9 @@
       "attention": false,
       "volume_confirmation": "出来高：普段の0.24倍",
       "volume_ratio_20d": 0.24,
-      "persistence": "直近5日：TOPIXより弱い",
+      "persistence": "確認できず",
       "return_5d_pct": -2.14,
-      "relative_5d_pct": -2.12,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより0.45pt弱い",
@@ -1535,12 +1537,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより弱い",
-          "value": -2.12,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日-1.42%（TOPIX比-0.45pt）。出来高：普段の0.24倍。直近5日：TOPIXより弱い。",
+      "comment": "当日-1.42%（TOPIX比-0.45pt）。出来高：普段の0.24倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1551,9 +1553,9 @@
       "attention": true,
       "volume_confirmation": "出来高：普段の5.65倍",
       "volume_ratio_20d": 5.65,
-      "persistence": "直近5日：TOPIXより弱い",
+      "persistence": "確認できず",
       "return_5d_pct": -3.72,
-      "relative_5d_pct": -3.7,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより0.68pt弱い",
@@ -1566,12 +1568,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより弱い",
-          "value": -3.7,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日-1.65%（TOPIX比-0.68pt）。出来高：普段の5.65倍。直近5日：TOPIXより弱い。",
+      "comment": "当日-1.65%（TOPIX比-0.68pt）。出来高：普段の5.65倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1582,9 +1584,9 @@
       "attention": false,
       "volume_confirmation": "出来高：普段の0.53倍",
       "volume_ratio_20d": 0.53,
-      "persistence": "直近5日：TOPIXより弱い",
+      "persistence": "確認できず",
       "return_5d_pct": -1.4,
-      "relative_5d_pct": -1.38,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより0.73pt弱い",
@@ -1597,12 +1599,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより弱い",
-          "value": -1.38,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日-1.70%（TOPIX比-0.73pt）。出来高：普段の0.53倍。直近5日：TOPIXより弱い。",
+      "comment": "当日-1.70%（TOPIX比-0.73pt）。出来高：普段の0.53倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1613,9 +1615,9 @@
       "attention": false,
       "volume_confirmation": "出来高：普段の0.20倍",
       "volume_ratio_20d": 0.2,
-      "persistence": "直近5日：TOPIXより弱い",
+      "persistence": "確認できず",
       "return_5d_pct": -0.67,
-      "relative_5d_pct": -0.65,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより0.82pt弱い",
@@ -1628,12 +1630,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより弱い",
-          "value": -0.65,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日-1.79%（TOPIX比-0.82pt）。出来高：普段の0.20倍。直近5日：TOPIXより弱い。",
+      "comment": "当日-1.79%（TOPIX比-0.82pt）。出来高：普段の0.20倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1644,9 +1646,9 @@
       "attention": true,
       "volume_confirmation": "出来高：普段の4.46倍",
       "volume_ratio_20d": 4.46,
-      "persistence": "直近5日：TOPIXより弱い",
+      "persistence": "確認できず",
       "return_5d_pct": -2.03,
-      "relative_5d_pct": -2.01,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより1.25pt弱い",
@@ -1659,12 +1661,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより弱い",
-          "value": -2.01,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日-2.22%（TOPIX比-1.25pt）。出来高：普段の4.46倍。直近5日：TOPIXより弱い。",
+      "comment": "当日-2.22%（TOPIX比-1.25pt）。出来高：普段の4.46倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1675,9 +1677,9 @@
       "attention": false,
       "volume_confirmation": "出来高：普段の1.94倍",
       "volume_ratio_20d": 1.94,
-      "persistence": "直近5日：TOPIXより弱い",
+      "persistence": "確認できず",
       "return_5d_pct": -2.71,
-      "relative_5d_pct": -2.69,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより1.34pt弱い",
@@ -1690,12 +1692,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより弱い",
-          "value": -2.69,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日-2.31%（TOPIX比-1.34pt）。出来高：普段の1.94倍。直近5日：TOPIXより弱い。",
+      "comment": "当日-2.31%（TOPIX比-1.34pt）。出来高：普段の1.94倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1706,9 +1708,9 @@
       "attention": true,
       "volume_confirmation": "出来高：普段の0.83倍",
       "volume_ratio_20d": 0.83,
-      "persistence": "直近5日：TOPIXより弱い",
+      "persistence": "確認できず",
       "return_5d_pct": -3.43,
-      "relative_5d_pct": -3.41,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより1.70pt弱い",
@@ -1721,12 +1723,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより弱い",
-          "value": -3.41,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日-2.67%（TOPIX比-1.70pt）。出来高：普段の0.83倍。直近5日：TOPIXより弱い。",
+      "comment": "当日-2.67%（TOPIX比-1.70pt）。出来高：普段の0.83倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     }
   ],

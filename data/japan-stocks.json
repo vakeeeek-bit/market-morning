@@ -1,284 +1,214 @@
 {
-  "report_date": "2026-10-01",
-  "target_market_date": "2026-09-30",
-  "updated_at": "2026-10-01 08:10 JST",
-  "report_type": "daily",
+  "report_date": "2026-10-05",
+  "target_market_date": "2026-10-02",
+  "updated_at": "2026-10-05 13:07 JST",
+  "report_type": "daily_manual_update",
   "japan_quick_view": {
-    "headline": "日本株は前日の全面反発を引き継げるかが焦点。米大型テックは支えだが、米10年5.29%・原油再上昇・米株Breadth悪化が上値を試す。",
+    "headline": "米雇用鈍化と半導体高が日本株を支援。ただし長期金利の上昇と国内サービス鈍化を併せて見る。",
     "top_materials": [
-      "日経平均+1.94%、TOPIX+1.67% → 半導体中心に全面反発 → 2日目も上昇業種が広がるか確認",
-      "NASDAQ+0.24%、NASDAQ100+0.60%、XLK+0.61% → 大型テック優位 → 電機・精密の追い風候補",
-      "S&P500-0.25%、Dow-0.86%、Russell2000-0.39% → 米国の内部は大型テック偏重 → 日本株全体への単純な追い風ではない",
-      "米10年5.29%、金融-1.16%、不動産-1.04% → 長期金利負担継続 → 高PER・金利敏感株を選別",
-      "WTI90.42ドル・Brent103.50ドルへ反発 → 資源株には支え、運輸・小売にはコスト逆風が戻る"
+      "米9月雇用+2.9万人、過去2か月下方改定：追加引き締め観測の緩和は追い風候補",
+      "SOX +2.40%、米11業種ETF中10上昇：半導体高が広がりを伴う",
+      "米10年5.277%へ上昇：株高でも高PER・不動産の金利負担は残る",
+      "日本サービスPMI確報51.3：拡大を維持しながら減速、内需を選別",
+      "日銀内田副総裁がAIの需要効果と収益不足時の調整リスクを指摘"
     ],
     "focus_sectors": [
       "電機・精密",
-      "鉄鋼・非鉄",
-      "銀行",
-      "エネルギー資源",
-      "運輸・物流"
+      "情報通信・サービス",
+      "不動産",
+      "小売",
+      "銀行"
+    ],
+    "unpriced_materials": [
+      "当日講演とPMIの独立した市場反応は未確認"
     ],
     "individual_news_review": {
       "status": "reviewed",
-      "story_count": 5,
-      "source": "TDnet9月30日全890件の一覧と重要開示を横断確認"
+      "story_count": 2,
+      "scope": "10月5日13時までのTDnet一覧を確認。選定には一次本文の確認が必要で、未確認の数値は採用しない"
     }
   },
   "top_stories": [
     {
-      "company": "三菱化工機／月島HD",
-      "ticker": "6331",
-      "headline": "2027年4月の経営統合契約を締結",
-      "category": "経営統合",
-      "fact": "株式交換で三菱化工機を完全親会社、月島HDを完全子会社とし、共同持株会社体制へ移行する計画。",
-      "announced_at": "2026-09-30（TDnet）",
-      "timing": "9月30日大引け後",
-      "market_pricing_status": "本日の取引に未反映",
-      "price_reaction": "寄り付き前のため未確認。",
+      "company": "あみやき亭",
+      "ticker": "2753",
+      "headline": "店舗運営コスト増で通期営業利益予想を20%下方修正",
+      "category": "業績修正・向かい風",
+      "fact": "10月5日09:00にTDnet公表。2027年3月期の営業利益予想は25億円から20億円、純利益は14.5億円から10.7億円へ修正。原材料、人件費、物流、水道光熱、販促の費用増と節約志向を説明。",
+      "announced_at": "2026-10-05 09:00 JST",
+      "timing": "寄り付き時",
+      "market_pricing_status": "公表後の独立した価格反応は未確認",
+      "price_reaction": "当日価格反応を同一時刻で取得できず",
       "related_stocks": [],
       "related_sectors": [
-        "機械",
-        "建設・資材"
+        "小売",
+        "外食"
       ],
-      "importance": "★★★★★",
-      "confidence": "高",
-      "source_url": "https://www.kakoki.co.jp/news/2026/09/30-business-integration-mitsubishi-kakoki-tsukishima-holdings.html",
-      "analysis": "水・環境と産業機械の事業統合。シナジー期待と株式交換条件・統合費用を分けて評価する。",
-      "today_watch": "交換条件、両社株価のさや、統合計画の定量目標",
-      "image_url": null,
-      "image_alt": null,
-      "image_credit": null,
-      "image_source_url": null
+      "importance": "高",
+      "confidence": "事実：一次確認、株価効果：未確認",
+      "source_url": "https://www.release.tdnet.info/inbs/140120260926540628.pdf",
+      "analysis": "売上予想はほぼ据え置きでも利益予想が低下。需要減だけでなくコストと価格転嫁を確認する必要がある。他社の業績悪化は推定しない。",
+      "today_watch": "通期利益予想修正の株価反応、月次売上と原価率"
     },
     {
-      "company": "岡谷鋼機",
-      "ticker": "7485",
-      "headline": "通期業績・配当予想を上方修正",
-      "category": "業績・配当",
-      "fact": "売上高1兆1,500億円→1兆2,000億円、営業利益350億円→390億円、純利益280億円→320億円。年間配当86円→90円。",
-      "announced_at": "2026-09-30（TDnet）",
-      "timing": "9月30日大引け後",
-      "market_pricing_status": "本日の取引に未反映",
-      "price_reaction": "寄り付き前のため未確認。",
-      "related_stocks": [],
-      "related_sectors": [
-        "商社・卸売",
-        "鉄鋼・非鉄"
-      ],
-      "importance": "★★★★★",
-      "confidence": "高",
-      "source_url": "https://www.okaya.co.jp/ir/ir_news/2026/1296",
-      "analysis": "鉄鋼・非鉄の前日上昇と整合。ただし営業利益は前年比減益予想が残る。",
-      "today_watch": "名証での流動性、鉄鋼・非鉄セクターへの波及",
-      "image_url": null,
-      "image_alt": null,
-      "image_credit": null,
-      "image_source_url": null
-    },
-    {
-      "company": "バイク王＆カンパニー",
-      "ticker": "3377",
-      "headline": "通期営業利益を7.1億円から8.6億円へ上方修正",
-      "category": "業績上方修正",
-      "fact": "売上高387億円→388億円、営業利益7.1億円→8.6億円、純利益5.7億円→7.5億円。",
-      "announced_at": "2026-09-30（TDnet）",
-      "timing": "9月30日大引け後",
-      "market_pricing_status": "本日の取引に未反映",
-      "price_reaction": "寄り付き前のため未確認。",
+      "company": "ハイデイ日高",
+      "ticker": "7611",
+      "headline": "自己株式取得が終了、主要株主の異動を発表",
+      "category": "個別需給・株主構成",
+      "fact": "10月5日12:05のTDnet公表。ToSTNeT-3で1,178,000株、3,499,838,000円を取得し、10月2日決議に基づく取得を終了。創業者側の売却により主要株主の異動。",
+      "announced_at": "2026-10-05 12:05 JST",
+      "timing": "場中",
+      "market_pricing_status": "反応確認不能",
+      "price_reaction": "公表直後の同一時刻株価を取得できず",
       "related_stocks": [],
       "related_sectors": [
         "小売"
       ],
-      "importance": "★★★★★",
-      "confidence": "高",
-      "source_url": "https://www.release.tdnet.info/inbs/I_list_001_20260930.html",
-      "analysis": "売上修正は小さい一方、利益率改善の寄与が大きい。",
-      "today_watch": "寄り付きギャップ、上方修正後の利益率",
-      "image_url": null,
-      "image_alt": null,
-      "image_credit": null,
-      "image_source_url": null
-    },
-    {
-      "company": "ポプラ",
-      "ticker": "7601",
-      "headline": "中間経常利益を1.4億円から2.0億円へ上方修正",
-      "category": "業績上方修正",
-      "fact": "既存店売上高は前年同期比101.9%。新規出店時期ずれで営業総収入は下振れ見込みだが、利益予想を引き上げ。",
-      "announced_at": "2026-09-30（TDnet）",
-      "timing": "9月30日大引け後",
-      "market_pricing_status": "本日の取引に未反映",
-      "price_reaction": "寄り付き前のため未確認。",
-      "related_stocks": [],
-      "related_sectors": [
-        "小売"
-      ],
-      "importance": "★★★★★",
-      "confidence": "高",
-      "source_url": "https://www.release.tdnet.info/inbs/I_list_001_20260930.html",
-      "analysis": "売上未達と利益改善が同居。コスト管理の持続性を確認する。",
-      "today_watch": "通期据え置きか、既存店と出店進捗",
-      "image_url": null,
-      "image_alt": null,
-      "image_credit": null,
-      "image_source_url": null
-    },
-    {
-      "company": "ダイケン",
-      "ticker": "5900",
-      "headline": "中間営業損益を0.7億円黒字から0.1億円赤字へ下方修正",
-      "category": "業績下方修正",
-      "fact": "原材料高・円安で収益性改善が及ばず、中間最終損益も0.6億円黒字から0.08億円赤字へ修正。通期予想は据え置き。",
-      "announced_at": "2026-09-30（TDnet）",
-      "timing": "9月30日大引け後",
-      "market_pricing_status": "本日の取引に未反映",
-      "price_reaction": "寄り付き前のため未確認。",
-      "related_stocks": [],
-      "related_sectors": [
-        "鉄鋼・非鉄",
-        "建設・資材"
-      ],
-      "importance": "★★★★★",
-      "confidence": "高",
-      "source_url": "https://www.release.tdnet.info/inbs/I_list_001_20260930.html",
-      "analysis": "原油・円安コストが中小製造業へ残る反証。下期の値上げ効果前提には実行リスクがある。",
-      "today_watch": "原材料価格、価格転嫁、通期据え置きの達成確度",
-      "image_url": null,
-      "image_alt": null,
-      "image_credit": null,
-      "image_source_url": null
+      "importance": "中",
+      "confidence": "事実：一次確認、株価効果：未確認",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261005545912.pdf",
+      "analysis": "株数減少は資本効率に関係するが取得終了後の追加買い需要とは扱わない。株主異動も含め、機械的な買い材料と断定しない。",
+      "today_watch": "株価・出来高、今後の資本政策"
     }
   ],
   "important_stories": [],
   "other_stories": [],
-  "analyst_rating_changes": {
-    "headline": "9月30日公開分を確認（契約データではないため全社網羅は保証しない）",
-    "coverage_status": "十分調査したが取得不能",
-    "summary": "公開一覧で確認できた変更のみ掲載。全証券会社・EPS変更を網羅する契約データではありません。",
-    "items": [
-      {
-        "company": "三井住友FG",
-        "ticker": "8316",
-        "change": "モルガン 強気継続",
-        "target_price": "3,850→4,600円",
-        "announced_at": "2026-09-30",
-        "source_url": "https://kabu.kininew.net/rating/8473.html",
-        "note": "銀行の前日相対強さと整合"
-      },
-      {
-        "company": "INTLOOP",
-        "ticker": "9556",
-        "change": "東海東京 Neutral→Outperform",
-        "target_price": "1,800→4,100円",
-        "announced_at": "2026-09-30",
-        "source_url": "https://kabu.kininew.net/rating/8473.html",
-        "note": "格上げかつ大幅引き上げ"
-      },
-      {
-        "company": "あおぞら銀行",
-        "ticker": "8304",
-        "change": "モルガン Under継続",
-        "target_price": "3,070→3,850円",
-        "announced_at": "2026-09-30",
-        "source_url": "https://kabu.kininew.net/rating/8473.html",
-        "note": "弱気継続だが目標株価引き上げ"
-      },
-      {
-        "company": "日本航空",
-        "ticker": "9201",
-        "change": "米系大手 中立継続",
-        "target_price": "2,850→3,012円",
-        "announced_at": "2026-09-30",
-        "source_url": "https://kabu.kininew.net/rating/8473.html",
-        "note": "原油上昇の反証を伴う"
-      },
-      {
-        "company": "レゾナックHD",
-        "ticker": "4004",
-        "change": "日系中堅 強気継続",
-        "target_price": "22,800円",
-        "announced_at": "2026-09-30",
-        "source_url": "https://kabu.kininew.net/rating/8473.html",
-        "note": "半導体・素材の個別材料"
-      }
+  "data_quality": {
+    "overall": "MANUAL_REVIEW",
+    "missing": [
+      "米2年はFRED公表ラグで10月1日。対象市場10月2日と基準日が異なる",
+      "Gold・Copper・WTI・Brentの取引所・限月・値種別・基準時刻がそろわず、先物数値は不採用",
+      "LME・SHFE・CME/COMEXの対象日銅在庫を単位・公表日・頻度付きで取得できず",
+      "時刻付き為替・暗号資産現在値、限月付き日経225先物の実測値は未取得",
+      "国内PMIの発表主体の一次本文を取得できず、Reuters確認値に限定",
+      "アナリスト評価変更の当日網羅、ECBの新規材料確認は取得不能"
     ],
-    "methodology": "公開一覧2系統で格上げ・格下げ・新規・目標株価変更を確認。契約データ未導入のためEPS変更を含む完全一覧とは表示しません。",
+    "differences": [
+      "市場価格と前日比・market_dateはmarket.jsonを使用。外部値で置換していない",
+      "10月5日のReuters市場方向は外部照合であり、10月2日の日足終値と同時刻ではない",
+      "従来公表の9月30日基準レポートから10月2日基準へ更新。今朝時点の再現版ではなく10月5日昼の更新版"
+    ],
+    "excluded": [
+      "限月不明の先物数値",
+      "推測した銅在庫・日経先物",
+      "異なる基準日の2s10s",
+      "未確認の格付け・目標株価変更"
+    ],
+    "cautions": [
+      "自動公開判定はPASSではない。公開依頼に基づく手動のニュース更新版",
+      "終値基準10月2日と当日材料10月5日を分けて表示",
+      "個別株ニュースは13時までのTDnet確認範囲。大引け後の開示は含まない"
+    ]
+  },
+  "analyst_rating_changes": {
+    "headline": "10月5日の網羅的な評価変更一覧は確認不能",
+    "coverage_status": "十分調査したが取得不能",
+    "items": [],
     "source_review": [
       {
-        "name": "日次レーティング一覧",
-        "coverage": "9月30日の公開レーティング",
-        "freshness": "当日更新",
-        "automation": "公開ページの手動照合",
-        "rights": "確認用途。完全網羅を保証しない",
-        "url": "https://kabu.kininew.net/rating/8473.html"
+        "name": "公開レーティング一覧",
+        "url": "https://nikkeiyosoku.com/stock/rating/?date=2026-10-05",
+        "result": "当日個別変更を取得できず"
       },
       {
-        "name": "公開レーティング日報",
-        "coverage": "最上位継続・目標株価変更",
-        "freshness": "当日更新",
-        "automation": "公開記事の手動確認",
-        "rights": "記事再配布はせず事実項目を要約",
-        "url": "https://finance.yahoo.co.jp/news/detail/8e008a72b65714abaf5c228295be369734b85223"
+        "name": "証券専門紙カレンダー",
+        "url": "https://www.nsjournal.jp/calendar/",
+        "result": "当日個別変更を網羅できず"
       }
-    ]
+    ],
+    "summary": "変更なしとは断定しない"
   },
-  "company_events": [],
   "sector_implications": [
     {
-      "driver": "NASDAQ100・XLK上昇",
+      "driver": "SOX高と業種の広がり",
       "affected_sectors": [
-        "電機・精密",
-        "情報通信・サービス"
-      ],
-      "possible_impact": "追い風候補",
-      "confirmation_condition": "電機・精密がTOPIXを上回る"
-    },
-    {
-      "driver": "米10年5.29%",
-      "affected_sectors": [
-        "不動産",
-        "銀行",
         "電機・精密"
       ],
-      "possible_impact": "不動産・高PERに逆風、銀行は条件付き",
-      "confirmation_condition": "国内金利と銀行株が同方向"
+      "possible_impact": "アドバンテスト（6857）は条件付き追い風。コードは企業IRで確認",
+      "confirmation_condition": "業種ETFのTOPIX代理比と出来高。米10年上昇は反証"
     },
     {
-      "driver": "原油反発",
+      "driver": "国内サービス鈍化",
       "affected_sectors": [
-        "エネルギー資源",
-        "運輸・物流",
+        "サービス",
         "小売"
       ],
-      "possible_impact": "資源に支え、運輸・小売に逆風",
-      "confirmation_condition": "WTI90ドル維持と資源のTOPIX超過"
+      "possible_impact": "月次売上・需要・価格転嫁で選別、一律売りではない",
+      "confirmation_condition": "実際の決算・月次と業種反応"
     },
     {
-      "driver": "業績修正の明暗",
+      "driver": "米長期金利上昇",
       "affected_sectors": [
-        "商社・卸売",
-        "小売",
-        "建設・資材"
+        "不動産",
+        "銀行"
       ],
-      "possible_impact": "個別選別",
-      "confirmation_condition": "岡谷・バイク王・ポプラ・ダイケンの寄り付き反応"
+      "possible_impact": "不動産の割引率負担。銀行は国内金利と信用コストも確認",
+      "confirmation_condition": "国内金利・業種相対騰落"
     }
   ],
-  "data_quality": {
-    "overall": "条件付き正常",
-    "coverage": "TDnet9月30日全890件の一覧と公開レーティング2系統を確認",
-    "limitations": [
-      "レーティングは契約データ非導入",
-      "寄り付き反応はレポート対象外",
-      "17業種ETFはBreadth代替ではない"
-    ]
-  },
+  "scenarios": [
+    {
+      "name": "基本",
+      "conditions": "米株・半導体高の支援が続き、長期金利がさらに上昇しない",
+      "impact_on_japan": "半導体・電機を選別。国内サービスは個別需要を確認",
+      "strong_sectors": [
+        "電機・精密"
+      ],
+      "weak_sectors": [
+        "不動産"
+      ],
+      "invalidation": "SOX反落、米10年の一段上昇、円急伸"
+    },
+    {
+      "name": "上振れ",
+      "conditions": "半導体高が日本の業種ETFへ広がり、米10年金利が低下、円相場が安定",
+      "impact_on_japan": "電機から機械・情報通信へ支援が広がる可能性",
+      "strong_sectors": [
+        "電機・精密",
+        "機械",
+        "情報通信・サービス"
+      ],
+      "weak_sectors": [],
+      "invalidation": "上昇業種の減少または出来高不足"
+    },
+    {
+      "name": "下振れ",
+      "conditions": "米株反落、長期金利上昇、原油供給障害、急激な円高のいずれかが顕在化",
+      "impact_on_japan": "高PER半導体・輸出に逆風。燃料コスト上昇なら空運も弱い",
+      "strong_sectors": [],
+      "weak_sectors": [
+        "電機・精密",
+        "輸送用機器",
+        "空運"
+      ],
+      "invalidation": "株と金利・為替が再び安定"
+    }
+  ],
+  "monitoring_points": [
+    {
+      "target": "SOXと日本の電機・精密",
+      "current_view": "10月2日のSOX +2.40%",
+      "today_check": "TOPIX連動ETFに対する電機・精密ETFの相対騰落と出来高",
+      "view_change_condition": "相対劣後が続けば半導体追い風を弱める"
+    },
+    {
+      "target": "長期金利",
+      "current_view": "米10年は10月2日5.277%、前回比+0.04ポイント。米2年は10月1日4.78%、前回比-0.10ポイント。基準日が異なるので2s10sと同日カーブ変化は計算しない。",
+      "today_check": "同じ系列・基準時刻で次の米10年値を比較",
+      "view_change_condition": "一段上昇なら高PER見通しを下方修正"
+    },
+    {
+      "target": "為替・原油",
+      "current_view": "USD/JPYは10月2日日足157.927。先物価格は不採用",
+      "today_check": "時刻付き為替、取引所・限月・値種別付き原油",
+      "view_change_condition": "円急伸や供給障害を確認すれば輸出・運輸シナリオ変更"
+    }
+  ],
   "source_notes": [
-    "https://www.release.tdnet.info/inbs/I_list_001_20260930.html",
-    "https://www.kakoki.co.jp/news/2026/09/30-business-integration-mitsubishi-kakoki-tsukishima-holdings.html",
-    "https://www.okaya.co.jp/ir/ir_news/2026/1296",
-    "https://kabu.kininew.net/rating/8473.html",
-    "https://finance.yahoo.co.jp/news/detail/2cbce7c428ef73ee9c11eaed9b2642d2aac28b01"
+    "数値はmarket.jsonの正本。市場値を外部検索値で置換していない",
+    "米11セクターはETFの日足終値代理値。指数そのものではない",
+    "BLS・BOJ・USTR・OFACを一次本文で確認",
+    "Reutersの当日報道は背景と照合、国内PMIは二次情報と明記",
+    "今朝の再現版ではなく、昼までの材料を含む手動更新版"
   ]
 }

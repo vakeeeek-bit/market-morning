@@ -17,7 +17,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: market-morning-daily-update
+  group: archive-market-morning
   cancel-in-progress: false
 
 jobs:
@@ -27,6 +27,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -98,5 +100,6 @@ jobs:
             echo "No market data changes"
           else
             git commit -m "Update daily market data"
+            git pull --rebase origin main
             git push
           fi

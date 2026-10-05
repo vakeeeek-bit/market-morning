@@ -3,8 +3,10 @@ name: Market Morning Daily Update
 on:
   workflow_dispatch:
   push:
+    branches: [main]
     paths:
       - ".github/workflows/market-morning.yml"
+      - "scripts/update_market.py"
   schedule:
     # 日本時間 平日6:20（UTCでは前日の21:20）
     # GitHub Actions の cron は UTC

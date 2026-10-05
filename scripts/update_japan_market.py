@@ -160,6 +160,8 @@ def build_market_regime(sector_rows, stock_rows, internals):
 
 def driver_item(market, key, title, category, affected, evaluator, caveat=None, market_reach=1, news_importance=1):
     row = market.get("markets", {}).get(key, {}) if isinstance(market, dict) else {}
+    if str(row.get("ticker", "")).endswith("=F") and not all(row.get(field) for field in ("exchange", "contract_month", "value_type", "basis_time")):
+        return {"driver": title, "category": category, "assessment": "確認できず", "status": "unavailable", "reason": "先物の取引所・限月・値種別・基準時刻が未確認のため数値判断から除外", "affected_sectors": affected}
     if row.get("status") != "取得成功" or not isinstance(row.get("change_pct"), (int, float)):
         return {"driver": title, "category": category, "assessment": "確認できず", "status": "unavailable", "reason": "確認済みの同系列データがない", "affected_sectors": affected}
     assessment, transmission = evaluator(row)
@@ -190,7 +192,13 @@ def build_key_drivers(market, japan_market_date, report=None):
     def selection_key(item):
         factors = item.get("selection_factors", {})
         return (item.get("status") == "observed", item.get("pricing_status") == "日本株現物に未反映", factors.get("日本株への波及範囲", 0), factors.get("ニュース重要度", 0), factors.get("値動き", 0))
-    drivers = sorted(candidates, key=selection_key, reverse=True)[:4]
+    drivers = []
+    for item in sorted(candidates, key=selection_key, reverse=True):
+        if item["driver"] in {"銅", "金"} and any(row["driver"] in {"銅", "金"} for row in drivers):
+            continue
+        drivers.append(item)
+        if len(drivers) == 4:
+            break
     change_conditions = {
         "ドル円": "為替が反転し、自動車・機械の相対方向も変われば見方を修正する",
         "米10年金利": "金利の方向が反転し、電機・精密や銀行の反応も変われば見方を修正する",

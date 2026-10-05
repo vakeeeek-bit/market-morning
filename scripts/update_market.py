@@ -44,6 +44,29 @@ SYMBOLS = {
 CLOSED_SESSION_FUTURES = {"GC=F", "SI=F", "HG=F", "CL=F", "BZ=F"}
 
 
+def completed_daily_history(hist, symbol, now=None):
+    """Exclude unfinished daily bars even when Yahoo populates Close intraday."""
+    now = now or datetime.now(ZoneInfo("UTC"))
+    is_japan = symbol == "^N225" or symbol.endswith(".T")
+    is_us_cash = symbol.startswith("^") or symbol in {
+        info["ticker"] for key, info in SYMBOLS.items() if key.startswith("sector_")
+    }
+    zone = ZoneInfo("Asia/Tokyo" if is_japan else "America/New_York")
+    local_now = now.astimezone(zone)
+    cutoff = (15, 30) if is_japan else (16, 15)
+    if is_japan or is_us_cash:
+        return hist[[index.date() < local_now.date() or
+                     (index.date() == local_now.date() and
+                      (local_now.hour, local_now.minute) >= cutoff)
+                     for index in hist.index]]
+    # FX/crypto/continuous futures have provider-specific session boundaries.
+    # Conservatively omit the current provider-local date instead of calling a
+    # live observation an official close or settlement.
+    provider_zone = hist.index.tz or ZoneInfo("UTC")
+    provider_today = now.astimezone(provider_zone).date()
+    return hist[[index.date() < provider_today for index in hist.index]]
+
+
 def empty_market(info, status, error=None):
     result = {
         "name": info["name"],
@@ -77,6 +100,7 @@ def get_market_data(info, prior_snapshots=None):
 
     # 取引途中やデータ障害でCloseがNaNの行を除外する。
     hist = hist.dropna(subset=["Close"])
+    hist = completed_daily_history(hist, info["ticker"])
     if len(hist) < 2:
         return empty_market(info, "確認できず")
 

@@ -23,6 +23,23 @@ def load_symbols():
 
 
 class MarketUniverseTests(unittest.TestCase):
+    def test_midday_japan_close_is_not_published(self):
+        module = importlib.import_module("scripts.update_market")
+        hist = pd.DataFrame({"Close": [100, 120]}, index=pd.to_datetime(["2026-10-02", "2026-10-05"]))
+        now = datetime(2026, 10, 5, 12, 50, tzinfo=ZoneInfo("Asia/Tokyo"))
+        self.assertEqual(1, len(module.completed_daily_history(hist, "^N225", now)))
+
+    def test_us_completed_session_is_kept_at_japan_morning(self):
+        module = importlib.import_module("scripts.update_market")
+        hist = pd.DataFrame({"Close": [100, 120]}, index=pd.to_datetime(["2026-10-01", "2026-10-02"]))
+        now = datetime(2026, 10, 3, 6, 20, tzinfo=ZoneInfo("Asia/Tokyo"))
+        self.assertEqual(2, len(module.completed_daily_history(hist, "^GSPC", now)))
+
+    def test_crypto_current_daily_bar_is_excluded(self):
+        module = importlib.import_module("scripts.update_market")
+        hist = pd.DataFrame({"Close": [100, 120]}, index=pd.to_datetime(["2026-10-04", "2026-10-05"], utc=True))
+        now = datetime(2026, 10, 5, 12, 50, tzinfo=ZoneInfo("Asia/Tokyo"))
+        self.assertEqual(1, len(module.completed_daily_history(hist, "BTC-USD", now)))
     @classmethod
     def setUpClass(cls):
         cls.symbols = load_symbols()

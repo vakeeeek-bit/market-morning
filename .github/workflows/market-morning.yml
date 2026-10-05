@@ -49,7 +49,7 @@ jobs:
 
       - name: Validate data before publishing
         run: |
-          python scripts/validate_data.py
+          python scripts/validate_data.py --scope market
 
       - name: Record successful market update
         run: |
@@ -74,7 +74,7 @@ jobs:
 
       - name: Validate final publish bundle
         run: |
-          python scripts/validate_data.py
+          python scripts/validate_data.py --scope market
 
       - name: Save market history
         run: |

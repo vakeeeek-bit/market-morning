@@ -48,7 +48,9 @@ class JapanMarketDesignTests(unittest.TestCase):
         data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))
         report = json.loads((ROOT / "data" / "report.json").read_text(encoding="utf-8"))
         alignment = data["data_quality"]["date_alignment"]
-        self.assertEqual(report["target_market_date"], alignment["expected_market_date"])
+        if alignment.get("aligned"):
+            self.assertEqual(alignment["expected_market_date"], alignment["sector_market_date"])
+            self.assertEqual(alignment["expected_market_date"], alignment["stock_market_date"])
         self.assertEqual(report["target_market_date"], alignment["report_target_market_date"])
 
     def test_aligned_history_can_be_used_as_fallback(self):

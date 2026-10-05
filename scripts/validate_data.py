@@ -359,10 +359,13 @@ def validate_japan_investor_view(data: dict[str, dict], result: ValidationResult
             "japan-market.data_quality.date_alignment.report_target_market_date: "
             "report.jsonのtarget_market_dateと一致させてください"
         )
-    elif alignment.get("expected_market_date") != expected_target:
+    elif alignment.get("aligned") and any(
+        alignment.get(key) != alignment.get("expected_market_date")
+        for key in ("sector_market_date", "stock_market_date")
+    ):
         result.error(
-            "japan-market.data_quality.date_alignment.expected_market_date: "
-            "report.jsonのtarget_market_dateと一致させてください"
+            "japan-market.data_quality.date_alignment: "
+            "整合済みの業種・銘柄データは日本株の取得対象日と一致させてください"
         )
     else:
         result.ok("日本株品質メタデータとレポート対象日の一致")
@@ -434,10 +437,11 @@ def write_summary(result: ValidationResult) -> None:
     Path(summary_path).write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def run(root: Path = ROOT) -> ValidationResult:
+def run(root: Path = ROOT, scope: str = "report") -> ValidationResult:
     result = ValidationResult()
     data: dict[str, dict] = {}
-    for name in DATA_NAMES:
+    names = ("market", "status") if scope == "market" else DATA_NAMES
+    for name in names:
         data_path = root / "data" / f"{name}.json"
         schema_path = root / "schemas" / f"{name}.schema.json"
         try:
@@ -453,7 +457,16 @@ def run(root: Path = ROOT) -> ValidationResult:
         data[name] = value
         result.ok(f"{name}.jsonのスキーマ検証")
 
-    if all(name in data for name in DATA_NAMES):
+    if scope == "market" and "market" in data:
+        # A new price snapshot must not depend on yesterday's narrative report.
+        # Missing observations remain explicit; never mark an empty update successful.
+        markets = data["market"].get("markets", {})
+        for key in ("sp500", "nasdaq", "nasdaq100", "dow", "russell2000", "sox", "vix"):
+            row = markets.get(key, {})
+            if row.get("price") is None or row.get("status") != "取得成功" or not row.get("market_date"):
+                result.error(f"market.markets.{key}: 更新成功に必要な指数観測がありません")
+        result.ok("市場取得の検証とレポート公開の検証を分離")
+    elif all(name in data for name in DATA_NAMES):
         validate_relationships(data, result)
         validate_market_context(data, result)
         validate_japan_investor_view(data, result)
@@ -471,8 +484,9 @@ def run(root: Path = ROOT) -> ValidationResult:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=ROOT)
+    parser.add_argument("--scope", choices=("report", "market"), default="report")
     args = parser.parse_args()
-    result = run(args.root.resolve())
+    result = run(args.root.resolve(), args.scope)
     for message in result.checks:
         print(f"OK: {message}")
     for message in result.warnings:

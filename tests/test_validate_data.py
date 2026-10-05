@@ -30,6 +30,22 @@ class ValidateDataTest(unittest.TestCase):
         result = run(ROOT)
         self.assertEqual([], result.errors)
 
+    def test_market_update_is_not_blocked_by_stale_report(self):
+        def mutate(name, data):
+            if name == "report":
+                data.clear()
+            return data
+        root = self.make_root(mutate)
+        self.assertEqual([], run(root, scope="market").errors)
+        self.assertTrue(run(root).errors)
+
+    def test_market_update_rejects_missing_core_index(self):
+        def mutate(name, data):
+            if name == "market":
+                data["markets"]["sox"]["price"] = None
+            return data
+        self.assertTrue(any("sox" in message for message in run(self.make_root(mutate), scope="market").errors))
+
     def test_top5_mismatch_is_error(self):
         def mutate(name, data):
             if name == "japan-stocks":

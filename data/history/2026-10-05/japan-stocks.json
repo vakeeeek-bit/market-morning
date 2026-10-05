@@ -1,0 +1,214 @@
+{
+  "report_date": "2026-10-05",
+  "target_market_date": "2026-10-02",
+  "updated_at": "2026-10-05 13:07 JST",
+  "report_type": "daily_manual_update",
+  "japan_quick_view": {
+    "headline": "米雇用鈍化と半導体高が日本株を支援。ただし長期金利の上昇と国内サービス鈍化を併せて見る。",
+    "top_materials": [
+      "米9月雇用+2.9万人、過去2か月下方改定：追加引き締め観測の緩和は追い風候補",
+      "SOX +2.40%、米11業種ETF中10上昇：半導体高が広がりを伴う",
+      "米10年5.277%へ上昇：株高でも高PER・不動産の金利負担は残る",
+      "日本サービスPMI確報51.3：拡大を維持しながら減速、内需を選別",
+      "日銀内田副総裁がAIの需要効果と収益不足時の調整リスクを指摘"
+    ],
+    "focus_sectors": [
+      "電機・精密",
+      "情報通信・サービス",
+      "不動産",
+      "小売",
+      "銀行"
+    ],
+    "unpriced_materials": [
+      "当日講演とPMIの独立した市場反応は未確認"
+    ],
+    "individual_news_review": {
+      "status": "reviewed",
+      "story_count": 2,
+      "scope": "10月5日13時までのTDnet一覧を確認。選定には一次本文の確認が必要で、未確認の数値は採用しない"
+    }
+  },
+  "top_stories": [
+    {
+      "company": "あみやき亭",
+      "ticker": "2753",
+      "headline": "店舗運営コスト増で通期営業利益予想を20%下方修正",
+      "category": "業績修正・向かい風",
+      "fact": "10月5日09:00にTDnet公表。2027年3月期の営業利益予想は25億円から20億円、純利益は14.5億円から10.7億円へ修正。原材料、人件費、物流、水道光熱、販促の費用増と節約志向を説明。",
+      "announced_at": "2026-10-05 09:00 JST",
+      "timing": "寄り付き時",
+      "market_pricing_status": "公表後の独立した価格反応は未確認",
+      "price_reaction": "当日価格反応を同一時刻で取得できず",
+      "related_stocks": [],
+      "related_sectors": [
+        "小売",
+        "外食"
+      ],
+      "importance": "高",
+      "confidence": "事実：一次確認、株価効果：未確認",
+      "source_url": "https://www.release.tdnet.info/inbs/140120260926540628.pdf",
+      "analysis": "売上予想はほぼ据え置きでも利益予想が低下。需要減だけでなくコストと価格転嫁を確認する必要がある。他社の業績悪化は推定しない。",
+      "today_watch": "通期利益予想修正の株価反応、月次売上と原価率"
+    },
+    {
+      "company": "ハイデイ日高",
+      "ticker": "7611",
+      "headline": "自己株式取得が終了、主要株主の異動を発表",
+      "category": "個別需給・株主構成",
+      "fact": "10月5日12:05のTDnet公表。ToSTNeT-3で1,178,000株、3,499,838,000円を取得し、10月2日決議に基づく取得を終了。創業者側の売却により主要株主の異動。",
+      "announced_at": "2026-10-05 12:05 JST",
+      "timing": "場中",
+      "market_pricing_status": "反応確認不能",
+      "price_reaction": "公表直後の同一時刻株価を取得できず",
+      "related_stocks": [],
+      "related_sectors": [
+        "小売"
+      ],
+      "importance": "中",
+      "confidence": "事実：一次確認、株価効果：未確認",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261005545912.pdf",
+      "analysis": "株数減少は資本効率に関係するが取得終了後の追加買い需要とは扱わない。株主異動も含め、機械的な買い材料と断定しない。",
+      "today_watch": "株価・出来高、今後の資本政策"
+    }
+  ],
+  "important_stories": [],
+  "other_stories": [],
+  "data_quality": {
+    "overall": "MANUAL_REVIEW",
+    "missing": [
+      "米2年はFRED公表ラグで10月1日。対象市場10月2日と基準日が異なる",
+      "Gold・Copper・WTI・Brentの取引所・限月・値種別・基準時刻がそろわず、先物数値は不採用",
+      "LME・SHFE・CME/COMEXの対象日銅在庫を単位・公表日・頻度付きで取得できず",
+      "時刻付き為替・暗号資産現在値、限月付き日経225先物の実測値は未取得",
+      "国内PMIの発表主体の一次本文を取得できず、Reuters確認値に限定",
+      "アナリスト評価変更の当日網羅、ECBの新規材料確認は取得不能"
+    ],
+    "differences": [
+      "市場価格と前日比・market_dateはmarket.jsonを使用。外部値で置換していない",
+      "10月5日のReuters市場方向は外部照合であり、10月2日の日足終値と同時刻ではない",
+      "従来公表の9月30日基準レポートから10月2日基準へ更新。今朝時点の再現版ではなく10月5日昼の更新版"
+    ],
+    "excluded": [
+      "限月不明の先物数値",
+      "推測した銅在庫・日経先物",
+      "異なる基準日の2s10s",
+      "未確認の格付け・目標株価変更"
+    ],
+    "cautions": [
+      "自動公開判定はPASSではない。公開依頼に基づく手動のニュース更新版",
+      "終値基準10月2日と当日材料10月5日を分けて表示",
+      "個別株ニュースは13時までのTDnet確認範囲。大引け後の開示は含まない"
+    ]
+  },
+  "analyst_rating_changes": {
+    "headline": "10月5日の網羅的な評価変更一覧は確認不能",
+    "coverage_status": "十分調査したが取得不能",
+    "items": [],
+    "source_review": [
+      {
+        "name": "公開レーティング一覧",
+        "url": "https://nikkeiyosoku.com/stock/rating/?date=2026-10-05",
+        "result": "当日個別変更を取得できず"
+      },
+      {
+        "name": "証券専門紙カレンダー",
+        "url": "https://www.nsjournal.jp/calendar/",
+        "result": "当日個別変更を網羅できず"
+      }
+    ],
+    "summary": "変更なしとは断定しない"
+  },
+  "sector_implications": [
+    {
+      "driver": "SOX高と業種の広がり",
+      "affected_sectors": [
+        "電機・精密"
+      ],
+      "possible_impact": "アドバンテスト（6857）は条件付き追い風。コードは企業IRで確認",
+      "confirmation_condition": "業種ETFのTOPIX代理比と出来高。米10年上昇は反証"
+    },
+    {
+      "driver": "国内サービス鈍化",
+      "affected_sectors": [
+        "サービス",
+        "小売"
+      ],
+      "possible_impact": "月次売上・需要・価格転嫁で選別、一律売りではない",
+      "confirmation_condition": "実際の決算・月次と業種反応"
+    },
+    {
+      "driver": "米長期金利上昇",
+      "affected_sectors": [
+        "不動産",
+        "銀行"
+      ],
+      "possible_impact": "不動産の割引率負担。銀行は国内金利と信用コストも確認",
+      "confirmation_condition": "国内金利・業種相対騰落"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "基本",
+      "conditions": "米株・半導体高の支援が続き、長期金利がさらに上昇しない",
+      "impact_on_japan": "半導体・電機を選別。国内サービスは個別需要を確認",
+      "strong_sectors": [
+        "電機・精密"
+      ],
+      "weak_sectors": [
+        "不動産"
+      ],
+      "invalidation": "SOX反落、米10年の一段上昇、円急伸"
+    },
+    {
+      "name": "上振れ",
+      "conditions": "半導体高が日本の業種ETFへ広がり、米10年金利が低下、円相場が安定",
+      "impact_on_japan": "電機から機械・情報通信へ支援が広がる可能性",
+      "strong_sectors": [
+        "電機・精密",
+        "機械",
+        "情報通信・サービス"
+      ],
+      "weak_sectors": [],
+      "invalidation": "上昇業種の減少または出来高不足"
+    },
+    {
+      "name": "下振れ",
+      "conditions": "米株反落、長期金利上昇、原油供給障害、急激な円高のいずれかが顕在化",
+      "impact_on_japan": "高PER半導体・輸出に逆風。燃料コスト上昇なら空運も弱い",
+      "strong_sectors": [],
+      "weak_sectors": [
+        "電機・精密",
+        "輸送用機器",
+        "空運"
+      ],
+      "invalidation": "株と金利・為替が再び安定"
+    }
+  ],
+  "monitoring_points": [
+    {
+      "target": "SOXと日本の電機・精密",
+      "current_view": "10月2日のSOX +2.40%",
+      "today_check": "TOPIX連動ETFに対する電機・精密ETFの相対騰落と出来高",
+      "view_change_condition": "相対劣後が続けば半導体追い風を弱める"
+    },
+    {
+      "target": "長期金利",
+      "current_view": "米10年は10月2日5.277%、前回比+0.04ポイント。米2年は10月1日4.78%、前回比-0.10ポイント。基準日が異なるので2s10sと同日カーブ変化は計算しない。",
+      "today_check": "同じ系列・基準時刻で次の米10年値を比較",
+      "view_change_condition": "一段上昇なら高PER見通しを下方修正"
+    },
+    {
+      "target": "為替・原油",
+      "current_view": "USD/JPYは10月2日日足157.927。先物価格は不採用",
+      "today_check": "時刻付き為替、取引所・限月・値種別付き原油",
+      "view_change_condition": "円急伸や供給障害を確認すれば輸出・運輸シナリオ変更"
+    }
+  ],
+  "source_notes": [
+    "数値はmarket.jsonの正本。市場値を外部検索値で置換していない",
+    "米11セクターはETFの日足終値代理値。指数そのものではない",
+    "BLS・BOJ・USTR・OFACを一次本文で確認",
+    "Reutersの当日報道は背景と照合、国内PMIは二次情報と明記",
+    "今朝の再現版ではなく、昼までの材料を含む手動更新版"
+  ]
+}

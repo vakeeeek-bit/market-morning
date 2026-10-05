@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05 12:50:19",
+  "updated_at": "2026-10-05 12:59:06",
   "timezone": "Asia/Tokyo",
   "source": "Yahoo Finance via yfinance for market closes; FRED DGS2 for US 2Y Treasury yield",
   "notes": {
@@ -82,57 +82,57 @@
     "nikkei225": {
       "name": "日経225",
       "ticker": "^N225",
-      "price": 69893.8281,
-      "previous": 68309.4609,
-      "change": 1584.3672,
-      "change_pct": 2.32,
+      "price": 68309.4609,
+      "previous": 68956.7188,
+      "change": -647.2578,
+      "change_pct": -0.94,
       "status": "取得成功",
-      "market_date": "2026-10-05",
-      "previous_market_date": "2026-10-02"
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
     },
     "topix": {
       "name": "TOPIX参考（1306 ETF）",
       "ticker": "1306.T",
-      "price": 435.0,
-      "previous": 430.2,
-      "change": 4.8,
-      "change_pct": 1.12,
+      "price": 430.2,
+      "previous": 434.4,
+      "change": -4.2,
+      "change_pct": -0.97,
       "status": "取得成功",
-      "market_date": "2026-10-05",
-      "previous_market_date": "2026-10-02"
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
     },
     "dxy": {
       "name": "DXY",
       "ticker": "DX-Y.NYB",
-      "price": 102.427,
-      "previous": 101.93,
-      "change": 0.497,
-      "change_pct": 0.49,
+      "price": 101.93,
+      "previous": 102.1,
+      "change": -0.17,
+      "change_pct": -0.17,
       "status": "取得成功",
-      "market_date": "2026-10-04",
-      "previous_market_date": "2026-10-02"
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
     },
     "usdjpy": {
       "name": "USD/JPY",
       "ticker": "JPY=X",
-      "price": 158.097,
-      "previous": 157.927,
-      "change": 0.17,
-      "change_pct": 0.11,
+      "price": 157.927,
+      "previous": 157.558,
+      "change": 0.369,
+      "change_pct": 0.23,
       "status": "取得成功",
-      "market_date": "2026-10-05",
-      "previous_market_date": "2026-10-02"
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
     },
     "eurusd": {
       "name": "EUR/USD",
       "ticker": "EURUSD=X",
-      "price": 1.1173,
-      "previous": 1.125,
+      "price": 1.125,
+      "previous": 1.1327,
       "change": -0.0077,
       "change_pct": -0.68,
       "status": "取得成功",
-      "market_date": "2026-10-05",
-      "previous_market_date": "2026-10-02"
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
     },
     "us10y": {
       "name": "米10年債利回り",
@@ -280,79 +280,79 @@
     "gold": {
       "name": "Gold",
       "ticker": "GC=F",
-      "price": 4172.7998,
-      "previous": 4162.2998,
-      "change": 10.5,
-      "change_pct": 0.25,
+      "price": 4162.2998,
+      "previous": 4202.2998,
+      "change": -40.0,
+      "change_pct": -0.95,
       "status": "取得成功",
-      "market_date": "2026-10-04",
-      "previous_market_date": "2026-10-02"
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
     },
     "silver": {
       "name": "Silver",
       "ticker": "SI=F",
-      "price": 61.545,
-      "previous": 59.977,
-      "change": 1.568,
-      "change_pct": 2.61,
+      "price": 59.977,
+      "previous": 60.725,
+      "change": -0.748,
+      "change_pct": -1.23,
       "status": "取得成功",
-      "market_date": "2026-10-04",
-      "previous_market_date": "2026-10-02"
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
     },
     "copper": {
       "name": "Copper",
       "ticker": "HG=F",
-      "price": 6.5865,
-      "previous": 6.492,
-      "change": 0.0945,
-      "change_pct": 1.46,
+      "price": 6.492,
+      "previous": 6.482,
+      "change": 0.01,
+      "change_pct": 0.15,
       "status": "取得成功",
-      "market_date": "2026-10-04",
-      "previous_market_date": "2026-10-02"
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
     },
     "wti": {
       "name": "WTI",
       "ticker": "CL=F",
-      "price": 90.04,
-      "previous": 91.11,
-      "change": -1.07,
-      "change_pct": -1.17,
+      "price": 91.11,
+      "previous": 92.87,
+      "change": -1.76,
+      "change_pct": -1.9,
       "status": "取得成功",
-      "market_date": "2026-10-04",
-      "previous_market_date": "2026-10-02"
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
     },
     "brent": {
       "name": "Brent",
       "ticker": "BZ=F",
-      "price": 101.47,
-      "previous": 102.25,
-      "change": -0.78,
-      "change_pct": -0.76,
+      "price": 102.25,
+      "previous": 102.31,
+      "change": -0.06,
+      "change_pct": -0.06,
       "status": "取得成功",
-      "market_date": "2026-10-04",
-      "previous_market_date": "2026-10-02"
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
     },
     "btc": {
       "name": "BTC",
       "ticker": "BTC-USD",
-      "price": 86280.0781,
-      "previous": 84763.5781,
-      "change": 1516.5,
-      "change_pct": 1.79,
+      "price": 84763.5781,
+      "previous": 84497.2109,
+      "change": 266.3672,
+      "change_pct": 0.32,
       "status": "取得成功",
-      "market_date": "2026-10-05",
-      "previous_market_date": "2026-10-03"
+      "market_date": "2026-10-03",
+      "previous_market_date": "2026-10-02"
     },
     "eth": {
       "name": "ETH",
       "ticker": "ETH-USD",
-      "price": 2722.8201,
-      "previous": 2687.2554,
-      "change": 35.5647,
-      "change_pct": 1.32,
+      "price": 2687.2554,
+      "previous": 2668.1511,
+      "change": 19.1042,
+      "change_pct": 0.72,
       "status": "取得成功",
-      "market_date": "2026-10-05",
-      "previous_market_date": "2026-10-03"
+      "market_date": "2026-10-03",
+      "previous_market_date": "2026-10-02"
     },
     "us2y": {
       "name": "米2年債利回り",

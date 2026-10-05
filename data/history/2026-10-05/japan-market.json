@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05 12:53:51 JST",
+  "updated_at": "2026-10-05 12:59:13 JST",
   "market_date": "2026-10-02",
   "data_phase": "取引中暫定",
   "data_state": {
@@ -1083,31 +1083,6 @@
   },
   "key_drivers": [
     {
-      "driver": "ドル円",
-      "category": "為替",
-      "assessment": "中立",
-      "status": "observed",
-      "market_value": 158.097,
-      "change_pct": 0.11,
-      "transmission_path": "輸出採算と輸入コストが変化",
-      "reason": "USD/JPY 158.097、前日比 +0.11%（2026-10-05）→ 輸出採算と輸入コストが変化。日本株現物の基準日2026-10-02より新しく、次回取引の監視材料",
-      "affected_sectors": [
-        "自動車・輸送機",
-        "機械",
-        "小売"
-      ],
-      "market_date": "2026-10-05",
-      "selection_factors": {
-        "日本株現物への織り込み": "日本株現物に未反映",
-        "日本株への波及範囲": 3,
-        "影響業種数": 3,
-        "ニュース重要度": 3,
-        "値動き": 1
-      },
-      "pricing_status": "日本株現物に未反映",
-      "change_condition": "為替が反転し、自動車・機械の相対方向も変われば見方を修正する"
-    },
-    {
       "driver": "米国半導体株",
       "category": "海外株",
       "assessment": "追い風",
@@ -1155,6 +1130,31 @@
       },
       "pricing_status": "同日または既反映の参考値",
       "change_condition": "金利の方向が反転し、電機・精密や銀行の反応も変われば見方を修正する"
+    },
+    {
+      "driver": "ドル円",
+      "category": "為替",
+      "assessment": "中立",
+      "status": "observed",
+      "market_value": 157.927,
+      "change_pct": 0.23,
+      "transmission_path": "輸出採算と輸入コストが変化",
+      "reason": "USD/JPY 157.927、前日比 +0.23%（2026-10-02）→ 輸出採算と輸入コストが変化",
+      "affected_sectors": [
+        "自動車・輸送機",
+        "機械",
+        "小売"
+      ],
+      "market_date": "2026-10-02",
+      "selection_factors": {
+        "日本株現物への織り込み": "同日または既反映の参考値",
+        "日本株への波及範囲": 3,
+        "影響業種数": 3,
+        "ニュース重要度": 3,
+        "値動き": 1
+      },
+      "pricing_status": "同日または既反映の参考値",
+      "change_condition": "為替が反転し、自動車・機械の相対方向も変われば見方を修正する"
     },
     {
       "driver": "米国大型ハイテク株",

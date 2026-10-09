@@ -1,0 +1,86 @@
+{
+  "report_date": "2026-10-09",
+  "target_market_date": "2026-10-08",
+  "updated_at": "2026-10-09T12:12:34+09:00",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "一次資料を確認できた記事のみ掲載。市場反応、全ニュースの網羅、総合レポートの品質PASSを意味しません。",
+  "articles": [
+    {
+      "id": "fr-202608-results",
+      "title": "ファーストリテイリング：通期増収増益、来期も増収増益を計画",
+      "published_date": "2026-10-08",
+      "publisher": "ファーストリテイリング",
+      "source_url": "https://www.fastretailing.com/jp/ir/news/2610081800.html",
+      "verification_url": "https://www.fastretailing.com/jp/ir/library/pdf/tanshin202608_4q.pdf",
+      "fact": "2026年8月期は売上収益3兆9,633億円、事業利益7,184億円。2027年8月期は売上収益4兆4,500億円、事業利益8,300億円を計画し、年間配当900円を予想。",
+      "analysis": "来期の事業利益成長と株主還元が注目点。株価への影響は市場予想と実際の取引反応を確認して判断する。",
+      "limitations": "事業利益と営業利益は異なる。来期数値・配当は会社予想で確定実績ではない。発表時刻の詳細はこの欄では採用しない。",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "企業公式決算サマリー本文と同日公式決算短信の掲載を取得。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "公式本文の連結業績と2027年8月期業績予想欄で各採用値・年度を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-08、確認日2026-10-09。実績2026年8月期と予想2027年8月期を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "会社公表数値をfactに、注目点をanalysisに記載し株価反応を断定していない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "事業利益の定義・予想値の留保と反応未確認を明記。"
+        }
+      },
+      "verified_at": "2026-10-09T12:12:34+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認"
+    },
+    {
+      "id": "fed-minutes-release-20261007",
+      "title": "FRB：9月会合の議事要旨を公表",
+      "published_date": "2026-10-07",
+      "publisher": "FRB",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261007a.htm",
+      "verification_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261007a.htm",
+      "fact": "FRBは9月15〜16日会合の議事要旨を10月7日14:00 EDT（日本時間10月8日03:00）に公表した。",
+      "analysis": "会合時点の議論を確認する材料。金利や株価への波及は別途検証が必要。",
+      "limitations": "今回の記事は公表事実のみ。新たな政策決定や最新の経済評価とは扱わない。議事要旨の追加利上げ示唆は今回の確認範囲に含めない。",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "FRB公式公表リリース本文を取得。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "リリースの会合日、公表日、14:00 EDTを本文で確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "9月会合と10月公表を区別し、EDTからJSTへ13時間加算。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "公表事実のみ記載し、市場変動の原因と断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "会合当時の情報に基づく記録という公式の留保を反映。"
+        }
+      },
+      "verified_at": "2026-10-09T12:12:34+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認"
+    }
+  ]
+}

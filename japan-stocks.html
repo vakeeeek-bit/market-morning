@@ -176,6 +176,7 @@ body {
     <button type="button" data-jp-target="quality-section">品質</button>
   </nav>
 
+  <section class="section" id="verified-news" aria-live="polite">確認済みニュースを読み込み中...</section>
   <section class="section" id="regime-section">
     <div class="section-title">🔥 朝3分で分かる今日の日本株</div>
     <div id="data-state"></div>
@@ -750,5 +751,6 @@ document.querySelectorAll('[data-jp-target]').forEach(button => {
 Promise.all([loadHistoryIndex(), load()]);
 loadJapanGlossary().then(loadJapanMarket);
 </script>
+<script src="/assets/verified-news.js"></script>
 </body>
 </html>

@@ -439,6 +439,21 @@ def write_summary(result: ValidationResult) -> None:
 
 def run(root: Path = ROOT, scope: str = "report") -> ValidationResult:
     result = ValidationResult()
+    if scope == "news":
+        try:
+            from validate_news import validate
+        except ModuleNotFoundError:
+            from scripts.validate_news import validate
+        try:
+            news = load_json(root / "data/news.json")
+            validate_schema(news, load_json(root / "schemas/news.schema.json"), "news", result)
+            for message in validate(news):
+                result.error(message)
+        except (OSError, ValueError) as error:
+            result.error(f"news: {error}")
+        if not result.errors:
+            result.ok("確認済みニュースのみ検証。市場・レポートの公開判定は変更しない")
+        return result
     data: dict[str, dict] = {}
     names = ("market", "status") if scope == "market" else DATA_NAMES
     for name in names:
@@ -484,7 +499,7 @@ def run(root: Path = ROOT, scope: str = "report") -> ValidationResult:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=ROOT)
-    parser.add_argument("--scope", choices=("report", "market"), default="report")
+    parser.add_argument("--scope", choices=("report", "market", "news"), default="report")
     args = parser.parse_args()
     result = run(args.root.resolve(), args.scope)
     for message in result.checks:

@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Verified news feed",
+  "type": "object",
+  "required": [
+    "report_date",
+    "target_market_date",
+    "updated_at",
+    "publication_mode",
+    "coverage_status",
+    "coverage_note",
+    "articles"
+  ],
+  "properties": {
+    "report_date": {
+      "type": "string",
+      "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+    },
+    "target_market_date": {
+      "type": "string",
+      "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "publication_mode": {
+      "type": "string",
+      "enum": [
+        "verified_news"
+      ]
+    },
+    "coverage_status": {
+      "type": "string",
+      "enum": [
+        "partial"
+      ]
+    },
+    "coverage_note": {
+      "type": "string"
+    },
+    "articles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "published_date",
+          "verified_at",
+          "source_type",
+          "publisher",
+          "source_url",
+          "verification_url",
+          "verification_status",
+          "fact",
+          "analysis",
+          "limitations",
+          "market_reaction_status",
+          "market_reaction",
+          "verification"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "published_date": {
+            "type": "string"
+          },
+          "verified_at": {
+            "type": "string"
+          },
+          "source_type": {
+            "type": "string"
+          },
+          "publisher": {
+            "type": "string"
+          },
+          "source_url": {
+            "type": "string"
+          },
+          "verification_url": {
+            "type": "string"
+          },
+          "verification_status": {
+            "type": "string"
+          },
+          "fact": {
+            "type": "string"
+          },
+          "analysis": {
+            "type": "string"
+          },
+          "limitations": {
+            "type": "string"
+          },
+          "market_reaction_status": {
+            "type": "string"
+          },
+          "market_reaction": {
+            "type": "string"
+          },
+          "verification": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
+}

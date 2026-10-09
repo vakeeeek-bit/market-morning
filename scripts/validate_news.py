@@ -16,8 +16,14 @@ def validate(news):
     try:
         day = datetime.strptime(news["report_date"], "%Y-%m-%d").date()
         updated = datetime.fromisoformat(news["updated_at"])
-        if updated.utcoffset() is None or updated.date() != day:
-            errors.append("updated_at must have timezone and match report_date")
+        retrospective = news.get("edition") == "retrospective"
+        if updated.utcoffset() is None:
+            errors.append("updated_at must have timezone")
+        elif retrospective:
+            if updated.date() < day or news.get("collected_at") != news["updated_at"] or news.get("original_as_of_status") != "not_reconstructed":
+                errors.append("retrospective edition requires actual collection timestamp and no reconstructed as-of claim")
+        elif updated.date() != day:
+            errors.append("updated_at must match report_date for live editions")
     except (KeyError, ValueError, TypeError):
         return ["invalid report_date or updated_at"]
     if news.get("publication_mode") != "verified_news":
@@ -66,12 +72,34 @@ def validate(news):
     return errors
 
 
+def validate_collection(root):
+    """Validate indexed news archives without asserting complete daily research."""
+    errors = []
+    index_path = root / "data/news-history.json"
+    if not index_path.exists():
+        return errors
+    try:
+        index = json.loads(index_path.read_text())
+        dates = index["dates"]
+        if not isinstance(dates, list) or dates != sorted(set(dates)):
+            return ["news history dates must be unique and sorted"]
+        for day in dates:
+            datetime.strptime(day, "%Y-%m-%d")
+            feed = json.loads((root / "data/history" / day / "news.json").read_text())
+            if feed.get("report_date") != day:
+                errors.append(f"{day}: archive/report date mismatch")
+            errors.extend(f"{day}: {message}" for message in validate(feed))
+    except (OSError, KeyError, ValueError, TypeError) as error:
+        errors.append(f"invalid news history: {error}")
+    return errors
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=ROOT)
     args = parser.parse_args()
     news = json.loads((args.root / "data/news.json").read_text())
-    errors = validate(news)
+    errors = validate(news) + validate_collection(args.root)
     for error in errors:
         print("ERROR:", error)
     print("Verified news:", "FAIL" if errors else "PASS", "(market/report gate unchanged)")

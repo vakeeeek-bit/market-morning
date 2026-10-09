@@ -1,0 +1,89 @@
+{
+  "report_date": "2026-09-24",
+  "target_market_date": "2026-09-23",
+  "updated_at": "2026-10-09T18:14:13+09:00",
+  "collected_at": "2026-10-09T18:14:13+09:00",
+  "edition": "retrospective",
+  "original_as_of_status": "not_reconstructed",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "10月9日に後日収集した日付別ニュース。一次資料で確認できた重要材料のみで、当日朝の調査・公開記録や市場反応は再現していません。個別株・格付け・経済指標・金融政策・通商・制裁の全件網羅を意味せず、総合レポートは未作成のままです。",
+  "articles": [
+    {
+      "id": "ustr-sugar-quota",
+      "title": "USTR：2027会計年度の粗糖関税割当残余を配分",
+      "published_date": "2026-09-23",
+      "verified_at": "2026-10-09T18:14:13+09:00",
+      "source_type": "primary",
+      "publisher": "USTR",
+      "source_url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/september/ustr-announces-fiscal-year-2027-wto-tariff-rate-quota-allocations-raw-cane-sugar",
+      "verification_url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/september/ustr-announces-fiscal-year-2027-wto-tariff-rate-quota-allocations-raw-cane-sugar",
+      "verification_status": "PASS",
+      "fact": "USTRは9月23日、2027会計年度の粗糖の関税割当残余55,993 MTRVを国別に配分。割当内輸入は10月1日から可能で、割当超過分には高い税率が適用される。",
+      "analysis": "対象は粗糖で、日本株全体より食品・糖業に限定した通商材料。広範な関税緩和として扱わない。",
+      "limitations": "輸入には割当資格証明が必要で、砂糖の純輸入国向け割当には原産地確認条件がある。国別数量の表はここでは採用しない。公開時刻は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次資料の本文を今回読み取り確認。公式本文の55,993 MTRV、FY2027、October 1、原産地確認・資格証明の条件を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "公式本文の55,993 MTRV、FY2027、October 1、原産地確認・資格証明の条件を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "元資料の発表日は2026-09-23。対象版2026-09-24、今回の確認は2026-10-09T18:14:13+09:00。当日朝の公開を再現しない。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実は一次資料の公表内容のみ。日本株への波及は解釈欄の条件付き見方。市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "輸入には割当資格証明が必要で、砂糖の純輸入国向け割当には原産地確認条件がある。国別数量の表はここでは採用しない。公開時刻は未確認。"
+        }
+      }
+    },
+    {
+      "id": "ofac-congo-removals",
+      "title": "OFAC：コンゴ関連の指定を解除、新規制裁とは区別",
+      "published_date": "2026-09-23",
+      "verified_at": "2026-10-09T18:14:13+09:00",
+      "source_type": "primary",
+      "publisher": "米財務省OFAC",
+      "source_url": "https://ofac.treasury.gov/recent-actions/20260923",
+      "verification_url": "https://ofac.treasury.gov/recent-actions/20260923",
+      "verification_status": "PASS",
+      "fact": "OFACは9月23日、フランソワ・オレンガと関連するSafari ClubをSDNリストから削除。同じ更新には、別の既存指定先の住所表記だけを変更する行政修正も含まれる。",
+      "analysis": "アフリカ関連の制裁実務を点検する材料。日本株や銅供給への直接的な影響は確認できず、中立・限定的として扱う。",
+      "limitations": "削除を新規制裁指定と混同しない。別名表記を別の対象者として数えない。広範な資源取引の解禁は意味しない。公開時刻は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次資料の本文を今回読み取り確認。公式のdeletions、OLENGA、SAFARI CLUBと行政更新は新規指定なしとの注記を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "公式のdeletions、OLENGA、SAFARI CLUBと行政更新は新規指定なしとの注記を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "元資料の発表日は2026-09-23。対象版2026-09-24、今回の確認は2026-10-09T18:14:13+09:00。当日朝の公開を再現しない。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実は一次資料の公表内容のみ。日本株への波及は解釈欄の条件付き見方。市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "削除を新規制裁指定と混同しない。別名表記を別の対象者として数えない。広範な資源取引の解禁は意味しない。公開時刻は未確認。"
+        }
+      }
+    }
+  ]
+}

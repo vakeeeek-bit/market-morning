@@ -1,7 +1,7 @@
 import json
 import unittest
 from pathlib import Path
-from scripts.validate_news import validate
+from scripts.validate_news import validate, validate_collection
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -38,3 +38,31 @@ class VerifiedNewsTest(unittest.TestCase):
             page = (ROOT / filename).read_text()
             self.assertIn('id="verified-news"', page)
             self.assertIn('src="/assets/verified-news.js"', page)
+
+    def retrospective(self):
+        self.news["report_date"] = "2026-10-08"
+        self.news["edition"] = "retrospective"
+        self.news["collected_at"] = self.news["updated_at"]
+        self.news["original_as_of_status"] = "not_reconstructed"
+
+    def test_retrospective_actual_collection_time(self):
+        self.retrospective()
+        self.assertEqual(validate(self.news), [])
+
+    def test_retrospective_cannot_claim_original_as_of(self):
+        self.retrospective()
+        self.news["original_as_of_status"] = "verified"
+        self.assertTrue(validate(self.news))
+
+    def test_retrospective_requires_collection_timestamp(self):
+        self.retrospective()
+        del self.news["collected_at"]
+        self.assertTrue(validate(self.news))
+
+    def test_all_indexed_archives_pass(self):
+        self.assertEqual(validate_collection(ROOT), [])
+
+    def test_history_does_not_fallback_to_latest(self):
+        script = (ROOT / "assets/verified-news.js").read_text()
+        self.assertIn('/data/history/${selected}', script)
+        self.assertIn('news-date', script)

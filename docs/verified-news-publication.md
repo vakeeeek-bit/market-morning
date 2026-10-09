@@ -11,4 +11,8 @@ python scripts/validate_data.py --scope news で検証する。
 research-evidence.json、market.jsonの既存ゲートは変更しない。
 市場数値の未確認をニュース記事内の推測値で補完しない。
 記事の採用範囲をcoverage_noteに記録し、調査全体のPASSを名乗らない。
-履歴date指定時には最新ニュースを表示しない。
+履歴date指定時には当日のdata/history/YYYY-MM-DD/news.jsonだけを表示し、存在しない場合は未保存と明記する。
+独立したニュース日付セレクターとdata/news-history.jsonでニュース履歴を選べる。
+後日収集はedition=retrospective、実際のupdated_at/collected_at、original_as_of_status=not_reconstructedを必須とする。当日の朝に調査・公開したと偽装しない。
+日次朝版の補完では、当日夜の発表を混入させない。発表時刻不明の記事は当日朝時点の既知性を保証しないと記す。
+各履歴は部分収集であり、総合レポートの未作成・市場反応・個別株/格付けの網羅を埋めたことにはしない。市場・旧総合レポートと履歴インデックスは変更しない。

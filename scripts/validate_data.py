@@ -441,14 +441,18 @@ def run(root: Path = ROOT, scope: str = "report") -> ValidationResult:
     result = ValidationResult()
     if scope == "news":
         try:
-            from validate_news import validate
+            from validate_news import validate, validate_collection
         except ModuleNotFoundError:
-            from scripts.validate_news import validate
+            from scripts.validate_news import validate, validate_collection
         try:
             news = load_json(root / "data/news.json")
             validate_schema(news, load_json(root / "schemas/news.schema.json"), "news", result)
             for message in validate(news):
                 result.error(message)
+            for message in validate_collection(root):
+                result.error(message)
+            for path in sorted((root / "data/history").glob("*/news.json")):
+                validate_schema(load_json(path), load_json(root / "schemas/news.schema.json"), str(path.relative_to(root)), result)
         except (OSError, ValueError) as error:
             result.error(f"news: {error}")
         if not result.errors:

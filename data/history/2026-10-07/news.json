@@ -1,0 +1,51 @@
+{
+  "report_date": "2026-10-07",
+  "target_market_date": "2026-10-06",
+  "updated_at": "2026-10-09T18:14:13+09:00",
+  "collected_at": "2026-10-09T18:14:13+09:00",
+  "edition": "retrospective",
+  "original_as_of_status": "not_reconstructed",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "10月9日に後日収集した日付別ニュース。一次資料で確認できた重要材料のみで、当日朝の調査・公開記録や市場反応は再現していません。個別株・格付け・経済指標・金融政策・通商・制裁の全件網羅を意味せず、総合レポートは未作成のままです。",
+  "articles": [
+    {
+      "id": "bea-trade-august",
+      "title": "米8月貿易：財・サービス赤字が1,056億ドルに拡大",
+      "published_date": "2026-10-06",
+      "verified_at": "2026-10-09T18:14:13+09:00",
+      "source_type": "primary",
+      "publisher": "BEA・Census",
+      "source_url": "https://www.bea.gov/news/2026/us-international-trade-goods-and-services-august-2026",
+      "verification_url": "https://www.bea.gov/news/2026/us-international-trade-goods-and-services-august-2026",
+      "verification_status": "PASS",
+      "fact": "BEAとCensusは10月6日08:30 EDTに8月貿易統計を公表。財・サービス赤字は1,056億ドルで、改定後の7月928億ドルから拡大。輸出3,152億ドル、輸入4,208億ドル。",
+      "analysis": "米需要や輸入構成を確認する材料。赤字拡大だけで日本の輸出企業に追い風とせず、品目・国別と為替を併せて見る。",
+      "limitations": "季節調整済みの名目金額で価格調整はない。米貿易赤字は日本との赤字だけを示さず、純輸出のGDP寄与と直結させない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次資料の本文を今回読み取り確認。冒頭の公表時刻、August105.6、July revised92.8、exports315.2/imports420.8 billionと季節調整・価格未調整注記を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "冒頭の公表時刻、August105.6、July revised92.8、exports315.2/imports420.8 billionと季節調整・価格未調整注記を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "元資料の発表日は2026-10-06。対象版2026-10-07、今回の確認は2026-10-09T18:14:13+09:00。当日朝の公開を再現しない。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実は一次資料の公表内容のみ。日本株への波及は解釈欄の条件付き見方。市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "季節調整済みの名目金額で価格調整はない。米貿易赤字は日本との赤字だけを示さず、純輸出のGDP寄与と直結させない。"
+        }
+      }
+    }
+  ]
+}

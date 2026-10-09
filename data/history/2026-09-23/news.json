@@ -1,0 +1,51 @@
+{
+  "report_date": "2026-09-23",
+  "target_market_date": "2026-09-22",
+  "updated_at": "2026-10-09T18:14:13+09:00",
+  "collected_at": "2026-10-09T18:14:13+09:00",
+  "edition": "retrospective",
+  "original_as_of_status": "not_reconstructed",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "10月9日に後日収集した日付別ニュース。一次資料で確認できた重要材料のみで、当日朝の調査・公開記録や市場反応は再現していません。個別株・格付け・経済指標・金融政策・通商・制裁の全件網羅を意味せず、総合レポートは未作成のままです。",
+  "articles": [
+    {
+      "id": "fed-jefferson-liquidity",
+      "title": "FRB副議長：銀行の資金調達窓口と米国債市場の安定を説明",
+      "published_date": "2026-09-22",
+      "verified_at": "2026-10-09T18:14:13+09:00",
+      "source_type": "primary",
+      "publisher": "FRB",
+      "source_url": "https://www.federalreserve.gov/newsevents/speech/jefferson20260922a.htm",
+      "verification_url": "https://www.federalreserve.gov/newsevents/speech/jefferson20260922a.htm",
+      "verification_status": "PASS",
+      "fact": "ジェファーソン副議長は9月22日、ディスカウント・ウィンドウの事務手続き、オンライン化、連邦住宅貸付銀行との連携を説明。銀行への流動性供給が米国債の投げ売りリスクを抑える役割を持つと述べた。",
+      "analysis": "銀行・債券市場の流動性を点検する材料。日本の銀行株への直接の利益効果や新たな金融緩和を意味するとは判断しない。",
+      "limitations": "個人の講演でありFOMCの政策決定ではない。公開時刻は未確認で、当日朝の既知性は保証しない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次資料の本文を今回読み取り確認。公式講演の日付とThree Dimensions of Discount Window Modernization、Treasury Securities as Discount Window Collateralを確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "公式講演の日付とThree Dimensions of Discount Window Modernization、Treasury Securities as Discount Window Collateralを確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "元資料の発表日は2026-09-22。対象版2026-09-23、今回の確認は2026-10-09T18:14:13+09:00。当日朝の公開を再現しない。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実は一次資料の公表内容のみ。日本株への波及は解釈欄の条件付き見方。市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "個人の講演でありFOMCの政策決定ではない。公開時刻は未確認で、当日朝の既知性は保証しない。"
+        }
+      }
+    }
+  ]
+}

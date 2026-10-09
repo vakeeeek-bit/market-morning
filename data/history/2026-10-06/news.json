@@ -1,0 +1,89 @@
+{
+  "report_date": "2026-10-06",
+  "target_market_date": "2026-10-05",
+  "updated_at": "2026-10-09T18:14:13+09:00",
+  "collected_at": "2026-10-09T18:14:13+09:00",
+  "edition": "retrospective",
+  "original_as_of_status": "not_reconstructed",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "10月9日に後日収集した日付別ニュース。一次資料で確認できた重要材料のみで、当日朝の調査・公開記録や市場反応は再現していません。個別株・格付け・経済指標・金融政策・通商・制裁の全件網羅を意味せず、総合レポートは未作成のままです。",
+  "articles": [
+    {
+      "id": "ism-services-september",
+      "title": "米9月ISMサービス業：拡大維持、価格圧力は強まる",
+      "published_date": "2026-10-05",
+      "verified_at": "2026-10-09T18:14:13+09:00",
+      "source_type": "primary",
+      "publisher": "ISM",
+      "source_url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/services/september/",
+      "verification_url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/services/september/",
+      "verification_status": "PASS",
+      "fact": "9月のISMサービス業PMIは54.9で8月55.4から低下。雇用指数は50.1と拡大圏へ戻る一方、価格指数は74.0で8月72.6から上昇。公式予定表の公表日は10月5日。",
+      "analysis": "米景気の拡大維持とコスト圧力が同居。日本の外需業種への需要支援と、高金利に弱い業種への負担を分けて評価する。",
+      "limitations": "価格指数74.0は物価上昇率74%を意味しない。製造業PMIや政府統計と混同せず、恒久URLの将来更新にも注意。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次資料の本文を今回読み取り確認。September 2026本文と表で54.9/55.4、50.1、74.0/72.6を確認。公式予定表でOctober Services=5を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "September 2026本文と表で54.9/55.4、50.1、74.0/72.6を確認。公式予定表でOctober Services=5を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "元資料の発表日は2026-10-05。対象版2026-10-06、今回の確認は2026-10-09T18:14:13+09:00。当日朝の公開を再現しない。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実は一次資料の公表内容のみ。日本株への波及は解釈欄の条件付き見方。市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "価格指数74.0は物価上昇率74%を意味しない。製造業PMIや政府統計と混同せず、恒久URLの将来更新にも注意。"
+        }
+      }
+    },
+    {
+      "id": "abc-monthly-september",
+      "title": "ABCマート（2670）：9月既存店売上は前年同月比14.9%増",
+      "published_date": "2026-10-05",
+      "verified_at": "2026-10-09T18:14:13+09:00",
+      "source_type": "primary",
+      "publisher": "エービーシー・マート",
+      "source_url": "https://www.abc-mart.co.jp/ir/pdf/2027/getsuji.pdf",
+      "verification_url": "https://www.abc-mart.co.jp/ir/pdf/2027/getsuji.pdf",
+      "verification_status": "PASS",
+      "fact": "ABCマートの10月5日公表の9月度国内月次では、既存店売上は前年同月比14.9%増、全店は14.6%増。会社は前年より祝日が1日多いことと秋物商品の好調を説明した。",
+      "analysis": "小売の販売動向を点検する個別材料。売上増の要因を客数・客単価・曜日並びに分け、他の小売業全体には一般化しない。",
+      "limitations": "2027年2月期からOshman'sを含む国内集計。既存店売上の定義に除外条件があり、海外を含む連結売上・利益とは別。公開時刻は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次資料の本文を今回読み取り確認。公式PDFのコード2670、公表日10月5日、9月度14.9/14.6、祝日とOshman's集計注記を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "公式PDFのコード2670、公表日10月5日、9月度14.9/14.6、祝日とOshman's集計注記を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "元資料の発表日は2026-10-05。対象版2026-10-06、今回の確認は2026-10-09T18:14:13+09:00。当日朝の公開を再現しない。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実は一次資料の公表内容のみ。日本株への波及は解釈欄の条件付き見方。市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "2027年2月期からOshman'sを含む国内集計。既存店売上の定義に除外条件があり、海外を含む連結売上・利益とは別。公開時刻は未確認。"
+        }
+      }
+    }
+  ]
+}

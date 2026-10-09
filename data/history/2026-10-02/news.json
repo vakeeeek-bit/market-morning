@@ -1,0 +1,89 @@
+{
+  "report_date": "2026-10-02",
+  "target_market_date": "2026-10-01",
+  "updated_at": "2026-10-09T18:14:13+09:00",
+  "collected_at": "2026-10-09T18:14:13+09:00",
+  "edition": "retrospective",
+  "original_as_of_status": "not_reconstructed",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "10月9日に後日収集した日付別ニュース。一次資料で確認できた重要材料のみで、当日朝の調査・公開記録や市場反応は再現していません。個別株・格付け・経済指標・金融政策・通商・制裁の全件網羅を意味せず、総合レポートは未作成のままです。",
+  "articles": [
+    {
+      "id": "ism-manufacturing-september",
+      "title": "米9月ISM製造業：拡大継続、価格指数は上昇",
+      "published_date": "2026-10-01",
+      "verified_at": "2026-10-09T18:14:13+09:00",
+      "source_type": "primary",
+      "publisher": "ISM",
+      "source_url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/pmi/september/",
+      "verification_url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/pmi/september/",
+      "verification_status": "PASS",
+      "fact": "9月のISM製造業PMIは54.5で8月54.6から小幅低下。新規受注は55.3、雇用52.7、価格指数77.9。公式予定表の公表日は10月1日。",
+      "analysis": "米製造業の需要は日本の機械・電機に支援材料になり得る一方、投入価格上昇は利益率とインフレに注意が必要。",
+      "limitations": "景況感の拡散指数で生産量や価格の上昇率ではない。PMIの低下は50超の拡大継続と両立する。恒久URLは更新される可能性がある。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次資料の本文を今回読み取り確認。September 2026の比較表で54.5/54.6、55.3、52.7、77.9を確認。公式公表予定表でOctober Manufacturing=1を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "September 2026の比較表で54.5/54.6、55.3、52.7、77.9を確認。公式公表予定表でOctober Manufacturing=1を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "元資料の発表日は2026-10-01。対象版2026-10-02、今回の確認は2026-10-09T18:14:13+09:00。当日朝の公開を再現しない。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実は一次資料の公表内容のみ。日本株への波及は解釈欄の条件付き見方。市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "景況感の拡散指数で生産量や価格の上昇率ではない。PMIの低下は50超の拡大継続と両立する。恒久URLは更新される可能性がある。"
+        }
+      }
+    },
+    {
+      "id": "boj-summary-september",
+      "title": "日銀「主な意見」：物価上振れへの警戒と利上げ慎重論が併存",
+      "published_date": "2026-10-01",
+      "verified_at": "2026-10-09T18:14:13+09:00",
+      "source_type": "primary",
+      "publisher": "日本銀行",
+      "source_url": "https://www.boj.or.jp/mopo/mpmsche_minu/opinion_2026/opi260918.pdf",
+      "verification_url": "https://www.boj.or.jp/mopo/mpmsche_minu/opinion_2026/opi260918.pdf",
+      "verification_status": "PASS",
+      "fact": "日銀は10月1日08:50 JST、9月17・18日会合の「主な意見」を公表。物価上振れリスクと追加的な緩和度合い調整を重視する意見に加え、物価や景気を理由に今回の利上げを避けるべきとの意見も収録した。",
+      "analysis": "銀行・不動産・輸出株に関わる金利と為替の前提を点検する材料。単一のタカ派・ハト派結論にまとめない。",
+      "limitations": "各出席者の意見を編集した資料であり新たな政策決定ではない。発言者や票数を推測せず、10月の会合結果も断定しない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次資料の本文を今回読み取り確認。PDF表紙の公表時間と政策運営に関する意見の利上げ賛成・据置希望の双方を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "PDF表紙の公表時間と政策運営に関する意見の利上げ賛成・据置希望の双方を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "元資料の発表日は2026-10-01。対象版2026-10-02、今回の確認は2026-10-09T18:14:13+09:00。当日朝の公開を再現しない。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実は一次資料の公表内容のみ。日本株への波及は解釈欄の条件付き見方。市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "各出席者の意見を編集した資料であり新たな政策決定ではない。発言者や票数を推測せず、10月の会合結果も断定しない。"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "report_date": "2026-09-30",
+  "target_market_date": "2026-09-29",
+  "updated_at": "2026-10-09T18:14:13+09:00",
+  "collected_at": "2026-10-09T18:14:13+09:00",
+  "edition": "retrospective",
+  "original_as_of_status": "not_reconstructed",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "10月9日に後日収集した日付別ニュース。一次資料で確認できた重要材料のみで、当日朝の調査・公開記録や市場反応は再現していません。個別株・格付け・経済指標・金融政策・通商・制裁の全件網羅を意味せず、総合レポートは未作成のままです。",
+  "articles": [
+    {
+      "id": "bls-jolts-august",
+      "title": "米8月JOLTS：求人710万件、採用・離職も概ね横ばい",
+      "published_date": "2026-09-29",
+      "verified_at": "2026-10-09T18:14:13+09:00",
+      "source_type": "primary",
+      "publisher": "BLS",
+      "source_url": "https://www.bls.gov/news.release/archives/jolts_09292026.htm",
+      "verification_url": "https://www.bls.gov/news.release/archives/jolts_09292026.htm",
+      "verification_status": "PASS",
+      "fact": "BLSは9月29日10:00 ETに8月JOLTSを公表。求人は710万件、採用520万件、離職510万件。7月の求人数は6万4千件上方改定され730万件となった。",
+      "analysis": "採用も離職も低い動きにとどまる労働市場を、雇用統計と組み合わせて評価する材料。米需要を通じた日本の輸出業種への波及は条件付き。",
+      "limitations": "求人は月末のストック、採用・離職は月中のフロー。求人件数の減少をそのまま雇用喪失とみなさない。数値は公表時点の概数。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次資料の本文を今回読み取り確認。日付・10:00 ET、August 7.1/5.2/5.1 million、July revisions +64,000を本文で確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "日付・10:00 ET、August 7.1/5.2/5.1 million、July revisions +64,000を本文で確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "元資料の発表日は2026-09-29。対象版2026-09-30、今回の確認は2026-10-09T18:14:13+09:00。当日朝の公開を再現しない。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実は一次資料の公表内容のみ。日本株への波及は解釈欄の条件付き見方。市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "求人は月末のストック、採用・離職は月中のフロー。求人件数の減少をそのまま雇用喪失とみなさない。数値は公表時点の概数。"
+        }
+      }
+    }
+  ]
+}

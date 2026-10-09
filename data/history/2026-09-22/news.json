@@ -1,0 +1,51 @@
+{
+  "report_date": "2026-09-22",
+  "target_market_date": "2026-09-21",
+  "updated_at": "2026-10-09T18:14:13+09:00",
+  "collected_at": "2026-10-09T18:14:13+09:00",
+  "edition": "retrospective",
+  "original_as_of_status": "not_reconstructed",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "10月9日に後日収集した日付別ニュース。一次資料で確認できた重要材料のみで、当日朝の調査・公開記録や市場反応は再現していません。個別株・格付け・経済指標・金融政策・通商・制裁の全件網羅を意味せず、総合レポートは未作成のままです。",
+  "articles": [
+    {
+      "id": "ustr-germany-hearing",
+      "title": "USTR：ドイツの医薬品価格慣行を巡る公聴会を案内",
+      "published_date": "2026-09-21",
+      "verified_at": "2026-10-09T18:14:13+09:00",
+      "source_type": "primary",
+      "publisher": "USTR",
+      "source_url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/september/public-hearing-regarding-section-301-investigation-germanys-persistent-underpayment-innovative",
+      "verification_url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/september/public-hearing-regarding-section-301-investigation-germanys-persistent-underpayment-innovative",
+      "verification_status": "PASS",
+      "fact": "USTRは9月21日、革新的医薬品への支払額を巡るドイツの慣行に関する通商法301条調査について、9月22日10:00 ET開始の公聴会を案内した。",
+      "analysis": "医薬品の価格制度と通商交渉を結びつける材料。日本の製薬企業への直接影響は、調査結果と対象措置を確認して判断する。",
+      "limitations": "公聴会の開催案内であり、新たな関税の決定・発効ではない。案内の公開時刻は未確認で、当日朝の既知性は保証しない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次資料の本文を今回読み取り確認。公式本文のSeptember 21, 2026、Germany、Section 301、September 22 10:00 ETを確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "公式本文のSeptember 21, 2026、Germany、Section 301、September 22 10:00 ETを確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "元資料の発表日は2026-09-21。対象版2026-09-22、今回の確認は2026-10-09T18:14:13+09:00。当日朝の公開を再現しない。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実は一次資料の公表内容のみ。日本株への波及は解釈欄の条件付き見方。市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "公聴会の開催案内であり、新たな関税の決定・発効ではない。案内の公開時刻は未確認で、当日朝の既知性は保証しない。"
+        }
+      }
+    }
+  ]
+}

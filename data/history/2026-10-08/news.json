@@ -1,0 +1,89 @@
+{
+  "report_date": "2026-10-08",
+  "target_market_date": "2026-10-07",
+  "updated_at": "2026-10-09T18:14:13+09:00",
+  "collected_at": "2026-10-09T18:14:13+09:00",
+  "edition": "retrospective",
+  "original_as_of_status": "not_reconstructed",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "10月9日に後日収集した日付別ニュース。一次資料で確認できた重要材料のみで、当日朝の調査・公開記録や市場反応は再現していません。個別株・格付け・経済指標・金融政策・通商・制裁の全件網羅を意味せず、総合レポートは未作成のままです。",
+  "articles": [
+    {
+      "id": "fed-minutes-september-details",
+      "title": "FOMC議事要旨：年内追加利上げを適切とみる参加者が多数",
+      "published_date": "2026-10-07",
+      "verified_at": "2026-10-09T18:14:13+09:00",
+      "source_type": "primary",
+      "publisher": "FRB",
+      "source_url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260916.htm",
+      "verification_url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260916.htm",
+      "verification_status": "PASS",
+      "fact": "10月7日14:00 EDT公表の9月15・16日会合議事要旨では、参加者の多くが年末までの追加利上げを適切となる可能性が高いと評価。ただし今後の判断は新たな情報とリスク評価に依存するとした。",
+      "analysis": "米金利と日本のグロース株・不動産・為替の前提を点検する材料。追加利上げが既に決定したとは扱わない。",
+      "limitations": "公表は日本時間10月8日03:00。記述は9月会合時点の情報で、10月2日雇用統計後の評価ではない。参加者と投票権を持つ委員を区別する。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次資料の本文を今回読み取り確認。本文のmost participants/by year end/incoming informationを確認。公表案内の10月7日14:00 EDTと会合時点の情報という留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "本文のmost participants/by year end/incoming informationを確認。公表案内の10月7日14:00 EDTと会合時点の情報という留保を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "元資料の発表日は2026-10-07。対象版2026-10-08、今回の確認は2026-10-09T18:14:13+09:00。当日朝の公開を再現しない。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実は一次資料の公表内容のみ。日本株への波及は解釈欄の条件付き見方。市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "公表は日本時間10月8日03:00。記述は9月会合時点の情報で、10月2日雇用統計後の評価ではない。参加者と投票権を持つ委員を区別する。"
+        }
+      }
+    },
+    {
+      "id": "abc-forecast-upgrade",
+      "title": "ABCマート（2670）：通期営業利益予想を656億円から672億円へ",
+      "published_date": "2026-10-07",
+      "verified_at": "2026-10-09T18:14:13+09:00",
+      "source_type": "primary",
+      "publisher": "エービーシー・マート",
+      "source_url": "https://www.abc-mart.co.jp/ir/pdf/2027/261007_01.pdf",
+      "verification_url": "https://www.abc-mart.co.jp/ir/pdf/2027/261007_01.pdf",
+      "verification_status": "PASS",
+      "fact": "ABCマートは10月7日、2027年2月期の連結予想を上方修正。売上高は4,008億円から4,030億円、営業利益は656億円から672億円、経常利益は674億円から698億円に変更した。",
+      "analysis": "上半期の計画上振れを反映した個別小売材料。業績改善と株価の織り込みを分けて評価し、業種全体の増益を断定しない。",
+      "limitations": "連結の通期会社予想で実績ではない。下半期は期初計画を維持。単位は元資料の百万円から億円へ換算。公開時刻は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次資料の本文を今回読み取り確認。公式PDFのコード2670、日付10月7日と連結のA/B比較表、上半期上振れ・下半期期初計画維持を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "公式PDFのコード2670、日付10月7日と連結のA/B比較表、上半期上振れ・下半期期初計画維持を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "元資料の発表日は2026-10-07。対象版2026-10-08、今回の確認は2026-10-09T18:14:13+09:00。当日朝の公開を再現しない。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実は一次資料の公表内容のみ。日本株への波及は解釈欄の条件付き見方。市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "連結の通期会社予想で実績ではない。下半期は期初計画を維持。単位は元資料の百万円から億円へ換算。公開時刻は未確認。"
+        }
+      }
+    }
+  ]
+}

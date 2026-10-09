@@ -12,6 +12,9 @@
     "articles"
   ],
   "properties": {
+    "edition": {"type": "string", "enum": ["retrospective"]},
+    "collected_at": {"type": "string"},
+    "original_as_of_status": {"type": "string", "enum": ["not_reconstructed"]},
     "report_date": {
       "type": "string",
       "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"

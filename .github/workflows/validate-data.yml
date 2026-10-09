@@ -4,6 +4,8 @@ on:
   push:
     branches: [main]
     paths:
+      - "index.html"
+      - "japan-stocks.html"
       - "data/*.json"
       - "schemas/*.json"
       - "scripts/*.py"
@@ -16,6 +18,8 @@ on:
       - "!tests/test_verified_news.py"
   pull_request:
     paths:
+      - "index.html"
+      - "japan-stocks.html"
       - "data/*.json"
       - "schemas/*.json"
       - "scripts/*.py"

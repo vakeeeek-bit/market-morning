@@ -4,6 +4,8 @@ on:
   push:
     branches: [main]
     paths:
+      - "index.html"
+      - "japan-stocks.html"
       - "data/news.json"
       - "assets/verified-news.js"
       - "scripts/validate_news.py"
@@ -12,6 +14,8 @@ on:
       - ".github/workflows/validate-news.yml"
   pull_request:
     paths:
+      - "index.html"
+      - "japan-stocks.html"
       - "data/news.json"
       - "assets/verified-news.js"
       - "scripts/validate_news.py"

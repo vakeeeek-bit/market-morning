@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10T11:52:28+09:00",
+  "updated_at": "2026-10-10T11:56:17+09:00",
   "latest": "2026-10-05",
   "dates": [
     "2026-08-28",
@@ -540,11 +540,11 @@
     },
     {
       "date": "2026-10-10",
-      "status": "empty",
+      "status": "market_only",
       "has_report": false,
-      "has_market": false,
+      "has_market": true,
       "has_japan_stocks": false,
-      "has_japan_market": false,
+      "has_japan_market": true,
       "has_research_evidence": false,
       "report_type": null,
       "has_news": true,

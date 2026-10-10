@@ -369,6 +369,16 @@ def main():
     )
     result["data_quality"] = build_data_quality(result["markets"])
 
+    # Preserve the last good snapshot if a provider outage prevents core collection.
+    core = ("sp500", "nasdaq", "nasdaq100", "sox", "dow", "russell2000", "vix")
+    if any(result["markets"][key].get("price") is None for key in core):
+        attempt = Path("data/collection-attempts")
+        attempt.mkdir(parents=True, exist_ok=True)
+        (attempt / f"{datetime.now(ZoneInfo('Asia/Tokyo')).date()}-market.json").write_text(
+            json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False) + "\n"
+        )
+        raise RuntimeError("主要指数の収集失敗。既存market.jsonを保持し、試行を別保存しました")
+
     with open("data/market.json", "w", encoding="utf-8") as file:
         json.dump(
             result,

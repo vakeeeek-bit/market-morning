@@ -53,5 +53,11 @@ jobs:
       - name: Validate current data
         run: python scripts/validate_data.py
 
+      - name: Audit current publication freshness
+        run: |
+          if ! python scripts/validate_data.py --scope publish; then
+            echo "::warning::総合レポートは自動公開条件未達。構造検証成功と公開品質PASSを区別してください。"
+          fi
+
       - name: Run validation tests
         run: python -m unittest discover -s tests -v

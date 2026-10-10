@@ -33,7 +33,7 @@ def prepare(source: Path, root: Path = ROOT, check_only: bool = False) -> list[P
         for name in selected:
             shutil.copy2(source / name, staged_root / "data" / name)
 
-        result = run(staged_root)
+        result = run(staged_root, scope="publish")
         for message in result.warnings:
             print(f"WARNING: {message}")
         if result.errors:

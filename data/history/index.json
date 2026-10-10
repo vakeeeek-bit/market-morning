@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T04:07:57+00:00",
+  "updated_at": "2026-10-10T11:51:58+09:00",
   "latest": "2026-10-05",
   "dates": [
     "2026-08-28",
@@ -25,6 +25,8 @@
     "2026-09-17",
     "2026-09-18",
     "2026-09-19",
+    "2026-09-20",
+    "2026-09-21",
     "2026-09-22",
     "2026-09-23",
     "2026-09-24",
@@ -33,8 +35,15 @@
     "2026-09-27",
     "2026-09-28",
     "2026-09-29",
+    "2026-09-30",
     "2026-10-01",
-    "2026-10-05"
+    "2026-10-02",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10"
   ],
   "entries": [
     {
@@ -45,7 +54,9 @@
       "has_japan_stocks": false,
       "has_japan_market": false,
       "has_research_evidence": false,
-      "report_type": "daily"
+      "report_type": "daily",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-08-29",
@@ -55,7 +66,9 @@
       "has_japan_stocks": false,
       "has_japan_market": false,
       "has_research_evidence": false,
-      "report_type": "daily"
+      "report_type": "daily",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-08-30",
@@ -65,7 +78,9 @@
       "has_japan_stocks": false,
       "has_japan_market": false,
       "has_research_evidence": false,
-      "report_type": "weekly"
+      "report_type": "weekly",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-08-31",
@@ -75,7 +90,9 @@
       "has_japan_stocks": false,
       "has_japan_market": false,
       "has_research_evidence": false,
-      "report_type": "daily"
+      "report_type": "daily",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-01",
@@ -85,7 +102,9 @@
       "has_japan_stocks": false,
       "has_japan_market": false,
       "has_research_evidence": false,
-      "report_type": "daily"
+      "report_type": "daily",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-02",
@@ -95,7 +114,9 @@
       "has_japan_stocks": false,
       "has_japan_market": false,
       "has_research_evidence": false,
-      "report_type": "daily"
+      "report_type": "daily",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-03",
@@ -105,7 +126,9 @@
       "has_japan_stocks": false,
       "has_japan_market": false,
       "has_research_evidence": false,
-      "report_type": "daily"
+      "report_type": "daily",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-04",
@@ -115,7 +138,9 @@
       "has_japan_stocks": true,
       "has_japan_market": false,
       "has_research_evidence": false,
-      "report_type": "daily"
+      "report_type": "daily",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-05",
@@ -125,7 +150,9 @@
       "has_japan_stocks": false,
       "has_japan_market": false,
       "has_research_evidence": false,
-      "report_type": null
+      "report_type": null,
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-06",
@@ -135,7 +162,9 @@
       "has_japan_stocks": true,
       "has_japan_market": false,
       "has_research_evidence": false,
-      "report_type": "weekly"
+      "report_type": "weekly",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-07",
@@ -145,7 +174,9 @@
       "has_japan_stocks": true,
       "has_japan_market": false,
       "has_research_evidence": false,
-      "report_type": "daily"
+      "report_type": "daily",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-08",
@@ -155,7 +186,9 @@
       "has_japan_stocks": true,
       "has_japan_market": false,
       "has_research_evidence": false,
-      "report_type": "daily"
+      "report_type": "daily",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-09",
@@ -165,7 +198,9 @@
       "has_japan_stocks": true,
       "has_japan_market": false,
       "has_research_evidence": false,
-      "report_type": "daily"
+      "report_type": "daily",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-10",
@@ -175,7 +210,9 @@
       "has_japan_stocks": true,
       "has_japan_market": false,
       "has_research_evidence": false,
-      "report_type": "daily"
+      "report_type": "daily",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-11",
@@ -185,7 +222,9 @@
       "has_japan_stocks": true,
       "has_japan_market": false,
       "has_research_evidence": false,
-      "report_type": "daily"
+      "report_type": "daily",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-12",
@@ -195,7 +234,9 @@
       "has_japan_stocks": false,
       "has_japan_market": false,
       "has_research_evidence": false,
-      "report_type": null
+      "report_type": null,
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-13",
@@ -205,7 +246,9 @@
       "has_japan_stocks": true,
       "has_japan_market": false,
       "has_research_evidence": false,
-      "report_type": "weekly"
+      "report_type": "weekly",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-14",
@@ -215,7 +258,9 @@
       "has_japan_stocks": true,
       "has_japan_market": false,
       "has_research_evidence": false,
-      "report_type": "daily"
+      "report_type": "daily",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-15",
@@ -225,7 +270,9 @@
       "has_japan_stocks": true,
       "has_japan_market": true,
       "has_research_evidence": false,
-      "report_type": "daily"
+      "report_type": "daily",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-16",
@@ -235,7 +282,9 @@
       "has_japan_stocks": false,
       "has_japan_market": true,
       "has_research_evidence": false,
-      "report_type": "daily"
+      "report_type": "daily",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-17",
@@ -245,7 +294,9 @@
       "has_japan_stocks": true,
       "has_japan_market": true,
       "has_research_evidence": false,
-      "report_type": null
+      "report_type": null,
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-18",
@@ -255,7 +306,9 @@
       "has_japan_stocks": true,
       "has_japan_market": true,
       "has_research_evidence": false,
-      "report_type": "daily"
+      "report_type": "daily",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-19",
@@ -265,7 +318,33 @@
       "has_japan_stocks": true,
       "has_japan_market": false,
       "has_research_evidence": false,
-      "report_type": "daily"
+      "report_type": "daily",
+      "has_news": false,
+      "has_candidate": false
+    },
+    {
+      "date": "2026-09-20",
+      "status": "empty",
+      "has_report": false,
+      "has_market": false,
+      "has_japan_stocks": true,
+      "has_japan_market": false,
+      "has_research_evidence": false,
+      "report_type": null,
+      "has_news": false,
+      "has_candidate": false
+    },
+    {
+      "date": "2026-09-21",
+      "status": "empty",
+      "has_report": false,
+      "has_market": false,
+      "has_japan_stocks": true,
+      "has_japan_market": true,
+      "has_research_evidence": false,
+      "report_type": null,
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-22",
@@ -275,7 +354,9 @@
       "has_japan_stocks": false,
       "has_japan_market": true,
       "has_research_evidence": false,
-      "report_type": null
+      "report_type": null,
+      "has_news": true,
+      "has_candidate": false
     },
     {
       "date": "2026-09-23",
@@ -285,7 +366,9 @@
       "has_japan_stocks": false,
       "has_japan_market": true,
       "has_research_evidence": false,
-      "report_type": null
+      "report_type": null,
+      "has_news": true,
+      "has_candidate": false
     },
     {
       "date": "2026-09-24",
@@ -295,7 +378,9 @@
       "has_japan_stocks": false,
       "has_japan_market": true,
       "has_research_evidence": false,
-      "report_type": null
+      "report_type": null,
+      "has_news": true,
+      "has_candidate": false
     },
     {
       "date": "2026-09-25",
@@ -305,7 +390,9 @@
       "has_japan_stocks": true,
       "has_japan_market": true,
       "has_research_evidence": false,
-      "report_type": "daily"
+      "report_type": "daily",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-26",
@@ -315,7 +402,9 @@
       "has_japan_stocks": true,
       "has_japan_market": false,
       "has_research_evidence": false,
-      "report_type": "weekend"
+      "report_type": "weekend",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-27",
@@ -325,7 +414,9 @@
       "has_japan_stocks": true,
       "has_japan_market": true,
       "has_research_evidence": false,
-      "report_type": "weekend"
+      "report_type": "weekend",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-28",
@@ -335,7 +426,9 @@
       "has_japan_stocks": true,
       "has_japan_market": true,
       "has_research_evidence": true,
-      "report_type": "daily"
+      "report_type": "daily",
+      "has_news": false,
+      "has_candidate": false
     },
     {
       "date": "2026-09-29",
@@ -345,7 +438,21 @@
       "has_japan_stocks": true,
       "has_japan_market": true,
       "has_research_evidence": true,
-      "report_type": "daily"
+      "report_type": "daily",
+      "has_news": false,
+      "has_candidate": false
+    },
+    {
+      "date": "2026-09-30",
+      "status": "empty",
+      "has_report": false,
+      "has_market": false,
+      "has_japan_stocks": false,
+      "has_japan_market": true,
+      "has_research_evidence": false,
+      "report_type": null,
+      "has_news": true,
+      "has_candidate": false
     },
     {
       "date": "2026-10-01",
@@ -355,7 +462,21 @@
       "has_japan_stocks": true,
       "has_japan_market": true,
       "has_research_evidence": true,
-      "report_type": "daily"
+      "report_type": "daily",
+      "has_news": false,
+      "has_candidate": false
+    },
+    {
+      "date": "2026-10-02",
+      "status": "empty",
+      "has_report": false,
+      "has_market": false,
+      "has_japan_stocks": false,
+      "has_japan_market": true,
+      "has_research_evidence": false,
+      "report_type": null,
+      "has_news": true,
+      "has_candidate": false
     },
     {
       "date": "2026-10-05",
@@ -365,7 +486,69 @@
       "has_japan_stocks": true,
       "has_japan_market": true,
       "has_research_evidence": true,
-      "report_type": "daily_manual_update"
+      "report_type": "daily_manual_update",
+      "has_news": false,
+      "has_candidate": false
+    },
+    {
+      "date": "2026-10-06",
+      "status": "market_only",
+      "has_report": false,
+      "has_market": true,
+      "has_japan_stocks": false,
+      "has_japan_market": true,
+      "has_research_evidence": false,
+      "report_type": null,
+      "has_news": true,
+      "has_candidate": false
+    },
+    {
+      "date": "2026-10-07",
+      "status": "market_only",
+      "has_report": false,
+      "has_market": true,
+      "has_japan_stocks": false,
+      "has_japan_market": true,
+      "has_research_evidence": false,
+      "report_type": null,
+      "has_news": true,
+      "has_candidate": false
+    },
+    {
+      "date": "2026-10-08",
+      "status": "market_only",
+      "has_report": false,
+      "has_market": true,
+      "has_japan_stocks": false,
+      "has_japan_market": true,
+      "has_research_evidence": false,
+      "report_type": null,
+      "has_news": true,
+      "has_candidate": false
+    },
+    {
+      "date": "2026-10-09",
+      "status": "market_only",
+      "has_report": false,
+      "has_market": true,
+      "has_japan_stocks": false,
+      "has_japan_market": true,
+      "has_research_evidence": false,
+      "report_type": null,
+      "has_news": true,
+      "has_candidate": false
+    },
+    {
+      "date": "2026-10-10",
+      "status": "empty",
+      "has_report": false,
+      "has_market": false,
+      "has_japan_stocks": false,
+      "has_japan_market": false,
+      "has_research_evidence": false,
+      "report_type": null,
+      "has_news": true,
+      "has_candidate": false
     }
   ]
 }

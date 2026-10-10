@@ -320,7 +320,7 @@ async function loadHistoryIndex() {
     const data = await response.json();
     const entries = Array.isArray(data.entries) ? data.entries : [];
     japanHistoryDates = entries
-      .filter(entry => entry && entry.has_japan_stocks && isDateKey(entry.date))
+      .filter(entry => entry && (entry.has_japan_stocks || entry.has_japan_market || entry.has_news || entry.has_market) && isDateKey(entry.date))
       .map(entry => entry.date)
       .sort();
   } catch (error) {
@@ -462,7 +462,7 @@ function renderQuality(quality) {
   }
   const alignment = quality.date_alignment || {};
   const normal = alignment.aligned !== false && quality.sector_available === quality.sector_total && quality.stock_available === quality.stock_total;
-  appendText(holder, 'summary-main', normal ? 'データ状態：正常 ✓' : `データ状態：要確認（${text(quality.overall, '一部未取得')}）`);
+  appendText(holder, 'summary-main', normal ? '日本株の取得状態：正常（総合分析の品質とは別）' : `日本株の取得状態：要確認（${text(quality.overall, '一部未取得')}）`);
   appendText(detail, 'market-note', `対象日：${text(alignment.expected_market_date)}｜業種 ${text(quality.sector_available)}/${text(quality.sector_total)}｜監視銘柄 ${text(quality.stock_available)}/${text(quality.stock_total)}`);
   [['未取得', quality.missing], ['注意事項', quality.cautions]].forEach(([label, values]) => {
     if (!Array.isArray(values) || !values.length) return;
@@ -649,7 +649,7 @@ function renderJapanMarket(data) {
     return Number.isFinite(value) ? `${value.toFixed(2)}倍` : '確認できず';
   }, 10);
   const review = data.scenario_review || {}; const reviewHolder = document.getElementById('scenario-review'); reviewHolder.replaceChildren();
-  appendText(reviewHolder, 'summary-main', `判定：${text(review.status, '更新待ち')}`); appendText(reviewHolder, 'market-note', text(review.note, '大引け後に更新します'));
+  appendText(reviewHolder, 'summary-main', `判定：${text(review.status, '更新待ち')}`); appendText(reviewHolder, 'market-note', `実績日：${text(data.market_date)}。直近保存レポートとの比較であり、前営業日のシナリオが保存されていない場合は「昨日」の検証ではありません。`); appendText(reviewHolder, 'market-note', text(review.note, '大引け後に更新します'));
   const reviewGrid = document.createElement('div'); reviewGrid.className = 'insight-grid';
   [['昨日考えていた条件', review.previous_condition || review.previous_view], ['実際に起きた条件', review.condition_result || 'この履歴では記録なし'], ['市場の反応', review.market_reaction || review.market_result], ['想定とのズレ', review.unexpected_gap || 'この履歴では記録なし'], ['なぜ違ったか', review.gap_reason || 'この履歴では記録なし'], ['今日への修正', review.revision], ['今日の確認点', Array.isArray(review.today_watch) ? review.today_watch.join(' / ') : review.today_watch]].forEach(([label, value]) => {
     const card = document.createElement('div'); card.className = 'insight-card'; appendText(card, 'insight-title', label); appendText(card, 'insight-reason', value); reviewGrid.appendChild(card);
@@ -752,5 +752,6 @@ Promise.all([loadHistoryIndex(), load()]);
 loadJapanGlossary().then(loadJapanMarket);
 </script>
 <script src="/assets/verified-news.js"></script>
+<script src="/assets/publication-health.js"></script>
 </body>
 </html>

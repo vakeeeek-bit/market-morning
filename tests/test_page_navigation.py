@@ -133,7 +133,7 @@ class PageNavigationTests(unittest.TestCase):
         world = self.read("index.html")
         self.assertIn('id="freshness-warning"', world)
         self.assertIn("function updateDataFreshness()", world)
-        self.assertIn("新しいレポートは品質確認中", world)
+        self.assertIn("最新のニュースと収集状況は上の独立欄で確認", world)
         self.assertIn("AIレポート：${reportLabel}（更新待ち）", world)
 
     def test_structured_policy_cards_are_not_rendered_as_raw_json(self):

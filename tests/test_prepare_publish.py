@@ -3,6 +3,7 @@ import shutil
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 
@@ -10,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from prepare_publish import prepare  # noqa: E402
+from scripts.validate_data import run as structural_run
 
 
 class PreparePublishTests(unittest.TestCase):
@@ -33,7 +35,9 @@ class PreparePublishTests(unittest.TestCase):
             json.dumps(report, ensure_ascii=False), encoding="utf-8"
         )
 
-        prepare(self.source, self.root)
+        # These two tests isolate atomic copying; publication admission is tested separately.
+        with patch('prepare_publish.run', side_effect=lambda root, **kwargs: structural_run(root)):
+            prepare(self.source, self.root)
 
         published = json.loads((self.root / "data" / "report.json").read_text(encoding="utf-8"))
         self.assertEqual(published["title"], "公開テスト")
@@ -46,10 +50,18 @@ class PreparePublishTests(unittest.TestCase):
             json.dumps(payload, ensure_ascii=False), encoding="utf-8"
         )
 
-        prepare(self.source, self.root)
+        with patch('prepare_publish.run', side_effect=lambda root, **kwargs: structural_run(root)):
+            prepare(self.source, self.root)
 
         published = json.loads((self.root / "data" / "japan-market.json").read_text(encoding="utf-8"))
         self.assertEqual("2026-09-28 07:25 JST", published["updated_at"])
+
+    def test_stale_review_bundle_is_not_publishable(self):
+        before = (self.root / 'data/report.json').read_bytes()
+        with self.assertRaisesRegex(ValueError, '公開ゲート|自動公開不可'):
+            prepare(self.source, self.root)
+        self.assertEqual(before, (self.root / 'data/report.json').read_bytes())
+
 
     def test_mismatched_bundle_does_not_modify_data(self):
         before = (self.root / "data" / "report.json").read_bytes()

@@ -36,6 +36,7 @@ jobs:
           DATE_JST=$(TZ=Asia/Tokyo date +%Y-%m-%d)
           mkdir -p "data/history/$DATE_JST"
           cp data/japan-market.json "data/history/$DATE_JST/japan-market.json"
+          python scripts/sync_publication.py
       - name: Commit calculated data
         # Feature branches run the same calculation/validation as a quality gate,
         # but only main may persist generated market data. Rebasing a feature
@@ -44,7 +45,7 @@ jobs:
         run: |
           git config user.name "Market Morning Bot"
           git config user.email "actions@github.com"
-          git add data/japan-market.json data/history/
+          git add data/japan-market.json data/history/ data/news-history.json
           if git diff --cached --quiet; then
             echo "No Japan market changes"
           else

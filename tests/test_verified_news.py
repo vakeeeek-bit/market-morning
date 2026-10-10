@@ -40,7 +40,7 @@ class VerifiedNewsTest(unittest.TestCase):
             self.assertIn('src="/assets/verified-news.js"', page)
 
     def retrospective(self):
-        self.news["report_date"] = "2026-10-08"
+        self.news["report_date"] = max(article["published_date"] for article in self.news["articles"])
         self.news["edition"] = "retrospective"
         self.news["collected_at"] = self.news["updated_at"]
         self.news["original_as_of_status"] = "not_reconstructed"

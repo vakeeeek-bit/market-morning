@@ -2452,7 +2452,8 @@ function updateDataFreshness() {
   const targetMarketDate = loadedTargetMarketDateKey
     ? new Date(`${loadedTargetMarketDateKey}T12:00:00`)
     : null;
-  const isClosedCashMarketReport = targetMarketDate && targetMarketDate < reportDate;
+  // A previous-session target is normal for morning reports, not a holiday.
+  const isClosedCashMarketReport = false;
 
   if (isClosedCashMarketReport && marketDate >= targetMarketDate) {
     const targetLabel = formatDateKey(loadedTargetMarketDateKey);
@@ -2467,7 +2468,7 @@ function updateDataFreshness() {
     warning.classList.remove('is-holiday');
     warning.textContent =
       `⚠ 市場データは${marketLabel}更新ですが、AIレポートは${reportLabel}版です。` +
-      `新しいレポートは品質確認中のため、以下の分析は${reportLabel}時点の内容です。`;
+      `以下の分析は${reportLabel}時点の内容です。最新のニュースと収集状況は上の独立欄で確認してください。`;
     setHistoryMode(
       `最新市場データ：${marketLabel}｜AIレポート：${reportLabel}（更新待ち）`
     );
@@ -5708,5 +5709,6 @@ setupVer3UX();
 </script>
 
 <script src="/assets/verified-news.js"></script>
+<script src="/assets/publication-health.js"></script>
 </body>
 </html>

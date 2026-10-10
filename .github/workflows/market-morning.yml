@@ -12,6 +12,9 @@ on:
     # GitHub Actions の cron は UTC
     # UTCの日〜木 = JSTの月〜金
     - cron: "20 21 * * 0-4"
+    # 遅延・一時的取得障害に備えた再収集（JST 7:20 / 8:20）
+    - cron: "20 22 * * 0-4"
+    - cron: "20 23 * * 0-4"
 
 permissions:
   contents: write
@@ -88,6 +91,9 @@ jobs:
           cp data/japan-market.json "data/history/$DATE_JST/japan-market.json"
           echo "Saved market history: $DATE_JST"
 
+      - name: Sync publication availability indexes
+        run: python scripts/sync_publication.py
+
       - name: Commit updated market data
         run: |
           git config user.name "Market Morning Bot"
@@ -96,6 +102,8 @@ jobs:
           git add data/japan-market.json
           git add data/status.json
           git add data/history/
+          git add data/news-history.json
+          git add data/collection-status.json
           if git diff --cached --quiet; then
             echo "No market data changes"
           else

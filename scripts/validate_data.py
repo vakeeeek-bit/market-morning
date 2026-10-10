@@ -497,13 +497,25 @@ def run(root: Path = ROOT, scope: str = "report") -> ValidationResult:
                 result.error(message)
         else:
             result.ok("Research & Analysis Quality Gate（最終9項目）")
+    if scope == "publish":
+        from datetime import datetime
+        from zoneinfo import ZoneInfo
+        today = datetime.now(ZoneInfo("Asia/Tokyo")).date().isoformat()
+        for name in ("report", "japan-stocks", "research-evidence"):
+            if data.get(name, {}).get("report_date") != today:
+                result.error(f"{name}: 本日版ではありません（公開ゲート）")
+        for name in ("report", "japan-stocks"):
+            if data.get(name, {}).get("data_quality", {}).get("overall") != "PASS":
+                result.error(f"{name}: 総合品質PASSでないため自動公開不可")
+        if not str(data.get("status", {}).get("updated_at", "")).startswith(today) or data.get("status", {}).get("status") != "success" or data.get("status", {}).get("component") != "market_data":
+            result.error("status: 当日の市場収集成功が必要")
     return result
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=ROOT)
-    parser.add_argument("--scope", choices=("report", "market", "news"), default="report")
+    parser.add_argument("--scope", choices=("report", "market", "news", "publish"), default="report")
     args = parser.parse_args()
     result = run(args.root.resolve(), args.scope)
     for message in result.checks:

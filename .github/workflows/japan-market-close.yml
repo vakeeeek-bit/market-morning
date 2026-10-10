@@ -25,7 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.ref == 'refs/heads/main' && 'main' || github.sha }}
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
@@ -48,7 +48,7 @@ jobs:
         run: |
           git config user.name "Market Morning Bot"
           git config user.email "actions@github.com"
-          git add data/japan-market.json data/history/ data/news-history.json
+          git add data/japan-market.json data/history/ data/news-history.json data/collection-status.json
           if git diff --cached --quiet; then
             echo "No Japan market changes"
           else

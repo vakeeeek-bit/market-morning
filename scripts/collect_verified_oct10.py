@@ -1,8 +1,10 @@
 """Materialize primary-source facts manually verified on 2026-10-10."""
 import json
 from pathlib import Path
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
-NOW = '2026-10-10T11:46:24+09:00'
+NOW = datetime.now(ZoneInfo('Asia/Tokyo')).isoformat(timespec='seconds')
 ROWS = [
  ('cme-copper-stock-20261009', 'CME/COMEX：銅在庫の日次公式報告を確認', '2026-10-09', 'CME/COMEX', 'https://www.cmegroup.com/delivery_reports/Copper_Stocks.xls', '10月9日公表、活動日10月8日の銅在庫は合計786,330ショートトン。登録在庫475,868、適格在庫310,462。前回合計784,415に対する増加には純入庫1,592と調整323が含まれる。', 'この日次報告では在庫減少を伴う需給逼迫とは判断しない。', '単位はショートトン。LME・SHFEの在庫と単純合算しない。他取引所の対象日在庫は未取得。'),
  ('fed-scf-20261009', 'FRB：2025年家計調査を公表', '2026-10-09', 'FRB', 'https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm', '2025年家計調査では2022年比の実質所得中央値が7%増、実質純資産中央値が2%増。所得に対する債務返済が40%を超える世帯割合は6.5%から8.6%へ上昇した。', '米消費の背景資料。所得改善と返済負担増を併せて確認する。', '2025年の調査であり、10月の景気指標や新たな金融政策決定ではない。'),

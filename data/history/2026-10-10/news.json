@@ -1,10 +1,10 @@
 {
   "report_date": "2026-10-10",
   "target_market_date": "2026-10-09",
-  "updated_at": "2026-10-10T12:40:47+09:00",
+  "updated_at": "2026-10-10T21:09:28+09:00",
   "publication_mode": "verified_news",
   "coverage_status": "partial",
-  "coverage_note": "一次資料の確認済み9件を掲載。予定表の確認日と公表日を区別。全ニュースの網羅・市場反応・総合レポートPASSを意味しません。",
+  "coverage_note": "一次資料を確認した13件。部分収集であり、総合レポートPASSや全ニュースの網羅を意味しません。",
   "articles": [
     {
       "id": "shfe-copper-weekly-20261009",
@@ -345,6 +345,158 @@
         "limitations": {
           "status": "PASS",
           "evidence": "理事個人の見解でありFOMC決定ではない。講演中の75bpの例は政策コミットメントではない。"
+        }
+      }
+    },
+    {
+      "id": "household-20261009",
+      "title": "日本家計：8月の実質消費は前年比減、前月比は小幅増",
+      "published_date": "2026-10-09",
+      "publisher": "総務省統計局",
+      "source_url": "https://www.stat.go.jp/data/kakei/sokuhou/tsuki/index.html",
+      "verification_url": "https://www.stat.go.jp/data/kakei/sokuhou/tsuki/index.html",
+      "fact": "8月の二人以上世帯の消費支出は310,975円。実質前年比3.1%減、名目前年比1.0%減、季節調整後の実質前月比0.1%増。",
+      "analysis": "内需は前年比の弱さと前月比の改善を分けて評価する。",
+      "limitations": "公表は10月9日、対象は8月。株価の単独原因とは断定しない。",
+      "verified_at": "2026-10-10T21:09:28+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文・PDFを再取得し本文を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "8月の二人以上世帯の消費支出は310,975円。実質前年比3.1%減、名目前年比1.0%減、季節調整後の実質前月比0.1%増。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "10月9日公表。10月10日夜に確認。対象年度と公表日を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と解釈は別欄、株価反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "公表は10月9日、対象は8月。株価の単独原因とは断定しない。"
+        }
+      }
+    },
+    {
+      "id": "yaskawa-20261009",
+      "title": "安川電機：売上予想引き上げ、営業利益予想引き下げ",
+      "published_date": "2026-10-09",
+      "publisher": "安川電機",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261009548685.pdf",
+      "verification_url": "https://www.release.tdnet.info/inbs/140120261009548685.pdf",
+      "fact": "2027年2月期中間の売上収益285,598百万円、前年比9.8%増。営業利益22,058百万円、5.5%減。通期売上予想580,000から600,000百万円、営業利益予想60,000から57,500百万円へ修正。",
+      "analysis": "売上拡大だけで好材料とせず利益率を確認する。",
+      "limitations": "コード6506。中間実績と通期予想を区別。発表後の国内現物反応は未確認。",
+      "verified_at": "2026-10-10T21:09:28+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文・PDFを再取得し本文を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "2027年2月期中間の売上収益285,598百万円、前年比9.8%増。営業利益22,058百万円、5.5%減。通期売上予想580,000から600,000百万円、営業利益予想60,000から57,500百万円へ修正。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "10月9日公表。10月10日夜に確認。対象年度と公表日を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と解釈は別欄、株価反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "コード6506。中間実績と通期予想を区別。発表後の国内現物反応は未確認。"
+        }
+      }
+    },
+    {
+      "id": "jins-20261009",
+      "title": "ジンズ：営業利益は予想未達、年間配当予想を減額",
+      "published_date": "2026-10-09",
+      "publisher": "ジンズホールディングス",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261009548583.pdf",
+      "verification_url": "https://www.release.tdnet.info/inbs/140120261009548583.pdf",
+      "fact": "2026年8月期営業利益実績11,454百万円は従来予想12,772百万円を10.3%下回った。年間配当予想115円から104円へ修正。",
+      "analysis": "売上増加と利益・配当の弱さを区別し、収益性を監視する。",
+      "limitations": "コード3046。終了年度の実績と予想の差であり、将来年度の一律下方修正ではない。発表後の株価反応は未確認。",
+      "verified_at": "2026-10-10T21:09:28+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文・PDFを再取得し本文を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "2026年8月期営業利益実績11,454百万円は従来予想12,772百万円を10.3%下回った。年間配当予想115円から104円へ修正。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "10月9日公表。10月10日夜に確認。対象年度と公表日を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と解釈は別欄、株価反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "コード3046。終了年度の実績と予想の差であり、将来年度の一律下方修正ではない。発表後の株価反応は未確認。"
+        }
+      }
+    },
+    {
+      "id": "hoya-20261009",
+      "title": "HOYA：MID Labs全株式の譲渡契約、業績影響は軽微",
+      "published_date": "2026-10-09",
+      "publisher": "HOYA",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261009548466.pdf",
+      "verification_url": "https://www.release.tdnet.info/inbs/140120261009548466.pdf",
+      "fact": "10月9日にMID Labs全株式をBausch + Lombへ譲渡する最終契約を締結。譲渡価額は非開示、完了は11月2日予定、業績影響は軽微としている。",
+      "analysis": "事業再編の材料。大幅な利益上積みは想定しない。",
+      "limitations": "コード7741。契約締結と譲渡完了を区別。非開示の対価を推定しない。",
+      "verified_at": "2026-10-10T21:09:28+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文・PDFを再取得し本文を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月9日にMID Labs全株式をBausch + Lombへ譲渡する最終契約を締結。譲渡価額は非開示、完了は11月2日予定、業績影響は軽微としている。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "10月9日公表。10月10日夜に確認。対象年度と公表日を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と解釈は別欄、株価反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "コード7741。契約締結と譲渡完了を区別。非開示の対価を推定しない。"
         }
       }
     }

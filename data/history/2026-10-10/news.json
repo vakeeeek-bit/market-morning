@@ -1,11 +1,125 @@
 {
   "report_date": "2026-10-10",
   "target_market_date": "2026-10-09",
-  "updated_at": "2026-10-10T11:56:31+09:00",
+  "updated_at": "2026-10-10T12:40:47+09:00",
   "publication_mode": "verified_news",
   "coverage_status": "partial",
-  "coverage_note": "一次資料の確認済み6件を掲載。全ニュースの網羅・市場反応・総合レポートPASSを意味しません。",
+  "coverage_note": "一次資料の確認済み9件を掲載。予定表の確認日と公表日を区別。全ニュースの網羅・市場反応・総合レポートPASSを意味しません。",
   "articles": [
+    {
+      "id": "shfe-copper-weekly-20261009",
+      "title": "SHFE：銅週次在庫58,744トン、ワラント在庫は減少",
+      "published_date": "2026-10-09",
+      "publisher": "Shanghai Futures Exchange",
+      "source_url": "https://www.shfe.cn/data/tradedata/future/stockdata/weeklystock_20261009/EN/all.html",
+      "verification_url": "https://www.shfe.cn/data/tradedata/future/stockdata/weeklystock_20261009/EN/all.html",
+      "fact": "10月9日付の週次報告では銅のDelivery-able合計は58,744トン、前週38,744から20,000増。On Warrant合計は8,285トン、前週10,011から1,726減。保税分18トンを含む。",
+      "analysis": "総在庫増加とワラント減少は別の動き。ワラント減少だけで総在庫減少を伴う需給逼迫とは判断しない。",
+      "limitations": "取引所はSHFE、単位Tonne、頻度週次、報告日10月9日。COMEXの日次Short Tonsと合算しない。LME対象日の在庫は未取得。",
+      "verified_at": "2026-10-10T12:40:47+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文を取得して確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月9日付の週次報告では銅のDelivery-able合計は58,744トン、前週38,744から20,000増。On Warrant合計は8,285トン、前週10,011から1,726減。保税分18トンを含む。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-09。確認日は2026-10-10。対象期間と公表日を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "公表事実と解釈を別欄に記載し、市場反応を断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "取引所はSHFE、単位Tonne、頻度週次、報告日10月9日。COMEXの日次Short Tonsと合算しない。LME対象日の在庫は未取得。"
+        }
+      }
+    },
+    {
+      "id": "michigan-preliminary-20261009",
+      "title": "米ミシガン大学：10月速報、消費者心理低下と期待インフレ上昇",
+      "published_date": "2026-10-09",
+      "publisher": "University of Michigan",
+      "source_url": "https://www.sca.isr.umich.edu/",
+      "verification_url": "https://www.sca.isr.umich.edu/",
+      "fact": "10月速報の消費者態度指数は46.3、9月48.1。現況指数44.7、期待指数47.3。1年先期待インフレは4.6%から4.7%、長期期待は3.4%から3.5%へ上昇。10月確報は10月23日10時ETの予定。",
+      "analysis": "米消費の弱さと物価懸念が併存。輸出・耐久財と金利に敏感な株式への波及は条件付きで評価する。",
+      "limitations": "速報と確報を区別。市場予想との差は未確認。株価変動の単独原因とは断定しない。",
+      "verified_at": "2026-10-10T12:40:47+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文を取得して確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月速報の消費者態度指数は46.3、9月48.1。現況指数44.7、期待指数47.3。1年先期待インフレは4.6%から4.7%、長期期待は3.4%から3.5%へ上昇。10月確報は10月23日10時ETの予定。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-09。確認日は2026-10-10。対象期間と公表日を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "公表事実と解釈を別欄に記載し、市場反応を断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "速報と確報を区別。市場予想との差は未確認。株価変動の単独原因とは断定しない。"
+        }
+      }
+    },
+    {
+      "id": "bls-cpi-calendar-20261014",
+      "title": "米9月CPIは10月14日公表予定、BLS公式日程を確認",
+      "published_date": "2026-02-18",
+      "publisher": "BLS",
+      "source_url": "https://www.bls.gov/schedule/2026/10_sched.htm",
+      "verification_url": "https://www.bls.gov/schedule/2026/10_sched.htm",
+      "fact": "BLS公式予定表では9月CPIと実質賃金は10月14日08:30米東部時間、PPIは15日、輸出入物価は16日。同表の10月5〜9日に主要発表の記載はない。",
+      "analysis": "次のインフレ指標によって金利・高PER株の見方を更新する。",
+      "limitations": "予定表の最終更新日は2月18日。10月10日は確認日であり新規発表日ではない。CPI実績値・市場予想は未公表または未確認。",
+      "verified_at": "2026-10-10T12:40:47+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文を取得して確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "BLS公式予定表では9月CPIと実質賃金は10月14日08:30米東部時間、PPIは15日、輸出入物価は16日。同表の10月5〜9日に主要発表の記載はない。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-02-18。確認日は2026-10-10。対象期間と公表日を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "公表事実と解釈を別欄に記載し、市場反応を断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "予定表の最終更新日は2月18日。10月10日は確認日であり新規発表日ではない。CPI実績値・市場予想は未公表または未確認。"
+        }
+      }
+    },
     {
       "id": "cme-copper-stock-20261009",
       "title": "CME/COMEX：銅在庫の日次公式報告を確認",
@@ -16,7 +130,7 @@
       "fact": "10月9日公表、活動日10月8日の銅在庫は合計786,330ショートトン。登録在庫475,868、適格在庫310,462。前回合計784,415に対する増加には純入庫1,592と調整323が含まれる。",
       "analysis": "この日次報告では在庫減少を伴う需給逼迫とは判断しない。",
       "limitations": "単位はショートトン。LME・SHFEの在庫と単純合算しない。他取引所の対象日在庫は未取得。",
-      "verified_at": "2026-10-10T11:56:31+09:00",
+      "verified_at": "2026-10-10T12:40:47+09:00",
       "source_type": "primary",
       "verification_status": "PASS",
       "market_reaction_status": "unverified",
@@ -54,7 +168,7 @@
       "fact": "2025年家計調査では2022年比の実質所得中央値が7%増、実質純資産中央値が2%増。所得に対する債務返済が40%を超える世帯割合は6.5%から8.6%へ上昇した。",
       "analysis": "米消費の背景資料。所得改善と返済負担増を併せて確認する。",
       "limitations": "2025年の調査であり、10月の景気指標や新たな金融政策決定ではない。",
-      "verified_at": "2026-10-10T11:56:31+09:00",
+      "verified_at": "2026-10-10T12:40:47+09:00",
       "source_type": "primary",
       "verification_status": "PASS",
       "market_reaction_status": "unverified",
@@ -92,7 +206,7 @@
       "fact": "8月に実施した調査は7月末を基準に381先から回答。資金調達残高は前年から減少、運用残高は増加。市場機能度を高いとする回答が低いとする回答を上回り、その差も改善した。",
       "analysis": "銀行の資金繰りと短期市場機能を確認する背景資料。",
       "limitations": "7月末の調査であり、10月9日の市場残高や新たな政策変更ではない。",
-      "verified_at": "2026-10-10T11:56:31+09:00",
+      "verified_at": "2026-10-10T12:40:47+09:00",
       "source_type": "primary",
       "verification_status": "PASS",
       "market_reaction_status": "unverified",
@@ -130,7 +244,7 @@
       "fact": "OFACはICC関連の団体をSDNに追加し、一定の取引、通信・企業用ソフトウェア、年金、拘束者に関する一般許可13〜16を公表した。",
       "analysis": "制裁対象と許可対象を区別して関連取引の条件を確認する。",
       "limitations": "市場反応は未確認。個別許可の適用条件を一律に全取引へ拡張しない。",
-      "verified_at": "2026-10-10T11:56:31+09:00",
+      "verified_at": "2026-10-10T12:40:47+09:00",
       "source_type": "primary",
       "verification_status": "PASS",
       "market_reaction_status": "unverified",
@@ -168,7 +282,7 @@
       "fact": "Pegasus Worldwide Logisticsは制裁および報告手続きの計10件の見かけ上の違反について175,015ドルで和解した。対象輸入は2023年9月〜2024年2月に行われた。",
       "analysis": "物流・商社には制裁対象企業の確認と当局への報告手続きが重要。",
       "limitations": "過去の違反に対する措置であり、新たな包括関税ではない。市場反応は未確認。",
-      "verified_at": "2026-10-10T11:56:31+09:00",
+      "verified_at": "2026-10-10T12:40:47+09:00",
       "source_type": "primary",
       "verification_status": "PASS",
       "market_reaction_status": "unverified",
@@ -206,7 +320,7 @@
       "fact": "ウォラー理事は10月8日の講演で、労働市場は安定する一方インフレは高く、近い将来はインフレに重点を置くとの見解を示した。政策の速度は今後のデータに応じて調整すると説明した。",
       "analysis": "金利に敏感なグロース株の判断では追加データと政策見通しを確認する。",
       "limitations": "理事個人の見解でありFOMC決定ではない。講演中の75bpの例は政策コミットメントではない。",
-      "verified_at": "2026-10-10T11:56:31+09:00",
+      "verified_at": "2026-10-10T12:40:47+09:00",
       "source_type": "primary",
       "verification_status": "PASS",
       "market_reaction_status": "unverified",

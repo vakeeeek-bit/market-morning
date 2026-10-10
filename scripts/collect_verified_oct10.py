@@ -6,6 +6,9 @@ from zoneinfo import ZoneInfo
 
 NOW = datetime.now(ZoneInfo('Asia/Tokyo')).isoformat(timespec='seconds')
 ROWS = [
+ ('shfe-copper-weekly-20261009', 'SHFE：銅週次在庫58,744トン、ワラント在庫は減少', '2026-10-09', 'Shanghai Futures Exchange', 'https://www.shfe.cn/data/tradedata/future/stockdata/weeklystock_20261009/EN/all.html', '10月9日付の週次報告では銅のDelivery-able合計は58,744トン、前週38,744から20,000増。On Warrant合計は8,285トン、前週10,011から1,726減。保税分18トンを含む。', '総在庫増加とワラント減少は別の動き。ワラント減少だけで総在庫減少を伴う需給逼迫とは判断しない。', '取引所はSHFE、単位Tonne、頻度週次、報告日10月9日。COMEXの日次Short Tonsと合算しない。LME対象日の在庫は未取得。'),
+ ('michigan-preliminary-20261009', '米ミシガン大学：10月速報、消費者心理低下と期待インフレ上昇', '2026-10-09', 'University of Michigan', 'https://www.sca.isr.umich.edu/', '10月速報の消費者態度指数は46.3、9月48.1。現況指数44.7、期待指数47.3。1年先期待インフレは4.6%から4.7%、長期期待は3.4%から3.5%へ上昇。10月確報は10月23日10時ETの予定。', '米消費の弱さと物価懸念が併存。輸出・耐久財と金利に敏感な株式への波及は条件付きで評価する。', '速報と確報を区別。市場予想との差は未確認。株価変動の単独原因とは断定しない。'),
+ ('bls-cpi-calendar-20261014', '米9月CPIは10月14日公表予定、BLS公式日程を確認', '2026-02-18', 'BLS', 'https://www.bls.gov/schedule/2026/10_sched.htm', 'BLS公式予定表では9月CPIと実質賃金は10月14日08:30米東部時間、PPIは15日、輸出入物価は16日。同表の10月5〜9日に主要発表の記載はない。', '次のインフレ指標によって金利・高PER株の見方を更新する。', '予定表の最終更新日は2月18日。10月10日は確認日であり新規発表日ではない。CPI実績値・市場予想は未公表または未確認。'),
  ('cme-copper-stock-20261009', 'CME/COMEX：銅在庫の日次公式報告を確認', '2026-10-09', 'CME/COMEX', 'https://www.cmegroup.com/delivery_reports/Copper_Stocks.xls', '10月9日公表、活動日10月8日の銅在庫は合計786,330ショートトン。登録在庫475,868、適格在庫310,462。前回合計784,415に対する増加には純入庫1,592と調整323が含まれる。', 'この日次報告では在庫減少を伴う需給逼迫とは判断しない。', '単位はショートトン。LME・SHFEの在庫と単純合算しない。他取引所の対象日在庫は未取得。'),
  ('fed-scf-20261009', 'FRB：2025年家計調査を公表', '2026-10-09', 'FRB', 'https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm', '2025年家計調査では2022年比の実質所得中央値が7%増、実質純資産中央値が2%増。所得に対する債務返済が40%を超える世帯割合は6.5%から8.6%へ上昇した。', '米消費の背景資料。所得改善と返済負担増を併せて確認する。', '2025年の調査であり、10月の景気指標や新たな金融政策決定ではない。'),
  ('boj-money-market-20261009', '日銀：短期金融市場調査、機能度の評価が改善', '2026-10-09', '日本銀行', 'https://www.boj.or.jp/paym/market/market2610.htm', '8月に実施した調査は7月末を基準に381先から回答。資金調達残高は前年から減少、運用残高は増加。市場機能度を高いとする回答が低いとする回答を上回り、その差も改善した。', '銀行の資金繰りと短期市場機能を確認する背景資料。', '7月末の調査であり、10月9日の市場残高や新たな政策変更ではない。'),
@@ -19,7 +22,7 @@ def build():
     for ident, title, day, publisher, url, fact, analysis, limitations in ROWS:
         evidence = {'source_read': '公式本文を取得して確認。', 'facts_verified': fact, 'chronology': f'公表日{day}。確認日は2026-10-10。対象期間と公表日を区別。', 'fact_analysis_separation': '公表事実と解釈を別欄に記載し、市場反応を断定しない。', 'limitations': limitations}
         articles.append(dict(id=ident, title=title, published_date=day, publisher=publisher, source_url=url, verification_url=url, fact=fact, analysis=analysis, limitations=limitations, verified_at=NOW, source_type='primary', verification_status='PASS', market_reaction_status='unverified', market_reaction='未確認', verification={key: {'status': 'PASS', 'evidence': value} for key, value in evidence.items()}))
-    return dict(report_date='2026-10-10', target_market_date='2026-10-09', updated_at=NOW, publication_mode='verified_news', coverage_status='partial', coverage_note='一次資料の確認済み6件を掲載。全ニュースの網羅・市場反応・総合レポートPASSを意味しません。', articles=articles)
+    return dict(report_date='2026-10-10', target_market_date='2026-10-09', updated_at=NOW, publication_mode='verified_news', coverage_status='partial', coverage_note=f'一次資料の確認済み{len(articles)}件を掲載。予定表の確認日と公表日を区別。全ニュースの網羅・市場反応・総合レポートPASSを意味しません。', articles=articles)
 
 if __name__ == '__main__':
     path = Path(__file__).resolve().parents[1] / 'data/news.json'
@@ -30,7 +33,7 @@ if __name__ == '__main__':
     previous = json.loads(context_path.read_text())
     context['period_start'] = previous['period_start']
     context['timeline'] = sorted({(x['date'], x['title']): x for x in previous['timeline'] + context['timeline']}.values(), key=lambda x: x['date'])
-    context['timeline'] = context['timeline'][:1] + [x for x in context['timeline'] if x['date'] >= '2026-10-08'][:5]
+    context['timeline'] = [x for x in context['timeline'] if context['period_start'] <= x['date'] <= context['period_end']][-6:]
     context['sources'] = list({x['url']: x for x in previous['sources'] + context['sources']}.values())
     context['daily_life_impacts'] = [dict(topic='家計の返済負担', mechanism='米家計調査で返済負担の高い世帯割合が増加', impact='日本の家計に直接適用できる数値ではありません。輸出先の需要背景として確認する。', evidence_type='可能性')]
     context['scenario_change_conditions'] = context.pop('watch_conditions')

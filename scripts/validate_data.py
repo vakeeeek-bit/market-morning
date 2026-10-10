@@ -498,6 +498,12 @@ def run(root: Path = ROOT, scope: str = "report") -> ValidationResult:
         else:
             result.ok("Research & Analysis Quality Gate（最終9項目）")
     if scope == "publish":
+        try:
+            from publication_observations import validate_observations
+        except ModuleNotFoundError:
+            from scripts.publication_observations import validate_observations
+        for message in validate_observations(data.get('market', {})):
+            result.error(message)
         from datetime import datetime
         from zoneinfo import ZoneInfo
         today = datetime.now(ZoneInfo("Asia/Tokyo")).date().isoformat()

@@ -1,0 +1,71 @@
+{
+  "checked_at": "2026-10-11T07:27:33+09:00",
+  "report_publication_status": "未公開：必須データ・当日調査の確認不足",
+  "blockers": [
+    {
+      "item": "商品先物4系列の定義",
+      "next_action": "Gold・Copper・WTI・Brentの保存基準日と対応する取引所・限月・値種別・時刻を公式資料または取得元で確認。現在の契約情報を過去値に流用しない。"
+    },
+    {
+      "item": "LME銅在庫",
+      "next_action": "公式Stock breakdown reportの対象日XLSを取得。公開ページはログイン／登録が必要で、この環境では未取得。"
+    },
+    {
+      "item": "当日収集記録と調査証跡",
+      "next_action": "新しいmarket_data成功と当日調査の全ゲートを実行。前回のPASSを新しい日付へコピーしない。"
+    }
+  ],
+  "components": {
+    "report": "2026-10-05",
+    "japan_report": "2026-10-05",
+    "world_market": "2026-10-10",
+    "japan_market": "2026-10-09",
+    "news": "2026-10-11"
+  },
+  "fixes": [
+    "取得エラーを部品ごとに隔離",
+    "日付切替後の注記更新",
+    "収集記録の実際の日付表示",
+    "未定義先物を価格・ランキング・チャートから除外",
+    "必須観測・先物定義を公開ゲートで検証",
+    "SOXカードと基準日表示を追加"
+  ],
+  "history": {
+    "2026-10-06": {
+      "market": true,
+      "news": true,
+      "report": false,
+      "japan_report": false,
+      "research": false
+    },
+    "2026-10-07": {
+      "market": true,
+      "news": true,
+      "report": false,
+      "japan_report": false,
+      "research": false
+    },
+    "2026-10-08": {
+      "market": true,
+      "news": true,
+      "report": false,
+      "japan_report": false,
+      "research": false
+    },
+    "2026-10-09": {
+      "market": true,
+      "news": true,
+      "report": false,
+      "japan_report": false,
+      "research": false
+    },
+    "2026-10-10": {
+      "market": true,
+      "news": true,
+      "report": false,
+      "japan_report": false,
+      "research": false
+    }
+  },
+  "coverage": "市場・ニュース・履歴・研究証跡・収集・公開処理・世界市場／日本株画面を確認。個別ニュースは部分調査。"
+}

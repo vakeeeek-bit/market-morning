@@ -1416,6 +1416,11 @@ td.nowrap {
     </div>
 
     <div class="market-card">
+      <div class="market-name">SOX</div>
+      <div class="market-price">確認中</div>
+      <div class="market-change">確認中</div>
+    </div>
+    <div class="market-card">
       <div class="market-name">日経225</div>
       <div class="market-price">確認中</div>
       <div class="market-change">確認中</div>
@@ -1999,6 +2004,7 @@ td.nowrap {
 </div>
 
 
+<script src="/assets/market-observation.js"></script>
 <script>
 
 /* =====================================================
@@ -2573,6 +2579,7 @@ async function loadSelectedDay() {
   ]);
 
   updateHistoryButtons();
+  window.dispatchEvent(new Event('publication-data-loaded'));
 }
 
 async function loadHistoryIndex() {
@@ -2733,7 +2740,7 @@ async function loadMarketHistory() {
       const response = await fetch(`/data/history/${date}/market.json?ts=${Date.now()}`);
       if (!response.ok) return null;
       const data = await response.json();
-      return { date, markets: data.markets || {} };
+      return { date, markets: MarketObservation.displaySnapshot(data).markets };
     } catch (error) {
       return null;
     }
@@ -2744,10 +2751,13 @@ async function loadMarketHistory() {
 }
 
 function chartPointRows(key) {
-  return marketHistoryCache.map(row => ({
-    date: row.date,
-    value: numericMarketPrice(row.markets?.[key]?.price)
-  })).filter(row => row.value !== null);
+  const points = new Map();
+  for (const row of marketHistoryCache) {
+    const market = row.markets?.[key];
+    const value = numericMarketPrice(market?.price);
+    if (value !== null && market?.market_date) points.set(market.market_date, {date: market.market_date, value});
+  }
+  return [...points.values()].sort((a, b) => a.date.localeCompare(b.date));
 }
 
 function renderAssetChart(key) {
@@ -2767,7 +2777,9 @@ function renderAssetChart(key) {
   if (points.length < 2) {
     range.textContent = 'データ不足';
     body.className = 'asset-chart-empty';
-    body.textContent = '履歴が2日分以上保存されるとチャートを表示します';
+    body.textContent = ['copper', 'wti', 'gold'].includes(activeChartKey)
+      ? '限月・値種別・基準時刻の確認済み履歴が不足しています。推定値でチャートを作成しません。'
+      : '履歴が2日分以上保存されるとチャートを表示します';
     return;
   }
 
@@ -2832,8 +2844,9 @@ async function loadMarketData() {
       );
     }
 
-    const data =
-      await response.json();
+    const data = MarketObservation.displaySnapshot(
+      await response.json()
+    );
 
     const markets =
       data.markets || {};
@@ -2854,6 +2867,7 @@ async function loadMarketData() {
 
       'Russell2000':
         markets.russell2000,
+      'SOX': markets.sox,
 
       '日経225':
         markets.nikkei225,
@@ -2876,13 +2890,13 @@ async function loadMarketData() {
       'VIX':
         markets.vix,
 
-      'Gold':
+      '金':
         markets.gold,
 
       'Silver':
         markets.silver,
 
-      'Copper':
+      '銅先物（COMEX）':
         markets.copper,
 
       'WTI':
@@ -2933,7 +2947,7 @@ async function loadMarketData() {
     document.getElementById(
       'market-status'
     ).textContent =
-      '市場データ取得成功';
+      '日足データ読込済み（基準日・先物定義の確認とは別）';
 
 
   } catch (error) {
@@ -3042,7 +3056,7 @@ function updateWhatChanged(data) {
   if (qualityBadge) {
     qualityBadge.textContent =
       quality.total !== undefined
-        ? `データ取得：${quality.success_count}/${quality.total}（${quality.success_rate_pct}%）`
+        ? `日足数値の取得：${quality.success_count}/${quality.total}（${quality.success_rate_pct}%）。公開条件の確認とは別です`
         : 'データ取得状況：確認できず';
   }
 
@@ -3104,6 +3118,11 @@ function updateMarketCard(
         '.market-change'
       );
 
+
+    let basis = card.querySelector('.market-basis');
+    if (!basis) { basis = document.createElement('div'); basis.className='market-basis'; card.appendChild(basis); }
+    basis.textContent = market.display_note || `基準日 ${market.market_date || '未確認'}（現在値ではありません）`;
+    basis.style.fontSize='12px';
 
     if (priceElement) {
 

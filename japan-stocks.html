@@ -714,6 +714,8 @@ async function load() {
   } catch (error) {
     document.getElementById('report-date').textContent = '日本株詳細データを読み込めませんでした';
     document.getElementById('story-sections').textContent = `読み込みエラー：${error.message}`;
+  } finally {
+    window.dispatchEvent(new Event('publication-data-loaded'));
   }
 }
 

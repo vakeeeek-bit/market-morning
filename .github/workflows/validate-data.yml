@@ -6,6 +6,8 @@ on:
     paths:
       - "index.html"
       - "japan-stocks.html"
+      - "assets/publication-health.js"
+      - "assets/market-observation.js"
       - "data/*.json"
       - "schemas/*.json"
       - "scripts/*.py"
@@ -20,6 +22,8 @@ on:
     paths:
       - "index.html"
       - "japan-stocks.html"
+      - "assets/publication-health.js"
+      - "assets/market-observation.js"
       - "data/*.json"
       - "schemas/*.json"
       - "scripts/*.py"
@@ -61,3 +65,6 @@ jobs:
 
       - name: Run validation tests
         run: python -m unittest discover -s tests -v
+
+      - name: Test price definitions and update-state browser behavior
+        run: node --test tests/observation-ui.test.js

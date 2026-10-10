@@ -2,9 +2,14 @@
 (() => {
   const el = (tag, text) => { const n = document.createElement(tag); n.textContent = text; return n; };
   const read = async path => {
-    const response = await fetch(path, {cache: 'no-store'});
-    if (!response.ok) return null;
-    return response.json();
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 12000);
+    try {
+      const response = await fetch(path, {cache: 'no-store', signal: controller.signal});
+      if (!response.ok) return null;
+      return await response.json();
+    } catch { return null; }
+    finally { clearTimeout(timer); }
   };
   let sequence = 0;
   let lastDate = new URLSearchParams(location.search).get('date');
@@ -15,10 +20,11 @@
     const request = ++sequence;
     const date = new URLSearchParams(location.search).get('date');
     const prefix = /^20\d{2}-\d{2}-\d{2}$/.test(date || '') ? `/data/history/${date}` : '/data';
-    const [report, news, market, japan, attempt] = await Promise.all([
+    const [report, news, market, japan, attempt, audit] = await Promise.all([
       read(`${prefix}/report.json`), read(`${prefix}/news.json`), read(`${prefix}/market.json`),
-      read(`${prefix}/japan-market.json`), date ? Promise.resolve(null) : read('/data/collection-status.json')
-    ]).catch(() => [null, null, null, null, null]);
+      read(`${prefix}/japan-market.json`), date ? Promise.resolve(null) : read('/data/collection-status.json'),
+      date ? Promise.resolve(null) : read('/data/site-audit.json')
+    ]);
     if (request !== sequence) return;
     host.replaceChildren(el('h2', date ? `${date} の保存・確認状況` : '最新の収集・更新状況'));
     const dates = [...new Set(Object.values(market?.markets || {}).map(r => r.market_date).filter(Boolean))].sort();
@@ -31,8 +37,13 @@
     for (const [name, value] of summary) host.append(el('p', `${name}：${value}`));
     host.append(el('p', 'ニュース・市場実績・総合分析は別々に更新されます。総合レポートが古い場合、以下の見通しは最新日の判断ではありません。'));
     if (attempt) {
-      host.append(el('p', `今回の収集：${attempt.checked_at}｜市場 ${attempt.market_attempt_status}｜${attempt.market_attempt_note}`));
+      const attemptDay = String(attempt.checked_at || '').slice(0, 10);
+      host.append(el('p', `収集記録（${attemptDay}時点）：${attempt.market_attempt_status}｜${attempt.market_attempt_note}`));
       host.append(el('p', `日本株の取引日程：${attempt.japan_calendar_note}`));
+    }
+    if (audit) {
+      host.append(el('p', `全体点検：${audit.checked_at}｜AIレポートの更新は ${audit.report_publication_status}`));
+      for (const row of audit.blockers || []) host.append(el('p', `未解決：${row.title}｜${row.next_action}`));
     }
     if (report) {
       const day = report.report_date;
@@ -48,8 +59,9 @@
       }
       for (const id of ['executive-section', 'main-story-section', 'market-news-section', 'japan-equities-section', 'policy-wrapper-section', 'internal-strength-section', 'cross-asset-section', 'market-overview-section', 'asset-analysis-section', 'commodities-section', 'copper-section', 'crypto-section', 'market-environment-section', 'unusual-moves-section', 'events-section', 'watch-cards-section', 'change-conditions-section', 'scenarios-section', 'trade-watch-section', 'strength-section', 'quality-section', 'final-section', 'story-sections', 'rating-changes', 'scenario-review']) {
         const target = document.getElementById(id);
-        if (target && !target.querySelector('.publication-asof')) {
-          const note = el('p', `参照する総合分析：${day}版。前営業日・本日版とは限りません。`);
+        if (target) {
+          const note = target.querySelector('.publication-asof') || el('p', '');
+          note.textContent = `参照する総合分析：${day}版。前営業日・本日版とは限りません。`;
           note.className = 'publication-asof'; target.prepend(note);
         }
       }
@@ -63,5 +75,6 @@
     if (date !== lastDate) { lastDate = date; render(); }
   }).observe(mode, {childList: true});
   window.addEventListener('popstate', render);
+  window.addEventListener('publication-data-loaded', render);
   render();
 })();

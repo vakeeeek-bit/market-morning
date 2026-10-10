@@ -46,7 +46,7 @@
       for (const [id, label] of Object.entries(headings)) {
         const target = document.getElementById(id); if (target) target.textContent = label;
       }
-      for (const id of ['story-sections', 'rating-changes', 'scenario-review']) {
+      for (const id of ['executive-section', 'main-story-section', 'market-news-section', 'japan-equities-section', 'policy-wrapper-section', 'internal-strength-section', 'cross-asset-section', 'market-overview-section', 'asset-analysis-section', 'commodities-section', 'copper-section', 'crypto-section', 'market-environment-section', 'unusual-moves-section', 'events-section', 'watch-cards-section', 'change-conditions-section', 'scenarios-section', 'trade-watch-section', 'strength-section', 'quality-section', 'final-section', 'story-sections', 'rating-changes', 'scenario-review']) {
         const target = document.getElementById(id);
         if (target && !target.querySelector('.publication-asof')) {
           const note = el('p', `参照する総合分析：${day}版。前営業日・本日版とは限りません。`);

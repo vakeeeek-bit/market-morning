@@ -56,7 +56,7 @@ class PageNavigationTests(unittest.TestCase):
         self.assertIn("市場概況", world)
         self.assertIn("市場横断分析", world)
         self.assertNotIn(">QUICK VIEW<", japan)
-        self.assertIn("朝3分で分かる今日の日本株", japan)
+        self.assertIn("直近取引日の日本株実績", japan)
 
     def test_copper_chart_identifies_instrument_and_unit(self):
         world = self.read("index.html")
@@ -125,7 +125,7 @@ class PageNavigationTests(unittest.TestCase):
         self.assertIn("業種ETF自身の勢い・商い・継続力", japan)
         self.assertNotIn('id="internals-section"', japan)
         self.assertIn('className = \'term-help\'', japan)
-        self.assertIn("昨日のシナリオ検証 → 今日への修正", japan)
+        self.assertIn("保存シナリオと直近実績の比較", japan)
         self.assertIn("総合戦闘力は算出しません", japan)
         self.assertNotIn("朝シナリオの答え合わせ", japan)
 

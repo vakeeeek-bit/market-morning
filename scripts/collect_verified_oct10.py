@@ -21,4 +21,15 @@ def build():
 
 if __name__ == '__main__':
     path = Path(__file__).resolve().parents[1] / 'data/news.json'
-    path.write_text(json.dumps(build(), ensure_ascii=False, indent=2) + '\n')
+    news = build()
+    path.write_text(json.dumps(news, ensure_ascii=False, indent=2) + '\n')
+    context = dict(updated_at=NOW, period_start='2026-10-05', period_end='2026-10-10', headline='確認済みの政策・家計・流動性材料を整理。市場全体の判断は追加収集待ち', summary='この欄は今週確認した一次資料の部分整理です。ウォラー理事の見解、日銀の市場調査、FRB家計調査、OFAC措置、COMEX在庫を掲載。最新の世界市場価格や市場反応が未確認のため、全面的な強気・弱気判断は保留します。', timeline=[dict(date=a['published_date'], title=a['title'], fact=a['fact'], market_impact=a['analysis']) for a in news['articles']], current_drivers=[dict(title='金融政策と家計負担', explanation='理事の見解と政策決定、過去の家計調査と最新景気を区別する。', japan_impact='高PER株・輸出・内需への波及は最新金利、為替、市場予想との比較が必要。')], japan_connection=[dict(route='在庫・規制・流動性', explanation='COMEX在庫は日次増加。規制の対象・許可例外と日銀調査の基準日を区別。', sectors=['非鉄','銀行','商社'])], watch_conditions=[dict(condition='世界市場の最新基準日がそろい、市場反応を確認できる', meaning='日本株への方向判断を更新する。')], sources=[dict(title=a['title'], publisher=a['publisher'], published_at=a['published_date'], url=a['source_url']) for a in news['articles']])
+    context_path = path.with_name('market-context.json')
+    previous = json.loads(context_path.read_text())
+    context['period_start'] = previous['period_start']
+    context['timeline'] = sorted({(x['date'], x['title']): x for x in previous['timeline'] + context['timeline']}.values(), key=lambda x: x['date'])
+    context['timeline'] = context['timeline'][:1] + [x for x in context['timeline'] if x['date'] >= '2026-10-08'][:5]
+    context['sources'] = list({x['url']: x for x in previous['sources'] + context['sources']}.values())
+    context['daily_life_impacts'] = [dict(topic='家計の返済負担', mechanism='米家計調査で返済負担の高い世帯割合が増加', impact='日本の家計に直接適用できる数値ではありません。輸出先の需要背景として確認する。', evidence_type='可能性')]
+    context['scenario_change_conditions'] = context.pop('watch_conditions')
+    context_path.write_text(json.dumps(context, ensure_ascii=False, indent=2) + '\n')

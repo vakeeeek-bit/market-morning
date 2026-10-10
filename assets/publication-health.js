@@ -43,7 +43,7 @@
     }
     if (audit) {
       host.append(el('p', `全体点検：${audit.checked_at}｜AIレポートの更新は ${audit.report_publication_status}`));
-      for (const row of audit.blockers || []) host.append(el('p', `未解決：${row.title}｜${row.next_action}`));
+      for (const row of audit.blockers || []) host.append(el('p', `未解決：${row.title || row.item}｜${row.next_action}`));
     }
     if (report) {
       const day = report.report_date;

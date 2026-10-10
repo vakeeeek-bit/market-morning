@@ -51,3 +51,12 @@ test('as-of note updates after date switch rather than remaining stale',async()=
   assert.match(f.ids.get('executive-section').querySelector('.publication-asof').textContent,/2026-10-09/);
   assert.equal(f.ids.get('executive-section').children.length,1);
 });
+
+ test('a missing percentage is never converted to a flat zero move', () => {
+ const fs = require('node:fs'); const vm = require('node:vm');
+ const source = fs.readFileSync('index.html','utf8');
+ const fn = source.slice(source.indexOf('function validChange('), source.indexOf('function average('));
+ const context = {}; vm.runInNewContext(fn,context);
+ assert.equal(context.validChange({change_pct:null}),null);
+ assert.equal(context.validChange({change_pct:0}),0);
+ });

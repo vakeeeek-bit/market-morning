@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-10-11T07:27:33+09:00",
-  "market_attempt_status": "not_confirmed",
-  "market_attempt_note": "当日成功記録なし。前回取得値の基準日を確認してください。",
+  "checked_at": "2026-10-11T07:30:25+09:00",
+  "market_attempt_status": "FAIL",
+  "market_attempt_note": "再取得に失敗。取得済みの正本を保持。失敗の詳細は collection-attempts に保存。",
   "market_updated_at": "2026-10-10 11:56:08",
   "japan_calendar_note": "土日：現物の新しい取引結果はありません。直近取引日の実績を掲載。"
 }

@@ -2027,7 +2027,7 @@ function safeText(value, fallback = '確認中') {
 
 function validChange(market) {
 
-  if (!market) return null;
+  if (!market || market.change_pct === null || market.change_pct === undefined || market.change_pct === "") return null;
 
   const value =
     Number(market.change_pct);

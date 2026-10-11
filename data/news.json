@@ -1,11 +1,49 @@
 {
-  "report_date": "2026-10-11",
+  "report_date": "2026-10-12",
   "target_market_date": "2026-10-09",
-  "updated_at": "2026-10-11T07:27:33+09:00",
+  "updated_at": "2026-10-12T06:49:05+09:00",
   "publication_mode": "verified_news",
   "coverage_status": "partial",
-  "coverage_note": "一次資料を確認した17件。10月9日TDnetの265件の見出しを選別し、重要な企業資料を確認。全件本文の確認や総合レポートPASSを意味しません。",
+  "coverage_note": "部分収集18件。既存17件の確認時刻を保持。10月12日にGL135本文を追加確認。網羅的調査・総合版PASSを意味しない。",
   "articles": [
+    {
+      "id": "ofac-gl135-20261009",
+      "title": "OFAC：ロシア産軽油の取引を期限付きで許可、口座引落しに例外",
+      "published_date": "2026-10-09",
+      "verified_at": "2026-10-12T06:49:05+09:00",
+      "source_type": "primary",
+      "publisher": "U.S. Treasury OFAC",
+      "source_url": "https://ofac.treasury.gov/recent-actions/20261009_33",
+      "verification_url": "https://ofac.treasury.gov/media/937216/download?inline=",
+      "verification_status": "PASS",
+      "fact": "OFACは2026年10月9日、一般許可135を発行。ロシア産軽油の販売・配送・荷卸し・輸入（米国への輸入を含む）に関し、31 CFR 587・589で禁止された取引を2027年4月7日00:01 EDTまで許可する。ロシア中央銀行、国民福祉基金、財務省の米金融機関口座への引落しは許可対象外。",
+      "analysis": "軽油の供給経路に関係する措置。日本の燃料・物流への波及は実際の輸送と価格を確認して判断する。",
+      "limitations": "軽油に限定した一般許可。原油・全制裁の解除ではない。実際の輸入数量、価格、市場反応は未確認。発行時刻は本文に記載なし。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式発行ページとGL135の1ページ本文を実読。段落(a)(b)と署名日を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "OFACは2026年10月9日、一般許可135を発行。ロシア産軽油の販売・配送・荷卸し・輸入（米国への輸入を含む）に関し、31 CFR 587・589で禁止された取引を2027年4月7日00:01 EDTまで許可する。ロシア中央銀行、国民福祉基金、財務省の米金融機関口座への引落しは許可対象外。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発行日10月9日、確認2026-10-12T06:49:05+09:00。期限のEDT表記を保持。発行時刻未掲載。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "法的対象と例外はfact、波及は条件付きanalysis、市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "軽油に限定した一般許可。原油・全制裁の解除ではない。実際の輸入数量、価格、市場反応は未確認。発行時刻は本文に記載なし。"
+        }
+      }
+    },
     {
       "id": "census-wholesale-20261008",
       "title": "米Census：8月卸売売上高1.8%増、在庫増加率を下方改定",

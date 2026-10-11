@@ -1,0 +1,694 @@
+{
+  "report_date": "2026-10-12",
+  "target_market_date": "2026-10-09",
+  "updated_at": "2026-10-12T06:49:05+09:00",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "部分収集18件。既存17件の確認時刻を保持。10月12日にGL135本文を追加確認。網羅的調査・総合版PASSを意味しない。",
+  "articles": [
+    {
+      "id": "ofac-gl135-20261009",
+      "title": "OFAC：ロシア産軽油の取引を期限付きで許可、口座引落しに例外",
+      "published_date": "2026-10-09",
+      "verified_at": "2026-10-12T06:49:05+09:00",
+      "source_type": "primary",
+      "publisher": "U.S. Treasury OFAC",
+      "source_url": "https://ofac.treasury.gov/recent-actions/20261009_33",
+      "verification_url": "https://ofac.treasury.gov/media/937216/download?inline=",
+      "verification_status": "PASS",
+      "fact": "OFACは2026年10月9日、一般許可135を発行。ロシア産軽油の販売・配送・荷卸し・輸入（米国への輸入を含む）に関し、31 CFR 587・589で禁止された取引を2027年4月7日00:01 EDTまで許可する。ロシア中央銀行、国民福祉基金、財務省の米金融機関口座への引落しは許可対象外。",
+      "analysis": "軽油の供給経路に関係する措置。日本の燃料・物流への波及は実際の輸送と価格を確認して判断する。",
+      "limitations": "軽油に限定した一般許可。原油・全制裁の解除ではない。実際の輸入数量、価格、市場反応は未確認。発行時刻は本文に記載なし。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式発行ページとGL135の1ページ本文を実読。段落(a)(b)と署名日を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "OFACは2026年10月9日、一般許可135を発行。ロシア産軽油の販売・配送・荷卸し・輸入（米国への輸入を含む）に関し、31 CFR 587・589で禁止された取引を2027年4月7日00:01 EDTまで許可する。ロシア中央銀行、国民福祉基金、財務省の米金融機関口座への引落しは許可対象外。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発行日10月9日、確認2026-10-12T06:49:05+09:00。期限のEDT表記を保持。発行時刻未掲載。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "法的対象と例外はfact、波及は条件付きanalysis、市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "軽油に限定した一般許可。原油・全制裁の解除ではない。実際の輸入数量、価格、市場反応は未確認。発行時刻は本文に記載なし。"
+        }
+      }
+    },
+    {
+      "id": "census-wholesale-20261008",
+      "title": "米Census：8月卸売売上高1.8%増、在庫増加率を下方改定",
+      "published_date": "2026-10-08",
+      "publisher": "U.S. Census Bureau",
+      "source_url": "https://www.census.gov/wholesale/current/index.html",
+      "verification_url": "https://www.census.gov/wholesale/current/index.html",
+      "fact": "10月8日10:00 ET公表。8月季節調整済み卸売売上高8,175億ドル、前月比1.8%増。月末在庫9,642億ドル、0.5%増（速報0.7%増から改定）。在庫／売上比率1.18。7月売上高前月比は0.8%増から1.0%増へ改定。",
+      "analysis": "売上の伸びが在庫増を上回る。名目・季節調整済みであり、実質需要の伸びとは同一視しない。",
+      "limitations": "製造業販売支店等を除く卸売。価格変化の調整なし。市場予想との差と相場反応は未確認。",
+      "verified_at": "2026-10-11T07:27:33+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文を取得して確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月8日10:00 ET公表。8月季節調整済み卸売売上高8,175億ドル、前月比1.8%増。月末在庫9,642億ドル、0.5%増（速報0.7%増から改定）。在庫／売上比率1.18。7月売上高前月比は0.8%増から1.0%増へ改定。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-08、確認日2026-10-11。発表と実行を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と解釈を分離。市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "製造業販売支店等を除く卸売。価格変化の調整なし。市場予想との差と相場反応は未確認。"
+        }
+      }
+    },
+    {
+      "id": "osg-buyback-20261009",
+      "title": "OSG（6136）：自社株買いを決議、10月13日のToSTNeT-3取得を予定",
+      "published_date": "2026-10-09",
+      "publisher": "OSG",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261009548893.pdf",
+      "verification_url": "https://www.release.tdnet.info/inbs/140120261009548893.pdf",
+      "fact": "10月9日16:30発表。取得枠150万株・50億円、期間10月13日〜11月30日。10月13日08:45のToSTNeT-3取得は10月9日終値3,653円で136万8,700株・49億9,986万1,100円を上限として予定。",
+      "analysis": "資本政策の追い風候補。ただし買付決議と実際の取得完了を分ける。",
+      "limitations": "未実行の予定。取得されない可能性あり。ToSTNeT-3と総取得枠を二重計上しない。市場反応未確認。",
+      "verified_at": "2026-10-11T07:27:33+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文を取得して確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月9日16:30発表。取得枠150万株・50億円、期間10月13日〜11月30日。10月13日08:45のToSTNeT-3取得は10月9日終値3,653円で136万8,700株・49億9,986万1,100円を上限として予定。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-09、確認日2026-10-11。発表と実行を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と解釈を分離。市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "未実行の予定。取得されない可能性あり。ToSTNeT-3と総取得枠を二重計上しない。市場反応未確認。"
+        }
+      }
+    },
+    {
+      "id": "aeon-financial-interim-20261009",
+      "title": "イオンFS（8570）：中間増収・純利益増、営業利益は11.0%減",
+      "published_date": "2026-10-09",
+      "publisher": "イオンフィナンシャルサービス",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261008548186.pdf",
+      "verification_url": "https://www.release.tdnet.info/inbs/140120261008548186.pdf",
+      "fact": "2027年2月期中間営業収益3,112.02億円（前年同期比11.9%増）、営業利益252.09億円（11.0%減）、親会社株主帰属中間純利益100.52億円（14.9%増）。年間配当予想53円。",
+      "analysis": "利益段階で方向が異なるため、純利益増だけを収益力改善とは判断しない。金融業内の個社材料。",
+      "limitations": "中間実績と通期予想を区別。発表後の価格反応、評価変更は未確認。",
+      "verified_at": "2026-10-11T07:27:33+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文を取得して確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "2027年2月期中間営業収益3,112.02億円（前年同期比11.9%増）、営業利益252.09億円（11.0%減）、親会社株主帰属中間純利益100.52億円（14.9%増）。年間配当予想53円。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-09、確認日2026-10-11。発表と実行を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と解釈を分離。市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "中間実績と通期予想を区別。発表後の価格反応、評価変更は未確認。"
+        }
+      }
+    },
+    {
+      "id": "fujimi-forecast-20261009",
+      "title": "フジミ（5384）：通期営業利益予想19.0%増額、配当予想77円から92円",
+      "published_date": "2026-10-09",
+      "publisher": "フジミインコーポレーテッド",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261009548819.pdf",
+      "verification_url": "https://www.release.tdnet.info/inbs/140120261009548819.pdf",
+      "fact": "10月9日16:20発表。2027年3月期通期売上高予想748億円から825億円、営業利益145億円から172.5億円（19.0%増額）、年間配当77円から92円。CMP・シリコンウエハー向け製品の販売増を理由として記載。",
+      "analysis": "半導体材料に限定した追い風候補。SOX全体の弱さと個社の予想増額は分けて評価する。",
+      "limitations": "予想であり実績ではない。現物終了後の発表。発表後の株価反応は未確認。",
+      "verified_at": "2026-10-11T07:27:33+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文を取得して確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月9日16:20発表。2027年3月期通期売上高予想748億円から825億円、営業利益145億円から172.5億円（19.0%増額）、年間配当77円から92円。CMP・シリコンウエハー向け製品の販売増を理由として記載。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-09、確認日2026-10-11。発表と実行を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と解釈を分離。市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "予想であり実績ではない。現物終了後の発表。発表後の株価反応は未確認。"
+        }
+      }
+    },
+    {
+      "id": "shfe-copper-weekly-20261009",
+      "title": "SHFE：銅週次在庫58,744トン、ワラント在庫は減少",
+      "published_date": "2026-10-09",
+      "publisher": "Shanghai Futures Exchange",
+      "source_url": "https://www.shfe.cn/data/tradedata/future/stockdata/weeklystock_20261009/EN/all.html",
+      "verification_url": "https://www.shfe.cn/data/tradedata/future/stockdata/weeklystock_20261009/EN/all.html",
+      "fact": "10月9日付の週次報告では銅のDelivery-able合計は58,744トン、前週38,744から20,000増。On Warrant合計は8,285トン、前週10,011から1,726減。保税分18トンを含む。",
+      "analysis": "総在庫増加とワラント減少は別の動き。ワラント減少だけで総在庫減少を伴う需給逼迫とは判断しない。",
+      "limitations": "取引所はSHFE、単位Tonne、頻度週次、報告日10月9日。COMEXの日次Short Tonsと合算しない。LME対象日の在庫は未取得。",
+      "verified_at": "2026-10-10T12:40:47+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文を取得して確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月9日付の週次報告では銅のDelivery-able合計は58,744トン、前週38,744から20,000増。On Warrant合計は8,285トン、前週10,011から1,726減。保税分18トンを含む。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-09。確認日は2026-10-10。対象期間と公表日を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "公表事実と解釈を別欄に記載し、市場反応を断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "取引所はSHFE、単位Tonne、頻度週次、報告日10月9日。COMEXの日次Short Tonsと合算しない。LME対象日の在庫は未取得。"
+        }
+      }
+    },
+    {
+      "id": "michigan-preliminary-20261009",
+      "title": "米ミシガン大学：10月速報、消費者心理低下と期待インフレ上昇",
+      "published_date": "2026-10-09",
+      "publisher": "University of Michigan",
+      "source_url": "https://www.sca.isr.umich.edu/",
+      "verification_url": "https://www.sca.isr.umich.edu/",
+      "fact": "10月速報の消費者態度指数は46.3、9月48.1。現況指数44.7、期待指数47.3。1年先期待インフレは4.6%から4.7%、長期期待は3.4%から3.5%へ上昇。10月確報は10月23日10時ETの予定。",
+      "analysis": "米消費の弱さと物価懸念が併存。輸出・耐久財と金利に敏感な株式への波及は条件付きで評価する。",
+      "limitations": "速報と確報を区別。市場予想との差は未確認。株価変動の単独原因とは断定しない。",
+      "verified_at": "2026-10-10T12:40:47+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文を取得して確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月速報の消費者態度指数は46.3、9月48.1。現況指数44.7、期待指数47.3。1年先期待インフレは4.6%から4.7%、長期期待は3.4%から3.5%へ上昇。10月確報は10月23日10時ETの予定。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-09。確認日は2026-10-10。対象期間と公表日を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "公表事実と解釈を別欄に記載し、市場反応を断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "速報と確報を区別。市場予想との差は未確認。株価変動の単独原因とは断定しない。"
+        }
+      }
+    },
+    {
+      "id": "bls-cpi-calendar-20261014",
+      "title": "米9月CPIは10月14日公表予定、BLS公式日程を確認",
+      "published_date": "2026-02-18",
+      "publisher": "BLS",
+      "source_url": "https://www.bls.gov/schedule/2026/10_sched.htm",
+      "verification_url": "https://www.bls.gov/schedule/2026/10_sched.htm",
+      "fact": "BLS公式予定表では9月CPIと実質賃金は10月14日08:30米東部時間、PPIは15日、輸出入物価は16日。同表の10月5〜9日に主要発表の記載はない。",
+      "analysis": "次のインフレ指標によって金利・高PER株の見方を更新する。",
+      "limitations": "予定表の最終更新日は2月18日。10月10日は確認日であり新規発表日ではない。CPI実績値・市場予想は未公表または未確認。",
+      "verified_at": "2026-10-10T12:40:47+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文を取得して確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "BLS公式予定表では9月CPIと実質賃金は10月14日08:30米東部時間、PPIは15日、輸出入物価は16日。同表の10月5〜9日に主要発表の記載はない。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-02-18。確認日は2026-10-10。対象期間と公表日を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "公表事実と解釈を別欄に記載し、市場反応を断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "予定表の最終更新日は2月18日。10月10日は確認日であり新規発表日ではない。CPI実績値・市場予想は未公表または未確認。"
+        }
+      }
+    },
+    {
+      "id": "cme-copper-stock-20261009",
+      "title": "CME/COMEX：銅在庫の日次公式報告を確認",
+      "published_date": "2026-10-09",
+      "publisher": "CME/COMEX",
+      "source_url": "https://www.cmegroup.com/delivery_reports/Copper_Stocks.xls",
+      "verification_url": "https://www.cmegroup.com/delivery_reports/Copper_Stocks.xls",
+      "fact": "10月9日公表、活動日10月8日の銅在庫は合計786,330ショートトン。登録在庫475,868、適格在庫310,462。前回合計784,415に対する増加には純入庫1,592と調整323が含まれる。",
+      "analysis": "この日次報告では在庫減少を伴う需給逼迫とは判断しない。",
+      "limitations": "単位はショートトン。LME・SHFEの在庫と単純合算しない。他取引所の対象日在庫は未取得。",
+      "verified_at": "2026-10-10T12:40:47+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文を取得して確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月9日公表、活動日10月8日の銅在庫は合計786,330ショートトン。登録在庫475,868、適格在庫310,462。前回合計784,415に対する増加には純入庫1,592と調整323が含まれる。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-09。確認日は2026-10-10。対象期間と公表日を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "公表事実と解釈を別欄に記載し、市場反応を断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "単位はショートトン。LME・SHFEの在庫と単純合算しない。他取引所の対象日在庫は未取得。"
+        }
+      }
+    },
+    {
+      "id": "fed-scf-20261009",
+      "title": "FRB：2025年家計調査を公表",
+      "published_date": "2026-10-09",
+      "publisher": "FRB",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm",
+      "verification_url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm",
+      "fact": "2025年家計調査では2022年比の実質所得中央値が7%増、実質純資産中央値が2%増。所得に対する債務返済が40%を超える世帯割合は6.5%から8.6%へ上昇した。",
+      "analysis": "米消費の背景資料。所得改善と返済負担増を併せて確認する。",
+      "limitations": "2025年の調査であり、10月の景気指標や新たな金融政策決定ではない。",
+      "verified_at": "2026-10-10T12:40:47+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文を取得して確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "2025年家計調査では2022年比の実質所得中央値が7%増、実質純資産中央値が2%増。所得に対する債務返済が40%を超える世帯割合は6.5%から8.6%へ上昇した。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-09。確認日は2026-10-10。対象期間と公表日を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "公表事実と解釈を別欄に記載し、市場反応を断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "2025年の調査であり、10月の景気指標や新たな金融政策決定ではない。"
+        }
+      }
+    },
+    {
+      "id": "boj-money-market-20261009",
+      "title": "日銀：短期金融市場調査、機能度の評価が改善",
+      "published_date": "2026-10-09",
+      "publisher": "日本銀行",
+      "source_url": "https://www.boj.or.jp/paym/market/market2610.htm",
+      "verification_url": "https://www.boj.or.jp/paym/market/market2610.htm",
+      "fact": "8月に実施した調査は7月末を基準に381先から回答。資金調達残高は前年から減少、運用残高は増加。市場機能度を高いとする回答が低いとする回答を上回り、その差も改善した。",
+      "analysis": "銀行の資金繰りと短期市場機能を確認する背景資料。",
+      "limitations": "7月末の調査であり、10月9日の市場残高や新たな政策変更ではない。",
+      "verified_at": "2026-10-10T12:40:47+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文を取得して確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "8月に実施した調査は7月末を基準に381先から回答。資金調達残高は前年から減少、運用残高は増加。市場機能度を高いとする回答が低いとする回答を上回り、その差も改善した。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-09。確認日は2026-10-10。対象期間と公表日を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "公表事実と解釈を別欄に記載し、市場反応を断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "7月末の調査であり、10月9日の市場残高や新たな政策変更ではない。"
+        }
+      }
+    },
+    {
+      "id": "ofac-icc-20261009",
+      "title": "OFAC：ICC関連指定と一般許可を公表",
+      "published_date": "2026-10-09",
+      "publisher": "米財務省OFAC",
+      "source_url": "https://ofac.treasury.gov/recent-actions/20261009",
+      "verification_url": "https://ofac.treasury.gov/recent-actions/20261009",
+      "fact": "OFACはICC関連の団体をSDNに追加し、一定の取引、通信・企業用ソフトウェア、年金、拘束者に関する一般許可13〜16を公表した。",
+      "analysis": "制裁対象と許可対象を区別して関連取引の条件を確認する。",
+      "limitations": "市場反応は未確認。個別許可の適用条件を一律に全取引へ拡張しない。",
+      "verified_at": "2026-10-10T12:40:47+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文を取得して確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "OFACはICC関連の団体をSDNに追加し、一定の取引、通信・企業用ソフトウェア、年金、拘束者に関する一般許可13〜16を公表した。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-09。確認日は2026-10-10。対象期間と公表日を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "公表事実と解釈を別欄に記載し、市場反応を断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "市場反応は未確認。個別許可の適用条件を一律に全取引へ拡張しない。"
+        }
+      }
+    },
+    {
+      "id": "ofac-pegasus-20261009",
+      "title": "OFAC：物流会社との制裁違反和解を公表",
+      "published_date": "2026-10-09",
+      "publisher": "米財務省OFAC",
+      "source_url": "https://ofac.treasury.gov/recent-actions/20261009",
+      "verification_url": "https://ofac.treasury.gov/recent-actions/20261009",
+      "fact": "Pegasus Worldwide Logisticsは制裁および報告手続きの計10件の見かけ上の違反について175,015ドルで和解した。対象輸入は2023年9月〜2024年2月に行われた。",
+      "analysis": "物流・商社には制裁対象企業の確認と当局への報告手続きが重要。",
+      "limitations": "過去の違反に対する措置であり、新たな包括関税ではない。市場反応は未確認。",
+      "verified_at": "2026-10-10T12:40:47+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文を取得して確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "Pegasus Worldwide Logisticsは制裁および報告手続きの計10件の見かけ上の違反について175,015ドルで和解した。対象輸入は2023年9月〜2024年2月に行われた。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-09。確認日は2026-10-10。対象期間と公表日を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "公表事実と解釈を別欄に記載し、市場反応を断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "過去の違反に対する措置であり、新たな包括関税ではない。市場反応は未確認。"
+        }
+      }
+    },
+    {
+      "id": "waller-sep-20261008",
+      "title": "ウォラー理事：SEPの情報価値とインフレへの対応を説明",
+      "published_date": "2026-10-08",
+      "publisher": "FRB",
+      "source_url": "https://www.federalreserve.gov/newsevents/speech/waller20261008a.htm",
+      "verification_url": "https://www.federalreserve.gov/newsevents/speech/waller20261008a.htm",
+      "fact": "ウォラー理事は10月8日の講演で、労働市場は安定する一方インフレは高く、近い将来はインフレに重点を置くとの見解を示した。政策の速度は今後のデータに応じて調整すると説明した。",
+      "analysis": "金利に敏感なグロース株の判断では追加データと政策見通しを確認する。",
+      "limitations": "理事個人の見解でありFOMC決定ではない。講演中の75bpの例は政策コミットメントではない。",
+      "verified_at": "2026-10-10T12:40:47+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文を取得して確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "ウォラー理事は10月8日の講演で、労働市場は安定する一方インフレは高く、近い将来はインフレに重点を置くとの見解を示した。政策の速度は今後のデータに応じて調整すると説明した。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-08。確認日は2026-10-10。対象期間と公表日を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "公表事実と解釈を別欄に記載し、市場反応を断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "理事個人の見解でありFOMC決定ではない。講演中の75bpの例は政策コミットメントではない。"
+        }
+      }
+    },
+    {
+      "id": "household-20261009",
+      "title": "日本家計：8月の実質消費は前年比減、前月比は小幅増",
+      "published_date": "2026-10-09",
+      "publisher": "総務省統計局",
+      "source_url": "https://www.stat.go.jp/data/kakei/sokuhou/tsuki/index.html",
+      "verification_url": "https://www.stat.go.jp/data/kakei/sokuhou/tsuki/index.html",
+      "fact": "8月の二人以上世帯の消費支出は310,975円。実質前年比3.1%減、名目前年比1.0%減、季節調整後の実質前月比0.1%増。",
+      "analysis": "内需は前年比の弱さと前月比の改善を分けて評価する。",
+      "limitations": "公表は10月9日、対象は8月。株価の単独原因とは断定しない。",
+      "verified_at": "2026-10-10T21:09:28+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文・PDFを再取得し本文を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "8月の二人以上世帯の消費支出は310,975円。実質前年比3.1%減、名目前年比1.0%減、季節調整後の実質前月比0.1%増。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "10月9日公表。10月10日夜に確認。対象年度と公表日を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と解釈は別欄、株価反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "公表は10月9日、対象は8月。株価の単独原因とは断定しない。"
+        }
+      }
+    },
+    {
+      "id": "yaskawa-20261009",
+      "title": "安川電機：売上予想引き上げ、営業利益予想引き下げ",
+      "published_date": "2026-10-09",
+      "publisher": "安川電機",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261009548685.pdf",
+      "verification_url": "https://www.release.tdnet.info/inbs/140120261009548685.pdf",
+      "fact": "2027年2月期中間の売上収益285,598百万円、前年比9.8%増。営業利益22,058百万円、5.5%減。通期売上予想580,000から600,000百万円、営業利益予想60,000から57,500百万円へ修正。",
+      "analysis": "売上拡大だけで好材料とせず利益率を確認する。",
+      "limitations": "コード6506。中間実績と通期予想を区別。発表後の国内現物反応は未確認。",
+      "verified_at": "2026-10-10T21:09:28+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文・PDFを再取得し本文を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "2027年2月期中間の売上収益285,598百万円、前年比9.8%増。営業利益22,058百万円、5.5%減。通期売上予想580,000から600,000百万円、営業利益予想60,000から57,500百万円へ修正。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "10月9日公表。10月10日夜に確認。対象年度と公表日を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と解釈は別欄、株価反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "コード6506。中間実績と通期予想を区別。発表後の国内現物反応は未確認。"
+        }
+      }
+    },
+    {
+      "id": "jins-20261009",
+      "title": "ジンズ：営業利益は予想未達、年間配当予想を減額",
+      "published_date": "2026-10-09",
+      "publisher": "ジンズホールディングス",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261009548583.pdf",
+      "verification_url": "https://www.release.tdnet.info/inbs/140120261009548583.pdf",
+      "fact": "2026年8月期営業利益実績11,454百万円は従来予想12,772百万円を10.3%下回った。年間配当予想115円から104円へ修正。",
+      "analysis": "売上増加と利益・配当の弱さを区別し、収益性を監視する。",
+      "limitations": "コード3046。終了年度の実績と予想の差であり、将来年度の一律下方修正ではない。発表後の株価反応は未確認。",
+      "verified_at": "2026-10-10T21:09:28+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文・PDFを再取得し本文を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "2026年8月期営業利益実績11,454百万円は従来予想12,772百万円を10.3%下回った。年間配当予想115円から104円へ修正。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "10月9日公表。10月10日夜に確認。対象年度と公表日を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と解釈は別欄、株価反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "コード3046。終了年度の実績と予想の差であり、将来年度の一律下方修正ではない。発表後の株価反応は未確認。"
+        }
+      }
+    },
+    {
+      "id": "hoya-20261009",
+      "title": "HOYA：MID Labs全株式の譲渡契約、業績影響は軽微",
+      "published_date": "2026-10-09",
+      "publisher": "HOYA",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261009548466.pdf",
+      "verification_url": "https://www.release.tdnet.info/inbs/140120261009548466.pdf",
+      "fact": "10月9日にMID Labs全株式をBausch + Lombへ譲渡する最終契約を締結。譲渡価額は非開示、完了は11月2日予定、業績影響は軽微としている。",
+      "analysis": "事業再編の材料。大幅な利益上積みは想定しない。",
+      "limitations": "コード7741。契約締結と譲渡完了を区別。非開示の対価を推定しない。",
+      "verified_at": "2026-10-10T21:09:28+09:00",
+      "source_type": "primary",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文・PDFを再取得し本文を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月9日にMID Labs全株式をBausch + Lombへ譲渡する最終契約を締結。譲渡価額は非開示、完了は11月2日予定、業績影響は軽微としている。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "10月9日公表。10月10日夜に確認。対象年度と公表日を区別。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と解釈は別欄、株価反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "コード7741。契約締結と譲渡完了を区別。非開示の対価を推定しない。"
+        }
+      }
+    }
+  ]
+}

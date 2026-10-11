@@ -4,13 +4,13 @@ import math
 import re
 
 ESSENTIAL = ('sp500', 'nasdaq', 'nasdaq100', 'dow', 'russell2000', 'sox',
-             'us2y', 'us10y', 'dxy', 'usdjpy', 'vix', 'gold', 'copper', 'wti', 'brent')
+             'us2y', 'us10y', 'dxy', 'usdjpy', 'vix', 'gold', 'wti', 'brent')
 SECTORS = ('xlc', 'xly', 'xlp', 'xle', 'xlf', 'xlv', 'xli', 'xlb', 'xlre', 'xlk', 'xlu')
 
-def validate_observations(market):
+def validate_observations(market, include_copper=False):
     errors = []
     rows = market.get('markets', {})
-    for key in ESSENTIAL:
+    for key in ESSENTIAL + (('copper',) if include_copper else ()):
         row = rows.get(key, {})
         price = row.get('price')
         if isinstance(price, bool) or not isinstance(price, (int, float)) or not math.isfinite(price):
@@ -21,7 +21,7 @@ def validate_observations(market):
                or not rows.get('sector_' + key, {}).get('market_date')]
     if len(missing) >= 3:
         errors.append('米11セクターETFが3系列以上欠測: ' + ', '.join(missing))
-    for key in ('gold', 'copper', 'wti', 'brent'):
+    for key in ('gold', 'wti', 'brent') + (('copper',) if include_copper else ()):
         row = rows.get(key, {})
         instrument = row.get('instrument', {})
         required = ('exchange', 'contract_month', 'value_kind', 'basis_time', 'source_url')
@@ -41,3 +41,12 @@ def validate_observations(market):
         if not str(instrument['source_url']).startswith('https://') or instrument.get('market_date') != row.get('market_date'):
             errors.append(f'{key}: 出典または観測日の対応が未確認')
     return errors
+
+
+def copper_is_included(report):
+    if report.get('publication_policy', {}).get('copper_included') is True:
+        return True
+    for row in report.get('market_data', []):
+        if re.search(r'copper|銅', str(row.get('market', '')), re.I) and re.search(r'\d', str(row.get('price', ''))):
+            return True
+    return False

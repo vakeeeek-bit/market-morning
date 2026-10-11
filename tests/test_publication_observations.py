@@ -5,7 +5,7 @@ def valid_market():
     rows={key:dict(price=1,market_date='2026-10-09') for key in ESSENTIAL}
     for key in SECTORS: rows['sector_'+key]=dict(price=1,market_date='2026-10-09')
     for key in ('gold','copper','wti','brent'):
-        rows[key]['instrument']=dict(verification_status='verified',exchange='NYMEX',contract_month='2026-11',value_kind='daily_close',basis_time='2026-10-09T17:00:00-04:00',source_url='https://example.org/report',market_date='2026-10-09')
+        rows.setdefault(key, dict(price=1,market_date='2026-10-09'))['instrument']=dict(verification_status='verified',exchange='NYMEX',contract_month='2026-11',value_kind='daily_close',basis_time='2026-10-09T17:00:00-04:00',source_url='https://example.org/report',market_date='2026-10-09')
     return dict(markets=rows)
 
 class PublicationObservationTests(unittest.TestCase):
@@ -24,3 +24,10 @@ class PublicationObservationTests(unittest.TestCase):
         self.assertTrue(any('タイムゾーン' in x for x in validate_observations(m)))
     def test_confirmed_observations_pass(self):
         self.assertEqual([],validate_observations(valid_market()))
+
+    def test_missing_copper_does_not_block_unpublished_copper(self):
+        m=valid_market();m['markets'].pop('copper')
+        self.assertEqual([],validate_observations(m))
+    def test_included_copper_still_requires_metadata(self):
+        m=valid_market();m['markets']['copper'].pop('instrument')
+        self.assertTrue(any('copper' in e for e in validate_observations(m,include_copper=True)))

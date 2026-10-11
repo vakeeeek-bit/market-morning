@@ -83,6 +83,13 @@ def validate_research_quality(evidence: dict, report: dict, japan: dict) -> list
         if not isinstance(item, dict):
             errors.append(f"{location}: オブジェクトが必要です")
             continue
+        # Copper coverage is optional when no copper price/inventory is relied on.
+        try:
+            from publication_observations import copper_is_included
+        except ModuleNotFoundError:
+            from scripts.publication_observations import copper_is_included
+        if item.get("id") in {"copper", "copper_price", "copper_inventory"} and not copper_is_included(report):
+            continue
         tier = item.get("tier")
         status = item.get("status")
         attempts = item.get("attempts", [])

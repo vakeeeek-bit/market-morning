@@ -245,6 +245,12 @@ def validate_relationships(data: dict[str, dict], result: ValidationResult) -> N
             "nikkei225", "topix", "dxy", "usdjpy", "eurusd", "us10y", "us2y",
             "vix", "gold", "silver", "copper", "wti", "brent", "btc", "eth",
         )
+        try:
+            from publication_observations import copper_is_included
+        except ModuleNotFoundError:
+            from scripts.publication_observations import copper_is_included
+        if not copper_is_included(report):
+            required_market_keys = tuple(key for key in required_market_keys if key != "copper")
         stale = []
         missing = []
         for key in required_market_keys:
@@ -499,10 +505,10 @@ def run(root: Path = ROOT, scope: str = "report") -> ValidationResult:
             result.ok("Research & Analysis Quality Gate（最終9項目）")
     if scope == "publish":
         try:
-            from publication_observations import validate_observations
+            from publication_observations import validate_observations, copper_is_included
         except ModuleNotFoundError:
-            from scripts.publication_observations import validate_observations
-        for message in validate_observations(data.get('market', {})):
+            from scripts.publication_observations import validate_observations, copper_is_included
+        for message in validate_observations(data.get('market', {}), include_copper=copper_is_included(data.get('report', {}))):
             result.error(message)
         from datetime import datetime
         from zoneinfo import ZoneInfo

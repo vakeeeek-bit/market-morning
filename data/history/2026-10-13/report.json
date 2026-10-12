@@ -1,0 +1,549 @@
+{
+  "report_date": "2026-10-13",
+  "target_market_date": "2026-10-12",
+  "updated_at": "2026-10-13T07:15:37+09:00",
+  "report_type": "pre_open_qualified",
+  "week_period": null,
+  "publication_policy": {
+    "status": "QUALIFIED",
+    "updated_at": "2026-10-13T07:15:37+09:00",
+    "note": "FX日足未確定、米債休場、商品先物の契約定義、レーティング非網羅を注記し、依存する断定を除外",
+    "copper_included": false
+  },
+  "quick_view": {
+    "headline": "原油高と半導体安が休場明け日本株を選別。Dow高でも全面リスクオンではない。",
+    "top_news": [
+      {
+        "title": "S&P500 -0.06%・NASDAQ -0.44%・Dow +0.38%：指数間で分岐"
+      },
+      {
+        "title": "SOX -2.67%・米情報技術ETF -1.22%：国内半導体には明確な逆風候補"
+      },
+      {
+        "title": "WTI・Brent上昇、米エネルギーETF +1.43%：資源に追い風、運輸にコスト警戒"
+      }
+    ],
+    "important_today": [
+      "寄り付き後の半導体とエネルギーの相対強弱",
+      "10月9日大引け後の企業開示5件",
+      "米CPI前のポジション調整"
+    ]
+  },
+  "executive_summary": {
+    "headline": "原油高と半導体安が休場明け日本株を選別。Dow高でも全面リスクオンではない。",
+    "market_mood": "米株は小幅まちまちだが、SOX急落と原油高で内部はリスクオンではない。",
+    "main_driver": "中東・ウクライナ情勢を背景とした原油高と半導体安",
+    "winners": [
+      "米エネルギー",
+      "米生活必需品",
+      "米ヘルスケア"
+    ],
+    "losers": [
+      "SOX",
+      "米情報技術",
+      "NASDAQ"
+    ],
+    "important_today": [
+      "S&P500 -0.06%・NASDAQ -0.44%・Dow +0.38%：指数間で分岐",
+      "SOX -2.67%・米情報技術ETF -1.22%：国内半導体には明確な逆風候補",
+      "WTI・Brent上昇、米エネルギーETF +1.43%：資源に追い風、運輸にコスト警戒",
+      "米債市場は休場：古い金利を10月12日の市場反応として使わない",
+      "フジミ・OSG・安川電機・JINS・イオンFS：休場明けの初動を個別確認"
+    ],
+    "watch_markets": [
+      "SOX",
+      "米エネルギーETF",
+      "DXY",
+      "日本の電機・精密",
+      "日本の運輸・物流"
+    ],
+    "current_environment": [
+      "S&P500 -0.06%、Dow +0.38%",
+      "SOX -2.67%、VIX +2.49%",
+      "米債は休場、DXY +0.35%"
+    ]
+  },
+  "main_story": {
+    "title": "原油高と半導体安が休場明け日本株を選別。Dow高でも全面リスクオンではない。",
+    "fact": "10月12日の米国株はS&P500 7,807.24（-0.06%）、NASDAQ 27,245.90（-0.44%）、Dow 51,850.55（+0.38%）、SOX 12,236.79（-2.67%）。エネルギーETFは+1.43%、情報技術ETFは-1.22%。",
+    "market_reaction": "原油高に沿ってエネルギーが上昇する一方、半導体・情報技術が下落。Dow高だけでは全面リスクオンと判断できない。",
+    "importance_reason": "日本株の資源・半導体・運輸に反対方向の伝達経路があるため。",
+    "confidence": "株価反応は確認済み。地政学材料単独の寄与と日本株反応は未確認。"
+  },
+  "news": [
+    {
+      "title": "米株はDow高、S&P500・NASDAQ安、SOX急落",
+      "fact": "10月12日の米国株はS&P500 7,807.24（-0.06%）、NASDAQ 27,245.90（-0.44%）、Dow 51,850.55（+0.38%）、SOX 12,236.79（-2.67%）。エネルギーETFは+1.43%、情報技術ETFは-1.22%。",
+      "published_at": "2026-10-12",
+      "market_reaction": "原油高に沿ってエネルギーが上昇する一方、半導体・情報技術が下落。Dow高だけでは全面リスクオンと判断できない。",
+      "analysis": "日本株では指数全体より、資源と半導体の相対差を優先する。",
+      "source_url": "https://www.reuters.com/business/us-stock-futures-muted-oil-stays-above-100-ahead-earnings-2026-10-12/",
+      "related_assets": [
+        "S&P500",
+        "NASDAQ",
+        "Dow",
+        "SOX",
+        "VIX"
+      ],
+      "related_japan_sectors": [
+        "エネルギー資源",
+        "電機・精密",
+        "機械"
+      ],
+      "importance": "高"
+    },
+    {
+      "title": "原油が上昇し、米エネルギー株が相対優位",
+      "fact": "Reutersは10月12日、サウジの空港への攻撃など供給懸念を背景に原油が上昇したと報道。Yahoo連続足ではWTI・Brent上昇、米エネルギーETF+1.43%。",
+      "published_at": "2026-10-12",
+      "market_reaction": "資源株には追い風候補、空運・陸運・化学には燃料コスト上昇の逆風候補。",
+      "analysis": "原油高を日本株全体の上昇材料とはせず、業種別に分ける。",
+      "source_url": "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-10-12/",
+      "related_assets": [
+        "WTI",
+        "Brent",
+        "XLE",
+        "DXY"
+      ],
+      "related_japan_sectors": [
+        "エネルギー資源",
+        "商社・卸売",
+        "運輸・物流",
+        "素材・化学"
+      ],
+      "importance": "高"
+    },
+    {
+      "title": "米債休場で金利の同日反応は確認不能",
+      "fact": "SIFMAは10月12日の米ドル建て債券市場について終日休場を推奨。",
+      "published_at": "2026-10-12",
+      "market_reaction": "株・原油・ドルの動きに対応する同日米国債現物利回りは確認できない。",
+      "analysis": "前営業日の5.244%を10月12日の金利上昇・低下として使わない。",
+      "source_url": "https://www.sifma.org/news/press-releases/sifma-fixed-income-market-close-recommendations-in-the-u-s-the-u-k-and-japan-for-u-s-columbus-day-and-japan-health-and-sports-day-holidays-2026",
+      "related_assets": [
+        "米2年",
+        "米10年",
+        "DXY"
+      ],
+      "related_japan_sectors": [
+        "銀行",
+        "不動産",
+        "情報通信・サービス"
+      ],
+      "importance": "高"
+    },
+    {
+      "title": "9月米CPIは10月14日8:30 ET公表予定",
+      "fact": "BLS公式日程では9月CPIを10月14日8:30 ETに公表予定。",
+      "published_at": "2026-10-12",
+      "market_reaction": "10月12日の取引では発表前で、結果は未公表。",
+      "analysis": "本日は原油高を受けたインフレ警戒とイベント前のポジション調整を監視するが、CPI結果を先取りして断定しない。",
+      "source_url": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+      "related_assets": [
+        "DXY",
+        "米金利",
+        "NASDAQ"
+      ],
+      "related_japan_sectors": [
+        "銀行",
+        "不動産",
+        "電機・精密"
+      ],
+      "importance": "高"
+    }
+  ],
+  "policy": {
+    "economic_indicators": {
+      "fact": "BLS公式日程では、9月米CPIを10月14日8:30 ETに公表予定。10月13日朝時点で結果は未公表。",
+      "source_urls": [
+        "https://www.bls.gov/schedule/2026/10_sched_list.htm"
+      ]
+    },
+    "boj_japan": {
+      "fact": "10月12日は日本株休場。前回確認した日銀地域経済報告は政策決定ではなく、本日の現物反応は未確認。",
+      "source_url": "https://www.boj.or.jp/research/brp/rer/rer261008.htm"
+    },
+    "us_government": {
+      "fact": "Reutersはサウジ空港への攻撃とロシア・ウクライナのエネルギー関連停戦報道が併存したと報道。",
+      "market_reaction": "原油と米エネルギー株は上昇、株式指数は分岐。材料単独の寄与は未確定。",
+      "outlook": "供給障害の継続性と原油・運輸・資源株の反応を確認",
+      "source_url": "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-10-12/"
+    }
+  },
+  "scenarios": [
+    {
+      "name": "基本",
+      "conditions": "SOX安と原油高が日本株へ伝達するが、指数全体の売りに広がらない",
+      "impact_on_japan": "資源優位、半導体・運輸劣後のローテーション",
+      "strong_sectors": [
+        "エネルギー資源",
+        "商社・卸売"
+      ],
+      "weak_sectors": [
+        "電機・精密",
+        "運輸・物流"
+      ],
+      "invalidation": "半導体がTOPIXを上回り、原油高でも運輸が下げない"
+    },
+    {
+      "name": "上振れ",
+      "conditions": "SOX先物・国内半導体が切り返し、原油上昇が一服",
+      "impact_on_japan": "休場明けの買い戻しが大型株へ拡大",
+      "strong_sectors": [
+        "電機・精密",
+        "機械",
+        "情報通信・サービス"
+      ],
+      "weak_sectors": [],
+      "invalidation": "半導体安継続またはVIX上昇"
+    },
+    {
+      "name": "下振れ",
+      "conditions": "原油高・ドル高・半導体安が同時進行し、値下がり銘柄が広がる",
+      "impact_on_japan": "輸入コストと高PER調整が重なり指数も下落",
+      "strong_sectors": [
+        "エネルギー資源"
+      ],
+      "weak_sectors": [
+        "電機・精密",
+        "運輸・物流",
+        "小売"
+      ],
+      "invalidation": "原油・ドル・SOXのうち2つ以上が反転"
+    }
+  ],
+  "market_data": [
+    {
+      "market": "S&P500",
+      "price": "7807.2402",
+      "change": "-0.06%",
+      "basis_time": "2026-10-12・保存日足Close",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/^GSPC",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "NASDAQ総合",
+      "price": "27245.9023",
+      "change": "-0.44%",
+      "basis_time": "2026-10-12・保存日足Close",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/^IXIC",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "NASDAQ100",
+      "price": "30664.6973",
+      "change": "-0.71%",
+      "basis_time": "2026-10-12・保存日足Close",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/^NDX",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "NYダウ",
+      "price": "51850.5508",
+      "change": "+0.38%",
+      "basis_time": "2026-10-12・保存日足Close",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/^DJI",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "Russell2000",
+      "price": "2794.48",
+      "change": "-0.45%",
+      "basis_time": "2026-10-12・保存日足Close",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/^RUT",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "PHLX半導体株指数（SOX）",
+      "price": "12236.7881",
+      "change": "-2.67%",
+      "basis_time": "2026-10-12・保存日足Close",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/^SOX",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "VIX",
+      "price": "15.21",
+      "change": "+2.49%",
+      "basis_time": "2026-10-12・保存日足Close",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/^VIX",
+      "confidence": "高",
+      "status": "取得成功"
+    },
+    {
+      "market": "DXY",
+      "price": "102.565",
+      "change": "+0.35%",
+      "basis_time": "2026-10-12・保存日足Close",
+      "source": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB",
+      "confidence": "高",
+      "status": "取得成功"
+    }
+  ],
+  "market_overview": [
+    {
+      "market": "米国株",
+      "move": "Dow +0.38%、S&P500 -0.06%、NASDAQ -0.44%",
+      "relative_strength": "エネルギー・生活必需品・ヘルスケア優位、情報技術劣後",
+      "background": "原油高と半導体安で指数間・業種間が分岐",
+      "impact_on_japan": "資源優位、半導体と燃料コスト業種に警戒"
+    },
+    {
+      "market": "日本株",
+      "move": "10月12日は休場、10月9日終値を維持",
+      "relative_strength": "本日寄り付き前で未確認",
+      "background": "休場中に米半導体安・原油高が発生",
+      "impact_on_japan": "寄り付き後の相対強弱で確認"
+    },
+    {
+      "market": "米国債",
+      "move": "10月12日は休場",
+      "relative_strength": "同日利回りなし",
+      "background": "SIFMAの終日休場推奨",
+      "impact_on_japan": "古い金利で銀行・高PER株の方向を断定しない"
+    }
+  ],
+  "internal_strength": {
+    "us": "11業種ETFは7上昇・4下落。エネルギー+1.43%、生活必需品+1.17%、情報技術-1.22%。SOX-2.67%。",
+    "japan": "10月13日寄り付き前。10月9日実績と本日の反応を混同しない。",
+    "breadth": "主要指数はDow上昇、S&P500・NASDAQ・Russell2000下落。全面高ではない。",
+    "risk_assessment": "選別色の強い中立〜ややリスクオフ。VIXは+2.49%。"
+  },
+  "us_sector_etf_closes": [
+    {
+      "ticker": "XLC",
+      "price": 111.45,
+      "change_pct": 0.97,
+      "market_date": "2026-10-12",
+      "value_type": "daily Close",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLY",
+      "price": 112.27,
+      "change_pct": -0.51,
+      "market_date": "2026-10-12",
+      "value_type": "daily Close",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLP",
+      "price": 84.41,
+      "change_pct": 1.17,
+      "market_date": "2026-10-12",
+      "value_type": "daily Close",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLE",
+      "price": 66.01,
+      "change_pct": 1.43,
+      "market_date": "2026-10-12",
+      "value_type": "daily Close",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLF",
+      "price": 55.05,
+      "change_pct": 0.58,
+      "market_date": "2026-10-12",
+      "value_type": "daily Close",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLV",
+      "price": 171.99,
+      "change_pct": 0.69,
+      "market_date": "2026-10-12",
+      "value_type": "daily Close",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLI",
+      "price": 169.15,
+      "change_pct": -0.06,
+      "market_date": "2026-10-12",
+      "value_type": "daily Close",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLB",
+      "price": 49.44,
+      "change_pct": 0.02,
+      "market_date": "2026-10-12",
+      "value_type": "daily Close",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLRE",
+      "price": 41.92,
+      "change_pct": 0.75,
+      "market_date": "2026-10-12",
+      "value_type": "daily Close",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLK",
+      "price": 196.36,
+      "change_pct": -1.22,
+      "market_date": "2026-10-12",
+      "value_type": "daily Close",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLU",
+      "price": 41.63,
+      "change_pct": 0.53,
+      "market_date": "2026-10-12",
+      "value_type": "daily Close",
+      "proxy_for_sector_index": true
+    }
+  ],
+  "commodities_crypto": {
+    "commodities": {
+      "gold": {
+        "price": "不採用",
+        "change": "不採用",
+        "analysis": "連続足は取得したが限月・値種別・基準時刻の完全対応未確認"
+      },
+      "oil": {
+        "price": "不採用",
+        "change": "方向のみ別ソースで確認",
+        "analysis": "Reutersで原油上昇を確認。連続足の水準は限月付き清算値として採用しない"
+      },
+      "other": "Copperは任意掲載として不採用。取得値を需給判断や日本株方向へ接続しない。"
+    },
+    "crypto": {
+      "btc": "82615.8594（2026-10-12日足）",
+      "eth": "2493.1799（2026-10-12日足）",
+      "basis_time": "UTC保存日足。現在値ではない",
+      "assessment": "株式・原油と同方向ではなく、日本株への独立した因果は保留"
+    }
+  },
+  "monitoring_points": [
+    {
+      "target": "SOXと国内半導体",
+      "current_view": "SOX -2.67%",
+      "today_check": "寄り付き後の電機・精密と主要半導体株のTOPIX比",
+      "view_change_condition": "国内半導体がTOPIXを上回れば逆風評価を弱める"
+    },
+    {
+      "target": "原油と業種差",
+      "current_view": "米エネルギー+1.43%、原油連続足上昇",
+      "today_check": "資源と運輸の相対騰落",
+      "view_change_condition": "運輸が下げず資源も伸びなければ原油伝達を弱める"
+    },
+    {
+      "target": "個別開示5社",
+      "current_view": "10月9日大引け後・現物反応未確認",
+      "today_check": "寄り付き、出来高、終値",
+      "view_change_condition": "業種要因と会社固有材料を分けて評価"
+    }
+  ],
+  "data_quality": {
+    "overall": "QUALIFIED",
+    "missing": [
+      "10月12日の米国債現物利回り（休場）",
+      "収集時点で確定していないUSD/JPY・EUR/USDの日足",
+      "商品先物の取引所・限月・値種別・基準時刻の完全対応",
+      "日本株アナリスト変更の全証券会社網羅",
+      "10月13日の日本株現物反応（寄り付き前）"
+    ],
+    "differences": [
+      "Dow高とNASDAQ・SOX安を平均化しない",
+      "商品連続足の方向と限月付き清算値を同一視しない",
+      "10月9日日本株実績と10月13日シナリオを分離"
+    ],
+    "excluded": [
+      "同日米金利変化",
+      "確定前FX日足の前日比",
+      "商品価格だけを根拠とする日本株全体方向",
+      "レーティング変更なしの断定"
+    ],
+    "cautions": [
+      "QUALIFIED版。確認済み市場反応とニュースだけを掲載",
+      "日本株は寄り付き前の条件付きシナリオ",
+      "米CPIは10月14日公表予定で未公表"
+    ]
+  },
+  "final_conclusion": {
+    "headline": "原油高と半導体安が休場明け日本株を選別。Dow高でも全面リスクオンではない。",
+    "winners": [
+      "エネルギー資源候補",
+      "会社固有の好材料銘柄"
+    ],
+    "losers": [
+      "半導体候補",
+      "燃料コスト敏感業種候補"
+    ],
+    "top_three": [
+      "S&P500 -0.06%・NASDAQ -0.44%・Dow +0.38%：指数間で分岐",
+      "SOX -2.67%・米情報技術ETF -1.22%：国内半導体には明確な逆風候補",
+      "WTI・Brent上昇、米エネルギーETF +1.43%：資源に追い風、運輸にコスト警戒"
+    ],
+    "triggers": [
+      "国内半導体がTOPIXを上回れば逆風評価を弱める",
+      "運輸が下げず資源も伸びなければ原油伝達を弱める",
+      "業種要因と会社固有材料を分けて評価"
+    ],
+    "disclaimer": "QUALIFIED版。米債休場、FX未確定、日本株寄り付き前を明示し、未確認部分に依存する断定を除外。"
+  },
+  "japan_equities_preview": {
+    "summary": "原油高と半導体安が休場明け日本株を選別。Dow高でも全面リスクオンではない。",
+    "top_materials": [
+      "S&P500 -0.06%・NASDAQ -0.44%・Dow +0.38%：指数間で分岐",
+      "SOX -2.67%・米情報技術ETF -1.22%：国内半導体には明確な逆風候補",
+      "WTI・Brent上昇、米エネルギーETF +1.43%：資源に追い風、運輸にコスト警戒",
+      "米債市場は休場：古い金利を10月12日の市場反応として使わない",
+      "フジミ・OSG・安川電機・JINS・イオンFS：休場明けの初動を個別確認"
+    ],
+    "focus_sectors": [
+      "エネルギー資源",
+      "電機・精密",
+      "機械",
+      "運輸・物流",
+      "小売"
+    ],
+    "top_stories": [
+      {
+        "company": "フジミインコーポレーテッド",
+        "ticker": "5384",
+        "headline": "通期営業利益予想19.0%増額、配当予想77円から92円",
+        "importance": "高",
+        "market_pricing_status": "10月13日現物で確認"
+      },
+      {
+        "company": "OSG",
+        "ticker": "6136",
+        "headline": "自社株買いを決議、10月13日のToSTNeT-3取得を予定",
+        "importance": "高",
+        "market_pricing_status": "10月13日現物で確認"
+      },
+      {
+        "company": "安川電機",
+        "ticker": "6506",
+        "headline": "売上予想引き上げ、営業利益予想引き下げ",
+        "importance": "高",
+        "market_pricing_status": "10月13日現物で確認"
+      }
+    ],
+    "total_story_count": 5
+  },
+  "what_changed": {
+    "previous_view": "10月12日版は米株の広がりを支え、SOXの小幅安を反証としていた。",
+    "new_information": "10月12日はSOX下落が-2.67%へ拡大し、原油・エネルギーが上昇。Dowのみ上昇。",
+    "revision": "半導体を中立から明確な逆風候補へ、資源を追い風候補へ修正。ただし日本株反応は寄り付き後に確認。"
+  },
+  "source_notes": [
+    "市場数値はmarket.json正本",
+    "日本株実績はjapan-market.json",
+    "政策・企業材料はnews.json内の一次資料検証済み記事",
+    "後日確認を当時確認済みとは扱わない"
+  ]
+}

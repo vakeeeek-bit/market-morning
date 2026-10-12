@@ -1,10 +1,10 @@
 {
-  "report_date": "2026-10-12",
-  "target_market_date": "2026-10-09",
-  "updated_at": "2026-10-12T13:49:10+09:00",
+  "report_date": "2026-10-13",
+  "target_market_date": "2026-10-12",
+  "updated_at": "2026-10-13T07:15:37+09:00",
   "publication_mode": "verified_news",
   "coverage_status": "partial",
-  "coverage_note": "部分収集20件。午後にBOJ地域経済報告と米軽油税大統領令の2件を追加実読。過去発表日の補完であり10月12日新規発表ではない。既存18件の確認時刻を保持。総合レポートの市場品質とは別。",
+  "coverage_note": "一次資料・信頼性の高い市場報道の確認済み22件を掲載。網羅性や10月13日の日本株反応を意味しません。",
   "articles": [
     {
       "id": "boj-sakura-20261008",
@@ -763,6 +763,82 @@
         "limitations": {
           "status": "PASS",
           "evidence": "コード7741。契約締結と譲渡完了を区別。非開示の対価を推定しない。"
+        }
+      }
+    },
+    {
+      "id": "reuters-us-market-20261012",
+      "title": "米株：原油高と半導体安でS&P500・NASDAQ下落、Dowは上昇",
+      "published_date": "2026-10-12",
+      "verified_at": "2026-10-13T07:15:37+09:00",
+      "source_type": "primary",
+      "publisher": "Reuters",
+      "source_url": "https://www.reuters.com/business/us-stock-futures-muted-oil-stays-above-100-ahead-earnings-2026-10-12/",
+      "verification_url": "https://www.reuters.com/business/us-stock-futures-muted-oil-stays-above-100-ahead-earnings-2026-10-12/",
+      "verification_status": "PASS",
+      "fact": "10月12日は原油高が株式の重荷となり、S&P500とNASDAQが下落する一方、Dowは上昇。SOXは約2.7%下落し、エネルギー株は上昇した。",
+      "analysis": "日本株では資源株の追い風候補と、半導体・高PER株および燃料コスト敏感業種の逆風候補を分ける。",
+      "limitations": "記事で確認した市場反応であり、10月13日の日本株現物反応は未確認。個別ニュースの寄与を単独因果としない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Reuters本文とYahoo日足を照合"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "Reuters本文とYahoo日足を照合"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日と対象市場日を分離"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実・市場反応・解釈を分離"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "因果未確定と取得制約を明示"
+        }
+      }
+    },
+    {
+      "id": "sifma-bond-holiday-20261012",
+      "title": "SIFMA：10月12日の米ドル建て債券市場を終日休場推奨",
+      "published_date": "2026-09-29",
+      "verified_at": "2026-10-13T07:15:37+09:00",
+      "source_type": "primary",
+      "publisher": "SIFMA",
+      "source_url": "https://www.sifma.org/news/press-releases/sifma-fixed-income-market-close-recommendations-in-the-u-s-the-u-k-and-japan-for-u-s-columbus-day-and-japan-health-and-sports-day-holidays-2026",
+      "verification_url": "https://www.sifma.org/news/press-releases/sifma-fixed-income-market-close-recommendations-in-the-u-s-the-u-k-and-japan-for-u-s-columbus-day-and-japan-health-and-sports-day-holidays-2026",
+      "verification_status": "PASS",
+      "fact": "SIFMAは2026年10月12日、米国・英国・日本での米ドル建て債券取引について終日休場を推奨した。推奨であり各社の判断余地は残る。",
+      "analysis": "10月12日の米国株と原油の動きを、同日米国債利回りの変化で説明しない。",
+      "limitations": "SIFMAの推奨対象と個別の先物・電子取引を同一視しない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "SIFMA公式休場案内を確認"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "SIFMA公式休場案内を確認"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日と対象市場日を分離"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実・市場反応・解釈を分離"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "因果未確定と取得制約を明示"
         }
       }
     }

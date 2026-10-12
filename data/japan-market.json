@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-13 01:08:50 JST",
+  "updated_at": "2026-10-13 07:15:37 JST",
   "market_date": "2026-10-09",
   "data_phase": "取引開始前",
   "data_state": {
     "kind": "normal",
-    "label": "通常取引日",
-    "message": "取引日データを正常取得"
+    "label": "前営業日値・本日寄り付き前",
+    "message": "10月12日は休場。10月13日は寄り付き前のため10月9日実績を維持"
   },
   "source": "Yahoo Finance via yfinance（1回の一括取得）",
   "scope": "市場・セクター評価は指数連動ETFとTOPIX-17業種ETFを使用。主要監視34銘柄は銘柄ランキングだけに使用",
@@ -1036,15 +1036,16 @@
     "basis": "前回レポートの注目業種をTOPIX-17業種ETFの実績と照合し、次の取引日へ見方を修正",
     "status": "寄り付き前・検証保留",
     "checks": [],
-    "previous_condition": "10月12日休場中の政策・企業材料 / 10月13日の個別株反応",
-    "condition_result": "本日の条件と日本株現物の反応はまだ発生・確認していません",
-    "market_reaction": "本日の日本株現物は寄り付き前",
-    "unexpected_gap": "新しい取引結果がないため比較しません",
-    "gap_reason": "業種ETFの結果だけでは個別ニュースとの因果を分離できないため、理由は断定しません",
-    "revision": "本日の大引け後、実際の条件・市場反応・想定との差を確認して修正",
+    "previous_condition": "SOX反発と日本側のTOPIX超過 / 同一基準日の米金利 / 企業開示5社の反応",
+    "condition_result": "SOXは-2.67%へ下落拡大。米債は休場。日本株現物は寄り付き前",
+    "market_reaction": "海外では半導体劣後・エネルギー優位。日本側反応は未確認",
+    "unexpected_gap": "米主要指数は一方向ではなく、Dow高とNASDAQ安に分岐",
+    "gap_reason": "原油・業種・個別銘柄の寄与が分かれたため、指数平均では捉えにくい",
+    "revision": "本日は資源と半導体・運輸の相対差を優先し、寄り付き後に確認",
     "today_watch": [
-      "10月12日休場中の政策・企業材料",
-      "10月13日の個別株反応"
+      "国内半導体とTOPIXの相対騰落",
+      "資源と運輸の相対騰落",
+      "企業開示5社の寄り付き・出来高・終値"
     ],
     "note": "前営業日の値動きを、本日シナリオの結果として採点しません。"
   },
@@ -1055,11 +1056,11 @@
     "stock_available": 34,
     "date_alignment": {
       "expected_market_date": "2026-10-09",
-      "report_target_market_date": "2026-10-09",
+      "report_target_market_date": "2026-10-12",
       "sector_market_date": "2026-10-09",
       "stock_market_date": "2026-10-09",
       "benchmark_market_date": "2026-10-09",
-      "aligned": true,
+      "aligned": false,
       "benchmark_aligned": true
     }
   },
@@ -1086,102 +1087,102 @@
   },
   "key_drivers": [
     {
-      "driver": "ドル円",
-      "category": "為替",
-      "assessment": "中立",
-      "status": "observed",
-      "market_value": 158.063,
-      "change_pct": 0.0,
-      "transmission_path": "輸出採算と輸入コストが変化",
-      "reason": "USD/JPY 158.063、前日比 +0.00%（2026-10-09）→ 輸出採算と輸入コストが変化",
-      "affected_sectors": [
-        "自動車・輸送機",
-        "機械",
-        "小売"
-      ],
-      "market_date": "2026-10-09",
-      "selection_factors": {
-        "日本株現物への織り込み": "同日または既反映の参考値",
-        "日本株への波及範囲": 3,
-        "影響業種数": 3,
-        "ニュース重要度": 3,
-        "値動き": 1
-      },
-      "pricing_status": "同日または既反映の参考値",
-      "change_condition": "為替が反転し、自動車・機械の相対方向も変われば見方を修正する"
-    },
-    {
-      "driver": "米10年金利",
-      "category": "金利",
-      "assessment": "中立",
-      "status": "observed",
-      "market_value": 5.244,
-      "change_pct": 0.25,
-      "transmission_path": "高PER株の割引率と銀行収益期待が変化",
-      "reason": "米10年債利回り 5.244、前日比 +0.25%（2026-10-09）→ 高PER株の割引率と銀行収益期待が変化",
-      "affected_sectors": [
-        "電機・精密",
-        "情報通信・サービス",
-        "銀行"
-      ],
-      "market_date": "2026-10-09",
-      "selection_factors": {
-        "日本株現物への織り込み": "同日または既反映の参考値",
-        "日本株への波及範囲": 3,
-        "影響業種数": 3,
-        "ニュース重要度": 3,
-        "値動き": 1
-      },
-      "pricing_status": "同日または既反映の参考値",
-      "change_condition": "金利の方向が反転し、電機・精密や銀行の反応も変われば見方を修正する"
-    },
-    {
       "driver": "米国半導体株",
       "category": "海外株",
-      "assessment": "中立",
+      "assessment": "向かい風候補",
       "status": "observed",
-      "market_value": 12572.4199,
-      "change_pct": -0.41,
-      "transmission_path": "国内半導体関連の投資家心理に波及",
-      "reason": "PHLX半導体株指数（SOX） 12572.4199、前日比 -0.41%（2026-10-09）→ 国内半導体関連の投資家心理に波及",
+      "market_value": 12236.7881,
+      "change_pct": -2.67,
+      "transmission_path": "国内半導体・製造装置の投資家心理に波及",
+      "reason": "SOX -2.67%。Dow高と分岐しており半導体固有の弱さを確認",
       "affected_sectors": [
         "電機・精密",
         "機械"
       ],
-      "market_date": "2026-10-09",
+      "market_date": "2026-10-12",
       "selection_factors": {
-        "日本株現物への織り込み": "同日または既反映の参考値",
+        "日本株現物への織り込み": "日本株現物に未反映",
         "日本株への波及範囲": 3,
         "影響業種数": 2,
         "ニュース重要度": 3,
-        "値動き": 1
+        "値動き": 3
       },
-      "pricing_status": "同日または既反映の参考値",
-      "change_condition": "米半導体株が反転するか、日本の電機・精密が追随しなければ影響を弱く見る"
+      "pricing_status": "日本株現物に未反映",
+      "change_condition": "国内半導体がTOPIXを上回るかSOXが反発すれば逆風評価を弱める"
     },
     {
       "driver": "米国大型ハイテク株",
       "category": "海外株",
-      "assessment": "追い風",
+      "assessment": "向かい風候補",
       "status": "observed",
-      "market_value": 30883.1504,
-      "change_pct": 0.51,
+      "market_value": 30664.6973,
+      "change_pct": -0.71,
       "transmission_path": "国内グロース株の投資家心理に波及",
-      "reason": "NASDAQ100 30883.1504、前日比 +0.51%（2026-10-09）→ 国内グロース株の投資家心理に波及",
+      "reason": "NASDAQ100 -0.71%、米情報技術ETF -1.22%",
       "affected_sectors": [
         "電機・精密",
         "情報通信・サービス"
       ],
-      "market_date": "2026-10-09",
+      "market_date": "2026-10-12",
       "selection_factors": {
-        "日本株現物への織り込み": "同日または既反映の参考値",
-        "日本株への波及範囲": 2,
+        "日本株現物への織り込み": "日本株現物に未反映",
+        "日本株への波及範囲": 3,
         "影響業種数": 2,
         "ニュース重要度": 2,
         "値動き": 2
       },
-      "pricing_status": "同日または既反映の参考値",
-      "change_condition": "米国ハイテク株が反転し、日本のグロース株が追随しなければ影響を弱く見る"
+      "pricing_status": "日本株現物に未反映",
+      "change_condition": "NASDAQ100反発と国内グロースのTOPIX超過で見方を修正"
+    },
+    {
+      "driver": "米エネルギー株",
+      "category": "海外株・商品",
+      "assessment": "資源に追い風／運輸に向かい風候補",
+      "status": "observed",
+      "market_value": 66.01,
+      "change_pct": 1.43,
+      "transmission_path": "資源収益期待と燃料コストを通じて波及",
+      "reason": "米エネルギーETF +1.43%。Reutersでも原油上昇を確認",
+      "affected_sectors": [
+        "エネルギー資源",
+        "商社・卸売",
+        "運輸・物流"
+      ],
+      "market_date": "2026-10-12",
+      "selection_factors": {
+        "日本株現物への織り込み": "日本株現物に未反映",
+        "日本株への波及範囲": 3,
+        "影響業種数": 3,
+        "ニュース重要度": 3,
+        "値動き": 2
+      },
+      "pricing_status": "日本株現物に未反映",
+      "change_condition": "資源がTOPIXを上回らず運輸も下げなければ原油伝達を弱める"
+    },
+    {
+      "driver": "ドル指数",
+      "category": "為替",
+      "assessment": "ドル高候補",
+      "status": "observed",
+      "market_value": 102.565,
+      "change_pct": 0.35,
+      "transmission_path": "円相場・輸入コスト・輸出採算を通じて波及",
+      "reason": "DXY +0.35%。USD/JPY確定日足は未取得のため円安とは断定しない",
+      "affected_sectors": [
+        "自動車・輸送機",
+        "小売",
+        "素材・化学"
+      ],
+      "market_date": "2026-10-12",
+      "selection_factors": {
+        "日本株現物への織り込み": "日本株現物に未反映",
+        "日本株への波及範囲": 3,
+        "影響業種数": 3,
+        "ニュース重要度": 2,
+        "値動き": 1
+      },
+      "pricing_status": "日本株現物に未反映",
+      "change_condition": "確定USD/JPY日足と輸出・内需の反応が逆ならドル高伝達を弱める"
     }
   ],
   "rotation_read": {

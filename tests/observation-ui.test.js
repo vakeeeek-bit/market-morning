@@ -24,14 +24,14 @@ class Element {
   replaceChildren(...nodes) {this.children=nodes;}
   querySelector(selector) {return this.children.find(x=>selector==='.publication-asof' && x.className==='publication-asof') || null;}
 }
-async function fixture() {
+async function fixture(options={}) {
   let day='2026-10-05';
   const ids=new Map(['quick-view','executive-section','report-date'].map(x=>[x,new Element('div')]));
   const handlers={};
   const created=[];
   const context={document:{createElement:t=>{const e=new Element(t);created.push(e);return e;},getElementById:id=>ids.get(id)}, location:{search:''},window:{addEventListener:(name,fn)=>handlers[name]=fn},URLSearchParams,AbortController,setTimeout,clearTimeout,MutationObserver:class {observe(){}},fetch:async path=>{
     if(path.endsWith('market.json')) throw new Error('one network failure');
-    const value=path.endsWith('/report.json')?{report_date:day,target_market_date:'2026-10-02',data_quality:{overall:'MANUAL_REVIEW'}}:path.endsWith('/news.json')?{report_date:'2026-10-10',articles:[{}]}:null;
+    const value=path.endsWith('/report.json')?{report_date:day,target_market_date:'2026-10-02',updated_at:options.reportUpdatedAt,data_quality:{overall:'MANUAL_REVIEW'}}:path.endsWith('/news.json')?{report_date:'2026-10-10',articles:[{}]}:path.endsWith('/site-audit.json')?options.audit:null;
     return {ok:!!value,json:async()=>value};
   }};
   vm.runInNewContext(fs.readFileSync(require.resolve('../assets/publication-health.js'),'utf8'),context);
@@ -50,6 +50,24 @@ test('as-of note updates after date switch rather than remaining stale',async()=
   f.setDay('2026-10-09');await f.handlers['publication-data-loaded']();
   assert.match(f.ids.get('executive-section').querySelector('.publication-asof').textContent,/2026-10-09/);
   assert.equal(f.ids.get('executive-section').children.length,1);
+});
+
+test('a candidate audit older than the published report is not displayed',async()=>{
+  const f=await fixture({
+    reportUpdatedAt:'2026-10-12T16:41:41+09:00',
+    audit:{checked_at:'2026-10-12T13:50:45+09:00',report_publication_status:'午後候補：未公開',blockers:[]}
+  });
+  const host=f.created.find(x=>x.id==='publication-health');
+  assert.ok(!host.children.some(x=>x.textContent.includes('午後候補：未公開')));
+});
+
+test('an audit newer than the published report remains visible',async()=>{
+  const f=await fixture({
+    reportUpdatedAt:'2026-10-12T16:41:41+09:00',
+    audit:{checked_at:'2026-10-12T17:00:00+09:00',report_publication_status:'再点検中',blockers:[]}
+  });
+  const host=f.created.find(x=>x.id==='publication-health');
+  assert.ok(host.children.some(x=>x.textContent.includes('再点検中')));
 });
 
  test('a missing percentage is never converted to a flat zero move', () => {

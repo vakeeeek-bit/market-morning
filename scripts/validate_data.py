@@ -16,8 +16,10 @@ from typing import Any
 
 try:
     from research_quality import COVERAGE_STATUSES, validate_research_quality
+    from publication_policy import assess_market_publication, assess_report_publication
 except ModuleNotFoundError:  # imported as scripts.validate_data in unit tests
     from scripts.research_quality import COVERAGE_STATUSES, validate_research_quality
+    from scripts.publication_policy import assess_market_publication, assess_report_publication
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -267,13 +269,22 @@ def validate_relationships(data: dict[str, dict], result: ValidationResult) -> N
                     result.warning(f"{key}: {value}を維持（{reason.strip()}）")
                 else:
                     stale.append(f"{key}={value}")
+        qualified = report.get("publication_policy", {}).get("status") == "QUALIFIED"
         if missing:
-            result.error("必須市場データがありません: " + ", ".join(missing))
+            message = "必須市場データがありません: " + ", ".join(missing)
+            if qualified and report.get("data_quality", {}).get("missing"):
+                result.warning(message + "（QUALIFIED注釈・結論除外を確認）")
+            else:
+                result.error(message)
         if stale:
-            result.error(
+            message = (
                 "target_market_dateより古い市場データが残っています: " + ", ".join(stale)
                 + "。休場・公表日差など正当な理由がある場合は、日次データ側で明示的な例外設計を追加してください"
             )
+            if qualified and report.get("data_quality", {}).get("cautions"):
+                result.warning(message + "（QUALIFIED注釈・結論除外を確認）")
+            else:
+                result.error(message)
         if not missing and not stale:
             result.ok("必須市場データのtarget_market_date整合性")
 
@@ -465,7 +476,7 @@ def run(root: Path = ROOT, scope: str = "report") -> ValidationResult:
             result.ok("確認済みニュースのみ検証。市場・レポートの公開判定は変更しない")
         return result
     data: dict[str, dict] = {}
-    names = ("market", "status") if scope == "market" else DATA_NAMES
+    names = ("market", "status") if scope in {"market", "market-publication"} else DATA_NAMES
     for name in names:
         data_path = root / "data" / f"{name}.json"
         schema_path = root / "schemas" / f"{name}.schema.json"
@@ -482,15 +493,17 @@ def run(root: Path = ROOT, scope: str = "report") -> ValidationResult:
         data[name] = value
         result.ok(f"{name}.jsonのスキーマ検証")
 
-    if scope == "market" and "market" in data:
+    if scope in {"market", "market-publication"} and "market" in data:
         # A new price snapshot must not depend on yesterday's narrative report.
         # Missing observations remain explicit; never mark an empty update successful.
         markets = data["market"].get("markets", {})
-        for key in ("sp500", "nasdaq", "nasdaq100", "dow", "russell2000", "sox", "vix"):
-            row = markets.get(key, {})
-            if row.get("price") is None or row.get("status") != "取得成功" or not row.get("market_date"):
-                result.error(f"market.markets.{key}: 更新成功に必要な指数観測がありません")
-        result.ok("市場取得の検証とレポート公開の検証を分離")
+        assessment = assess_market_publication(data["market"])
+        for message in assessment.errors:
+            result.error(message)
+        for message in assessment.warnings:
+            result.warning(message)
+        if assessment.status != "BLOCK":
+            result.ok(f"市場取得の独立公開判定（{assessment.status}）")
     elif all(name in data for name in DATA_NAMES):
         validate_relationships(data, result)
         validate_market_context(data, result)
@@ -503,31 +516,49 @@ def run(root: Path = ROOT, scope: str = "report") -> ValidationResult:
                 result.error(message)
         else:
             result.ok("Research & Analysis Quality Gate（最終9項目）")
-    if scope == "publish":
+    if scope in {"publish", "publish-report"}:
         try:
             from publication_observations import validate_observations, copper_is_included
         except ModuleNotFoundError:
             from scripts.publication_observations import validate_observations, copper_is_included
-        for message in validate_observations(data.get('market', {}), include_copper=copper_is_included(data.get('report', {}))):
-            result.error(message)
+        observation_errors = validate_observations(
+            data.get('market', {}),
+            include_copper=copper_is_included(data.get('report', {})),
+        )
+        qualified = data.get("report", {}).get("publication_policy", {}).get("status") == "QUALIFIED"
+        for message in observation_errors:
+            if qualified and data.get("report", {}).get("data_quality", {}).get("missing"):
+                result.warning(message + "（公開対象の結論から除外）")
+            else:
+                result.error(message)
         from datetime import datetime
         from zoneinfo import ZoneInfo
         today = datetime.now(ZoneInfo("Asia/Tokyo")).date().isoformat()
         for name in ("report", "japan-stocks", "research-evidence"):
             if data.get(name, {}).get("report_date") != today:
                 result.error(f"{name}: 本日版ではありません（公開ゲート）")
-        for name in ("report", "japan-stocks"):
-            if data.get(name, {}).get("data_quality", {}).get("overall") != "PASS":
-                result.error(f"{name}: 総合品質PASSでないため自動公開不可")
-        if not str(data.get("status", {}).get("updated_at", "")).startswith(today) or data.get("status", {}).get("status") != "success" or data.get("status", {}).get("component") != "market_data":
-            result.error("status: 当日の市場収集成功が必要")
+        assessment = assess_report_publication(
+            data.get("research-evidence", {}),
+            data.get("report", {}),
+            data.get("japan-stocks", {}),
+        )
+        for message in assessment.errors:
+            result.error(message)
+        for message in assessment.warnings:
+            result.warning(message)
+        if assessment.status != "BLOCK":
+            result.ok(f"総合レポート公開判定（{assessment.status}）")
     return result
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=ROOT)
-    parser.add_argument("--scope", choices=("report", "market", "news", "publish"), default="report")
+    parser.add_argument(
+        "--scope",
+        choices=("report", "market", "market-publication", "news", "publish", "publish-report"),
+        default="report",
+    )
     args = parser.parse_args()
     result = run(args.root.resolve(), args.scope)
     for message in result.checks:

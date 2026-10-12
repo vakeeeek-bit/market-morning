@@ -1,0 +1,390 @@
+{
+  "updated_at": "2026-10-03 06:30:00",
+  "timezone": "Asia/Tokyo",
+  "source": "Yahoo Finance chart API for market closes; FRED DGS2 for US 2Y Treasury yield; Reuters same-session US 2Y quote for 2026-10-02",
+  "notes": {
+    "basis": "priceは各tickerの取得可能な最新日足Close。market_dateを必ず併記し、取引中値や日中高値として扱わない",
+    "topix": "TOPIXそのものではなく1306.T（TOPIX連動ETF）を参考値として使用",
+    "sox": "^SOXをPHLX半導体株指数の参考終値として使用",
+    "us_sectors": "S&P500の11業種そのものではなく、各Sector SPDR ETFの日足終値をセクター強弱の参考値として使用",
+    "us10y": "^TNXを米10年債利回りとして使用",
+    "us2y": "2026-10-02はFRED公表ラグのためReuters同日市場値4.827%を使用。通常更新はFRED DGS2を使用",
+    "us_2s10s": "米10年債利回り - 米2年債利回り。両系列のmarket_dateも確認してください",
+    "vix": "^VIXをVIX指数として使用"
+  },
+  "markets": {
+    "sp500": {
+      "name": "S&P500",
+      "ticker": "^GSPC",
+      "price": 7722.7202,
+      "previous": 7666.4502,
+      "change": 56.27,
+      "change_pct": 0.73,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "nasdaq": {
+      "name": "NASDAQ総合",
+      "ticker": "^IXIC",
+      "price": 27190.8594,
+      "previous": 26871.5996,
+      "change": 319.2598,
+      "change_pct": 1.19,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "nasdaq100": {
+      "name": "NASDAQ100",
+      "ticker": "^NDX",
+      "price": 30807.9297,
+      "previous": 30501.5605,
+      "change": 306.3691,
+      "change_pct": 1.0,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "sox": {
+      "name": "PHLX半導体株指数（SOX）",
+      "ticker": "^SOX",
+      "price": 13136.6699,
+      "previous": 12829.0,
+      "change": 307.6699,
+      "change_pct": 2.4,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "dow": {
+      "name": "NYダウ",
+      "ticker": "^DJI",
+      "price": 51176.9609,
+      "previous": 50926.5586,
+      "change": 250.4023,
+      "change_pct": 0.49,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "russell2000": {
+      "name": "Russell2000",
+      "ticker": "^RUT",
+      "price": 2832.8999,
+      "previous": 2806.6299,
+      "change": 26.27,
+      "change_pct": 0.94,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "nikkei225": {
+      "name": "日経225",
+      "ticker": "^N225",
+      "price": 68309.4609,
+      "previous": 68956.7188,
+      "change": -647.2578,
+      "change_pct": -0.94,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "topix": {
+      "name": "TOPIX参考（1306 ETF）",
+      "ticker": "1306.T",
+      "price": 430.2,
+      "previous": 434.4,
+      "change": -4.2,
+      "change_pct": -0.97,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "dxy": {
+      "name": "DXY",
+      "ticker": "DX-Y.NYB",
+      "price": 101.93,
+      "previous": 102.1,
+      "change": -0.17,
+      "change_pct": -0.17,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "usdjpy": {
+      "name": "USD/JPY",
+      "ticker": "JPY=X",
+      "price": 157.927,
+      "previous": 157.558,
+      "change": 0.369,
+      "change_pct": 0.23,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "eurusd": {
+      "name": "EUR/USD",
+      "ticker": "EURUSD=X",
+      "price": 1.1257,
+      "previous": 1.125,
+      "change": 0.0008,
+      "change_pct": 0.07,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-02"
+    },
+    "us10y": {
+      "name": "米10年債利回り",
+      "ticker": "^TNX",
+      "price": 5.277,
+      "previous": 5.237,
+      "change": 0.04,
+      "change_pct": 0.76,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "vix": {
+      "name": "VIX",
+      "ticker": "^VIX",
+      "price": 15.31,
+      "previous": 16.39,
+      "change": -1.08,
+      "change_pct": -6.59,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "sector_xlc": {
+      "name": "米コミュニケーション・サービス（XLC）",
+      "ticker": "XLC",
+      "price": 110.32,
+      "previous": 109.94,
+      "change": 0.38,
+      "change_pct": 0.35,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "sector_xly": {
+      "name": "米一般消費財（XLY）",
+      "ticker": "XLY",
+      "price": 110.04,
+      "previous": 108.81,
+      "change": 1.23,
+      "change_pct": 1.13,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "sector_xlp": {
+      "name": "米生活必需品（XLP）",
+      "ticker": "XLP",
+      "price": 80.53,
+      "previous": 80.33,
+      "change": 0.2,
+      "change_pct": 0.25,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "sector_xle": {
+      "name": "米エネルギー（XLE）",
+      "ticker": "XLE",
+      "price": 62.82,
+      "previous": 62.7,
+      "change": 0.12,
+      "change_pct": 0.19,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "sector_xlf": {
+      "name": "米金融（XLF）",
+      "ticker": "XLF",
+      "price": 53.49,
+      "previous": 53.46,
+      "change": 0.03,
+      "change_pct": 0.06,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "sector_xlv": {
+      "name": "米ヘルスケア（XLV）",
+      "ticker": "XLV",
+      "price": 166.18,
+      "previous": 166.2,
+      "change": -0.02,
+      "change_pct": -0.01,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "sector_xli": {
+      "name": "米資本財（XLI）",
+      "ticker": "XLI",
+      "price": 169.95,
+      "previous": 168.64,
+      "change": 1.31,
+      "change_pct": 0.78,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "sector_xlb": {
+      "name": "米素材（XLB）",
+      "ticker": "XLB",
+      "price": 48.86,
+      "previous": 48.54,
+      "change": 0.32,
+      "change_pct": 0.66,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "sector_xlre": {
+      "name": "米不動産（XLRE）",
+      "ticker": "XLRE",
+      "price": 40.81,
+      "previous": 40.68,
+      "change": 0.13,
+      "change_pct": 0.32,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "sector_xlk": {
+      "name": "米情報技術（XLK）",
+      "ticker": "XLK",
+      "price": 199.81,
+      "previous": 197.81,
+      "change": 2.0,
+      "change_pct": 1.01,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "sector_xlu": {
+      "name": "米公益（XLU）",
+      "ticker": "XLU",
+      "price": 39.83,
+      "previous": 39.68,
+      "change": 0.15,
+      "change_pct": 0.38,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "gold": {
+      "name": "Gold",
+      "ticker": "GC=F",
+      "price": 4162.2998,
+      "previous": 4202.2998,
+      "change": -40.0,
+      "change_pct": -0.95,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "silver": {
+      "name": "Silver",
+      "ticker": "SI=F",
+      "price": 60.415,
+      "previous": 60.725,
+      "change": -0.31,
+      "change_pct": -0.51,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "copper": {
+      "name": "Copper",
+      "ticker": "HG=F",
+      "price": 6.549,
+      "previous": 6.482,
+      "change": 0.067,
+      "change_pct": 1.03,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "wti": {
+      "name": "WTI",
+      "ticker": "CL=F",
+      "price": 91.11,
+      "previous": 92.87,
+      "change": -1.76,
+      "change_pct": -1.9,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "brent": {
+      "name": "Brent",
+      "ticker": "BZ=F",
+      "price": 102.25,
+      "previous": 102.31,
+      "change": -0.06,
+      "change_pct": -0.06,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "btc": {
+      "name": "BTC",
+      "ticker": "BTC-USD",
+      "price": 84497.2109,
+      "previous": 84853.1016,
+      "change": -355.8906,
+      "change_pct": -0.42,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "eth": {
+      "name": "ETH",
+      "ticker": "ETH-USD",
+      "price": 2668.1511,
+      "previous": 2705.5371,
+      "change": -37.386,
+      "change_pct": -1.38,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01"
+    },
+    "us2y": {
+      "name": "米2年債利回り",
+      "ticker": "Reuters:US2Y",
+      "price": 4.827,
+      "previous": 4.7872,
+      "change": 0.0398,
+      "change_pct": 0.83,
+      "status": "取得成功",
+      "market_date": "2026-10-02",
+      "previous_market_date": "2026-10-01",
+      "source_note": "Reuters同日市場値（FRED DGS2の公表ラグを補完）"
+    }
+  },
+  "derived": {
+    "us_2s10s": {
+      "name": "米2年-10年スプレッド",
+      "value_pct_point": 0.45,
+      "value_bp": 45.0,
+      "previous_pct_point": 0.4498,
+      "previous_bp": 45.0,
+      "change_bp": 0.0,
+      "curve": "順イールド",
+      "status": "計算成功",
+      "formula": "米10年債利回り - 米2年債利回り"
+    }
+  },
+  "data_quality": {
+    "total": 32,
+    "success_count": 32,
+    "failed_count": 0,
+    "success_rate_pct": 100.0,
+    "failed_keys": []
+  }
+}

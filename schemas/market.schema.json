@@ -36,9 +36,6 @@
         },
         "vix": {
           "type": "string"
-        },
-        "same_date_stability": {
-          "type": "string"
         }
       },
       "additionalProperties": true
@@ -917,6 +914,9 @@
             "previous_market_date": {
               "type": "string",
               "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            },
+            "stability_note": {
+              "type": "string"
             }
           },
           "additionalProperties": true
@@ -952,6 +952,9 @@
             "previous_market_date": {
               "type": "string",
               "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            },
+            "stability_note": {
+              "type": "string"
             }
           },
           "additionalProperties": true
@@ -987,6 +990,9 @@
             "previous_market_date": {
               "type": "string",
               "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            },
+            "stability_note": {
+              "type": "string"
             }
           },
           "additionalProperties": true
@@ -1022,6 +1028,9 @@
             "previous_market_date": {
               "type": "string",
               "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            },
+            "stability_note": {
+              "type": "string"
             }
           },
           "additionalProperties": true
@@ -1057,6 +1066,9 @@
             "previous_market_date": {
               "type": "string",
               "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+            },
+            "stability_note": {
+              "type": "string"
             }
           },
           "additionalProperties": true

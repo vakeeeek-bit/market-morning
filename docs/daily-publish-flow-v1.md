@@ -1,76 +1,51 @@
-# Market Morning 日次公開フロー v1
+# Market Morning 日次公開フロー v2
 
-## 定時実行
+## 原則
 
-- 市場データ取得はGitHub Actionsで日本時間の平日6:20に開始する。
-- cronはUTC基準のため、`20 21 * * 0-4`（UTCの日曜〜木曜21:20）を使用する。
-- ChatGPTのMarket Morningタスクは、市場データ更新の検証完了を待つため日本時間の平日6:45に開始する。
-- ChatGPTは、公開済みの`data/status.json`が当日成功であることを確認し、`data/market.json`を数値の正本として使用する。
-- ChatGPTからGitHubへレポート本文を自動反映する処理は、JSON適合と品質ゲートの検証後にのみ有効化する。
+公開停止と作業停止を分ける。ある公開単位がBLOCKでも、市場再取得、調査、修正、確認済みニュース、独立して安全な市場データの更新を続ける。ユーザーへ同じ公開許可を取り直さない。
 
-## 目的
+## 6:20 / 7:20 / 8:20 市場更新
 
-市場データの自動更新と、レポート・日本株詳細の公開を、不完全なJSONや日付の異なる組み合わせを公開しない形で運用する。
+1. `update_market.py`が各系列を通常取得で最大3回試す。
+2. 失敗系列だけYahoo個別chart取得へ切り替える。
+3. なお取得不能なら、過去の検証済み値を元の`market_date`付きで保持し、`取得不能・前回値維持`と表示する。最新値とは扱わない。
+4. 主要指数の新規観測が安全な最低数を満たせば市場単位をQUALIFIED更新する。広範な障害ならBLOCKし、既存正本を保持して試行記録を保存する。
+5. 市場単位の検証は古いAIレポートに依存させない。
+6. `status.json`へ市場単位のPASS/QUALIFIED、更新時刻、対象コンポーネントを記録する。
 
-## 現行フロー
+## AIレポート
 
-### 市場データ（自動）
+1. `create_research_evidence.py`で未完了状態のワークシートと前日からの未解決項目を読み込む。
+2. 4方向調査、数値・時系列、分析経路、反証、前日との差分を埋める。
+3. 取得不能項目は試行・確認時刻・不足・影響・除外した断定・次の調査を記録する。
+4. BLOCK材料は本文から除外し、残りの結論を再検証する。主要結論が成立しなければ結論を保留する。
+5. `report.json`、`japan-stocks.json`、`research-evidence.json`を同時に検証する。
+6. PASSまたはQUALIFIEDならAIレポート単位を配置する。BLOCKなら旧レポートを上書きせず、他単位の更新を続ける。
 
-1. GitHub Actionsが平日6:20 JSTに`update_market.py`を実行する。
-2. `validate_data.py`で現行レポートとの組み合わせを検証する。日付差は警告、構造・整合性エラーは公開停止とする。
-3. 検証成功時だけ`status.json`へ市場データ更新成功時刻を記録し、公開候補を再検証する。
-4. `data/history/YYYY-MM-DD/market.json`へ履歴を保存する。
-5. `data/market.json`、`data/status.json`、履歴を1コミットで`main`へ反映する。
-6. Vercelが`main`から本番公開する。
+```bash
+python scripts/prepare_publish.py candidate --components report --check-only
+python scripts/prepare_publish.py candidate --components report
+```
 
-同じ更新処理は重複実行しない。`concurrency`により、先行処理の終了後に次の処理を開始する。
+## 確認済みニュース
 
-### レポートと日本株詳細（確認後に公開）
+記事ごとに一次資料、発表日、確認時刻、事実・解釈・制約を検証する。不合格記事は除外理由を残し、無関係な合格記事を止めない。総合レポートのPASSとはみなさない。
 
-1. ChatGPTタスクを平日6:45 JSTに開始し、当日成功の`status.json`と検証済み`market.json`を読み込む。
-2. `market.json`に存在する数値は同ファイルを正本とし、Web検索値で置換しない。
-3. `python scripts/create_research_evidence.py`でFAIL状態の調査ワークシートを作り、4方向調査、分析経路、反証監査、前日認識差分を記録する。
-4. 公開候補用の同一ディレクトリに`report.json`、`japan-stocks.json`、`research-evidence.json`を置く。
-5. 次のコマンドで、スキーマ、重要ニュースTOP3、日本株重要材料TOP5、詳細件数、日付、調査・分析品質9ゲートをまとめて検証する。
+```bash
+python scripts/prepare_publish.py candidate --components news
+```
 
-   ```bash
-   python scripts/prepare_publish.py /path/to/candidate --check-only
-   ```
+## 複数単位
 
-6. 内容確認後、`--check-only`を外して3ファイルを`data/`へ配置する。
+`--components auto`またはカンマ区切りで処理する。各単位は別に検証され、BLOCK単位は配置されない。安全な単位が1つでもあれば、それを配置して処理を継続する。
 
-   ```bash
-   python scripts/prepare_publish.py /path/to/candidate
-   ```
+## 履歴と表示
 
-7. `report.json`、`japan-stocks.json`、`research-evidence.json`を必ず同じGitコミットで`main`へ反映する。
-8. GitHub Actionsの`Validate Market Morning Data`が成功したことと、本番URLの表示を確認する。
+- report、market、japan-stocks、research-evidence、newsは実際の基準日へ保存する。
+- 後日調査はretrospectiveと実際の確認時刻を残し、当時確認済みだったと偽装しない。
+- 最新画面はAIレポート日、対象市場日、市場取得時刻、日本株実績日、ニュース確認時刻を分ける。
+- AIレポートが古い場合は「更新待ち」を表示し、最新分析と誤認させない。
 
-候補ディレクトリに`market.json`または`status.json`がある場合は、それらも同じ検証・配置対象になる。検証失敗時は`data/`を変更しない。
+## 完了
 
-### 自動公開の品質ゲート
-
-次のいずれかに該当する場合は自動公開しない。
-
-- 当日の`status.json`が成功状態でない。
-- S&P500、NASDAQ総合、NASDAQ100、NYダウ、Russell2000、SOX、米2年・10年金利、DXY、USD/JPY、VIX、Gold、Copper、WTI、Brentのいずれかが欠測または基準日不明。
-- 米11セクターのうち3系列以上が欠測。
-- 終値、清算値、現在値、日中高安または先物限月が区別されていない。
-- `report.json`と`japan-stocks.json`が正式スキーマに適合しない、または日付・TOP5が一致しない。
-- 重要な経済指標、中央銀行、関税、制裁の確認結果または「該当なし」の記録がない。
-- Research Coverage、Source Quality、Data Integrity、Analysis Logic、Cross-Asset Consistency、Japan Transmission、Counter-Evidence Audit、Previous-Day Change、Final Content Auditの1つでもPASSでない。
-- 個別企業開示またはアナリスト評価変更が未調査。
-
-品質ゲート不合格時は、理由を出力して既存の正常な公開データを維持する。
-
-## 履歴保存
-
-`main`の対象データが更新されると`Archive Market Morning`が起動し、各JSONの基準日に対応する`data/history/YYYY-MM-DD/`へ保存する。履歴に差分がない場合はコミットしない。
-
-## 現時点で手動の工程
-
-- Web調査と出典確認
-- レポート本文および日本株詳細JSONの生成・レビュー
-- 本番画面の最終確認
-
-調査・文章生成の完全自動化、外部通知、更新主体別の`status.json`運用は、責任範囲と失敗時の扱いが確定してから追加する。
+ローカル検証、全テスト、PR、GitHub Actions、main、Vercel、本番画面の日時・判定・内容を確認して完了とする。

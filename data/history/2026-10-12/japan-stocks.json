@@ -1,0 +1,276 @@
+{
+  "report_date": "2026-10-12",
+  "target_market_date": "2026-10-09",
+  "updated_at": "2026-10-12T16:41:41+09:00",
+  "report_type": "holiday_qualified",
+  "publication_policy": {
+    "status": "QUALIFIED",
+    "updated_at": "2026-10-12T16:41:41+09:00",
+    "note": "商品先物定義、金利日付差、休場中反応、レーティング非網羅を注記し、それらに依存する断定を除外",
+    "copper_included": false
+  },
+  "japan_quick_view": {
+    "headline": "休場明けは全面高ではなく選別。米株は広く上昇したが、SOX逆行安と金利高を同時に見る。",
+    "top_materials": [
+      "米主要株価指数は上昇、VIX低下：リスク選好は維持",
+      "SOX -0.41%：NASDAQ高でも日本の半導体を一括で追い風としない",
+      "日経平均 -0.13%・TOPIX参考 +0.70%：10月9日の国内内部は指数間で分岐",
+      "米10年5.244%・米2年は10月8日公表値：異なる日付の金利差は算出しない",
+      "OSG・フジミ・安川電機・JINS・イオンFS：10月13日に個別反応を確認"
+    ],
+    "focus_sectors": [
+      "電機・精密",
+      "情報通信・サービス",
+      "銀行",
+      "小売",
+      "食品"
+    ],
+    "unpriced_materials": [
+      "10月12日休場中の政策・企業材料",
+      "10月13日の個別株反応"
+    ],
+    "individual_news_review": {
+      "status": "reviewed",
+      "story_count": 5,
+      "scope": "10月9日公表の一次資料5件。後日確認時刻を保持し、現物反応未確認を明示"
+    }
+  },
+  "top_stories": [
+    {
+      "company": "フジミインコーポレーテッド",
+      "ticker": "5384",
+      "headline": "通期営業利益予想19.0%増額、配当予想77円から92円",
+      "category": "電機・精密",
+      "fact": "10月9日16:20発表。2027年3月期通期売上高予想748億円から825億円、営業利益145億円から172.5億円（19.0%増額）、年間配当77円から92円。CMP・シリコンウエハー向け製品の販売増を理由として記載。",
+      "announced_at": "2026-10-09（公表時刻は一次資料記載範囲）",
+      "timing": "10月9日公表・10月12日現物休場",
+      "market_pricing_status": "10月13日現物で確認",
+      "price_reaction": "発表後の国内現物反応は未確認",
+      "related_stocks": [],
+      "related_sectors": [
+        "電機・精密"
+      ],
+      "importance": "高",
+      "confidence": "事実：一次資料確認済み、株価効果：未確認",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261009548819.pdf",
+      "analysis": "半導体材料に限定した追い風候補。SOX全体の弱さと個社の予想増額は分けて評価する。",
+      "today_watch": "予想であり実績ではない。現物終了後の発表。発表後の株価反応は未確認。"
+    },
+    {
+      "company": "OSG",
+      "ticker": "6136",
+      "headline": "自社株買いを決議、10月13日のToSTNeT-3取得を予定",
+      "category": "機械",
+      "fact": "10月9日16:30発表。取得枠150万株・50億円、期間10月13日〜11月30日。10月13日08:45のToSTNeT-3取得は10月9日終値3,653円で136万8,700株・49億9,986万1,100円を上限として予定。",
+      "announced_at": "2026-10-09（公表時刻は一次資料記載範囲）",
+      "timing": "10月9日公表・10月12日現物休場",
+      "market_pricing_status": "10月13日現物で確認",
+      "price_reaction": "発表後の国内現物反応は未確認",
+      "related_stocks": [],
+      "related_sectors": [
+        "機械"
+      ],
+      "importance": "高",
+      "confidence": "事実：一次資料確認済み、株価効果：未確認",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261009548893.pdf",
+      "analysis": "資本政策の追い風候補。ただし買付決議と実際の取得完了を分ける。",
+      "today_watch": "未実行の予定。取得されない可能性あり。ToSTNeT-3と総取得枠を二重計上しない。市場反応未確認。"
+    },
+    {
+      "company": "安川電機",
+      "ticker": "6506",
+      "headline": "売上予想引き上げ、営業利益予想引き下げ",
+      "category": "電機・精密",
+      "fact": "2027年2月期中間の売上収益285,598百万円、前年比9.8%増。営業利益22,058百万円、5.5%減。通期売上予想580,000から600,000百万円、営業利益予想60,000から57,500百万円へ修正。",
+      "announced_at": "2026-10-09（公表時刻は一次資料記載範囲）",
+      "timing": "10月9日公表・10月12日現物休場",
+      "market_pricing_status": "10月13日現物で確認",
+      "price_reaction": "発表後の国内現物反応は未確認",
+      "related_stocks": [],
+      "related_sectors": [
+        "電機・精密"
+      ],
+      "importance": "高",
+      "confidence": "事実：一次資料確認済み、株価効果：未確認",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261009548685.pdf",
+      "analysis": "売上拡大だけで好材料とせず利益率を確認する。",
+      "today_watch": "コード6506。中間実績と通期予想を区別。発表後の国内現物反応は未確認。"
+    }
+  ],
+  "important_stories": [
+    {
+      "company": "ジンズホールディングス",
+      "ticker": "3046",
+      "headline": "営業利益は予想未達、年間配当予想を減額",
+      "category": "小売",
+      "fact": "2026年8月期営業利益実績11,454百万円は従来予想12,772百万円を10.3%下回った。年間配当予想115円から104円へ修正。",
+      "announced_at": "2026-10-09（公表時刻は一次資料記載範囲）",
+      "timing": "10月9日公表・10月12日現物休場",
+      "market_pricing_status": "10月13日現物で確認",
+      "price_reaction": "発表後の国内現物反応は未確認",
+      "related_stocks": [],
+      "related_sectors": [
+        "小売"
+      ],
+      "importance": "中",
+      "confidence": "事実：一次資料確認済み、株価効果：未確認",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261009548583.pdf",
+      "analysis": "売上増加と利益・配当の弱さを区別し、収益性を監視する。",
+      "today_watch": "コード3046。終了年度の実績と予想の差であり、将来年度の一律下方修正ではない。発表後の株価反応は未確認。"
+    },
+    {
+      "company": "イオンフィナンシャルサービス",
+      "ticker": "8570",
+      "headline": "中間増収・純利益増、営業利益は11.0%減",
+      "category": "金融（銀行除く）",
+      "fact": "2027年2月期中間営業収益3,112.02億円（前年同期比11.9%増）、営業利益252.09億円（11.0%減）、親会社株主帰属中間純利益100.52億円（14.9%増）。年間配当予想53円。",
+      "announced_at": "2026-10-09（公表時刻は一次資料記載範囲）",
+      "timing": "10月9日公表・10月12日現物休場",
+      "market_pricing_status": "10月13日現物で確認",
+      "price_reaction": "発表後の国内現物反応は未確認",
+      "related_stocks": [],
+      "related_sectors": [
+        "金融（銀行除く）"
+      ],
+      "importance": "中",
+      "confidence": "事実：一次資料確認済み、株価効果：未確認",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261008548186.pdf",
+      "analysis": "利益段階で方向が異なるため、純利益増だけを収益力改善とは判断しない。金融業内の個社材料。",
+      "today_watch": "中間実績と通期予想を区別。発表後の価格反応、評価変更は未確認。"
+    }
+  ],
+  "other_stories": [],
+  "data_quality": {
+    "overall": "QUALIFIED",
+    "missing": [
+      "米2年債はFREDの10月8日公表値で、米10年債の10月9日値と基準日が異なる",
+      "Gold・WTI・Brent・Copperの取引所、限月、値種別、基準時刻を正本で確認できない",
+      "日本株現物は10月12日休場で、休場中材料への価格反応は未確認",
+      "アナリスト評価変更は無料公開情報の確認範囲で、全証券会社を網羅できない"
+    ],
+    "differences": [
+      "市場価格はmarket.jsonの保存日足。ニュースの市場反応とは別に扱う",
+      "10月12日の確認済みニュースには10月5日〜9日の後日確認分を含む",
+      "米株上昇とSOX下落、日経平均とTOPIX参考の分岐を平均化しない"
+    ],
+    "excluded": [
+      "定義未確認の商品先物価格と前日比",
+      "異なる日付の米2年・10年スプレッド",
+      "未確認政策の市場方向断定",
+      "全証券会社でレーティング変更なしという断定"
+    ],
+    "cautions": [
+      "QUALIFIED版。確認済み部分だけを公開し、不足に依存する結論は保留",
+      "日本株は10月9日終値。10月12日の現物価格ではない",
+      "休場中材料の日本株反応は10月13日以降に確認"
+    ]
+  },
+  "analyst_rating_changes": {
+    "headline": "公開情報で確認できた範囲のみ。網羅不能",
+    "coverage_status": "十分調査したが取得不能",
+    "items": [],
+    "source_review": [
+      {
+        "name": "公開日付一覧",
+        "url": "https://nikkeiyosoku.com/stock/rating/?date=2026-10-09",
+        "result": "全証券会社・EPS変更の網羅不可"
+      },
+      {
+        "name": "IFISサービス情報",
+        "url": "https://www.ifis.co.jp/",
+        "result": "契約データ未導入"
+      }
+    ],
+    "summary": "変更なしとは断定しない"
+  },
+  "sector_implications": [
+    {
+      "driver": "米株高とSOX安",
+      "affected_sectors": [
+        "電機・精密",
+        "情報通信・サービス"
+      ],
+      "possible_impact": "大型ハイテク支援と半導体弱さを分離",
+      "confirmation_condition": "10月13日の業種相対騰落"
+    },
+    {
+      "driver": "国内指数分岐",
+      "affected_sectors": [
+        "食品",
+        "素材・化学",
+        "銀行",
+        "小売"
+      ],
+      "possible_impact": "TOPIX型優位の持続性を確認",
+      "confirmation_condition": "休場明けも同じ業種順位が続くか"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "基本",
+      "conditions": "米株の広がりが維持され、SOXの弱さと金利上昇が拡大しない",
+      "impact_on_japan": "TOPIX優位を基調に、半導体は個別業績で選別",
+      "strong_sectors": [
+        "食品",
+        "素材・化学"
+      ],
+      "weak_sectors": [
+        "銀行",
+        "小売"
+      ],
+      "invalidation": "SOX反発と電機・精密の相対上昇、または米株全面反落"
+    },
+    {
+      "name": "上振れ",
+      "conditions": "SOXが反発し、米10年が低下、日本の電機・精密がTOPIXを上回る",
+      "impact_on_japan": "大型ハイテクから半導体・機械へ追い風が広がる",
+      "strong_sectors": [
+        "電機・精密",
+        "機械",
+        "情報通信・サービス"
+      ],
+      "weak_sectors": [],
+      "invalidation": "SOX続落または日本側の追随不発"
+    },
+    {
+      "name": "下振れ",
+      "conditions": "米金利上昇とSOX安が同時に拡大し、円高または原油供給不安が加わる",
+      "impact_on_japan": "高PER、輸出、運輸へ別経路の逆風",
+      "strong_sectors": [
+        "食品"
+      ],
+      "weak_sectors": [
+        "電機・精密",
+        "自動車・輸送機",
+        "運輸・物流"
+      ],
+      "invalidation": "金利・為替・半導体が安定"
+    }
+  ],
+  "monitoring_points": [
+    {
+      "target": "SOXと日本の電機・精密",
+      "current_view": "SOX -0.41%、日本の電機・精密は10月9日+0.88%",
+      "today_check": "10月13日の相対騰落と出来高",
+      "view_change_condition": "SOX反発と日本側のTOPIX超過がそろえば追い風へ"
+    },
+    {
+      "target": "米金利",
+      "current_view": "米10年5.244%。米2年は10月8日4.75%",
+      "today_check": "同一基準日の2年・10年を確認",
+      "view_change_condition": "同日金利が低下すれば高PER逆風を弱める"
+    },
+    {
+      "target": "休場中の個別材料",
+      "current_view": "一次開示5件、現物反応は未確認",
+      "today_check": "10月13日の寄り付き、出来高、終値",
+      "view_change_condition": "会社固有材料と業種全体の反応を分ける"
+    }
+  ],
+  "source_notes": [
+    "市場数値はmarket.json正本",
+    "日本株実績はjapan-market.json",
+    "政策・企業材料はnews.json内の一次資料検証済み記事",
+    "後日確認を当時確認済みとは扱わない"
+  ]
+}

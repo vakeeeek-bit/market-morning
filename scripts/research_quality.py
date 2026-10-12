@@ -30,6 +30,12 @@ FINAL_GATES = {
     "previous_day_change",
     "final_content_audit",
 }
+GATE_STATUSES = {"PASS", "QUALIFIED", "BLOCK"}
+QUALIFIABLE_GATES = {
+    "research_coverage",
+    "data_integrity",
+    "cross_asset_consistency",
+}
 CONFIDENCE = {"confirmed", "supported", "tentative", "unknown"}
 PRICING = {"priced", "partially_priced", "unpriced", "unknown"}
 TEMPLATE_CHECKS = {
@@ -62,8 +68,8 @@ def validate_research_quality(evidence: dict, report: dict, japan: dict) -> list
         errors.append("research-evidence.report_dateがjapan-stocks.jsonと一致しません")
 
     coverage = evidence.get("research_coverage", {})
-    if coverage.get("status") != "PASS":
-        errors.append("research_coverage.status: PASSが必要です")
+    if coverage.get("status") not in {"PASS", "QUALIFIED"}:
+        errors.append("research_coverage.status: PASS/QUALIFIEDが必要です")
     directions = coverage.get("directions", [])
     found_directions = {
         item.get("id") for item in directions if isinstance(item, dict)
@@ -71,8 +77,8 @@ def validate_research_quality(evidence: dict, report: dict, japan: dict) -> list
     if found_directions != DIRECTIONS:
         errors.append("Research Coverageは4方向すべて必要です")
     for direction in directions if isinstance(directions, list) else []:
-        if not isinstance(direction, dict) or direction.get("status") != "PASS" or not _text(direction.get("evidence")):
-            errors.append("Research Coverageの4方向は証跡付きPASSが必要です")
+        if not isinstance(direction, dict) or direction.get("status") not in {"PASS", "QUALIFIED"} or not _text(direction.get("evidence")):
+            errors.append("Research Coverageの4方向は証跡付きPASS/QUALIFIEDが必要です")
 
     items = coverage.get("items", [])
     if not _list(items):
@@ -106,8 +112,8 @@ def validate_research_quality(evidence: dict, report: dict, japan: dict) -> list
             if not isinstance(attempts, list) or len(attempts) < required_attempts:
                 errors.append(f"{location}: {status}には調査試行が{required_attempts}件以上必要です")
         if status == "十分調査したが取得不能":
-            if tier == "Critical":
-                errors.append(f"{location}: Critical項目の取得不能は公開不可です")
+            if tier == "Critical" and item.get("publication_use") != "excluded":
+                errors.append(f"{location}: Critical項目の取得不能は、該当材料を公開対象から除外しない限り公開不可です")
             if not _text(item.get("impact_if_unavailable")):
                 errors.append(f"{location}: 取得不能の分析影響評価が必要です")
         for attempt_index, attempt in enumerate(attempts if isinstance(attempts, list) else []):
@@ -122,8 +128,8 @@ def validate_research_quality(evidence: dict, report: dict, japan: dict) -> list
         errors.append("アナリスト評価変更をRequired項目として調査してください")
 
     analysis = evidence.get("analysis_quality", {})
-    if analysis.get("status") != "PASS":
-        errors.append("analysis_quality.status: PASSが必要です")
+    if analysis.get("status") not in {"PASS", "QUALIFIED"}:
+        errors.append("analysis_quality.status: PASS/QUALIFIEDが必要です")
     materials = analysis.get("materials", [])
     if not _list(materials):
         errors.append("Analysis Qualityの重要材料が空です")
@@ -156,6 +162,8 @@ def validate_research_quality(evidence: dict, report: dict, japan: dict) -> list
                 errors.append(f"{location}.{label}: 空でない説明が必要です")
         if not _list(fact.get("source_urls")) or any(not str(url).startswith("https://") for url in fact.get("source_urls", [])):
             errors.append(f"{location}.fact.source_urls: HTTPS出典が必要です")
+        if evidence.get("publication_decision") and fact.get("verification_status") != "PASS":
+            errors.append(f"{location}.fact.verification_status: 政策・重要事実は実読確認PASSが必要です")
         if not isinstance(reaction.get("assets_checked"), list) or len(reaction["assets_checked"]) < 2:
             errors.append(f"{location}: 実際の市場反応を複数資産で確認してください")
         if pricing.get("status") not in PRICING:
@@ -179,8 +187,8 @@ def validate_research_quality(evidence: dict, report: dict, japan: dict) -> list
         errors.append("template_degradation_audit.comparison_note: 前日文章との差分証跡が必要です")
 
     cross = evidence.get("cross_asset_consistency", {})
-    if cross.get("status") != "PASS":
-        errors.append("cross_asset_consistency.status: PASSが必要です")
+    if cross.get("status") not in {"PASS", "QUALIFIED"}:
+        errors.append("cross_asset_consistency.status: PASS/QUALIFIEDが必要です")
     required_assets = {"equities", "rates", "fx", "commodities", "crypto"}
     if set(cross.get("assets_checked", [])) != required_assets:
         errors.append("Cross-Asset監査は株・金利・為替・商品・暗号資産が必要です")
@@ -216,13 +224,18 @@ def validate_research_quality(evidence: dict, report: dict, japan: dict) -> list
     if source_quality.get("status") != "PASS" or not _list(source_quality.get("checks")):
         errors.append("Source Qualityの確認証跡とPASSが必要です")
     integrity = evidence.get("data_integrity", {})
-    if integrity.get("status") != "PASS" or not _list(integrity.get("checks")):
-        errors.append("Data Integrityの確認証跡とPASSが必要です")
+    if integrity.get("status") not in {"PASS", "QUALIFIED"} or not _list(integrity.get("checks")):
+        errors.append("Data Integrityの確認証跡とPASS/QUALIFIEDが必要です")
 
     final_gates = evidence.get("quality_gates", {})
     if set(final_gates) != FINAL_GATES:
         errors.append("最終Quality Gateは指定9項目を過不足なく持つ必要があります")
     for gate in FINAL_GATES:
-        if final_gates.get(gate) != "PASS":
-            errors.append(f"quality_gates.{gate}: PASSでなければ公開不可です")
+        value = final_gates.get(gate)
+        if value not in GATE_STATUSES:
+            errors.append(f"quality_gates.{gate}: PASS/QUALIFIED/BLOCKが必要です")
+        elif value == "BLOCK":
+            errors.append(f"quality_gates.{gate}: BLOCKのまま公開できません")
+        elif value == "QUALIFIED" and gate not in QUALIFIABLE_GATES:
+            errors.append(f"quality_gates.{gate}: 分析の必須ゲートはPASSが必要です")
     return errors

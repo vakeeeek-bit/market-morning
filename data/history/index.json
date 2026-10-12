@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-12T13:49:10+09:00",
-  "latest": "2026-10-05",
+  "updated_at": "2026-10-12T16:41:57+09:00",
+  "latest": "2026-10-12",
   "dates": [
     "2026-08-28",
     "2026-08-29",
@@ -38,6 +38,8 @@
     "2026-09-30",
     "2026-10-01",
     "2026-10-02",
+    "2026-10-03",
+    "2026-10-04",
     "2026-10-05",
     "2026-10-06",
     "2026-10-07",
@@ -470,14 +472,38 @@
     },
     {
       "date": "2026-10-02",
-      "status": "empty",
-      "has_report": false,
-      "has_market": false,
-      "has_japan_stocks": false,
+      "status": "complete",
+      "has_report": true,
+      "has_market": true,
+      "has_japan_stocks": true,
       "has_japan_market": true,
-      "has_research_evidence": false,
-      "report_type": null,
+      "has_research_evidence": true,
+      "report_type": "daily",
       "has_news": true,
+      "has_candidate": false
+    },
+    {
+      "date": "2026-10-03",
+      "status": "complete",
+      "has_report": true,
+      "has_market": true,
+      "has_japan_stocks": true,
+      "has_japan_market": false,
+      "has_research_evidence": true,
+      "report_type": "weekend",
+      "has_news": false,
+      "has_candidate": false
+    },
+    {
+      "date": "2026-10-04",
+      "status": "complete",
+      "has_report": true,
+      "has_market": true,
+      "has_japan_stocks": true,
+      "has_japan_market": false,
+      "has_research_evidence": true,
+      "report_type": "weekend",
+      "has_news": false,
       "has_candidate": false
     },
     {
@@ -566,13 +592,13 @@
     },
     {
       "date": "2026-10-12",
-      "status": "market_only",
-      "has_report": false,
+      "status": "complete",
+      "has_report": true,
       "has_market": true,
-      "has_japan_stocks": false,
+      "has_japan_stocks": true,
       "has_japan_market": true,
-      "has_research_evidence": false,
-      "report_type": null,
+      "has_research_evidence": true,
+      "report_type": "holiday_qualified",
       "has_news": true,
       "has_candidate": false
     }

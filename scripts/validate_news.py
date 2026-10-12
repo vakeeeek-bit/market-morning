@@ -3,6 +3,7 @@ from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlparse
 import argparse
+import copy
 import json
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -70,6 +71,49 @@ def validate(news):
         if article.get("market_reaction_status") != "unverified" or article.get("market_reaction") != "未確認":
             errors.append(f"{prefix}: this fact-only feed must not assert market reaction")
     return errors
+
+
+def partition_verified_articles(news):
+    """Return safe articles without letting one bad item block unrelated facts.
+
+    Feed-level chronology and disclosure errors still block the entire unit.
+    Rejected article details are returned for an explicit exclusion audit.
+    """
+    articles = news.get("articles", []) if isinstance(news, dict) else []
+    if not isinstance(articles, list):
+        return [], [], ["articles must be a list"]
+    accepted, rejected, feed_errors = [], [], set()
+    for article in articles:
+        candidate = copy.deepcopy(news)
+        candidate["articles"] = [article]
+        errors = validate(candidate)
+        item_errors = [error for error in errors if error.startswith("articles[0]")]
+        feed_errors.update(error for error in errors if not error.startswith("articles[0]"))
+        if item_errors:
+            rejected.append({
+                "id": article.get("id") if isinstance(article, dict) else None,
+                "reasons": item_errors,
+            })
+        else:
+            accepted.append(article)
+    return accepted, rejected, sorted(feed_errors)
+
+
+def sanitized_feed(news):
+    accepted, rejected, feed_errors = partition_verified_articles(news)
+    if feed_errors:
+        return None, feed_errors
+    if not accepted:
+        return None, ["at least one verified article required after exclusions"]
+    result = copy.deepcopy(news)
+    result["articles"] = accepted
+    if rejected:
+        result["excluded_articles"] = rejected
+        result["coverage_note"] = (
+            str(result.get("coverage_note", "")).rstrip("。")
+            + f"。検証不合格{len(rejected)}件を除外し、確認済み{len(accepted)}件のみ掲載。"
+        )
+    return result, []
 
 
 def validate_collection(root):

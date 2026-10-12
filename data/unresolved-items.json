@@ -1,0 +1,79 @@
+{
+  "updated_at": "2026-10-12T16:41:41+09:00",
+  "source_report_date": "2026-10-12",
+  "items": [
+    {
+      "id": "analyst-rating-coverage",
+      "status": "QUALIFIED",
+      "missing": "日本株アナリスト変更の全証券会社網羅",
+      "impact": "確認できない変更を『なし』とせず、一覧を方向判断から除外",
+      "last_checked_at": "2026-10-12T16:41:41+09:00",
+      "next_action": "翌営業日に公開情報を再確認し、契約データ導入は別途判断",
+      "attempts": [
+        {
+          "method": "公開日付一覧とIFIS情報を確認",
+          "result": "無料情報では網羅不能",
+          "checked_at": "2026-10-12T16:41:41+09:00"
+        }
+      ],
+      "affected_components": [
+        "japan_stocks"
+      ],
+      "excluded_claims": [
+        "全証券会社で変更なし",
+        "レーティングを市場方向の根拠にする"
+      ],
+      "excluded_from_publication": true,
+      "first_seen_at": "2026-10-12T16:41:41+09:00"
+    },
+    {
+      "id": "commodity-contract-definitions",
+      "status": "QUALIFIED",
+      "missing": "保存された商品先物値に対応する取引所・限月・値種別・基準時刻",
+      "impact": "Gold・WTI・Brent・Copperの価格方向と日本株波及を保留",
+      "last_checked_at": "2026-10-12T16:41:41+09:00",
+      "next_action": "次回収集で観測時点と契約メタデータを同時保存",
+      "attempts": [
+        {
+          "method": "market.jsonと取引所資料の対応を照合",
+          "result": "同じ観測への対応を証明できず",
+          "checked_at": "2026-10-12T16:41:41+09:00"
+        }
+      ],
+      "affected_components": [
+        "ai_report"
+      ],
+      "excluded_claims": [
+        "商品価格の前日比",
+        "商品主導の日本株方向"
+      ],
+      "excluded_from_publication": true,
+      "first_seen_at": "2026-10-12T16:41:41+09:00"
+    },
+    {
+      "id": "holiday-japan-reaction",
+      "status": "QUALIFIED",
+      "missing": "10月12日休場中材料への日本株現物反応",
+      "impact": "10月13日の方向を断定せず条件付きシナリオに限定",
+      "last_checked_at": "2026-10-12T16:41:41+09:00",
+      "next_action": "10月13日引け後に指数・業種・個別株反応を確認",
+      "attempts": [
+        {
+          "method": "JPX休場日程とjapan-market状態を確認",
+          "result": "現物取引なし。10月9日終値を維持",
+          "checked_at": "2026-10-12T16:41:41+09:00"
+        }
+      ],
+      "affected_components": [
+        "ai_report",
+        "japan_stocks"
+      ],
+      "excluded_claims": [
+        "休場中材料は織り込み済み",
+        "10月12日の日本株上昇・下落"
+      ],
+      "excluded_from_publication": true,
+      "first_seen_at": "2026-10-12T16:41:41+09:00"
+    }
+  ]
+}

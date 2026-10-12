@@ -20,6 +20,7 @@ FILES = {
     "market-context": DATA_DIR / "market-context.json",
     "glossary": DATA_DIR / "glossary.json",
     "research-evidence": DATA_DIR / "research-evidence.json",
+    "unresolved-items": DATA_DIR / "unresolved-items.json",
 }
 
 TOP_LEVEL_REQUIRED = {
@@ -35,6 +36,7 @@ TOP_LEVEL_REQUIRED = {
         "market_overview",
         "data_quality",
         "final_conclusion",
+        "publication_policy",
     ],
     "market": ["updated_at", "timezone", "markets", "data_quality"],
     "japan-stocks": [
@@ -48,6 +50,7 @@ TOP_LEVEL_REQUIRED = {
         "other_stories",
         "data_quality",
         "analyst_rating_changes",
+        "publication_policy",
     ],
     "status": ["status", "updated_at", "message"],
     "market-context": [
@@ -69,7 +72,9 @@ TOP_LEVEL_REQUIRED = {
         "research_coverage", "analysis_quality", "counter_evidence_audit",
         "cross_asset_consistency", "previous_day_change", "source_quality",
         "data_integrity", "quality_gates",
+        "publication_decision",
     ],
+    "unresolved-items": ["updated_at", "source_report_date", "items"],
 }
 
 

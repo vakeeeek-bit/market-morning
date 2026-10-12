@@ -1,6 +1,6 @@
 # Market Morning Quality Gate Rules
 
-調査・分析品質の機械検証は [Research & Analysis Quality Gate](RESEARCH_ANALYSIS_QUALITY_GATE.md) を正本とする。`data/research-evidence.json` と最終9ゲートの全PASSを日次レポート公開の必須条件とする。
+調査・分析品質の機械検証は [Research & Analysis Quality Gate](RESEARCH_ANALYSIS_QUALITY_GATE.md) を正本とする。9ゲートは維持するが、サイト全体を一律停止しない。公開単位ごとにPASS / QUALIFIED / BLOCKを判定し、QUALIFIEDを許せるのはResearch Coverage、Data Integrity、Cross-Asset Consistencyだけとする。その他6ゲートはPASS必須である。
 
 ## Completion gate
 
@@ -31,7 +31,7 @@ Required checks:
 
 ## Publication rule
 
-Do not publish incomplete data to `main`. Use a quality-gate branch/PR first. If any gate fails, return to correction/research and re-run validation.
+Do not publish incorrect or unresearched content to `main`. Use a quality-gate branch/PR first. BLOCK content is excluded and never published. After exclusion, a publication unit that independently satisfies PASS or QUALIFIED may be updated without waiting for unrelated blocked units. Missing data must remain missing or visibly stale; never infer or backfill it as current.
 
 After merge, re-check production data and Web rendering. A pre-merge PASS does not replace the post-publish check.
 

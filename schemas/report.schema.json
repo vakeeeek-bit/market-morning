@@ -18,6 +18,24 @@
     "week_period": {
       "type": "null"
     },
+    "publication_policy": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "updated_at": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "copper_included": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
     "quick_view": {
       "type": "object",
       "properties": {
@@ -131,6 +149,9 @@
           "analysis": {
             "type": "string"
           },
+          "source_url": {
+            "type": "string"
+          },
           "related_assets": {
             "type": "array",
             "items": {
@@ -145,21 +166,6 @@
           },
           "importance": {
             "type": "string"
-          },
-          "source_url": {
-            "type": "string"
-          },
-          "image_url": {
-            "type": "null"
-          },
-          "image_alt": {
-            "type": "null"
-          },
-          "image_credit": {
-            "type": "null"
-          },
-          "image_source_url": {
-            "type": "null"
           }
         },
         "additionalProperties": true
@@ -168,22 +174,34 @@
     "policy": {
       "type": "object",
       "properties": {
-        "us_iran": {
+        "economic_indicators": {
           "type": "object",
           "properties": {
             "fact": {
               "type": "string"
             },
-            "market_reaction": {
+            "source_urls": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": true
+        },
+        "boj_japan": {
+          "type": "object",
+          "properties": {
+            "fact": {
               "type": "string"
             },
-            "outlook": {
+            "source_url": {
               "type": "string"
             }
           },
           "additionalProperties": true
         },
-        "us_china": {
+        "us_government": {
           "type": "object",
           "properties": {
             "fact": {
@@ -194,20 +212,8 @@
             },
             "outlook": {
               "type": "string"
-            }
-          },
-          "additionalProperties": true
-        },
-        "fed": {
-          "type": "object",
-          "properties": {
-            "fact": {
-              "type": "string"
             },
-            "market_reaction": {
-              "type": "string"
-            },
-            "outlook": {
+            "source_url": {
               "type": "string"
             }
           },
@@ -243,39 +249,6 @@
             }
           },
           "invalidation": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": true
-      }
-    },
-    "events": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "event": {
-            "type": "string"
-          },
-          "jst_time": {
-            "type": "string"
-          },
-          "consensus": {
-            "type": "string"
-          },
-          "previous": {
-            "type": "string"
-          },
-          "focus": {
-            "type": "string"
-          },
-          "affected_markets": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "importance": {
             "type": "string"
           }
         },
@@ -336,19 +309,22 @@
         "additionalProperties": true
       }
     },
-    "changes_from_previous": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
     "internal_strength": {
       "type": "object",
       "properties": {
+        "nikkei_vs_topix": {
+          "type": "string"
+        },
         "large_vs_small": {
           "type": "string"
         },
+        "breadth": {
+          "type": "string"
+        },
         "sectors": {
+          "type": "string"
+        },
+        "turnover": {
           "type": "string"
         },
         "assessment": {
@@ -357,28 +333,29 @@
       },
       "additionalProperties": true
     },
-    "japan_market_links": {
+    "us_sector_etf_closes": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "pair": {
+          "ticker": {
             "type": "string"
           },
-          "fact": {
+          "price": {
+            "type": "number"
+          },
+          "change_pct": {
+            "type": "number"
+          },
+          "market_date": {
+            "type": "string",
+            "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"
+          },
+          "value_type": {
             "type": "string"
           },
-          "usual_relation": {
-            "type": "string"
-          },
-          "consistency": {
-            "type": "string"
-          },
-          "interpretation": {
-            "type": "string"
-          },
-          "confidence": {
-            "type": "string"
+          "proxy_for_sector_index": {
+            "type": "boolean"
           }
         },
         "additionalProperties": true
@@ -435,9 +412,6 @@
             "eth": {
               "type": "string"
             },
-            "xrp": {
-              "type": "string"
-            },
             "basis_time": {
               "type": "string"
             },
@@ -449,27 +423,6 @@
         }
       },
       "additionalProperties": true
-    },
-    "unusual_moves": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "move": {
-            "type": "string"
-          },
-          "usual_relation": {
-            "type": "string"
-          },
-          "possible_reason": {
-            "type": "string"
-          },
-          "confidence": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": true
-      }
     },
     "monitoring_points": {
       "type": "array",
@@ -486,24 +439,6 @@
             "type": "string"
           },
           "view_change_condition": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": true
-      }
-    },
-    "strength": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "asset": {
-            "type": "string"
-          },
-          "rating": {
-            "type": "integer"
-          },
-          "comment": {
             "type": "string"
           }
         },
@@ -627,6 +562,27 @@
       },
       "additionalProperties": true
     },
+    "what_changed": {
+      "type": "object",
+      "properties": {
+        "previous_report_date": {
+          "type": "string"
+        },
+        "changed": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "unchanged": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
     "source_notes": {
       "type": "array",
       "items": {
@@ -650,6 +606,7 @@
     "scenarios",
     "market_overview",
     "data_quality",
-    "final_conclusion"
+    "final_conclusion",
+    "publication_policy"
   ]
 }

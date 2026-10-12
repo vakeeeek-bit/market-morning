@@ -30,7 +30,7 @@ def item(identifier: str, label: str, tier: str) -> dict:
     }
 
 
-def build(report: dict) -> dict:
+def build(report: dict, unresolved: list[dict] | None = None) -> dict:
     now = datetime.now(ZoneInfo("Asia/Tokyo")).strftime("%Y-%m-%d %H:%M JST")
     gates = {
         name: "FAIL"
@@ -70,6 +70,17 @@ def build(report: dict) -> dict:
         "source_quality": {"status": "FAIL", "checks": []},
         "data_integrity": {"status": "FAIL", "checks": []},
         "quality_gates": gates,
+        "publication_decision": {
+            "status": "BLOCK",
+            "decided_at": now,
+            "summary": "調査・分析・反証監査が未完了",
+            "components": {
+                "ai_report": {"status": "BLOCK", "updated_at": now, "reason": "調査未完了"},
+                "japan_stocks": {"status": "BLOCK", "updated_at": now, "reason": "調査未完了"},
+            },
+            "unresolved_items": unresolved or [],
+            "resolved_item_ids": [],
+        },
     }
 
 
@@ -80,7 +91,9 @@ def main() -> int:
     args = parser.parse_args()
     report = json.loads(args.report.read_text(encoding="utf-8"))
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(build(report), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    from unresolved_items import load_items
+    unresolved = load_items(ROOT / "data" / "unresolved-items.json")
+    args.output.write_text(json.dumps(build(report, unresolved), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Created failing research worksheet: {args.output}")
     return 0
 

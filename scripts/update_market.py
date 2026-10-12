@@ -1,9 +1,11 @@
 import json
 import math
+import time
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+import requests
 import yfinance as yf
 
 
@@ -91,9 +93,80 @@ def finite_float(value, label):
     return number
 
 
+def chart_fallback(info):
+    """Fetch one symbol directly when yfinance's normal path is throttled."""
+    from urllib.parse import quote
+
+    symbol = quote(info["ticker"], safe="")
+    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}"
+    response = requests.get(
+        url,
+        params={"range": "10d", "interval": "1d", "events": "history"},
+        headers={"User-Agent": "Mozilla/5.0 MarketMorning/1.0"},
+        timeout=20,
+    )
+    response.raise_for_status()
+    payload = response.json()["chart"]["result"][0]
+    timestamps = payload.get("timestamp", [])
+    closes = payload.get("indicators", {}).get("quote", [{}])[0].get("close", [])
+    exchange_zone = ZoneInfo(payload.get("meta", {}).get("exchangeTimezoneName", "UTC"))
+    local_now = datetime.now(ZoneInfo("UTC")).astimezone(exchange_zone)
+    is_japan = info["ticker"] == "^N225" or info["ticker"].endswith(".T")
+    is_cash_index = info["ticker"].startswith("^")
+    cutoff = (15, 30) if is_japan else (16, 15)
+    rows = []
+    for timestamp, close in zip(timestamps, closes):
+        if close is None:
+            continue
+        item_time = datetime.fromtimestamp(timestamp, exchange_zone)
+        if is_japan or is_cash_index:
+            if item_time.date() == local_now.date() and (local_now.hour, local_now.minute) < cutoff:
+                continue
+        elif item_time.date() >= local_now.date():
+            continue
+        day = item_time.date().isoformat()
+        rows.append((day, finite_float(close, "代替取得終値")))
+    if len(rows) < 2:
+        raise ValueError("代替取得でも確定日足が2件未満です")
+    previous, latest = rows[-2], rows[-1]
+    change = latest[1] - previous[1]
+    return {
+        "name": info["name"],
+        "ticker": info["ticker"],
+        "price": round(latest[1], 4),
+        "previous": round(previous[1], 4),
+        "change": round(change, 4),
+        "change_pct": round(change / previous[1] * 100, 2) if previous[1] else None,
+        "status": "取得成功",
+        "market_date": latest[0],
+        "previous_market_date": previous[0],
+        "retrieval_method": "Yahoo chart individual fallback",
+    }
+
+
 def get_market_data(info, prior_snapshots=None):
-    ticker = yf.Ticker(info["ticker"])
-    hist = ticker.history(period="7d", interval="1d")
+    hist = None
+    errors = []
+    for attempt in range(3):
+        try:
+            ticker = yf.Ticker(info["ticker"])
+            hist = ticker.history(period="7d", interval="1d")
+            if not hist.empty:
+                break
+            errors.append("yfinance returned empty history")
+        except Exception as error:
+            errors.append(str(error))
+        if attempt < 2:
+            time.sleep((attempt + 1) * 2)
+
+    if hist is None or hist.empty:
+        try:
+            return chart_fallback(info)
+        except Exception as fallback_error:
+            raise RuntimeError(
+                "通常取得3回と個別chart代替取得に失敗: "
+                + " | ".join([*errors, str(fallback_error)])
+            ) from fallback_error
 
     if hist.empty or "Close" not in hist.columns:
         return empty_market(info, "確認できず")
@@ -278,13 +351,53 @@ def calculate_2s10s(us2y, us10y):
 def build_data_quality(markets):
     success = [key for key, item in markets.items() if item.get("status") == "取得成功"]
     failed = [key for key, item in markets.items() if item.get("status") != "取得成功"]
-    return {
+    result = {
         "total": len(markets),
         "success_count": len(success),
         "failed_count": len(failed),
         "success_rate_pct": round(len(success) / len(markets) * 100, 1) if markets else 0,
         "failed_keys": failed,
     }
+    if failed:
+        result["publication_status"] = "QUALIFIED"
+        result["retrieval_attempts"] = [
+            {
+                "method": "yfinance通常取得を最大3回再試行",
+                "result": "失敗系列のみYahoo個別chart APIへ切替",
+            },
+            {
+                "method": "過去の検証済みスナップショットを照合",
+                "result": "取得不能系列は元のmarket_dateを保持して前回値と明示",
+            },
+        ]
+        result["limitations"] = [
+            "取得不能系列は最新値として扱わず、各行のstatus・market_date・stale_reasonを確認",
+            "取得不能系列に依存する方向判断は総合レポート側で保留または除外",
+        ]
+    else:
+        result["publication_status"] = "PASS"
+        result["retrieval_attempts"] = []
+        result["limitations"] = []
+    return result
+
+
+def preserve_prior_observation(row, key, previous_market_sets, checked_at):
+    """Keep a dated, visibly stale verified value when every retry failed."""
+    if row.get("price") is not None:
+        return row
+    for market_set in previous_market_sets:
+        prior = market_set.get(key, {}) if isinstance(market_set, dict) else {}
+        if isinstance(prior.get("price"), (int, float)) and prior.get("market_date"):
+            saved = dict(prior)
+            saved.update({
+                "status": "取得不能・前回値維持",
+                "retrieval_status": "failed",
+                "last_checked_at": checked_at,
+                "stale_reason": "通常取得3回と個別chart代替取得が失敗。最新値ではなく前回確認値を維持",
+                "latest_attempt_error": row.get("error", "取得不能"),
+            })
+            return saved
+    return row
 
 
 def mark_fred_publication_lag(markets):
@@ -363,21 +476,41 @@ def main():
 
     mark_fred_publication_lag(result["markets"])
 
+    checked_at = now.isoformat(timespec="seconds")
+    for key, row in list(result["markets"].items()):
+        result["markets"][key] = preserve_prior_observation(
+            row, key, previous_market_sets, checked_at
+        )
+
     result["derived"]["us_2s10s"] = calculate_2s10s(
         result["markets"]["us2y"],
         result["markets"]["us10y"],
     )
     result["data_quality"] = build_data_quality(result["markets"])
 
-    # Preserve the last good snapshot if a provider outage prevents core collection.
+    # A broad provider outage still blocks replacement; a bounded failure is
+    # published as QUALIFIED with stale values visibly identified.
     core = ("sp500", "nasdaq", "nasdaq100", "sox", "dow", "russell2000", "vix")
-    if any(result["markets"][key].get("price") is None for key in core):
+    failed_core = [
+        key for key in core
+        if result["markets"][key].get("status") != "取得成功"
+    ]
+    if failed_core:
         attempt = Path("data/collection-attempts")
         attempt.mkdir(parents=True, exist_ok=True)
         (attempt / f"{datetime.now(ZoneInfo('Asia/Tokyo')).date()}-market.json").write_text(
-            json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False) + "\n"
+            json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False) + "\n",
+            encoding="utf-8",
         )
-        raise RuntimeError("主要指数の収集失敗。既存market.jsonを保持し、試行を別保存しました")
+    currently_fresh_core = [
+        key for key in core if result["markets"][key].get("status") == "取得成功"
+    ]
+    if len(currently_fresh_core) < 5 or not any(
+        key in currently_fresh_core for key in ("sp500", "nasdaq", "dow")
+    ):
+        raise RuntimeError(
+            "主要指数の新規取得が不足。既存market.jsonを保持し、試行を別保存しました"
+        )
 
     with open("data/market.json", "w", encoding="utf-8") as file:
         json.dump(

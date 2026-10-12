@@ -68,11 +68,19 @@ jobs:
           from zoneinfo import ZoneInfo
 
           now = datetime.now(ZoneInfo("Asia/Tokyo"))
+          market = json.loads(Path("data/market.json").read_text(encoding="utf-8"))
+          decision = market.get("data_quality", {}).get("publication_status", "PASS")
           status = {
-              "status": "success",
+              "status": "success" if decision == "PASS" else "qualified",
               "updated_at": now.strftime("%Y-%m-%d %H:%M:%S JST"),
-              "message": "Market data update completed and validation passed.",
+              "message": (
+                  "Market data update completed and validation passed."
+                  if decision == "PASS"
+                  else "Market data partially refreshed; unavailable series are dated and annotated."
+              ),
               "component": "market_data",
+              "publication_status": decision,
+              "component_updated_at": market.get("updated_at"),
           }
           Path("data/status.json").write_text(
               json.dumps(status, ensure_ascii=False, indent=2) + "\n",

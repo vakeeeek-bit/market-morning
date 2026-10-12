@@ -47,11 +47,11 @@ def sync(root=ROOT):
     attempt_path = data / 'collection-attempts' / f'{today}-market.json'
     attempt = json.loads(attempt_path.read_text()) if attempt_path.exists() else None
     status = json.loads((data / 'status.json').read_text()) if (data / 'status.json').exists() else {}
-    succeeded_today = status.get('status') == 'success' and str(status.get('updated_at', '')).startswith(today)
+    succeeded_today = status.get('status') in {'success', 'qualified'} and str(status.get('updated_at', '')).startswith(today)
     save(data / 'collection-status.json', {
         'checked_at': now,
-        'market_attempt_status': 'success' if succeeded_today else ('FAIL' if attempt else 'not_confirmed'),
-        'market_attempt_note': '当日の収集成功記録あり。基準日と総合品質は別途確認。' if succeeded_today else ('再取得に失敗。取得済みの正本を保持。失敗の詳細は collection-attempts に保存。' if attempt else '当日成功記録なし。前回取得値の基準日を確認してください。'),
+        'market_attempt_status': status.get('publication_status', status.get('status')) if succeeded_today else ('BLOCK' if attempt else 'not_confirmed'),
+        'market_attempt_note': ('当日の収集記録あり。PASS/QUALIFIED、各系列の基準日と注釈を確認。' if succeeded_today else ('再取得に失敗。取得済みの正本を保持。失敗の詳細は collection-attempts に保存。' if attempt else '当日成功記録なし。前回取得値の基準日を確認してください。')),
         'market_updated_at': market.get('updated_at'),
         'japan_calendar_note': '土日：現物の新しい取引結果はありません。直近取引日の実績を掲載。' if datetime.fromisoformat(now).weekday() >= 5 else '取引日程と実績の基準日を別々に確認してください。',
     })

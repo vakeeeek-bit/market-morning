@@ -1,0 +1,237 @@
+{
+  "report_date": "2026-10-02",
+  "target_market_date": "2026-10-01",
+  "updated_at": "2026-10-04 22:40 JST",
+  "report_type": "daily",
+  "japan_quick_view": {
+    "headline": "日経平均はAI半導体主導で+3.30%。ただしTOPIXは+0.57%にとどまり、米10年の24年ぶり高水準と原油高が指数内格差を広げる。",
+    "top_materials": [
+      "日経平均+3.30% / TOPIX+0.57% → 値がさ半導体主導 → 指数上昇を全面高と扱わない",
+      "SOX+1.59% / XLK+1.05% → AI・半導体の追い風 → 電機・精密を選別",
+      "米10年5.237%、日中5.34%台 → 割引率負担が継続 → 高PER・不動産に逆風",
+      "WTI+2.71% / XLE+1.95% → 資源には追い風 → 運輸・小売のコスト負担",
+      "DXY+0.64%、USD/JPY157円台 → 輸出採算を支える一方、輸入物価負担を増幅"
+    ],
+    "focus_sectors": [
+      "電機・精密",
+      "機械",
+      "鉄鋼・非鉄",
+      "エネルギー資源",
+      "不動産"
+    ],
+    "individual_news_review": {
+      "status": "reviewed",
+      "story_count": 5,
+      "source": "TDnet 2026-10-01全件一覧と重要開示PDFを横断確認"
+    }
+  },
+  "top_stories": [
+    {
+      "company": "ソフトバンクグループ",
+      "ticker": "9984",
+      "headline": "OpenAIへの追加出資100億ドルを実行",
+      "category": "戦略投資",
+      "fact": "OpenAIへの300億ドル追加出資の最終100億ドルを実行。累計出資額は646億ドル、持分比率は約13%。",
+      "announced_at": "2026-10-01",
+      "timing": "前日大引け後",
+      "market_pricing_status": "日本株現物に未反映",
+      "price_reaction": "発表後の東証現物取引なし",
+      "related_stocks": [],
+      "related_sectors": [
+        "情報通信・サービス",
+        "金融（銀行除く）"
+      ],
+      "importance": "★★★★★",
+      "confidence": "高",
+      "source_url": "https://www.release.tdnet.info/inbs/140120260930543674.pdf",
+      "analysis": "AI資産への集中が一段と高まり、OpenAI評価額と資金調達条件への感応度も上がる。",
+      "today_watch": "出資完了を好感する買いと、外貨建て社債による財務負担の評価を分けて確認",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "company": "パン・パシフィック・インターナショナルHD",
+      "ticker": "7532",
+      "headline": "日本トイザらスの事業譲受契約を締結",
+      "category": "M&A",
+      "fact": "民事再生を申し立てた日本トイザらスから店舗・オンラインの玩具・子供用品販売事業を譲り受ける契約。実行予定日は10月30日。",
+      "announced_at": "2026-10-01",
+      "timing": "前日大引け後",
+      "market_pricing_status": "日本株現物に未反映",
+      "price_reaction": "発表後の東証現物取引なし",
+      "related_stocks": [],
+      "related_sectors": [
+        "小売"
+      ],
+      "importance": "★★★★★",
+      "confidence": "高",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261001544687.pdf",
+      "analysis": "顧客層拡大余地がある一方、店舗承継、再建費用、収益化時期は未確定。",
+      "today_watch": "取得価額と承継店舗数、業績影響の追加開示",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "company": "楽天グループ",
+      "ticker": "4755",
+      "headline": "フィンテック再編が発効、約230億円の法人所得税費用",
+      "category": "事業再編",
+      "fact": "楽天カードと楽天証券HDが楽天銀行の連結子会社となる再編が発効。2026年12月期3Qに約230億円の法人所得税費用を見込む。",
+      "announced_at": "2026-10-01",
+      "timing": "前日大引け後",
+      "market_pricing_status": "日本株現物に未反映",
+      "price_reaction": "発表後の東証現物取引なし",
+      "related_stocks": [],
+      "related_sectors": [
+        "情報通信・サービス",
+        "銀行"
+      ],
+      "importance": "★★★★☆",
+      "confidence": "高",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261001544415.pdf",
+      "analysis": "フィンテック統合効果と短期税費用を分ける必要がある。連結内譲渡益は消去される。",
+      "today_watch": "楽天銀行と楽天グループの相対株価、再編後の資本政策",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "company": "JR西日本",
+      "ticker": "9021",
+      "headline": "関西みらい銀行20%取得を完了",
+      "category": "資本業務提携",
+      "fact": "りそなHDから関西みらい銀行株20%を900億円で取得し、持分法適用関連会社化。新銀行サービスは2027年春開始を目指す。",
+      "announced_at": "2026-10-01",
+      "timing": "前日大引け後",
+      "market_pricing_status": "日本株現物に未反映",
+      "price_reaction": "発表後の東証現物取引なし",
+      "related_stocks": [],
+      "related_sectors": [
+        "運輸・物流",
+        "銀行"
+      ],
+      "importance": "★★★★☆",
+      "confidence": "高",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261001544564.pdf",
+      "analysis": "移動・決済・金融の顧客接点統合が中期テーマ。短期は投資額と収益寄与時期を確認する。",
+      "today_watch": "関西みらい銀行の収益寄与とBaaS具体策",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    },
+    {
+      "company": "ニデック",
+      "ticker": "6594",
+      "headline": "新経営体制で再生策と決算数値を提示",
+      "category": "ガバナンス",
+      "fact": "9月29日発足の新経営体制、過年度決算の修正再表示、2027年3月期見通しを含む再生説明資料を公表。",
+      "announced_at": "2026-10-01",
+      "timing": "前日大引け後",
+      "market_pricing_status": "日本株現物に未反映",
+      "price_reaction": "発表後の東証現物取引なし",
+      "related_stocks": [],
+      "related_sectors": [
+        "電機・精密"
+      ],
+      "importance": "★★★★☆",
+      "confidence": "高",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261001544567.pdf",
+      "analysis": "業績水準より、会計・品質問題の追加判明リスクと統制再構築の実行力が株価の主要変数。",
+      "today_watch": "監査・調査の進展、修正再表示の追加有無、経営目標の信頼回復",
+      "image_url": null,
+      "image_alt": null,
+      "image_credit": null,
+      "image_source_url": null
+    }
+  ],
+  "important_stories": [],
+  "other_stories": [],
+  "analyst_rating_changes": {
+    "headline": "2026-10-01公開分は公開情報2系統を確認したが、契約データ相当の完全一覧は取得不能",
+    "coverage_status": "十分調査したが取得不能",
+    "summary": "公開ページを照合したが、全証券会社の格付け・目標株価・EPS変更を網羅する契約データではないため、変更なしとは断定しません。",
+    "items": [],
+    "methodology": "公開レーティング一覧と株式ニュース一覧を照合。完全性を担保できないため個別変更の転載は見送り。",
+    "source_review": [
+      {
+        "name": "公開レーティング一覧",
+        "coverage": "2026-10-01",
+        "freshness": "日次",
+        "automation": "手動照合",
+        "rights": "確認用途",
+        "url": "https://kabu.kininew.net/rating/"
+      },
+      {
+        "name": "株式ニュース一覧",
+        "coverage": "2026-10-01",
+        "freshness": "日次",
+        "automation": "手動照合",
+        "rights": "確認用途",
+        "url": "https://finance.yahoo.co.jp/news/categories/stocks"
+      }
+    ]
+  },
+  "company_events": [],
+  "sector_implications": [
+    {
+      "driver": "SOX高",
+      "affected_sectors": [
+        "電機・精密",
+        "機械"
+      ],
+      "possible_impact": "追い風候補",
+      "confirmation_condition": "電機・精密がTOPIXを上回る"
+    },
+    {
+      "driver": "米10年5.2%台",
+      "affected_sectors": [
+        "不動産",
+        "情報通信・サービス",
+        "銀行"
+      ],
+      "possible_impact": "高PER・不動産に逆風、銀行は単純ではない",
+      "confirmation_condition": "国内金利と銀行株が同方向"
+    },
+    {
+      "driver": "原油100ドル台",
+      "affected_sectors": [
+        "エネルギー資源",
+        "運輸・物流",
+        "小売"
+      ],
+      "possible_impact": "資源に支え、燃料コスト業種に逆風",
+      "confirmation_condition": "Brent100ドルと資源のTOPIX比"
+    },
+    {
+      "driver": "日本株内部",
+      "affected_sectors": [
+        "全般"
+      ],
+      "possible_impact": "指数集中か広い反発かを判定",
+      "confirmation_condition": "TOPIXと上昇業種数"
+    }
+  ],
+  "data_quality": {
+    "overall": "正常（制約明示）",
+    "coverage": "TDnet 2026-10-01全件一覧・重要開示5件・公開レーティング2系統",
+    "limitations": [
+      "レーティングは契約データ非導入",
+      "週末は東証現物反応なし",
+      "17業種ETFは公式市場Breadthの代替ではない"
+    ]
+  },
+  "source_notes": [
+    "https://www.release.tdnet.info/inbs/I_list_001_20261001.html",
+    "https://www.release.tdnet.info/inbs/140120260930543674.pdf",
+    "https://www.release.tdnet.info/inbs/140120261001544687.pdf",
+    "https://www.release.tdnet.info/inbs/140120261001544415.pdf",
+    "https://www.release.tdnet.info/inbs/140120261001544564.pdf",
+    "https://www.release.tdnet.info/inbs/140120261001544567.pdf"
+  ]
+}

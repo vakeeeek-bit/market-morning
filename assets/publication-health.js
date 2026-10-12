@@ -20,19 +20,20 @@
     const request = ++sequence;
     const date = new URLSearchParams(location.search).get('date');
     const prefix = /^20\d{2}-\d{2}-\d{2}$/.test(date || '') ? `/data/history/${date}` : '/data';
-    const [report, news, market, japan, attempt, audit] = await Promise.all([
+    const [report, news, market, japan, attempt, audit, unresolved] = await Promise.all([
       read(`${prefix}/report.json`), read(`${prefix}/news.json`), read(`${prefix}/market.json`),
       read(`${prefix}/japan-market.json`), date ? Promise.resolve(null) : read('/data/collection-status.json'),
-      date ? Promise.resolve(null) : read('/data/site-audit.json')
+      date ? Promise.resolve(null) : read('/data/site-audit.json'),
+      date ? Promise.resolve(null) : read('/data/unresolved-items.json')
     ]);
     if (request !== sequence) return;
     host.replaceChildren(el('h2', date ? `${date} の保存・確認状況` : '最新の収集・更新状況'));
     const dates = [...new Set(Object.values(market?.markets || {}).map(r => r.market_date).filter(Boolean))].sort();
     const summary = [
-      ['総合レポート', report ? `${report.report_date}版・対象市場 ${report.target_market_date}・品質 ${report.data_quality?.overall || '不明'}` : '未作成・未保存'],
-      ['確認済みニュース', news ? `${news.report_date}版・${news.articles.length}件・部分収集` : '未保存'],
-      ['世界市場データ', market ? `取得 ${market.updated_at}・基準日 ${dates.join(' / ')}（現在値ではありません）` : '未保存'],
-      ['日本株実績', japan ? `${japan.market_date}・更新 ${japan.updated_at}` : '未保存']
+      ['AIレポート', report ? `${report.report_date}版・対象市場 ${report.target_market_date}・公開判定 ${report.publication_policy?.status || report.data_quality?.overall || '旧形式'}` : '未作成・未保存'],
+      ['確認済みニュース', news ? `${news.report_date}版・${news.articles.length}件・部分収集・確認 ${news.updated_at}` : '未保存'],
+      ['世界市場データ', market ? `取得 ${market.updated_at}・公開判定 ${market.data_quality?.publication_status || '旧形式'}・基準日 ${dates.join(' / ')}（現在値ではありません）` : '未保存'],
+      ['日本株実績', japan ? `${japan.market_date}・更新 ${japan.updated_at}・${japan.data_state?.label || japan.data_phase || '状態不明'}` : '未保存']
     ];
     for (const [name, value] of summary) host.append(el('p', `${name}：${value}`));
     host.append(el('p', 'ニュース・市場実績・総合分析は別々に更新されます。総合レポートが古い場合、以下の見通しは最新日の判断ではありません。'));
@@ -44,6 +45,9 @@
     if (audit) {
       host.append(el('p', `全体点検：${audit.checked_at}｜AIレポートの更新は ${audit.report_publication_status}`));
       for (const row of audit.blockers || []) host.append(el('p', `未解決：${row.title || row.item}｜${row.next_action}`));
+    }
+    if (unresolved?.items?.length) {
+      host.append(el('p', `翌日へ引継ぎ：${unresolved.items.length}件。各項目は確認時刻・影響・次の調査を記録済み。`));
     }
     if (report) {
       const day = report.report_date;

@@ -1,7 +1,7 @@
 import json
 import unittest
 from pathlib import Path
-from scripts.validate_news import validate, validate_collection
+from scripts.validate_news import validate, validate_collection, sanitized_feed
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -16,6 +16,14 @@ class VerifiedNewsTest(unittest.TestCase):
     def test_unverified_fact_is_blocked(self):
         self.news["articles"][0]["verification_status"] = "MANUAL_REVIEW"
         self.assertTrue(validate(self.news))
+
+    def test_invalid_article_does_not_stop_unrelated_verified_articles(self):
+        self.news["articles"][0]["verification_status"] = "MANUAL_REVIEW"
+        safe, errors = sanitized_feed(self.news)
+        self.assertEqual([], errors)
+        self.assertEqual(len(self.news["articles"]) - 1, len(safe["articles"]))
+        self.assertEqual(1, len(safe["excluded_articles"]))
+        self.assertEqual([], validate(safe))
 
     def test_empty_evidence_cannot_claim_pass(self):
         self.news["articles"][0]["verification"]["facts_verified"]["evidence"] = ""

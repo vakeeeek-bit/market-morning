@@ -58,7 +58,12 @@ class PreparePublishTests(unittest.TestCase):
 
     def test_stale_review_bundle_is_not_publishable(self):
         before = (self.root / 'data/report.json').read_bytes()
-        with self.assertRaisesRegex(ValueError, '公開ゲート|自動公開不可'):
+        for name in ("report.json", "japan-stocks.json", "research-evidence.json"):
+            path = self.source / name
+            value = json.loads(path.read_text(encoding="utf-8"))
+            value["report_date"] = "2026-10-05"
+            path.write_text(json.dumps(value, ensure_ascii=False), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, '本日版|公開候補'):
             prepare(self.source, self.root)
         self.assertEqual(before, (self.root / 'data/report.json').read_bytes())
 

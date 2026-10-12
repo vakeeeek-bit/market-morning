@@ -10,7 +10,16 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class PublicationFreshnessTests(unittest.TestCase):
     def test_old_analysis_is_not_admitted_by_publish_gate(self):
-        self.assertTrue(run(ROOT, 'publish').errors)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            shutil.copytree(ROOT / 'data', root / 'data')
+            shutil.copytree(ROOT / 'schemas', root / 'schemas')
+            for name in ('report', 'japan-stocks', 'research-evidence'):
+                path = root / 'data' / f'{name}.json'
+                value = json.loads(path.read_text())
+                value['report_date'] = '2026-10-05'
+                path.write_text(json.dumps(value))
+            self.assertTrue(run(root, 'publish').errors)
         self.assertFalse(run(ROOT, 'report').errors)
 
     def test_market_news_only_days_are_indexed_without_fake_reports(self):

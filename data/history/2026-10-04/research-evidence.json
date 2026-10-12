@@ -1,0 +1,491 @@
+{
+  "version": "1.0",
+  "report_date": "2026-10-04",
+  "target_market_date": "2026-10-02",
+  "updated_at": "2026-10-04 22:40 JST",
+  "research_coverage": {
+    "status": "PASS",
+    "directions": [
+      {
+        "id": "fixed_universe",
+        "status": "PASS",
+        "evidence": "固定32系列を同一スナップショットで取得し市場日・前日比を監査"
+      },
+      {
+        "id": "cross_news",
+        "status": "PASS",
+        "evidence": "雇用・Fed・金利・原油・日本株・TDnet・来週イベントを横断"
+      },
+      {
+        "id": "reverse_from_anomalies",
+        "status": "PASS",
+        "evidence": "株高/債券安と日経平均/TOPIX乖離を逆引き"
+      },
+      {
+        "id": "previous_day_change",
+        "status": "PASS",
+        "evidence": "前日シナリオを日米指数・業種ETF・金利・商品で更新"
+      }
+    ],
+    "items": [
+      {
+        "id": "fixed_market_universe",
+        "label": "固定Universe",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "株・金利・為替・商品・暗号資産32系列を100%取得",
+        "attempts": [
+          {
+            "method": "Yahoo個別チャート・FRED・Reuters照合",
+            "result": "終値・市場日・前日比を更新",
+            "source_urls": [
+              "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-10-02/",
+              "https://fred.stlouisfed.org/series/DGS2"
+            ]
+          }
+        ],
+        "impact_if_unavailable": "市場判断不能",
+        "publication_use": "used"
+      },
+      {
+        "id": "market_breadth",
+        "label": "日本株市場内部",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "日経平均・TOPIX・プライム騰落・17業種ETFを確認",
+        "attempts": [
+          {
+            "method": "市場解説とETFを照合",
+            "result": "指数集中または広い下落を確認",
+            "source_urls": [
+              "https://www.iwaicosmo.co.jp/investment/market/"
+            ]
+          }
+        ],
+        "impact_if_unavailable": "指数の広がりを誤読",
+        "publication_use": "used"
+      },
+      {
+        "id": "policy_and_macro_news",
+        "label": "政策・マクロ",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "米雇用、Fed織り込み、FOMC議事要旨予定、首相所信表明を確認",
+        "attempts": [
+          {
+            "method": "BLS・Fed・Reutersを確認",
+            "result": "短期利上げ観測後退と長期金利上昇のねじれを確認",
+            "source_urls": [
+              "https://www.bls.gov/news.release/empsit.nr0.htm",
+              "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+              "https://www.reuters.com/world/asia-pacific/japan-pm-takaichi-vow-nimble-response-unexpected-market-moves-nikkei-says-2026-09-30/"
+            ]
+          }
+        ],
+        "impact_if_unavailable": "金利経路を判断不能",
+        "publication_use": "used"
+      },
+      {
+        "id": "company_disclosures",
+        "label": "日本企業開示",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "TDnet 2026-10-02全件一覧と重要5件の一次PDFを確認",
+        "attempts": [
+          {
+            "method": "TDnet一覧と開示PDFを確認",
+            "result": "重要5件を事実・織り込み・反証付きで選定",
+            "source_urls": [
+              "https://www.release.tdnet.info/inbs/I_list_001_20261002.html",
+              "https://www.release.tdnet.info/inbs/140120261002545257.pdf",
+              "https://www.release.tdnet.info/inbs/140120261002545326.pdf"
+            ]
+          }
+        ],
+        "impact_if_unavailable": "個別材料欠落",
+        "publication_use": "used"
+      },
+      {
+        "id": "analyst_rating_changes",
+        "label": "アナリスト評価変更",
+        "tier": "Required",
+        "status": "十分調査したが取得不能",
+        "evidence": "公開2系統を照合したが完全性を担保できず",
+        "attempts": [
+          {
+            "method": "公開レーティング一覧",
+            "result": "契約データ相当の網羅性なし",
+            "source_urls": [
+              "https://kabu.kininew.net/rating/"
+            ]
+          },
+          {
+            "method": "株式ニュース一覧",
+            "result": "EPS変更を含む完全一覧は取得不能",
+            "source_urls": [
+              "https://finance.yahoo.co.jp/news/categories/stocks"
+            ]
+          }
+        ],
+        "impact_if_unavailable": "変更なしと断定せず個別掲載を見送る",
+        "publication_use": "excluded"
+      },
+      {
+        "id": "copper_inventory",
+        "label": "Copper価格・3市場在庫",
+        "tier": "Required",
+        "status": "十分調査したが取得不能",
+        "evidence": "価格は取得、LME/SHFE/COMEXの同一時点在庫は取得不能",
+        "attempts": [
+          {
+            "method": "LMEを確認",
+            "result": "当日統一値を取得不能",
+            "source_urls": [
+              "https://www.lme.com/en/metals/non-ferrous/lme-copper"
+            ]
+          },
+          {
+            "method": "CMEを確認",
+            "result": "SHFEを含む同一時点比較を構成できず",
+            "source_urls": [
+              "https://www.cmegroup.com/markets/metals/base/copper.html"
+            ]
+          }
+        ],
+        "impact_if_unavailable": "価格のみ表示し在庫需給判断から除外",
+        "publication_use": "excluded"
+      },
+      {
+        "id": "market_anomaly_reverse_search",
+        "label": "市場異常値の逆引き",
+        "tier": "Required",
+        "status": "取得済",
+        "evidence": "株高/債券安、日経平均/TOPIX乖離、WTI/Brent差を確認",
+        "attempts": [
+          {
+            "method": "複数資産・指数・業種を照合",
+            "result": "単純な全面リスクオンを否定",
+            "source_urls": [
+              "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-10-02/",
+              "https://www.iwaicosmo.co.jp/investment/market/"
+            ]
+          }
+        ],
+        "impact_if_unavailable": "テンプレ因果に劣化",
+        "publication_use": "used"
+      },
+      {
+        "id": "previous_day_view",
+        "label": "前日認識との差分",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "半導体、金利、原油、日本株内部を前日条件と比較",
+        "attempts": [
+          {
+            "method": "前日レポートと実績比較",
+            "result": "見方を上方・下方修正",
+            "source_urls": [
+              "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-10-02/",
+              "https://www.iwaicosmo.co.jp/investment/market/"
+            ]
+          }
+        ],
+        "impact_if_unavailable": "数字差し替えに劣化",
+        "publication_use": "used"
+      }
+    ]
+  },
+  "analysis_quality": {
+    "status": "PASS",
+    "materials": [
+      {
+        "headline": "半導体高と金利高の同居",
+        "fact": {
+          "text": "SOX +2.40%、米10年5.277%",
+          "source_urls": [
+            "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-10-02/",
+            "https://www.iwaicosmo.co.jp/investment/market/"
+          ]
+        },
+        "observed_market_reaction": {
+          "text": "NASDAQ +1.19%、VIX -6.59%",
+          "assets_checked": [
+            "NASDAQ",
+            "米10年",
+            "VIX"
+          ]
+        },
+        "market_internals": {
+          "text": "XLKとSOXは強いが全業種が同程度ではない"
+        },
+        "market_pricing": {
+          "status": "partially_priced"
+        },
+        "interpretation": {
+          "text": "半導体心理は改善したが金融環境全体は緩んでいない。",
+          "evidence": "NASDAQ +1.19%、VIX -6.59%",
+          "uncertainty": "長期金利の財政・インフレ要因は継続し得る。",
+          "confidence": "supported"
+        },
+        "japan_transmission": {
+          "economic_channel": "海外市場→為替・金利・商品→業績期待・割引率→日本株",
+          "intermediate_reactions": [
+            "米株",
+            "米金利",
+            "円",
+            "商品"
+          ],
+          "affected_sectors": [
+            "電機・精密",
+            "機械",
+            "不動産"
+          ],
+          "pricing_in_japan": "翌営業日の現物で確認",
+          "assessment": "指数ではなくTOPIX比と業種数で確認"
+        },
+        "conflict_resolution": "支持材料と反証材料を同時に比較し、条件付き判断とした。",
+        "chronology_check": "PASS",
+        "counter_evidence": [
+          "米10年上昇",
+          "日本株の広がり不足"
+        ],
+        "change_conditions": [
+          "米10年5.20%/5.35%",
+          "SOXと電機・精密の相対",
+          "Brent100ドル",
+          "TOPIXと上昇業種数"
+        ]
+      },
+      {
+        "headline": "日本株内部の格差",
+        "fact": {
+          "text": "日経平均 -0.94%、TOPIX参考 -0.97%",
+          "source_urls": [
+            "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-10-02/",
+            "https://www.iwaicosmo.co.jp/investment/market/"
+          ]
+        },
+        "observed_market_reaction": {
+          "text": "17業種ETFとプライム騰落を確認",
+          "assets_checked": [
+            "日経平均",
+            "TOPIX"
+          ]
+        },
+        "market_internals": {
+          "text": "半導体集中または値下がり銘柄多数"
+        },
+        "market_pricing": {
+          "status": "priced"
+        },
+        "interpretation": {
+          "text": "指数方向だけで市場全体を判定しない。",
+          "evidence": "17業種ETFとプライム騰落を確認",
+          "uncertainty": "ETFは公式Breadthそのものではない。",
+          "confidence": "supported"
+        },
+        "japan_transmission": {
+          "economic_channel": "海外市場→為替・金利・商品→業績期待・割引率→日本株",
+          "intermediate_reactions": [
+            "米株",
+            "米金利",
+            "円",
+            "商品"
+          ],
+          "affected_sectors": [
+            "電機・精密",
+            "鉄鋼・非鉄",
+            "銀行"
+          ],
+          "pricing_in_japan": "翌営業日の現物で確認",
+          "assessment": "指数ではなくTOPIX比と業種数で確認"
+        },
+        "conflict_resolution": "支持材料と反証材料を同時に比較し、条件付き判断とした。",
+        "chronology_check": "PASS",
+        "counter_evidence": [
+          "TOPIXの相対弱さ",
+          "上昇業種の限定"
+        ],
+        "change_conditions": [
+          "米10年5.20%/5.35%",
+          "SOXと電機・精密の相対",
+          "Brent100ドル",
+          "TOPIXと上昇業種数"
+        ]
+      },
+      {
+        "headline": "原油と為替の輸入コスト",
+        "fact": {
+          "text": "WTI 91.11、Brent 102.25、USD/JPY 157.927",
+          "source_urls": [
+            "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-10-02/",
+            "https://www.iwaicosmo.co.jp/investment/market/"
+          ]
+        },
+        "observed_market_reaction": {
+          "text": "資源優位と運輸・小売の弱さを確認",
+          "assets_checked": [
+            "WTI",
+            "USD/JPY",
+            "日本業種ETF"
+          ]
+        },
+        "market_internals": {
+          "text": "資源と燃料コスト業種が逆方向"
+        },
+        "market_pricing": {
+          "status": "partially_priced"
+        },
+        "interpretation": {
+          "text": "円安と高油価は輸出採算を支える一方、輸入コストを押し上げる。",
+          "evidence": "資源優位と運輸・小売の弱さを確認",
+          "uncertainty": "週末の地政学ニュースで月曜初値が変わり得る。",
+          "confidence": "supported"
+        },
+        "japan_transmission": {
+          "economic_channel": "海外市場→為替・金利・商品→業績期待・割引率→日本株",
+          "intermediate_reactions": [
+            "米株",
+            "米金利",
+            "円",
+            "商品"
+          ],
+          "affected_sectors": [
+            "エネルギー資源",
+            "運輸・物流",
+            "小売",
+            "自動車・輸送機"
+          ],
+          "pricing_in_japan": "翌営業日の現物で確認",
+          "assessment": "指数ではなくTOPIX比と業種数で確認"
+        },
+        "conflict_resolution": "支持材料と反証材料を同時に比較し、条件付き判断とした。",
+        "chronology_check": "PASS",
+        "counter_evidence": [
+          "WTI下落",
+          "Brent高止まり"
+        ],
+        "change_conditions": [
+          "米10年5.20%/5.35%",
+          "SOXと電機・精密の相対",
+          "Brent100ドル",
+          "TOPIXと上昇業種数"
+        ]
+      }
+    ],
+    "template_degradation_audit": {
+      "today_specific": true,
+      "previous_report_compared": true,
+      "actual_market_reaction_checked": true,
+      "multi_asset_checked": true,
+      "conflicting_materials_compared": true,
+      "transmission_explained": true,
+      "observable_change_conditions": true,
+      "comparison_note": "金曜朝は半導体支えと金利・原油の逆風を想定。日本株は実際に広く下落。 米雇用は予想を下回り10月利上げ観測は後退。 SOXは+2.40%へ加速し、月曜の電機・精密を上方修正。 米10年は5.277%へ再上昇し、金融環境改善の判断は見送る。 日本株は値下がり1,306銘柄で、反発にはTOPIXと業種数の改善が必要。"
+    }
+  },
+  "counter_evidence_audit": {
+    "status": "PASS",
+    "conclusions": [
+      {
+        "conclusion": "国内半導体に追い風",
+        "checks": [
+          "SOX高",
+          "米10年高",
+          "金曜の国内電機ETF下落"
+        ],
+        "weighing": "SOXを支持、金利と国内Breadthを反証として条件付き。",
+        "uncertainty": "月曜寄り付きの円・金利で変化。"
+      },
+      {
+        "conclusion": "資源優位",
+        "checks": [
+          "原油100ドル台",
+          "WTI下落",
+          "日本資源ETF上昇"
+        ],
+        "weighing": "高水準は支持、日次下落は反証。",
+        "uncertainty": "週末地政学ニュース未反映。"
+      }
+    ]
+  },
+  "cross_asset_consistency": {
+    "status": "PASS",
+    "assets_checked": [
+      "equities",
+      "rates",
+      "fx",
+      "commodities",
+      "crypto"
+    ],
+    "relationships": [
+      {
+        "combination": "株高×長期金利高",
+        "explanation": "利上げ時期後退は株を支えたが、財政・インフレ懸念は長期債に残った。",
+        "unresolved": false
+      },
+      {
+        "combination": "原油高×円安",
+        "explanation": "資源株には支え、輸入コスト業種には逆風。",
+        "unresolved": false
+      },
+      {
+        "combination": "暗号資産×VIX",
+        "explanation": "補助的にはリスク選好だが、金利高と矛盾するため主判断に使わない。",
+        "unresolved": true,
+        "uncertainty": "週末取引と株式市場の基準時刻が異なる。"
+      }
+    ]
+  },
+  "previous_day_change": {
+    "status": "PASS",
+    "prior_view": "金曜朝は半導体支えと金利・原油の逆風を想定。日本株は実際に広く下落。",
+    "new_events": [
+      "米雇用下振れ",
+      "SOX上昇",
+      "長期金利再上昇",
+      "TDnet重要開示"
+    ],
+    "changed": [
+      "米雇用は予想を下回り10月利上げ観測は後退。",
+      "SOXは+2.40%へ加速し、月曜の電機・精密を上方修正。",
+      "米10年は5.277%へ再上昇し、金融環境改善の判断は見送る。",
+      "日本株は値下がり1,306銘柄で、反発にはTOPIXと業種数の改善が必要。"
+    ],
+    "unchanged": [
+      "原油高は輸入コストに逆風",
+      "指数だけでBreadthを判断しない"
+    ],
+    "japan_revision": "電機・精密を追い風候補へ上方修正する一方、TOPIX・金利・原油の確認条件を強化。"
+  },
+  "source_quality": {
+    "status": "PASS",
+    "checks": [
+      "TDnet開示PDF・BLS・Fed・日銀予定を一次情報として優先",
+      "市場反応はReutersと終値系列を照合",
+      "日本株は指数・プライム騰落・17業種ETFを分離",
+      "取得不能項目を明示"
+    ]
+  },
+  "data_integrity": {
+    "status": "PASS",
+    "checks": [
+      "固定32系列の取得成功率100%",
+      "market_dateとprevious_market_dateを監査",
+      "米2年・10年の基準日一致を日次で確認",
+      "週末は10月2日終値を固定",
+      "連続先物の限月差を注記"
+    ]
+  },
+  "quality_gates": {
+    "research_coverage": "PASS",
+    "source_quality": "PASS",
+    "data_integrity": "PASS",
+    "analysis_logic": "PASS",
+    "cross_asset_consistency": "PASS",
+    "japan_transmission": "PASS",
+    "counter_evidence_audit": "PASS",
+    "previous_day_change": "PASS",
+    "final_content_audit": "PASS"
+  }
+}

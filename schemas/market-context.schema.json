@@ -64,7 +64,34 @@
           "route": {
             "type": "string"
           },
-          "assessment": {
+          "explanation": {
+            "type": "string"
+          },
+          "sectors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "publisher": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string"
+          },
+          "url": {
             "type": "string"
           }
         },
@@ -101,27 +128,6 @@
             "type": "string"
           },
           "meaning": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": true
-      }
-    },
-    "sources": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": "string"
-          },
-          "publisher": {
-            "type": "string"
-          },
-          "published_at": {
-            "type": "string"
-          },
-          "url": {
             "type": "string"
           }
         },

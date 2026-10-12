@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-10 11:58:41 JST",
+  "updated_at": "2026-10-12 09:38:19 JST",
   "market_date": "2026-10-09",
   "data_phase": "休場",
   "data_state": {
     "kind": "holiday",
     "label": "東証現物は休場",
-    "message": "2026-10-10は土曜日で休場。2026-10-09の前営業日データを表示"
+    "message": "2026-10-12はスポーツの日で休場。2026-10-09の前営業日データを表示"
   },
   "source": "Yahoo Finance via yfinance（1回の一括取得）",
   "scope": "市場・セクター評価は指数連動ETFとTOPIX-17業種ETFを使用。主要監視34銘柄は銘柄ランキングだけに使用",
@@ -1089,10 +1089,10 @@
       "category": "為替",
       "assessment": "中立",
       "status": "observed",
-      "market_value": 158.246,
-      "change_pct": 0.12,
+      "market_value": 158.063,
+      "change_pct": 0.0,
       "transmission_path": "輸出採算と輸入コストが変化",
-      "reason": "USD/JPY 158.246、前日比 +0.12%（2026-10-09）→ 輸出採算と輸入コストが変化",
+      "reason": "USD/JPY 158.063、前日比 +0.00%（2026-10-09）→ 輸出採算と輸入コストが変化",
       "affected_sectors": [
         "自動車・輸送機",
         "機械",
@@ -1163,10 +1163,10 @@
       "category": "海外株",
       "assessment": "追い風",
       "status": "observed",
-      "market_value": 30883.1484,
+      "market_value": 30883.1504,
       "change_pct": 0.51,
       "transmission_path": "国内グロース株の投資家心理に波及",
-      "reason": "NASDAQ100 30883.1484、前日比 +0.51%（2026-10-09）→ 国内グロース株の投資家心理に波及",
+      "reason": "NASDAQ100 30883.1504、前日比 +0.51%（2026-10-09）→ 国内グロース株の投資家心理に波及",
       "affected_sectors": [
         "電機・精密",
         "情報通信・サービス"

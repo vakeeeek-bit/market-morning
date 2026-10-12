@@ -42,7 +42,17 @@
       host.append(el('p', `収集記録（${attemptDay}時点）：${attempt.market_attempt_status}｜${attempt.market_attempt_note}`));
       host.append(el('p', `日本株の取引日程：${attempt.japan_calendar_note}`));
     }
-    if (audit) {
+    // A site-audit snapshot can describe a candidate that was later published.
+    // Do not show that stale candidate state after a newer report is live.
+    const reportUpdatedAt = Date.parse(report?.updated_at || '');
+    const auditCheckedAt = Date.parse(audit?.checked_at || '');
+    const auditIsCurrent = audit && (
+      !report ||
+      !Number.isFinite(reportUpdatedAt) ||
+      !Number.isFinite(auditCheckedAt) ||
+      auditCheckedAt > reportUpdatedAt
+    );
+    if (auditIsCurrent) {
       host.append(el('p', `全体点検：${audit.checked_at}｜AIレポートの更新は ${audit.report_publication_status}`));
       for (const row of audit.blockers || []) host.append(el('p', `未解決：${row.title || row.item}｜${row.next_action}`));
     }

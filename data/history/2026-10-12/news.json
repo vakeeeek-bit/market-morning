@@ -1,11 +1,87 @@
 {
   "report_date": "2026-10-12",
   "target_market_date": "2026-10-09",
-  "updated_at": "2026-10-12T06:49:05+09:00",
+  "updated_at": "2026-10-12T13:49:10+09:00",
   "publication_mode": "verified_news",
   "coverage_status": "partial",
-  "coverage_note": "部分収集18件。既存17件の確認時刻を保持。10月12日にGL135本文を追加確認。網羅的調査・総合版PASSを意味しない。",
+  "coverage_note": "部分収集20件。午後にBOJ地域経済報告と米軽油税大統領令の2件を追加実読。過去発表日の補完であり10月12日新規発表ではない。既存18件の確認時刻を保持。総合レポートの市場品質とは別。",
   "articles": [
+    {
+      "id": "boj-sakura-20261008",
+      "title": "日銀：東北・四国の景気判断を引き上げ、地域ごとの弱さも残る",
+      "published_date": "2026-10-08",
+      "publisher": "日本銀行",
+      "source_url": "https://www.boj.or.jp/research/brp/rer/rer261008.htm",
+      "fact": "10月8日公表の地域経済報告は全地域で回復・持ち直しと判断。7月との比較で東北を持ち直しから緩やかな回復、四国を緩やかな持ち直しから持ち直しへ変更。九州・沖縄は熊本地震の影響等による一部の弱さを記載。",
+      "analysis": "国内需要の底堅さと地域差を分けて評価。全国一律の好況や利上げ決定とは解釈しない。",
+      "limitations": "支店長会議向けに収集した情報の集約。政策金利の変更ではない。10月12日の新規発表でもなく市場反応は未確認。",
+      "verified_at": "2026-10-12T13:49:10+09:00",
+      "source_type": "primary",
+      "verification_url": "https://www.boj.or.jp/research/brp/rer/rer261008.htm",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文を実読。BOJの総括判断表または大統領令第2〜4節の条件・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月8日公表の地域経済報告は全地域で回復・持ち直しと判断。7月との比較で東北を持ち直しから緩やかな回復、四国を緩やかな持ち直しから持ち直しへ変更。九州・沖縄は熊本地震の影響等による一部の弱さを記載。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表2026-10-08、確認2026-10-12T13:49:10+09:00。後日追加収集で当日新規発表と偽装しない。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "本文の事実と条件付き解釈を別欄に記載。市場反応未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "支店長会議向けに収集した情報の集約。政策金利の変更ではない。10月12日の新規発表でもなく市場反応は未確認。"
+        }
+      }
+    },
+    {
+      "id": "wh-diesel-tax-20261005",
+      "title": "米政府：軽油税の支払延期・罰則救済を指示、免税確定ではない",
+      "published_date": "2026-10-05",
+      "publisher": "White House",
+      "source_url": "https://www.whitehouse.gov/presidential-actions/2026/10/emergency-tax-relief-on-diesel-fuel/",
+      "fact": "10月5日付大統領令14435は財務長官に5日以内の法的適格性判断を指示。判断が成立する場合、対象納税者の10月5日〜12月31日に発生する特定軽油税の支払いを法の範囲内で延期する。着色軽油の道路使用等について罰則救済のIRS告知を指示。",
+      "analysis": "燃料供給問題への米政府対応としてGL135と併せて監視。日本の燃料価格や税への直接適用ではない。",
+      "limitations": "実施ガイダンス・対象者・繰延税の納付期限は別途指定。納税義務の免除は検討事項で、免税や燃料供給回復の確定ではない。",
+      "verified_at": "2026-10-12T13:49:10+09:00",
+      "source_type": "primary",
+      "verification_url": "https://www.whitehouse.gov/presidential-actions/2026/10/emergency-tax-relief-on-diesel-fuel/",
+      "verification_status": "PASS",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "公式本文を実読。BOJの総括判断表または大統領令第2〜4節の条件・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月5日付大統領令14435は財務長官に5日以内の法的適格性判断を指示。判断が成立する場合、対象納税者の10月5日〜12月31日に発生する特定軽油税の支払いを法の範囲内で延期する。着色軽油の道路使用等について罰則救済のIRS告知を指示。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表2026-10-05、確認2026-10-12T13:49:10+09:00。後日追加収集で当日新規発表と偽装しない。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "本文の事実と条件付き解釈を別欄に記載。市場反応未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "実施ガイダンス・対象者・繰延税の納付期限は別途指定。納税義務の免除は検討事項で、免税や燃料供給回復の確定ではない。"
+        }
+      }
+    },
     {
       "id": "ofac-gl135-20261009",
       "title": "OFAC：ロシア産軽油の取引を期限付きで許可、口座引落しに例外",

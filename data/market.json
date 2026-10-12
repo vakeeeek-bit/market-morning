@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-12 11:30:07",
+  "updated_at": "2026-10-12 16:51:27",
   "timezone": "Asia/Tokyo",
   "source": "Yahoo Finance via yfinance for market closes; FRED DGS2 for US 2Y Treasury yield",
   "notes": {
@@ -340,24 +340,24 @@
     "btc": {
       "name": "BTC",
       "ticker": "BTC-USD",
-      "price": 82912.2266,
-      "previous": 82546.3203,
-      "change": 365.9062,
-      "change_pct": 0.44,
+      "price": 83679.4688,
+      "previous": 82912.2266,
+      "change": 767.2422,
+      "change_pct": 0.93,
       "status": "取得成功",
-      "market_date": "2026-10-10",
-      "previous_market_date": "2026-10-09"
+      "market_date": "2026-10-11",
+      "previous_market_date": "2026-10-10"
     },
     "eth": {
       "name": "ETH",
       "ticker": "ETH-USD",
-      "price": 2504.0278,
-      "previous": 2485.5386,
-      "change": 18.4893,
-      "change_pct": 0.74,
+      "price": 2534.6992,
+      "previous": 2504.0278,
+      "change": 30.6714,
+      "change_pct": 1.22,
       "status": "取得成功",
-      "market_date": "2026-10-10",
-      "previous_market_date": "2026-10-09"
+      "market_date": "2026-10-11",
+      "previous_market_date": "2026-10-10"
     },
     "us2y": {
       "name": "米2年債利回り",
@@ -392,6 +392,9 @@
     "success_count": 32,
     "failed_count": 0,
     "success_rate_pct": 100.0,
-    "failed_keys": []
+    "failed_keys": [],
+    "publication_status": "PASS",
+    "retrieval_attempts": [],
+    "limitations": []
   }
 }

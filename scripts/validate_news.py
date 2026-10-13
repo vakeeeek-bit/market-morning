@@ -10,6 +10,42 @@ ROOT = Path(__file__).resolve().parents[1]
 CHECKS = ("source_read", "facts_verified", "chronology", "fact_analysis_separation", "limitations")
 
 
+def validate_display_config(news, config):
+    """Validate optional reader-facing metadata without changing audit evidence."""
+    errors = []
+    items = config.get("items") if isinstance(config, dict) else None
+    if not isinstance(items, dict):
+        return ["news display items must be an object"]
+    expected = {article.get("id") for article in news.get("articles", []) if isinstance(article, dict)}
+    if set(items) != expected:
+        errors.append("news display ids must match current verified articles")
+    for article_id, item in items.items():
+        prefix = f"news-display[{article_id}]"
+        if not isinstance(item, dict):
+            errors.append(f"{prefix}: object required")
+            continue
+        if item.get("primary_page") not in {"world", "japan"}:
+            errors.append(f"{prefix}: primary_page must be world or japan")
+        priority = item.get("priority")
+        if not isinstance(priority, int) or isinstance(priority, bool) or not 0 <= priority <= 100:
+            errors.append(f"{prefix}: priority must be an integer from 0 to 100")
+        points = item.get("attention_points", [])
+        if not isinstance(points, list) or len(points) > 3:
+            errors.append(f"{prefix}: attention_points must be a list of at most three items")
+            continue
+        for point in points:
+            if (
+                not isinstance(point, str)
+                or not point.strip()
+                or len(point) > 240
+                or "�" in point
+                or any(token in point.lower() for token in ("[object object]", "undefined", "null", "nan"))
+                or any(ord(char) < 32 and char not in "\n\t" for char in point)
+            ):
+                errors.append(f"{prefix}: unreadable attention point")
+    return errors
+
+
 def validate(news):
     errors = []
     if not isinstance(news, dict):
@@ -143,7 +179,8 @@ def main():
     parser.add_argument("--root", type=Path, default=ROOT)
     args = parser.parse_args()
     news = json.loads((args.root / "data/news.json").read_text())
-    errors = validate(news) + validate_collection(args.root)
+    display = json.loads((args.root / "data/news-display.json").read_text())
+    errors = validate(news) + validate_display_config(news, display) + validate_collection(args.root)
     for error in errors:
         print("ERROR:", error)
     print("Verified news:", "FAIL" if errors else "PASS", "(market/report gate unchanged)")

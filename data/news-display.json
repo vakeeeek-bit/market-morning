@@ -1,0 +1,160 @@
+{
+  "version": 1,
+  "description": "読者向けの主掲載先・優先度・重要注意点。検証証跡はnews.jsonに保持する。",
+  "items": {
+    "reuters-us-market-20261012": {
+      "primary_page": "world",
+      "priority": 100,
+      "attention_points": [
+        "10月13日の日本株現物への波及は寄り付き後に確認する。"
+      ]
+    },
+    "bls-cpi-calendar-20261014": {
+      "primary_page": "world",
+      "priority": 95,
+      "attention_points": [
+        "公表予定であり、CPIの実績値や市場予想ではない。"
+      ]
+    },
+    "michigan-preliminary-20261009": {
+      "primary_page": "world",
+      "priority": 90,
+      "attention_points": [
+        "速報値。10月23日の確報で改定される可能性がある。"
+      ]
+    },
+    "sifma-bond-holiday-20261012": {
+      "primary_page": "world",
+      "priority": 88,
+      "attention_points": [
+        "SIFMAの休場推奨と、個別の先物・電子取引を同一視しない。"
+      ]
+    },
+    "ofac-gl135-20261009": {
+      "primary_page": "world",
+      "priority": 85,
+      "attention_points": [
+        "許可対象は軽油。原油や全制裁の解除ではない。"
+      ]
+    },
+    "wh-diesel-tax-20261005": {
+      "primary_page": "world",
+      "priority": 82,
+      "attention_points": [
+        "支払い延期の検討であり、免税の確定ではない。"
+      ]
+    },
+    "waller-sep-20261008": {
+      "primary_page": "world",
+      "priority": 78,
+      "attention_points": [
+        "理事個人の見解であり、FOMCの政策決定ではない。"
+      ]
+    },
+    "census-wholesale-20261008": {
+      "primary_page": "world",
+      "priority": 72,
+      "attention_points": [
+        "名目・季節調整済みで、実質需要の伸びとは同一ではない。"
+      ]
+    },
+    "shfe-copper-weekly-20261009": {
+      "primary_page": "world",
+      "priority": 68,
+      "attention_points": [
+        "SHFEのトン表示。COMEXのショートトンと単純合算しない。"
+      ]
+    },
+    "cme-copper-stock-20261009": {
+      "primary_page": "world",
+      "priority": 66,
+      "attention_points": [
+        "COMEXのショートトン表示。他取引所の在庫と単純合算しない。"
+      ]
+    },
+    "fed-scf-20261009": {
+      "primary_page": "world",
+      "priority": 58,
+      "attention_points": [
+        "2025年の家計調査で、10月の景気指標ではない。"
+      ]
+    },
+    "ofac-icc-20261009": {
+      "primary_page": "world",
+      "priority": 50,
+      "attention_points": [
+        "個別許可の条件を、すべての取引へ広げて解釈しない。"
+      ]
+    },
+    "ofac-pegasus-20261009": {
+      "primary_page": "world",
+      "priority": 45,
+      "attention_points": [
+        "過去の違反への和解で、新たな包括関税ではない。"
+      ]
+    },
+    "fujimi-forecast-20261009": {
+      "primary_page": "japan",
+      "priority": 100,
+      "attention_points": [
+        "会社予想の増額であり、実績値ではない。"
+      ]
+    },
+    "osg-buyback-20261009": {
+      "primary_page": "japan",
+      "priority": 96,
+      "attention_points": [
+        "買付予定と実際の取得完了を分けて確認する。"
+      ]
+    },
+    "yaskawa-20261009": {
+      "primary_page": "japan",
+      "priority": 92,
+      "attention_points": [
+        "売上予想は増額、営業利益予想は減額。売上だけで判断しない。"
+      ]
+    },
+    "jins-20261009": {
+      "primary_page": "japan",
+      "priority": 90,
+      "attention_points": [
+        "終了年度の実績と予想の差で、将来年度の一律下方修正ではない。"
+      ]
+    },
+    "aeon-financial-interim-20261009": {
+      "primary_page": "japan",
+      "priority": 86,
+      "attention_points": [
+        "純利益増と営業利益減を分けて評価する。"
+      ]
+    },
+    "hoya-20261009": {
+      "primary_page": "japan",
+      "priority": 82,
+      "attention_points": [
+        "契約締結と譲渡完了を区別し、非開示の対価を推定しない。"
+      ]
+    },
+    "household-20261009": {
+      "primary_page": "japan",
+      "priority": 76,
+      "attention_points": [
+        "8月実績。前年比の弱さと前月比の小幅改善を分けて読む。"
+      ]
+    },
+    "boj-sakura-20261008": {
+      "primary_page": "japan",
+      "priority": 72,
+      "attention_points": [
+        "地域報告であり、政策金利の変更ではない。"
+      ]
+    },
+    "boj-money-market-20261009": {
+      "primary_page": "japan",
+      "priority": 65,
+      "attention_points": [
+        "7月末基準の調査で、10月9日の市場残高ではない。"
+      ]
+    }
+  }
+}

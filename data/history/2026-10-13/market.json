@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-13 12:04:31",
+  "updated_at": "2026-10-13 12:39:28",
   "timezone": "Asia/Tokyo",
   "source": "Yahoo Finance via yfinance for market closes; FRED DGS2 for US 2Y Treasury yield",
   "notes": {
@@ -60,9 +60,9 @@
     "dow": {
       "name": "NYダウ",
       "ticker": "^DJI",
-      "price": 51850.5508,
+      "price": 51850.6016,
       "previous": 51654.9492,
-      "change": 195.6016,
+      "change": 195.6523,
       "change_pct": 0.38,
       "status": "取得成功",
       "market_date": "2026-10-12",

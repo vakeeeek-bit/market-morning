@@ -110,6 +110,33 @@ body {
 .empty, .error { color: #68707a; }
 .error { color: #b42318; }
 .footer { padding: 12px 0 28px; color: #7b8490; text-align: center; font-size: 12px; }
+.news-controls { display:flex; justify-content:flex-end; margin:-36px 0 14px; }
+.news-controls label { color:#64748b; font-size:12px; font-weight:700; }
+.news-controls select { margin-left:6px; min-height:34px; border:1px solid #d8dde5; border-radius:8px; background:#fff; padding:5px 8px; font:inherit; }
+.news-summary { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:14px; color:#64748b; font-size:12px; }
+.news-summary strong { color:#17202a; }
+.news-other-link { margin-left:auto; color:#2457a6; font-weight:750; text-decoration:none; }
+.news-list { display:grid; gap:12px; }
+.news-card { padding:16px; border:1px solid #e5e7eb; border-radius:14px; background:#fff; }
+.news-title { margin:0; font-size:17px; line-height:1.45; }
+.news-meta { display:flex; gap:8px; flex-wrap:wrap; margin:7px 0 10px; color:#64748b; font-size:11px; }
+.news-publisher { padding-left:8px; border-left:1px solid #cbd5e1; }
+.news-fact { margin:0; color:#334155; font-size:14px; line-height:1.7; }
+.news-impact { margin-top:12px; padding:11px 12px; border-left:4px solid #2563eb; border-radius:0 9px 9px 0; background:#eff6ff; }
+.news-impact p { margin:3px 0 0; }
+.news-label { color:#1e3a8a; font-size:11px; font-weight:850; }
+.news-caution { margin-top:10px; padding:10px 12px; border-radius:9px; background:#fffbeb; color:#78350f; font-size:12px; }
+.news-caution .news-label { color:#92400e; }
+.news-caution ul { margin:4px 0 0; padding-left:18px; }
+.news-source { display:inline-block; margin-top:11px; color:#2457a6; font-size:12px; font-weight:700; }
+.news-more, .news-quality { margin-top:12px; border:1px solid #e5e7eb; border-radius:11px; background:#fafbfc; }
+.news-more > summary, .news-quality > summary { padding:11px 13px; cursor:pointer; font-size:13px; font-weight:800; }
+.news-more .news-list { padding:0 12px 12px; }
+.news-quality-body { padding:0 13px 12px; color:#64748b; font-size:12px; }
+.publication-health-body { color:#64748b; font-size:12px; }
+.publication-health-lead { color:#17202a; font-weight:800; }
+.publication-health-list { padding-left:20px; }
+.publication-health-list li { margin-bottom:5px; }
 .mobile-section-nav { position: sticky; top: 0; z-index: 40; display: flex; gap: 6px; overflow-x: auto; margin: 0 0 14px; padding: 7px; border: 1px solid #e5e7eb; border-radius: 12px; background: rgba(255,255,255,.96); box-shadow: 0 5px 16px rgba(15,23,42,.08); scrollbar-width: none; }
 .mobile-section-nav::-webkit-scrollbar { display: none; }
 .mobile-section-nav button { flex: 0 0 auto; min-height: 36px; padding: 6px 10px; border: 1px solid #d8dde5; border-radius: 9px; background: #fff; color: #18202a; font: inherit; font-size: 12px; font-weight: 700; }
@@ -119,11 +146,15 @@ body {
 #story-other { border-top-color: #64748b; }
 #regime-section { border-top-color: #dc2626; }
 #driver-section { border-top-color: #2563eb; }
-#rotation-section, #market-ranking-section, #stock-ranking-section, #sector-quality-section { border-top-color: #7c3aed; }
+#market-ranking-section, #stock-ranking-section, #sector-quality-section { border-top-color: #7c3aed; }
 #liquidity-section, #internals-section { border-top-color: #0891b2; }
 #scenario-review-section { border-top-color: #d97706; }
 #quality-section { border-top-color: #059669; }
 @media (max-width: 640px) {
+  .news-controls { justify-content:flex-start; margin:0 0 12px; }
+  .news-other-link { width:100%; margin-left:0; }
+  .news-card { padding:13px; }
+  .news-title { font-size:16px; }
   .container { padding: 10px; }
   .header, .section { border-radius: 13px; }
   .header-title { font-size: 22px; }
@@ -168,7 +199,6 @@ body {
   <nav class="mobile-section-nav" aria-label="日本株レポート内の移動">
     <button type="button" data-jp-target="regime-section">朝3分</button>
     <button type="button" data-jp-target="driver-section">主要材料</button>
-    <button type="button" data-jp-target="rotation-section">比較</button>
     <button type="button" data-jp-target="sector-quality-section">セクター</button>
     <button type="button" data-jp-target="scenario-review-section">見方の修正</button>
     <button type="button" data-jp-target="company-news-section">個別ニュース</button>
@@ -196,12 +226,6 @@ body {
     <div class="insight-grid" id="key-drivers">データ更新待ち</div>
   </section>
 
-  <section class="section" id="rotation-section">
-    <div class="section-title">↔️ どちらが強い？</div>
-    <div class="market-note">17業種ETFを外需型と内需型に分け、比較結果 → 差 → 詳細数値の順に表示します。</div>
-    <div class="insight-grid" id="rotation-read">データ更新待ち</div>
-  </section>
-
   <section class="section" id="sector-quality-section">
     <div class="section-title">🗺️ セクター勢力図</div>
     <div class="market-note">業種ETF自身の勢い・商い・継続力で評価します。監視2銘柄の動きはセクター評価に使いません。</div>
@@ -220,15 +244,11 @@ body {
 
   <section class="section" id="stock-ranking-section">
     <div class="section-title">🏢 注目銘柄</div>
-    <div class="market-note">売買代金・出来高変化を先に確認し、全セクターの主要監視銘柄は折りたたみ内で比較できます。</div>
+    <div class="market-note">売買代金と出来高変化から、実際に資金が動いた銘柄を確認します。</div>
     <div class="ranking-grid" id="liquidity-section">
       <div class="ranking-card"><div class="ranking-title">売買代金上位（終値×出来高の概算値）</div><div id="trading-value-ranking">確認中</div></div>
       <div class="ranking-card"><div class="ranking-title">出来高急増（20日平均比）</div><div id="volume-surge-ranking">確認中</div></div>
     </div>
-    <details class="disclosure">
-      <summary>セクター内・主要銘柄ランキングを開く</summary>
-      <div class="disclosure-body"><div class="market-note">各セクターの主要監視2銘柄を比較しています。全構成銘柄の順位ではありません。</div><div class="ranking-grid" id="sector-stock-ranking">確認中</div></div>
-    </details>
   </section>
 
   <section class="section" id="scenario-review-section">
@@ -248,9 +268,8 @@ body {
     <div id="rating-changes">確認状況を読み込み中...</div>
   </section>
   <section class="section" id="quality-section">
-    <div class="section-title">🔎 データ品質</div>
-    <div id="quality">データ状態：確認中</div>
-    <details class="disclosure"><summary>取得状況の詳細</summary><div class="disclosure-body" id="quality-detail">確認中</div></details>
+    <div class="section-title">🔎 データ詳細・品質情報</div>
+    <details class="disclosure"><summary>現在の取得状態を確認</summary><div class="disclosure-body"><div id="quality">データ状態：確認中</div><div id="quality-detail">確認中</div></div></details>
   </section>
   <div class="footer">Market Morning ｜ Personal Macro Dashboard</div>
 </main>
@@ -627,19 +646,9 @@ function renderJapanMarket(data) {
   renderScoreboard(data.market_regime || {}, data.data_state || {});
   renderRegime(data.market_regime || {}, data.morning_summary || {});
   renderInsightCards('key-drivers', data.key_drivers, { flow: true });
-  renderInsightCards('rotation-read', data.rotation_read?.items);
   renderSectorQuality(data.sector_quality);
   rankingRows(document.getElementById('sector-winners'), sectors, row => signedPercent(row.change_pct));
   rankingRows(document.getElementById('sector-losers'), [...sectors].reverse(), row => signedPercent(row.change_pct));
-  const stockHolder = document.getElementById('sector-stock-ranking'); stockHolder.replaceChildren();
-  (Array.isArray(data.sector_stock_ranking) ? data.sector_stock_ranking : []).forEach(group => {
-    if (!Array.isArray(group.stocks) || !group.stocks.length) return;
-    const card = document.createElement('div'); card.className = 'ranking-card';
-    appendText(card, 'ranking-title', group.sector);
-    rankingRows(card, group.stocks, row => signedPercent(row.change_pct), 2);
-    stockHolder.appendChild(card);
-  });
-  if (!stockHolder.children.length) appendText(stockHolder, 'empty', 'データ更新待ち');
   rankingRows(document.getElementById('trading-value-ranking'), data.trading_value_ranking, row => {
     const value = Number(row.trading_value_proxy_yen);
     return Number.isFinite(value) ? `${(value / 100000000).toFixed(1)}億円` : '確認できず';
@@ -692,7 +701,7 @@ async function load() {
     }
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
-    document.getElementById('report-date').textContent = `公開日：${text(data.report_date)} ｜ 対象市場日：${text(data.target_market_date)} ｜ 更新：${text(data.updated_at)}`;
+    document.getElementById('report-date').textContent = `公開日 ${text(data.report_date)}｜市場基準 ${text(data.target_market_date)}`;
     const holder = document.getElementById('story-sections');
     holder.replaceChildren();
     const groups = [

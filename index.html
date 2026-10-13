@@ -179,6 +179,10 @@ body {
   display: block;
 }
 
+#market-updated, #report-updated {
+  display: none;
+}
+
 
 /* =====================================================
    SECTION
@@ -560,6 +564,37 @@ td.nowrap {
   padding: 20px 0 30px;
 }
 
+/* Reader-facing news: content first, audit metadata on demand. */
+#verified-news { border-top: 5px solid #dc2626; }
+#verified-news > .section-title { margin-top:0; }
+.news-controls { display:flex; justify-content:flex-end; margin:-36px 0 14px; }
+.news-controls label { color:#64748b; font-size:12px; font-weight:700; }
+.news-controls select { margin-left:6px; min-height:34px; border:1px solid #d8dde5; border-radius:8px; background:#fff; padding:5px 8px; font:inherit; }
+.news-summary { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:14px; color:#64748b; font-size:12px; }
+.news-summary strong { color:#17202a; }
+.news-other-link { margin-left:auto; color:#2457a6; font-weight:750; text-decoration:none; }
+.news-list { display:grid; gap:12px; }
+.news-card { padding:16px; border:1px solid #e5e7eb; border-radius:14px; background:#fff; }
+.news-title { margin:0; font-size:17px; line-height:1.45; }
+.news-meta { display:flex; gap:8px; flex-wrap:wrap; margin:7px 0 10px; color:#64748b; font-size:11px; }
+.news-publisher { padding-left:8px; border-left:1px solid #cbd5e1; }
+.news-fact { margin:0; color:#334155; font-size:14px; line-height:1.7; }
+.news-impact { margin-top:12px; padding:11px 12px; border-left:4px solid #2563eb; border-radius:0 9px 9px 0; background:#eff6ff; }
+.news-impact p { margin:3px 0 0; }
+.news-label { color:#1e3a8a; font-size:11px; font-weight:850; }
+.news-caution { margin-top:10px; padding:10px 12px; border-radius:9px; background:#fffbeb; color:#78350f; font-size:12px; }
+.news-caution .news-label { color:#92400e; }
+.news-caution ul { margin:4px 0 0; padding-left:18px; }
+.news-source { display:inline-block; margin-top:11px; color:#2457a6; font-size:12px; font-weight:700; }
+.news-more, .news-quality { margin-top:12px; border:1px solid #e5e7eb; border-radius:11px; background:#fafbfc; }
+.news-more > summary, .news-quality > summary { padding:11px 13px; cursor:pointer; font-size:13px; font-weight:800; }
+.news-more .news-list { padding:0 12px 12px; }
+.news-quality-body { padding:0 13px 12px; color:#64748b; font-size:12px; }
+.publication-health-body { color:#64748b; font-size:12px; }
+.publication-health-lead { color:#17202a; font-weight:800; }
+.publication-health-list { padding-left:20px; }
+.publication-health-list li { margin-bottom:5px; }
+
 
 /* =====================================================
    PC
@@ -592,6 +627,10 @@ td.nowrap {
 }
 
 @media (max-width: 480px) {
+  .news-controls { justify-content:flex-start; margin:0 0 12px; }
+  .news-other-link { width:100%; margin-left:0; }
+  .news-card { padding:13px; }
+  .news-title { font-size:16px; }
 
   .container {
     padding: 10px;
@@ -1937,32 +1976,6 @@ td.nowrap {
 
 
 <!-- =====================================================
-     DATA QUALITY
-===================================================== -->
-
-<div class="section" id="quality-section">
-
-  <div class="section-title">
-    🔎 データ品質チェック
-  </div>
-
-  <div class="quality-grade" id="quality-grade">
-    -
-  </div>
-
-  <div id="quality-detail">
-    確認中
-  </div>
-
-  <details class="disclosure">
-    <summary>調査・分析品質の詳細</summary>
-    <div class="disclosure-body" id="research-quality-detail">確認中</div>
-  </details>
-
-</div>
-
-
-<!-- =====================================================
      FINAL
 ===================================================== -->
 
@@ -1979,6 +1992,31 @@ td.nowrap {
   <div id="final-detail">
     確認中
   </div>
+
+</div>
+
+<!-- =====================================================
+     DATA QUALITY
+===================================================== -->
+
+<div class="section" id="quality-section">
+
+  <div class="section-title">
+    🔎 データ詳細・品質情報
+  </div>
+
+  <details class="disclosure">
+    <summary>現在の品質判定と取得範囲</summary>
+    <div class="disclosure-body">
+      <div class="quality-grade" id="quality-grade">-</div>
+      <div id="quality-detail">確認中</div>
+    </div>
+  </details>
+
+  <details class="disclosure">
+    <summary>調査・分析品質の詳細</summary>
+    <div class="disclosure-body" id="research-quality-detail">確認中</div>
+  </details>
 
 </div>
 

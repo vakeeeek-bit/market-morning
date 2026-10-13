@@ -103,12 +103,13 @@ class PageNavigationTests(unittest.TestCase):
         for element_id in (
             "market-ranking-section", "stock-ranking-section", "liquidity-section",
             "scenario-review-section", "regime-section",
-            "driver-section", "rotation-section", "sector-quality-section"
+            "driver-section", "sector-quality-section"
         ):
             self.assertIn(f'id="{element_id}"', japan)
-        self.assertIn("全構成銘柄の順位ではありません", japan)
         self.assertIn("終値×出来高の概算値", japan)
-        self.assertIn("どちらが強い？", japan)
+        self.assertNotIn('id="rotation-section"', japan)
+        self.assertNotIn('id="sector-stock-ranking"', japan)
+        self.assertNotIn("セクター内・主要銘柄ランキングを開く", japan)
         self.assertNotIn('id="quick-view"', japan)
         self.assertIn("実測値と推定評価を分けて表示", japan)
         self.assertIn("昨日考えていた条件", japan)
@@ -121,7 +122,6 @@ class PageNavigationTests(unittest.TestCase):
         self.assertNotIn("数字で強弱を確認", japan)
         self.assertIn('id="market-scoreboard"', japan)
         self.assertIn("材料 → 伝達経路 → 影響業種", japan)
-        self.assertIn("比較結果 → 差 → 詳細数値", japan)
         self.assertIn("業種ETF自身の勢い・商い・継続力", japan)
         self.assertNotIn('id="internals-section"', japan)
         self.assertIn('className = \'term-help\'', japan)

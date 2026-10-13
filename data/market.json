@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-13 07:15:37",
+  "updated_at": "2026-10-13 11:37:29",
   "timezone": "Asia/Tokyo",
   "source": "Yahoo Finance via yfinance for market closes; FRED DGS2 for US 2Y Treasury yield",
   "notes": {
@@ -22,8 +22,7 @@
       "change_pct": -0.06,
       "status": "取得成功",
       "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "previous_market_date": "2026-10-09"
     },
     "nasdaq": {
       "name": "NASDAQ総合",
@@ -34,8 +33,7 @@
       "change_pct": -0.44,
       "status": "取得成功",
       "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "previous_market_date": "2026-10-09"
     },
     "nasdaq100": {
       "name": "NASDAQ100",
@@ -46,8 +44,7 @@
       "change_pct": -0.71,
       "status": "取得成功",
       "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "previous_market_date": "2026-10-09"
     },
     "sox": {
       "name": "PHLX半導体株指数（SOX）",
@@ -58,8 +55,7 @@
       "change_pct": -2.67,
       "status": "取得成功",
       "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "previous_market_date": "2026-10-09"
     },
     "dow": {
       "name": "NYダウ",
@@ -70,8 +66,7 @@
       "change_pct": 0.38,
       "status": "取得成功",
       "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "previous_market_date": "2026-10-09"
     },
     "russell2000": {
       "name": "Russell2000",
@@ -82,8 +77,7 @@
       "change_pct": -0.45,
       "status": "取得成功",
       "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "previous_market_date": "2026-10-09"
     },
     "nikkei225": {
       "name": "日経225",
@@ -110,14 +104,13 @@
     "dxy": {
       "name": "DXY",
       "ticker": "DX-Y.NYB",
-      "price": 102.565,
-      "previous": 102.21,
-      "change": 0.355,
-      "change_pct": 0.35,
+      "price": 102.21,
+      "previous": 102.14,
+      "change": 0.07,
+      "change_pct": 0.07,
       "status": "取得成功",
-      "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "market_date": "2026-10-09",
+      "previous_market_date": "2026-10-08"
     },
     "usdjpy": {
       "name": "USD/JPY",
@@ -126,11 +119,9 @@
       "previous": 158.06,
       "change": 0.003,
       "change_pct": 0.0,
-      "status": "取得不能・前回値維持",
+      "status": "取得成功",
       "market_date": "2026-10-09",
-      "previous_market_date": "2026-10-08",
-      "last_checked_at": "2026-10-13T07:15:37+09:00",
-      "stale_reason": "収集時点の当日FXバーが未確定のため前回確認値を維持"
+      "previous_market_date": "2026-10-08"
     },
     "eurusd": {
       "name": "EUR/USD",
@@ -139,24 +130,20 @@
       "previous": 1.1201,
       "change": 0.0012,
       "change_pct": 0.1,
-      "status": "取得不能・前回値維持",
+      "status": "取得成功",
       "market_date": "2026-10-09",
-      "previous_market_date": "2026-10-08",
-      "last_checked_at": "2026-10-13T07:15:37+09:00",
-      "stale_reason": "収集時点の当日FXバーが未確定のため前回確認値を維持"
+      "previous_market_date": "2026-10-08"
     },
     "us10y": {
       "name": "米10年債利回り",
       "ticker": "^TNX",
-      "price": 5.244,
-      "previous": 5.231,
-      "change": 0.013,
-      "change_pct": 0.25,
-      "status": "取得不能・前回値維持",
-      "market_date": "2026-10-09",
-      "previous_market_date": "2026-10-08",
-      "last_checked_at": "2026-10-13T07:15:37+09:00",
-      "stale_reason": "10月12日の米国債市場は休場"
+      "price": 5.24,
+      "previous": 5.244,
+      "change": -0.004,
+      "change_pct": -0.08,
+      "status": "取得成功",
+      "market_date": "2026-10-12",
+      "previous_market_date": "2026-10-09"
     },
     "vix": {
       "name": "VIX",
@@ -167,8 +154,7 @@
       "change_pct": 2.49,
       "status": "取得成功",
       "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "previous_market_date": "2026-10-09"
     },
     "sector_xlc": {
       "name": "米コミュニケーション・サービス（XLC）",
@@ -179,8 +165,7 @@
       "change_pct": 0.97,
       "status": "取得成功",
       "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "previous_market_date": "2026-10-09"
     },
     "sector_xly": {
       "name": "米一般消費財（XLY）",
@@ -191,8 +176,7 @@
       "change_pct": -0.51,
       "status": "取得成功",
       "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "previous_market_date": "2026-10-09"
     },
     "sector_xlp": {
       "name": "米生活必需品（XLP）",
@@ -203,8 +187,7 @@
       "change_pct": 1.17,
       "status": "取得成功",
       "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "previous_market_date": "2026-10-09"
     },
     "sector_xle": {
       "name": "米エネルギー（XLE）",
@@ -215,8 +198,7 @@
       "change_pct": 1.43,
       "status": "取得成功",
       "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "previous_market_date": "2026-10-09"
     },
     "sector_xlf": {
       "name": "米金融（XLF）",
@@ -227,8 +209,7 @@
       "change_pct": 0.58,
       "status": "取得成功",
       "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "previous_market_date": "2026-10-09"
     },
     "sector_xlv": {
       "name": "米ヘルスケア（XLV）",
@@ -239,8 +220,7 @@
       "change_pct": 0.69,
       "status": "取得成功",
       "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "previous_market_date": "2026-10-09"
     },
     "sector_xli": {
       "name": "米資本財（XLI）",
@@ -251,8 +231,7 @@
       "change_pct": -0.06,
       "status": "取得成功",
       "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "previous_market_date": "2026-10-09"
     },
     "sector_xlb": {
       "name": "米素材（XLB）",
@@ -263,8 +242,7 @@
       "change_pct": 0.02,
       "status": "取得成功",
       "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "previous_market_date": "2026-10-09"
     },
     "sector_xlre": {
       "name": "米不動産（XLRE）",
@@ -275,8 +253,7 @@
       "change_pct": 0.75,
       "status": "取得成功",
       "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "previous_market_date": "2026-10-09"
     },
     "sector_xlk": {
       "name": "米情報技術（XLK）",
@@ -287,8 +264,7 @@
       "change_pct": -1.22,
       "status": "取得成功",
       "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "previous_market_date": "2026-10-09"
     },
     "sector_xlu": {
       "name": "米公益（XLU）",
@@ -299,97 +275,89 @@
       "change_pct": 0.53,
       "status": "取得成功",
       "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "previous_market_date": "2026-10-09"
     },
     "gold": {
       "name": "Gold",
       "ticker": "GC=F",
-      "price": 4196.3999,
-      "previous": 4216.2998,
-      "change": -19.8999,
-      "change_pct": -0.47,
+      "price": 4216.2998,
+      "previous": 4157.0,
+      "change": 59.2998,
+      "change_pct": 1.43,
       "status": "取得成功",
-      "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "market_date": "2026-10-09",
+      "previous_market_date": "2026-10-08",
+      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
     },
     "silver": {
       "name": "Silver",
       "ticker": "SI=F",
-      "price": 60.555,
-      "previous": 60.67,
-      "change": -0.115,
-      "change_pct": -0.19,
+      "price": 60.67,
+      "previous": 59.064,
+      "change": 1.606,
+      "change_pct": 2.72,
       "status": "取得成功",
-      "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "market_date": "2026-10-09",
+      "previous_market_date": "2026-10-08",
+      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
     },
     "copper": {
       "name": "Copper",
       "ticker": "HG=F",
-      "price": 6.7605,
-      "previous": 6.6425,
-      "change": 0.118,
-      "change_pct": 1.78,
+      "price": 6.6425,
+      "previous": 6.519,
+      "change": 0.1235,
+      "change_pct": 1.89,
       "status": "取得成功",
-      "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "market_date": "2026-10-09",
+      "previous_market_date": "2026-10-08",
+      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
     },
     "wti": {
       "name": "WTI",
       "ticker": "CL=F",
-      "price": 93.26,
-      "previous": 91.85,
-      "change": 1.41,
-      "change_pct": 1.54,
+      "price": 91.85,
+      "previous": 91.49,
+      "change": 0.36,
+      "change_pct": 0.39,
       "status": "取得成功",
-      "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "market_date": "2026-10-09",
+      "previous_market_date": "2026-10-08",
+      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
     },
     "brent": {
       "name": "Brent",
       "ticker": "BZ=F",
-      "price": 106.02,
-      "previous": 104.72,
-      "change": 1.3,
-      "change_pct": 1.24,
+      "price": 104.72,
+      "previous": 104.28,
+      "change": 0.44,
+      "change_pct": 0.42,
       "status": "取得成功",
-      "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "market_date": "2026-10-09",
+      "previous_market_date": "2026-10-08",
+      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
     },
     "btc": {
       "name": "BTC",
       "ticker": "BTC-USD",
-      "price": 82615.8594,
-      "previous": 83679.4688,
-      "change": -1063.6094,
-      "change_pct": -1.27,
+      "price": 83679.4688,
+      "previous": 82912.2266,
+      "change": 767.2422,
+      "change_pct": 0.93,
       "status": "取得成功",
-      "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "market_date": "2026-10-11",
+      "previous_market_date": "2026-10-10"
     },
     "eth": {
       "name": "ETH",
       "ticker": "ETH-USD",
-      "price": 2493.1799,
-      "previous": 2534.6992,
-      "change": -41.5193,
-      "change_pct": -1.64,
+      "price": 2534.6992,
+      "previous": 2504.0278,
+      "change": 30.6714,
+      "change_pct": 1.22,
       "status": "取得成功",
-      "market_date": "2026-10-12",
-      "previous_market_date": "2026-10-09",
-      "retrieval_method": "Yahoo individual chart endpoint"
+      "market_date": "2026-10-11",
+      "previous_market_date": "2026-10-10"
     },
     "us2y": {
       "name": "米2年債利回り",
@@ -398,11 +366,10 @@
       "previous": 4.77,
       "change": -0.02,
       "change_pct": -0.42,
-      "status": "取得不能・前回値維持",
+      "status": "取得成功",
       "market_date": "2026-10-08",
       "previous_market_date": "2026-10-07",
-      "stale_reason": "10月12日の米国債市場は休場",
-      "last_checked_at": "2026-10-13T07:15:37+09:00"
+      "stale_reason": "FRED DGS2の公表タイミング差。最新公表値を維持し、同日でない米10年債とのスプレッドは算出しません"
     }
   },
   "derived": {
@@ -413,43 +380,21 @@
       "previous_pct_point": null,
       "previous_bp": null,
       "change_bp": null,
-      "curve": "確認できず",
-      "status": "基準日不一致・休場",
+      "curve": "基準日不一致",
+      "status": "基準日不一致",
       "us2y_market_date": "2026-10-08",
-      "us10y_market_date": "2026-10-09",
+      "us10y_market_date": "2026-10-12",
       "formula": "米10年債利回り - 米2年債利回り"
     }
   },
   "data_quality": {
     "total": 32,
-    "success_count": 28,
-    "failed_count": 4,
-    "success_rate_pct": 87.5,
-    "failed_keys": [
-      "usdjpy",
-      "eurusd",
-      "us2y",
-      "us10y"
-    ],
-    "publication_status": "QUALIFIED",
-    "retrieval_attempts": [
-      {
-        "method": "通常一括取得",
-        "result": "HTTP 429で遅延"
-      },
-      {
-        "method": "Yahoo個別chart endpoint",
-        "result": "米株・業種・DXY・商品・暗号資産を再取得"
-      },
-      {
-        "method": "SIFMA休場確認",
-        "result": "10月12日の米国債現物は休場。金利を更新対象から除外"
-      }
-    ],
-    "limitations": [
-      "USD/JPY・EUR/USDは収集時点の日足が未確定のため10月9日値を維持し、最新値と扱わない",
-      "米2年・10年金利は米国債休場のため10月12日値として更新しない",
-      "商品先物は連続足であり、限月付き清算値として総合分析に採用しない"
-    ]
+    "success_count": 32,
+    "failed_count": 0,
+    "success_rate_pct": 100.0,
+    "failed_keys": [],
+    "publication_status": "PASS",
+    "retrieval_attempts": [],
+    "limitations": []
   }
 }

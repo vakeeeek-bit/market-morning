@@ -1,67 +1,22 @@
 {
-  "updated_at": "2026-10-13T07:15:37+09:00",
-  "source_report_date": "2026-10-13",
+  "updated_at": "2026-10-14T06:54:36+09:00",
+  "source_report_date": "2026-10-14",
   "items": [
     {
-      "id": "analyst-rating-coverage",
+      "id": "market-asof",
       "status": "QUALIFIED",
-      "missing": "日本株アナリスト変更の全証券会社網羅",
-      "impact": "変更なしと断定せず、方向判断から除外",
-      "last_checked_at": "2026-10-13T07:15:37+09:00",
-      "next_action": "公開情報を再確認し、契約データ導入は別途判断",
+      "missing": "10月14日JSTのmarket_data成功記録と10月13日の米市場正本値",
+      "impact": "当日指数・相場方向の確定を除外",
+      "last_checked_at": "2026-10-14T06:54:36+09:00",
+      "next_action": "当日正本・代替公式掲載・実測を再確認し、証明できた項目だけ採用",
       "attempts": [
         {
-          "method": "公開一覧とIFIS確認",
-          "result": "無料情報では網羅不能",
-          "checked_at": "2026-10-13T07:15:37+09:00"
-        }
-      ],
-      "affected_components": [
-        "japan_stocks"
-      ],
-      "excluded_claims": [
-        "全証券会社で変更なし",
-        "レーティングを市場方向の根拠にする"
-      ],
-      "excluded_from_publication": true,
-      "first_seen_at": "2026-10-12T16:41:41+09:00"
-    },
-    {
-      "id": "commodity-contract-definitions",
-      "status": "QUALIFIED",
-      "missing": "商品先物値の取引所・限月・値種別・基準時刻の完全対応",
-      "impact": "価格水準に依存する断定を除外",
-      "last_checked_at": "2026-10-13T07:15:37+09:00",
-      "next_action": "収集時に契約メタデータを同時保存",
-      "attempts": [
-        {
-          "method": "Yahoo連続足と取引所定義を照合",
-          "result": "同じ観測への完全対応を証明できず",
-          "checked_at": "2026-10-13T07:15:37+09:00"
-        }
-      ],
-      "affected_components": [
-        "ai_report"
-      ],
-      "excluded_claims": [
-        "限月付き清算値",
-        "商品価格だけによる日本株全体方向"
-      ],
-      "excluded_from_publication": true,
-      "first_seen_at": "2026-10-12T16:41:41+09:00"
-    },
-    {
-      "id": "preopen-japan-reaction",
-      "status": "QUALIFIED",
-      "missing": "10月13日の日本株現物反応",
-      "impact": "方向を条件付きシナリオに限定",
-      "last_checked_at": "2026-10-13T07:15:37+09:00",
-      "next_action": "寄り付き後と大引け後に指数・業種・個別株を確認",
-      "attempts": [
-        {
-          "method": "JPX時刻と日本株保存値を確認",
-          "result": "寄り付き前。10月9日終値を維持",
-          "checked_at": "2026-10-13T07:15:37+09:00"
+          "method": "当日取得・本文確認",
+          "result": "status成功は10月13日、米株は10月12日",
+          "source_urls": [
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+          ],
+          "checked_at": "2026-10-14T06:54:36+09:00"
         }
       ],
       "affected_components": [
@@ -69,35 +24,87 @@
         "japan_stocks"
       ],
       "excluded_claims": [
-        "休場中材料は織り込み済み",
-        "本日の日本株方向は確定"
+        "当日指数・相場方向の確定を除外"
       ],
-      "excluded_from_publication": true,
-      "first_seen_at": "2026-10-13T07:14:41+09:00"
+      "excluded_from_publication": true
     },
     {
-      "id": "us-bond-holiday",
+      "id": "contract-definitions",
       "status": "QUALIFIED",
-      "missing": "10月12日の米国債現物利回り",
-      "impact": "同日金利変化による株価説明を除外",
-      "last_checked_at": "2026-10-13T07:15:37+09:00",
-      "next_action": "10月13日の債券再開後に2年・10年を同一基準日で確認",
+      "missing": "金・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応証拠",
+      "impact": "商品価格・前日比を不採用",
+      "last_checked_at": "2026-10-14T06:54:36+09:00",
+      "next_action": "当日正本・代替公式掲載・実測を再確認し、証明できた項目だけ採用",
       "attempts": [
         {
-          "method": "SIFMA公式休場案内",
-          "result": "10月12日は終日休場推奨",
-          "checked_at": "2026-10-13T07:15:37+09:00"
+          "method": "当日取得・本文確認",
+          "result": "HTTP200、正本値との限月対応は未確認",
+          "source_urls": [
+            "https://www.cmegroup.com/markets/metals/precious/gold.settlements.html"
+          ],
+          "checked_at": "2026-10-14T06:54:36+09:00"
         }
       ],
       "affected_components": [
-        "ai_report"
+        "ai_report",
+        "japan_stocks"
       ],
       "excluded_claims": [
-        "10月12日の米金利上昇・低下",
-        "同日2s10s"
+        "商品価格・前日比を不採用"
       ],
-      "excluded_from_publication": true,
-      "first_seen_at": "2026-10-13T07:14:41+09:00"
+      "excluded_from_publication": true
+    },
+    {
+      "id": "current-and-dates",
+      "status": "QUALIFIED",
+      "missing": "DXY・USD/JPYの10月9日以降の正本値、米2年金利の10月8日以降の正本値／確認時刻付き為替・暗号資産現在値、限月付き日経先物実測",
+      "impact": "現在値・日経先物・2s10s判断を除外",
+      "last_checked_at": "2026-10-14T06:54:36+09:00",
+      "next_action": "当日正本・代替公式掲載・実測を再確認し、証明できた項目だけ採用",
+      "attempts": [
+        {
+          "method": "当日取得・本文確認",
+          "result": "正本基準日の差を実読",
+          "source_urls": [
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+          ],
+          "checked_at": "2026-10-14T06:54:36+09:00"
+        }
+      ],
+      "affected_components": [
+        "ai_report",
+        "japan_stocks"
+      ],
+      "excluded_claims": [
+        "現在値・日経先物・2s10s判断を除外"
+      ],
+      "excluded_from_publication": true
+    },
+    {
+      "id": "ratings-and-coverage",
+      "status": "QUALIFIED",
+      "missing": "アナリスト変更の全件網羅と一部政府掲載の確認範囲",
+      "impact": "変更なし・新規材料なしの網羅断定を除外",
+      "last_checked_at": "2026-10-14T06:54:36+09:00",
+      "next_action": "当日正本・代替公式掲載・実測を再確認し、証明できた項目だけ採用",
+      "attempts": [
+        {
+          "method": "当日取得・本文確認",
+          "result": "IFIS公開情報、政府一覧の動的・アクセス制約あり",
+          "source_urls": [
+            "https://kabuyoho.jp/"
+          ],
+          "checked_at": "2026-10-14T06:54:36+09:00"
+        }
+      ],
+      "affected_components": [
+        "ai_report",
+        "japan_stocks"
+      ],
+      "excluded_claims": [
+        "変更なし・新規材料なしの網羅断定を除外"
+      ],
+      "excluded_from_publication": true
     }
   ]
 }

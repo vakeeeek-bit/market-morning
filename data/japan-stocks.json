@@ -1,290 +1,191 @@
 {
-  "report_date": "2026-10-13",
+  "report_date": "2026-10-14",
   "target_market_date": "2026-10-12",
-  "updated_at": "2026-10-13T07:15:37+09:00",
-  "report_type": "pre_open_qualified",
+  "updated_at": "2026-10-14T06:54:36+09:00",
+  "report_type": "daily_provisional",
   "publication_policy": {
     "status": "QUALIFIED",
-    "updated_at": "2026-10-13T07:15:37+09:00",
-    "note": "FX日足未確定、米債休場、商品先物の契約定義、レーティング非網羅を注記し、依存する断定を除外",
-    "copper_included": false
+    "mode": "provisional",
+    "updated_at": "2026-10-14T06:54:36+09:00",
+    "complete_gate": "FAIL",
+    "copper_included": false,
+    "note": "注釈付き暫定版（MANUAL_REVIEW）。正本市場値は変更せず、未確認先物・現在値・未発表CPIと網羅不能な断定を除外。",
+    "missing_items": [
+      "10月14日JSTのmarket_data成功記録と10月13日の米市場正本値",
+      "金・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応証拠",
+      "DXY・USD/JPYの10月9日以降の正本値、米2年金利の10月8日以降の正本値",
+      "確認時刻付き為替・暗号資産現在値、限月付き日経先物実測",
+      "アナリスト変更の全件網羅と一部政府掲載の確認範囲"
+    ]
   },
   "japan_quick_view": {
-    "headline": "原油高と半導体安が休場明け日本株を選別。Dow高でも全面リスクオンではない。",
+    "headline": "注釈付き暫定版｜CPI前は半導体を警戒、電源設備・規制・TOBは個別選別",
     "top_materials": [
-      "S&P500 -0.06%・NASDAQ -0.44%・Dow +0.38%：指数間で分岐",
-      "SOX -2.67%・米情報技術ETF -1.22%：国内半導体には明確な逆風候補",
-      "WTI・Brent上昇、米エネルギーETF +1.43%：資源に追い風、運輸にコスト警戒",
-      "米債市場は休場：古い金利を10月12日の市場反応として使わない",
-      "フジミ・OSG・安川電機・JINS・イオンFS：休場明けの初動を個別確認"
+      "今夜21:30 JSTの米CPIは未発表、結果を先取りしない",
+      "10月13日の半導体安は外部照合、正本は10月12日まで",
+      "日銀9月企業物価は前年比+6.8%、前月比-0.3%",
+      "カナデンは中間予想を上方修正、通期予想は据え置き",
+      "オリンパスFDA警告とリソー教育TOBは個別材料として選別"
     ],
     "focus_sectors": [
-      "エネルギー資源",
-      "電機・精密",
-      "機械",
-      "運輸・物流",
-      "小売"
+      "半導体",
+      "電力設備",
+      "医療機器",
+      "教育",
+      "銀行"
     ],
     "unpriced_materials": [
-      "10月12日の米半導体安と原油高",
-      "10月9日大引け後の企業開示5件",
-      "10月13日の寄り付き後反応"
+      "10月13日大引け後の3社開示",
+      "今夜のCPI結果"
     ],
     "individual_news_review": {
       "status": "reviewed",
-      "story_count": 5,
-      "scope": "10月9日公表の一次資料5件。10月13日寄り付き前のため現物反応未確認"
+      "story_count": 3
     }
   },
   "top_stories": [
     {
-      "company": "フジミインコーポレーテッド",
-      "ticker": "5384",
-      "headline": "通期営業利益予想19.0%増額、配当予想77円から92円",
-      "category": "電機・精密",
-      "fact": "10月9日16:20発表。2027年3月期通期売上高予想748億円から825億円、営業利益145億円から172.5億円（19.0%増額）、年間配当77円から92円。CMP・シリコンウエハー向け製品の販売増を理由として記載。",
-      "announced_at": "2026-10-09（公表時刻は一次資料記載範囲）",
-      "timing": "10月9日公表・10月12日現物休場・10月13日寄り付き前",
-      "market_pricing_status": "10月13日現物で確認",
-      "price_reaction": "発表後の国内現物反応は寄り付き前で未確認",
+      "company": "カナデン",
+      "ticker": "8081",
+      "headline": "AI・データセンター需要で中間予想上方修正、通期据え置き",
+      "fact": "10月13日16:30開示。中間営業利益予想を17億円から19.5億円へ修正（前回予想比+14.7%）。通期予想は変更なし。",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261013549701.pdf",
+      "category": "追い風・セクター限定",
+      "analysis": "半導体関連の市場心理が弱くても、受配電・電源設備の実需は別評価する。中間改善を通期上方修正と扱わない。",
+      "today_watch": "出来高、寄り付き後の相対騰落、通期精査の進展",
+      "announced_at": "2026-10-13",
+      "timing": "10月13日大引け後公表・10月14日寄り付き前",
+      "market_pricing_status": "発表後の国内現物反応は未確認",
+      "price_reaction": "未確認",
       "related_stocks": [],
       "related_sectors": [
-        "電機・精密"
+        "半導体",
+        "電力設備",
+        "医療機器",
+        "教育",
+        "銀行"
       ],
-      "importance": "高",
-      "confidence": "事実：一次資料確認済み、株価効果：未確認",
-      "source_url": "https://www.release.tdnet.info/inbs/140120261009548819.pdf",
-      "analysis": "半導体材料に限定した追い風候補。SOX全体の弱さと個社の予想増額は分けて評価する。",
-      "today_watch": "予想であり実績ではない。現物終了後の発表。発表後の株価反応は未確認。"
+      "importance": "high",
+      "confidence": "supported"
     },
     {
-      "company": "OSG",
-      "ticker": "6136",
-      "headline": "自社株買いを決議、10月13日のToSTNeT-3取得を予定",
-      "category": "機械",
-      "fact": "10月9日16:30発表。取得枠150万株・50億円、期間10月13日〜11月30日。10月13日08:45のToSTNeT-3取得は10月9日終値3,653円で136万8,700株・49億9,986万1,100円を上限として予定。",
-      "announced_at": "2026-10-09（公表時刻は一次資料記載範囲）",
-      "timing": "10月9日公表・10月12日現物休場・10月13日寄り付き前",
-      "market_pricing_status": "10月13日現物で確認",
-      "price_reaction": "発表後の国内現物反応は寄り付き前で未確認",
+      "company": "オリンパス",
+      "ticker": "7733",
+      "headline": "FDA警告書を受領、生産販売の制限や回収要求ではない",
+      "fact": "10月13日18:00開示。米時間10月7日付のFDA警告書は6施設の品質管理等を対象。会社は業績影響を見込まないとしている。",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261013549222.pdf",
+      "category": "向かい風候補・個別限定",
+      "analysis": "品質対応への警戒と、現時点で操業制限・回収要求ではないという留保を併記。将来影響ゼロを保証しない。",
+      "today_watch": "規制対応、会社説明、国内初動と出来高",
+      "announced_at": "2026-10-13",
+      "timing": "10月13日大引け後公表・10月14日寄り付き前",
+      "market_pricing_status": "発表後の国内現物反応は未確認",
+      "price_reaction": "未確認",
       "related_stocks": [],
       "related_sectors": [
-        "機械"
+        "半導体",
+        "電力設備",
+        "医療機器",
+        "教育",
+        "銀行"
       ],
-      "importance": "高",
-      "confidence": "事実：一次資料確認済み、株価効果：未確認",
-      "source_url": "https://www.release.tdnet.info/inbs/140120261009548893.pdf",
-      "analysis": "資本政策の追い風候補。ただし買付決議と実際の取得完了を分ける。",
-      "today_watch": "未実行の予定。取得されない可能性あり。ToSTNeT-3と総取得枠を二重計上しない。市場反応未確認。"
+      "importance": "high",
+      "confidence": "supported"
     },
     {
-      "company": "安川電機",
-      "ticker": "6506",
-      "headline": "売上予想引き上げ、営業利益予想引き下げ",
-      "category": "電機・精密",
-      "fact": "2027年2月期中間の売上収益285,598百万円、前年比9.8%増。営業利益22,058百万円、5.5%減。通期売上予想580,000から600,000百万円、営業利益予想60,000から57,500百万円へ修正。",
-      "announced_at": "2026-10-09（公表時刻は一次資料記載範囲）",
-      "timing": "10月9日公表・10月12日現物休場・10月13日寄り付き前",
-      "market_pricing_status": "10月13日現物で確認",
-      "price_reaction": "発表後の国内現物反応は寄り付き前で未確認",
+      "company": "リソー教育グループ",
+      "ticker": "4714",
+      "headline": "ヒューリックが完全子会社化を目的にTOB、普通株295円",
+      "fact": "ヒューリック（3003）は10月13日18:00に開示。普通株1株295円、期間10月14日～11月26日、買付予定下限26,646,601株、上限なし。",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261013549957.pdf",
+      "category": "中立・イベント限定",
+      "analysis": "295円は買付条件であり市場現在値ではない。TOB成立、応募結果、買付者側の利益効果は未確定。",
+      "today_watch": "市場価格と買付条件の比較、応募・成立条件、買付者の反応",
+      "announced_at": "2026-10-13",
+      "timing": "10月13日大引け後公表・10月14日寄り付き前",
+      "market_pricing_status": "発表後の国内現物反応は未確認",
+      "price_reaction": "未確認",
       "related_stocks": [],
       "related_sectors": [
-        "電機・精密"
+        "半導体",
+        "電力設備",
+        "医療機器",
+        "教育",
+        "銀行"
       ],
-      "importance": "高",
-      "confidence": "事実：一次資料確認済み、株価効果：未確認",
-      "source_url": "https://www.release.tdnet.info/inbs/140120261009548685.pdf",
-      "analysis": "売上拡大だけで好材料とせず利益率を確認する。",
-      "today_watch": "コード6506。中間実績と通期予想を区別。発表後の国内現物反応は未確認。"
+      "importance": "high",
+      "confidence": "supported"
     }
   ],
-  "important_stories": [
-    {
-      "company": "ジンズホールディングス",
-      "ticker": "3046",
-      "headline": "営業利益は予想未達、年間配当予想を減額",
-      "category": "小売",
-      "fact": "2026年8月期営業利益実績11,454百万円は従来予想12,772百万円を10.3%下回った。年間配当予想115円から104円へ修正。",
-      "announced_at": "2026-10-09（公表時刻は一次資料記載範囲）",
-      "timing": "10月9日公表・10月12日現物休場・10月13日寄り付き前",
-      "market_pricing_status": "10月13日現物で確認",
-      "price_reaction": "発表後の国内現物反応は寄り付き前で未確認",
-      "related_stocks": [],
-      "related_sectors": [
-        "小売"
-      ],
-      "importance": "中",
-      "confidence": "事実：一次資料確認済み、株価効果：未確認",
-      "source_url": "https://www.release.tdnet.info/inbs/140120261009548583.pdf",
-      "analysis": "売上増加と利益・配当の弱さを区別し、収益性を監視する。",
-      "today_watch": "コード3046。終了年度の実績と予想の差であり、将来年度の一律下方修正ではない。発表後の株価反応は未確認。"
-    },
-    {
-      "company": "イオンフィナンシャルサービス",
-      "ticker": "8570",
-      "headline": "中間増収・純利益増、営業利益は11.0%減",
-      "category": "金融（銀行除く）",
-      "fact": "2027年2月期中間営業収益3,112.02億円（前年同期比11.9%増）、営業利益252.09億円（11.0%減）、親会社株主帰属中間純利益100.52億円（14.9%増）。年間配当予想53円。",
-      "announced_at": "2026-10-09（公表時刻は一次資料記載範囲）",
-      "timing": "10月9日公表・10月12日現物休場・10月13日寄り付き前",
-      "market_pricing_status": "10月13日現物で確認",
-      "price_reaction": "発表後の国内現物反応は寄り付き前で未確認",
-      "related_stocks": [],
-      "related_sectors": [
-        "金融（銀行除く）"
-      ],
-      "importance": "中",
-      "confidence": "事実：一次資料確認済み、株価効果：未確認",
-      "source_url": "https://www.release.tdnet.info/inbs/140120261008548186.pdf",
-      "analysis": "利益段階で方向が異なるため、純利益増だけを収益力改善とは判断しない。金融業内の個社材料。",
-      "today_watch": "中間実績と通期予想を区別。発表後の価格反応、評価変更は未確認。"
-    }
-  ],
+  "important_stories": [],
   "other_stories": [],
   "data_quality": {
-    "overall": "QUALIFIED",
+    "overall": "MANUAL_REVIEW",
     "missing": [
-      "10月12日の米国債現物利回り（休場）",
-      "収集時点で確定していないUSD/JPY・EUR/USDの日足",
-      "商品先物の取引所・限月・値種別・基準時刻の完全対応",
-      "日本株アナリスト変更の全証券会社網羅",
-      "10月13日の日本株現物反応（寄り付き前）"
+      "10月14日JSTのmarket_data成功記録と10月13日の米市場正本値",
+      "金・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応証拠",
+      "DXY・USD/JPYの10月9日以降の正本値、米2年金利の10月8日以降の正本値",
+      "確認時刻付き為替・暗号資産現在値、限月付き日経先物実測",
+      "アナリスト変更の全件網羅と一部政府掲載の確認範囲"
     ],
     "differences": [
-      "Dow高とNASDAQ・SOX安を平均化しない",
-      "商品連続足の方向と限月付き清算値を同一視しない",
-      "10月9日日本株実績と10月13日シナリオを分離"
+      "正本は10月13日更新・主要米市場は10月12日。10月13日の外部報道値で置換しない",
+      "米2年は10月8日、10年は10月12日。2s10sは計算しない",
+      "日本株実績ページは10月13日まで更新済みだが、market.jsonの日本指数は10月9日。別データと明示"
     ],
     "excluded": [
-      "同日米金利変化",
-      "確定前FX日足の前日比",
-      "商品価格だけを根拠とする日本株全体方向",
-      "レーティング変更なしの断定"
+      "Gold・WTI・Brentの価格と前日比",
+      "Copper価格・在庫（任意非掲載）",
+      "現在値と日経先物の推定",
+      "当日のCPI結果と市場因果の断定"
     ],
     "cautions": [
-      "QUALIFIED版。確認済み市場反応とニュースだけを掲載",
-      "日本株は寄り付き前の条件付きシナリオ",
-      "米CPIは10月14日公表予定で未公表"
+      "確認済みニュースは部分収集。完全版PASSではない",
+      "10月13日市場反応は外部照合に限定",
+      "現物寄り付き前。材料別の国内反応は未確認"
     ]
   },
   "analyst_rating_changes": {
-    "headline": "公開情報で確認できた範囲のみ。網羅不能",
     "coverage_status": "十分調査したが取得不能",
+    "headline": "全件網羅できず、把握範囲は限定",
     "items": [],
     "source_review": [
       {
-        "name": "公開日付一覧",
-        "url": "https://nikkeiyosoku.com/stock/rating/?date=2026-10-09",
-        "result": "全証券会社・EPS変更の網羅不可"
-      },
-      {
-        "name": "IFISサービス情報",
-        "url": "https://www.ifis.co.jp/",
-        "result": "契約データ未導入"
+        "source": "公開一覧・IFIS",
+        "result": "HTTP403と無料情報の範囲制約。新規変更を採用できず"
       }
-    ],
-    "summary": "変更なしとは断定しない"
+    ]
   },
-  "sector_implications": [
-    {
-      "driver": "SOX急落・情報技術劣後",
-      "affected_sectors": [
-        "電機・精密",
-        "機械",
-        "情報通信・サービス"
-      ],
-      "possible_impact": "国内半導体・高PER株の寄り付きに逆風候補",
-      "confirmation_condition": "寄り付き後のTOPIX比と出来高"
-    },
-    {
-      "driver": "原油・米エネルギー株上昇",
-      "affected_sectors": [
-        "エネルギー資源",
-        "商社・卸売",
-        "運輸・物流",
-        "素材・化学"
-      ],
-      "possible_impact": "資源に追い風、燃料コスト業種に逆風候補",
-      "confirmation_condition": "資源と運輸の相対騰落"
-    },
-    {
-      "driver": "10月9日大引け後の企業開示",
-      "affected_sectors": [
-        "電機・精密",
-        "機械",
-        "小売",
-        "金融（銀行除く）"
-      ],
-      "possible_impact": "指数より会社固有材料で分岐",
-      "confirmation_condition": "5社の寄り付き・出来高・終値"
-    }
-  ],
   "scenarios": [
     {
       "name": "基本",
-      "conditions": "SOX安と原油高が日本株へ伝達するが、指数全体の売りに広がらない",
-      "impact_on_japan": "資源優位、半導体・運輸劣後のローテーション",
-      "strong_sectors": [
-        "エネルギー資源",
-        "商社・卸売"
-      ],
-      "weak_sectors": [
-        "電機・精密",
-        "運輸・物流"
-      ],
-      "invalidation": "半導体がTOPIXを上回り、原油高でも運輸が下げない"
+      "conditions": "CPI結果待ち、半導体警戒が継続",
+      "impact_on_japan": "指数方向よりカナデン・オリンパス・TOBを個別選別",
+      "invalidation": "半導体の相対反発と市場幅改善"
     },
     {
       "name": "上振れ",
-      "conditions": "SOX先物・国内半導体が切り返し、原油上昇が一服",
-      "impact_on_japan": "休場明けの買い戻しが大型株へ拡大",
-      "strong_sectors": [
-        "電機・精密",
-        "機械",
-        "情報通信・サービス"
-      ],
-      "weak_sectors": [],
-      "invalidation": "半導体安継続またはVIX上昇"
+      "conditions": "CPI公表後に金利低下、半導体反発を実測",
+      "impact_on_japan": "半導体・グロースの見方を改善",
+      "invalidation": "金利再上昇またはSOX反落"
     },
     {
       "name": "下振れ",
-      "conditions": "原油高・ドル高・半導体安が同時進行し、値下がり銘柄が広がる",
-      "impact_on_japan": "輸入コストと高PER調整が重なり指数も下落",
-      "strong_sectors": [
-        "エネルギー資源"
-      ],
-      "weak_sectors": [
-        "電機・精密",
-        "運輸・物流",
-        "小売"
-      ],
-      "invalidation": "原油・ドル・SOXのうち2つ以上が反転"
+      "conditions": "CPI公表後に金利上昇、半導体安と円急変が重なる",
+      "impact_on_japan": "高PER・輸出を慎重化",
+      "invalidation": "金利低下と半導体相対改善"
     }
   ],
   "monitoring_points": [
     {
-      "target": "SOXと国内半導体",
-      "current_view": "SOX -2.67%",
-      "today_check": "寄り付き後の電機・精密と主要半導体株のTOPIX比",
-      "view_change_condition": "国内半導体がTOPIXを上回れば逆風評価を弱める"
+      "target": "CPI",
+      "today_check": "21:30 JSTの公表後に金利・SOX・円相場を確認",
+      "view_change_condition": "同方向か逆方向かを実測"
     },
     {
-      "target": "原油と業種差",
-      "current_view": "米エネルギー+1.43%、原油連続足上昇",
-      "today_check": "資源と運輸の相対騰落",
-      "view_change_condition": "運輸が下げず資源も伸びなければ原油伝達を弱める"
-    },
-    {
-      "target": "個別開示5社",
-      "current_view": "10月9日大引け後・現物反応未確認",
-      "today_check": "寄り付き、出来高、終値",
-      "view_change_condition": "業種要因と会社固有材料を分けて評価"
+      "target": "新規3社開示",
+      "today_check": "寄り付き後の出来高・相対騰落",
+      "view_change_condition": "会社固有材料と海外心理を分離"
     }
-  ],
-  "source_notes": [
-    "市場数値はmarket.json正本",
-    "日本株実績はjapan-market.json",
-    "政策・企業材料はnews.json内の一次資料検証済み記事",
-    "後日確認を当時確認済みとは扱わない"
   ]
 }

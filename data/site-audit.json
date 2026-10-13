@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-10-12T13:50:45+09:00",
-  "report_publication_status": "10月12日午後候補：未公開。金・WTI・Brentの保存値と先物定義の対応証拠不足",
+  "checked_at": "2026-10-14T06:55:00+09:00",
+  "report_publication_status": "10月14日注釈付き暫定版。完全版は当日市場データ・先物定義等が未達",
   "blockers": [
     {
       "item": "金・WTI・Brentの先物定義（3系列）",
@@ -8,11 +8,11 @@
     }
   ],
   "components": {
-    "report": "2026-10-05",
-    "japan_report": "2026-10-05",
+    "report": "2026-10-14",
+    "japan_report": "2026-10-14",
     "world_market": "2026-10-12",
     "japan_market": "2026-10-09",
-    "news": "2026-10-12"
+    "news": "2026-10-14"
   },
   "fixes": [
     "取得エラーを部品ごとに隔離",

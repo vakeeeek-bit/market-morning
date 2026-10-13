@@ -68,6 +68,13 @@
       for (const row of audit.blockers || []) body.append(el('p', `未解決：${row.title || row.item}｜${row.next_action}`));
     }
     if (unresolved?.items?.length) body.append(el('p', `翌日へ引継ぎ：${unresolved.items.length}件。確認時刻・影響・次の調査を元データに記録済み。`));
+    if (report?.publication_policy?.mode === 'provisional') {
+      body.append(el('p', '注釈付き暫定版（MANUAL_REVIEW）。完全版の品質基準は未達です。'));
+      for (const item of unresolved?.items || []) {
+        const attempts = (item.attempts || []).map(a => `${a.method}：${a.result}（${a.checked_at}）`).join(' / ');
+        body.append(el('p', `不足：${item.missing}｜分析への影響：${item.impact}｜実際の確認：${attempts}｜次の対応：${item.next_action}`));
+      }
+    }
 
     if (report) {
       const day = report.report_date;

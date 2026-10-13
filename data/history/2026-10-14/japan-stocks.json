@@ -1,0 +1,191 @@
+{
+  "report_date": "2026-10-14",
+  "target_market_date": "2026-10-12",
+  "updated_at": "2026-10-14T06:54:36+09:00",
+  "report_type": "daily_provisional",
+  "publication_policy": {
+    "status": "QUALIFIED",
+    "mode": "provisional",
+    "updated_at": "2026-10-14T06:54:36+09:00",
+    "complete_gate": "FAIL",
+    "copper_included": false,
+    "note": "注釈付き暫定版（MANUAL_REVIEW）。正本市場値は変更せず、未確認先物・現在値・未発表CPIと網羅不能な断定を除外。",
+    "missing_items": [
+      "10月14日JSTのmarket_data成功記録と10月13日の米市場正本値",
+      "金・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応証拠",
+      "DXY・USD/JPYの10月9日以降の正本値、米2年金利の10月8日以降の正本値",
+      "確認時刻付き為替・暗号資産現在値、限月付き日経先物実測",
+      "アナリスト変更の全件網羅と一部政府掲載の確認範囲"
+    ]
+  },
+  "japan_quick_view": {
+    "headline": "注釈付き暫定版｜CPI前は半導体を警戒、電源設備・規制・TOBは個別選別",
+    "top_materials": [
+      "今夜21:30 JSTの米CPIは未発表、結果を先取りしない",
+      "10月13日の半導体安は外部照合、正本は10月12日まで",
+      "日銀9月企業物価は前年比+6.8%、前月比-0.3%",
+      "カナデンは中間予想を上方修正、通期予想は据え置き",
+      "オリンパスFDA警告とリソー教育TOBは個別材料として選別"
+    ],
+    "focus_sectors": [
+      "半導体",
+      "電力設備",
+      "医療機器",
+      "教育",
+      "銀行"
+    ],
+    "unpriced_materials": [
+      "10月13日大引け後の3社開示",
+      "今夜のCPI結果"
+    ],
+    "individual_news_review": {
+      "status": "reviewed",
+      "story_count": 3
+    }
+  },
+  "top_stories": [
+    {
+      "company": "カナデン",
+      "ticker": "8081",
+      "headline": "AI・データセンター需要で中間予想上方修正、通期据え置き",
+      "fact": "10月13日16:30開示。中間営業利益予想を17億円から19.5億円へ修正（前回予想比+14.7%）。通期予想は変更なし。",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261013549701.pdf",
+      "category": "追い風・セクター限定",
+      "analysis": "半導体関連の市場心理が弱くても、受配電・電源設備の実需は別評価する。中間改善を通期上方修正と扱わない。",
+      "today_watch": "出来高、寄り付き後の相対騰落、通期精査の進展",
+      "announced_at": "2026-10-13",
+      "timing": "10月13日大引け後公表・10月14日寄り付き前",
+      "market_pricing_status": "発表後の国内現物反応は未確認",
+      "price_reaction": "未確認",
+      "related_stocks": [],
+      "related_sectors": [
+        "半導体",
+        "電力設備",
+        "医療機器",
+        "教育",
+        "銀行"
+      ],
+      "importance": "high",
+      "confidence": "supported"
+    },
+    {
+      "company": "オリンパス",
+      "ticker": "7733",
+      "headline": "FDA警告書を受領、生産販売の制限や回収要求ではない",
+      "fact": "10月13日18:00開示。米時間10月7日付のFDA警告書は6施設の品質管理等を対象。会社は業績影響を見込まないとしている。",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261013549222.pdf",
+      "category": "向かい風候補・個別限定",
+      "analysis": "品質対応への警戒と、現時点で操業制限・回収要求ではないという留保を併記。将来影響ゼロを保証しない。",
+      "today_watch": "規制対応、会社説明、国内初動と出来高",
+      "announced_at": "2026-10-13",
+      "timing": "10月13日大引け後公表・10月14日寄り付き前",
+      "market_pricing_status": "発表後の国内現物反応は未確認",
+      "price_reaction": "未確認",
+      "related_stocks": [],
+      "related_sectors": [
+        "半導体",
+        "電力設備",
+        "医療機器",
+        "教育",
+        "銀行"
+      ],
+      "importance": "high",
+      "confidence": "supported"
+    },
+    {
+      "company": "リソー教育グループ",
+      "ticker": "4714",
+      "headline": "ヒューリックが完全子会社化を目的にTOB、普通株295円",
+      "fact": "ヒューリック（3003）は10月13日18:00に開示。普通株1株295円、期間10月14日～11月26日、買付予定下限26,646,601株、上限なし。",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261013549957.pdf",
+      "category": "中立・イベント限定",
+      "analysis": "295円は買付条件であり市場現在値ではない。TOB成立、応募結果、買付者側の利益効果は未確定。",
+      "today_watch": "市場価格と買付条件の比較、応募・成立条件、買付者の反応",
+      "announced_at": "2026-10-13",
+      "timing": "10月13日大引け後公表・10月14日寄り付き前",
+      "market_pricing_status": "発表後の国内現物反応は未確認",
+      "price_reaction": "未確認",
+      "related_stocks": [],
+      "related_sectors": [
+        "半導体",
+        "電力設備",
+        "医療機器",
+        "教育",
+        "銀行"
+      ],
+      "importance": "high",
+      "confidence": "supported"
+    }
+  ],
+  "important_stories": [],
+  "other_stories": [],
+  "data_quality": {
+    "overall": "MANUAL_REVIEW",
+    "missing": [
+      "10月14日JSTのmarket_data成功記録と10月13日の米市場正本値",
+      "金・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応証拠",
+      "DXY・USD/JPYの10月9日以降の正本値、米2年金利の10月8日以降の正本値",
+      "確認時刻付き為替・暗号資産現在値、限月付き日経先物実測",
+      "アナリスト変更の全件網羅と一部政府掲載の確認範囲"
+    ],
+    "differences": [
+      "正本は10月13日更新・主要米市場は10月12日。10月13日の外部報道値で置換しない",
+      "米2年は10月8日、10年は10月12日。2s10sは計算しない",
+      "日本株実績ページは10月13日まで更新済みだが、market.jsonの日本指数は10月9日。別データと明示"
+    ],
+    "excluded": [
+      "Gold・WTI・Brentの価格と前日比",
+      "Copper価格・在庫（任意非掲載）",
+      "現在値と日経先物の推定",
+      "当日のCPI結果と市場因果の断定"
+    ],
+    "cautions": [
+      "確認済みニュースは部分収集。完全版PASSではない",
+      "10月13日市場反応は外部照合に限定",
+      "現物寄り付き前。材料別の国内反応は未確認"
+    ]
+  },
+  "analyst_rating_changes": {
+    "coverage_status": "十分調査したが取得不能",
+    "headline": "全件網羅できず、把握範囲は限定",
+    "items": [],
+    "source_review": [
+      {
+        "source": "公開一覧・IFIS",
+        "result": "HTTP403と無料情報の範囲制約。新規変更を採用できず"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "name": "基本",
+      "conditions": "CPI結果待ち、半導体警戒が継続",
+      "impact_on_japan": "指数方向よりカナデン・オリンパス・TOBを個別選別",
+      "invalidation": "半導体の相対反発と市場幅改善"
+    },
+    {
+      "name": "上振れ",
+      "conditions": "CPI公表後に金利低下、半導体反発を実測",
+      "impact_on_japan": "半導体・グロースの見方を改善",
+      "invalidation": "金利再上昇またはSOX反落"
+    },
+    {
+      "name": "下振れ",
+      "conditions": "CPI公表後に金利上昇、半導体安と円急変が重なる",
+      "impact_on_japan": "高PER・輸出を慎重化",
+      "invalidation": "金利低下と半導体相対改善"
+    }
+  ],
+  "monitoring_points": [
+    {
+      "target": "CPI",
+      "today_check": "21:30 JSTの公表後に金利・SOX・円相場を確認",
+      "view_change_condition": "同方向か逆方向かを実測"
+    },
+    {
+      "target": "新規3社開示",
+      "today_check": "寄り付き後の出来高・相対騰落",
+      "view_change_condition": "会社固有材料と海外心理を分離"
+    }
+  ]
+}

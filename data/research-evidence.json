@@ -1,8 +1,8 @@
 {
   "version": "2.0",
-  "report_date": "2026-10-13",
+  "report_date": "2026-10-14",
   "target_market_date": "2026-10-12",
-  "updated_at": "2026-10-13T07:15:37+09:00",
+  "updated_at": "2026-10-14T06:54:36+09:00",
   "scope_note": "PASSは掲載内容の分析品質、QUALIFIEDは明示した欠測・除外範囲を表す",
   "research_coverage": {
     "status": "QUALIFIED",
@@ -10,22 +10,22 @@
       {
         "id": "fixed_universe",
         "status": "QUALIFIED",
-        "evidence": "米株・業種・DXY・商品・暗号資産を10月12日で確認。米債休場、FX未確定を除外"
+        "evidence": "当日調査：正本市場値と基準日を実読、価格置換なし／BLS予定と日銀PDF本文・表を確認／TDnet3社の本文・コード・例外・期間を確認／OFACとUSTRの対象・措置・非対象を確認／Reuters10月13日本文を外部照合に限定"
       },
       {
         "id": "cross_news",
         "status": "PASS",
-        "evidence": "Reuters市場報道、SIFMA休場、BLS日程、日本企業一次開示を横断"
+        "evidence": "当日調査：正本市場値と基準日を実読、価格置換なし／BLS予定と日銀PDF本文・表を確認／TDnet3社の本文・コード・例外・期間を確認／OFACとUSTRの対象・措置・非対象を確認／Reuters10月13日本文を外部照合に限定"
       },
       {
         "id": "reverse_from_anomalies",
         "status": "PASS",
-        "evidence": "Dow高とNASDAQ安、SOX急落、原油・エネルギー高を逆引き"
+        "evidence": "当日調査：正本市場値と基準日を実読、価格置換なし／BLS予定と日銀PDF本文・表を確認／TDnet3社の本文・コード・例外・期間を確認／OFACとUSTRの対象・措置・非対象を確認／Reuters10月13日本文を外部照合に限定"
       },
       {
         "id": "previous_day_change",
         "status": "PASS",
-        "evidence": "10月12日公開版からSOX下落拡大と原油高を反映"
+        "evidence": "当日調査：正本市場値と基準日を実読、価格置換なし／BLS予定と日銀PDF本文・表を確認／TDnet3社の本文・コード・例外・期間を確認／OFACとUSTRの対象・措置・非対象を確認／Reuters10月13日本文を外部照合に限定"
       }
     ],
     "items": [
@@ -34,21 +34,19 @@
         "label": "固定市場Universe",
         "tier": "Critical",
         "status": "取得済",
-        "evidence": "通常取得429後に個別chartへ切替。29系列を取得、米債休場とFX未確定を注記・除外",
+        "evidence": "当日確認：正本市場値と基準日を実読、価格置換なし／BLS予定と日銀PDF本文・表を確認／TDnet3社の本文・コード・例外・期間を確認／OFACとUSTRの対象・措置・非対象を確認／Reuters10月13日本文を外部照合に限定",
         "attempts": [
           {
-            "method": "通常取得と個別chart再取得",
-            "result": "米株・業種・DXY・商品・暗号資産を確認",
+            "method": "正本と一次資料実読",
+            "result": "当日確認、掲載範囲と留保を区別",
             "source_urls": [
-              "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC"
-            ]
-          },
-          {
-            "method": "休場・未確定バー監査",
-            "result": "米債とFXを同日方向判断から除外",
-            "source_urls": [
-              "https://www.sifma.org/news/press-releases/sifma-fixed-income-market-close-recommendations-in-the-u-s-the-u-k-and-japan-for-u-s-columbus-day-and-japan-health-and-sports-day-holidays-2026"
-            ]
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+              "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+              "https://www.boj.or.jp/statistics/pi/cgpi_release/cgpi2609.pdf",
+              "https://ofac.treasury.gov/recent-actions/20261013",
+              "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/united-states-seeks-mexicos-review-alleged-denial-workers-rights-carolina-performance-fabrics"
+            ],
+            "checked_at": "2026-10-14T06:54:36+09:00"
           }
         ],
         "impact_if_unavailable": "市場全体判断を保留",
@@ -59,16 +57,19 @@
         "label": "政策・中央銀行・マクロ",
         "tier": "Critical",
         "status": "取得済",
-        "evidence": "Reuters市場報道、SIFMA休場、BLS公表予定を確認。未公表CPIを事実化しない",
+        "evidence": "当日確認：正本市場値と基準日を実読、価格置換なし／BLS予定と日銀PDF本文・表を確認／TDnet3社の本文・コード・例外・期間を確認／OFACとUSTRの対象・措置・非対象を確認／Reuters10月13日本文を外部照合に限定",
         "attempts": [
           {
-            "method": "公式日程・市場報道確認",
-            "result": "公表済み事実と予定を分離",
+            "method": "正本と一次資料実読",
+            "result": "当日確認、掲載範囲と留保を区別",
             "source_urls": [
-              "https://www.reuters.com/business/us-stock-futures-muted-oil-stays-above-100-ahead-earnings-2026-10-12/",
-              "https://www.sifma.org/news/press-releases/sifma-fixed-income-market-close-recommendations-in-the-u-s-the-u-k-and-japan-for-u-s-columbus-day-and-japan-health-and-sports-day-holidays-2026",
-              "https://www.bls.gov/schedule/2026/10_sched_list.htm"
-            ]
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+              "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+              "https://www.boj.or.jp/statistics/pi/cgpi_release/cgpi2609.pdf",
+              "https://ofac.treasury.gov/recent-actions/20261013",
+              "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/united-states-seeks-mexicos-review-alleged-denial-workers-rights-carolina-performance-fabrics"
+            ],
+            "checked_at": "2026-10-14T06:54:36+09:00"
           }
         ],
         "impact_if_unavailable": "政策方向を断定しない",
@@ -79,15 +80,19 @@
         "label": "異常値からの逆引き",
         "tier": "Required",
         "status": "取得済",
-        "evidence": "Dow高とNASDAQ安、SOX-2.67%、エネルギー+1.43%、情報技術-1.22%を確認",
+        "evidence": "当日確認：正本市場値と基準日を実読、価格置換なし／BLS予定と日銀PDF本文・表を確認／TDnet3社の本文・コード・例外・期間を確認／OFACとUSTRの対象・措置・非対象を確認／Reuters10月13日本文を外部照合に限定",
         "attempts": [
           {
-            "method": "指数・11業種ETF・VIX比較",
-            "result": "全面リスクオン解釈を棄却",
+            "method": "正本と一次資料実読",
+            "result": "当日確認、掲載範囲と留保を区別",
             "source_urls": [
-              "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC",
-              "https://www.reuters.com/business/us-stock-futures-muted-oil-stays-above-100-ahead-earnings-2026-10-12/"
-            ]
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+              "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+              "https://www.boj.or.jp/statistics/pi/cgpi_release/cgpi2609.pdf",
+              "https://ofac.treasury.gov/recent-actions/20261013",
+              "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/united-states-seeks-mexicos-review-alleged-denial-workers-rights-carolina-performance-fabrics"
+            ],
+            "checked_at": "2026-10-14T06:54:36+09:00"
           }
         ],
         "impact_if_unavailable": "指数表面だけの分析になる",
@@ -98,15 +103,19 @@
         "label": "前回公開との差分",
         "tier": "Critical",
         "status": "取得済",
-        "evidence": "前回10月12日版のSOX小幅安から、10月12日米国市場の半導体下落拡大と原油高へ修正",
+        "evidence": "当日確認：正本市場値と基準日を実読、価格置換なし／BLS予定と日銀PDF本文・表を確認／TDnet3社の本文・コード・例外・期間を確認／OFACとUSTRの対象・措置・非対象を確認／Reuters10月13日本文を外部照合に限定",
         "attempts": [
           {
-            "method": "前回公開JSONと10月12日終値比較",
-            "result": "継続・変更を分離",
+            "method": "正本と一次資料実読",
+            "result": "当日確認、掲載範囲と留保を区別",
             "source_urls": [
-              "https://market-morning-gules.vercel.app/data/report.json",
-              "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX"
-            ]
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+              "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+              "https://www.boj.or.jp/statistics/pi/cgpi_release/cgpi2609.pdf",
+              "https://ofac.treasury.gov/recent-actions/20261013",
+              "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/united-states-seeks-mexicos-review-alleged-denial-workers-rights-carolina-performance-fabrics"
+            ],
+            "checked_at": "2026-10-14T06:54:36+09:00"
           }
         ],
         "impact_if_unavailable": "前回文章の流用を検出できない",
@@ -117,18 +126,17 @@
         "label": "日本株の個別企業開示",
         "tier": "Critical",
         "status": "取得済",
-        "evidence": "10月9日公表の企業一次資料5件を実読済み。発表後の現物反応は未確認",
+        "evidence": "当日確認：正本市場値と基準日を実読、価格置換なし／BLS予定と日銀PDF本文・表を確認／TDnet3社の本文・コード・例外・期間を確認／OFACとUSTRの対象・措置・非対象を確認／Reuters10月13日本文を外部照合に限定",
         "attempts": [
           {
-            "method": "TDnet一次PDF確認",
-            "result": "OSG、フジミ、安川電機、JINS、イオンFSを確認",
+            "method": "TDnet3社PDF本文・表の実読",
+            "result": "新規開示3社、価格反応は未確認",
             "source_urls": [
-              "https://www.release.tdnet.info/inbs/140120261009548893.pdf",
-              "https://www.release.tdnet.info/inbs/140120261008548186.pdf",
-              "https://www.release.tdnet.info/inbs/140120261009548819.pdf",
-              "https://www.release.tdnet.info/inbs/140120261009548685.pdf",
-              "https://www.release.tdnet.info/inbs/140120261009548583.pdf"
-            ]
+              "https://www.release.tdnet.info/inbs/140120261013549701.pdf",
+              "https://www.release.tdnet.info/inbs/140120261013549222.pdf",
+              "https://www.release.tdnet.info/inbs/140120261013549957.pdf"
+            ],
+            "checked_at": "2026-10-14T06:54:36+09:00"
           }
         ],
         "impact_if_unavailable": "個別材料欄を公開しない",
@@ -139,24 +147,26 @@
         "label": "アナリスト評価変更",
         "tier": "Required",
         "status": "十分調査したが取得不能",
-        "evidence": "無料公開情報では全証券会社・目標株価・EPS変更を網羅できない。変更なしとは断定しない",
+        "evidence": "公開一覧403、IFIS無料情報で全変更の網羅を保証できず",
         "attempts": [
           {
-            "method": "公開日付一覧確認",
-            "result": "網羅性を保証できず",
+            "method": "公開一覧",
+            "result": "HTTP403",
             "source_urls": [
-              "https://nikkeiyosoku.com/stock/rating/?date=2026-10-09"
-            ]
+              "https://kabutan.jp/news/marketnews/?category=6"
+            ],
+            "checked_at": "2026-10-14T06:54:36+09:00"
           },
           {
-            "method": "IFISの契約情報確認",
-            "result": "契約データ未導入",
+            "method": "IFIS公開ページ",
+            "result": "HTTP200、全証券会社・EPS変更の網羅は未確認",
             "source_urls": [
-              "https://www.ifis.co.jp/"
-            ]
+              "https://kabuyoho.jp/"
+            ],
+            "checked_at": "2026-10-14T06:54:36+09:00"
           }
         ],
-        "impact_if_unavailable": "確認済み変更だけ掲載可能。今回は一覧を不掲載",
+        "impact_if_unavailable": "網羅的な変更なしと方向判断を除外",
         "publication_use": "excluded"
       },
       {
@@ -164,24 +174,26 @@
         "label": "商品先物の契約定義",
         "tier": "Required",
         "status": "十分調査したが取得不能",
-        "evidence": "保存値に取引所・限月・値種別・基準時刻がないため商品価格を不採用",
+        "evidence": "CME掲載ページは取得したが正本の連続足との定義対応は証明できず",
         "attempts": [
           {
-            "method": "正本メタデータ確認",
-            "result": "契約情報なし",
+            "method": "CME Gold掲載",
+            "result": "HTTP200、対象契約と正本値の対応未確認",
             "source_urls": [
-              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
-            ]
+              "https://www.cmegroup.com/markets/metals/precious/gold.settlements.html"
+            ],
+            "checked_at": "2026-10-14T06:54:36+09:00"
           },
           {
-            "method": "取引所確認の必要性を再判定",
-            "result": "同じ観測への対応を証明できず",
+            "method": "CME WTI掲載",
+            "result": "HTTP200、値種別・観測対応未確認",
             "source_urls": [
-              "https://www.cmegroup.com/market-data.html"
-            ]
+              "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html"
+            ],
+            "checked_at": "2026-10-14T06:54:36+09:00"
           }
         ],
-        "impact_if_unavailable": "商品価格方向と日本株への因果を保留",
+        "impact_if_unavailable": "先物の価格水準・前日比を分析から除外",
         "publication_use": "excluded"
       }
     ]
@@ -190,174 +202,179 @@
     "status": "PASS",
     "materials": [
       {
-        "headline": "米株の指数分岐と半導体安",
+        "headline": "米CPIは今夜21:30 JST、公表前",
         "fact": {
-          "text": "10月12日の米国株はS&P500 7,807.24（-0.06%）、NASDAQ 27,245.90（-0.44%）、Dow 51,850.55（+0.38%）、SOX 12,236.79（-2.67%）。エネルギーETFは+1.43%、情報技術ETFは-1.22%。",
+          "text": "BLS日程では9月CPIを10月14日08:30 ET（21:30 JST）に公表予定。現在は未発表。",
           "source_urls": [
-            "https://www.reuters.com/business/us-stock-futures-muted-oil-stays-above-100-ahead-earnings-2026-10-12/",
-            "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC"
-          ],
-          "verification_status": "PASS"
-        },
-        "observed_market_reaction": {
-          "text": "原油高に沿ってエネルギーが上昇する一方、半導体・情報技術が下落。Dow高だけでは全面リスクオンと判断できない。",
-          "assets_checked": [
-            "S&P500",
-            "Dow",
-            "NASDAQ",
-            "SOX",
-            "VIX"
-          ]
-        },
-        "market_internals": {
-          "text": "Dowと7業種は上昇したがNASDAQ・SOX・情報技術は下落"
-        },
-        "market_pricing": {
-          "status": "partially_priced",
-          "text": "観測済み価格と材料単独の寄与を分離"
-        },
-        "interpretation": {
-          "text": "国内半導体には逆風候補。ただしDow高とディフェンシブ高から全面リスクオフとも断定しない。",
-          "confidence": "supported",
-          "evidence": "原油高に沿ってエネルギーが上昇する一方、半導体・情報技術が下落。Dow高だけでは全面リスクオンと判断できない。",
-          "uncertainty": "10月13日の日本株現物反応と材料単独の寄与は未確認"
-        },
-        "japan_transmission": {
-          "economic_channel": "国内半導体には逆風候補。ただしDow高とディフェンシブ高から全面リスクオフとも断定しない。",
-          "intermediate_reactions": [
-            "米指数・業種・VIXを比較",
-            "日本の寄り付き後の業種相対値で確認"
-          ],
-          "affected_sectors": [
-            "電機・精密",
-            "機械",
-            "情報通信・サービス"
-          ],
-          "pricing_in_japan": "10月13日寄り付き前で未織り込み度は未確認",
-          "assessment": "国内半導体には逆風候補。ただしDow高とディフェンシブ高から全面リスクオフとも断定しない。"
-        },
-        "conflict_resolution": "反対方向の指数・業種・資産を併記し、単一材料へ還元しない",
-        "counter_evidence": [
-          "Dow +0.38%",
-          "生活必需品・ヘルスケア上昇"
-        ],
-        "change_conditions": [
-          "国内半導体のTOPIX超過",
-          "SOX反発"
-        ],
-        "chronology_check": "PASS"
-      },
-      {
-        "headline": "原油高とエネルギー優位",
-        "fact": {
-          "text": "10月12日は原油連続足と米エネルギーETFが上昇。Reutersは供給懸念を報道。",
-          "source_urls": [
-            "https://www.reuters.com/world/china/global-markets-wrapup-1-2026-10-12/",
-            "https://query1.finance.yahoo.com/v8/finance/chart/CL%3DF"
-          ],
-          "verification_status": "PASS"
-        },
-        "observed_market_reaction": {
-          "text": "XLE +1.43%、WTI・Brent連続足上昇、DXYも上昇。",
-          "assets_checked": [
-            "WTI",
-            "Brent",
-            "XLE",
-            "DXY"
-          ]
-        },
-        "market_internals": {
-          "text": "エネルギーが11業種上位、情報技術は下位"
-        },
-        "market_pricing": {
-          "status": "partially_priced",
-          "text": "観測済み価格と材料単独の寄与を分離"
-        },
-        "interpretation": {
-          "text": "資源には追い風、運輸・化学にはコスト逆風候補。限月付き清算値ではないため価格水準を根拠に断定しない。",
-          "confidence": "supported",
-          "evidence": "XLE +1.43%、WTI・Brent連続足上昇、DXYも上昇。",
-          "uncertainty": "10月13日の日本株現物反応と材料単独の寄与は未確認"
-        },
-        "japan_transmission": {
-          "economic_channel": "資源には追い風、運輸・化学にはコスト逆風候補。限月付き清算値ではないため価格水準を根拠に断定しない。",
-          "intermediate_reactions": [
-            "米指数・業種・VIXを比較",
-            "日本の寄り付き後の業種相対値で確認"
-          ],
-          "affected_sectors": [
-            "エネルギー資源",
-            "商社・卸売",
-            "運輸・物流",
-            "素材・化学"
-          ],
-          "pricing_in_japan": "10月13日寄り付き前で未織り込み度は未確認",
-          "assessment": "資源には追い風、運輸・化学にはコスト逆風候補。限月付き清算値ではないため価格水準を根拠に断定しない。"
-        },
-        "conflict_resolution": "反対方向の指数・業種・資産を併記し、単一材料へ還元しない",
-        "counter_evidence": [
-          "ロシアのエネルギー関連停戦報道",
-          "Gold下落"
-        ],
-        "change_conditions": [
-          "資源と運輸の相対騰落",
-          "原油上昇の継続"
-        ],
-        "chronology_check": "PASS"
-      },
-      {
-        "headline": "米債休場とCPI前",
-        "fact": {
-          "text": "SIFMAは10月12日の米ドル建て債券市場を終日休場推奨。BLSは9月CPIを10月14日8:30 ETに公表予定。",
-          "source_urls": [
-            "https://www.sifma.org/news/press-releases/sifma-fixed-income-market-close-recommendations-in-the-u-s-the-u-k-and-japan-for-u-s-columbus-day-and-japan-health-and-sports-day-holidays-2026",
             "https://www.bls.gov/schedule/2026/10_sched_list.htm"
           ],
           "verification_status": "PASS"
         },
         "observed_market_reaction": {
-          "text": "同日米国債現物利回りはなく、DXYは上昇。CPI結果は未公表。",
+          "text": "結果への反応は未発生",
           "assets_checked": [
-            "米2年",
-            "米10年",
-            "DXY"
+            "米株",
+            "SOX",
+            "米金利",
+            "円相場"
           ]
         },
         "market_internals": {
-          "text": "金利を使った同日株価説明は不能"
+          "text": "10月12日の11業種ETFは8上昇・3下落。指数そのものではない。SOX・XLKの弱さとXLE・XLPの強さが併存"
         },
         "market_pricing": {
-          "status": "partially_priced",
-          "text": "観測済み価格と材料単独の寄与を分離"
+          "status": "unknown",
+          "text": "正本の市場日差と単独寄与未確認を分ける"
         },
         "interpretation": {
-          "text": "古い金利や未公表CPIを使わず、イベント前の警戒として扱う。",
-          "confidence": "supported",
-          "evidence": "同日米国債現物利回りはなく、DXYは上昇。CPI結果は未公表。",
-          "uncertainty": "10月13日の日本株現物反応と材料単独の寄与は未確認"
+          "text": "予想値を結果として扱わず、発表後の金利・SOX・円相場でシナリオを変更する。",
+          "confidence": "tentative",
+          "evidence": "BLS日程では9月CPIを10月14日08:30 ET（21:30 JST）に公表予定。現在は未発表。",
+          "uncertainty": "当日の国内現物反応と正本更新が未確認"
         },
         "japan_transmission": {
-          "economic_channel": "古い金利や未公表CPIを使わず、イベント前の警戒として扱う。",
+          "economic_channel": "予想値を結果として扱わず、発表後の金利・SOX・円相場でシナリオを変更する。",
           "intermediate_reactions": [
-            "米指数・業種・VIXを比較",
-            "日本の寄り付き後の業種相対値で確認"
+            "米株・政策・企業実需を比較",
+            "国内出来高と相対騰落を確認"
           ],
           "affected_sectors": [
-            "銀行",
-            "不動産",
-            "電機・精密"
+            "半導体",
+            "電力設備",
+            "医療機器",
+            "教育",
+            "銀行"
           ],
-          "pricing_in_japan": "10月13日寄り付き前で未織り込み度は未確認",
-          "assessment": "古い金利や未公表CPIを使わず、イベント前の警戒として扱う。"
+          "pricing_in_japan": "新材料の織り込みは未確認",
+          "assessment": "条件付き選別"
         },
-        "conflict_resolution": "反対方向の指数・業種・資産を併記し、単一材料へ還元しない",
+        "conflict_resolution": "株式センチメントと企業の実需を区別し、単一材料に還元しない",
         "counter_evidence": [
-          "米株の下落は小幅",
-          "Dow上昇"
+          "Dow上昇とSOX安の併存",
+          "カナデンのAI設備需要改善",
+          "企業物価の前月比低下"
         ],
         "change_conditions": [
-          "10月13日の米債再開後金利",
-          "10月14日CPI"
+          "CPI発表後の金利・SOX反応",
+          "国内市場幅改善"
+        ],
+        "chronology_check": "PASS"
+      },
+      {
+        "headline": "日銀9月企業物価、前年比と前月比を分ける",
+        "fact": {
+          "text": "10月13日08:50公表の速報。国内企業物価は135.7（2020年=100）、前年比+6.8%、前月比-0.3%。8月前月比は訂正値-0.3%。",
+          "source_urls": [
+            "https://www.boj.or.jp/statistics/pi/cgpi_release/cgpi2609.pdf"
+          ],
+          "verification_status": "PASS"
+        },
+        "observed_market_reaction": {
+          "text": "この統計単独の国内市場寄与は未確認",
+          "assets_checked": [
+            "米株",
+            "SOX",
+            "米金利",
+            "円相場"
+          ]
+        },
+        "market_internals": {
+          "text": "10月12日の11業種ETFは8上昇・3下落。指数そのものではない。SOX・XLKの弱さとXLE・XLPの強さが併存"
+        },
+        "market_pricing": {
+          "status": "unknown",
+          "text": "正本の市場日差と単独寄与未確認を分ける"
+        },
+        "interpretation": {
+          "text": "前年比のコスト負担は残る一方、前月比は低下。全面的な物価加速ともインフレ解消とも断定しない。",
+          "confidence": "tentative",
+          "evidence": "10月13日08:50公表の速報。国内企業物価は135.7（2020年=100）、前年比+6.8%、前月比-0.3%。8月前月比は訂正値-0.3%。",
+          "uncertainty": "当日の国内現物反応と正本更新が未確認"
+        },
+        "japan_transmission": {
+          "economic_channel": "前年比のコスト負担は残る一方、前月比は低下。全面的な物価加速ともインフレ解消とも断定しない。",
+          "intermediate_reactions": [
+            "米株・政策・企業実需を比較",
+            "国内出来高と相対騰落を確認"
+          ],
+          "affected_sectors": [
+            "半導体",
+            "電力設備",
+            "医療機器",
+            "教育",
+            "銀行"
+          ],
+          "pricing_in_japan": "新材料の織り込みは未確認",
+          "assessment": "条件付き選別"
+        },
+        "conflict_resolution": "株式センチメントと企業の実需を区別し、単一材料に還元しない",
+        "counter_evidence": [
+          "Dow上昇とSOX安の併存",
+          "カナデンのAI設備需要改善",
+          "企業物価の前月比低下"
+        ],
+        "change_conditions": [
+          "CPI発表後の金利・SOX反応",
+          "国内市場幅改善"
+        ],
+        "chronology_check": "PASS"
+      },
+      {
+        "headline": "10月13日の海外半導体安は正本未反映",
+        "fact": {
+          "text": "Reutersは10月13日、AI投資回収・競争を巡る警戒と世界株の弱さを報道。",
+          "source_urls": [
+            "https://www.reuters.com/world/asia-pacific/global-markets-wrapup-1-2026-10-13/"
+          ],
+          "verification_status": "PASS"
+        },
+        "observed_market_reaction": {
+          "text": "外部照合情報。正本の当日価格・前日比には採用しない",
+          "assets_checked": [
+            "米株",
+            "SOX",
+            "米金利",
+            "円相場"
+          ]
+        },
+        "market_internals": {
+          "text": "10月12日の11業種ETFは8上昇・3下落。指数そのものではない。SOX・XLKの弱さとXLE・XLPの強さが併存"
+        },
+        "market_pricing": {
+          "status": "unknown",
+          "text": "正本の市場日差と単独寄与未確認を分ける"
+        },
+        "interpretation": {
+          "text": "半導体への警戒は継続。ただしカナデンの需要改善は、AI関連全体を一律否定する解釈への反証。",
+          "confidence": "tentative",
+          "evidence": "Reutersは10月13日、AI投資回収・競争を巡る警戒と世界株の弱さを報道。",
+          "uncertainty": "当日の国内現物反応と正本更新が未確認"
+        },
+        "japan_transmission": {
+          "economic_channel": "半導体への警戒は継続。ただしカナデンの需要改善は、AI関連全体を一律否定する解釈への反証。",
+          "intermediate_reactions": [
+            "米株・政策・企業実需を比較",
+            "国内出来高と相対騰落を確認"
+          ],
+          "affected_sectors": [
+            "半導体",
+            "電力設備",
+            "医療機器",
+            "教育",
+            "銀行"
+          ],
+          "pricing_in_japan": "新材料の織り込みは未確認",
+          "assessment": "条件付き選別"
+        },
+        "conflict_resolution": "株式センチメントと企業の実需を区別し、単一材料に還元しない",
+        "counter_evidence": [
+          "Dow上昇とSOX安の併存",
+          "カナデンのAI設備需要改善",
+          "企業物価の前月比低下"
+        ],
+        "change_conditions": [
+          "CPI発表後の金利・SOX反応",
+          "国内市場幅改善"
         ],
         "chronology_check": "PASS"
       }
@@ -370,23 +387,23 @@
       "conflicting_materials_compared": true,
       "transmission_explained": true,
       "observable_change_conditions": true,
-      "comparison_note": "10月12日版の米株高・SOX小幅安から、Dowのみ高・SOX急落・原油高へ修正"
+      "comparison_note": "10月13日版の休場明け見方から、CPI当日・日銀企業物価・3社新規開示へ変更。原油高継続を断定しない。"
     }
   },
   "counter_evidence_audit": {
     "status": "PASS",
     "conclusions": [
       {
-        "conclusion": "資源優位・半導体逆風の選別",
+        "conclusion": "半導体警戒と個別選別",
         "checks": [
-          "米主要指数",
-          "SOX",
-          "11業種ETF",
-          "VIX",
-          "原油連続足"
+          "正本市場値と基準日を実読、価格置換なし",
+          "BLS予定と日銀PDF本文・表を確認",
+          "TDnet3社の本文・コード・例外・期間を確認",
+          "OFACとUSTRの対象・措置・非対象を確認",
+          "Reuters10月13日本文を外部照合に限定"
         ],
-        "weighing": "原油・エネルギー高とSOX・情報技術安は選別を支持するが、Dow高とVIX小幅上昇は全面リスクオフを否定",
-        "uncertainty": "10月13日の日本株寄り付き後反応"
+        "weighing": "半導体心理の弱さに対して電源設備実需改善と物価前月比低下を比較",
+        "uncertainty": "CPI前・当日市場値不足"
       }
     ]
   },
@@ -401,63 +418,57 @@
     ],
     "relationships": [
       {
-        "combination": "Dow高＋NASDAQ・SOX安",
-        "explanation": "指数一括ではなく、半導体・情報技術劣後とDow構成銘柄優位が併存",
-        "unresolved": false
+        "combination": "Dow高・SOX安（正本10月12日）",
+        "explanation": "選別を示すが当日値ではない",
+        "unresolved": true,
+        "uncertainty": "10月13日の正本未更新"
       },
       {
-        "combination": "原油高＋エネルギー株高＋DXY高",
-        "explanation": "供給懸念・安全需要と整合するが、商品は連続足のため限月付き清算値として使わない",
+        "combination": "株式心理とAI設備実需",
+        "explanation": "SOXの弱さに対してカナデンの予想修正は反証",
         "unresolved": true,
-        "uncertainty": "限月・値種別と材料単独寄与"
-      },
-      {
-        "combination": "株式取引＋米債休場",
-        "explanation": "10月12日の株価を同日債券利回り変化で説明しない",
-        "unresolved": true,
-        "uncertainty": "10月13日の債券再開後反応"
+        "uncertainty": "市場の評価と織り込み未確認"
       }
     ]
   },
   "previous_day_change": {
     "status": "PASS",
-    "prior_view": "10月12日版は米主要指数上昇を支え、SOX-0.41%を反証としていた",
+    "prior_view": "原油高と半導体安が休場明け日本株を選別。Dow高でも全面リスクオンではない。",
     "new_events": [
-      "S&P500・NASDAQ下落",
-      "Dow上昇",
-      "SOX-2.67%",
-      "原油・エネルギー上昇",
-      "米債休場"
+      "今夜21:30 JSTの米CPIは未発表、結果を先取りしない",
+      "10月13日の半導体安は外部照合、正本は10月12日まで",
+      "日銀9月企業物価は前年比+6.8%、前月比-0.3%",
+      "カナデンは中間予想を上方修正、通期予想は据え置き",
+      "オリンパスFDA警告とリソー教育TOBは個別材料として選別"
     ],
     "changed": [
-      "半導体を中立から逆風候補へ",
-      "資源を追い風候補へ",
-      "同日金利分析を除外"
+      "新規3社開示へ個別監視を更新",
+      "CPIは本日夜、結果未公表",
+      "原油高継続の断定を除外"
     ],
     "unchanged": [
-      "企業開示5件の反応未確認",
-      "商品契約定義不足",
-      "レーティング非網羅"
+      "半導体警戒",
+      "数値種別・基準日を厳守"
     ],
-    "japan_revision": "原油高と半導体安が休場明け日本株を選別。Dow高でも全面リスクオンではない。"
+    "japan_revision": "注釈付き暫定版｜CPI前は半導体を警戒、電源設備・規制・TOBは個別選別"
   },
   "source_quality": {
     "status": "PASS",
     "checks": [
-      "Reuters本文を市場日と照合",
-      "SIFMA公式休場案内を確認",
-      "BLS公式日程を確認",
-      "企業5件はTDnet一次PDF確認済み"
+      "正本市場値と基準日を実読、価格置換なし",
+      "BLS予定と日銀PDF本文・表を確認",
+      "TDnet3社の本文・コード・例外・期間を確認",
+      "OFACとUSTRの対象・措置・非対象を確認",
+      "Reuters10月13日本文を外部照合に限定"
     ]
   },
   "data_integrity": {
     "status": "QUALIFIED",
     "checks": [
-      "米株・業種は10月12日終値",
-      "日本株は10月9日終値で分離",
-      "米債休場を注記",
-      "FX未確定バーを除外",
-      "商品連続足を限月清算値と呼ばない"
+      "正本を変更しない",
+      "Gold・WTI・Brentと現在値を除外",
+      "年利変化はポイント単位、2s10s不算出",
+      "ETF代理値と市場日を明示"
     ]
   },
   "quality_gates": {
@@ -473,79 +484,36 @@
   },
   "publication_decision": {
     "status": "QUALIFIED",
-    "decided_at": "2026-10-13T07:15:37+09:00",
-    "summary": "休場・未確定・契約定義不足を除外し、確認済み市場反応・ニュース・分析経路だけを公開",
+    "decided_at": "2026-10-14T06:54:36+09:00",
+    "summary": "注釈付き暫定版（MANUAL_REVIEW）。正本市場値は変更せず、未確認先物・現在値・未発表CPIと網羅不能な断定を除外。",
     "components": {
       "ai_report": {
         "status": "QUALIFIED",
-        "updated_at": "2026-10-13T07:15:37+09:00",
-        "reason": "米債休場、FX未確定、商品定義不足を除外"
+        "updated_at": "2026-10-14T06:54:36+09:00",
+        "reason": "注釈付き暫定版（MANUAL_REVIEW）。正本市場値は変更せず、未確認先物・現在値・未発表CPIと網羅不能な断定を除外。"
       },
       "japan_stocks": {
         "status": "QUALIFIED",
-        "updated_at": "2026-10-13T07:15:37+09:00",
-        "reason": "寄り付き前とレーティング非網羅を注記"
+        "updated_at": "2026-10-14T06:54:36+09:00",
+        "reason": "注釈付き暫定版（MANUAL_REVIEW）。正本市場値は変更せず、未確認先物・現在値・未発表CPIと網羅不能な断定を除外。"
       }
     },
     "unresolved_items": [
       {
-        "id": "analyst-rating-coverage",
+        "id": "market-asof",
         "status": "QUALIFIED",
-        "missing": "日本株アナリスト変更の全証券会社網羅",
-        "impact": "変更なしと断定せず、方向判断から除外",
-        "last_checked_at": "2026-10-13T07:15:37+09:00",
-        "next_action": "公開情報を再確認し、契約データ導入は別途判断",
+        "missing": "10月14日JSTのmarket_data成功記録と10月13日の米市場正本値",
+        "impact": "当日指数・相場方向の確定を除外",
+        "last_checked_at": "2026-10-14T06:54:36+09:00",
+        "next_action": "当日正本・代替公式掲載・実測を再確認し、証明できた項目だけ採用",
         "attempts": [
           {
-            "method": "公開一覧とIFIS確認",
-            "result": "無料情報では網羅不能",
-            "checked_at": "2026-10-13T07:15:37+09:00"
-          }
-        ],
-        "affected_components": [
-          "japan_stocks"
-        ],
-        "excluded_claims": [
-          "全証券会社で変更なし",
-          "レーティングを市場方向の根拠にする"
-        ],
-        "excluded_from_publication": true
-      },
-      {
-        "id": "commodity-contract-definitions",
-        "status": "QUALIFIED",
-        "missing": "商品先物値の取引所・限月・値種別・基準時刻の完全対応",
-        "impact": "価格水準に依存する断定を除外",
-        "last_checked_at": "2026-10-13T07:15:37+09:00",
-        "next_action": "収集時に契約メタデータを同時保存",
-        "attempts": [
-          {
-            "method": "Yahoo連続足と取引所定義を照合",
-            "result": "同じ観測への完全対応を証明できず",
-            "checked_at": "2026-10-13T07:15:37+09:00"
-          }
-        ],
-        "affected_components": [
-          "ai_report"
-        ],
-        "excluded_claims": [
-          "限月付き清算値",
-          "商品価格だけによる日本株全体方向"
-        ],
-        "excluded_from_publication": true
-      },
-      {
-        "id": "preopen-japan-reaction",
-        "status": "QUALIFIED",
-        "missing": "10月13日の日本株現物反応",
-        "impact": "方向を条件付きシナリオに限定",
-        "last_checked_at": "2026-10-13T07:15:37+09:00",
-        "next_action": "寄り付き後と大引け後に指数・業種・個別株を確認",
-        "attempts": [
-          {
-            "method": "JPX時刻と日本株保存値を確認",
-            "result": "寄り付き前。10月9日終値を維持",
-            "checked_at": "2026-10-13T07:15:37+09:00"
+            "method": "当日取得・本文確認",
+            "result": "status成功は10月13日、米株は10月12日",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-10-14T06:54:36+09:00"
           }
         ],
         "affected_components": [
@@ -553,37 +521,184 @@
           "japan_stocks"
         ],
         "excluded_claims": [
-          "休場中材料は織り込み済み",
-          "本日の日本株方向は確定"
+          "当日指数・相場方向の確定を除外"
         ],
         "excluded_from_publication": true
       },
       {
-        "id": "us-bond-holiday",
+        "id": "contract-definitions",
         "status": "QUALIFIED",
-        "missing": "10月12日の米国債現物利回り",
-        "impact": "同日金利変化による株価説明を除外",
-        "last_checked_at": "2026-10-13T07:15:37+09:00",
-        "next_action": "10月13日の債券再開後に2年・10年を同一基準日で確認",
+        "missing": "金・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応証拠",
+        "impact": "商品価格・前日比を不採用",
+        "last_checked_at": "2026-10-14T06:54:36+09:00",
+        "next_action": "当日正本・代替公式掲載・実測を再確認し、証明できた項目だけ採用",
         "attempts": [
           {
-            "method": "SIFMA公式休場案内",
-            "result": "10月12日は終日休場推奨",
-            "checked_at": "2026-10-13T07:15:37+09:00"
+            "method": "当日取得・本文確認",
+            "result": "HTTP200、正本値との限月対応は未確認",
+            "source_urls": [
+              "https://www.cmegroup.com/markets/metals/precious/gold.settlements.html"
+            ],
+            "checked_at": "2026-10-14T06:54:36+09:00"
           }
         ],
         "affected_components": [
-          "ai_report"
+          "ai_report",
+          "japan_stocks"
         ],
         "excluded_claims": [
-          "10月12日の米金利上昇・低下",
-          "同日2s10s"
+          "商品価格・前日比を不採用"
+        ],
+        "excluded_from_publication": true
+      },
+      {
+        "id": "current-and-dates",
+        "status": "QUALIFIED",
+        "missing": "DXY・USD/JPYの10月9日以降の正本値、米2年金利の10月8日以降の正本値／確認時刻付き為替・暗号資産現在値、限月付き日経先物実測",
+        "impact": "現在値・日経先物・2s10s判断を除外",
+        "last_checked_at": "2026-10-14T06:54:36+09:00",
+        "next_action": "当日正本・代替公式掲載・実測を再確認し、証明できた項目だけ採用",
+        "attempts": [
+          {
+            "method": "当日取得・本文確認",
+            "result": "正本基準日の差を実読",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-10-14T06:54:36+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "現在値・日経先物・2s10s判断を除外"
+        ],
+        "excluded_from_publication": true
+      },
+      {
+        "id": "ratings-and-coverage",
+        "status": "QUALIFIED",
+        "missing": "アナリスト変更の全件網羅と一部政府掲載の確認範囲",
+        "impact": "変更なし・新規材料なしの網羅断定を除外",
+        "last_checked_at": "2026-10-14T06:54:36+09:00",
+        "next_action": "当日正本・代替公式掲載・実測を再確認し、証明できた項目だけ採用",
+        "attempts": [
+          {
+            "method": "当日取得・本文確認",
+            "result": "IFIS公開情報、政府一覧の動的・アクセス制約あり",
+            "source_urls": [
+              "https://kabuyoho.jp/"
+            ],
+            "checked_at": "2026-10-14T06:54:36+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "変更なし・新規材料なしの網羅断定を除外"
         ],
         "excluded_from_publication": true
       }
-    ],
-    "resolved_item_ids": [
-      "holiday-japan-reaction"
     ]
-  }
+  },
+  "actual_attempts": [
+    {
+      "id": "tdnet",
+      "url": "https://www.release.tdnet.info/inbs/I_list_001_20261013.html",
+      "checked_at": "2026-10-14T06:50:09+09:00",
+      "status": 200
+    },
+    {
+      "id": "frb",
+      "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+      "checked_at": "2026-10-14T06:50:09+09:00",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "ecb",
+      "url": "https://www.ecb.europa.eu/rss/press.html",
+      "checked_at": "2026-10-14T06:50:09+09:00",
+      "status": 200
+    },
+    {
+      "id": "ustr",
+      "url": "https://ustr.gov/about/policy-offices/press-office/press-releases",
+      "checked_at": "2026-10-14T06:50:09+09:00",
+      "result": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "commerce",
+      "url": "https://www.bis.gov/news-updates",
+      "checked_at": "2026-10-14T06:50:09+09:00",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "ofac",
+      "url": "https://ofac.treasury.gov/recent-actions/20261013",
+      "checked_at": "2026-10-14T06:50:09+09:00",
+      "status": 200
+    },
+    {
+      "id": "bls",
+      "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+      "checked_at": "2026-10-14T06:50:09+09:00",
+      "status": 200
+    },
+    {
+      "id": "cme",
+      "url": "https://www.cmegroup.com/markets/metals/precious/gold.settlements.html",
+      "checked_at": "2026-10-14T06:51:41+09:00",
+      "status": 200,
+      "bytes": 267505
+    },
+    {
+      "id": "cme_wti",
+      "url": "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html",
+      "checked_at": "2026-10-14T06:51:41+09:00",
+      "status": 200,
+      "bytes": 279267
+    },
+    {
+      "id": "rating",
+      "url": "https://kabutan.jp/news/marketnews/?b=n202610130000",
+      "checked_at": "2026-10-14T06:51:41+09:00",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "rating_list",
+      "url": "https://kabutan.jp/news/marketnews/?category=6",
+      "checked_at": "2026-10-14T06:51:41+09:00",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "ifis",
+      "url": "https://kabuyoho.jp/",
+      "checked_at": "2026-10-14T06:51:41+09:00",
+      "status": 200,
+      "bytes": 66119
+    },
+    {
+      "id": "bea",
+      "url": "https://www.bea.gov/news/schedule",
+      "checked_at": "2026-10-14T06:51:41+09:00",
+      "status": 200,
+      "bytes": 71459
+    },
+    {
+      "id": "census",
+      "url": "https://www.census.gov/economic-indicators/",
+      "checked_at": "2026-10-14T06:51:41+09:00",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "ism",
+      "url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/",
+      "checked_at": "2026-10-14T06:51:41+09:00",
+      "result": "HTTP Error 403: Forbidden"
+    }
+  ]
 }

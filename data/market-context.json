@@ -1,27 +1,21 @@
 {
-  "updated_at": "2026-10-10T12:40:47+09:00",
-  "period_start": "2026-06-01",
-  "period_end": "2026-10-10",
-  "headline": "確認済みの政策・家計・流動性材料を整理。市場全体の判断は追加収集待ち",
-  "summary": "この欄は今週確認した一次資料の部分整理です。ウォラー理事の見解、日銀の市場調査、FRB家計調査、OFAC措置、COMEX在庫を掲載。最新の世界市場価格や市場反応が未確認のため、全面的な強気・弱気判断は保留します。",
+  "updated_at": "2026-10-13T07:15:37+09:00",
+  "period_start": "2026-10-05",
+  "period_end": "2026-10-12",
+  "headline": "直近の材料と市場反応を時系列で確認",
+  "summary": "2026-10-05から2026-10-12までの確認済み材料を、政策・景気指標から実際の市場反応へ日付順に整理しています。 現在の市場認識は「原油高と半導体安が休場明け日本株を選別。Dow高でも全面リスクオンではない。」です。",
   "timeline": [
     {
-      "date": "2026-10-09",
-      "title": "FRB：2025年家計調査を公表",
-      "fact": "2025年家計調査では2022年比の実質所得中央値が7%増、実質純資産中央値が2%増。所得に対する債務返済が40%を超える世帯割合は6.5%から8.6%へ上昇した。",
-      "market_impact": "米消費の背景資料。所得改善と返済負担増を併せて確認する。"
+      "date": "2026-10-05",
+      "title": "米政府：軽油税の支払延期・罰則救済を指示、免税確定ではない",
+      "fact": "10月5日付大統領令14435は財務長官に5日以内の法的適格性判断を指示。判断が成立する場合、対象納税者の10月5日〜12月31日に発生する特定軽油税の支払いを法の範囲内で延期する。着色軽油の道路使用等について罰則救済のIRS告知を指示。",
+      "market_impact": "燃料供給問題への米政府対応としてGL135と併せて監視。日本の燃料価格や税への直接適用ではない。"
     },
     {
-      "date": "2026-10-09",
-      "title": "日銀：短期金融市場調査、機能度の評価が改善",
-      "fact": "8月に実施した調査は7月末を基準に381先から回答。資金調達残高は前年から減少、運用残高は増加。市場機能度を高いとする回答が低いとする回答を上回り、その差も改善した。",
-      "market_impact": "銀行の資金繰りと短期市場機能を確認する背景資料。"
-    },
-    {
-      "date": "2026-10-09",
-      "title": "OFAC：ICC関連指定と一般許可を公表",
-      "fact": "OFACはICC関連の団体をSDNに追加し、一定の取引、通信・企業用ソフトウェア、年金、拘束者に関する一般許可13〜16を公表した。",
-      "market_impact": "制裁対象と許可対象を区別して関連取引の条件を確認する。"
+      "date": "2026-10-08",
+      "title": "ウォラー理事：SEPの情報価値とインフレへの対応を説明",
+      "fact": "ウォラー理事は10月8日の講演で、労働市場は安定する一方インフレは高く、近い将来はインフレに重点を置くとの見解を示した。政策の速度は今後のデータに応じて調整すると説明した。",
+      "market_impact": "金利に敏感なグロース株の判断では追加データと政策見通しを確認する。"
     },
     {
       "date": "2026-10-09",
@@ -30,96 +24,71 @@
       "market_impact": "米消費の弱さと物価懸念が併存。輸出・耐久財と金利に敏感な株式への波及は条件付きで評価する。"
     },
     {
-      "date": "2026-10-09",
-      "title": "OFAC：物流会社との制裁違反和解を公表",
-      "fact": "Pegasus Worldwide Logisticsは制裁および報告手続きの計10件の見かけ上の違反について175,015ドルで和解した。対象輸入は2023年9月〜2024年2月に行われた。",
-      "market_impact": "物流・商社には制裁対象企業の確認と当局への報告手続きが重要。"
-    },
-    {
-      "date": "2026-10-09",
-      "title": "SHFE：銅週次在庫58,744トン、ワラント在庫は減少",
-      "fact": "10月9日付の週次報告では銅のDelivery-able合計は58,744トン、前週38,744から20,000増。On Warrant合計は8,285トン、前週10,011から1,726減。保税分18トンを含む。",
-      "market_impact": "総在庫増加とワラント減少は別の動き。ワラント減少だけで総在庫減少を伴う需給逼迫とは判断しない。"
+      "date": "2026-10-12",
+      "title": "米株：原油高と半導体安でS&P500・NASDAQ下落、Dowは上昇",
+      "fact": "10月12日は原油高が株式の重荷となり、S&P500とNASDAQが下落する一方、Dowは上昇。SOXは約2.7%下落し、エネルギー株は上昇した。",
+      "market_impact": "日本株では資源株の追い風候補と、半導体・高PER株および燃料コスト敏感業種の逆風候補を分ける。"
     }
   ],
   "current_drivers": [
     {
-      "title": "金融政策と家計負担",
-      "explanation": "理事の見解と政策決定、過去の家計調査と最新景気を区別する。",
-      "japan_impact": "高PER株・輸出・内需への波及は最新金利、為替、市場予想との比較が必要。"
+      "title": "米国株",
+      "explanation": "Dow +0.38%、S&P500 -0.06%、NASDAQ -0.44% / エネルギー・生活必需品・ヘルスケア優位、情報技術劣後 / 原油高と半導体安で指数間・業種間が分岐",
+      "japan_impact": "資源優位、半導体と燃料コスト業種に警戒"
+    },
+    {
+      "title": "日本株",
+      "explanation": "10月12日は休場、10月9日終値を維持 / 本日寄り付き前で未確認 / 休場中に米半導体安・原油高が発生",
+      "japan_impact": "寄り付き後の相対強弱で確認"
+    },
+    {
+      "title": "米国債",
+      "explanation": "10月12日は休場 / 同日利回りなし / SIFMAの終日休場推奨",
+      "japan_impact": "古い金利で銀行・高PER株の方向を断定しない"
     }
   ],
   "japan_connection": [
     {
-      "route": "在庫・規制・流動性",
-      "explanation": "COMEX在庫は日次増加。規制の対象・許可例外と日銀調査の基準日を区別。",
-      "sectors": [
-        "非鉄",
-        "銀行",
-        "商社"
-      ]
+      "route": "米国株",
+      "assessment": "資源優位、半導体と燃料コスト業種に警戒"
+    },
+    {
+      "route": "日本株",
+      "assessment": "寄り付き後の相対強弱で確認"
+    },
+    {
+      "route": "米国債",
+      "assessment": "古い金利で銀行・高PER株の方向を断定しない"
+    }
+  ],
+  "daily_life_impacts": [
+    {
+      "topic": "原油・燃料コスト",
+      "mechanism": "原油価格の変化が輸送・電力・製品価格へ時間差で波及",
+      "impact": "足元の価格上昇だけで家計負担の増減を断定せず、国内価格への反映を確認する。",
+      "evidence_type": "間接影響"
+    }
+  ],
+  "scenario_change_conditions": [
+    {
+      "condition": "SOXと国内半導体",
+      "meaning": "国内半導体がTOPIXを上回れば逆風評価を弱める"
+    },
+    {
+      "condition": "原油と業種差",
+      "meaning": "運輸が下げず資源も伸びなければ原油伝達を弱める"
+    },
+    {
+      "condition": "個別開示5社",
+      "meaning": "業種要因と会社固有材料を分けて評価"
     }
   ],
   "sources": [
     {
-      "title": "米国の金属輸入関税に関する大統領布告",
-      "publisher": "Federal Register",
-      "published_at": "2026-06-04",
-      "url": "https://www.federalregister.gov/documents/2026/06/04/2026-11314/further-adjusting-the-tariff-regimes-for-imports-of-aluminum-steel-and-copper-into-the-united-states"
-    },
-    {
-      "title": "Federal Reserve issues FOMC statement",
-      "publisher": "Federal Reserve Board",
-      "published_at": "2026-09-16",
-      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
-    },
-    {
-      "title": "Wall Street ends down, calls for AI slowdown pummel chipmakers",
-      "publisher": "Reuters",
-      "published_at": "2026-09-14",
-      "url": "https://www.reuters.com/business/ai-warnings-knock-nasdaq-futures-pressure-tech-stocks-2026-09-14/"
-    },
-    {
-      "title": "Tech boom powers China's factories but economic imbalances deepen",
-      "publisher": "Reuters",
-      "published_at": "2026-09-15",
-      "url": "https://www.reuters.com/world/china/chinas-factories-rev-up-slower-consumption-highlights-deepening-economic-2026-09-15/"
-    },
-    {
-      "title": "Yen steadies as intervention threat persists",
-      "publisher": "Reuters",
-      "published_at": "2026-09-21",
-      "url": "https://www.reuters.com/world/asia-pacific/volatile-yen-draws-intervention-watch-other-currencies-subdued-2026-09-21/"
-    },
-    {
-      "title": "Tech lifts share markets in Asia as oil slips",
-      "publisher": "Reuters",
-      "published_at": "2026-09-21",
-      "url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-09-21/"
-    },
-    {
-      "title": "CME/COMEX：銅在庫の日次公式報告を確認",
-      "publisher": "CME/COMEX",
-      "published_at": "2026-10-09",
-      "url": "https://www.cmegroup.com/delivery_reports/Copper_Stocks.xls"
-    },
-    {
-      "title": "FRB：2025年家計調査を公表",
-      "publisher": "FRB",
-      "published_at": "2026-10-09",
-      "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm"
-    },
-    {
-      "title": "日銀：短期金融市場調査、機能度の評価が改善",
-      "publisher": "日本銀行",
-      "published_at": "2026-10-09",
-      "url": "https://www.boj.or.jp/paym/market/market2610.htm"
-    },
-    {
-      "title": "OFAC：物流会社との制裁違反和解を公表",
-      "publisher": "米財務省OFAC",
-      "published_at": "2026-10-09",
-      "url": "https://ofac.treasury.gov/recent-actions/20261009"
+      "title": "米政府：軽油税の支払延期・罰則救済を指示、免税確定ではない",
+      "publisher": "White House",
+      "published_at": "2026-10-05",
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/10/emergency-tax-relief-on-diesel-fuel/"
     },
     {
       "title": "ウォラー理事：SEPの情報価値とインフレへの対応を説明",
@@ -134,30 +103,10 @@
       "url": "https://www.sca.isr.umich.edu/"
     },
     {
-      "title": "米9月CPIは10月14日公表予定、BLS公式日程を確認",
-      "publisher": "BLS",
-      "published_at": "2026-02-18",
-      "url": "https://www.bls.gov/schedule/2026/10_sched.htm"
-    },
-    {
-      "title": "SHFE：銅週次在庫58,744トン、ワラント在庫は減少",
-      "publisher": "Shanghai Futures Exchange",
-      "published_at": "2026-10-09",
-      "url": "https://www.shfe.cn/data/tradedata/future/stockdata/weeklystock_20261009/EN/all.html"
-    }
-  ],
-  "daily_life_impacts": [
-    {
-      "topic": "家計の返済負担",
-      "mechanism": "米家計調査で返済負担の高い世帯割合が増加",
-      "impact": "日本の家計に直接適用できる数値ではありません。輸出先の需要背景として確認する。",
-      "evidence_type": "可能性"
-    }
-  ],
-  "scenario_change_conditions": [
-    {
-      "condition": "世界市場の最新基準日がそろい、市場反応を確認できる",
-      "meaning": "日本株への方向判断を更新する。"
+      "title": "米株：原油高と半導体安でS&P500・NASDAQ下落、Dowは上昇",
+      "publisher": "Reuters",
+      "published_at": "2026-10-12",
+      "url": "https://www.reuters.com/business/us-stock-futures-muted-oil-stays-above-100-ahead-earnings-2026-10-12/"
     }
   ]
 }

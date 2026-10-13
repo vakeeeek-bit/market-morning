@@ -26,7 +26,7 @@ class Element {
 }
 async function fixture(options={}) {
   let day='2026-10-05';
-  const ids=new Map(['quick-view','executive-section','report-date'].map(x=>[x,new Element('div')]));
+  const ids=new Map(['quick-view','executive-section','report-date','quality-section'].map(x=>[x,new Element('div')]));
   const handlers={};
   const created=[];
   const context={document:{createElement:t=>{const e=new Element(t);created.push(e);return e;},getElementById:id=>ids.get(id)}, location:{search:''},window:{addEventListener:(name,fn)=>handlers[name]=fn},URLSearchParams,AbortController,setTimeout,clearTimeout,MutationObserver:class {observe(){}},fetch:async path=>{
@@ -41,15 +41,16 @@ async function fixture(options={}) {
 test('one failed fetch cannot erase successful report and news state',async()=>{
   const f=await fixture();
   const host=f.created.find(x=>x.id==='publication-health');
-  assert.ok(host.children.some(x=>x.textContent.includes('2026-10-10版・1件')));
+  const body=host.children.find(x=>x.className==='disclosure-body publication-health-body');
+  assert.ok(body.children.some(x=>x.children?.some?.(item=>item.textContent.includes('2026-10-10版｜1件'))));
   assert.match(f.ids.get('report-date').textContent,/2026-10-05/);
 });
-test('as-of note updates after date switch rather than remaining stale',async()=>{
+test('date switch updates one concise header without repeating as-of notes',async()=>{
   const f=await fixture();
-  assert.match(f.ids.get('executive-section').querySelector('.publication-asof').textContent,/2026-10-05/);
+  assert.match(f.ids.get('report-date').textContent,/2026-10-05/);
   f.setDay('2026-10-09');await f.handlers['publication-data-loaded']();
-  assert.match(f.ids.get('executive-section').querySelector('.publication-asof').textContent,/2026-10-09/);
-  assert.equal(f.ids.get('executive-section').children.length,1);
+  assert.match(f.ids.get('report-date').textContent,/2026-10-09/);
+  assert.equal(f.ids.get('executive-section').children.length,0);
 });
 
 test('a candidate audit older than the published report is not displayed',async()=>{
@@ -58,7 +59,8 @@ test('a candidate audit older than the published report is not displayed',async(
     audit:{checked_at:'2026-10-12T13:50:45+09:00',report_publication_status:'午後候補：未公開',blockers:[]}
   });
   const host=f.created.find(x=>x.id==='publication-health');
-  assert.ok(!host.children.some(x=>x.textContent.includes('午後候補：未公開')));
+  const body=host.children.find(x=>x.className==='disclosure-body publication-health-body');
+  assert.ok(!body.children.some(x=>x.textContent.includes('午後候補：未公開')));
 });
 
 test('an audit newer than the published report remains visible',async()=>{
@@ -67,7 +69,8 @@ test('an audit newer than the published report remains visible',async()=>{
     audit:{checked_at:'2026-10-12T17:00:00+09:00',report_publication_status:'再点検中',blockers:[]}
   });
   const host=f.created.find(x=>x.id==='publication-health');
-  assert.ok(host.children.some(x=>x.textContent.includes('再点検中')));
+  const body=host.children.find(x=>x.className==='disclosure-body publication-health-body');
+  assert.ok(body.children.some(x=>x.textContent.includes('再点検中')));
 });
 
  test('a missing percentage is never converted to a flat zero move', () => {

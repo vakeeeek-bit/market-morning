@@ -1,7 +1,7 @@
 import json
 import unittest
 from pathlib import Path
-from scripts.validate_news import validate, validate_collection, sanitized_feed
+from scripts.validate_news import validate, validate_collection, validate_display_config, sanitized_feed
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -46,6 +46,28 @@ class VerifiedNewsTest(unittest.TestCase):
             page = (ROOT / filename).read_text()
             self.assertIn('id="verified-news"', page)
             self.assertIn('src="/assets/verified-news.js"', page)
+
+    def test_reader_feed_has_one_primary_page_per_current_article(self):
+        display = json.loads((ROOT / "data/news-display.json").read_text())
+        self.assertEqual([], validate_display_config(self.news, display))
+        ids = {article["id"] for article in self.news["articles"]}
+        self.assertEqual(ids, set(display["items"]))
+        for item in display["items"].values():
+            self.assertIn(item["primary_page"], {"world", "japan"})
+            self.assertIsInstance(item["priority"], int)
+
+    def test_unreadable_reader_note_is_blocked(self):
+        display = json.loads((ROOT / "data/news-display.json").read_text())
+        first = next(iter(display["items"].values()))
+        first["attention_points"] = ["undefined"]
+        self.assertTrue(validate_display_config(self.news, display))
+
+    def test_reader_script_hides_audit_boilerplate(self):
+        script = (ROOT / "assets/verified-news.js").read_text()
+        self.assertNotIn("留保：", script)
+        self.assertNotIn("市場反応：未確認", script)
+        self.assertIn("データ詳細・品質情報", script)
+        self.assertIn("news-display.json", script)
 
     def retrospective(self):
         self.news["report_date"] = max(article["published_date"] for article in self.news["articles"])

@@ -40,7 +40,8 @@
     ],
     "individual_news_review": {
       "status": "reviewed",
-      "story_count": 3
+      "story_count": 3,
+      "source": "TDnet一次PDF3件を実読・コード確認"
     }
   },
   "top_stories": [
@@ -59,11 +60,9 @@
       "price_reaction": "未確認",
       "related_stocks": [],
       "related_sectors": [
-        "半導体",
         "電力設備",
-        "医療機器",
-        "教育",
-        "銀行"
+        "卸売",
+        "半導体関連設備"
       ],
       "importance": "high",
       "confidence": "supported"
@@ -83,11 +82,7 @@
       "price_reaction": "未確認",
       "related_stocks": [],
       "related_sectors": [
-        "半導体",
-        "電力設備",
-        "医療機器",
-        "教育",
-        "銀行"
+        "医療機器"
       ],
       "importance": "high",
       "confidence": "supported"
@@ -107,11 +102,8 @@
       "price_reaction": "未確認",
       "related_stocks": [],
       "related_sectors": [
-        "半導体",
-        "電力設備",
-        "医療機器",
         "教育",
-        "銀行"
+        "不動産（買付者）"
       ],
       "importance": "high",
       "confidence": "supported"

@@ -80,6 +80,10 @@
       const day = report.report_date;
       const context = document.getElementById('report-date');
       if (context) context.textContent = `公開日 ${day}｜市場基準 ${report.target_market_date}`;
+      if (!date && report.publication_policy?.mode === 'provisional') {
+        const historyState = document.getElementById('history-mode');
+        if (historyState) historyState.textContent = `AIレポート：${day}公開済み（注釈付き暫定版）｜市場基準 ${report.target_market_date}`;
+      }
       const headings = {
         'quick-view-title': '⚡ 朝3分の要点',
         'quick-conclusion-label': '📌 今日の市場の結論',

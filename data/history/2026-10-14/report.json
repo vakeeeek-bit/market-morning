@@ -1,7 +1,7 @@
 {
   "report_date": "2026-10-14",
   "target_market_date": "2026-10-12",
-  "updated_at": "2026-10-14T06:54:36+09:00",
+  "updated_at": "2026-10-14T12:50:41+09:00",
   "report_type": "daily_provisional",
   "publication_policy": {
     "status": "QUALIFIED",
@@ -19,20 +19,21 @@
     ]
   },
   "quick_view": {
-    "headline": "注釈付き暫定版｜CPI前は半導体を警戒、電源設備・規制・TOBは個別選別",
+    "headline": "注釈付き暫定版｜CPI前の半導体警戒に、中国メモリー競争を追加して選別",
     "top_news": [
       {
         "title": "今夜21:30 JSTの米CPIは未発表、結果を先取りしない"
       },
       {
-        "title": "10月13日の半導体安は外部照合、正本は10月12日まで"
+        "title": "CXMTの4F²計画は重要な競争材料。ただし商用量産・顧客認定は未確認"
       },
       {
-        "title": "日銀9月企業物価は前年比+6.8%、前月比-0.3%"
+        "title": "半導体安は中国要因だけでなく、AI投資採算・金利・利益確定との複合"
       }
     ],
     "important_today": [
       "今夜21:30 JSTの米CPIは未発表、結果を先取りしない",
+      "CXMT計画と米韓日のメモリー・装置株反応を分けて確認",
       "10月13日の半導体安は外部照合、正本は10月12日まで",
       "日銀9月企業物価は前年比+6.8%、前月比-0.3%",
       "カナデンは中間予想を上方修正、通期予想は据え置き",
@@ -40,9 +41,9 @@
     ]
   },
   "executive_summary": {
-    "headline": "注釈付き暫定版｜CPI前は半導体を警戒、電源設備・規制・TOBは個別選別",
+    "headline": "注釈付き暫定版｜CPI前の半導体警戒に、中国メモリー競争を追加して選別",
     "market_mood": "全面強気ではなく選別。最新米株の正本不足を留保",
-    "main_driver": "米CPI待ち、半導体への警戒、国内個別開示",
+    "main_driver": "米CPI待ち、半導体のAI投資採算と中国競争、国内個別開示",
     "winners": [
       "カナデンの電源設備実需（個別・条件付き）"
     ],
@@ -65,7 +66,8 @@
     ],
     "current_environment": [
       "正本主要米株は10月12日、為替は10月9日、米2年は10月8日",
-      "外部10月13日材料と正本値を混合しない"
+      "外部10月13日材料と正本値を混合しない",
+      "CXMT競争は重要な追加要因。ただし正本市場値を置換せず、単独主因と断定しない"
     ]
   },
   "news": [
@@ -86,12 +88,26 @@
       "analysis": "前年比のコスト負担は残る一方、前月比は低下。全面的な物価加速ともインフレ解消とも断定しない。"
     },
     {
-      "title": "10月13日の海外半導体安は正本未反映",
-      "fact": "Reutersは10月13日、AI投資回収・競争を巡る警戒と世界株の弱さを報道。",
-      "source_url": "https://www.reuters.com/world/asia-pacific/global-markets-wrapup-1-2026-10-13/",
+      "title": "CXMT計画と半導体安：中国競争は追加要因、単独主因ではない",
+      "fact": "CXMTは9月20日に第5世代DRAM技術基盤の量産開始を公表。10月9〜10日の会議では4F² DDR5 RDIMMの年内投入計画が示されたと報じられたが、仕様・歩留まり・顧客認定・大規模量産は未確認。",
+      "source_url": "https://www.reuters.com/world/china/us-chip-stocks-extend-slide-china-memory-report-ai-spending-jitters-hit-sector-2026-10-13/",
       "published_at": "2026-10-13",
-      "market_reaction": "外部照合情報。正本の当日価格・前日比には採用しない",
-      "analysis": "半導体への警戒は継続。ただしカナデンの需要改善は、AI関連全体を一律否定する解釈への反証。"
+      "market_reaction": "Reutersによる外部照合では13日にSamsung・SK Hynix、Micron、キオクシア、東京エレクトロンが下落。一方、米SOXの下げは限定的で、14日午前は韓国半導体が反発。",
+      "analysis": "中国競争を重要な追加要因へ引き上げる。ただしAI投資採算、金利・資本コスト、利益確定も同時に作用しており、寄与率や単独因果は断定しない。",
+      "related_assets": [
+        "CXMT",
+        "Micron",
+        "Samsung",
+        "SK Hynix",
+        "キオクシア",
+        "東京エレクトロン",
+        "SOX"
+      ],
+      "related_japan_sectors": [
+        "電機・精密",
+        "機械"
+      ],
+      "importance": "高"
     },
     {
       "title": "USTR、メキシコの自動車向け繊維施設に労働権レビュー要請",
@@ -435,5 +451,148 @@
       }
     ],
     "total_story_count": 3
+  },
+  "what_changed": {
+    "previous_view": "半導体安をAI投資回収・金利・需給中心に警戒していた。",
+    "new_information": "CXMTの技術基盤発表、4F²製品計画報道、米韓日のメモリー・装置株反応を追加確認した。",
+    "revision": "中国競争を重要な追加要因へ引き上げたが、商用量産と寄与率が未確認のため単独主因とはしない。"
+  },
+  "monitoring_points": [
+    {
+      "target": "キオクシア・東京エレクトロン",
+      "reason": "中国競争懸念の日本株伝達",
+      "view_change_condition": "下落分の回復とTOPIX比の改善が複数日続く"
+    },
+    {
+      "target": "Samsung・SK Hynix・Micron",
+      "reason": "メモリー競争の国際比較",
+      "view_change_condition": "複数市場で反発が続けば即時業績影響を引き下げる"
+    },
+    {
+      "target": "米金利・ドル",
+      "reason": "CPI後の資本コスト",
+      "view_change_condition": "金利・ドルが同時上昇すれば高PER株の逆風を強める"
+    },
+    {
+      "target": "CXMT製品情報",
+      "reason": "計画と商用量産の差",
+      "view_change_condition": "仕様・歩留まり・顧客認定・出荷量が確認されれば競争評価を更新する"
+    }
+  ],
+  "market_context_themes": [
+    {
+      "theme": "半導体・中国競争",
+      "initial_view": {
+        "date": "2026-10-09",
+        "text": "AI需要と米半導体動向を中心に、日本の半導体を選別していた。"
+      },
+      "new_fact": {
+        "date": "2026-10-12",
+        "text": "CXMTの4F² DDR5 RDIMM年内投入計画が報じられた。商用量産・顧客認定は未確認。"
+      },
+      "market_reaction": {
+        "date": "2026-10-13",
+        "text": "米韓日のメモリー・装置株が下落。ただし米SOXの下げは限定的で、14日午前は韓国勢が反発。"
+      },
+      "current_view": "中国競争は重要な追加要因。AI投資採算・金利・利益確定との複合で、単独主因とは断定しない。",
+      "japan_impact": "キオクシアと製造装置を重点監視。反発の広がりが確認できれば短期逆風を引き下げる。",
+      "counter_evidence": "4F²の仕様・歩留まり・顧客認定が未確認で、SOX全体の下げは限定的。",
+      "source_ids": [
+        "cxmt-g5-official-20260920",
+        "cxmt-4f2-market-20261013",
+        "reuters-us-market-20261013",
+        "reuters-asia-rebound-20261014"
+      ]
+    },
+    {
+      "theme": "米金利・インフレ",
+      "initial_view": {
+        "date": "2026-10-08",
+        "text": "FRB高官発言からインフレ警戒とデータ依存を確認していた。"
+      },
+      "new_fact": {
+        "date": "2026-10-14",
+        "text": "9月CPIは21:30 JST公表予定で、日次レポート作成時点では未発表。"
+      },
+      "market_reaction": {
+        "date": "2026-10-14",
+        "text": "結果への市場反応はまだ発生していない。"
+      },
+      "current_view": "CPI後の金利・ドル反応を待つ。発表前に利上げ方向を断定しない。",
+      "japan_impact": "銀行、高PERグロース、不動産はCPI後の米金利で再評価する。",
+      "counter_evidence": "半導体の選別売りは金利だけでは説明できない。",
+      "source_ids": [
+        "waller-sep-20261008",
+        "oct14-0"
+      ]
+    },
+    {
+      "theme": "原油・地政学",
+      "initial_view": {
+        "date": "2026-10-05",
+        "text": "米国の軽油税支払い延期検討を供給・物価の補助材料として確認した。"
+      },
+      "new_fact": {
+        "date": "2026-10-12",
+        "text": "供給懸念で原油高が再び市場の材料になった。"
+      },
+      "market_reaction": {
+        "date": "2026-10-12",
+        "text": "エネルギー株が相対優位となり、半導体と主要指数は方向が分かれた。"
+      },
+      "current_view": "原油高を株全体の方向ではなく、資源優位と燃料コストの差として読む。",
+      "japan_impact": "資源・商社に追い風候補、空運・陸運・化学・小売にコスト警戒。",
+      "counter_evidence": "契約定義を確認できない商品価格は方向判断の数値根拠から除外する。",
+      "source_ids": [
+        "wh-diesel-tax-20261005",
+        "reuters-us-market-20261012"
+      ]
+    },
+    {
+      "theme": "日本株・個別選別",
+      "initial_view": {
+        "date": "2026-10-09",
+        "text": "休場前の一次資料を中心に、会社固有材料を継続監視していた。"
+      },
+      "new_fact": {
+        "date": "2026-10-13",
+        "text": "カナデンの業績修正、オリンパスのFDA警告、リソー教育のTOBが公表された。"
+      },
+      "market_reaction": {
+        "date": "2026-10-14",
+        "text": "日次レポート作成時点で各材料の国内終値反応は未確認。"
+      },
+      "current_view": "指数や半導体テーマに一括せず、実需・規制・TOBを会社固有材料として分ける。",
+      "japan_impact": "電源設備、医療機器、教育は同じ方向へ束ねず、開示条件と価格反応を個別確認する。",
+      "counter_evidence": "カナデンの需要改善はAI関連全体を一律否定する見方への反証。",
+      "source_ids": [
+        "oct14-4",
+        "oct14-5",
+        "oct14-6"
+      ]
+    }
+  ],
+  "market_context_sources": {
+    "cxmt-4f2-market-20261013": {
+      "id": "cxmt-4f2-market-20261013",
+      "title": "CXMTの4F²計画報道でメモリー株に競争警戒",
+      "publisher": "Reuters",
+      "published_date": "2026-10-13",
+      "source_url": "https://www.reuters.com/world/china/us-chip-stocks-extend-slide-china-memory-report-ai-spending-jitters-hit-sector-2026-10-13/"
+    },
+    "reuters-us-market-20261013": {
+      "id": "reuters-us-market-20261013",
+      "title": "米株：半導体安を受け主要指数は小幅安",
+      "publisher": "Reuters",
+      "published_date": "2026-10-13",
+      "source_url": "https://www.reuters.com/business/sp-500-futures-muted-investors-await-big-bank-earnings-chip-weakness-weighs-2026-10-13/"
+    },
+    "reuters-asia-rebound-20261014": {
+      "id": "reuters-asia-rebound-20261014",
+      "title": "アジア株：半導体売り一服、米CPIを待つ",
+      "publisher": "Reuters",
+      "published_date": "2026-10-14",
+      "source_url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-10-14/"
+    }
   }
 }

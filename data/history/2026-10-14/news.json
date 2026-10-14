@@ -1,10 +1,10 @@
 {
   "report_date": "2026-10-14",
   "target_market_date": "2026-10-12",
-  "updated_at": "2026-10-14T06:54:36+09:00",
+  "updated_at": "2026-10-14T12:50:41+09:00",
   "publication_mode": "verified_news",
   "coverage_status": "partial",
-  "coverage_note": "新規確認7件と既存確認済み記事を掲載。最新ニュース日と正本市場日を分離。未確認記事や現在値を補完しない。",
+  "coverage_note": "新規確認7件と既存記事にCXMT一次情報を追加。競争要因は単独主因とせず、最新ニュース日と正本市場日を分離。",
   "articles": [
     {
       "id": "oct14-0",
@@ -1105,6 +1105,44 @@
         "limitations": {
           "status": "PASS",
           "evidence": "因果未確定と取得制約を明示"
+        }
+      }
+    },
+    {
+      "id": "cxmt-g5-official-20260920",
+      "title": "CXMT：第5世代DRAM技術基盤の量産開始を発表",
+      "published_date": "2026-09-20",
+      "verified_at": "2026-10-14T12:50:41+09:00",
+      "source_type": "primary",
+      "publisher": "CXMT",
+      "source_url": "https://www.cxmt.com/news.html",
+      "verification_url": "https://www.cxmt.com/news.html",
+      "verification_status": "PASS",
+      "fact": "CXMTは9月20日、第5世代DRAM技術基盤の量産開始と24Gb LPDDR5X製品を発表した。会社説明では旧世代比でウエハー当たりの総ダイ数が50%以上増える。",
+      "analysis": "中国DRAMの供給能力・価格競争を継続監視する起点。会社公表値であり、歩留まり・顧客認定・世界シェアの即時変化は確認できない。",
+      "limitations": "4F² DDR5 RDIMMの商用量産・顧客認定を示す発表ではない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "CXMT公式企業ニュースとReuters報道を実読"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "会社発表と市場報道の役割を分離"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "9月20日発表、10月9〜10日発言、12〜14日反応を分離"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "技術発表、計画、株価反応、解釈を分離"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "量産歩留まり・顧客認定・単独因果を断定しない"
         }
       }
     }

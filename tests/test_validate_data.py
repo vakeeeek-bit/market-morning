@@ -64,23 +64,35 @@ class ValidateDataTest(unittest.TestCase):
         result = run(self.make_root(mutate))
         self.assertTrue(any("必須項目" in message for message in result.errors))
 
-    def test_market_context_timeline_outside_period_is_error(self):
+    def test_market_context_stage_outside_period_is_error(self):
         def mutate(name, data):
             if name == "market-context":
-                data["timeline"][0]["date"] = "2025-01-01"
+                data["themes"][0]["initial_view"]["date"] = "2025-01-01"
             return data
 
         result = run(self.make_root(mutate))
         self.assertTrue(any("対象期間外" in message for message in result.errors))
 
-    def test_invalid_life_impact_type_is_error(self):
+    def test_market_context_requires_three_distinct_stage_dates(self):
         def mutate(name, data):
             if name == "market-context":
-                data["daily_life_impacts"][0]["evidence_type"] = "断定"
+                shared = data["themes"][0]["initial_view"]["date"]
+                for item in data["themes"]:
+                    for key in ("initial_view", "new_fact", "market_reaction"):
+                        item[key]["date"] = shared
             return data
 
         result = run(self.make_root(mutate))
-        self.assertTrue(any("影響区分" in message for message in result.errors))
+        self.assertTrue(any("3日以上の変化" in message for message in result.errors))
+
+    def test_market_context_requires_counter_evidence(self):
+        def mutate(name, data):
+            if name == "market-context":
+                data["themes"][0]["counter_evidence"] = ""
+            return data
+
+        result = run(self.make_root(mutate))
+        self.assertTrue(any("反証" in message for message in result.errors))
 
     def test_duplicate_glossary_term_is_error(self):
         def mutate(name, data):

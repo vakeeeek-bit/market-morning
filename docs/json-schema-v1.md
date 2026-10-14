@@ -66,9 +66,9 @@
 
 ### `market-context.json`
 
-`updated_at`、`period_start`、`period_end`、`headline`、`summary`、`timeline`、`current_drivers`、`japan_connection`、`daily_life_impacts`、`scenario_change_conditions`、`sources`。
+`version`、`updated_at`、`report_date`、`period_start`、`period_end`、`freshness`、`headline`、`summary`、`themes`、`scenario_change_conditions`、`sources`。
 
-日次レポートから分離し、原則週1回または市場環境の重大変化時に更新する。`timeline`は対象期間内の日付順で3〜6件とする。`daily_life_impacts.evidence_type`は`直接影響`、`間接影響`、`可能性`のいずれかとし、制度・税制変更は市場要因と分離して公式根拠を確認する。
+表示データは日次レポートから分離するが、当日レポートの監査済み`market_context_themes`、直近レポート履歴、確認済みニュースから生成する。`themes`は3〜5件とし、「当初の認識→新事実→市場反応→現在の認識」、日本株影響、反証・未確認、出典IDを必須とする。
 
 ### `glossary.json`
 

@@ -57,6 +57,9 @@ jobs:
       - name: Validate current data
         run: python scripts/validate_data.py
 
+      - name: Confirm market context follows the current report and news history
+        run: python scripts/update_market_context.py --check
+
       - name: Audit current publication freshness
         run: |
           if ! python scripts/validate_data.py --scope publish; then

@@ -298,47 +298,67 @@ def validate_market_context(data: dict[str, dict], result: ValidationResult) -> 
     if start and end:
         if start > end:
             result.error("market-context: period_startがperiod_endより後です")
-        elif (end - start).days < 60:
-            result.error("market-context: 対象期間は原則2か月以上必要です")
+        elif (end - start).days < 2:
+            result.error("market-context: 日付の流れを示すため3日以上の期間が必要です")
         else:
             result.ok("今のマーケット対象期間")
 
-    timeline = context.get("timeline")
-    if not isinstance(timeline, list) or not 3 <= len(timeline) <= 6:
-        result.error("market-context.timeline: 重要転換点は3〜6件必要です")
+    report_date = parse_iso_date(
+        context.get("report_date"), "market-context.report_date", result
+    )
+    freshness = context.get("freshness", {})
+    if (
+        freshness.get("status") != "current"
+        or freshness.get("latest_report_date") != context.get("report_date")
+        or not isinstance(freshness.get("source_report_count"), int)
+        or freshness.get("source_report_count", 0) < 2
+    ):
+        result.error("market-context.freshness: 当日レポートと複数履歴への接続が必要です")
+    elif report_date and end and (report_date - end).days > 1:
+        result.error("market-context: 最新テーマがレポート日より2日以上古いです")
     else:
-        dates = []
-        for index, item in enumerate(timeline):
-            item_date = parse_iso_date(
-                item.get("date") if isinstance(item, dict) else None,
-                f"market-context.timeline[{index}].date",
-                result,
-            )
-            if item_date:
-                dates.append(item_date)
-                if start and item_date < start or end and item_date > end:
-                    result.error(
-                        f"market-context.timeline[{index}]: 対象期間外の日付です"
-                    )
-        if dates and dates != sorted(dates):
-            result.error("market-context.timeline: 日付順に並んでいません")
-        elif len(dates) == len(timeline):
-            result.ok("今のマーケット時系列（3〜6件・日付順）")
+        result.ok("今のマーケット鮮度（当日レポート・複数履歴）")
 
-    evidence_types = {"直接影響", "間接影響", "可能性"}
-    life_impacts = context.get("daily_life_impacts")
-    if not isinstance(life_impacts, list) or not life_impacts:
-        result.error("market-context.daily_life_impacts: 1件以上必要です")
+    themes = context.get("themes")
+    source_ids = {
+        item.get("id") for item in context.get("sources", []) if isinstance(item, dict)
+    }
+    if not isinstance(themes, list) or not 3 <= len(themes) <= 5:
+        result.error("market-context.themes: 主要テーマは3〜5件必要です")
     else:
-        invalid = [
-            str(item.get("evidence_type"))
-            for item in life_impacts
-            if not isinstance(item, dict) or item.get("evidence_type") not in evidence_types
-        ]
+        stage_dates = []
+        invalid = []
+        for index, item in enumerate(themes):
+            if not isinstance(item, dict):
+                invalid.append(str(index))
+                continue
+            for key in ("initial_view", "new_fact", "market_reaction"):
+                stage = item.get(key, {})
+                parsed = parse_iso_date(
+                    stage.get("date"), f"market-context.themes[{index}].{key}.date", result
+                )
+                if parsed:
+                    stage_dates.append(parsed)
+                    if start and parsed < start or end and parsed > end:
+                        result.error(
+                            f"market-context.themes[{index}].{key}.date: 対象期間外です"
+                        )
+                        invalid.append(f"{index}.{key}:period")
+                if not str(stage.get("text", "")).strip():
+                    invalid.append(f"{index}.{key}:text")
+            for key in ("theme", "current_view", "japan_impact", "counter_evidence"):
+                if not str(item.get(key, "")).strip():
+                    invalid.append(f"{index}.{key}")
+            if not item.get("source_ids") or any(
+                source_id not in source_ids for source_id in item.get("source_ids", [])
+            ):
+                invalid.append(f"{index}.source_ids")
         if invalid:
-            result.error("market-context.daily_life_impacts: 影響区分が不正です")
+            result.error("market-context.themes: 認識変化・反証・出典の不足: " + ", ".join(invalid))
+        elif len(set(stage_dates)) < 3:
+            result.error("market-context.themes: 3日以上の変化が必要です")
         else:
-            result.ok("暮らしへの影響区分（直接・間接・可能性）")
+            result.ok("今のマーケット主要テーマ（認識→事実→反応→現在・反証）")
 
     sources = context.get("sources")
     if not isinstance(sources, list) or len(sources) < 3:

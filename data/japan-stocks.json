@@ -1,47 +1,48 @@
 {
   "report_date": "2026-10-14",
-  "target_market_date": "2026-10-12",
-  "updated_at": "2026-10-14T06:54:36+09:00",
+  "target_market_date": "2026-10-13",
+  "updated_at": "2026-10-14T12:58:59+09:00",
   "report_type": "daily_provisional",
   "publication_policy": {
     "status": "QUALIFIED",
     "mode": "provisional",
-    "updated_at": "2026-10-14T06:54:36+09:00",
+    "updated_at": "2026-10-14T12:58:59+09:00",
     "complete_gate": "FAIL",
     "copper_included": false,
-    "note": "注釈付き暫定版（MANUAL_REVIEW）。正本市場値は変更せず、未確認先物・現在値・未発表CPIと網羅不能な断定を除外。",
+    "note": "10月13日正本へ更新・中国CXMT調査を追加した昼追補。取得不能項目を明示した注釈付き公開。完全版FAIL。",
     "missing_items": [
-      "10月14日JSTのmarket_data成功記録と10月13日の米市場正本値",
-      "金・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応証拠",
-      "DXY・USD/JPYの10月9日以降の正本値、米2年金利の10月8日以降の正本値",
-      "確認時刻付き為替・暗号資産現在値、限月付き日経先物実測",
-      "アナリスト変更の全件網羅と一部政府掲載の確認範囲"
+      "DXYは10月12日保存値。最新日足の再取得はYahoo query1/query2ともHTTP429。報道の現在値で置換しない",
+      "米2年金利はFRED公式の最新公表が10月9日4.80%。10月13日の米10年金利とは基準日が違うため2s10s不算出",
+      "Gold・WTI・Brentは限月・値種別・時刻と保存値の対応未確認。CME当日決済APIはHTTP200だが空配列、ICE公開本文に対象決済値なし",
+      "時刻付きドル円・暗号資産の現在値は未確認。ドル円の公開Bid/Askと暗号資産の価格は取得したが配信時刻を確認できず不採用。BTC・ETH保存日足は10月12日。日経先物は12月限10月14日06:00夜間終値を確認、昼現在値は未確認",
+      "アナリスト評価は公開一覧の確認範囲のみ。証券会社の原レポート、EPS変更、全件網羅は未確認",
+      "CXMTの発表は10月10日。講演の正確な時刻、4F²の量産数量・歩留まり・顧客認定は未確認"
     ]
   },
   "japan_quick_view": {
-    "headline": "注釈付き暫定版｜CPI前は半導体を警戒、電源設備・規制・TOBは個別選別",
+    "headline": "中国CXMTの競争圧力を追加｜半導体安の縮小とCPIを確認、国内材料は個別選別",
     "top_materials": [
-      "今夜21:30 JSTの米CPIは未発表、結果を先取りしない",
-      "10月13日の半導体安は外部照合、正本は10月12日まで",
-      "日銀9月企業物価は前年比+6.8%、前月比-0.3%",
-      "カナデンは中間予想を上方修正、通期予想は据え置き",
-      "オリンパスFDA警告とリソー教育TOBは個別材料として選別"
+      "中国CXMTの4F²サーバーDRAM計画：競争圧力は重要、量産実力は未確認",
+      "米SOXは10月13日の日中-1.5%から終値-0.23%へ下げ幅縮小",
+      "今夜21:30 JSTの米CPIは未発表",
+      "日銀企業物価は前年比+6.8%、前月比-0.3%",
+      "カナデンの中間上方修正、オリンパスFDA警告、リソー教育TOBを個別評価"
     ],
     "focus_sectors": [
-      "半導体",
+      "半導体・メモリー",
+      "半導体製造装置",
       "電力設備",
       "医療機器",
-      "教育",
-      "銀行"
+      "教育"
     ],
     "unpriced_materials": [
-      "10月13日大引け後の3社開示",
-      "今夜のCPI結果"
+      "今夜のCPI結果",
+      "CXMTの4F²大量生産・顧客認定"
     ],
     "individual_news_review": {
       "status": "reviewed",
-      "story_count": 3,
-      "source": "TDnet一次PDF3件を実読・コード確認"
+      "story_count": 4,
+      "source": "TDnet3社と中国材料の金融報道を実読。朝版に昼の反応を追補"
     }
   },
   "top_stories": [
@@ -55,9 +56,9 @@
       "analysis": "半導体関連の市場心理が弱くても、受配電・電源設備の実需は別評価する。中間改善を通期上方修正と扱わない。",
       "today_watch": "出来高、寄り付き後の相対騰落、通期精査の進展",
       "announced_at": "2026-10-13",
-      "timing": "10月13日大引け後公表・10月14日寄り付き前",
-      "market_pricing_status": "発表後の国内現物反応は未確認",
-      "price_reaction": "未確認",
+      "timing": "10月13日大引け後公表。10月14日昼に追補確認",
+      "market_pricing_status": "当日現物は取引開始済み。下記確認範囲で評価。終値は未確定",
+      "price_reaction": "Yahoo日本版：10月14日09:03始値2693円、前日終値2630円から+2.40%。12:33の出来高72500株。会社材料の単独寄与は未確認",
       "related_stocks": [],
       "related_sectors": [
         "電力設備",
@@ -65,7 +66,8 @@
         "半導体関連設備"
       ],
       "importance": "high",
-      "confidence": "supported"
+      "confidence": "supported",
+      "reaction_source_url": "https://finance.yahoo.co.jp/quote/8081.T"
     },
     {
       "company": "オリンパス",
@@ -77,15 +79,16 @@
       "analysis": "品質対応への警戒と、現時点で操業制限・回収要求ではないという留保を併記。将来影響ゼロを保証しない。",
       "today_watch": "規制対応、会社説明、国内初動と出来高",
       "announced_at": "2026-10-13",
-      "timing": "10月13日大引け後公表・10月14日寄り付き前",
-      "market_pricing_status": "発表後の国内現物反応は未確認",
-      "price_reaction": "未確認",
+      "timing": "10月13日大引け後公表。10月14日昼に追補確認",
+      "market_pricing_status": "当日現物は取引開始済み。下記確認範囲で評価。終値は未確定",
+      "price_reaction": "Yahoo日本版：10月14日09:15始値1782.5円、前日終値2032.5円から-12.30%。12:35の出来高7637500株。FDA材料の単独寄与は未確認",
       "related_stocks": [],
       "related_sectors": [
         "医療機器"
       ],
       "importance": "high",
-      "confidence": "supported"
+      "confidence": "supported",
+      "reaction_source_url": "https://finance.yahoo.co.jp/quote/7733.T"
     },
     {
       "company": "リソー教育グループ",
@@ -97,54 +100,122 @@
       "analysis": "295円は買付条件であり市場現在値ではない。TOB成立、応募結果、買付者側の利益効果は未確定。",
       "today_watch": "市場価格と買付条件の比較、応募・成立条件、買付者の反応",
       "announced_at": "2026-10-13",
-      "timing": "10月13日大引け後公表・10月14日寄り付き前",
-      "market_pricing_status": "発表後の国内現物反応は未確認",
-      "price_reaction": "未確認",
+      "timing": "10月13日大引け後公表。10月14日昼に追補確認",
+      "market_pricing_status": "当日現物は取引開始済み。下記確認範囲で評価。終値は未確定",
+      "price_reaction": "StockWeatherの10月14日11:03現在：294円、+36.74%。TOB価格295円との差1円。当日終値ではない",
       "related_stocks": [],
       "related_sectors": [
         "教育",
         "不動産（買付者）"
       ],
       "importance": "high",
-      "confidence": "supported"
+      "confidence": "supported",
+      "reaction_source_url": "https://finance.stockweather.co.jp/contents/stockdetail.aspx?cntcode=JP&exctype=01&skubun=1&stkcode=4714"
     }
   ],
-  "important_stories": [],
+  "important_stories": [
+    {
+      "company": "キオクシア／国内半導体関連（中国CXMT材料）",
+      "ticker": "285A",
+      "headline": "中国CXMTのサーバーDRAM計画と競争圧力",
+      "category": "海外競争・セクター材料",
+      "fact": "第一財経は10月10日20:54（中国時間＝21:54 JST）、同日の上海会議でCXMT社長が4F²構造と年末のDDR5 RDIMM製品投入計画を説明したと報道。SCMPは10月12日08:30（香港時間＝09:30 JST）掲載、16:50更新。製品投入目標であり4F²の大量生産完了ではない。",
+      "announced_at": "2026-10-10",
+      "timing": "週末発表→10月12日米株→10月13日韓国・日本・米株。講演の正確な時刻は未確認",
+      "market_pricing_status": "米韓の反応を確認。材料ごとの寄与率は不明",
+      "price_reaction": "10月12日米終値：SOX-2.67%、Micron-3.88%。10月13日Reuters 14:46 UTC（23:46 JST）の米日中報道：SOX-1.5%、Micron-4.5%。同日米終値：SOX-0.23%、Micron-3.6%、Applied Materials約-7%、Broadcom+0.7%。韓国Samsungは同日7%超安、SK hynix10%超安と報道。韓国の場中率を確定終値へ置換しない。",
+      "analysis": "サーバーDRAMの競争圧力はメモリー株の警戒理由として重要。一方、AI投資回収・資金調達への懸念とBroadcom CEO発言も同時に作用。CXMTへの単独帰因はできない。日本ではDRAMとNANDを区別し、キオクシアへの影響はメモリー心理・中長期競争を経由する推論。装置株は顧客投資と中国受注・輸出規制を分ける。 4F²製品の歩留まり、量産能力、顧客認定は未確認。SamsungとSK hynixも同系統技術を開発。DRAMの技術進展をNANDやHBMの優位確立と同一視しない。SOXの下げ幅縮小、Broadcomの終値上昇、カナデンの設備実需改善は一律弱気への反証。",
+      "today_watch": "量産・顧客認定、メモリーと装置株の相対騰落、CPI後の金利",
+      "related_stocks": [
+        "キオクシア（285A：NAND、DRAMと区別）",
+        "東京エレクトロン（8035）",
+        "アドバンテスト（6857）"
+      ],
+      "related_sectors": [
+        "半導体",
+        "半導体製造装置"
+      ],
+      "importance": "high",
+      "confidence": "supported",
+      "source_url": "https://www.yicai.com/news/103388707.html"
+    }
+  ],
   "other_stories": [],
   "data_quality": {
     "overall": "MANUAL_REVIEW",
     "missing": [
-      "10月14日JSTのmarket_data成功記録と10月13日の米市場正本値",
-      "金・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応証拠",
-      "DXY・USD/JPYの10月9日以降の正本値、米2年金利の10月8日以降の正本値",
-      "確認時刻付き為替・暗号資産現在値、限月付き日経先物実測",
-      "アナリスト変更の全件網羅と一部政府掲載の確認範囲"
+      "DXYは10月12日保存値。最新日足の再取得はYahoo query1/query2ともHTTP429。報道の現在値で置換しない",
+      "米2年金利はFRED公式の最新公表が10月9日4.80%。10月13日の米10年金利とは基準日が違うため2s10s不算出",
+      "Gold・WTI・Brentは限月・値種別・時刻と保存値の対応未確認。CME当日決済APIはHTTP200だが空配列、ICE公開本文に対象決済値なし",
+      "時刻付きドル円・暗号資産の現在値は未確認。ドル円の公開Bid/Askと暗号資産の価格は取得したが配信時刻を確認できず不採用。BTC・ETH保存日足は10月12日。日経先物は12月限10月14日06:00夜間終値を確認、昼現在値は未確認",
+      "アナリスト評価は公開一覧の確認範囲のみ。証券会社の原レポート、EPS変更、全件網羅は未確認",
+      "CXMTの発表は10月10日。講演の正確な時刻、4F²の量産数量・歩留まり・顧客認定は未確認"
     ],
     "differences": [
-      "正本は10月13日更新・主要米市場は10月12日。10月13日の外部報道値で置換しない",
-      "米2年は10月8日、10年は10月12日。2s10sは計算しない",
-      "日本株実績ページは10月13日まで更新済みだが、market.jsonの日本指数は10月9日。別データと明示"
+      "主要米株・11業種ETF・ドル円・米10年・VIXは10月13日正本へ更新",
+      "DXYは10月12日、米2年は10月9日。日足の比較時点を明記",
+      "朝版を保持した昼の追補。10月14日アジア反発報道は朝の判断に遡及しない"
     ],
     "excluded": [
-      "Gold・WTI・Brentの価格と前日比",
-      "Copper価格・在庫（任意非掲載）",
-      "現在値と日経先物の推定",
-      "当日のCPI結果と市場因果の断定"
+      "限月定義未確認の商品価格",
+      "銅価格・在庫（任意非掲載）",
+      "推定現在値・日経先物",
+      "未発表CPI結果",
+      "CXMTだけで下落全体を説明する因果断定"
     ],
     "cautions": [
-      "確認済みニュースは部分収集。完全版PASSではない",
-      "10月13日市場反応は外部照合に限定",
-      "現物寄り付き前。材料別の国内反応は未確認"
+      "取得不能項目を注釈にして公開。完全版PASSではない",
+      "ニュース・レーティングは部分収集",
+      "日中値と終値、発表と製品投入・量産を区別"
     ]
   },
   "analyst_rating_changes": {
-    "coverage_status": "十分調査したが取得不能",
-    "headline": "全件網羅できず、把握範囲は限定",
-    "items": [],
+    "coverage_status": "取得済",
+    "headline": "10月13日の公開一覧から格付け変更を確認。全件・原レポートは未確認",
+    "items": [
+      {
+        "company": "IIJ",
+        "ticker": "3774",
+        "broker": "みずほ",
+        "rating_change": "買い→中立",
+        "target_price_change": "3400→3600円",
+        "date": "2026-10-13",
+        "source_url": "https://www.traders.co.jp/premium/rating",
+        "note": "格下げと目標株価引上げは別の判断。EPS・理由は未確認"
+      },
+      {
+        "company": "三菱ケミカルグループ",
+        "ticker": "4188",
+        "broker": "大和",
+        "rating_change": "3→2",
+        "target_price_change": "790→1380円",
+        "date": "2026-10-13",
+        "source_url": "https://www.traders.co.jp/premium/rating"
+      },
+      {
+        "company": "三菱地所",
+        "ticker": "8802",
+        "broker": "大和",
+        "rating_change": "2→1",
+        "target_price_change": "4650→4330円",
+        "date": "2026-10-13",
+        "source_url": "https://www.traders.co.jp/premium/rating",
+        "note": "格上げと目標株価引下げを区別"
+      },
+      {
+        "company": "住友不動産",
+        "ticker": "8830",
+        "broker": "大和",
+        "rating_change": "3→2",
+        "target_price_change": "3570→3390円",
+        "date": "2026-10-13",
+        "source_url": "https://www.traders.co.jp/premium/rating"
+      }
+    ],
     "source_review": [
       {
-        "source": "公開一覧・IFIS",
-        "result": "HTTP403と無料情報の範囲制約。新規変更を採用できず"
+        "source": "https://www.traders.co.jp/premium/rating",
+        "result": "公開一覧本文を実読。4件を採用。プレミアム詳細と証券会社原レポートは未取得"
       }
     ]
   },

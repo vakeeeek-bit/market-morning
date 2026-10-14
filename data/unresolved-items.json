@@ -1,22 +1,22 @@
 {
-  "updated_at": "2026-10-14T06:54:36+09:00",
+  "updated_at": "2026-10-14T12:58:59+09:00",
   "source_report_date": "2026-10-14",
   "items": [
     {
-      "id": "market-asof",
+      "id": "dxy-latest",
       "status": "QUALIFIED",
-      "missing": "10月14日JSTのmarket_data成功記録と10月13日の米市場正本値",
-      "impact": "当日指数・相場方向の確定を除外",
-      "last_checked_at": "2026-10-14T06:54:36+09:00",
-      "next_action": "当日正本・代替公式掲載・実測を再確認し、証明できた項目だけ採用",
+      "missing": "DXYは10月12日保存値。最新日足の再取得はYahoo query1/query2ともHTTP429。報道の現在値で置換しない",
+      "impact": "不足項目を当日数値や確定成果として使わず、関連する断定を除外",
+      "last_checked_at": "2026-10-14T12:58:59+09:00",
+      "next_action": "公式データ更新・決済配列の復旧・企業の量産開示が利用可能になった時点で再確認",
       "attempts": [
         {
-          "method": "当日取得・本文確認",
-          "result": "status成功は10月13日、米株は10月12日",
+          "method": "公式本文・公開API・代替掲載確認",
+          "result": "Yahoo query1/query2 HTTP429。正本102.58、10月12日を維持",
           "source_urls": [
             "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
           ],
-          "checked_at": "2026-10-14T06:54:36+09:00"
+          "checked_at": "2026-10-14T12:58:59+09:00"
         }
       ],
       "affected_components": [
@@ -24,25 +24,54 @@
         "japan_stocks"
       ],
       "excluded_claims": [
-        "当日指数・相場方向の確定を除外"
+        "DXYは10月12日保存値。最新日足の再取得はYahoo query1/query2ともHTTP429。報道の現在値で置換しない"
+      ],
+      "excluded_from_publication": true
+    },
+    {
+      "id": "fred-publication-lag",
+      "status": "QUALIFIED",
+      "missing": "米2年金利はFRED公式の最新公表が10月9日4.80%。10月13日の米10年金利とは基準日が違うため2s10s不算出",
+      "impact": "不足項目を当日数値や確定成果として使わず、関連する断定を除外",
+      "last_checked_at": "2026-10-14T12:58:59+09:00",
+      "next_action": "公式データ更新・決済配列の復旧・企業の量産開示が利用可能になった時点で再確認",
+      "attempts": [
+        {
+          "method": "公式本文・公開API・代替掲載確認",
+          "result": "公式本文とCSVとも最新10月9日4.80%",
+          "source_urls": [
+            "https://fred.stlouisfed.org/series/DGS2",
+            "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2"
+          ],
+          "checked_at": "2026-10-14T12:58:59+09:00"
+        }
+      ],
+      "affected_components": [
+        "ai_report",
+        "japan_stocks"
+      ],
+      "excluded_claims": [
+        "米2年金利はFRED公式の最新公表が10月9日4.80%。10月13日の米10年金利とは基準日が違うため2s10s不算出"
       ],
       "excluded_from_publication": true
     },
     {
       "id": "contract-definitions",
       "status": "QUALIFIED",
-      "missing": "金・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応証拠",
-      "impact": "商品価格・前日比を不採用",
-      "last_checked_at": "2026-10-14T06:54:36+09:00",
-      "next_action": "当日正本・代替公式掲載・実測を再確認し、証明できた項目だけ採用",
+      "missing": "Gold・WTI・Brentは限月・値種別・時刻と保存値の対応未確認。CME当日決済APIはHTTP200だが空配列、ICE公開本文に対象決済値なし",
+      "impact": "不足項目を当日数値や確定成果として使わず、関連する断定を除外",
+      "last_checked_at": "2026-10-14T12:58:59+09:00",
+      "next_action": "公式データ更新・決済配列の復旧・企業の量産開示が利用可能になった時点で再確認",
       "attempts": [
         {
-          "method": "当日取得・本文確認",
-          "result": "HTTP200、正本値との限月対応は未確認",
+          "method": "公式本文・公開API・代替掲載確認",
+          "result": "CME決済配列は空。ICEは公開ページ取得のみ、価格と限月の対応未確認",
           "source_urls": [
-            "https://www.cmegroup.com/markets/metals/precious/gold.settlements.html"
+            "https://www.cmegroup.com/CmeWS/mvc/Settlements/Futures/Settlements/437/FUT?tradeDate=10/13/2026&pageSize=500",
+            "https://www.cmegroup.com/CmeWS/mvc/Settlements/Futures/Settlements/425/FUT?tradeDate=10/13/2026&pageSize=500",
+            "https://www.ice.com/products/219/Brent-Crude-Futures/data"
           ],
-          "checked_at": "2026-10-14T06:54:36+09:00"
+          "checked_at": "2026-10-14T12:58:59+09:00"
         }
       ],
       "affected_components": [
@@ -50,25 +79,25 @@
         "japan_stocks"
       ],
       "excluded_claims": [
-        "商品価格・前日比を不採用"
+        "Gold・WTI・Brentは限月・値種別・時刻と保存値の対応未確認。CME当日決済APIはHTTP200だが空配列、ICE公開本文に対象決済値なし"
       ],
       "excluded_from_publication": true
     },
     {
-      "id": "current-and-dates",
+      "id": "current-and-futures",
       "status": "QUALIFIED",
-      "missing": "DXY・USD/JPYの10月9日以降の正本値、米2年金利の10月8日以降の正本値／確認時刻付き為替・暗号資産現在値、限月付き日経先物実測",
-      "impact": "現在値・日経先物・2s10s判断を除外",
-      "last_checked_at": "2026-10-14T06:54:36+09:00",
-      "next_action": "当日正本・代替公式掲載・実測を再確認し、証明できた項目だけ採用",
+      "missing": "時刻付きドル円・暗号資産の現在値は未確認。ドル円の公開Bid/Askと暗号資産の価格は取得したが配信時刻を確認できず不採用。BTC・ETH保存日足は10月12日。日経先物は12月限10月14日06:00夜間終値を確認、昼現在値は未確認",
+      "impact": "不足項目を当日数値や確定成果として使わず、関連する断定を除外",
+      "last_checked_at": "2026-10-14T12:58:59+09:00",
+      "next_action": "公式データ更新・決済配列の復旧・企業の量産開示が利用可能になった時点で再確認",
       "attempts": [
         {
-          "method": "当日取得・本文確認",
-          "result": "正本基準日の差を実読",
+          "method": "公式本文・公開API・代替掲載確認",
+          "result": "JPX現行価格ページはNow loadingで動的値なし。株探の06:03報道で12月限06:00夜間終値68100円を確認。昼現在値は未確認",
           "source_urls": [
-            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            "https://www.jpx.co.jp/markets/derivatives/index.html"
           ],
-          "checked_at": "2026-10-14T06:54:36+09:00"
+          "checked_at": "2026-10-14T12:58:59+09:00"
         }
       ],
       "affected_components": [
@@ -76,25 +105,25 @@
         "japan_stocks"
       ],
       "excluded_claims": [
-        "現在値・日経先物・2s10s判断を除外"
+        "時刻付きドル円・暗号資産の現在値は未確認。ドル円の公開Bid/Askと暗号資産の価格は取得したが配信時刻を確認できず不採用。BTC・ETH保存日足は10月12日。日経先物は12月限10月14日06:00夜間終値を確認、昼現在値は未確認"
       ],
       "excluded_from_publication": true
     },
     {
-      "id": "ratings-and-coverage",
+      "id": "ratings-coverage",
       "status": "QUALIFIED",
-      "missing": "アナリスト変更の全件網羅と一部政府掲載の確認範囲",
-      "impact": "変更なし・新規材料なしの網羅断定を除外",
-      "last_checked_at": "2026-10-14T06:54:36+09:00",
-      "next_action": "当日正本・代替公式掲載・実測を再確認し、証明できた項目だけ採用",
+      "missing": "アナリスト評価は公開一覧の確認範囲のみ。証券会社の原レポート、EPS変更、全件網羅は未確認",
+      "impact": "不足項目を当日数値や確定成果として使わず、関連する断定を除外",
+      "last_checked_at": "2026-10-14T12:58:59+09:00",
+      "next_action": "公式データ更新・決済配列の復旧・企業の量産開示が利用可能になった時点で再確認",
       "attempts": [
         {
-          "method": "当日取得・本文確認",
-          "result": "IFIS公開情報、政府一覧の動的・アクセス制約あり",
+          "method": "公式本文・公開API・代替掲載確認",
+          "result": "公開一覧4件を採用、原レポート・網羅性は未確認",
           "source_urls": [
-            "https://kabuyoho.jp/"
+            "https://www.traders.co.jp/premium/rating"
           ],
-          "checked_at": "2026-10-14T06:54:36+09:00"
+          "checked_at": "2026-10-14T12:58:59+09:00"
         }
       ],
       "affected_components": [
@@ -102,7 +131,35 @@
         "japan_stocks"
       ],
       "excluded_claims": [
-        "変更なし・新規材料なしの網羅断定を除外"
+        "アナリスト評価は公開一覧の確認範囲のみ。証券会社の原レポート、EPS変更、全件網羅は未確認"
+      ],
+      "excluded_from_publication": true
+    },
+    {
+      "id": "cxmt-commercial-proof",
+      "status": "QUALIFIED",
+      "missing": "CXMTの発表は10月10日。講演の正確な時刻、4F²の量産数量・歩留まり・顧客認定は未確認",
+      "impact": "不足項目を当日数値や確定成果として使わず、関連する断定を除外",
+      "last_checked_at": "2026-10-14T12:58:59+09:00",
+      "next_action": "公式データ更新・決済配列の復旧・企業の量産開示が利用可能になった時点で再確認",
+      "attempts": [
+        {
+          "method": "公式本文・公開API・代替掲載確認",
+          "result": "公式ニュース一覧に当該講演本文なし。第一財経の直接取材記事で発表日・報道時刻確認",
+          "source_urls": [
+            "https://www.cxmt.com/news.html",
+            "https://www.yicai.com/news/103388707.html",
+            "https://www.scmp.com/tech/big-tech/article/3370505/chinas-cxmt-unveils-key-progress-chip-structure-pursued-samsung-sk-hynix"
+          ],
+          "checked_at": "2026-10-14T12:58:59+09:00"
+        }
+      ],
+      "affected_components": [
+        "ai_report",
+        "japan_stocks"
+      ],
+      "excluded_claims": [
+        "CXMTの発表は10月10日。講演の正確な時刻、4F²の量産数量・歩留まり・顧客認定は未確認"
       ],
       "excluded_from_publication": true
     }

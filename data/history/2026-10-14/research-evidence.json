@@ -1,9 +1,9 @@
 {
   "version": "2.0",
   "report_date": "2026-10-14",
-  "target_market_date": "2026-10-12",
-  "updated_at": "2026-10-14T12:50:41+09:00",
-  "scope_note": "PASSは掲載内容の分析品質、QUALIFIEDは明示した欠測・除外範囲を表す CXMTの発表・計画・各国反応を追加検証し、中国要因を単独主因としない。",
+  "target_market_date": "2026-10-13",
+  "updated_at": "2026-10-14T12:58:59+09:00",
+  "scope_note": "10月14日朝版への昼追補。主要指数の最新正本とCXMT発表・報道・場中／終値時系列を再調査。取得不能は公開注釈で明示。",
   "research_coverage": {
     "status": "QUALIFIED",
     "directions": [
@@ -55,19 +55,16 @@
         "label": "固定市場Universe",
         "tier": "Critical",
         "status": "取得済",
-        "evidence": "当日確認：正本市場値と基準日を実読、価格置換なし／BLS予定と日銀PDF本文・表を確認／TDnet3社の本文・コード・例外・期間を確認／OFACとUSTRの対象・措置・非対象を確認／Reuters10月13日本文を外部照合に限定",
+        "evidence": "10月14日10:59:51正本を実読。主要米株・11業種ETFは10月13日。FRED公式最新は10月9日。基準日差を明示",
         "attempts": [
           {
-            "method": "正本と一次資料実読",
-            "result": "当日確認、掲載範囲と留保を区別",
+            "method": "最新正本・FRED公式照合",
+            "result": "取得済み値をそのまま使用、現在値へ読み替えない",
             "source_urls": [
               "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
-              "https://www.bls.gov/schedule/2026/10_sched_list.htm",
-              "https://www.boj.or.jp/statistics/pi/cgpi_release/cgpi2609.pdf",
-              "https://ofac.treasury.gov/recent-actions/20261013",
-              "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/united-states-seeks-mexicos-review-alleged-denial-workers-rights-carolina-performance-fabrics"
+              "https://fred.stlouisfed.org/series/DGS2"
             ],
-            "checked_at": "2026-10-14T06:54:36+09:00"
+            "checked_at": "2026-10-14T12:58:59+09:00"
           }
         ],
         "impact_if_unavailable": "市場全体判断を保留",
@@ -101,19 +98,20 @@
         "label": "異常値からの逆引き",
         "tier": "Required",
         "status": "取得済",
-        "evidence": "当日確認：正本市場値と基準日を実読、価格置換なし／BLS予定と日銀PDF本文・表を確認／TDnet3社の本文・コード・例外・期間を確認／OFACとUSTRの対象・措置・非対象を確認／Reuters10月13日本文を外部照合に限定",
+        "evidence": "第一財経は10月10日20:54（中国時間＝21:54 JST）、同日の上海会議でCXMT社長が4F²構造と年末のDDR5 RDIMM製品投入計画を説明したと報道。SCMPは10月12日08:30（香港時間＝09:30 JST）掲載、16:50更新。製品投入目標であり4F²の大量生産完了ではない。 10月12日米終値：SOX-2.67%、Micron-3.88%。10月13日Reuters 14:46 UTC（23:46 JST）の米日中報道：SOX-1.5%、Micron-4.5%。同日米終値：SOX-0.23%、Micron-3.6%、Applied Materials約-7%、Broadcom+0.7%。韓国Samsungは同日7%超安、SK hynix10%超安と報道。韓国の場中率を確定終値へ置換しない。 4F²製品の歩留まり、量産能力、顧客認定は未確認。SamsungとSK hynixも同系統技術を開発。DRAMの技術進展をNANDやHBMの優位確立と同一視しない。SOXの下げ幅縮小、Broadcomの終値上昇、カナデンの設備実需改善は一律弱気への反証。",
         "attempts": [
           {
-            "method": "正本と一次資料実読",
-            "result": "当日確認、掲載範囲と留保を区別",
+            "method": "CXMTの発表・金融報道・株価時系列",
+            "result": "第一財経、SCMP、Reuters、NYSEを照合。因果は単独断定しない",
             "source_urls": [
-              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
-              "https://www.bls.gov/schedule/2026/10_sched_list.htm",
-              "https://www.boj.or.jp/statistics/pi/cgpi_release/cgpi2609.pdf",
-              "https://ofac.treasury.gov/recent-actions/20261013",
-              "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/united-states-seeks-mexicos-review-alleged-denial-workers-rights-carolina-performance-fabrics"
+              "https://www.yicai.com/news/103388707.html",
+              "https://www.scmp.com/tech/big-tech/article/3370505/chinas-cxmt-unveils-key-progress-chip-structure-pursued-samsung-sk-hynix",
+              "https://www.reuters.com/business/sp-500-futures-muted-investors-await-big-bank-earnings-chip-weakness-weighs-2026-10-13/",
+              "https://www.reuters.com/world/china/us-chip-stocks-extend-slide-china-memory-report-ai-spending-jitters-hit-sector-2026-10-13/",
+              "https://www.nyse.com/index",
+              "https://www.koreajoongangdaily.com/business/global-chip-stocks-tumble-as-chinas-cxmt-unveils-nextgeneration-dram-plans/12917865"
             ],
-            "checked_at": "2026-10-14T06:54:36+09:00"
+            "checked_at": "2026-10-14T12:58:59+09:00"
           }
         ],
         "impact_if_unavailable": "指数表面だけの分析になる",
@@ -167,24 +165,16 @@
         "id": "analyst_rating_changes",
         "label": "アナリスト評価変更",
         "tier": "Required",
-        "status": "十分調査したが取得不能",
-        "evidence": "公開一覧403、IFIS無料情報で全変更の網羅を保証できず",
+        "status": "取得済",
+        "evidence": "10月13日の公開一覧から格付け変更を確認。全件・原レポートは未確認",
         "attempts": [
           {
-            "method": "公開一覧",
-            "result": "HTTP403",
+            "method": "公開一覧実読",
+            "result": "4件を採用。全件・原レポート・EPSは未確認",
             "source_urls": [
-              "https://kabutan.jp/news/marketnews/?category=6"
+              "https://www.traders.co.jp/premium/rating"
             ],
-            "checked_at": "2026-10-14T06:54:36+09:00"
-          },
-          {
-            "method": "IFIS公開ページ",
-            "result": "HTTP200、全証券会社・EPS変更の網羅は未確認",
-            "source_urls": [
-              "https://kabuyoho.jp/"
-            ],
-            "checked_at": "2026-10-14T06:54:36+09:00"
+            "checked_at": "2026-10-14T12:58:59+09:00"
           }
         ],
         "impact_if_unavailable": "網羅的な変更なしと方向判断を除外",
@@ -195,23 +185,26 @@
         "label": "商品先物の契約定義",
         "tier": "Required",
         "status": "十分調査したが取得不能",
-        "evidence": "CME掲載ページは取得したが正本の連続足との定義対応は証明できず",
+        "evidence": "Gold・WTI・Brentは限月・値種別・時刻と保存値の対応未確認。CME当日決済APIはHTTP200だが空配列、ICE公開本文に対象決済値なし",
         "attempts": [
           {
-            "method": "CME Gold掲載",
-            "result": "HTTP200、対象契約と正本値の対応未確認",
+            "method": "公式本文・公開API・代替掲載確認",
+            "result": "CME決済配列は空。ICEは公開ページ取得のみ、価格と限月の対応未確認",
             "source_urls": [
-              "https://www.cmegroup.com/markets/metals/precious/gold.settlements.html"
+              "https://www.cmegroup.com/CmeWS/mvc/Settlements/Futures/Settlements/437/FUT?tradeDate=10/13/2026&pageSize=500",
+              "https://www.cmegroup.com/CmeWS/mvc/Settlements/Futures/Settlements/425/FUT?tradeDate=10/13/2026&pageSize=500",
+              "https://www.ice.com/products/219/Brent-Crude-Futures/data"
             ],
-            "checked_at": "2026-10-14T06:54:36+09:00"
+            "checked_at": "2026-10-14T12:58:59+09:00"
           },
           {
-            "method": "CME WTI掲載",
-            "result": "HTTP200、値種別・観測対応未確認",
+            "method": "取引所決済ページ本文",
+            "result": "CMEとICEはHTTP200、保存値と限月の対応情報なし",
             "source_urls": [
-              "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html"
+              "https://www.cmegroup.com/markets/metals/precious/gold.settlements.html",
+              "https://www.ice.com/products/219/Brent-Crude-Futures/data"
             ],
-            "checked_at": "2026-10-14T06:54:36+09:00"
+            "checked_at": "2026-10-14T12:58:59+09:00"
           }
         ],
         "impact_if_unavailable": "先物の価格水準・前日比を分析から除外",
@@ -223,43 +216,43 @@
     "status": "PASS",
     "materials": [
       {
-        "headline": "CXMT競争懸念と半導体株の選別",
+        "headline": "中国CXMTのサーバーDRAM計画と競争圧力",
         "fact": {
-          "text": "CXMTは9月20日に第5世代DRAM技術基盤の量産開始を公表。10月9〜10日の会議では4F² DDR5 RDIMMの年内投入計画が示されたと報じられたが、仕様・歩留まり・顧客認定・大規模量産は未確認。",
+          "text": "第一財経は10月10日20:54（中国時間＝21:54 JST）、同日の上海会議でCXMT社長が4F²構造と年末のDDR5 RDIMM製品投入計画を説明したと報道。SCMPは10月12日08:30（香港時間＝09:30 JST）掲載、16:50更新。製品投入目標であり4F²の大量生産完了ではない。",
           "source_urls": [
-            "https://www.cxmt.com/news.html",
+            "https://www.yicai.com/news/103388707.html",
+            "https://www.scmp.com/tech/big-tech/article/3370505/chinas-cxmt-unveils-key-progress-chip-structure-pursued-samsung-sk-hynix",
+            "https://www.reuters.com/business/sp-500-futures-muted-investors-await-big-bank-earnings-chip-weakness-weighs-2026-10-13/",
             "https://www.reuters.com/world/china/us-chip-stocks-extend-slide-china-memory-report-ai-spending-jitters-hit-sector-2026-10-13/",
-            "https://www.reuters.com/business/sp-500-futures-muted-investors-await-big-bank-earnings-chip-weakness-weighs-2026-10-13/"
+            "https://www.nyse.com/index",
+            "https://www.koreajoongangdaily.com/business/global-chip-stocks-tumble-as-chinas-cxmt-unveils-nextgeneration-dram-plans/12917865"
           ],
           "verification_status": "PASS"
         },
         "observed_market_reaction": {
-          "text": "Reutersによる外部照合では13日にSamsung・SK Hynix、Micron、キオクシア、東京エレクトロンが下落。一方、米SOXの下げは限定的で、14日午前は韓国半導体が反発。",
+          "text": "10月12日米終値：SOX-2.67%、Micron-3.88%。10月13日Reuters 14:46 UTC（23:46 JST）の米日中報道：SOX-1.5%、Micron-4.5%。同日米終値：SOX-0.23%、Micron-3.6%、Applied Materials約-7%、Broadcom+0.7%。韓国Samsungは同日7%超安、SK hynix10%超安と報道。韓国の場中率を確定終値へ置換しない。",
           "assets_checked": [
-            "CXMT",
-            "Micron",
-            "Samsung",
-            "SK Hynix",
-            "キオクシア",
-            "東京エレクトロン",
-            "SOX"
+            "米株",
+            "SOX",
+            "メモリー株",
+            "国内関連株"
           ]
         },
         "market_internals": {
-          "text": "メモリー・製造装置の下げが半導体指数全体より大きい"
+          "text": "10月13日の米11業種ETFは5上昇・6下落。指数そのものではない。最強はXLE +1.80%、最弱はXLV -1.35%。"
         },
         "market_pricing": {
           "status": "partially_priced",
-          "text": "13日に売られ、14日午前は一部反発"
+          "text": "確認済み市場反応と単独寄与未確認を区別"
         },
         "interpretation": {
-          "text": "中国競争を重要な追加要因へ引き上げる。ただしAI投資採算、金利・資本コスト、利益確定も同時に作用しており、寄与率や単独因果は断定しない。",
-          "confidence": "supported",
-          "evidence": "米韓日の同業株反応",
-          "uncertainty": "量産歩留まり・顧客認定と材料別寄与率は未確認"
+          "text": "サーバーDRAMの競争圧力はメモリー株の警戒理由として重要。一方、AI投資回収・資金調達への懸念とBroadcom CEO発言も同時に作用。CXMTへの単独帰因はできない。日本ではDRAMとNANDを区別し、キオクシアへの影響はメモリー心理・中長期競争を経由する推論。装置株は顧客投資と中国受注・輸出規制を分ける。 4F²製品の歩留まり、量産能力、顧客認定は未確認。SamsungとSK hynixも同系統技術を開発。DRAMの技術進展をNANDやHBMの優位確立と同一視しない。SOXの下げ幅縮小、Broadcomの終値上昇、カナデンの設備実需改善は一律弱気への反証。",
+          "confidence": "tentative",
+          "evidence": "第一財経は10月10日20:54（中国時間＝21:54 JST）、同日の上海会議でCXMT社長が4F²構造と年末のDDR5 RDIMM製品投入計画を説明したと報道。SCMPは10月12日08:30（香港時間＝09:30 JST）掲載、16:50更新。製品投入目標であり4F²の大量生産完了ではない。",
+          "uncertainty": "量産実力、材料ごとの寄与、当日終値は未確認"
         },
         "japan_transmission": {
-          "economic_channel": "中国DRAMの供給拡大懸念→価格決定力低下懸念→メモリー・装置株の評価低下",
+          "economic_channel": "サーバーDRAMの競争圧力はメモリー株の警戒理由として重要。一方、AI投資回収・資金調達への懸念とBroadcom CEO発言も同時に作用。CXMTへの単独帰因はできない。日本ではDRAMとNANDを区別し、キオクシアへの影響はメモリー心理・中長期競争を経由する推論。装置株は顧客投資と中国受注・輸出規制を分ける。",
           "intermediate_reactions": [
             "Samsung・SK Hynix",
             "Micron・SOX",
@@ -269,18 +262,18 @@
             "電機・精密",
             "機械"
           ],
-          "pricing_in_japan": "13日の外部照合ではキオクシア・東京エレクトロンが下落",
+          "pricing_in_japan": "10月13日に関連株安が報道。国内単独寄与・10月14日終値は未確認",
           "assessment": "短期逆風。ただし正本未反映と14日反発を明示"
         },
         "conflict_resolution": "CXMT単独説とAI採算・金利・需給を比較し、指数と個別株の差を重視",
         "counter_evidence": [
-          "米SOXの下げは限定的",
-          "14日午前は韓国半導体が反発",
-          "商用量産能力は未確認"
+          "4F²製品の歩留まり、量産能力、顧客認定は未確認。SamsungとSK hynixも同系統技術を開発。DRAMの技術進展をNANDやHBMの優位確立と同一視しない。SOXの下げ幅縮小、Broadcomの終値上昇、カナデンの設備実需改善は一律弱気への反証。",
+          "10月14日アジアの反発は昼追補の反証。朝へ遡及しない"
         ],
         "change_conditions": [
-          "4F²製品の仕様・歩留まり・顧客認定",
-          "同業株の反発継続"
+          "量産・歩留まり・顧客認定の企業開示",
+          "CPI後の金利・SOX・円相場",
+          "装置受注と設備需要の実測"
         ],
         "chronology_check": "PASS"
       },
@@ -298,166 +291,103 @@
           "assets_checked": [
             "米株",
             "SOX",
-            "米金利",
-            "円相場"
+            "メモリー株",
+            "国内関連株"
           ]
         },
         "market_internals": {
-          "text": "10月12日の11業種ETFは8上昇・3下落。指数そのものではない。SOX・XLKの弱さとXLE・XLPの強さが併存"
+          "text": "10月13日の米11業種ETFは5上昇・6下落。指数そのものではない。最強はXLE +1.80%、最弱はXLV -1.35%。"
         },
         "market_pricing": {
-          "status": "unknown",
-          "text": "正本の市場日差と単独寄与未確認を分ける"
+          "status": "partially_priced",
+          "text": "確認済み市場反応と単独寄与未確認を区別"
         },
         "interpretation": {
           "text": "予想値を結果として扱わず、発表後の金利・SOX・円相場でシナリオを変更する。",
           "confidence": "tentative",
           "evidence": "BLS日程では9月CPIを10月14日08:30 ET（21:30 JST）に公表予定。現在は未発表。",
-          "uncertainty": "当日の国内現物反応と正本更新が未確認"
+          "uncertainty": "量産実力、材料ごとの寄与、当日終値は未確認"
         },
         "japan_transmission": {
-          "economic_channel": "予想値を結果として扱わず、発表後の金利・SOX・円相場でシナリオを変更する。",
+          "economic_channel": "サーバーDRAMの競争圧力はメモリー株の警戒理由として重要。一方、AI投資回収・資金調達への懸念とBroadcom CEO発言も同時に作用。CXMTへの単独帰因はできない。日本ではDRAMとNANDを区別し、キオクシアへの影響はメモリー心理・中長期競争を経由する推論。装置株は顧客投資と中国受注・輸出規制を分ける。",
           "intermediate_reactions": [
-            "米株・政策・企業実需を比較",
-            "国内出来高と相対騰落を確認"
+            "Samsung・SK Hynix",
+            "Micron・SOX",
+            "キオクシア・東京エレクトロン"
           ],
           "affected_sectors": [
-            "半導体",
-            "電力設備",
-            "医療機器",
-            "教育",
-            "銀行"
+            "電機・精密",
+            "機械"
           ],
-          "pricing_in_japan": "新材料の織り込みは未確認",
-          "assessment": "条件付き選別"
+          "pricing_in_japan": "10月13日に関連株安が報道。国内単独寄与・10月14日終値は未確認",
+          "assessment": "短期逆風。ただし正本未反映と14日反発を明示"
         },
-        "conflict_resolution": "株式センチメントと企業の実需を区別し、単一材料に還元しない",
+        "conflict_resolution": "CXMT単独説とAI採算・金利・需給を比較し、指数と個別株の差を重視",
         "counter_evidence": [
-          "Dow上昇とSOX安の併存",
-          "カナデンのAI設備需要改善",
-          "企業物価の前月比低下"
+          "4F²製品の歩留まり、量産能力、顧客認定は未確認。SamsungとSK hynixも同系統技術を開発。DRAMの技術進展をNANDやHBMの優位確立と同一視しない。SOXの下げ幅縮小、Broadcomの終値上昇、カナデンの設備実需改善は一律弱気への反証。",
+          "10月14日アジアの反発は昼追補の反証。朝へ遡及しない"
         ],
         "change_conditions": [
-          "CPI発表後の金利・SOX反応",
-          "国内市場幅改善"
+          "量産・歩留まり・顧客認定の企業開示",
+          "CPI後の金利・SOX・円相場",
+          "装置受注と設備需要の実測"
         ],
         "chronology_check": "PASS"
       },
       {
-        "headline": "日銀9月企業物価、前年比と前月比を分ける",
+        "headline": "10月13日米株と業種内部強弱",
         "fact": {
-          "text": "10月13日08:50公表の速報。国内企業物価は135.7（2020年=100）、前年比+6.8%、前月比-0.3%。8月前月比は訂正値-0.3%。",
+          "text": "10月13日の米11業種ETFは5上昇・6下落。指数そのものではない。最強はXLE +1.80%、最弱はXLV -1.35%。",
           "source_urls": [
-            "https://www.boj.or.jp/statistics/pi/cgpi_release/cgpi2609.pdf"
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
           ],
           "verification_status": "PASS"
         },
         "observed_market_reaction": {
-          "text": "この統計単独の国内市場寄与は未確認",
+          "text": "10月13日正本：S&P500 -0.02%、Dow -0.35%、NASDAQ100 -0.31%、SOX -0.23%",
           "assets_checked": [
             "米株",
             "SOX",
-            "米金利",
-            "円相場"
+            "メモリー株",
+            "国内関連株"
           ]
         },
         "market_internals": {
-          "text": "10月12日の11業種ETFは8上昇・3下落。指数そのものではない。SOX・XLKの弱さとXLE・XLPの強さが併存"
+          "text": "10月13日の米11業種ETFは5上昇・6下落。指数そのものではない。最強はXLE +1.80%、最弱はXLV -1.35%。"
         },
         "market_pricing": {
-          "status": "unknown",
-          "text": "正本の市場日差と単独寄与未確認を分ける"
+          "status": "partially_priced",
+          "text": "確認済み市場反応と単独寄与未確認を区別"
         },
         "interpretation": {
-          "text": "前年比のコスト負担は残る一方、前月比は低下。全面的な物価加速ともインフレ解消とも断定しない。",
+          "text": "11業種中5上昇・6下落。銀行決算反応と半導体競争不安を分離。SOXの日中下落が縮小したため、下落加速や全面安とは断定しない",
           "confidence": "tentative",
-          "evidence": "10月13日08:50公表の速報。国内企業物価は135.7（2020年=100）、前年比+6.8%、前月比-0.3%。8月前月比は訂正値-0.3%。",
-          "uncertainty": "当日の国内現物反応と正本更新が未確認"
+          "evidence": "10月13日の米11業種ETFは5上昇・6下落。指数そのものではない。最強はXLE +1.80%、最弱はXLV -1.35%。",
+          "uncertainty": "量産実力、材料ごとの寄与、当日終値は未確認"
         },
         "japan_transmission": {
-          "economic_channel": "前年比のコスト負担は残る一方、前月比は低下。全面的な物価加速ともインフレ解消とも断定しない。",
+          "economic_channel": "サーバーDRAMの競争圧力はメモリー株の警戒理由として重要。一方、AI投資回収・資金調達への懸念とBroadcom CEO発言も同時に作用。CXMTへの単独帰因はできない。日本ではDRAMとNANDを区別し、キオクシアへの影響はメモリー心理・中長期競争を経由する推論。装置株は顧客投資と中国受注・輸出規制を分ける。",
           "intermediate_reactions": [
-            "米株・政策・企業実需を比較",
-            "国内出来高と相対騰落を確認"
+            "Samsung・SK Hynix",
+            "Micron・SOX",
+            "キオクシア・東京エレクトロン"
           ],
           "affected_sectors": [
-            "半導体",
-            "電力設備",
-            "医療機器",
-            "教育",
-            "銀行"
+            "電機・精密",
+            "機械"
           ],
-          "pricing_in_japan": "新材料の織り込みは未確認",
-          "assessment": "条件付き選別"
+          "pricing_in_japan": "10月13日に関連株安が報道。国内単独寄与・10月14日終値は未確認",
+          "assessment": "短期逆風。ただし正本未反映と14日反発を明示"
         },
-        "conflict_resolution": "株式センチメントと企業の実需を区別し、単一材料に還元しない",
+        "conflict_resolution": "CXMT単独説とAI採算・金利・需給を比較し、指数と個別株の差を重視",
         "counter_evidence": [
-          "Dow上昇とSOX安の併存",
-          "カナデンのAI設備需要改善",
-          "企業物価の前月比低下"
+          "4F²製品の歩留まり、量産能力、顧客認定は未確認。SamsungとSK hynixも同系統技術を開発。DRAMの技術進展をNANDやHBMの優位確立と同一視しない。SOXの下げ幅縮小、Broadcomの終値上昇、カナデンの設備実需改善は一律弱気への反証。",
+          "10月14日アジアの反発は昼追補の反証。朝へ遡及しない"
         ],
         "change_conditions": [
-          "CPI発表後の金利・SOX反応",
-          "国内市場幅改善"
-        ],
-        "chronology_check": "PASS"
-      },
-      {
-        "headline": "10月13日の海外半導体安は正本未反映",
-        "fact": {
-          "text": "Reutersは10月13日、AI投資回収・競争を巡る警戒と世界株の弱さを報道。",
-          "source_urls": [
-            "https://www.reuters.com/world/asia-pacific/global-markets-wrapup-1-2026-10-13/"
-          ],
-          "verification_status": "PASS"
-        },
-        "observed_market_reaction": {
-          "text": "外部照合情報。正本の当日価格・前日比には採用しない",
-          "assets_checked": [
-            "米株",
-            "SOX",
-            "米金利",
-            "円相場"
-          ]
-        },
-        "market_internals": {
-          "text": "10月12日の11業種ETFは8上昇・3下落。指数そのものではない。SOX・XLKの弱さとXLE・XLPの強さが併存"
-        },
-        "market_pricing": {
-          "status": "unknown",
-          "text": "正本の市場日差と単独寄与未確認を分ける"
-        },
-        "interpretation": {
-          "text": "半導体への警戒は継続。ただしカナデンの需要改善は、AI関連全体を一律否定する解釈への反証。",
-          "confidence": "tentative",
-          "evidence": "Reutersは10月13日、AI投資回収・競争を巡る警戒と世界株の弱さを報道。",
-          "uncertainty": "当日の国内現物反応と正本更新が未確認"
-        },
-        "japan_transmission": {
-          "economic_channel": "半導体への警戒は継続。ただしカナデンの需要改善は、AI関連全体を一律否定する解釈への反証。",
-          "intermediate_reactions": [
-            "米株・政策・企業実需を比較",
-            "国内出来高と相対騰落を確認"
-          ],
-          "affected_sectors": [
-            "半導体",
-            "電力設備",
-            "医療機器",
-            "教育",
-            "銀行"
-          ],
-          "pricing_in_japan": "新材料の織り込みは未確認",
-          "assessment": "条件付き選別"
-        },
-        "conflict_resolution": "株式センチメントと企業の実需を区別し、単一材料に還元しない",
-        "counter_evidence": [
-          "Dow上昇とSOX安の併存",
-          "カナデンのAI設備需要改善",
-          "企業物価の前月比低下"
-        ],
-        "change_conditions": [
-          "CPI発表後の金利・SOX反応",
-          "国内市場幅改善"
+          "量産・歩留まり・顧客認定の企業開示",
+          "CPI後の金利・SOX・円相場",
+          "装置受注と設備需要の実測"
         ],
         "chronology_check": "PASS"
       }
@@ -470,14 +400,14 @@
       "conflicting_materials_compared": true,
       "transmission_explained": true,
       "observable_change_conditions": true,
-      "comparison_note": "10月13日版の休場明け見方から、CPI当日・日銀企業物価・3社新規開示へ変更。原油高継続を断定しない。"
+      "comparison_note": "最新正本の業種比較と中国競争要因へ分析を更新。朝・昼と場中・終値を区別。"
     }
   },
   "counter_evidence_audit": {
     "status": "PASS",
     "conclusions": [
       {
-        "conclusion": "半導体警戒と個別選別",
+        "conclusion": "中国CXMTの競争圧力を追加｜半導体安の縮小とCPIを確認、国内材料は個別選別",
         "checks": [
           "正本市場値と基準日を実読、価格置換なし",
           "BLS予定と日銀PDF本文・表を確認",
@@ -485,8 +415,8 @@
           "OFACとUSTRの対象・措置・非対象を確認",
           "Reuters10月13日本文を外部照合に限定"
         ],
-        "weighing": "半導体心理の弱さに対して電源設備実需改善と物価前月比低下を比較",
-        "uncertainty": "CPI前・当日市場値不足"
+        "weighing": "4F²製品の歩留まり、量産能力、顧客認定は未確認。SamsungとSK hynixも同系統技術を開発。DRAMの技術進展をNANDやHBMの優位確立と同一視しない。SOXの下げ幅縮小、Broadcomの終値上昇、カナデンの設備実需改善は一律弱気への反証。",
+        "uncertainty": "量産・CPI結果・当日終値は未確認"
       }
     ]
   },
@@ -501,16 +431,16 @@
     ],
     "relationships": [
       {
-        "combination": "Dow高・SOX安（正本10月12日）",
-        "explanation": "選別を示すが当日値ではない",
-        "unresolved": true,
-        "uncertainty": "10月13日の正本未更新"
+        "combination": "米株小幅安・米10年低下・11業種ETFは5上昇6下落（10月13日）",
+        "explanation": "SOX終値の下げ幅縮小とメモリー個別安が併存。全面リスクオフへ単純化しない",
+        "unresolved": false,
+        "uncertainty": "商品価格定義と現在値が未確認"
       },
       {
-        "combination": "株式心理とAI設備実需",
-        "explanation": "SOXの弱さに対してカナデンの予想修正は反証",
+        "combination": "中国競争圧力と日本の設備実需",
+        "explanation": "サーバーDRAMの競争圧力はメモリー株の警戒理由として重要。一方、AI投資回収・資金調達への懸念とBroadcom CEO発言も同時に作用。CXMTへの単独帰因はできない。日本ではDRAMとNANDを区別し、キオクシアへの影響はメモリー心理・中長期競争を経由する推論。装置株は顧客投資と中国受注・輸出規制を分ける。 4F²製品の歩留まり、量産能力、顧客認定は未確認。SamsungとSK hynixも同系統技術を開発。DRAMの技術進展をNANDやHBMの優位確立と同一視しない。SOXの下げ幅縮小、Broadcomの終値上昇、カナデンの設備実需改善は一律弱気への反証。",
         "unresolved": true,
-        "uncertainty": "市場の評価と織り込み未確認"
+        "uncertainty": "量産と顧客認定、国内単独寄与は未確認"
       }
     ]
   },
@@ -518,19 +448,23 @@
     "status": "PASS",
     "prior_view": "AI投資回収・金利・需給を中心に半導体を警戒",
     "new_events": [
-      "CXMTの4F²計画報道",
-      "米韓日のメモリー・装置株下落",
-      "14日午前の韓国半導体反発"
+      "中国CXMTの4F²サーバーDRAM計画：競争圧力は重要、量産実力は未確認",
+      "米SOXは10月13日の日中-1.5%から終値-0.23%へ下げ幅縮小",
+      "今夜21:30 JSTの米CPIは未発表",
+      "日銀企業物価は前年比+6.8%、前月比-0.3%",
+      "カナデンの中間上方修正、オリンパスFDA警告、リソー教育TOBを個別評価"
     ],
     "changed": [
-      "中国競争を重要な追加要因へ引き上げ"
+      "主要米株を10月13日正本へ更新",
+      "CXMT競争要因と金融報道時系列を追加",
+      "公開レーティング4件を追加"
     ],
     "unchanged": [
       "正本市場日の差",
       "商品契約定義不足",
       "レーティング非網羅"
     ],
-    "japan_revision": "キオクシア・製造装置の競争圧力を追加し、単独因果は除外"
+    "japan_revision": "中国CXMTの競争圧力を追加｜半導体安の縮小とCPIを確認、国内材料は個別選別"
   },
   "source_quality": {
     "status": "PASS",
@@ -545,10 +479,11 @@
   "data_integrity": {
     "status": "QUALIFIED",
     "checks": [
-      "正本を変更しない",
-      "Gold・WTI・Brentと現在値を除外",
-      "年利変化はポイント単位、2s10s不算出",
-      "ETF代理値と市場日を明示"
+      "最新正本とレポート数値一致",
+      "米2年の公式公表日差、DXYの欠測を注釈",
+      "Gold・WTI・Brentは定義未確認で除外",
+      "米日中値と終値・朝と昼の情報を分離",
+      "2s10s不算出、銅は任意非掲載"
     ]
   },
   "quality_gates": {
@@ -564,36 +499,36 @@
   },
   "publication_decision": {
     "status": "QUALIFIED",
-    "decided_at": "2026-10-14T06:54:36+09:00",
-    "summary": "注釈付き暫定版（MANUAL_REVIEW）。正本市場値は変更せず、未確認先物・現在値・未発表CPIと網羅不能な断定を除外。",
+    "decided_at": "2026-10-14T12:58:59+09:00",
+    "summary": "10月13日正本へ更新・中国CXMT調査を追加した昼追補。取得不能項目を明示した注釈付き公開。完全版FAIL。",
     "components": {
       "ai_report": {
         "status": "QUALIFIED",
-        "updated_at": "2026-10-14T06:54:36+09:00",
-        "reason": "注釈付き暫定版（MANUAL_REVIEW）。正本市場値は変更せず、未確認先物・現在値・未発表CPIと網羅不能な断定を除外。"
+        "updated_at": "2026-10-14T12:58:59+09:00",
+        "reason": "10月13日正本へ更新・中国CXMT調査を追加した昼追補。取得不能項目を明示した注釈付き公開。完全版FAIL。"
       },
       "japan_stocks": {
         "status": "QUALIFIED",
-        "updated_at": "2026-10-14T06:54:36+09:00",
-        "reason": "注釈付き暫定版（MANUAL_REVIEW）。正本市場値は変更せず、未確認先物・現在値・未発表CPIと網羅不能な断定を除外。"
+        "updated_at": "2026-10-14T12:58:59+09:00",
+        "reason": "10月13日正本へ更新・中国CXMT調査を追加した昼追補。取得不能項目を明示した注釈付き公開。完全版FAIL。"
       }
     },
     "unresolved_items": [
       {
-        "id": "market-asof",
+        "id": "dxy-latest",
         "status": "QUALIFIED",
-        "missing": "10月14日JSTのmarket_data成功記録と10月13日の米市場正本値",
-        "impact": "当日指数・相場方向の確定を除外",
-        "last_checked_at": "2026-10-14T06:54:36+09:00",
-        "next_action": "当日正本・代替公式掲載・実測を再確認し、証明できた項目だけ採用",
+        "missing": "DXYは10月12日保存値。最新日足の再取得はYahoo query1/query2ともHTTP429。報道の現在値で置換しない",
+        "impact": "不足項目を当日数値や確定成果として使わず、関連する断定を除外",
+        "last_checked_at": "2026-10-14T12:58:59+09:00",
+        "next_action": "公式データ更新・決済配列の復旧・企業の量産開示が利用可能になった時点で再確認",
         "attempts": [
           {
-            "method": "当日取得・本文確認",
-            "result": "status成功は10月13日、米株は10月12日",
+            "method": "公式本文・公開API・代替掲載確認",
+            "result": "Yahoo query1/query2 HTTP429。正本102.58、10月12日を維持",
             "source_urls": [
               "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
             ],
-            "checked_at": "2026-10-14T06:54:36+09:00"
+            "checked_at": "2026-10-14T12:58:59+09:00"
           }
         ],
         "affected_components": [
@@ -601,25 +536,54 @@
           "japan_stocks"
         ],
         "excluded_claims": [
-          "当日指数・相場方向の確定を除外"
+          "DXYは10月12日保存値。最新日足の再取得はYahoo query1/query2ともHTTP429。報道の現在値で置換しない"
+        ],
+        "excluded_from_publication": true
+      },
+      {
+        "id": "fred-publication-lag",
+        "status": "QUALIFIED",
+        "missing": "米2年金利はFRED公式の最新公表が10月9日4.80%。10月13日の米10年金利とは基準日が違うため2s10s不算出",
+        "impact": "不足項目を当日数値や確定成果として使わず、関連する断定を除外",
+        "last_checked_at": "2026-10-14T12:58:59+09:00",
+        "next_action": "公式データ更新・決済配列の復旧・企業の量産開示が利用可能になった時点で再確認",
+        "attempts": [
+          {
+            "method": "公式本文・公開API・代替掲載確認",
+            "result": "公式本文とCSVとも最新10月9日4.80%",
+            "source_urls": [
+              "https://fred.stlouisfed.org/series/DGS2",
+              "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2"
+            ],
+            "checked_at": "2026-10-14T12:58:59+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "米2年金利はFRED公式の最新公表が10月9日4.80%。10月13日の米10年金利とは基準日が違うため2s10s不算出"
         ],
         "excluded_from_publication": true
       },
       {
         "id": "contract-definitions",
         "status": "QUALIFIED",
-        "missing": "金・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応証拠",
-        "impact": "商品価格・前日比を不採用",
-        "last_checked_at": "2026-10-14T06:54:36+09:00",
-        "next_action": "当日正本・代替公式掲載・実測を再確認し、証明できた項目だけ採用",
+        "missing": "Gold・WTI・Brentは限月・値種別・時刻と保存値の対応未確認。CME当日決済APIはHTTP200だが空配列、ICE公開本文に対象決済値なし",
+        "impact": "不足項目を当日数値や確定成果として使わず、関連する断定を除外",
+        "last_checked_at": "2026-10-14T12:58:59+09:00",
+        "next_action": "公式データ更新・決済配列の復旧・企業の量産開示が利用可能になった時点で再確認",
         "attempts": [
           {
-            "method": "当日取得・本文確認",
-            "result": "HTTP200、正本値との限月対応は未確認",
+            "method": "公式本文・公開API・代替掲載確認",
+            "result": "CME決済配列は空。ICEは公開ページ取得のみ、価格と限月の対応未確認",
             "source_urls": [
-              "https://www.cmegroup.com/markets/metals/precious/gold.settlements.html"
+              "https://www.cmegroup.com/CmeWS/mvc/Settlements/Futures/Settlements/437/FUT?tradeDate=10/13/2026&pageSize=500",
+              "https://www.cmegroup.com/CmeWS/mvc/Settlements/Futures/Settlements/425/FUT?tradeDate=10/13/2026&pageSize=500",
+              "https://www.ice.com/products/219/Brent-Crude-Futures/data"
             ],
-            "checked_at": "2026-10-14T06:54:36+09:00"
+            "checked_at": "2026-10-14T12:58:59+09:00"
           }
         ],
         "affected_components": [
@@ -627,25 +591,25 @@
           "japan_stocks"
         ],
         "excluded_claims": [
-          "商品価格・前日比を不採用"
+          "Gold・WTI・Brentは限月・値種別・時刻と保存値の対応未確認。CME当日決済APIはHTTP200だが空配列、ICE公開本文に対象決済値なし"
         ],
         "excluded_from_publication": true
       },
       {
-        "id": "current-and-dates",
+        "id": "current-and-futures",
         "status": "QUALIFIED",
-        "missing": "DXY・USD/JPYの10月9日以降の正本値、米2年金利の10月8日以降の正本値／確認時刻付き為替・暗号資産現在値、限月付き日経先物実測",
-        "impact": "現在値・日経先物・2s10s判断を除外",
-        "last_checked_at": "2026-10-14T06:54:36+09:00",
-        "next_action": "当日正本・代替公式掲載・実測を再確認し、証明できた項目だけ採用",
+        "missing": "時刻付きドル円・暗号資産の現在値は未確認。ドル円の公開Bid/Askと暗号資産の価格は取得したが配信時刻を確認できず不採用。BTC・ETH保存日足は10月12日。日経先物は12月限10月14日06:00夜間終値を確認、昼現在値は未確認",
+        "impact": "不足項目を当日数値や確定成果として使わず、関連する断定を除外",
+        "last_checked_at": "2026-10-14T12:58:59+09:00",
+        "next_action": "公式データ更新・決済配列の復旧・企業の量産開示が利用可能になった時点で再確認",
         "attempts": [
           {
-            "method": "当日取得・本文確認",
-            "result": "正本基準日の差を実読",
+            "method": "公式本文・公開API・代替掲載確認",
+            "result": "JPX現行価格ページはNow loadingで動的値なし。株探の06:03報道で12月限06:00夜間終値68100円を確認。昼現在値は未確認",
             "source_urls": [
-              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+              "https://www.jpx.co.jp/markets/derivatives/index.html"
             ],
-            "checked_at": "2026-10-14T06:54:36+09:00"
+            "checked_at": "2026-10-14T12:58:59+09:00"
           }
         ],
         "affected_components": [
@@ -653,25 +617,25 @@
           "japan_stocks"
         ],
         "excluded_claims": [
-          "現在値・日経先物・2s10s判断を除外"
+          "時刻付きドル円・暗号資産の現在値は未確認。ドル円の公開Bid/Askと暗号資産の価格は取得したが配信時刻を確認できず不採用。BTC・ETH保存日足は10月12日。日経先物は12月限10月14日06:00夜間終値を確認、昼現在値は未確認"
         ],
         "excluded_from_publication": true
       },
       {
-        "id": "ratings-and-coverage",
+        "id": "ratings-coverage",
         "status": "QUALIFIED",
-        "missing": "アナリスト変更の全件網羅と一部政府掲載の確認範囲",
-        "impact": "変更なし・新規材料なしの網羅断定を除外",
-        "last_checked_at": "2026-10-14T06:54:36+09:00",
-        "next_action": "当日正本・代替公式掲載・実測を再確認し、証明できた項目だけ採用",
+        "missing": "アナリスト評価は公開一覧の確認範囲のみ。証券会社の原レポート、EPS変更、全件網羅は未確認",
+        "impact": "不足項目を当日数値や確定成果として使わず、関連する断定を除外",
+        "last_checked_at": "2026-10-14T12:58:59+09:00",
+        "next_action": "公式データ更新・決済配列の復旧・企業の量産開示が利用可能になった時点で再確認",
         "attempts": [
           {
-            "method": "当日取得・本文確認",
-            "result": "IFIS公開情報、政府一覧の動的・アクセス制約あり",
+            "method": "公式本文・公開API・代替掲載確認",
+            "result": "公開一覧4件を採用、原レポート・網羅性は未確認",
             "source_urls": [
-              "https://kabuyoho.jp/"
+              "https://www.traders.co.jp/premium/rating"
             ],
-            "checked_at": "2026-10-14T06:54:36+09:00"
+            "checked_at": "2026-10-14T12:58:59+09:00"
           }
         ],
         "affected_components": [
@@ -679,26 +643,27 @@
           "japan_stocks"
         ],
         "excluded_claims": [
-          "変更なし・新規材料なしの網羅断定を除外"
+          "アナリスト評価は公開一覧の確認範囲のみ。証券会社の原レポート、EPS変更、全件網羅は未確認"
         ],
         "excluded_from_publication": true
       },
       {
-        "id": "cxmt-commercial-readiness",
+        "id": "cxmt-commercial-proof",
         "status": "QUALIFIED",
-        "missing": "4F² DDR5 RDIMMの仕様・歩留まり・顧客認定・出荷量",
-        "impact": "中国要因を単独主因や即時業績悪化と断定しない",
-        "last_checked_at": "2026-10-14T12:50:41+09:00",
-        "next_action": "CXMT公式・顧客認定・出荷情報を継続確認",
+        "missing": "CXMTの発表は10月10日。講演の正確な時刻、4F²の量産数量・歩留まり・顧客認定は未確認",
+        "impact": "不足項目を当日数値や確定成果として使わず、関連する断定を除外",
+        "last_checked_at": "2026-10-14T12:58:59+09:00",
+        "next_action": "公式データ更新・決済配列の復旧・企業の量産開示が利用可能になった時点で再確認",
         "attempts": [
           {
-            "method": "CXMT公式とReuters確認",
-            "result": "技術基盤と計画は確認、商用量産能力は未確認",
+            "method": "公式本文・公開API・代替掲載確認",
+            "result": "公式ニュース一覧に当該講演本文なし。第一財経の直接取材記事で発表日・報道時刻確認",
             "source_urls": [
               "https://www.cxmt.com/news.html",
-              "https://www.reuters.com/world/china/us-chip-stocks-extend-slide-china-memory-report-ai-spending-jitters-hit-sector-2026-10-13/"
+              "https://www.yicai.com/news/103388707.html",
+              "https://www.scmp.com/tech/big-tech/article/3370505/chinas-cxmt-unveils-key-progress-chip-structure-pursued-samsung-sk-hynix"
             ],
-            "checked_at": "2026-10-14T12:50:41+09:00"
+            "checked_at": "2026-10-14T12:58:59+09:00"
           }
         ],
         "affected_components": [
@@ -706,8 +671,7 @@
           "japan_stocks"
         ],
         "excluded_claims": [
-          "CXMTが技術優位を確立",
-          "半導体安の単独主因"
+          "CXMTの発表は10月10日。講演の正確な時刻、4F²の量産数量・歩留まり・顧客認定は未確認"
         ],
         "excluded_from_publication": true
       }
@@ -807,6 +771,42 @@
       "url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/",
       "checked_at": "2026-10-14T06:51:41+09:00",
       "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "dxy-latest",
+      "checked_at": "2026-10-14T12:58:59+09:00",
+      "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+      "result": "Yahoo query1/query2 HTTP429。正本102.58、10月12日を維持"
+    },
+    {
+      "id": "fred-publication-lag",
+      "checked_at": "2026-10-14T12:58:59+09:00",
+      "url": "https://fred.stlouisfed.org/series/DGS2",
+      "result": "公式本文とCSVとも最新10月9日4.80%"
+    },
+    {
+      "id": "contract-definitions",
+      "checked_at": "2026-10-14T12:58:59+09:00",
+      "url": "https://www.cmegroup.com/CmeWS/mvc/Settlements/Futures/Settlements/437/FUT?tradeDate=10/13/2026&pageSize=500",
+      "result": "CME決済配列は空。ICEは公開ページ取得のみ、価格と限月の対応未確認"
+    },
+    {
+      "id": "current-and-futures",
+      "checked_at": "2026-10-14T12:58:59+09:00",
+      "url": "https://www.jpx.co.jp/markets/derivatives/index.html",
+      "result": "JPX現行価格ページはNow loadingで動的値なし。株探の06:03報道で12月限06:00夜間終値68100円を確認。昼現在値は未確認"
+    },
+    {
+      "id": "ratings-coverage",
+      "checked_at": "2026-10-14T12:58:59+09:00",
+      "url": "https://www.traders.co.jp/premium/rating",
+      "result": "公開一覧4件を採用、原レポート・網羅性は未確認"
+    },
+    {
+      "id": "cxmt-commercial-proof",
+      "checked_at": "2026-10-14T12:58:59+09:00",
+      "url": "https://www.cxmt.com/news.html",
+      "result": "公式ニュース一覧に当該講演本文なし。第一財経の直接取材記事で発表日・報道時刻確認"
     }
   ]
 }

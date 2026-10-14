@@ -145,15 +145,18 @@ class PageNavigationTests(unittest.TestCase):
         world = self.read("index.html")
         self.assertIn('id="market-context-section"', world)
         self.assertIn("/data/market-context.json", world)
-        self.assertIn("日次レポートとは別の週次背景情報", world)
+        self.assertIn("日次差分更新", world)
+        self.assertIn("当日レポートと確認済みニュースから更新しています", world)
         self.assertNotIn("market-context.json", self.read("japan-stocks.html"))
 
-    def test_market_context_is_mobile_first_and_collapsed_by_topic(self):
+    def test_market_context_is_mobile_first_and_grouped_by_theme(self):
         world = self.read("index.html")
-        self.assertIn("elementWithClass('details', 'context-details')", world)
+        self.assertIn("elementWithClass('div', 'context-theme-grid')", world)
+        self.assertIn("当初の認識", world)
+        self.assertIn("現在の認識", world)
+        self.assertIn("日本株への影響", world)
         self.assertIn("@media (max-width: 560px)", world)
-        self.assertIn("ここまでの流れ", world)
-        self.assertIn("暮らしへの影響", world)
+        self.assertIn(".context-theme-grid { grid-template-columns: 1fr; }", world)
 
     def test_glossary_uses_static_json_and_tap_dialog(self):
         world = self.read("index.html")

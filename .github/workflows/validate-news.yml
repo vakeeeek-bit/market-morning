@@ -12,6 +12,10 @@ on:
       - "data/history/*/news.json"
       - "assets/verified-news.js"
       - "scripts/validate_news.py"
+      - "scripts/update_market_context.py"
+      - "data/market-context.json"
+      - "schemas/market-context.schema.json"
+      - "tests/test_market_context_update.py"
       - "schemas/news.schema.json"
       - "tests/test_verified_news.py"
       - ".github/workflows/validate-news.yml"
@@ -25,6 +29,10 @@ on:
       - "data/history/*/news.json"
       - "assets/verified-news.js"
       - "scripts/validate_news.py"
+      - "scripts/update_market_context.py"
+      - "data/market-context.json"
+      - "schemas/market-context.schema.json"
+      - "tests/test_market_context_update.py"
       - "schemas/news.schema.json"
       - "tests/test_verified_news.py"
       - ".github/workflows/validate-news.yml"
@@ -43,6 +51,8 @@ jobs:
           python-version: "3.12"
       - name: Validate facts and verification evidence
         run: python scripts/validate_data.py --scope news
+      - name: Confirm market context follows published news
+        run: python scripts/update_market_context.py --check
       - name: Test blocked and allowed news
         run: python -m unittest discover -s tests -p test_verified_news.py -v
       - name: Check browser script syntax

@@ -95,6 +95,19 @@ def _sync_unresolved(root: Path) -> None:
     merge_items(root / "data" / "unresolved-items.json", evidence)
 
 
+def _refresh_market_context(root: Path) -> None:
+    """Refresh context after report/news publication without coupling market updates."""
+    from update_market_context import build_context
+
+    if root != ROOT:
+        return
+    value = build_context()
+    (root / "data" / "market-context.json").write_text(
+        json.dumps(value, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
 def prepare_units(
     source: Path,
     root: Path = ROOT,
@@ -151,6 +164,17 @@ def prepare_units(
         )
         if temporary_source:
             temporary_source.cleanup()
+    if not check_only and any(
+        unit in outcomes and outcomes[unit].status != "BLOCK"
+        for unit in ("report", "news")
+    ):
+        try:
+            _refresh_market_context(root)
+        except (OSError, ValueError, KeyError) as error:
+            # Context is a derived reader aid. Its failure must not roll back an
+            # independently safe report/news publication; CI and the UI's stale
+            # state make the omission visible for repair.
+            print(f"WARNING: market-context更新失敗: {error}", file=sys.stderr)
     return outcomes
 
 

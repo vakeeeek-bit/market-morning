@@ -181,7 +181,11 @@
         "target_price_change": "3400→3600円",
         "date": "2026-10-13",
         "source_url": "https://www.traders.co.jp/premium/rating",
-        "note": "格下げと目標株価引上げは別の判断。EPS・理由は未確認"
+        "note": "格下げと目標株価引上げは別の判断。EPS・理由は未確認",
+        "headline": "みずほ：買い→中立／目標株価3400→3600円",
+        "fact": "10月13日公開一覧：格付け買い→中立、目標株価3400→3600円。証券会社：みずほ",
+        "announced_at": "2026-10-13",
+        "analysis": "格下げと目標株価引上げは別の判断。EPS・理由は未確認"
       },
       {
         "company": "三菱ケミカルグループ",
@@ -190,7 +194,11 @@
         "rating_change": "3→2",
         "target_price_change": "790→1380円",
         "date": "2026-10-13",
-        "source_url": "https://www.traders.co.jp/premium/rating"
+        "source_url": "https://www.traders.co.jp/premium/rating",
+        "headline": "大和：3→2／目標株価790→1380円",
+        "fact": "10月13日公開一覧：格付け3→2、目標株価790→1380円。証券会社：大和",
+        "announced_at": "2026-10-13",
+        "analysis": "格付けと目標株価を分けて評価。変更理由・EPS・株価単独寄与は未確認。"
       },
       {
         "company": "三菱地所",
@@ -200,7 +208,11 @@
         "target_price_change": "4650→4330円",
         "date": "2026-10-13",
         "source_url": "https://www.traders.co.jp/premium/rating",
-        "note": "格上げと目標株価引下げを区別"
+        "note": "格上げと目標株価引下げを区別",
+        "headline": "大和：2→1／目標株価4650→4330円",
+        "fact": "10月13日公開一覧：格付け2→1、目標株価4650→4330円。証券会社：大和",
+        "announced_at": "2026-10-13",
+        "analysis": "格上げと目標株価引下げを区別"
       },
       {
         "company": "住友不動産",
@@ -209,15 +221,25 @@
         "rating_change": "3→2",
         "target_price_change": "3570→3390円",
         "date": "2026-10-13",
-        "source_url": "https://www.traders.co.jp/premium/rating"
+        "source_url": "https://www.traders.co.jp/premium/rating",
+        "headline": "大和：3→2／目標株価3570→3390円",
+        "fact": "10月13日公開一覧：格付け3→2、目標株価3570→3390円。証券会社：大和",
+        "announced_at": "2026-10-13",
+        "analysis": "格付けと目標株価を分けて評価。変更理由・EPS・株価単独寄与は未確認。"
       }
     ],
     "source_review": [
       {
-        "source": "https://www.traders.co.jp/premium/rating",
-        "result": "公開一覧本文を実読。4件を採用。プレミアム詳細と証券会社原レポートは未取得"
+        "name": "トレーダーズ・ウェブ",
+        "url": "https://www.traders.co.jp/premium/rating",
+        "coverage": "10月13日公開一覧から4件採用、全件網羅は未確認",
+        "freshness": "10月13日分を10月14日昼に確認",
+        "automation": "今回の実読・照合",
+        "rights": "公開ページへのリンクと確認済み事実の要約。原レポート未取得"
       }
-    ]
+    ],
+    "summary": "確認済み公開一覧の4件を掲載。格付けと目標株価は別の変更として表示。",
+    "methodology": "10月13日のトレーダーズ・ウェブ公開一覧を実読。証券会社原レポート・EPS変更・全件網羅は未確認。"
   },
   "scenarios": [
     {

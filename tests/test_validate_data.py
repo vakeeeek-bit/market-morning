@@ -165,6 +165,7 @@ class ValidateDataTest(unittest.TestCase):
         def mutate(name, data):
             if name == "research-evidence":
                 item = next(row for row in data["research_coverage"]["items"] if row["id"] == "analyst_rating_changes")
+                item["status"] = "十分調査したが取得不能"
                 item["attempts"] = item["attempts"][:1]
                 item["impact_if_unavailable"] = ""
             return data
@@ -186,6 +187,7 @@ class ValidateDataTest(unittest.TestCase):
     def test_unavailable_analyst_coverage_cannot_claim_no_changes(self):
         def mutate(name, data):
             if name == "japan-stocks":
+                data["analyst_rating_changes"]["coverage_status"] = "十分調査したが取得不能"
                 data["analyst_rating_changes"]["headline"] = "本日の変更なし"
             return data
 

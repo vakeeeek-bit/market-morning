@@ -1,49 +1,49 @@
 {
   "report_date": "2026-10-14",
-  "target_market_date": "2026-10-12",
-  "updated_at": "2026-10-14T12:50:41+09:00",
+  "target_market_date": "2026-10-13",
+  "updated_at": "2026-10-14T12:58:59+09:00",
   "report_type": "daily_provisional",
   "publication_policy": {
     "status": "QUALIFIED",
     "mode": "provisional",
-    "updated_at": "2026-10-14T06:54:36+09:00",
+    "updated_at": "2026-10-14T12:58:59+09:00",
     "complete_gate": "FAIL",
     "copper_included": false,
-    "note": "注釈付き暫定版（MANUAL_REVIEW）。正本市場値は変更せず、未確認先物・現在値・未発表CPIと網羅不能な断定を除外。",
+    "note": "10月13日正本へ更新・中国CXMT調査を追加した昼追補。取得不能項目を明示した注釈付き公開。完全版FAIL。",
     "missing_items": [
-      "10月14日JSTのmarket_data成功記録と10月13日の米市場正本値",
-      "金・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応証拠",
-      "DXY・USD/JPYの10月9日以降の正本値、米2年金利の10月8日以降の正本値",
-      "確認時刻付き為替・暗号資産現在値、限月付き日経先物実測",
-      "アナリスト変更の全件網羅と一部政府掲載の確認範囲"
+      "DXYは10月12日保存値。最新日足の再取得はYahoo query1/query2ともHTTP429。報道の現在値で置換しない",
+      "米2年金利はFRED公式の最新公表が10月9日4.80%。10月13日の米10年金利とは基準日が違うため2s10s不算出",
+      "Gold・WTI・Brentは限月・値種別・時刻と保存値の対応未確認。CME当日決済APIはHTTP200だが空配列、ICE公開本文に対象決済値なし",
+      "時刻付きドル円・暗号資産の現在値は未確認。ドル円の公開Bid/Askと暗号資産の価格は取得したが配信時刻を確認できず不採用。BTC・ETH保存日足は10月12日。日経先物は12月限10月14日06:00夜間終値を確認、昼現在値は未確認",
+      "アナリスト評価は公開一覧の確認範囲のみ。証券会社の原レポート、EPS変更、全件網羅は未確認",
+      "CXMTの発表は10月10日。講演の正確な時刻、4F²の量産数量・歩留まり・顧客認定は未確認"
     ]
   },
   "quick_view": {
-    "headline": "注釈付き暫定版｜CPI前の半導体警戒に、中国メモリー競争を追加して選別",
+    "headline": "中国CXMTの競争圧力を追加｜半導体安の縮小とCPIを確認、国内材料は個別選別",
     "top_news": [
       {
-        "title": "今夜21:30 JSTの米CPIは未発表、結果を先取りしない"
+        "title": "中国CXMTの4F²サーバーDRAM計画：競争圧力は重要、量産実力は未確認"
       },
       {
-        "title": "CXMTの4F²計画は重要な競争材料。ただし商用量産・顧客認定は未確認"
+        "title": "米SOXは10月13日の日中-1.5%から終値-0.23%へ下げ幅縮小"
       },
       {
-        "title": "半導体安は中国要因だけでなく、AI投資採算・金利・利益確定との複合"
+        "title": "今夜21:30 JSTの米CPIは未発表"
       }
     ],
     "important_today": [
-      "今夜21:30 JSTの米CPIは未発表、結果を先取りしない",
-      "CXMT計画と米韓日のメモリー・装置株反応を分けて確認",
-      "10月13日の半導体安は外部照合、正本は10月12日まで",
-      "日銀9月企業物価は前年比+6.8%、前月比-0.3%",
-      "カナデンは中間予想を上方修正、通期予想は据え置き",
-      "オリンパスFDA警告とリソー教育TOBは個別材料として選別"
+      "中国CXMTの4F²サーバーDRAM計画：競争圧力は重要、量産実力は未確認",
+      "米SOXは10月13日の日中-1.5%から終値-0.23%へ下げ幅縮小",
+      "今夜21:30 JSTの米CPIは未発表",
+      "日銀企業物価は前年比+6.8%、前月比-0.3%",
+      "カナデンの中間上方修正、オリンパスFDA警告、リソー教育TOBを個別評価"
     ]
   },
   "executive_summary": {
-    "headline": "注釈付き暫定版｜CPI前の半導体警戒に、中国メモリー競争を追加して選別",
-    "market_mood": "全面強気ではなく選別。最新米株の正本不足を留保",
-    "main_driver": "米CPI待ち、半導体のAI投資採算と中国競争、国内個別開示",
+    "headline": "中国CXMTの競争圧力を追加｜半導体安の縮小とCPIを確認、国内材料は個別選別",
+    "market_mood": "米株小幅安。メモリー競争懸念とAI投資回収懸念を分離し、指数と個別の反応を比較",
+    "main_driver": "中国CXMTの競争圧力、AI投資回収への警戒、米銀行決算、今夜のCPI",
     "winners": [
       "カナデンの電源設備実需（個別・条件付き）"
     ],
@@ -52,11 +52,11 @@
       "オリンパスの規制不確実性（個別）"
     ],
     "important_today": [
-      "今夜21:30 JSTの米CPIは未発表、結果を先取りしない",
-      "10月13日の半導体安は外部照合、正本は10月12日まで",
-      "日銀9月企業物価は前年比+6.8%、前月比-0.3%",
-      "カナデンは中間予想を上方修正、通期予想は据え置き",
-      "オリンパスFDA警告とリソー教育TOBは個別材料として選別"
+      "中国CXMTの4F²サーバーDRAM計画：競争圧力は重要、量産実力は未確認",
+      "米SOXは10月13日の日中-1.5%から終値-0.23%へ下げ幅縮小",
+      "今夜21:30 JSTの米CPIは未発表",
+      "日銀企業物価は前年比+6.8%、前月比-0.3%",
+      "カナデンの中間上方修正、オリンパスFDA警告、リソー教育TOBを個別評価"
     ],
     "watch_markets": [
       "SOX",
@@ -65,12 +65,32 @@
       "国内出来高"
     ],
     "current_environment": [
-      "正本主要米株は10月12日、為替は10月9日、米2年は10月8日",
-      "外部10月13日材料と正本値を混合しない",
-      "CXMT競争は重要な追加要因。ただし正本市場値を置換せず、単独主因と断定しない"
+      "10月13日米終値・11業種ETF・ドル円を採用",
+      "DXYと米2年の基準日差、商品定義不足は明示",
+      "昼追補のアジア反発を朝情報と区別"
     ]
   },
   "news": [
+    {
+      "title": "中国CXMTのサーバーDRAM計画と競争圧力",
+      "fact": "第一財経は10月10日20:54（中国時間＝21:54 JST）、同日の上海会議でCXMT社長が4F²構造と年末のDDR5 RDIMM製品投入計画を説明したと報道。SCMPは10月12日08:30（香港時間＝09:30 JST）掲載、16:50更新。製品投入目標であり4F²の大量生産完了ではない。",
+      "published_at": "2026-10-10T20:54:00+08:00",
+      "source_url": "https://www.yicai.com/news/103388707.html",
+      "market_reaction": "10月12日米終値：SOX-2.67%、Micron-3.88%。10月13日Reuters 14:46 UTC（23:46 JST）の米日中報道：SOX-1.5%、Micron-4.5%。同日米終値：SOX-0.23%、Micron-3.6%、Applied Materials約-7%、Broadcom+0.7%。韓国Samsungは同日7%超安、SK hynix10%超安と報道。韓国の場中率を確定終値へ置換しない。",
+      "analysis": "サーバーDRAMの競争圧力はメモリー株の警戒理由として重要。一方、AI投資回収・資金調達への懸念とBroadcom CEO発言も同時に作用。CXMTへの単独帰因はできない。日本ではDRAMとNANDを区別し、キオクシアへの影響はメモリー心理・中長期競争を経由する推論。装置株は顧客投資と中国受注・輸出規制を分ける。 4F²製品の歩留まり、量産能力、顧客認定は未確認。SamsungとSK hynixも同系統技術を開発。DRAMの技術進展をNANDやHBMの優位確立と同一視しない。SOXの下げ幅縮小、Broadcomの終値上昇、カナデンの設備実需改善は一律弱気への反証。",
+      "source_urls": [
+        "https://www.yicai.com/news/103388707.html",
+        "https://www.scmp.com/tech/big-tech/article/3370505/chinas-cxmt-unveils-key-progress-chip-structure-pursued-samsung-sk-hynix",
+        "https://www.reuters.com/business/sp-500-futures-muted-investors-await-big-bank-earnings-chip-weakness-weighs-2026-10-13/",
+        "https://www.reuters.com/world/china/us-chip-stocks-extend-slide-china-memory-report-ai-spending-jitters-hit-sector-2026-10-13/",
+        "https://www.nyse.com/index",
+        "https://www.koreajoongangdaily.com/business/global-chip-stocks-tumble-as-chinas-cxmt-unveils-nextgeneration-dram-plans/12917865"
+      ],
+      "event_date": "2026-10-10",
+      "event_time_status": "講演時刻は未確認。報道時刻とは別",
+      "importance": "high",
+      "counter_evidence": "4F²製品の歩留まり、量産能力、顧客認定は未確認。SamsungとSK hynixも同系統技術を開発。DRAMの技術進展をNANDやHBMの優位確立と同一視しない。SOXの下げ幅縮小、Broadcomの終値上昇、カナデンの設備実需改善は一律弱気への反証。"
+    },
     {
       "title": "米CPIは今夜21:30 JST、公表前",
       "fact": "BLS日程では9月CPIを10月14日08:30 ET（21:30 JST）に公表予定。現在は未発表。",
@@ -86,28 +106,6 @@
       "published_at": "2026-10-13",
       "market_reaction": "この統計単独の国内市場寄与は未確認",
       "analysis": "前年比のコスト負担は残る一方、前月比は低下。全面的な物価加速ともインフレ解消とも断定しない。"
-    },
-    {
-      "title": "CXMT計画と半導体安：中国競争は追加要因、単独主因ではない",
-      "fact": "CXMTは9月20日に第5世代DRAM技術基盤の量産開始を公表。10月9〜10日の会議では4F² DDR5 RDIMMの年内投入計画が示されたと報じられたが、仕様・歩留まり・顧客認定・大規模量産は未確認。",
-      "source_url": "https://www.reuters.com/world/china/us-chip-stocks-extend-slide-china-memory-report-ai-spending-jitters-hit-sector-2026-10-13/",
-      "published_at": "2026-10-13",
-      "market_reaction": "Reutersによる外部照合では13日にSamsung・SK Hynix、Micron、キオクシア、東京エレクトロンが下落。一方、米SOXの下げは限定的で、14日午前は韓国半導体が反発。",
-      "analysis": "中国競争を重要な追加要因へ引き上げる。ただしAI投資採算、金利・資本コスト、利益確定も同時に作用しており、寄与率や単独因果は断定しない。",
-      "related_assets": [
-        "CXMT",
-        "Micron",
-        "Samsung",
-        "SK Hynix",
-        "キオクシア",
-        "東京エレクトロン",
-        "SOX"
-      ],
-      "related_japan_sectors": [
-        "電機・精密",
-        "機械"
-      ],
-      "importance": "高"
     },
     {
       "title": "USTR、メキシコの自動車向け繊維施設に労働権レビュー要請",
@@ -156,194 +154,215 @@
   "market_data": [
     {
       "market": "S&P500",
-      "price": "7807.2402",
-      "change": "-0.06%",
-      "basis_time": "2026-10-12・保存日足Close／現在値ではない",
+      "price": "7805.4502",
+      "change": "-0.02%",
+      "basis_time": "2026-10-13・保存日足Close／現在値ではない",
       "source": "market.json / ^GSPC"
     },
     {
       "market": "NASDAQ総合",
-      "price": "27245.9023",
-      "change": "-0.44%",
-      "basis_time": "2026-10-12・保存日足Close／現在値ではない",
+      "price": "27204.3809",
+      "change": "-0.15%",
+      "basis_time": "2026-10-13・保存日足Close／現在値ではない",
       "source": "market.json / ^IXIC"
     },
     {
       "market": "NASDAQ100",
-      "price": "30664.6973",
-      "change": "-0.71%",
-      "basis_time": "2026-10-12・保存日足Close／現在値ではない",
+      "price": "30569.4805",
+      "change": "-0.31%",
+      "basis_time": "2026-10-13・保存日足Close／現在値ではない",
       "source": "market.json / ^NDX"
     },
     {
       "market": "NYダウ",
-      "price": "51850.6016",
-      "change": "+0.38%",
-      "basis_time": "2026-10-12・保存日足Close／現在値ではない",
+      "price": "51670.1016",
+      "change": "-0.35%",
+      "basis_time": "2026-10-13・保存日足Close／現在値ではない",
       "source": "market.json / ^DJI"
     },
     {
       "market": "Russell2000",
-      "price": "2794.48",
-      "change": "-0.45%",
-      "basis_time": "2026-10-12・保存日足Close／現在値ではない",
+      "price": "2783.3689",
+      "change": "-0.40%",
+      "basis_time": "2026-10-13・保存日足Close／現在値ではない",
       "source": "market.json / ^RUT"
     },
     {
       "market": "PHLX半導体株指数（SOX）",
-      "price": "12236.7881",
-      "change": "-2.67%",
-      "basis_time": "2026-10-12・保存日足Close／現在値ではない",
+      "price": "12208.7949",
+      "change": "-0.23%",
+      "basis_time": "2026-10-13・保存日足Close／現在値ではない",
       "source": "market.json / ^SOX"
     },
     {
       "market": "米2年債利回り",
-      "price": "4.75%",
-      "change": "-0.020ポイント",
-      "basis_time": "2026-10-08・保存日足Close／現在値ではない",
+      "price": "4.8%",
+      "change": "+0.050ポイント",
+      "basis_time": "2026-10-09・保存日足Close／現在値ではない／FRED最新公表",
       "source": "market.json / FRED:DGS2"
     },
     {
       "market": "米10年債利回り",
-      "price": "5.24%",
-      "change": "-0.004ポイント",
-      "basis_time": "2026-10-12・保存日足Close／現在値ではない",
+      "price": "5.217%",
+      "change": "-0.023ポイント",
+      "basis_time": "2026-10-13・保存日足Close／現在値ではない",
       "source": "market.json / ^TNX"
     },
     {
       "market": "DXY",
-      "price": "102.21",
-      "change": "+0.07%",
-      "basis_time": "2026-10-09・保存日足Close／現在値ではない",
+      "price": "102.58",
+      "change": "+0.36%",
+      "basis_time": "2026-10-12・保存日足Close／現在値ではない",
       "source": "market.json / DX-Y.NYB"
     },
     {
       "market": "USD/JPY",
-      "price": "158.063",
-      "change": "+0.00%",
-      "basis_time": "2026-10-09・保存日足Close／現在値ではない",
+      "price": "158.52",
+      "change": "+0.20%",
+      "basis_time": "2026-10-13・保存日足Close／現在値ではない",
       "source": "market.json / JPY=X"
     },
     {
       "market": "VIX",
-      "price": "15.21",
-      "change": "+2.49%",
-      "basis_time": "2026-10-12・保存日足Close／現在値ではない",
+      "price": "15.27",
+      "change": "+0.39%",
+      "basis_time": "2026-10-13・保存日足Close／現在値ではない",
       "source": "market.json / ^VIX"
+    },
+    {
+      "market": "BTC",
+      "price": "81762.5625",
+      "change": "-2.29%",
+      "basis_time": "2026-10-12・保存日足Close／現在値ではない",
+      "source": "market.json / BTC-USD"
+    },
+    {
+      "market": "ETH",
+      "price": "2444.3574",
+      "change": "-3.56%",
+      "basis_time": "2026-10-12・保存日足Close／現在値ではない",
+      "source": "market.json / ETH-USD"
     },
     {
       "market": "Gold",
       "price": "不採用",
       "change": "不採用",
-      "basis_time": "限月・値種別・基準時刻の対応未確認",
+      "basis_time": "保存値と限月・値種別・時刻の対応未確認",
       "source": "market.jsonの連続先物系列"
     },
     {
       "market": "WTI",
       "price": "不採用",
       "change": "不採用",
-      "basis_time": "限月・値種別・基準時刻の対応未確認",
+      "basis_time": "保存値と限月・値種別・時刻の対応未確認",
       "source": "market.jsonの連続先物系列"
     },
     {
       "market": "Brent",
       "price": "不採用",
       "change": "不採用",
-      "basis_time": "限月・値種別・基準時刻の対応未確認",
+      "basis_time": "保存値と限月・値種別・時刻の対応未確認",
       "source": "market.jsonの連続先物系列"
+    },
+    {
+      "market": "日経225先物（大阪・2026年12月限）",
+      "price": "68100円",
+      "change": "+140円（前日清算値比）",
+      "basis_time": "2026-10-14T06:00:00+09:00・夜間取引終値／現在値ではない",
+      "source": "株探報道（06:03掲載） https://news.livedoor.com/article/detail/32559731/"
     }
   ],
   "us_sector_etf_closes": [
     {
       "ticker": "XLC",
-      "price": 111.45,
-      "change_pct": 0.97,
-      "market_date": "2026-10-12",
+      "price": 112.28,
+      "change_pct": 0.74,
+      "market_date": "2026-10-13",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLY",
-      "price": 112.27,
-      "change_pct": -0.51,
-      "market_date": "2026-10-12",
+      "price": 112.36,
+      "change_pct": 0.08,
+      "market_date": "2026-10-13",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLP",
-      "price": 84.41,
-      "change_pct": 1.17,
-      "market_date": "2026-10-12",
+      "price": 84.19,
+      "change_pct": -0.26,
+      "market_date": "2026-10-13",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLE",
-      "price": 66.01,
-      "change_pct": 1.43,
-      "market_date": "2026-10-12",
+      "price": 67.2,
+      "change_pct": 1.8,
+      "market_date": "2026-10-13",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLF",
-      "price": 55.05,
-      "change_pct": 0.58,
-      "market_date": "2026-10-12",
+      "price": 54.82,
+      "change_pct": -0.42,
+      "market_date": "2026-10-13",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLV",
-      "price": 171.99,
-      "change_pct": 0.69,
-      "market_date": "2026-10-12",
+      "price": 169.66,
+      "change_pct": -1.35,
+      "market_date": "2026-10-13",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLI",
-      "price": 169.15,
-      "change_pct": -0.06,
-      "market_date": "2026-10-12",
+      "price": 168.67,
+      "change_pct": -0.28,
+      "market_date": "2026-10-13",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLB",
-      "price": 49.44,
-      "change_pct": 0.02,
-      "market_date": "2026-10-12",
+      "price": 49.72,
+      "change_pct": 0.57,
+      "market_date": "2026-10-13",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLRE",
-      "price": 41.92,
-      "change_pct": 0.75,
-      "market_date": "2026-10-12",
+      "price": 41.83,
+      "change_pct": -0.21,
+      "market_date": "2026-10-13",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLK",
-      "price": 196.36,
-      "change_pct": -1.22,
-      "market_date": "2026-10-12",
+      "price": 196.28,
+      "change_pct": -0.04,
+      "market_date": "2026-10-13",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLU",
-      "price": 41.63,
-      "change_pct": 0.53,
-      "market_date": "2026-10-12",
+      "price": 41.87,
+      "change_pct": 0.58,
+      "market_date": "2026-10-13",
       "proxy_for_sector_index": true
     }
   ],
   "market_overview": [
     {
       "market": "米株",
-      "move": "正本10月12日はDow +0.38%、NASDAQ100 -0.71%、SOX -2.67%",
-      "relative_strength": "ハイテク劣後",
-      "background": "10月13日分の正本未取得",
-      "impact_on_japan": "半導体は警戒、個別の設備需要改善を分ける"
+      "move": "10月13日正本：S&P500 -0.02%、Dow -0.35%、NASDAQ100 -0.31%、SOX -0.23%",
+      "relative_strength": "指数小幅安とメモリー株の弱さが併存",
+      "background": "中国競争圧力、AI投資回収懸念、銀行決算",
+      "impact_on_japan": "サーバーDRAMの競争圧力はメモリー株の警戒理由として重要。一方、AI投資回収・資金調達への懸念とBroadcom CEO発言も同時に作用。CXMTへの単独帰因はできない。日本ではDRAMとNANDを区別し、キオクシアへの影響はメモリー心理・中長期競争を経由する推論。装置株は顧客投資と中国受注・輸出規制を分ける。"
     }
   ],
   "internal_strength": {
-    "breadth": "10月12日の11業種ETFは8上昇・3下落。指数そのものではない。SOX・XLKの弱さとXLE・XLPの強さが併存",
-    "assessment": "10月13日の同一基準日ETF比較は未確認。全面リスクオフとは断定しない"
+    "breadth": "10月13日の米11業種ETFは5上昇・6下落。指数そのものではない。最強はXLE +1.80%、最弱はXLV -1.35%。",
+    "assessment": "11業種中5上昇・6下落。銀行決算反応と半導体競争不安を分離。SOXの日中下落が縮小したため、下落加速や全面安とは断定しない"
   },
   "scenarios": [
     {
@@ -368,31 +387,33 @@
   "data_quality": {
     "overall": "MANUAL_REVIEW",
     "missing": [
-      "10月14日JSTのmarket_data成功記録と10月13日の米市場正本値",
-      "金・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応証拠",
-      "DXY・USD/JPYの10月9日以降の正本値、米2年金利の10月8日以降の正本値",
-      "確認時刻付き為替・暗号資産現在値、限月付き日経先物実測",
-      "アナリスト変更の全件網羅と一部政府掲載の確認範囲"
+      "DXYは10月12日保存値。最新日足の再取得はYahoo query1/query2ともHTTP429。報道の現在値で置換しない",
+      "米2年金利はFRED公式の最新公表が10月9日4.80%。10月13日の米10年金利とは基準日が違うため2s10s不算出",
+      "Gold・WTI・Brentは限月・値種別・時刻と保存値の対応未確認。CME当日決済APIはHTTP200だが空配列、ICE公開本文に対象決済値なし",
+      "時刻付きドル円・暗号資産の現在値は未確認。ドル円の公開Bid/Askと暗号資産の価格は取得したが配信時刻を確認できず不採用。BTC・ETH保存日足は10月12日。日経先物は12月限10月14日06:00夜間終値を確認、昼現在値は未確認",
+      "アナリスト評価は公開一覧の確認範囲のみ。証券会社の原レポート、EPS変更、全件網羅は未確認",
+      "CXMTの発表は10月10日。講演の正確な時刻、4F²の量産数量・歩留まり・顧客認定は未確認"
     ],
     "differences": [
-      "正本は10月13日更新・主要米市場は10月12日。10月13日の外部報道値で置換しない",
-      "米2年は10月8日、10年は10月12日。2s10sは計算しない",
-      "日本株実績ページは10月13日まで更新済みだが、market.jsonの日本指数は10月9日。別データと明示"
+      "主要米株・11業種ETF・ドル円・米10年・VIXは10月13日正本へ更新",
+      "DXYは10月12日、米2年は10月9日。日足の比較時点を明記",
+      "朝版を保持した昼の追補。10月14日アジア反発報道は朝の判断に遡及しない"
     ],
     "excluded": [
-      "Gold・WTI・Brentの価格と前日比",
-      "Copper価格・在庫（任意非掲載）",
-      "現在値と日経先物の推定",
-      "当日のCPI結果と市場因果の断定"
+      "限月定義未確認の商品価格",
+      "銅価格・在庫（任意非掲載）",
+      "推定現在値・日経先物",
+      "未発表CPI結果",
+      "CXMTだけで下落全体を説明する因果断定"
     ],
     "cautions": [
-      "確認済みニュースは部分収集。完全版PASSではない",
-      "10月13日市場反応は外部照合に限定",
-      "現物寄り付き前。材料別の国内反応は未確認"
+      "取得不能項目を注釈にして公開。完全版PASSではない",
+      "ニュース・レーティングは部分収集",
+      "日中値と終値、発表と製品投入・量産を区別"
     ]
   },
   "final_conclusion": {
-    "headline": "注釈付き暫定版｜CPI前は半導体を警戒、電源設備・規制・TOBは個別選別",
+    "headline": "中国CXMTの競争圧力を追加｜半導体安の縮小とCPIを確認、国内材料は個別選別",
     "winners": [
       "電源設備の実需・個別材料"
     ],
@@ -400,25 +421,25 @@
       "半導体心理・規制不確実性"
     ],
     "top_three": [
-      "今夜21:30 JSTの米CPIは未発表、結果を先取りしない",
-      "10月13日の半導体安は外部照合、正本は10月12日まで",
-      "日銀9月企業物価は前年比+6.8%、前月比-0.3%"
+      "中国CXMTの4F²サーバーDRAM計画：競争圧力は重要、量産実力は未確認",
+      "米SOXは10月13日の日中-1.5%から終値-0.23%へ下げ幅縮小",
+      "今夜21:30 JSTの米CPIは未発表"
     ],
     "triggers": [
-      "今夜21:30のCPI",
-      "正本の当日更新",
-      "個別株の出来高と相対騰落"
+      "CXMTの量産・顧客認定の証拠",
+      "CPI後の米金利・SOX・ドル円",
+      "国内半導体の相対騰落と設備需要"
     ],
-    "disclaimer": "注釈付き暫定版MANUAL_REVIEW。完全版FAIL、推測値の補完なし。"
+    "disclaimer": "取得不能項目を明示した注釈付き追補。完全版PASSではない。"
   },
   "japan_equities_preview": {
-    "summary": "注釈付き暫定版｜CPI前は半導体を警戒、電源設備・規制・TOBは個別選別",
+    "summary": "中国CXMTの競争圧力を追加｜半導体安の縮小とCPIを確認、国内材料は個別選別",
     "top_materials": [
-      "今夜21:30 JSTの米CPIは未発表、結果を先取りしない",
-      "10月13日の半導体安は外部照合、正本は10月12日まで",
-      "日銀9月企業物価は前年比+6.8%、前月比-0.3%",
-      "カナデンは中間予想を上方修正、通期予想は据え置き",
-      "オリンパスFDA警告とリソー教育TOBは個別材料として選別"
+      "中国CXMTの4F²サーバーDRAM計画：競争圧力は重要、量産実力は未確認",
+      "米SOXは10月13日の日中-1.5%から終値-0.23%へ下げ幅縮小",
+      "今夜21:30 JSTの米CPIは未発表",
+      "日銀企業物価は前年比+6.8%、前月比-0.3%",
+      "カナデンの中間上方修正、オリンパスFDA警告、リソー教育TOBを個別評価"
     ],
     "focus_sectors": [
       "半導体",
@@ -433,29 +454,37 @@
         "ticker": "8081",
         "headline": "AI・データセンター需要で中間予想上方修正、通期据え置き",
         "importance": "high",
-        "market_pricing_status": "発表後の国内現物反応は未確認"
+        "market_pricing_status": "当日現物は取引開始済み。下記確認範囲で評価。終値は未確定"
       },
       {
         "company": "オリンパス",
         "ticker": "7733",
         "headline": "FDA警告書を受領、生産販売の制限や回収要求ではない",
         "importance": "high",
-        "market_pricing_status": "発表後の国内現物反応は未確認"
+        "market_pricing_status": "当日現物は取引開始済み。下記確認範囲で評価。終値は未確定"
       },
       {
         "company": "リソー教育グループ",
         "ticker": "4714",
         "headline": "ヒューリックが完全子会社化を目的にTOB、普通株295円",
         "importance": "high",
-        "market_pricing_status": "発表後の国内現物反応は未確認"
+        "market_pricing_status": "当日現物は取引開始済み。下記確認範囲で評価。終値は未確定"
       }
     ],
-    "total_story_count": 3
+    "total_story_count": 4
   },
   "what_changed": {
-    "previous_view": "半導体安をAI投資回収・金利・需給中心に警戒していた。",
-    "new_information": "CXMTの技術基盤発表、4F²製品計画報道、米韓日のメモリー・装置株反応を追加確認した。",
-    "revision": "中国競争を重要な追加要因へ引き上げたが、商用量産と寄与率が未確認のため単独主因とはしない。"
+    "previous_report_date": "2026-10-13",
+    "changed": [
+      "主要米株・SOX・米11業種ETF・ドル円を10月13日正本へ更新",
+      "CXMT発表・金融報道・日中／終値の時系列を追加",
+      "国内3社の取引開始後の反応、公開レーティング4件を確認",
+      "日経先物12月限の06:00夜間終値を確認。現在値とは区別"
+    ],
+    "unchanged": [
+      "米CPIは21:30 JST予定、結果未発表",
+      "商品定義未確認の数値は不採用、銅は任意非掲載"
+    ]
   },
   "monitoring_points": [
     {

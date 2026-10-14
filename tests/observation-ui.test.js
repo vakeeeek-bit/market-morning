@@ -19,11 +19,25 @@ test('current contract metadata cannot certify a different historical date', () 
 class Element {
   constructor(tag) {this.tag=tag;this.children=[];this.textContent='';}
   append(...nodes) {this.children.push(...nodes);}
+  appendChild(node) {this.children.push(node);return node;}
   prepend(node) {this.children=this.children.filter(x=>x!==node);this.children.unshift(node);}
   before() {}
   replaceChildren(...nodes) {this.children=nodes;}
   querySelector(selector) {return this.children.find(x=>selector==='.publication-asof' && x.className==='publication-asof') || null;}
 }
+test('formal report quality fields display limitations instead of false none', () => {
+  const source=fs.readFileSync('index.html','utf8');
+  const start=source.indexOf('function renderQuality(');
+  const end=source.indexOf('\nfunction ',start+1);
+  const ids=new Map(['quality-grade','quality-detail'].map(id=>[id,new Element('div')]));
+  const context={document:{getElementById:id=>ids.get(id),createElement:t=>new Element(t)},clearElement:e=>e.replaceChildren(),safeText:(x,f)=>x||f};
+  vm.runInNewContext(source.slice(start,end),context);
+  context.renderQuality({overall:'MANUAL_REVIEW',missing:['当日市場値未取得'],differences:['基準日が異なる'],cautions:['部分収集'],excluded:['限月不明の先物']});
+  assert.equal(ids.get('quality-grade').textContent,'MANUAL_REVIEW');
+  const strings=[];const visit=e=>{strings.push(e.textContent);e.children.forEach(visit);};visit(ids.get('quality-detail'));
+  for(const text of ['当日市場値未取得','基準日が異なる','部分収集','限月不明の先物']) assert.ok(strings.includes(text));
+  assert.ok(!strings.includes('なし'));
+});
 async function fixture(options={}) {
   let day='2026-10-05';
   const ids=new Map(['quick-view','executive-section','report-date','quality-section'].map(x=>[x,new Element('div')]));

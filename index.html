@@ -4468,7 +4468,7 @@ function renderQuality(
     'quality-grade'
   ).textContent =
     safeText(
-      quality.grade,
+      quality.overall || quality.grade,
       '-'
     );
 
@@ -4494,17 +4494,21 @@ function renderQuality(
 
     [
       '確認できなかった重要データ',
-      quality.missing_data
+      quality.missing || quality.missing_data
     ],
 
     [
       '情報源によって差異があった重要データ',
-      quality.source_differences
+      quality.differences || quality.source_differences
     ],
 
     [
       '今回の分析で特に注意すべき点',
-      quality.notes
+      quality.cautions || quality.notes
+    ],
+    [
+      '数値・判断から除外した項目',
+      quality.excluded
     ]
 
   ];

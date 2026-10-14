@@ -1,11 +1,277 @@
 {
-  "report_date": "2026-10-14",
+  "report_date": "2026-10-15",
   "target_market_date": "2026-10-13",
-  "updated_at": "2026-10-14T12:58:59+09:00",
+  "updated_at": "2026-10-15T06:46:08+09:00",
   "publication_mode": "verified_news",
   "coverage_status": "partial",
-  "coverage_note": "10月14日昼追補：中国CXMTの発表・報道・市場反応を追加。朝と昼、場中と終値を区別。取得不能項目は注釈付き。部分収集。",
+  "coverage_note": "新規一次情報7件と既存記事の部分収集。最新ニュース日と正本市場日を分離。CPI結果は新記事で更新。",
   "articles": [
+    {
+      "id": "oct15-0",
+      "title": "米9月CPI、ガソリン上昇で総合加速",
+      "published_date": "2026-10-14",
+      "verified_at": "2026-10-15T06:46:08+09:00",
+      "source_type": "primary",
+      "publisher": "BLS",
+      "source_url": "https://www.bls.gov/news.release/archives/cpi_10142026.htm",
+      "verification_url": "https://www.bls.gov/news.release/archives/cpi_10142026.htm",
+      "verification_status": "PASS",
+      "fact": "10月14日08:30 ET公表。総合は季節調整済み前月比+0.6%、前年比+3.7%。コアは+0.3%、+2.6%。ガソリンは前月比+9.1%で総合上昇の半分超を説明。",
+      "analysis": "昨日の発表待ちからインフレ警戒へ更新。これ自体はFRBの利上げ決定ではない。",
+      "limitations": "部分収集、市場反応は未確認。会社見通し・実施計画・指定解除の範囲を超えた断定はしない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文・表を実読：https://www.bls.gov/news.release/archives/cpi_10142026.htm"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月14日08:30 ET公表。総合は季節調整済み前月比+0.6%、前年比+3.7%。コアは+0.3%、+2.6%。ガソリンは前月比+9.1%で総合上昇の半分超を説明。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表2026-10-14、確認2026-10-15T06:46:08+09:00。日本株の反応は寄り付き前"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離、市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "部分収集、市場反応は未確認。会社見通し・実施計画・指定解除の範囲を超えた断定はしない。"
+        }
+      }
+    },
+    {
+      "id": "oct15-1",
+      "title": "米実質時給は前月比低下",
+      "published_date": "2026-10-14",
+      "verified_at": "2026-10-15T06:46:08+09:00",
+      "source_type": "primary",
+      "publisher": "BLS",
+      "source_url": "https://www.bls.gov/news.release/archives/realer_10142026.htm",
+      "verification_url": "https://www.bls.gov/news.release/archives/realer_10142026.htm",
+      "verification_status": "PASS",
+      "fact": "10月14日08:30 ET公表。9月の全雇用者実質平均時給は季節調整済み前月比-0.5%、前年比-0.7%。名目時給+0.1%に対しCPI+0.6%。",
+      "analysis": "購買力低下は米消費関連への逆風候補。日本の給与や全輸出企業の業績へ直接置換しない。",
+      "limitations": "部分収集、市場反応は未確認。会社見通し・実施計画・指定解除の範囲を超えた断定はしない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文・表を実読：https://www.bls.gov/news.release/archives/realer_10142026.htm"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月14日08:30 ET公表。9月の全雇用者実質平均時給は季節調整済み前月比-0.5%、前年比-0.7%。名目時給+0.1%に対しCPI+0.6%。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表2026-10-14、確認2026-10-15T06:46:08+09:00。日本株の反応は寄り付き前"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離、市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "部分収集、市場反応は未確認。会社見通し・実施計画・指定解除の範囲を超えた断定はしない。"
+        }
+      }
+    },
+    {
+      "id": "oct15-2",
+      "title": "ASML、需要見通しの強さと株価心理を区別",
+      "published_date": "2026-10-14",
+      "verified_at": "2026-10-15T06:46:08+09:00",
+      "source_type": "primary",
+      "publisher": "ASML",
+      "source_url": "https://www.investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026",
+      "verification_url": "https://www.investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026",
+      "verification_status": "PASS",
+      "fact": "10月14日公表。Q3売上116.62億ユーロ、粗利率57.5%。Q4売上見通し142～152億ユーロ。会社は2027・2028年の計画供給では顧客需要を満たせないとの見通しを示す。",
+      "analysis": "装置実需の強さは半導体全面弱気への反証。ただし将来見通しであり、顧客の投資実行や日本企業の受注を保証しない。",
+      "limitations": "部分収集、市場反応は未確認。会社見通し・実施計画・指定解除の範囲を超えた断定はしない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文・表を実読：https://www.investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月14日公表。Q3売上116.62億ユーロ、粗利率57.5%。Q4売上見通し142～152億ユーロ。会社は2027・2028年の計画供給では顧客需要を満たせないとの見通しを示す。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表2026-10-14、確認2026-10-15T06:46:08+09:00。日本株の反応は寄り付き前"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離、市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "部分収集、市場反応は未確認。会社見通し・実施計画・指定解除の範囲を超えた断定はしない。"
+        }
+      }
+    },
+    {
+      "id": "oct15-3",
+      "title": "OFAC、ベネズエラ関連の指定解除",
+      "published_date": "2026-10-14",
+      "verified_at": "2026-10-15T06:46:08+09:00",
+      "source_type": "primary",
+      "publisher": "OFAC",
+      "source_url": "https://ofac.treasury.gov/recent-actions/20261014",
+      "verification_url": "https://ofac.treasury.gov/recent-actions/20261014",
+      "verification_status": "PASS",
+      "fact": "10月14日、Jorge Jesus Rodriguez Gomezと同一人物の別名表記をSDNリストから削除。",
+      "analysis": "新規制裁ではなく個人の指定解除。ベネズエラ全体や石油制裁の全面解除と解釈しない。",
+      "limitations": "部分収集、市場反応は未確認。会社見通し・実施計画・指定解除の範囲を超えた断定はしない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文・表を実読：https://ofac.treasury.gov/recent-actions/20261014"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月14日、Jorge Jesus Rodriguez Gomezと同一人物の別名表記をSDNリストから削除。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表2026-10-14、確認2026-10-15T06:46:08+09:00。日本株の反応は寄り付き前"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離、市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "部分収集、市場反応は未確認。会社見通し・実施計画・指定解除の範囲を超えた断定はしない。"
+        }
+      }
+    },
+    {
+      "id": "oct15-4",
+      "title": "データセンター光通信向けに追加設備投資、利益効果は精査中",
+      "published_date": "2026-10-14",
+      "verified_at": "2026-10-15T06:46:08+09:00",
+      "source_type": "primary",
+      "publisher": "オキサイド",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261014550735.pdf",
+      "verification_url": "https://www.release.tdnet.info/inbs/140120261014550735.pdf",
+      "verification_status": "PASS",
+      "fact": "10月14日16:30開示。ファラデー回転子の増産設備に8.41億円を追加投資予定。稼働は2027年2月期下半期中を予定し、当期業績影響は精査中。",
+      "analysis": "AI需要の実需材料だが、投資決議は売上・利益確定ではない。稼働・受注・減価償却を確認。",
+      "limitations": "部分収集、市場反応は未確認。会社見通し・実施計画・指定解除の範囲を超えた断定はしない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文・表を実読：https://www.release.tdnet.info/inbs/140120261014550735.pdf"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月14日16:30開示。ファラデー回転子の増産設備に8.41億円を追加投資予定。稼働は2027年2月期下半期中を予定し、当期業績影響は精査中。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表2026-10-14、確認2026-10-15T06:46:08+09:00。日本株の反応は寄り付き前"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離、市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "部分収集、市場反応は未確認。会社見通し・実施計画・指定解除の範囲を超えた断定はしない。"
+        }
+      }
+    },
+    {
+      "id": "oct15-5",
+      "title": "特別利益で純利益予想増額、営業利益据え置き・増配",
+      "published_date": "2026-10-14",
+      "verified_at": "2026-10-15T06:46:08+09:00",
+      "source_type": "primary",
+      "publisher": "メディアドゥ",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261002545203.pdf",
+      "verification_url": "https://www.release.tdnet.info/inbs/140120261002545203.pdf",
+      "verification_status": "PASS",
+      "fact": "10月14日16:00開示。通期純利益予想12億円から27.6億円、配当40円から55円。子会社売却益15.6億円が理由で、売上・営業利益・経常利益予想は据え置き。",
+      "analysis": "増配は還元材料だが、一時的売却益を本業の利益成長と扱わない。",
+      "limitations": "部分収集、市場反応は未確認。会社見通し・実施計画・指定解除の範囲を超えた断定はしない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文・表を実読：https://www.release.tdnet.info/inbs/140120261002545203.pdf"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月14日16:00開示。通期純利益予想12億円から27.6億円、配当40円から55円。子会社売却益15.6億円が理由で、売上・営業利益・経常利益予想は据え置き。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表2026-10-14、確認2026-10-15T06:46:08+09:00。日本株の反応は寄り付き前"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離、市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "部分収集、市場反応は未確認。会社見通し・実施計画・指定解除の範囲を超えた断定はしない。"
+        }
+      }
+    },
+    {
+      "id": "oct15-6",
+      "title": "TOB価格3681円から3682円、期間10月28日まで延長",
+      "published_date": "2026-10-14",
+      "verified_at": "2026-10-15T06:46:08+09:00",
+      "source_type": "primary",
+      "publisher": "カカクコム",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261014550805.pdf",
+      "verification_url": "https://www.release.tdnet.info/inbs/140120261014550805.pdf",
+      "verification_status": "PASS",
+      "fact": "10月14日17:40開示。Kamgras 1による買付価格を3681円から3682円へ変更し、公開買付期間を10月28日まで延長。5月13日開始案件の条件変更。",
+      "analysis": "新規TOBではなく既存案件の条件変更。3682円は買付条件で現在値・成立保証ではない。",
+      "limitations": "部分収集、市場反応は未確認。会社見通し・実施計画・指定解除の範囲を超えた断定はしない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文・表を実読：https://www.release.tdnet.info/inbs/140120261014550805.pdf"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月14日17:40開示。Kamgras 1による買付価格を3681円から3682円へ変更し、公開買付期間を10月28日まで延長。5月13日開始案件の条件変更。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表2026-10-14、確認2026-10-15T06:46:08+09:00。日本株の反応は寄り付き前"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離、市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "部分収集、市場反応は未確認。会社見通し・実施計画・指定解除の範囲を超えた断定はしない。"
+        }
+      }
+    },
     {
       "id": "oct14-0",
       "title": "米CPIは今夜21:30 JST、公表前",

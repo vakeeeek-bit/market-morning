@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-10-14T06:55:00+09:00",
-  "report_publication_status": "10月14日注釈付き暫定版。完全版は当日市場データ・先物定義等が未達",
+  "checked_at": "2026-10-15T06:46:08+09:00",
+  "report_publication_status": "10月15日注釈付き暫定版の公開前検証。完全版FAIL、暫定版MANUAL_REVIEW。デプロイ確認は別途実施。",
   "blockers": [
     {
       "item": "金・WTI・Brentの先物定義（3系列）",
@@ -8,11 +8,11 @@
     }
   ],
   "components": {
-    "report": "2026-10-14",
-    "japan_report": "2026-10-14",
-    "world_market": "2026-10-12",
-    "japan_market": "2026-10-09",
-    "news": "2026-10-14"
+    "report": "2026-10-15",
+    "japan_report": "2026-10-15",
+    "world_market": "2026-10-13",
+    "japan_market": "2026-10-14",
+    "news": "2026-10-15"
   },
   "fixes": [
     "取得エラーを部品ごとに隔離",
@@ -64,11 +64,10 @@
   "market_collection_attempt": "2026-10-11 再取得失敗。既存正本保持。data/collection-attempts/2026-10-11-market.json",
   "copper_policy": "任意掲載。非掲載時は価格・在庫の未取得を公開阻害にしない。掲載時は定義・出典確認が必要。",
   "candidate_status": {
-    "report_date": "2026-10-12",
-    "edition": "afternoon_update",
-    "publication_gate": "FAIL",
-    "publication_validation_errors": 7,
-    "market_collection_status": "success at 11:30 JST",
-    "research_analysis": "調査・分析8項目PASS、Data Integrity FAIL。公開PASSではない"
+    "report_date": "2026-10-15",
+    "edition": "provisional",
+    "complete_gate": "FAIL",
+    "data_quality": "MANUAL_REVIEW",
+    "production_verified": false
   }
 }

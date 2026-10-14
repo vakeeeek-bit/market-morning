@@ -1,0 +1,182 @@
+{
+  "report_date": "2026-10-15",
+  "target_market_date": "2026-10-13",
+  "updated_at": "2026-10-15T06:46:08+09:00",
+  "report_type": "daily_provisional",
+  "publication_policy": {
+    "status": "QUALIFIED",
+    "mode": "provisional",
+    "updated_at": "2026-10-15T06:46:08+09:00",
+    "complete_gate": "FAIL",
+    "copper_included": false,
+    "note": "注釈付き暫定版MANUAL_REVIEW。未確認値を省略し、正本の対象日と新規ニュースを分離。",
+    "missing_items": [
+      "10月15日JSTのmarket_data成功記録と10月14日の主要米市場・11業種ETF正本値",
+      "Gold・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応証拠",
+      "DXYは10月12日、米2年金利は10月9日で、基準日が統一されていない",
+      "時刻付き為替・暗号資産現在値と限月付き日経先物実測",
+      "アナリスト変更の網羅性、一部政府・統計掲載の本文確認範囲"
+    ]
+  },
+  "japan_quick_view": {
+    "headline": "注釈付き暫定版｜CPI待ちから物価再加速への警戒へ。半導体心理と設備実需を分ける",
+    "top_materials": [
+      "米9月CPIは総合+0.6%・前年比+3.7%、コア+0.3%・+2.6%",
+      "CPI後のハイテク安は外部照合、10月14日の正本市場値は未取得",
+      "ASMLの強い設備需要見通しは半導体一律弱気への反証",
+      "オキサイドの光通信設備投資は実施計画、利益効果は精査中",
+      "メディアドゥ増配・特別利益とカカクコムTOB条件変更を個別評価"
+    ],
+    "focus_sectors": [
+      "半導体製造装置",
+      "光通信部品",
+      "電子書籍",
+      "インターネットサービス",
+      "銀行"
+    ],
+    "unpriced_materials": [
+      "CPI発表後の海外材料",
+      "10月14日大引け後の3社開示"
+    ],
+    "individual_news_review": {
+      "status": "reviewed",
+      "story_count": 3,
+      "source": "TDnet一次PDF3件を実読・コード確認"
+    }
+  },
+  "top_stories": [
+    {
+      "company": "オキサイド",
+      "ticker": "6521",
+      "headline": "データセンター光通信向けに追加設備投資、利益効果は精査中",
+      "fact": "10月14日16:30開示。ファラデー回転子の増産設備に8.41億円を追加投資予定。稼働は2027年2月期下半期中を予定し、当期業績影響は精査中。",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261014550735.pdf",
+      "analysis": "AI需要の実需材料だが、投資決議は売上・利益確定ではない。稼働・受注・減価償却を確認。",
+      "category": "追い風候補・光通信限定",
+      "related_sectors": [
+        "光通信部品",
+        "半導体関連設備"
+      ],
+      "today_watch": "国内初動と出来高、稼働・受注・業績修正",
+      "announced_at": "2026-10-14",
+      "timing": "10月14日大引け後公表・10月15日寄り付き前",
+      "market_pricing_status": "発表後の国内現物反応は未確認",
+      "price_reaction": "未確認",
+      "related_stocks": [],
+      "importance": "high",
+      "confidence": "supported"
+    },
+    {
+      "company": "メディアドゥ",
+      "ticker": "3678",
+      "headline": "特別利益で純利益予想増額、営業利益据え置き・増配",
+      "fact": "10月14日16:00開示。通期純利益予想12億円から27.6億円、配当40円から55円。子会社売却益15.6億円が理由で、売上・営業利益・経常利益予想は据え置き。",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261002545203.pdf",
+      "analysis": "増配は還元材料だが、一時的売却益を本業の利益成長と扱わない。",
+      "category": "追い風候補・個別還元",
+      "related_sectors": [
+        "電子書籍",
+        "情報通信"
+      ],
+      "today_watch": "増配評価、一時利益と継続収益の区別",
+      "announced_at": "2026-10-14",
+      "timing": "10月14日大引け後公表・10月15日寄り付き前",
+      "market_pricing_status": "発表後の国内現物反応は未確認",
+      "price_reaction": "未確認",
+      "related_stocks": [],
+      "importance": "high",
+      "confidence": "supported"
+    },
+    {
+      "company": "カカクコム",
+      "ticker": "2371",
+      "headline": "TOB価格3681円から3682円、期間10月28日まで延長",
+      "fact": "10月14日17:40開示。Kamgras 1による買付価格を3681円から3682円へ変更し、公開買付期間を10月28日まで延長。5月13日開始案件の条件変更。",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261014550805.pdf",
+      "analysis": "新規TOBではなく既存案件の条件変更。3682円は買付条件で現在値・成立保証ではない。",
+      "category": "中立・イベント限定",
+      "related_sectors": [
+        "インターネットサービス"
+      ],
+      "today_watch": "市場価格と条件、応募・成立条件、延長経緯",
+      "announced_at": "2026-10-14",
+      "timing": "10月14日大引け後公表・10月15日寄り付き前",
+      "market_pricing_status": "発表後の国内現物反応は未確認",
+      "price_reaction": "未確認",
+      "related_stocks": [],
+      "importance": "high",
+      "confidence": "supported"
+    }
+  ],
+  "important_stories": [],
+  "other_stories": [],
+  "data_quality": {
+    "overall": "MANUAL_REVIEW",
+    "missing": [
+      "10月15日JSTのmarket_data成功記録と10月14日の主要米市場・11業種ETF正本値",
+      "Gold・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応証拠",
+      "DXYは10月12日、米2年金利は10月9日で、基準日が統一されていない",
+      "時刻付き為替・暗号資産現在値と限月付き日経先物実測",
+      "アナリスト変更の網羅性、一部政府・統計掲載の本文確認範囲"
+    ],
+    "differences": [
+      "正本は10月14日10:59更新、米株は10月13日。CPI発表後の外部報道値で置換しない",
+      "米2年10月9日と10年10月13日が異なるため2s10s不算出",
+      "日本株実績ページは10月14日、market.jsonの日本指数は10月13日。別データとして分離"
+    ],
+    "excluded": [
+      "未定義商品先物の価格・前日比",
+      "Copper価格・在庫（任意非掲載）",
+      "現在値・日経先物の推定",
+      "CPI発表後の米金利終値や政策変更の未確認断定"
+    ],
+    "cautions": [
+      "ニュースは部分収集。完全版PASSではない",
+      "CPIは発表済み、PPIは10月15日21:30 JST予定で未発表",
+      "寄り付き前の日本株反応は条件付きシナリオ"
+    ]
+  },
+  "analyst_rating_changes": {
+    "coverage_status": "十分調査したが取得不能",
+    "headline": "全件網羅できず、把握範囲は限定",
+    "items": [],
+    "source_review": [
+      {
+        "source": "公開一覧・IFIS",
+        "result": "公開一覧403、IFIS無料情報は全変更・EPSの網羅を保証できず"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "name": "基本",
+      "conditions": "CPI後の警戒が継続、半導体心理と設備需要が分岐",
+      "impact_on_japan": "高PERに慎重、個別還元・投資計画を選別",
+      "invalidation": "半導体相対反発と市場幅改善"
+    },
+    {
+      "name": "上振れ",
+      "conditions": "金利・円相場が安定し、国内装置株の相対反発を実測",
+      "impact_on_japan": "半導体・光通信への警戒を弱める",
+      "invalidation": "受注悪化や金利再上昇"
+    },
+    {
+      "name": "下振れ",
+      "conditions": "PPI後も物価警戒、ハイテク売りと円相場急変が重なる",
+      "impact_on_japan": "高PER・輸出を慎重化",
+      "invalidation": "物価警戒後退と半導体改善"
+    }
+  ],
+  "monitoring_points": [
+    {
+      "target": "PPI",
+      "today_check": "10月15日21:30 JSTの公表後反応",
+      "view_change_condition": "金利・半導体・円相場の実測"
+    },
+    {
+      "target": "個別開示",
+      "today_check": "出来高、利益の質、投資実行",
+      "view_change_condition": "計画と実績の乖離"
+    }
+  ]
+}

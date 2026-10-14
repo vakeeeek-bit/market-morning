@@ -1,0 +1,172 @@
+{
+  "version": 2,
+  "updated_at": "2026-10-15T06:46:08+09:00",
+  "report_date": "2026-10-15",
+  "period_start": "2026-10-12",
+  "period_end": "2026-10-14",
+  "freshness": {
+    "status": "current",
+    "latest_report_date": "2026-10-15",
+    "source_report_count": 9,
+    "note": "当日レポートと直近の履歴・確認済みニュースから更新"
+  },
+  "headline": "市場の見方がどう変わったかを3つのテーマで確認",
+  "summary": "主要テーマごとに、当初の認識、新しい事実、実際の市場反応、現在の認識を分けています。確認できない変化は作らず、反証も併記します。",
+  "themes": [
+    {
+      "theme": "物価・金融条件",
+      "initial_view": {
+        "date": "2026-10-13",
+        "text": "CPI公表前のため結果を先取りしない見方"
+      },
+      "new_fact": {
+        "date": "2026-10-14",
+        "text": "総合CPI+0.6%、実質時給-0.5%をBLSで確認"
+      },
+      "market_reaction": {
+        "date": "2026-10-14",
+        "text": "Reutersは発表後のハイテク売りを報道。正本未反映"
+      },
+      "current_view": "イベント待ちから発表後の物価警戒へ更新",
+      "japan_impact": "高PER・米消費関連を慎重に選別",
+      "counter_evidence": "これはFRBの新しい政策決定ではない",
+      "source_ids": [
+        "prior13",
+        "prior14",
+        "oct15-0",
+        "oct15-1",
+        "reaction14"
+      ]
+    },
+    {
+      "theme": "AI心理と設備実需",
+      "initial_view": {
+        "date": "2026-10-12",
+        "text": "米株では半導体と他業種が分岐していた"
+      },
+      "new_fact": {
+        "date": "2026-10-14",
+        "text": "ASMLは強い需要を見込み、オキサイドは追加設備投資計画"
+      },
+      "market_reaction": {
+        "date": "2026-10-14",
+        "text": "米ハイテクの売りと会社の需要見通しが併存"
+      },
+      "current_view": "需要崩壊と一律断定せず、投資採算・資金調達・装置実需を分ける",
+      "japan_impact": "国内装置・光通信は受注と相対騰落を確認",
+      "counter_evidence": "会社見通しと投資計画は将来実績を保証しない",
+      "source_ids": [
+        "prior13",
+        "oct15-2",
+        "oct15-4",
+        "reaction14"
+      ]
+    },
+    {
+      "theme": "個別材料の利益の質",
+      "initial_view": {
+        "date": "2026-10-14",
+        "text": "前日版はカナデン・FDA警告・リソー教育TOBを選別"
+      },
+      "new_fact": {
+        "date": "2026-10-14",
+        "text": "メディアドゥは特別利益で純利益増額、カカクコムは既存TOB条件変更"
+      },
+      "market_reaction": {
+        "date": "2026-10-14",
+        "text": "大引け後公表のため発表後現物反応は未確認"
+      },
+      "current_view": "本業の増益、一時利益、買付条件を区別",
+      "japan_impact": "増配・投資計画・イベントを個別評価",
+      "counter_evidence": "純利益増額は営業利益増額ではなく、買付価格は現在値ではない",
+      "source_ids": [
+        "prior14",
+        "oct15-5",
+        "oct15-6"
+      ]
+    }
+  ],
+  "scenario_change_conditions": [
+    {
+      "condition": "キオクシア・東京エレクトロン",
+      "meaning": "下落分の回復とTOPIX比の改善が複数日続く"
+    },
+    {
+      "condition": "Samsung・SK Hynix・Micron",
+      "meaning": "複数市場で反発が続けば即時業績影響を引き下げる"
+    },
+    {
+      "condition": "米金利・ドル",
+      "meaning": "金利・ドルが同時上昇すれば高PER株の逆風を強める"
+    },
+    {
+      "condition": "CXMT製品情報",
+      "meaning": "仕様・歩留まり・顧客認定・出荷量が確認されれば競争評価を更新する"
+    }
+  ],
+  "sources": [
+    {
+      "id": "prior13",
+      "title": "10月13日保存版",
+      "publisher": "Market Morning",
+      "published_at": "2026-10-13",
+      "url": "https://market-morning-gules.vercel.app/data/history/2026-10-13/report.json"
+    },
+    {
+      "id": "prior14",
+      "title": "10月14日保存版",
+      "publisher": "Market Morning",
+      "published_at": "2026-10-14",
+      "url": "https://market-morning-gules.vercel.app/data/history/2026-10-14/report.json"
+    },
+    {
+      "id": "oct15-0",
+      "title": "米9月CPI、ガソリン上昇で総合加速",
+      "publisher": "BLS",
+      "published_at": "2026-10-14",
+      "url": "https://www.bls.gov/news.release/archives/cpi_10142026.htm"
+    },
+    {
+      "id": "oct15-1",
+      "title": "米実質時給は前月比低下",
+      "publisher": "BLS",
+      "published_at": "2026-10-14",
+      "url": "https://www.bls.gov/news.release/archives/realer_10142026.htm"
+    },
+    {
+      "id": "reaction14",
+      "title": "10月14日米株市場反応",
+      "publisher": "Reuters",
+      "published_at": "2026-10-14",
+      "url": "https://www.reuters.com/business/sp-500-dow-futures-rise-ahead-big-bank-results-cpi-data-2026-10-14/"
+    },
+    {
+      "id": "oct15-2",
+      "title": "ASML、需要見通しの強さと株価心理を区別",
+      "publisher": "ASML",
+      "published_at": "2026-10-14",
+      "url": "https://www.investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026"
+    },
+    {
+      "id": "oct15-4",
+      "title": "データセンター光通信向けに追加設備投資、利益効果は精査中",
+      "publisher": "オキサイド",
+      "published_at": "2026-10-14",
+      "url": "https://www.release.tdnet.info/inbs/140120261014550735.pdf"
+    },
+    {
+      "id": "oct15-5",
+      "title": "特別利益で純利益予想増額、営業利益据え置き・増配",
+      "publisher": "メディアドゥ",
+      "published_at": "2026-10-14",
+      "url": "https://www.release.tdnet.info/inbs/140120261002545203.pdf"
+    },
+    {
+      "id": "oct15-6",
+      "title": "TOB価格3681円から3682円、期間10月28日まで延長",
+      "publisher": "カカクコム",
+      "published_at": "2026-10-14",
+      "url": "https://www.release.tdnet.info/inbs/140120261014550805.pdf"
+    }
+  ]
+}

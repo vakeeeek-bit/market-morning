@@ -123,7 +123,7 @@ def build_context() -> dict:
             }),
             "note": "当日レポートと直近の履歴・確認済みニュースから更新",
         },
-        "headline": "市場の見方がどう変わったかを4つのテーマで確認",
+        "headline": f"市場の見方がどう変わったかを{len(rendered_themes)}つのテーマで確認",
         "summary": "主要テーマごとに、当初の認識、新しい事実、実際の市場反応、現在の認識を分けています。確認できない変化は作らず、反証も併記します。",
         "themes": rendered_themes,
         "scenario_change_conditions": [

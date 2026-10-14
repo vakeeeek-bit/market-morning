@@ -1,107 +1,88 @@
 {
   "version": 2,
-  "updated_at": "2026-10-14T12:58:59+09:00",
-  "report_date": "2026-10-14",
-  "period_start": "2026-10-05",
+  "updated_at": "2026-10-15T06:46:08+09:00",
+  "report_date": "2026-10-15",
+  "period_start": "2026-10-12",
   "period_end": "2026-10-14",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-10-14",
-    "source_report_count": 8,
+    "latest_report_date": "2026-10-15",
+    "source_report_count": 9,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
-  "headline": "市場の見方がどう変わったかを4つのテーマで確認",
+  "headline": "市場の見方がどう変わったかを3つのテーマで確認",
   "summary": "主要テーマごとに、当初の認識、新しい事実、実際の市場反応、現在の認識を分けています。確認できない変化は作らず、反証も併記します。",
   "themes": [
     {
-      "theme": "半導体・中国競争",
+      "theme": "物価・金融条件",
       "initial_view": {
-        "date": "2026-10-09",
-        "text": "AI需要と米半導体動向を中心に、日本の半導体を選別していた。"
-      },
-      "new_fact": {
-        "date": "2026-10-12",
-        "text": "CXMTの4F² DDR5 RDIMM年内投入計画が報じられた。商用量産・顧客認定は未確認。"
-      },
-      "market_reaction": {
         "date": "2026-10-13",
-        "text": "米韓日のメモリー・装置株が下落。ただし米SOXの下げは限定的で、14日午前は韓国勢が反発。"
-      },
-      "current_view": "中国競争は重要な追加要因。AI投資採算・金利・利益確定との複合で、単独主因とは断定しない。",
-      "japan_impact": "キオクシアと製造装置を重点監視。反発の広がりが確認できれば短期逆風を引き下げる。",
-      "counter_evidence": "4F²の仕様・歩留まり・顧客認定が未確認で、SOX全体の下げは限定的。",
-      "source_ids": [
-        "cxmt-g5-official-20260920",
-        "cxmt-4f2-market-20261013",
-        "reuters-us-market-20261013",
-        "reuters-asia-rebound-20261014"
-      ]
-    },
-    {
-      "theme": "米金利・インフレ",
-      "initial_view": {
-        "date": "2026-10-08",
-        "text": "FRB高官発言からインフレ警戒とデータ依存を確認していた。"
+        "text": "CPI公表前のため結果を先取りしない見方"
       },
       "new_fact": {
         "date": "2026-10-14",
-        "text": "9月CPIは21:30 JST公表予定で、日次レポート作成時点では未発表。"
+        "text": "総合CPI+0.6%、実質時給-0.5%をBLSで確認"
       },
       "market_reaction": {
         "date": "2026-10-14",
-        "text": "結果への市場反応はまだ発生していない。"
+        "text": "Reutersは発表後のハイテク売りを報道。正本未反映"
       },
-      "current_view": "CPI後の金利・ドル反応を待つ。発表前に利上げ方向を断定しない。",
-      "japan_impact": "銀行、高PERグロース、不動産はCPI後の米金利で再評価する。",
-      "counter_evidence": "半導体の選別売りは金利だけでは説明できない。",
+      "current_view": "イベント待ちから発表後の物価警戒へ更新",
+      "japan_impact": "高PER・米消費関連を慎重に選別",
+      "counter_evidence": "これはFRBの新しい政策決定ではない",
       "source_ids": [
-        "waller-sep-20261008",
-        "oct14-0"
+        "prior13",
+        "prior14",
+        "oct15-0",
+        "oct15-1",
+        "reaction14"
       ]
     },
     {
-      "theme": "原油・地政学",
+      "theme": "AI心理と設備実需",
       "initial_view": {
-        "date": "2026-10-05",
-        "text": "米国の軽油税支払い延期検討を供給・物価の補助材料として確認した。"
-      },
-      "new_fact": {
         "date": "2026-10-12",
-        "text": "供給懸念で原油高が再び市場の材料になった。"
-      },
-      "market_reaction": {
-        "date": "2026-10-12",
-        "text": "エネルギー株が相対優位となり、半導体と主要指数は方向が分かれた。"
-      },
-      "current_view": "原油高を株全体の方向ではなく、資源優位と燃料コストの差として読む。",
-      "japan_impact": "資源・商社に追い風候補、空運・陸運・化学・小売にコスト警戒。",
-      "counter_evidence": "契約定義を確認できない商品価格は方向判断の数値根拠から除外する。",
-      "source_ids": [
-        "wh-diesel-tax-20261005",
-        "reuters-us-market-20261012"
-      ]
-    },
-    {
-      "theme": "日本株・個別選別",
-      "initial_view": {
-        "date": "2026-10-09",
-        "text": "休場前の一次資料を中心に、会社固有材料を継続監視していた。"
+        "text": "米株では半導体と他業種が分岐していた"
       },
       "new_fact": {
-        "date": "2026-10-13",
-        "text": "カナデンの業績修正、オリンパスのFDA警告、リソー教育のTOBが公表された。"
+        "date": "2026-10-14",
+        "text": "ASMLは強い需要を見込み、オキサイドは追加設備投資計画"
       },
       "market_reaction": {
         "date": "2026-10-14",
-        "text": "日次レポート作成時点で各材料の国内終値反応は未確認。"
+        "text": "米ハイテクの売りと会社の需要見通しが併存"
       },
-      "current_view": "指数や半導体テーマに一括せず、実需・規制・TOBを会社固有材料として分ける。",
-      "japan_impact": "電源設備、医療機器、教育は同じ方向へ束ねず、開示条件と価格反応を個別確認する。",
-      "counter_evidence": "カナデンの需要改善はAI関連全体を一律否定する見方への反証。",
+      "current_view": "需要崩壊と一律断定せず、投資採算・資金調達・装置実需を分ける",
+      "japan_impact": "国内装置・光通信は受注と相対騰落を確認",
+      "counter_evidence": "会社見通しと投資計画は将来実績を保証しない",
       "source_ids": [
-        "oct14-4",
-        "oct14-5",
-        "oct14-6"
+        "prior13",
+        "oct15-2",
+        "oct15-4",
+        "reaction14"
+      ]
+    },
+    {
+      "theme": "個別材料の利益の質",
+      "initial_view": {
+        "date": "2026-10-14",
+        "text": "前日版はカナデン・FDA警告・リソー教育TOBを選別"
+      },
+      "new_fact": {
+        "date": "2026-10-14",
+        "text": "メディアドゥは特別利益で純利益増額、カカクコムは既存TOB条件変更"
+      },
+      "market_reaction": {
+        "date": "2026-10-14",
+        "text": "大引け後公表のため発表後現物反応は未確認"
+      },
+      "current_view": "本業の増益、一時利益、買付条件を区別",
+      "japan_impact": "増配・投資計画・イベントを個別評価",
+      "counter_evidence": "純利益増額は営業利益増額ではなく、買付価格は現在値ではない",
+      "source_ids": [
+        "prior14",
+        "oct15-5",
+        "oct15-6"
       ]
     }
   ],
@@ -125,81 +106,67 @@
   ],
   "sources": [
     {
-      "id": "cxmt-g5-official-20260920",
-      "title": "CXMT：第5世代DRAM技術基盤の量産開始を発表",
-      "publisher": "CXMT",
-      "published_at": "2026-09-20",
-      "url": "https://www.cxmt.com/news.html"
-    },
-    {
-      "id": "cxmt-4f2-market-20261013",
-      "title": "CXMTの4F²計画報道でメモリー株に競争警戒",
-      "publisher": "Reuters",
+      "id": "prior13",
+      "title": "10月13日保存版",
+      "publisher": "Market Morning",
       "published_at": "2026-10-13",
-      "url": "https://www.reuters.com/world/china/us-chip-stocks-extend-slide-china-memory-report-ai-spending-jitters-hit-sector-2026-10-13/"
+      "url": "https://market-morning-gules.vercel.app/data/history/2026-10-13/report.json"
     },
     {
-      "id": "reuters-us-market-20261013",
-      "title": "米株：半導体安を受け主要指数は小幅安",
-      "publisher": "Reuters",
-      "published_at": "2026-10-13",
-      "url": "https://www.reuters.com/business/sp-500-futures-muted-investors-await-big-bank-earnings-chip-weakness-weighs-2026-10-13/"
+      "id": "prior14",
+      "title": "10月14日保存版",
+      "publisher": "Market Morning",
+      "published_at": "2026-10-14",
+      "url": "https://market-morning-gules.vercel.app/data/history/2026-10-14/report.json"
     },
     {
-      "id": "reuters-asia-rebound-20261014",
-      "title": "アジア株：半導体売り一服、米CPIを待つ",
+      "id": "oct15-0",
+      "title": "米9月CPI、ガソリン上昇で総合加速",
+      "publisher": "BLS",
+      "published_at": "2026-10-14",
+      "url": "https://www.bls.gov/news.release/archives/cpi_10142026.htm"
+    },
+    {
+      "id": "oct15-1",
+      "title": "米実質時給は前月比低下",
+      "publisher": "BLS",
+      "published_at": "2026-10-14",
+      "url": "https://www.bls.gov/news.release/archives/realer_10142026.htm"
+    },
+    {
+      "id": "reaction14",
+      "title": "10月14日米株市場反応",
       "publisher": "Reuters",
       "published_at": "2026-10-14",
-      "url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-10-14/"
+      "url": "https://www.reuters.com/business/sp-500-dow-futures-rise-ahead-big-bank-results-cpi-data-2026-10-14/"
     },
     {
-      "id": "waller-sep-20261008",
-      "title": "ウォラー理事：SEPの情報価値とインフレへの対応を説明",
-      "publisher": "FRB",
-      "published_at": "2026-10-08",
-      "url": "https://www.federalreserve.gov/newsevents/speech/waller20261008a.htm"
+      "id": "oct15-2",
+      "title": "ASML、需要見通しの強さと株価心理を区別",
+      "publisher": "ASML",
+      "published_at": "2026-10-14",
+      "url": "https://www.investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026"
     },
     {
-      "id": "oct14-0",
-      "title": "米CPIは今夜21:30 JST、公表前",
-      "publisher": "BLS",
-      "published_at": "2026-02-18",
-      "url": "https://www.bls.gov/schedule/2026/10_sched_list.htm"
+      "id": "oct15-4",
+      "title": "データセンター光通信向けに追加設備投資、利益効果は精査中",
+      "publisher": "オキサイド",
+      "published_at": "2026-10-14",
+      "url": "https://www.release.tdnet.info/inbs/140120261014550735.pdf"
     },
     {
-      "id": "wh-diesel-tax-20261005",
-      "title": "米政府：軽油税の支払延期・罰則救済を指示、免税確定ではない",
-      "publisher": "White House",
-      "published_at": "2026-10-05",
-      "url": "https://www.whitehouse.gov/presidential-actions/2026/10/emergency-tax-relief-on-diesel-fuel/"
+      "id": "oct15-5",
+      "title": "特別利益で純利益予想増額、営業利益据え置き・増配",
+      "publisher": "メディアドゥ",
+      "published_at": "2026-10-14",
+      "url": "https://www.release.tdnet.info/inbs/140120261002545203.pdf"
     },
     {
-      "id": "reuters-us-market-20261012",
-      "title": "米株：原油高と半導体安でS&P500・NASDAQ下落、Dowは上昇",
-      "publisher": "Reuters",
-      "published_at": "2026-10-12",
-      "url": "https://www.reuters.com/business/us-stock-futures-muted-oil-stays-above-100-ahead-earnings-2026-10-12/"
-    },
-    {
-      "id": "oct14-4",
-      "title": "AI・データセンター需要で中間予想上方修正、通期据え置き",
-      "publisher": "カナデン",
-      "published_at": "2026-10-13",
-      "url": "https://www.release.tdnet.info/inbs/140120261013549701.pdf"
-    },
-    {
-      "id": "oct14-5",
-      "title": "FDA警告書を受領、生産販売の制限や回収要求ではない",
-      "publisher": "オリンパス",
-      "published_at": "2026-10-13",
-      "url": "https://www.release.tdnet.info/inbs/140120261013549222.pdf"
-    },
-    {
-      "id": "oct14-6",
-      "title": "ヒューリックが完全子会社化を目的にTOB、普通株295円",
-      "publisher": "リソー教育グループ",
-      "published_at": "2026-10-13",
-      "url": "https://www.release.tdnet.info/inbs/140120261013549957.pdf"
+      "id": "oct15-6",
+      "title": "TOB価格3681円から3682円、期間10月28日まで延長",
+      "publisher": "カカクコム",
+      "published_at": "2026-10-14",
+      "url": "https://www.release.tdnet.info/inbs/140120261014550805.pdf"
     }
   ]
 }

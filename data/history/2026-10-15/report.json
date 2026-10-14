@@ -1,0 +1,614 @@
+{
+  "report_date": "2026-10-15",
+  "target_market_date": "2026-10-13",
+  "updated_at": "2026-10-15T06:46:08+09:00",
+  "report_type": "daily_provisional",
+  "publication_policy": {
+    "status": "QUALIFIED",
+    "mode": "provisional",
+    "updated_at": "2026-10-15T06:46:08+09:00",
+    "complete_gate": "FAIL",
+    "copper_included": false,
+    "note": "注釈付き暫定版MANUAL_REVIEW。未確認値を省略し、正本の対象日と新規ニュースを分離。",
+    "missing_items": [
+      "10月15日JSTのmarket_data成功記録と10月14日の主要米市場・11業種ETF正本値",
+      "Gold・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応証拠",
+      "DXYは10月12日、米2年金利は10月9日で、基準日が統一されていない",
+      "時刻付き為替・暗号資産現在値と限月付き日経先物実測",
+      "アナリスト変更の網羅性、一部政府・統計掲載の本文確認範囲"
+    ]
+  },
+  "quick_view": {
+    "headline": "注釈付き暫定版｜CPI待ちから物価再加速への警戒へ。半導体心理と設備実需を分ける",
+    "top_news": [
+      {
+        "title": "米9月CPIは総合+0.6%・前年比+3.7%、コア+0.3%・+2.6%"
+      },
+      {
+        "title": "CPI後のハイテク安は外部照合、10月14日の正本市場値は未取得"
+      },
+      {
+        "title": "ASMLの強い設備需要見通しは半導体一律弱気への反証"
+      }
+    ],
+    "important_today": [
+      "米9月CPIは総合+0.6%・前年比+3.7%、コア+0.3%・+2.6%",
+      "CPI後のハイテク安は外部照合、10月14日の正本市場値は未取得",
+      "ASMLの強い設備需要見通しは半導体一律弱気への反証",
+      "オキサイドの光通信設備投資は実施計画、利益効果は精査中",
+      "メディアドゥ増配・特別利益とカカクコムTOB条件変更を個別評価"
+    ]
+  },
+  "executive_summary": {
+    "headline": "注釈付き暫定版｜CPI待ちから物価再加速への警戒へ。半導体心理と設備実需を分ける",
+    "market_mood": "CPI後の警戒を強めるが、設備需要の反証も残す",
+    "main_driver": "CPIの総合加速、実質購買力低下、AI投資採算と装置需要の分岐",
+    "winners": [
+      "個別還元・光通信投資計画（条件付き）"
+    ],
+    "losers": [
+      "高PER・AI資金調達への警戒"
+    ],
+    "important_today": [
+      "米9月CPIは総合+0.6%・前年比+3.7%、コア+0.3%・+2.6%",
+      "CPI後のハイテク安は外部照合、10月14日の正本市場値は未取得",
+      "ASMLの強い設備需要見通しは半導体一律弱気への反証",
+      "オキサイドの光通信設備投資は実施計画、利益効果は精査中",
+      "メディアドゥ増配・特別利益とカカクコムTOB条件変更を個別評価"
+    ],
+    "watch_markets": [
+      "SOX",
+      "米金利",
+      "USD/JPY",
+      "国内出来高"
+    ],
+    "current_environment": [
+      "正本米株は10月13日、DXYは12日、米2年は9日",
+      "10月14日のCPI後反応は外部照合"
+    ]
+  },
+  "news": [
+    {
+      "title": "米9月CPI、ガソリン上昇で総合加速",
+      "fact": "10月14日08:30 ET公表。総合は季節調整済み前月比+0.6%、前年比+3.7%。コアは+0.3%、+2.6%。ガソリンは前月比+9.1%で総合上昇の半分超を説明。",
+      "published_at": "2026-10-14",
+      "source_url": "https://www.bls.gov/news.release/archives/cpi_10142026.htm",
+      "market_reaction": "市場反応はReutersで別途照合。正本の翌日価格は未取得",
+      "analysis": "昨日の発表待ちからインフレ警戒へ更新。これ自体はFRBの利上げ決定ではない。"
+    },
+    {
+      "title": "米実質時給は前月比低下",
+      "fact": "10月14日08:30 ET公表。9月の全雇用者実質平均時給は季節調整済み前月比-0.5%、前年比-0.7%。名目時給+0.1%に対しCPI+0.6%。",
+      "published_at": "2026-10-14",
+      "source_url": "https://www.bls.gov/news.release/archives/realer_10142026.htm",
+      "market_reaction": "単独の株価寄与は未確認",
+      "analysis": "購買力低下は米消費関連への逆風候補。日本の給与や全輸出企業の業績へ直接置換しない。"
+    },
+    {
+      "title": "ASML、需要見通しの強さと株価心理を区別",
+      "fact": "10月14日公表。Q3売上116.62億ユーロ、粗利率57.5%。Q4売上見通し142～152億ユーロ。会社は2027・2028年の計画供給では顧客需要を満たせないとの見通しを示す。",
+      "published_at": "2026-10-14",
+      "source_url": "https://www.investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026",
+      "market_reaction": "会社発表と米半導体市場全体の反応を分離。単独寄与は未確認",
+      "analysis": "装置実需の強さは半導体全面弱気への反証。ただし将来見通しであり、顧客の投資実行や日本企業の受注を保証しない。"
+    },
+    {
+      "title": "CPI後のハイテク売りは外部照合に限定",
+      "fact": "Reutersは10月14日、物価指標後の利上げ警戒とAI関連の資金調達・採算不安に伴うハイテク下落を報道。",
+      "published_at": "2026-10-14",
+      "source_url": "https://www.reuters.com/business/sp-500-dow-futures-rise-ahead-big-bank-results-cpi-data-2026-10-14/",
+      "market_reaction": "正本市場値は10月13日のまま。外部価格は採用しない",
+      "analysis": "金利警戒と企業固有の投資採算を分ける。装置需要が強くても、株価の割高感や資金調達不安は解消したと判断しない。"
+    },
+    {
+      "title": "OFAC、ベネズエラ関連の指定解除",
+      "fact": "10月14日、Jorge Jesus Rodriguez Gomezと同一人物の別名表記をSDNリストから削除。",
+      "published_at": "2026-10-14",
+      "source_url": "https://ofac.treasury.gov/recent-actions/20261014",
+      "market_reaction": "未確認",
+      "analysis": "新規制裁ではなく個人の指定解除。ベネズエラ全体や石油制裁の全面解除と解釈しない。"
+    }
+  ],
+  "policy": {
+    "economic_indicators": {
+      "fact": "10月14日08:30 ET公表。総合は季節調整済み前月比+0.6%、前年比+3.7%。コアは+0.3%、+2.6%。ガソリンは前月比+9.1%で総合上昇の半分超を説明。 10月14日08:30 ET公表。9月の全雇用者実質平均時給は季節調整済み前月比-0.5%、前年比-0.7%。名目時給+0.1%に対しCPI+0.6%。 BLSではPPIを10月15日08:30 ET（21:30 JST）に公表予定。",
+      "source_urls": [
+        "https://www.bls.gov/news.release/archives/cpi_10142026.htm",
+        "https://www.bls.gov/news.release/archives/realer_10142026.htm",
+        "https://www.bls.gov/schedule/2026/10_sched_list.htm"
+      ]
+    },
+    "central_banks": {
+      "fact": "FRB FOMC公表一覧と日銀新着で確認した範囲では、10月14日の新規政策金利決定は該当なし。日銀統計・国際会合案内は新規利上げ決定と区別。ECB RSSの掲載は確認したが、未実読本文の政策判断は採用しない。",
+      "source_urls": [
+        "https://www.federalreserve.gov/newsevents/pressreleases/2026-press-fomc.htm",
+        "https://www.boj.or.jp/whatsnew/index.htm",
+        "https://www.ecb.europa.eu/rss/press.html"
+      ]
+    },
+    "trade_tariffs": {
+      "fact": "確認したUSTR10月一覧・White House掲載では10月14日付の新規重要関税措置は該当なし。商務省BISはHTTP403で本文未確認のため、新規材料なしとは断定しない。",
+      "source_urls": [
+        "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october",
+        "https://www.whitehouse.gov/presidential-actions/",
+        "https://www.bis.gov/news-updates"
+      ]
+    },
+    "sanctions": {
+      "fact": "10月14日、Jorge Jesus Rodriguez Gomezと同一人物の別名表記をSDNリストから削除。",
+      "source_url": "https://ofac.treasury.gov/recent-actions/20261014"
+    }
+  },
+  "market_data": [
+    {
+      "market": "S&P500",
+      "price": "7805.4502",
+      "change": "-0.02%",
+      "basis_time": "2026-10-13・保存日足値、現在値ではない",
+      "source": "market.json / ^GSPC"
+    },
+    {
+      "market": "NASDAQ総合",
+      "price": "27204.3809",
+      "change": "-0.15%",
+      "basis_time": "2026-10-13・保存日足値、現在値ではない",
+      "source": "market.json / ^IXIC"
+    },
+    {
+      "market": "NASDAQ100",
+      "price": "30569.4805",
+      "change": "-0.31%",
+      "basis_time": "2026-10-13・保存日足値、現在値ではない",
+      "source": "market.json / ^NDX"
+    },
+    {
+      "market": "NYダウ",
+      "price": "51670.1016",
+      "change": "-0.35%",
+      "basis_time": "2026-10-13・保存日足値、現在値ではない",
+      "source": "market.json / ^DJI"
+    },
+    {
+      "market": "Russell2000",
+      "price": "2783.3689",
+      "change": "-0.40%",
+      "basis_time": "2026-10-13・保存日足値、現在値ではない",
+      "source": "market.json / ^RUT"
+    },
+    {
+      "market": "PHLX半導体株指数（SOX）",
+      "price": "12208.7949",
+      "change": "-0.23%",
+      "basis_time": "2026-10-13・保存日足値、現在値ではない",
+      "source": "market.json / ^SOX"
+    },
+    {
+      "market": "米2年債利回り",
+      "price": "4.8%",
+      "change": "+0.050ポイント",
+      "basis_time": "2026-10-09・保存日足値、現在値ではない",
+      "source": "market.json / FRED:DGS2"
+    },
+    {
+      "market": "米10年債利回り",
+      "price": "5.217%",
+      "change": "-0.023ポイント",
+      "basis_time": "2026-10-13・保存日足値、現在値ではない",
+      "source": "market.json / ^TNX"
+    },
+    {
+      "market": "DXY",
+      "price": "102.58",
+      "change": "+0.36%",
+      "basis_time": "2026-10-12・保存日足値、現在値ではない",
+      "source": "market.json / DX-Y.NYB"
+    },
+    {
+      "market": "USD/JPY",
+      "price": "158.52",
+      "change": "+0.20%",
+      "basis_time": "2026-10-13・保存日足値、現在値ではない",
+      "source": "market.json / JPY=X"
+    },
+    {
+      "market": "VIX",
+      "price": "15.27",
+      "change": "+0.39%",
+      "basis_time": "2026-10-13・保存日足値、現在値ではない",
+      "source": "market.json / ^VIX"
+    },
+    {
+      "market": "Gold",
+      "price": "不採用",
+      "change": "不採用",
+      "basis_time": "限月・値種別・基準時刻の対応未確認",
+      "source": "market.jsonの連続先物系列"
+    },
+    {
+      "market": "WTI",
+      "price": "不採用",
+      "change": "不採用",
+      "basis_time": "限月・値種別・基準時刻の対応未確認",
+      "source": "market.jsonの連続先物系列"
+    },
+    {
+      "market": "Brent",
+      "price": "不採用",
+      "change": "不採用",
+      "basis_time": "限月・値種別・基準時刻の対応未確認",
+      "source": "market.jsonの連続先物系列"
+    }
+  ],
+  "us_sector_etf_closes": [
+    {
+      "ticker": "XLC",
+      "price": 112.28,
+      "change_pct": 0.74,
+      "market_date": "2026-10-13",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLY",
+      "price": 112.36,
+      "change_pct": 0.08,
+      "market_date": "2026-10-13",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLP",
+      "price": 84.19,
+      "change_pct": -0.26,
+      "market_date": "2026-10-13",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLE",
+      "price": 67.2,
+      "change_pct": 1.8,
+      "market_date": "2026-10-13",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLF",
+      "price": 54.82,
+      "change_pct": -0.42,
+      "market_date": "2026-10-13",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLV",
+      "price": 169.66,
+      "change_pct": -1.35,
+      "market_date": "2026-10-13",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLI",
+      "price": 168.67,
+      "change_pct": -0.28,
+      "market_date": "2026-10-13",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLB",
+      "price": 49.72,
+      "change_pct": 0.57,
+      "market_date": "2026-10-13",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLRE",
+      "price": 41.83,
+      "change_pct": -0.21,
+      "market_date": "2026-10-13",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLK",
+      "price": 196.28,
+      "change_pct": -0.04,
+      "market_date": "2026-10-13",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLU",
+      "price": 41.87,
+      "change_pct": 0.58,
+      "market_date": "2026-10-13",
+      "proxy_for_sector_index": true
+    }
+  ],
+  "market_overview": [
+    {
+      "market": "米国株",
+      "move": "正本10月13日はS&P500 -0.02%、NASDAQ100 -0.31%、SOX -0.23%",
+      "relative_strength": "正本ではエネルギー優位",
+      "background": "10月14日のCPI後反応は別の外部情報",
+      "impact_on_japan": "半導体心理に慎重、ASMLの設備実需を反証として残す"
+    }
+  ],
+  "internal_strength": {
+    "breadth": "正本10月13日の11業種ETFは5上昇・6下落。XLE +1.80%、XLC +0.74%、XLV -1.35%。指数そのものではない。",
+    "assessment": "CPI前の正本順位をCPI後の当日順位として使わない。最新市場幅は正本未取得。"
+  },
+  "scenarios": [
+    {
+      "name": "基本",
+      "conditions": "CPI後の警戒が継続、半導体心理と設備需要が分岐",
+      "impact_on_japan": "高PERに慎重、個別還元・投資計画を選別",
+      "invalidation": "半導体相対反発と市場幅改善"
+    },
+    {
+      "name": "上振れ",
+      "conditions": "金利・円相場が安定し、国内装置株の相対反発を実測",
+      "impact_on_japan": "半導体・光通信への警戒を弱める",
+      "invalidation": "受注悪化や金利再上昇"
+    },
+    {
+      "name": "下振れ",
+      "conditions": "PPI後も物価警戒、ハイテク売りと円相場急変が重なる",
+      "impact_on_japan": "高PER・輸出を慎重化",
+      "invalidation": "物価警戒後退と半導体改善"
+    }
+  ],
+  "data_quality": {
+    "overall": "MANUAL_REVIEW",
+    "missing": [
+      "10月15日JSTのmarket_data成功記録と10月14日の主要米市場・11業種ETF正本値",
+      "Gold・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応証拠",
+      "DXYは10月12日、米2年金利は10月9日で、基準日が統一されていない",
+      "時刻付き為替・暗号資産現在値と限月付き日経先物実測",
+      "アナリスト変更の網羅性、一部政府・統計掲載の本文確認範囲"
+    ],
+    "differences": [
+      "正本は10月14日10:59更新、米株は10月13日。CPI発表後の外部報道値で置換しない",
+      "米2年10月9日と10年10月13日が異なるため2s10s不算出",
+      "日本株実績ページは10月14日、market.jsonの日本指数は10月13日。別データとして分離"
+    ],
+    "excluded": [
+      "未定義商品先物の価格・前日比",
+      "Copper価格・在庫（任意非掲載）",
+      "現在値・日経先物の推定",
+      "CPI発表後の米金利終値や政策変更の未確認断定"
+    ],
+    "cautions": [
+      "ニュースは部分収集。完全版PASSではない",
+      "CPIは発表済み、PPIは10月15日21:30 JST予定で未発表",
+      "寄り付き前の日本株反応は条件付きシナリオ"
+    ]
+  },
+  "final_conclusion": {
+    "headline": "注釈付き暫定版｜CPI待ちから物価再加速への警戒へ。半導体心理と設備実需を分ける",
+    "winners": [
+      "個別還元・光通信の投資計画"
+    ],
+    "losers": [
+      "高PER・資金調達敏感株"
+    ],
+    "top_three": [
+      "米9月CPIは総合+0.6%・前年比+3.7%、コア+0.3%・+2.6%",
+      "CPI後のハイテク安は外部照合、10月14日の正本市場値は未取得",
+      "ASMLの強い設備需要見通しは半導体一律弱気への反証"
+    ],
+    "triggers": [
+      "今夜PPI",
+      "正本当日更新",
+      "国内半導体相対騰落"
+    ],
+    "disclaimer": "注釈付き暫定版MANUAL_REVIEW。完全版FAIL。未確認数値の補完なし。"
+  },
+  "japan_equities_preview": {
+    "summary": "注釈付き暫定版｜CPI待ちから物価再加速への警戒へ。半導体心理と設備実需を分ける",
+    "top_materials": [
+      "米9月CPIは総合+0.6%・前年比+3.7%、コア+0.3%・+2.6%",
+      "CPI後のハイテク安は外部照合、10月14日の正本市場値は未取得",
+      "ASMLの強い設備需要見通しは半導体一律弱気への反証",
+      "オキサイドの光通信設備投資は実施計画、利益効果は精査中",
+      "メディアドゥ増配・特別利益とカカクコムTOB条件変更を個別評価"
+    ],
+    "focus_sectors": [
+      "半導体製造装置",
+      "光通信部品",
+      "電子書籍",
+      "インターネットサービス",
+      "銀行"
+    ],
+    "top_stories": [
+      {
+        "company": "オキサイド",
+        "ticker": "6521",
+        "headline": "データセンター光通信向けに追加設備投資、利益効果は精査中",
+        "importance": "high",
+        "market_pricing_status": "発表後の国内現物反応は未確認"
+      },
+      {
+        "company": "メディアドゥ",
+        "ticker": "3678",
+        "headline": "特別利益で純利益予想増額、営業利益据え置き・増配",
+        "importance": "high",
+        "market_pricing_status": "発表後の国内現物反応は未確認"
+      },
+      {
+        "company": "カカクコム",
+        "ticker": "2371",
+        "headline": "TOB価格3681円から3682円、期間10月28日まで延長",
+        "importance": "high",
+        "market_pricing_status": "発表後の国内現物反応は未確認"
+      }
+    ],
+    "total_story_count": 3
+  },
+  "what_changed": {
+    "previous_view": "10月14日版はCPI結果待ち、SOX下げ幅縮小と中国競争を監視",
+    "new_information": "CPI公表で総合+0.6%、実質時給低下、外部報道はハイテク売りを確認。ASML需要見通しも確認",
+    "revision": "イベント待ちから発表後の警戒へ。AI需要崩壊と一律断定せず、金利・資金調達と設備実需を分ける"
+  },
+  "monitoring_points": [
+    {
+      "target": "キオクシア・東京エレクトロン",
+      "reason": "中国競争懸念の日本株伝達",
+      "view_change_condition": "下落分の回復とTOPIX比の改善が複数日続く"
+    },
+    {
+      "target": "Samsung・SK Hynix・Micron",
+      "reason": "メモリー競争の国際比較",
+      "view_change_condition": "複数市場で反発が続けば即時業績影響を引き下げる"
+    },
+    {
+      "target": "米金利・ドル",
+      "reason": "CPI後の資本コスト",
+      "view_change_condition": "金利・ドルが同時上昇すれば高PER株の逆風を強める"
+    },
+    {
+      "target": "CXMT製品情報",
+      "reason": "計画と商用量産の差",
+      "view_change_condition": "仕様・歩留まり・顧客認定・出荷量が確認されれば競争評価を更新する"
+    }
+  ],
+  "market_context_themes": [
+    {
+      "theme": "物価・金融条件",
+      "initial_view": {
+        "date": "2026-10-13",
+        "text": "CPI公表前のため結果を先取りしない見方"
+      },
+      "new_fact": {
+        "date": "2026-10-14",
+        "text": "総合CPI+0.6%、実質時給-0.5%をBLSで確認"
+      },
+      "market_reaction": {
+        "date": "2026-10-14",
+        "text": "Reutersは発表後のハイテク売りを報道。正本未反映"
+      },
+      "current_view": "イベント待ちから発表後の物価警戒へ更新",
+      "japan_impact": "高PER・米消費関連を慎重に選別",
+      "counter_evidence": "これはFRBの新しい政策決定ではない",
+      "source_ids": [
+        "prior13",
+        "prior14",
+        "oct15-0",
+        "oct15-1",
+        "reaction14"
+      ]
+    },
+    {
+      "theme": "AI心理と設備実需",
+      "initial_view": {
+        "date": "2026-10-12",
+        "text": "米株では半導体と他業種が分岐していた"
+      },
+      "new_fact": {
+        "date": "2026-10-14",
+        "text": "ASMLは強い需要を見込み、オキサイドは追加設備投資計画"
+      },
+      "market_reaction": {
+        "date": "2026-10-14",
+        "text": "米ハイテクの売りと会社の需要見通しが併存"
+      },
+      "current_view": "需要崩壊と一律断定せず、投資採算・資金調達・装置実需を分ける",
+      "japan_impact": "国内装置・光通信は受注と相対騰落を確認",
+      "counter_evidence": "会社見通しと投資計画は将来実績を保証しない",
+      "source_ids": [
+        "prior13",
+        "oct15-2",
+        "oct15-4",
+        "reaction14"
+      ]
+    },
+    {
+      "theme": "個別材料の利益の質",
+      "initial_view": {
+        "date": "2026-10-14",
+        "text": "前日版はカナデン・FDA警告・リソー教育TOBを選別"
+      },
+      "new_fact": {
+        "date": "2026-10-14",
+        "text": "メディアドゥは特別利益で純利益増額、カカクコムは既存TOB条件変更"
+      },
+      "market_reaction": {
+        "date": "2026-10-14",
+        "text": "大引け後公表のため発表後現物反応は未確認"
+      },
+      "current_view": "本業の増益、一時利益、買付条件を区別",
+      "japan_impact": "増配・投資計画・イベントを個別評価",
+      "counter_evidence": "純利益増額は営業利益増額ではなく、買付価格は現在値ではない",
+      "source_ids": [
+        "prior14",
+        "oct15-5",
+        "oct15-6"
+      ]
+    }
+  ],
+  "market_context_sources": {
+    "prior13": {
+      "id": "prior13",
+      "title": "10月13日保存版",
+      "publisher": "Market Morning",
+      "published_date": "2026-10-13",
+      "source_url": "https://market-morning-gules.vercel.app/data/history/2026-10-13/report.json"
+    },
+    "prior14": {
+      "id": "prior14",
+      "title": "10月14日保存版",
+      "publisher": "Market Morning",
+      "published_date": "2026-10-14",
+      "source_url": "https://market-morning-gules.vercel.app/data/history/2026-10-14/report.json"
+    },
+    "oct15-0": {
+      "id": "oct15-0",
+      "title": "米9月CPI、ガソリン上昇で総合加速",
+      "publisher": "BLS",
+      "published_date": "2026-10-14",
+      "source_url": "https://www.bls.gov/news.release/archives/cpi_10142026.htm"
+    },
+    "oct15-1": {
+      "id": "oct15-1",
+      "title": "米実質時給は前月比低下",
+      "publisher": "BLS",
+      "published_date": "2026-10-14",
+      "source_url": "https://www.bls.gov/news.release/archives/realer_10142026.htm"
+    },
+    "oct15-2": {
+      "id": "oct15-2",
+      "title": "ASML、需要見通しの強さと株価心理を区別",
+      "publisher": "ASML",
+      "published_date": "2026-10-14",
+      "source_url": "https://www.investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026"
+    },
+    "oct15-3": {
+      "id": "oct15-3",
+      "title": "OFAC、ベネズエラ関連の指定解除",
+      "publisher": "OFAC",
+      "published_date": "2026-10-14",
+      "source_url": "https://ofac.treasury.gov/recent-actions/20261014"
+    },
+    "oct15-4": {
+      "id": "oct15-4",
+      "title": "データセンター光通信向けに追加設備投資、利益効果は精査中",
+      "publisher": "オキサイド",
+      "published_date": "2026-10-14",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261014550735.pdf"
+    },
+    "oct15-5": {
+      "id": "oct15-5",
+      "title": "特別利益で純利益予想増額、営業利益据え置き・増配",
+      "publisher": "メディアドゥ",
+      "published_date": "2026-10-14",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261002545203.pdf"
+    },
+    "oct15-6": {
+      "id": "oct15-6",
+      "title": "TOB価格3681円から3682円、期間10月28日まで延長",
+      "publisher": "カカクコム",
+      "published_date": "2026-10-14",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261014550805.pdf"
+    },
+    "reaction14": {
+      "id": "reaction14",
+      "title": "10月14日米株市場反応",
+      "publisher": "Reuters",
+      "published_date": "2026-10-14",
+      "source_url": "https://www.reuters.com/business/sp-500-dow-futures-rise-ahead-big-bank-results-cpi-data-2026-10-14/"
+    }
+  }
+}

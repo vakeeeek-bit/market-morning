@@ -1,0 +1,726 @@
+{
+  "version": "2.0",
+  "report_date": "2026-10-15",
+  "target_market_date": "2026-10-13",
+  "updated_at": "2026-10-15T06:46:08+09:00",
+  "scope_note": "当日実読範囲の分析を公開。正本未更新・先物定義・現在値・調査網羅性はQUALIFIEDとして除外。",
+  "research_coverage": {
+    "status": "QUALIFIED",
+    "directions": [
+      {
+        "id": "fixed_universe",
+        "status": "QUALIFIED",
+        "evidence": "正本32系列・各基準日と前回版を実読、価格変更なし／BLS CPI・実質賃金の本文・公表日時・季調区分を確認／ASML本文の実績・会社見通し・留保を分離／TDnet3社の原文とコード、投資・利益・TOBの例外を確認／OFAC指定解除、USTR・White House・FOMC・日銀一覧の確認範囲を記録"
+      },
+      {
+        "id": "cross_news",
+        "status": "PASS",
+        "evidence": "正本32系列・各基準日と前回版を実読、価格変更なし／BLS CPI・実質賃金の本文・公表日時・季調区分を確認／ASML本文の実績・会社見通し・留保を分離／TDnet3社の原文とコード、投資・利益・TOBの例外を確認／OFAC指定解除、USTR・White House・FOMC・日銀一覧の確認範囲を記録"
+      },
+      {
+        "id": "reverse_from_anomalies",
+        "status": "PASS",
+        "evidence": "正本32系列・各基準日と前回版を実読、価格変更なし／BLS CPI・実質賃金の本文・公表日時・季調区分を確認／ASML本文の実績・会社見通し・留保を分離／TDnet3社の原文とコード、投資・利益・TOBの例外を確認／OFAC指定解除、USTR・White House・FOMC・日銀一覧の確認範囲を記録"
+      },
+      {
+        "id": "previous_day_change",
+        "status": "PASS",
+        "evidence": "正本32系列・各基準日と前回版を実読、価格変更なし／BLS CPI・実質賃金の本文・公表日時・季調区分を確認／ASML本文の実績・会社見通し・留保を分離／TDnet3社の原文とコード、投資・利益・TOBの例外を確認／OFAC指定解除、USTR・White House・FOMC・日銀一覧の確認範囲を記録"
+      }
+    ],
+    "items": [
+      {
+        "id": "china_competitor_and_supply",
+        "label": "中国競合技術・供給能力",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "正本32系列・各基準日と前回版を実読、価格変更なし／BLS CPI・実質賃金の本文・公表日時・季調区分を確認／ASML本文の実績・会社見通し・留保を分離／TDnet3社の原文とコード、投資・利益・TOBの例外を確認／OFAC指定解除、USTR・White House・FOMC・日銀一覧の確認範囲を記録",
+        "attempts": [
+          {
+            "method": "当日正本・一次資料・前回公開版の実読",
+            "result": "掲載可能な事実と除外範囲を区別",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+              "https://www.bls.gov/news.release/archives/cpi_10142026.htm",
+              "https://www.bls.gov/news.release/archives/realer_10142026.htm",
+              "https://www.investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026",
+              "https://ofac.treasury.gov/recent-actions/20261014"
+            ],
+            "checked_at": "2026-10-15T06:46:08+09:00"
+          }
+        ],
+        "impact_if_unavailable": "半導体下落要因の重要な競争圧力を見落とす",
+        "publication_use": "selected"
+      },
+      {
+        "id": "fixed_market_universe",
+        "label": "固定市場Universe",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "正本32系列・各基準日と前回版を実読、価格変更なし／BLS CPI・実質賃金の本文・公表日時・季調区分を確認／ASML本文の実績・会社見通し・留保を分離／TDnet3社の原文とコード、投資・利益・TOBの例外を確認／OFAC指定解除、USTR・White House・FOMC・日銀一覧の確認範囲を記録",
+        "attempts": [
+          {
+            "method": "当日正本・一次資料・前回公開版の実読",
+            "result": "掲載可能な事実と除外範囲を区別",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+              "https://www.bls.gov/news.release/archives/cpi_10142026.htm",
+              "https://www.bls.gov/news.release/archives/realer_10142026.htm",
+              "https://www.investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026",
+              "https://ofac.treasury.gov/recent-actions/20261014"
+            ],
+            "checked_at": "2026-10-15T06:46:08+09:00"
+          }
+        ],
+        "impact_if_unavailable": "市場全体判断を保留",
+        "publication_use": "selected"
+      },
+      {
+        "id": "policy_and_macro_news",
+        "label": "政策・中央銀行・マクロ",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "正本32系列・各基準日と前回版を実読、価格変更なし／BLS CPI・実質賃金の本文・公表日時・季調区分を確認／ASML本文の実績・会社見通し・留保を分離／TDnet3社の原文とコード、投資・利益・TOBの例外を確認／OFAC指定解除、USTR・White House・FOMC・日銀一覧の確認範囲を記録",
+        "attempts": [
+          {
+            "method": "当日正本・一次資料・前回公開版の実読",
+            "result": "掲載可能な事実と除外範囲を区別",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+              "https://www.bls.gov/news.release/archives/cpi_10142026.htm",
+              "https://www.bls.gov/news.release/archives/realer_10142026.htm",
+              "https://www.investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026",
+              "https://ofac.treasury.gov/recent-actions/20261014"
+            ],
+            "checked_at": "2026-10-15T06:46:08+09:00"
+          }
+        ],
+        "impact_if_unavailable": "政策方向を断定しない",
+        "publication_use": "selected"
+      },
+      {
+        "id": "market_anomaly_reverse_search",
+        "label": "異常値からの逆引き",
+        "tier": "Required",
+        "status": "取得済",
+        "evidence": "正本32系列・各基準日と前回版を実読、価格変更なし／BLS CPI・実質賃金の本文・公表日時・季調区分を確認／ASML本文の実績・会社見通し・留保を分離／TDnet3社の原文とコード、投資・利益・TOBの例外を確認／OFAC指定解除、USTR・White House・FOMC・日銀一覧の確認範囲を記録",
+        "attempts": [
+          {
+            "method": "当日正本・一次資料・前回公開版の実読",
+            "result": "掲載可能な事実と除外範囲を区別",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+              "https://www.bls.gov/news.release/archives/cpi_10142026.htm",
+              "https://www.bls.gov/news.release/archives/realer_10142026.htm",
+              "https://www.investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026",
+              "https://ofac.treasury.gov/recent-actions/20261014"
+            ],
+            "checked_at": "2026-10-15T06:46:08+09:00"
+          }
+        ],
+        "impact_if_unavailable": "指数表面だけの分析になる",
+        "publication_use": "selected"
+      },
+      {
+        "id": "previous_day_view",
+        "label": "前回公開との差分",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "正本32系列・各基準日と前回版を実読、価格変更なし／BLS CPI・実質賃金の本文・公表日時・季調区分を確認／ASML本文の実績・会社見通し・留保を分離／TDnet3社の原文とコード、投資・利益・TOBの例外を確認／OFAC指定解除、USTR・White House・FOMC・日銀一覧の確認範囲を記録",
+        "attempts": [
+          {
+            "method": "当日正本・一次資料・前回公開版の実読",
+            "result": "掲載可能な事実と除外範囲を区別",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+              "https://www.bls.gov/news.release/archives/cpi_10142026.htm",
+              "https://www.bls.gov/news.release/archives/realer_10142026.htm",
+              "https://www.investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026",
+              "https://ofac.treasury.gov/recent-actions/20261014"
+            ],
+            "checked_at": "2026-10-15T06:46:08+09:00"
+          }
+        ],
+        "impact_if_unavailable": "前回文章の流用を検出できない",
+        "publication_use": "selected"
+      },
+      {
+        "id": "company_disclosures",
+        "label": "日本株の個別企業開示",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "正本32系列・各基準日と前回版を実読、価格変更なし／BLS CPI・実質賃金の本文・公表日時・季調区分を確認／ASML本文の実績・会社見通し・留保を分離／TDnet3社の原文とコード、投資・利益・TOBの例外を確認／OFAC指定解除、USTR・White House・FOMC・日銀一覧の確認範囲を記録",
+        "attempts": [
+          {
+            "method": "TDnet PDF3社本文・表を実読",
+            "result": "投資計画、特別利益・本業、TOB条件変更を区別",
+            "source_urls": [
+              "https://www.release.tdnet.info/inbs/140120261014550735.pdf",
+              "https://www.release.tdnet.info/inbs/140120261002545203.pdf",
+              "https://www.release.tdnet.info/inbs/140120261014550805.pdf"
+            ],
+            "checked_at": "2026-10-15T06:46:08+09:00"
+          }
+        ],
+        "impact_if_unavailable": "個別材料欄を公開しない",
+        "publication_use": "selected"
+      },
+      {
+        "id": "analyst_rating_changes",
+        "label": "アナリスト評価変更",
+        "tier": "Required",
+        "status": "十分調査したが取得不能",
+        "evidence": "公開一覧403、IFIS無料掲載で全変更は保証できず",
+        "attempts": [
+          {
+            "method": "公開一覧",
+            "result": "HTTP403",
+            "source_urls": [
+              "https://kabutan.jp/news/marketnews/?category=6"
+            ],
+            "checked_at": "2026-10-15T06:46:08+09:00"
+          },
+          {
+            "method": "IFIS公開",
+            "result": "HTTP200、網羅性未確認",
+            "source_urls": [
+              "https://kabuyoho.jp/"
+            ],
+            "checked_at": "2026-10-15T06:46:08+09:00"
+          }
+        ],
+        "impact_if_unavailable": "全件で変更なしと断定せず方向判断から除外",
+        "publication_use": "excluded"
+      },
+      {
+        "id": "commodity_contract_definitions",
+        "label": "商品先物の契約定義",
+        "tier": "Required",
+        "status": "十分調査したが取得不能",
+        "evidence": "CME掲載ページ取得、正本連続足との限月対応は証明できず",
+        "attempts": [
+          {
+            "method": "CME Gold",
+            "result": "HTTP200、契約対応未確認",
+            "source_urls": [
+              "https://www.cmegroup.com/markets/metals/precious/gold.settlements.html"
+            ],
+            "checked_at": "2026-10-15T06:46:08+09:00"
+          },
+          {
+            "method": "CME WTI",
+            "result": "HTTP200、契約対応未確認",
+            "source_urls": [
+              "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html"
+            ],
+            "checked_at": "2026-10-15T06:46:08+09:00"
+          }
+        ],
+        "impact_if_unavailable": "商品価格・前日比を不採用",
+        "publication_use": "excluded"
+      }
+    ]
+  },
+  "analysis_quality": {
+    "status": "PASS",
+    "materials": [
+      {
+        "headline": "米9月CPI、ガソリン上昇で総合加速",
+        "fact": {
+          "text": "10月14日08:30 ET公表。総合は季節調整済み前月比+0.6%、前年比+3.7%。コアは+0.3%、+2.6%。ガソリンは前月比+9.1%で総合上昇の半分超を説明。",
+          "source_urls": [
+            "https://www.bls.gov/news.release/archives/cpi_10142026.htm"
+          ],
+          "verification_status": "PASS"
+        },
+        "observed_market_reaction": {
+          "text": "市場反応はReutersで別途照合。正本の翌日価格は未取得",
+          "assets_checked": [
+            "米株",
+            "SOX",
+            "金利",
+            "円相場"
+          ]
+        },
+        "market_internals": {
+          "text": "正本10月13日の11業種ETFは5上昇・6下落。XLE +1.80%、XLC +0.74%、XLV -1.35%。指数そのものではない。"
+        },
+        "market_pricing": {
+          "status": "unknown",
+          "text": "発表後の国内現物反応と正本当日値は未確認"
+        },
+        "interpretation": {
+          "text": "昨日の発表待ちからインフレ警戒へ更新。これ自体はFRBの利上げ決定ではない。",
+          "confidence": "tentative",
+          "evidence": "10月14日08:30 ET公表。総合は季節調整済み前月比+0.6%、前年比+3.7%。コアは+0.3%、+2.6%。ガソリンは前月比+9.1%で総合上昇の半分超を説明。",
+          "uncertainty": "当日市場正本と材料単独の寄与は未確認"
+        },
+        "japan_transmission": {
+          "economic_channel": "昨日の発表待ちからインフレ警戒へ更新。これ自体はFRBの利上げ決定ではない。",
+          "intermediate_reactions": [
+            "金利警戒と設備実需を比較",
+            "国内相対騰落・出来高を確認"
+          ],
+          "affected_sectors": [
+            "半導体製造装置",
+            "光通信部品",
+            "電子書籍",
+            "インターネットサービス",
+            "銀行"
+          ],
+          "pricing_in_japan": "当日の現物反応は未確認",
+          "assessment": "条件付き選別"
+        },
+        "conflict_resolution": "金利・資金調達と装置実需を分け、一つの因果に還元しない",
+        "counter_evidence": [
+          "ASMLの設備需要見通し",
+          "正本XLEの相対優位",
+          "個別還元材料"
+        ],
+        "change_conditions": [
+          "PPI後の物価警戒",
+          "国内半導体相対反発"
+        ],
+        "chronology_check": "PASS"
+      },
+      {
+        "headline": "ASML、需要見通しの強さと株価心理を区別",
+        "fact": {
+          "text": "10月14日公表。Q3売上116.62億ユーロ、粗利率57.5%。Q4売上見通し142～152億ユーロ。会社は2027・2028年の計画供給では顧客需要を満たせないとの見通しを示す。",
+          "source_urls": [
+            "https://www.investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026"
+          ],
+          "verification_status": "PASS"
+        },
+        "observed_market_reaction": {
+          "text": "会社発表と米半導体市場全体の反応を分離。単独寄与は未確認",
+          "assets_checked": [
+            "米株",
+            "SOX",
+            "金利",
+            "円相場"
+          ]
+        },
+        "market_internals": {
+          "text": "正本10月13日の11業種ETFは5上昇・6下落。XLE +1.80%、XLC +0.74%、XLV -1.35%。指数そのものではない。"
+        },
+        "market_pricing": {
+          "status": "unknown",
+          "text": "発表後の国内現物反応と正本当日値は未確認"
+        },
+        "interpretation": {
+          "text": "装置実需の強さは半導体全面弱気への反証。ただし将来見通しであり、顧客の投資実行や日本企業の受注を保証しない。",
+          "confidence": "tentative",
+          "evidence": "10月14日公表。Q3売上116.62億ユーロ、粗利率57.5%。Q4売上見通し142～152億ユーロ。会社は2027・2028年の計画供給では顧客需要を満たせないとの見通しを示す。",
+          "uncertainty": "当日市場正本と材料単独の寄与は未確認"
+        },
+        "japan_transmission": {
+          "economic_channel": "装置実需の強さは半導体全面弱気への反証。ただし将来見通しであり、顧客の投資実行や日本企業の受注を保証しない。",
+          "intermediate_reactions": [
+            "金利警戒と設備実需を比較",
+            "国内相対騰落・出来高を確認"
+          ],
+          "affected_sectors": [
+            "半導体製造装置",
+            "光通信部品",
+            "電子書籍",
+            "インターネットサービス",
+            "銀行"
+          ],
+          "pricing_in_japan": "当日の現物反応は未確認",
+          "assessment": "条件付き選別"
+        },
+        "conflict_resolution": "金利・資金調達と装置実需を分け、一つの因果に還元しない",
+        "counter_evidence": [
+          "ASMLの設備需要見通し",
+          "正本XLEの相対優位",
+          "個別還元材料"
+        ],
+        "change_conditions": [
+          "PPI後の物価警戒",
+          "国内半導体相対反発"
+        ],
+        "chronology_check": "PASS"
+      },
+      {
+        "headline": "国内3社を個別選別",
+        "fact": {
+          "text": "10月14日16:30開示。ファラデー回転子の増産設備に8.41億円を追加投資予定。稼働は2027年2月期下半期中を予定し、当期業績影響は精査中。／10月14日16:00開示。通期純利益予想12億円から27.6億円、配当40円から55円。子会社売却益15.6億円が理由で、売上・営業利益・経常利益予想は据え置き。／10月14日17:40開示。Kamgras 1による買付価格を3681円から3682円へ変更し、公開買付期間を10月28日まで延長。5月13日開始案件の条件変更。",
+          "source_urls": [
+            "https://www.release.tdnet.info/inbs/140120261014550735.pdf"
+          ],
+          "verification_status": "PASS"
+        },
+        "observed_market_reaction": {
+          "text": "寄り付き前で未確認",
+          "assets_checked": [
+            "米株",
+            "SOX",
+            "金利",
+            "円相場"
+          ]
+        },
+        "market_internals": {
+          "text": "正本10月13日の11業種ETFは5上昇・6下落。XLE +1.80%、XLC +0.74%、XLV -1.35%。指数そのものではない。"
+        },
+        "market_pricing": {
+          "status": "unknown",
+          "text": "発表後の国内現物反応と正本当日値は未確認"
+        },
+        "interpretation": {
+          "text": "投資計画・一時利益・買付条件を実績と混同しない",
+          "confidence": "tentative",
+          "evidence": "10月14日16:30開示。ファラデー回転子の増産設備に8.41億円を追加投資予定。稼働は2027年2月期下半期中を予定し、当期業績影響は精査中。／10月14日16:00開示。通期純利益予想12億円から27.6億円、配当40円から55円。子会社売却益15.6億円が理由で、売上・営業利益・経常利益予想は据え置き。／10月14日17:40開示。Kamgras 1による買付価格を3681円から3682円へ変更し、公開買付期間を10月28日まで延長。5月13日開始案件の条件変更。",
+          "uncertainty": "当日市場正本と材料単独の寄与は未確認"
+        },
+        "japan_transmission": {
+          "economic_channel": "投資計画・一時利益・買付条件を実績と混同しない",
+          "intermediate_reactions": [
+            "金利警戒と設備実需を比較",
+            "国内相対騰落・出来高を確認"
+          ],
+          "affected_sectors": [
+            "半導体製造装置",
+            "光通信部品",
+            "電子書籍",
+            "インターネットサービス",
+            "銀行"
+          ],
+          "pricing_in_japan": "当日の現物反応は未確認",
+          "assessment": "条件付き選別"
+        },
+        "conflict_resolution": "金利・資金調達と装置実需を分け、一つの因果に還元しない",
+        "counter_evidence": [
+          "ASMLの設備需要見通し",
+          "正本XLEの相対優位",
+          "個別還元材料"
+        ],
+        "change_conditions": [
+          "PPI後の物価警戒",
+          "国内半導体相対反発"
+        ],
+        "chronology_check": "PASS"
+      }
+    ],
+    "template_degradation_audit": {
+      "today_specific": true,
+      "previous_report_compared": true,
+      "actual_market_reaction_checked": true,
+      "multi_asset_checked": true,
+      "conflicting_materials_compared": true,
+      "transmission_explained": true,
+      "observable_change_conditions": true,
+      "comparison_note": "イベント待ちから発表後の警戒へ。AI需要崩壊と一律断定せず、金利・資金調達と設備実需を分ける"
+    }
+  },
+  "counter_evidence_audit": {
+    "status": "PASS",
+    "conclusions": [
+      {
+        "conclusion": "高PER警戒と実需選別",
+        "checks": [
+          "正本32系列・各基準日と前回版を実読、価格変更なし",
+          "BLS CPI・実質賃金の本文・公表日時・季調区分を確認",
+          "ASML本文の実績・会社見通し・留保を分離",
+          "TDnet3社の原文とコード、投資・利益・TOBの例外を確認",
+          "OFAC指定解除、USTR・White House・FOMC・日銀一覧の確認範囲を記録"
+        ],
+        "weighing": "CPIの警戒に対しASML需要・国内投資計画・増配を比較。利益の質も監査",
+        "uncertainty": "正本市場日差と当日国内反応"
+      }
+    ]
+  },
+  "cross_asset_consistency": {
+    "status": "QUALIFIED",
+    "assets_checked": [
+      "equities",
+      "rates",
+      "fx",
+      "commodities",
+      "crypto"
+    ],
+    "relationships": [
+      {
+        "combination": "CPI上昇とハイテク警戒",
+        "explanation": "外部照合では整合するが正本は発表前の13日値",
+        "unresolved": true,
+        "uncertainty": "当日市場正本・金利終値未確認"
+      },
+      {
+        "combination": "装置実需の強さと株価心理悪化",
+        "explanation": "ASMLの供給計画見通しはAI需要崩壊という断定への反証",
+        "unresolved": true,
+        "uncertainty": "日本企業の受注・株価反応は未確認"
+      }
+    ]
+  },
+  "previous_day_change": {
+    "status": "PASS",
+    "prior_view": "中国CXMTの競争圧力を追加｜半導体安の縮小とCPIを確認、国内材料は個別選別",
+    "new_events": [
+      "米9月CPIは総合+0.6%・前年比+3.7%、コア+0.3%・+2.6%",
+      "CPI後のハイテク安は外部照合、10月14日の正本市場値は未取得",
+      "ASMLの強い設備需要見通しは半導体一律弱気への反証",
+      "オキサイドの光通信設備投資は実施計画、利益効果は精査中",
+      "メディアドゥ増配・特別利益とカカクコムTOB条件変更を個別評価"
+    ],
+    "changed": [
+      "CPI待ちから実績公表後の警戒",
+      "ASML実需を反証に追加",
+      "新規3社の個別材料へ更新"
+    ],
+    "unchanged": [
+      "銅任意非掲載",
+      "数値種別・市場日を分離"
+    ],
+    "japan_revision": "注釈付き暫定版｜CPI待ちから物価再加速への警戒へ。半導体心理と設備実需を分ける"
+  },
+  "source_quality": {
+    "status": "PASS",
+    "checks": [
+      "正本32系列・各基準日と前回版を実読、価格変更なし",
+      "BLS CPI・実質賃金の本文・公表日時・季調区分を確認",
+      "ASML本文の実績・会社見通し・留保を分離",
+      "TDnet3社の原文とコード、投資・利益・TOBの例外を確認",
+      "OFAC指定解除、USTR・White House・FOMC・日銀一覧の確認範囲を記録"
+    ]
+  },
+  "data_integrity": {
+    "status": "QUALIFIED",
+    "checks": [
+      "正本値は未変更",
+      "基準日不一致の2s10s不算出",
+      "先物数値・現在値を除外",
+      "当日ニュースと市場観測日を分離"
+    ]
+  },
+  "quality_gates": {
+    "research_coverage": "QUALIFIED",
+    "source_quality": "PASS",
+    "data_integrity": "QUALIFIED",
+    "analysis_logic": "PASS",
+    "cross_asset_consistency": "QUALIFIED",
+    "japan_transmission": "PASS",
+    "counter_evidence_audit": "PASS",
+    "previous_day_change": "PASS",
+    "final_content_audit": "PASS"
+  },
+  "publication_decision": {
+    "status": "QUALIFIED",
+    "decided_at": "2026-10-15T06:46:08+09:00",
+    "summary": "注釈付き暫定版MANUAL_REVIEW。未確認値を省略し、正本の対象日と新規ニュースを分離。",
+    "components": {
+      "ai_report": {
+        "status": "QUALIFIED",
+        "updated_at": "2026-10-15T06:46:08+09:00",
+        "reason": "注釈付き暫定版MANUAL_REVIEW。未確認値を省略し、正本の対象日と新規ニュースを分離。"
+      },
+      "japan_stocks": {
+        "status": "QUALIFIED",
+        "updated_at": "2026-10-15T06:46:08+09:00",
+        "reason": "注釈付き暫定版MANUAL_REVIEW。未確認値を省略し、正本の対象日と新規ニュースを分離。"
+      }
+    },
+    "unresolved_items": [
+      {
+        "id": "market-asof",
+        "status": "QUALIFIED",
+        "missing": "10月15日JSTのmarket_data成功記録と10月14日の主要米市場・11業種ETF正本値",
+        "impact": "CPI後の当日指数値・市場幅の確定を除外",
+        "last_checked_at": "2026-10-15T06:46:08+09:00",
+        "next_action": "当日正本・公式契約・実測・公開情報を再確認し、証明できた項目だけ採用",
+        "attempts": [
+          {
+            "method": "当日取得・実読",
+            "result": "当日成功なし、米株正本は13日",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-10-15T06:46:08+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "CPI後の当日指数値・市場幅の確定を除外"
+        ],
+        "excluded_from_publication": true
+      },
+      {
+        "id": "contracts",
+        "status": "QUALIFIED",
+        "missing": "Gold・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応証拠",
+        "impact": "商品価格・前日比を除外",
+        "last_checked_at": "2026-10-15T06:46:08+09:00",
+        "next_action": "当日正本・公式契約・実測・公開情報を再確認し、証明できた項目だけ採用",
+        "attempts": [
+          {
+            "method": "当日取得・実読",
+            "result": "HTTP200、正本の契約対応は証明できず",
+            "source_urls": [
+              "https://www.cmegroup.com/markets/metals/precious/gold.settlements.html"
+            ],
+            "checked_at": "2026-10-15T06:46:08+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "商品価格・前日比を除外"
+        ],
+        "excluded_from_publication": true
+      },
+      {
+        "id": "current",
+        "status": "QUALIFIED",
+        "missing": "DXYは10月12日、米2年金利は10月9日で、基準日が統一されていない／時刻付き為替・暗号資産現在値と限月付き日経先物実測",
+        "impact": "現在値・日経先物推測・2s10sを除外",
+        "last_checked_at": "2026-10-15T06:46:08+09:00",
+        "next_action": "当日正本・公式契約・実測・公開情報を再確認し、証明できた項目だけ採用",
+        "attempts": [
+          {
+            "method": "当日取得・実読",
+            "result": "基準日差を実読、必要な時刻付き観測なし",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-10-15T06:46:08+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "現在値・日経先物推測・2s10sを除外"
+        ],
+        "excluded_from_publication": true
+      },
+      {
+        "id": "coverage",
+        "status": "QUALIFIED",
+        "missing": "アナリスト変更の網羅性、一部政府・統計掲載の本文確認範囲",
+        "impact": "変更なし・新規材料なしの網羅断定を除外",
+        "last_checked_at": "2026-10-15T06:46:08+09:00",
+        "next_action": "当日正本・公式契約・実測・公開情報を再確認し、証明できた項目だけ採用",
+        "attempts": [
+          {
+            "method": "当日取得・実読",
+            "result": "公開一覧403、IFISは全件網羅未確認",
+            "source_urls": [
+              "https://kabuyoho.jp/"
+            ],
+            "checked_at": "2026-10-15T06:46:08+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "変更なし・新規材料なしの網羅断定を除外"
+        ],
+        "excluded_from_publication": true
+      }
+    ]
+  },
+  "actual_attempts": [
+    {
+      "id": "tdnet",
+      "url": "https://www.release.tdnet.info/inbs/I_list_001_20261014.html",
+      "checked_at": "2026-10-15T06:42:26+09:00",
+      "status": 200,
+      "bytes": 63514
+    },
+    {
+      "id": "cpi",
+      "url": "https://www.bls.gov/news.release/archives/cpi_10142026.htm",
+      "checked_at": "2026-10-15T06:42:26+09:00",
+      "status": 200,
+      "bytes": 1373525
+    },
+    {
+      "id": "realer",
+      "url": "https://www.bls.gov/news.release/archives/realer_10142026.htm",
+      "checked_at": "2026-10-15T06:42:26+09:00",
+      "status": 200,
+      "bytes": 76666
+    },
+    {
+      "id": "frb",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/2026-press-fomc.htm",
+      "checked_at": "2026-10-15T06:42:26+09:00",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "ecb",
+      "url": "https://www.ecb.europa.eu/rss/press.html",
+      "checked_at": "2026-10-15T06:42:26+09:00",
+      "status": 200,
+      "bytes": 5752
+    },
+    {
+      "id": "cme",
+      "url": "https://www.cmegroup.com/markets/metals/precious/gold.settlements.html",
+      "checked_at": "2026-10-15T06:42:26+09:00",
+      "status": 200,
+      "bytes": 267504
+    },
+    {
+      "id": "cme_wti",
+      "url": "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html",
+      "checked_at": "2026-10-15T06:42:26+09:00",
+      "status": 200,
+      "bytes": 279266
+    },
+    {
+      "id": "ratings",
+      "url": "https://kabutan.jp/news/marketnews/?category=6",
+      "checked_at": "2026-10-15T06:42:30+09:00",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "ifis",
+      "url": "https://kabuyoho.jp/",
+      "checked_at": "2026-10-15T06:42:31+09:00",
+      "status": 200,
+      "bytes": 65595
+    },
+    {
+      "id": "bea",
+      "url": "https://www.bea.gov/news/schedule",
+      "checked_at": "2026-10-15T06:42:31+09:00",
+      "status": 200,
+      "bytes": 71459
+    },
+    {
+      "id": "census",
+      "url": "https://www.census.gov/economic-indicators/",
+      "checked_at": "2026-10-15T06:42:32+09:00",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "ism",
+      "url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/",
+      "checked_at": "2026-10-15T06:42:32+09:00",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "whitehouse",
+      "url": "https://www.whitehouse.gov/presidential-actions/",
+      "checked_at": "2026-10-15T06:42:32+09:00",
+      "status": 200,
+      "bytes": 263904
+    },
+    {
+      "id": "commerce",
+      "url": "https://www.bis.gov/news-updates",
+      "checked_at": "2026-10-15T06:42:32+09:00",
+      "result": "HTTP Error 403: Forbidden"
+    }
+  ]
+}

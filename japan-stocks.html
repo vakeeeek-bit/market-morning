@@ -582,7 +582,7 @@ function renderRegime(regime, summary) {
   appendText(alert, 'market-note', text(regime?.headline_reason, '主要指数のデータを確認できません'));
   if (regime?.divergence_alert) appendText(alert, 'alert-card', regime.divergence_alert);
   const detailHolder = document.getElementById('morning-summary'); detailHolder.replaceChildren();
-  [['主な追い風', summary?.tailwinds], ['主な向かい風', summary?.headwinds], ['今日注目する業種', summary?.focus_sectors]].forEach(([label, values]) => {
+  [['保存時点の追い風', summary?.tailwinds], ['保存時点の向かい風', summary?.headwinds], ['保存時点の注目業種', summary?.focus_sectors]].forEach(([label, values]) => {
     const card = document.createElement('article'); card.className = 'insight-card'; appendText(card, 'insight-title', label); appendText(card, 'insight-reason', Array.isArray(values) ? values.join(' / ') : text(values)); detailHolder.appendChild(card);
   });
   document.getElementById('regime-method').textContent = text(regime?.method_note, 'この履歴には市場観の分析がありません。実測と推定を混同せず、ランキングを参照してください。');
@@ -660,7 +660,8 @@ function renderJapanMarket(data) {
   const review = data.scenario_review || {}; const reviewHolder = document.getElementById('scenario-review'); reviewHolder.replaceChildren();
   appendText(reviewHolder, 'summary-main', `判定：${text(review.status, '更新待ち')}`); appendText(reviewHolder, 'market-note', `実績日：${text(data.market_date)}。直近保存レポートとの比較であり、前営業日のシナリオが保存されていない場合は「昨日」の検証ではありません。`); appendText(reviewHolder, 'market-note', text(review.note, '大引け後に更新します'));
   const reviewGrid = document.createElement('div'); reviewGrid.className = 'insight-grid';
-  [['昨日考えていた条件', review.previous_condition || review.previous_view], ['実際に起きた条件', review.condition_result || 'この履歴では記録なし'], ['市場の反応', review.market_reaction || review.market_result], ['想定とのズレ', review.unexpected_gap || 'この履歴では記録なし'], ['なぜ違ったか', review.gap_reason || 'この履歴では記録なし'], ['今日への修正', review.revision], ['今日の確認点', Array.isArray(review.today_watch) ? review.today_watch.join(' / ') : review.today_watch]].forEach(([label, value]) => {
+  appendText(reviewHolder, 'market-note', `以下は${text(data.market_date)}の保存実績の検証です。当日版の新規材料は上の確認済みニュース・個別株欄を参照してください。`);
+  [['保存時点の想定条件', review.previous_condition || review.previous_view], ['実際に起きた条件', review.condition_result || 'この履歴では記録なし'], ['市場の反応', review.market_reaction || review.market_result], ['想定とのズレ', review.unexpected_gap || 'この履歴では記録なし'], ['なぜ違ったか', review.gap_reason || 'この履歴では記録なし'], ['保存時点での修正', review.revision], ['保存時点の確認点', Array.isArray(review.today_watch) ? review.today_watch.join(' / ') : review.today_watch]].forEach(([label, value]) => {
     const card = document.createElement('div'); card.className = 'insight-card'; appendText(card, 'insight-title', label); appendText(card, 'insight-reason', value); reviewGrid.appendChild(card);
   });
   reviewHolder.appendChild(reviewGrid);

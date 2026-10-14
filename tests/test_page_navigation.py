@@ -7,6 +7,12 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class PageNavigationTests(unittest.TestCase):
+    def test_saved_market_assumptions_are_not_labeled_as_current(self):
+        source = self.read("japan-stocks.html")
+        self.assertIn("保存時点の確認点", source)
+        self.assertIn("当日版の新規材料は上の確認済みニュース", source)
+        self.assertIn("保存時点の追い風", source)
+
     def read(self, name):
         return (ROOT / name).read_text(encoding="utf-8")
 
@@ -112,7 +118,7 @@ class PageNavigationTests(unittest.TestCase):
         self.assertNotIn("セクター内・主要銘柄ランキングを開く", japan)
         self.assertNotIn('id="quick-view"', japan)
         self.assertIn("実測値と推定評価を分けて表示", japan)
-        self.assertIn("昨日考えていた条件", japan)
+        self.assertIn("保存時点の想定条件", japan)
         self.assertIn("今日の確認点", japan)
         self.assertIn("data/glossary.json", japan)
         self.assertIn("市場データ表示には影響しません", japan)

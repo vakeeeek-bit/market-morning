@@ -146,6 +146,8 @@ def validate_relationships(data: dict[str, dict], result: ValidationResult) -> N
         result.error("report.market_move_explanation.transmission_chain: 3段階以上の因果経路が必要です")
     elif not isinstance(move.get("hit_hardest"), list) or not move["hit_hardest"]:
         result.error("report.market_move_explanation.hit_hardest: 影響が大きい市場の説明が必要です")
+    elif any(not isinstance(item, dict) or not str(item.get("market", "")).strip() or not str(item.get("reason", "")).strip() for item in move["hit_hardest"]):
+        result.error("report.market_move_explanation.hit_hardest: marketとreasonを持つ項目が必要です")
     else:
         result.ok("大幅変動理由（値動き→材料→伝達経路→日本株・反証）")
 

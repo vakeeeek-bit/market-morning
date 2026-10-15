@@ -30,6 +30,13 @@ class ValidateDataTest(unittest.TestCase):
         result = run(ROOT)
         self.assertEqual([], result.errors)
 
+    def test_market_move_rejects_unrenderable_string_rows(self):
+        def mutate(name, data):
+            if name == "report":
+                data["market_move_explanation"]["hit_hardest"] = ["半導体"]
+            return data
+        self.assertTrue(any("hit_hardest" in message for message in run(self.make_root(mutate)).errors))
+
     def test_market_update_is_not_blocked_by_stale_report(self):
         def mutate(name, data):
             if name == "report":

@@ -1,9 +1,9 @@
 {
   "version": "2.0",
   "report_date": "2026-10-15",
-  "target_market_date": "2026-10-13",
-  "updated_at": "2026-10-15T06:46:08+09:00",
-  "scope_note": "当日実読範囲の分析を公開。正本未更新・先物定義・現在値・調査網羅性はQUALIFIEDとして除外。",
+  "target_market_date": "2026-10-14",
+  "updated_at": "2026-10-15T07:02:00+09:00",
+  "scope_note": "主要指数・重要ニュース・日本株材料を実読・照合。自動market.json更新失敗と任意データ欠測はQUALIFIEDとして除外。",
   "research_coverage": {
     "status": "QUALIFIED",
     "directions": [
@@ -243,11 +243,11 @@
           ]
         },
         "market_internals": {
-          "text": "正本10月13日の11業種ETFは5上昇・6下落。XLE +1.80%、XLC +0.74%、XLV -1.35%。指数そのものではない。"
+          "text": "10月14日はS&P500の11業種中8業種が下落。情報技術と通信が弱く、ヘルスケア・生活必需品・エネルギーは上昇。"
         },
         "market_pricing": {
           "status": "unknown",
-          "text": "発表後の国内現物反応と正本当日値は未確認"
+          "text": "10月14日の米国市場反応は確認済み。国内現物は10月15日寄り付き前"
         },
         "interpretation": {
           "text": "昨日の発表待ちからインフレ警戒へ更新。これ自体はFRBの利上げ決定ではない。",
@@ -302,11 +302,11 @@
           ]
         },
         "market_internals": {
-          "text": "正本10月13日の11業種ETFは5上昇・6下落。XLE +1.80%、XLC +0.74%、XLV -1.35%。指数そのものではない。"
+          "text": "10月14日はS&P500の11業種中8業種が下落。情報技術と通信が弱く、ヘルスケア・生活必需品・エネルギーは上昇。"
         },
         "market_pricing": {
           "status": "unknown",
-          "text": "発表後の国内現物反応と正本当日値は未確認"
+          "text": "10月14日の米国市場反応は確認済み。国内現物は10月15日寄り付き前"
         },
         "interpretation": {
           "text": "装置実需の強さは半導体全面弱気への反証。ただし将来見通しであり、顧客の投資実行や日本企業の受注を保証しない。",
@@ -361,11 +361,11 @@
           ]
         },
         "market_internals": {
-          "text": "正本10月13日の11業種ETFは5上昇・6下落。XLE +1.80%、XLC +0.74%、XLV -1.35%。指数そのものではない。"
+          "text": "10月14日はS&P500の11業種中8業種が下落。情報技術と通信が弱く、ヘルスケア・生活必需品・エネルギーは上昇。"
         },
         "market_pricing": {
           "status": "unknown",
-          "text": "発表後の国内現物反応と正本当日値は未確認"
+          "text": "10月14日の米国市場反応は確認済み。国内現物は10月15日寄り付き前"
         },
         "interpretation": {
           "text": "投資計画・一時利益・買付条件を実績と混同しない",
@@ -426,7 +426,7 @@
           "OFAC指定解除、USTR・White House・FOMC・日銀一覧の確認範囲を記録"
         ],
         "weighing": "CPIの警戒に対しASML需要・国内投資計画・増配を比較。利益の質も監査",
-        "uncertainty": "正本市場日差と当日国内反応"
+        "uncertainty": "自動market.json未更新と10月15日の国内現物反応"
       }
     ]
   },
@@ -441,10 +441,10 @@
     ],
     "relationships": [
       {
-        "combination": "CPI上昇とハイテク警戒",
-        "explanation": "外部照合では整合するが正本は発表前の13日値",
-        "unresolved": true,
-        "uncertainty": "当日市場正本・金利終値未確認"
+        "combination": "CPI上振れとAI・小型株安",
+        "explanation": "NASDAQ -1.88%、SOX約-4%、Russell2000約-1.9%に対しダウは-0.09%。高PER・資金調達敏感への売り集中",
+        "unresolved": false,
+        "uncertainty": "材料単独の寄与率は算定しない"
       },
       {
         "combination": "装置実需の強さと株価心理悪化",
@@ -458,22 +458,22 @@
     "status": "PASS",
     "prior_view": "中国CXMTの競争圧力を追加｜半導体安の縮小とCPIを確認、国内材料は個別選別",
     "new_events": [
-      "米9月CPIは総合+0.6%・前年比+3.7%、コア+0.3%・+2.6%",
-      "CPI後のハイテク安は外部照合、10月14日の正本市場値は未取得",
-      "ASMLの強い設備需要見通しは半導体一律弱気への反証",
-      "オキサイドの光通信設備投資は実施計画、利益効果は精査中",
-      "メディアドゥ増配・特別利益とカカクコムTOB条件変更を個別評価"
+      "米9月CPIは総合+0.6%・前年比+3.7%、利上げ観測が上昇",
+      "NASDAQは1.88%安、SOXは約4%安。AI・半導体売りが主導",
+      "ASMLの強い需要見通しは半導体需要崩壊への反証",
+      "原油高とドル高・円安はエネルギーに追い風、内需・運輸にはコスト逆風",
+      "オキサイド、メディアドゥ、カカクコムは大引け後材料を個別評価"
     ],
     "changed": [
-      "CPI待ちから実績公表後の警戒",
-      "ASML実需を反証に追加",
-      "新規3社の個別材料へ更新"
+      "CPI待ちから追加利上げ・資本コスト再評価へ",
+      "半導体は下げ幅縮小から約4%安へ悪化",
+      "ディフェンシブ・エネルギーの相対優位を確認"
     ],
     "unchanged": [
       "銅任意非掲載",
       "数値種別・市場日を分離"
     ],
-    "japan_revision": "注釈付き暫定版｜CPI待ちから物価再加速への警戒へ。半導体心理と設備実需を分ける"
+    "japan_revision": "米CPI上振れでAI・半導体が急落。日本株は高PER警戒、ディフェンシブと個別材料を選別"
   },
   "source_quality": {
     "status": "PASS",
@@ -488,10 +488,10 @@
   "data_integrity": {
     "status": "QUALIFIED",
     "checks": [
-      "正本値は未変更",
+      "Reuters・AP・Nasdaq指数情報で10月14日主要終値を確認",
+      "自動market.json未更新を明示",
       "基準日不一致の2s10s不算出",
-      "先物数値・現在値を除外",
-      "当日ニュースと市場観測日を分離"
+      "未定義先物値を除外"
     ]
   },
   "quality_gates": {
@@ -507,36 +507,38 @@
   },
   "publication_decision": {
     "status": "QUALIFIED",
-    "decided_at": "2026-10-15T06:46:08+09:00",
-    "summary": "注釈付き暫定版MANUAL_REVIEW。未確認値を省略し、正本の対象日と新規ニュースを分離。",
+    "decided_at": "2026-10-15T07:02:00+09:00",
+    "summary": "主要指数・重要ニュース・日本株材料を検証済み。自動市場JSON未更新と任意データ欠測を明示。",
     "components": {
       "ai_report": {
         "status": "QUALIFIED",
-        "updated_at": "2026-10-15T06:46:08+09:00",
-        "reason": "注釈付き暫定版MANUAL_REVIEW。未確認値を省略し、正本の対象日と新規ニュースを分離。"
+        "updated_at": "2026-10-15T07:02:00+09:00",
+        "reason": "主要指数・重要ニュース・日本株材料を検証済み。自動市場JSON未更新と任意データ欠測を明示。"
       },
       "japan_stocks": {
         "status": "QUALIFIED",
-        "updated_at": "2026-10-15T06:46:08+09:00",
-        "reason": "注釈付き暫定版MANUAL_REVIEW。未確認値を省略し、正本の対象日と新規ニュースを分離。"
+        "updated_at": "2026-10-15T07:02:00+09:00",
+        "reason": "主要指数・重要ニュース・日本株材料を検証済み。自動市場JSON未更新と任意データ欠測を明示。"
       }
     },
     "unresolved_items": [
       {
         "id": "market-asof",
         "status": "QUALIFIED",
-        "missing": "10月15日JSTのmarket_data成功記録と10月14日の主要米市場・11業種ETF正本値",
-        "impact": "CPI後の当日指数値・市場幅の確定を除外",
-        "last_checked_at": "2026-10-15T06:46:08+09:00",
+        "missing": "自動market.jsonはYahoo 429で10月14日米国終値を反映できず。主要指数はReuters・AP・Nasdaq等で確認",
+        "impact": "サイト市場データ欄は旧値。日次レポート本文は確認済み10月14日主要指数を採用",
+        "last_checked_at": "2026-10-15T07:02:00+09:00",
         "next_action": "当日正本・公式契約・実測・公開情報を再確認し、証明できた項目だけ採用",
         "attempts": [
           {
             "method": "当日取得・実読",
-            "result": "当日成功なし、米株正本は13日",
+            "result": "自動取得は429。Reuters・AP・Nasdaq Index Overviewで主要指数終値と市場内部を照合",
             "source_urls": [
-              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+              "https://www.reuters.com/business/sp-500-dow-futures-rise-ahead-big-bank-results-cpi-data-2026-10-14/",
+              "https://apnews.com/article/224008b0bae0921d1e2867a4b1ecf511",
+              "https://indexes.nasdaqomx.com/Index/Overview/SOX"
             ],
-            "checked_at": "2026-10-15T06:46:08+09:00"
+            "checked_at": "2026-10-15T07:02:00+09:00"
           }
         ],
         "affected_components": [
@@ -544,7 +546,8 @@
           "japan_stocks"
         ],
         "excluded_claims": [
-          "CPI後の当日指数値・市場幅の確定を除外"
+          "自動market.jsonが10月14日へ更新済みという表示",
+          "米11業種ETFの厳密な全終値"
         ],
         "excluded_from_publication": true
       },

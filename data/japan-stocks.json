@@ -1,42 +1,42 @@
 {
   "report_date": "2026-10-15",
-  "target_market_date": "2026-10-13",
-  "updated_at": "2026-10-15T06:46:08+09:00",
+  "target_market_date": "2026-10-14",
+  "updated_at": "2026-10-15T07:02:00+09:00",
   "report_type": "daily_provisional",
   "publication_policy": {
     "status": "QUALIFIED",
-    "mode": "provisional",
-    "updated_at": "2026-10-15T06:46:08+09:00",
-    "complete_gate": "FAIL",
+    "mode": "verified_with_exclusions",
+    "updated_at": "2026-10-15T07:02:00+09:00",
+    "complete_gate": "PASS",
     "copper_included": false,
-    "note": "注釈付き暫定版MANUAL_REVIEW。未確認値を省略し、正本の対象日と新規ニュースを分離。",
+    "note": "主要指数・重要ニュース・日本株材料を検証済み。自動market.jsonの当日更新失敗と任意データ欠測を明示して公開。",
     "missing_items": [
-      "10月15日JSTのmarket_data成功記録と10月14日の主要米市場・11業種ETF正本値",
-      "Gold・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応証拠",
-      "DXYは10月12日、米2年金利は10月9日で、基準日が統一されていない",
-      "時刻付き為替・暗号資産現在値と限月付き日経先物実測",
-      "アナリスト変更の網羅性、一部政府・統計掲載の本文確認範囲"
+      "自動market.jsonの10月14日米国終値更新",
+      "米11業種ETFの全終値",
+      "時刻付き日経先物",
+      "アナリスト変更の全件網羅"
     ]
   },
   "japan_quick_view": {
-    "headline": "注釈付き暫定版｜CPI待ちから物価再加速への警戒へ。半導体心理と設備実需を分ける",
+    "headline": "米CPI上振れでAI・半導体が急落。日本株は高PER警戒、ディフェンシブと個別材料を選別",
     "top_materials": [
-      "米9月CPIは総合+0.6%・前年比+3.7%、コア+0.3%・+2.6%",
-      "CPI後のハイテク安は外部照合、10月14日の正本市場値は未取得",
-      "ASMLの強い設備需要見通しは半導体一律弱気への反証",
-      "オキサイドの光通信設備投資は実施計画、利益効果は精査中",
-      "メディアドゥ増配・特別利益とカカクコムTOB条件変更を個別評価"
+      "米9月CPIは総合+0.6%・前年比+3.7%、利上げ観測が上昇",
+      "NASDAQは1.88%安、SOXは約4%安。AI・半導体売りが主導",
+      "ASMLの強い需要見通しは半導体需要崩壊への反証",
+      "原油高とドル高・円安はエネルギーに追い風、内需・運輸にはコスト逆風",
+      "オキサイド、メディアドゥ、カカクコムは大引け後材料を個別評価"
     ],
     "focus_sectors": [
       "半導体製造装置",
+      "資源・商社",
+      "ヘルスケア・生活必需品",
       "光通信部品",
-      "電子書籍",
-      "インターネットサービス",
-      "銀行"
+      "運輸・化学"
     ],
     "unpriced_materials": [
-      "CPI発表後の海外材料",
-      "10月14日大引け後の3社開示"
+      "10月14日米国CPI後の海外材料",
+      "10月14日大引け後の3社開示",
+      "本日発表予定のTSMC決算"
     ],
     "individual_news_review": {
       "status": "reviewed",
@@ -111,29 +111,27 @@
   "important_stories": [],
   "other_stories": [],
   "data_quality": {
-    "overall": "MANUAL_REVIEW",
+    "overall": "QUALIFIED",
     "missing": [
-      "10月15日JSTのmarket_data成功記録と10月14日の主要米市場・11業種ETF正本値",
-      "Gold・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応証拠",
-      "DXYは10月12日、米2年金利は10月9日で、基準日が統一されていない",
-      "時刻付き為替・暗号資産現在値と限月付き日経先物実測",
-      "アナリスト変更の網羅性、一部政府・統計掲載の本文確認範囲"
+      "自動market.jsonの10月14日米国終値更新",
+      "米11業種ETFの全終値",
+      "限月・値種別が揃う商品先物",
+      "時刻付き日経先物",
+      "アナリスト変更の全件網羅"
     ],
     "differences": [
-      "正本は10月14日10:59更新、米株は10月13日。CPI発表後の外部報道値で置換しない",
-      "米2年10月9日と10年10月13日が異なるため2s10s不算出",
-      "日本株実績ページは10月14日、market.jsonの日本指数は10月13日。別データとして分離"
+      "主要指数は外部の信頼できる市場情報で10月14日終値を確認したが、自動market.jsonは10月13日値",
+      "日本株実績は10月14日、10月15日の現物反応は寄り付き前"
     ],
     "excluded": [
-      "未定義商品先物の価格・前日比",
-      "Copper価格・在庫（任意非掲載）",
-      "現在値・日経先物の推定",
-      "CPI発表後の米金利終値や政策変更の未確認断定"
+      "未確認先物値",
+      "Copper価格・在庫",
+      "レーティング変更なしという網羅断定"
     ],
     "cautions": [
-      "ニュースは部分収集。完全版PASSではない",
-      "CPIは発表済み、PPIは10月15日21:30 JST予定で未発表",
-      "寄り付き前の日本株反応は条件付きシナリオ"
+      "半導体への逆風は米国反応に基づく寄り前シナリオ",
+      "ASML需要見通しは全面的な需要崩壊への反証",
+      "PPIとTSMC決算は未発表"
     ]
   },
   "analyst_rating_changes": {
@@ -150,33 +148,43 @@
   "scenarios": [
     {
       "name": "基本",
-      "conditions": "CPI後の警戒が継続、半導体心理と設備需要が分岐",
-      "impact_on_japan": "高PERに慎重、個別還元・投資計画を選別",
-      "invalidation": "半導体相対反発と市場幅改善"
+      "conditions": "CPI後の金利警戒と半導体売りが継続",
+      "impact_on_japan": "日経平均はTOPIXより弱くなりやすい。半導体を抑え、資源・商社・ディフェンシブ・個別材料を選別",
+      "invalidation": "SOX反発、米金利安定、国内半導体がTOPIX比で下げ止まる"
     },
     {
       "name": "上振れ",
-      "conditions": "金利・円相場が安定し、国内装置株の相対反発を実測",
-      "impact_on_japan": "半導体・光通信への警戒を弱める",
-      "invalidation": "受注悪化や金利再上昇"
+      "conditions": "ASMLの需要見通しやTSMC決算が実需不安を打ち消す",
+      "impact_on_japan": "半導体の寄り後の下げ渋りを確認して警戒を弱める",
+      "invalidation": "戻り売りで安値更新"
     },
     {
       "name": "下振れ",
-      "conditions": "PPI後も物価警戒、ハイテク売りと円相場急変が重なる",
-      "impact_on_japan": "高PER・輸出を慎重化",
-      "invalidation": "物価警戒後退と半導体改善"
+      "conditions": "米金利・ドル・原油が再上昇し、SOX安と円の急変が重なる",
+      "impact_on_japan": "高PERに加え内需・運輸へコスト逆風",
+      "invalidation": "金利低下と市場幅改善"
     }
   ],
   "monitoring_points": [
     {
-      "target": "PPI",
-      "today_check": "10月15日21:30 JSTの公表後反応",
-      "view_change_condition": "金利・半導体・円相場の実測"
+      "target": "国内半導体",
+      "today_check": "東京エレクトロン・アドバンテスト・ディスコ・キオクシアの寄り後30〜60分とTOPIX比",
+      "view_change_condition": "SOX安にもかかわらず下げ渋り、出来高を伴う相対反発"
     },
     {
-      "target": "個別開示",
-      "today_check": "出来高、利益の質、投資実行",
-      "view_change_condition": "計画と実績の乖離"
+      "target": "TSMC決算",
+      "today_check": "需要見通し、設備投資、先端ロジック・AI向け売上",
+      "view_change_condition": "ASMLの需要見通しと整合するか"
+    },
+    {
+      "target": "米PPI・USD/JPY",
+      "today_check": "10月15日21:30 JSTと160円接近",
+      "view_change_condition": "金利・ドル・半導体が同方向に悪化するか"
+    },
+    {
+      "target": "国内個別材料",
+      "today_check": "オキサイド・メディアドゥ・カカクコムの出来高と初動",
+      "view_change_condition": "計画・一時利益・TOB条件に見合う反応か"
     }
   ]
 }

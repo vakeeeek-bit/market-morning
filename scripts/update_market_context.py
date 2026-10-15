@@ -12,6 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 HISTORY = DATA / "history"
+LONG_CONTEXT_MIN_DAYS = 180
 
 
 def load_json(path: Path) -> dict:
@@ -70,6 +71,29 @@ def build_context() -> dict:
         if missing:
             raise ValueError(f"market_context_themes[{index}] unknown sources: {', '.join(missing)}")
 
+        timeline = theme.get("timeline")
+        if not isinstance(timeline, list) or len(timeline) < 3:
+            raise ValueError(f"market_context_themes[{index}].timeline requires at least 3 events")
+        timeline_dates = []
+        for event_index, event in enumerate(timeline):
+            if not isinstance(event, dict):
+                raise ValueError(f"market_context_themes[{index}].timeline[{event_index}] is invalid")
+            for key in ("date", "title", "fact", "market_impact"):
+                if not str(event.get(key, "")).strip():
+                    raise ValueError(
+                        f"market_context_themes[{index}].timeline[{event_index}].{key} is empty"
+                    )
+            event_source_ids = event.get("source_ids", [])
+            if not event_source_ids or any(source_id not in articles for source_id in event_source_ids):
+                raise ValueError(
+                    f"market_context_themes[{index}].timeline[{event_index}] has unknown sources"
+                )
+            event_day = date.fromisoformat(event["date"])
+            timeline_dates.append(event_day)
+            all_dates.append(event_day)
+        if timeline_dates != sorted(timeline_dates):
+            raise ValueError(f"market_context_themes[{index}].timeline is not chronological")
+
         for key in ("initial_view", "new_fact", "market_reaction"):
             stage = theme.get(key)
             if not isinstance(stage, dict) or not stage.get("date") or not stage.get("text"):
@@ -81,6 +105,7 @@ def build_context() -> dict:
 
         rendered_themes.append({
             "theme": theme["theme"],
+            "timeline": timeline,
             "initial_view": theme["initial_view"],
             "new_fact": theme["new_fact"],
             "market_reaction": theme["market_reaction"],
@@ -94,6 +119,8 @@ def build_context() -> dict:
 
     period_start = min(all_dates).isoformat()
     period_end = max(all_dates).isoformat()
+    if (date.fromisoformat(period_end) - date.fromisoformat(period_start)).days < LONG_CONTEXT_MIN_DAYS:
+        raise ValueError("market context must preserve at least about six months of chronology")
     if (report_day - date.fromisoformat(period_end)).days > 1:
         raise ValueError("market context is stale relative to the current report")
 
@@ -124,7 +151,7 @@ def build_context() -> dict:
             "note": "当日レポートと直近の履歴・確認済みニュースから更新",
         },
         "headline": f"市場の見方がどう変わったかを{len(rendered_themes)}つのテーマで確認",
-        "summary": "主要テーマごとに、当初の認識、新しい事実、実際の市場反応、現在の認識を分けています。確認できない変化は作らず、反証も併記します。",
+        "summary": "約半年の重要な転換点を時系列でたどり、直近のニュースがそれまでの見方をどう変えたかを示します。確認できない変化は作らず、反証も併記します。",
         "themes": rendered_themes,
         "scenario_change_conditions": [
             {"condition": item.get("target", "確認条件"), "meaning": item.get("view_change_condition", "")}

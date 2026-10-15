@@ -37,6 +37,7 @@ TOP_LEVEL_REQUIRED = {
         "data_quality",
         "final_conclusion",
         "publication_policy",
+        "market_move_explanation",
     ],
     "market": ["updated_at", "timezone", "markets", "data_quality"],
     "japan-stocks": [

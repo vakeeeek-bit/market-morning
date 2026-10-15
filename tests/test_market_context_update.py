@@ -1,6 +1,7 @@
 import importlib.util
 import json
 import unittest
+from datetime import date
 from pathlib import Path
 
 
@@ -31,12 +32,25 @@ class MarketContextUpdateTests(unittest.TestCase):
             self.assertTrue(theme["japan_impact"])
             self.assertTrue(theme["counter_evidence"])
             self.assertTrue(set(theme["source_ids"]).issubset(source_ids))
+            self.assertGreaterEqual(len(theme["timeline"]), 3)
+            timeline_dates = [event["date"] for event in theme["timeline"]]
+            self.assertEqual(timeline_dates, sorted(timeline_dates))
+            for event in theme["timeline"]:
+                self.assertTrue(event["title"])
+                self.assertTrue(event["fact"])
+                self.assertTrue(event["market_impact"])
+                self.assertTrue(set(event["source_ids"]).issubset(source_ids))
+                dates.append(event["date"])
             for key in ("initial_view", "new_fact", "market_reaction"):
                 dates.append(theme[key]["date"])
                 self.assertTrue(theme[key]["text"])
         self.assertGreaterEqual(len(set(dates)), 3)
         self.assertEqual(context["period_start"], min(dates))
         self.assertEqual(context["period_end"], max(dates))
+        self.assertGreaterEqual(
+            (date.fromisoformat(context["period_end"]) - date.fromisoformat(context["period_start"])).days,
+            180,
+        )
 
     def test_context_is_tied_to_current_report_and_history(self):
         context = self.module.build_context()

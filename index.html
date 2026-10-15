@@ -959,6 +959,8 @@ td.nowrap {
   width: 10px; height: 10px; border-radius: 50%; background: #0f766e;
 }
 .context-timeline-date { color: #0f766e; font-size: 11px; font-weight: 800; }
+.context-timeline-title { margin-top: 2px; color: #17202a; font-size: 13px; font-weight: 850; }
+.context-timeline-impact { margin-top: 5px; padding: 7px 8px; border-radius: 8px; background: #f0fdfa; color: #115e59; font-size: 12px; line-height: 1.5; }
 .context-impact-type {
   display: inline-block; margin-top: 7px; padding: 2px 7px;
   border-radius: 999px; background: #f1f5f9; color: #475569;
@@ -1156,6 +1158,24 @@ td.nowrap {
   color: #7a838d;
   font-size: 10px;
 }
+.market-move-explanation {
+  margin: 0 0 14px;
+  padding: 16px;
+  border: 1px solid #fecaca;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #fff7f7, #ffffff);
+  box-shadow: 0 5px 18px rgba(127,29,29,.06);
+}
+.market-move-title { margin: 0 0 8px; font-size: 18px; font-weight: 900; color: #7f1d1d; }
+.market-move-lead { margin: 0 0 10px; font-size: 13px; line-height: 1.65; color: #334155; }
+.market-move-trigger { padding: 10px 12px; border-radius: 10px; background: #fee2e2; font-size: 13px; line-height: 1.6; font-weight: 700; }
+.market-move-chain { display: grid; gap: 6px; margin: 12px 0; padding: 0; list-style: none; }
+.market-move-chain li { position: relative; padding: 9px 10px 9px 34px; border-radius: 10px; background: #f8fafc; font-size: 12px; line-height: 1.55; }
+.market-move-chain li::before { content: attr(data-step); position: absolute; left: 10px; top: 9px; width: 17px; height: 17px; display: grid; place-items: center; border-radius: 50%; background: #991b1b; color: #fff; font-size: 10px; font-weight: 900; }
+.market-move-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.market-move-card { padding: 10px; border-radius: 10px; background: #f8fafc; font-size: 12px; line-height: 1.55; }
+.market-move-card strong { display: block; margin-bottom: 3px; color: #334155; }
+.market-move-note { margin-top: 9px; color: #64748b; font-size: 11px; line-height: 1.55; }
 
 .japan-detail-link {
   display: inline-flex;
@@ -1194,6 +1214,7 @@ td.nowrap {
   .quick-box:first-child {
     grid-column: 1 / -1;
   }
+  .market-move-grid { grid-template-columns: 1fr; }
 }
 
 </style>
@@ -1301,6 +1322,15 @@ td.nowrap {
   </div>
 </div>
 
+<section class="market-move-explanation" id="market-move-explanation" aria-labelledby="market-move-title">
+  <h2 class="market-move-title" id="market-move-title">📉 なぜ市場が動いたのか</h2>
+  <p class="market-move-lead" id="market-move-lead">当日の値動きと理由を確認中...</p>
+  <div class="market-move-trigger" id="market-move-trigger">直接のきっかけを確認中...</div>
+  <ol class="market-move-chain" id="market-move-chain"></ol>
+  <div class="market-move-grid" id="market-move-grid"></div>
+  <div class="market-move-note" id="market-move-note"></div>
+</section>
+
 <!-- =====================================================
      CURRENT MARKET CONTEXT (WEEKLY STATIC DATA)
 ===================================================== -->
@@ -1308,7 +1338,7 @@ td.nowrap {
 <section class="market-context-section" id="market-context-section" aria-labelledby="market-context-title">
   <div class="market-context-kicker">
     <span>🧭 日次ニュースの前提を理解する</span>
-    <span class="market-context-badge">日次差分更新</span>
+    <span class="market-context-badge">半年の流れ＋日次更新</span>
   </div>
   <h2 class="market-context-headline" id="market-context-title">今のマーケットを読み込み中...</h2>
   <div class="market-context-meta" id="market-context-meta">最終更新・対象期間を確認中</div>
@@ -2248,17 +2278,31 @@ function renderMarketContext(data) {
   (data.themes || []).forEach(item => {
     const card = elementWithClass('article', 'context-theme-card');
     card.appendChild(elementWithClass('div', 'context-card-title', item.theme));
-    [
-      ['当初の認識', item.initial_view],
-      ['新しい事実', item.new_fact],
-      ['市場反応', item.market_reaction]
-    ].forEach(([label, stage]) => {
-      const block = elementWithClass('div', 'context-stage');
-      block.appendChild(elementWithClass('div', 'context-card-label', label));
-      block.appendChild(elementWithClass('div', 'context-stage-date', formatDateKey(stage?.date)));
-      block.appendChild(elementWithClass('div', 'context-card-text', stage?.text || '確認できず'));
-      card.appendChild(block);
-    });
+    const timeline = Array.isArray(item.timeline) ? item.timeline : [];
+    if (timeline.length) {
+      const timelineRoot = elementWithClass('div', 'context-timeline');
+      timeline.forEach(event => {
+        const block = elementWithClass('div', 'context-timeline-item');
+        block.appendChild(elementWithClass('div', 'context-timeline-date', formatDateKey(event.date)));
+        block.appendChild(elementWithClass('div', 'context-timeline-title', event.title));
+        block.appendChild(elementWithClass('div', 'context-card-text', event.fact));
+        block.appendChild(elementWithClass('div', 'context-timeline-impact', `市場の変化：${event.market_impact}`));
+        timelineRoot.appendChild(block);
+      });
+      card.appendChild(timelineRoot);
+    } else {
+      [
+        ['当初の認識', item.initial_view],
+        ['新しい事実', item.new_fact],
+        ['市場反応', item.market_reaction]
+      ].forEach(([label, stage]) => {
+        const block = elementWithClass('div', 'context-stage');
+        block.appendChild(elementWithClass('div', 'context-card-label', label));
+        block.appendChild(elementWithClass('div', 'context-stage-date', formatDateKey(stage?.date)));
+        block.appendChild(elementWithClass('div', 'context-card-text', stage?.text || '確認できず'));
+        card.appendChild(block);
+      });
+    }
     const current = elementWithClass('div', 'context-stage context-stage-current');
     current.appendChild(elementWithClass('div', 'context-card-label', '現在の認識'));
     current.appendChild(elementWithClass('div', 'context-card-text', item.current_view));
@@ -4611,6 +4655,51 @@ function fillQuickList(id, items, mapper) {
   });
 }
 
+function renderMarketMoveExplanation(report) {
+  const data = report.market_move_explanation || {};
+  document.getElementById('market-move-title').textContent =
+    `📉 ${firstUsefulText(data.title, 'なぜ市場が動いたのか')}`;
+  document.getElementById('market-move-lead').textContent =
+    firstUsefulText(data.move, '主要指数の値動きを確認中です。');
+  document.getElementById('market-move-trigger').textContent =
+    `直接のきっかけ：${firstUsefulText(data.trigger, '確認中')}`;
+
+  const chain = document.getElementById('market-move-chain');
+  clearElement(chain);
+  (data.transmission_chain || []).forEach((text, index) => {
+    const li = document.createElement('li');
+    li.dataset.step = String(index + 1);
+    li.textContent = text;
+    chain.appendChild(li);
+  });
+
+  const grid = document.getElementById('market-move-grid');
+  clearElement(grid);
+  (data.hit_hardest || []).forEach(item => {
+    const card = elementWithClass('div', 'market-move-card');
+    const strong = document.createElement('strong');
+    strong.textContent = `特に売られた市場：${item.market || '確認中'}`;
+    card.appendChild(strong);
+    card.appendChild(document.createTextNode(item.reason || ''));
+    grid.appendChild(card);
+  });
+  [
+    ['相対的に強かった理由', data.relative_resilience],
+    ['日本株への波及', data.japan_impact],
+    ['見方を変える条件', data.invalidation]
+  ].forEach(([label, text]) => {
+    if (!text) return;
+    const card = elementWithClass('div', 'market-move-card');
+    const strong = document.createElement('strong');
+    strong.textContent = label;
+    card.appendChild(strong);
+    card.appendChild(document.createTextNode(text));
+    grid.appendChild(card);
+  });
+  document.getElementById('market-move-note').textContent =
+    data.confidence ? `説明の確度：${data.confidence}` : '';
+}
+
 function updateQuickView(report) {
   const quick = report.quick_view || {};
   const executive =
@@ -4677,6 +4766,7 @@ function updateQuickView(report) {
       );
     }
   );
+  renderMarketMoveExplanation(report);
 }
 
 function normalizeCards(value) {

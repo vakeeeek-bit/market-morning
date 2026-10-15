@@ -1,3 +1,4 @@
+import json
 import re
 import unittest
 from pathlib import Path
@@ -151,7 +152,7 @@ class PageNavigationTests(unittest.TestCase):
         world = self.read("index.html")
         self.assertIn('id="market-context-section"', world)
         self.assertIn("/data/market-context.json", world)
-        self.assertIn("日次差分更新", world)
+        self.assertIn("半年の流れ＋日次更新", world)
         self.assertIn("当日レポートと確認済みニュースから更新しています", world)
         self.assertNotIn("market-context.json", self.read("japan-stocks.html"))
 
@@ -161,8 +162,21 @@ class PageNavigationTests(unittest.TestCase):
         self.assertIn("当初の認識", world)
         self.assertIn("現在の認識", world)
         self.assertIn("日本株への影響", world)
+        self.assertIn("context-timeline-item", world)
+        self.assertIn("市場の変化：", world)
         self.assertIn("@media (max-width: 560px)", world)
         self.assertIn(".context-theme-grid { grid-template-columns: 1fr; }", world)
+
+    def test_large_market_move_has_visible_causal_explanation(self):
+        world = self.read("index.html")
+        self.assertIn('id="market-move-explanation"', world)
+        self.assertIn("直接のきっかけ", world)
+        self.assertIn("renderMarketMoveExplanation(report)", world)
+        report = json.loads(self.read("data/report.json"))
+        explanation = report["market_move_explanation"]
+        self.assertGreaterEqual(len(explanation["transmission_chain"]), 3)
+        self.assertTrue(explanation["japan_impact"])
+        self.assertTrue(explanation["confidence"])
 
     def test_glossary_uses_static_json_and_tap_dialog(self):
         world = self.read("index.html")

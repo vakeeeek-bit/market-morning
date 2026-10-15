@@ -133,6 +133,22 @@ def validate_relationships(data: dict[str, dict], result: ValidationResult) -> N
     else:
         result.ok("QUICK VIEW重要ニュースTOP3")
 
+    move = report.get("market_move_explanation")
+    required_move_fields = (
+        "title", "move", "trigger", "relative_resilience",
+        "japan_impact", "confidence", "invalidation",
+    )
+    if not isinstance(move, dict):
+        result.error("report.market_move_explanation: 大幅変動理由の説明が必要です")
+    elif any(not str(move.get(key, "")).strip() for key in required_move_fields):
+        result.error("report.market_move_explanation: 値動き・原因・波及・確度・反証条件が不足しています")
+    elif not isinstance(move.get("transmission_chain"), list) or len(move["transmission_chain"]) < 3:
+        result.error("report.market_move_explanation.transmission_chain: 3段階以上の因果経路が必要です")
+    elif not isinstance(move.get("hit_hardest"), list) or not move["hit_hardest"]:
+        result.error("report.market_move_explanation.hit_hardest: 影響が大きい市場の説明が必要です")
+    else:
+        result.ok("大幅変動理由（値動き→材料→伝達経路→日本株・反証）")
+
     preview = report.get("japan_equities_preview", {})
     report_top5 = preview.get("top_materials")
     japan_top5 = japan.get("japan_quick_view", {}).get("top_materials")
@@ -298,8 +314,8 @@ def validate_market_context(data: dict[str, dict], result: ValidationResult) -> 
     if start and end:
         if start > end:
             result.error("market-context: period_startがperiod_endより後です")
-        elif (end - start).days < 2:
-            result.error("market-context: 日付の流れを示すため3日以上の期間が必要です")
+        elif (end - start).days < 180:
+            result.error("market-context: 半年程度の市場の流れを保持するため180日以上の期間が必要です")
         else:
             result.ok("今のマーケット対象期間")
 
@@ -346,6 +362,33 @@ def validate_market_context(data: dict[str, dict], result: ValidationResult) -> 
                         invalid.append(f"{index}.{key}:period")
                 if not str(stage.get("text", "")).strip():
                     invalid.append(f"{index}.{key}:text")
+            timeline = item.get("timeline")
+            if not isinstance(timeline, list) or len(timeline) < 3:
+                invalid.append(f"{index}.timeline")
+            else:
+                timeline_dates = []
+                for event_index, event in enumerate(timeline):
+                    if not isinstance(event, dict):
+                        invalid.append(f"{index}.timeline[{event_index}]")
+                        continue
+                    parsed = parse_iso_date(
+                        event.get("date"),
+                        f"market-context.themes[{index}].timeline[{event_index}].date",
+                        result,
+                    )
+                    if parsed:
+                        timeline_dates.append(parsed)
+                        if start and parsed < start or end and parsed > end:
+                            invalid.append(f"{index}.timeline[{event_index}]:period")
+                    for key in ("title", "fact", "market_impact"):
+                        if not str(event.get(key, "")).strip():
+                            invalid.append(f"{index}.timeline[{event_index}].{key}")
+                    if not event.get("source_ids") or any(
+                        source_id not in source_ids for source_id in event.get("source_ids", [])
+                    ):
+                        invalid.append(f"{index}.timeline[{event_index}].source_ids")
+                if timeline_dates != sorted(timeline_dates):
+                    invalid.append(f"{index}.timeline:chronology")
             for key in ("theme", "current_view", "japan_impact", "counter_evidence"):
                 if not str(item.get(key, "")).strip():
                     invalid.append(f"{index}.{key}")

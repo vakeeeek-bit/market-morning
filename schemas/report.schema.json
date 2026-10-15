@@ -583,6 +583,22 @@
       },
       "additionalProperties": true
     },
+    "market_move_explanation": {
+      "type": "object",
+      "properties": {
+        "title": {"type": "string"},
+        "move": {"type": "string"},
+        "trigger": {"type": "string"},
+        "transmission_chain": {"type": "array", "items": {"type": "string"}},
+        "hit_hardest": {"type": "array"},
+        "relative_resilience": {"type": "string"},
+        "japan_impact": {"type": "string"},
+        "confidence": {"type": "string"},
+        "invalidation": {"type": "string"}
+      },
+      "required": ["title", "move", "trigger", "transmission_chain", "hit_hardest", "relative_resilience", "japan_impact", "confidence", "invalidation"],
+      "additionalProperties": true
+    },
     "source_notes": {
       "type": "array",
       "items": {
@@ -607,6 +623,7 @@
     "market_overview",
     "data_quality",
     "final_conclusion",
-    "publication_policy"
+    "publication_policy",
+    "market_move_explanation"
   ]
 }

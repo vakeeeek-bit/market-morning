@@ -1,11 +1,315 @@
 {
-  "report_date": "2026-10-15",
-  "target_market_date": "2026-10-13",
-  "updated_at": "2026-10-15T06:46:08+09:00",
+  "report_date": "2026-10-16",
+  "target_market_date": "2026-10-14",
+  "updated_at": "2026-10-16T06:49:12+09:00",
   "publication_mode": "verified_news",
   "coverage_status": "partial",
-  "coverage_note": "新規一次情報7件と既存記事の部分収集。最新ニュース日と正本市場日を分離。CPI結果は新記事で更新。",
+  "coverage_note": "当日一次情報8件を追加した部分収集。旧記事の確認日を更新せず、新着と正本基準日を分離。",
   "articles": [
+    {
+      "id": "oct16-0",
+      "title": "米9月PPI、財・サービス双方で上昇",
+      "published_date": "2026-10-15",
+      "verified_at": "2026-10-16T06:49:12+09:00",
+      "source_type": "primary",
+      "publisher": "BLS",
+      "source_url": "https://www.bls.gov/news.release/archives/ppi_10152026.htm",
+      "verification_url": "https://www.bls.gov/news.release/archives/ppi_10152026.htm",
+      "verification_status": "PASS",
+      "fact": "10月15日08:30 ET公表。最終需要PPIは季調済み前月比+1.3%、前年比+6.3%。食品・エネルギー・貿易サービスを除く系列は+0.5%、前年比+5.0%。8月の総合前月比は今回+0.5%。",
+      "analysis": "物価警戒を維持。ただし金利や株価が一方向へ動くと決めつけず、実際の反応を分ける。",
+      "limitations": "速報・改定対象。前年比は原系列。除外系列を単に食品・エネルギー除くコアと同一視しない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文を実読。PDFは本文・必要な数値表を確認：https://www.bls.gov/news.release/archives/ppi_10152026.htm"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月15日08:30 ET公表。最終需要PPIは季調済み前月比+1.3%、前年比+6.3%。食品・エネルギー・貿易サービスを除く系列は+0.5%、前年比+5.0%。8月の総合前月比は今回+0.5%。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表2026-10-15、実確認2026-10-16T06:49:12+09:00。公表と業務発生日を区別"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離。記事単独の市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "速報・改定対象。前年比は原系列。除外系列を単に食品・エネルギー除くコアと同一視しない。"
+        }
+      }
+    },
+    {
+      "id": "oct16-1",
+      "title": "米小売売上は名目増、8月も上方改定",
+      "published_date": "2026-10-15",
+      "verified_at": "2026-10-16T06:49:12+09:00",
+      "source_type": "primary",
+      "publisher": "U.S. Census Bureau",
+      "source_url": "https://www.census.gov/retail/marts/www/marts_current.pdf",
+      "verification_url": "https://www.census.gov/retail/marts/www/marts_current.pdf",
+      "verification_status": "PASS",
+      "fact": "10月15日08:30 EDT公表。9月小売・飲食売上は季節等調整済み前月比+0.8%、前年比+6.3%。8月前月比は+1.1%から+1.3%へ改定。",
+      "analysis": "米需要の底堅さは景気崩壊への反証。一方、物価調整していないため販売数量の増加率とはいえない。",
+      "limitations": "速報・標本誤差あり。名目値。通常ページ403後に公式PDF本文・表で確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文を実読。PDFは本文・必要な数値表を確認：https://www.census.gov/retail/marts/www/marts_current.pdf"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月15日08:30 EDT公表。9月小売・飲食売上は季節等調整済み前月比+0.8%、前年比+6.3%。8月前月比は+1.1%から+1.3%へ改定。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表2026-10-15、実確認2026-10-16T06:49:12+09:00。公表と業務発生日を区別"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離。記事単独の市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "速報・標本誤差あり。名目値。通常ページ403後に公式PDF本文・表で確認。"
+        }
+      }
+    },
+    {
+      "id": "oct16-2",
+      "title": "TSMC、Q3純利益68.7%増・Q4売上見通しを公表",
+      "published_date": "2026-10-15",
+      "verified_at": "2026-10-16T06:49:12+09:00",
+      "source_type": "primary",
+      "publisher": "TSMC",
+      "source_url": "https://pr.tsmc.com/japanese/news/3346",
+      "verification_url": "https://pr.tsmc.com/japanese/news/3346",
+      "verification_status": "PASS",
+      "fact": "10月15日公表。Q3純利益は前年比+68.7%、ドル建て売上467.2億ドル。Q4売上見通し523～543億ドル、粗利率65～67%。",
+      "analysis": "先端需要の強さは需要崩壊への反証だが、財務負担・高い評価倍率への懸念とは別。日本企業の受注を保証しない。",
+      "limitations": "Q3実績とQ4会社予想を分離。Q4為替前提は1米ドル31.8台湾ドル。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文を実読。PDFは本文・必要な数値表を確認：https://pr.tsmc.com/japanese/news/3346"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月15日公表。Q3純利益は前年比+68.7%、ドル建て売上467.2億ドル。Q4売上見通し523～543億ドル、粗利率65～67%。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表2026-10-15、実確認2026-10-16T06:49:12+09:00。公表と業務発生日を区別"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離。記事単独の市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "Q3実績とQ4会社予想を分離。Q4為替前提は1米ドル31.8台湾ドル。"
+        }
+      }
+    },
+    {
+      "id": "oct16-3",
+      "title": "小枝日銀委員、物価定着と適時の政策調整に言及",
+      "published_date": "2026-10-15",
+      "verified_at": "2026-10-16T06:49:12+09:00",
+      "source_type": "primary",
+      "publisher": "日本銀行",
+      "source_url": "https://www.boj.or.jp/about/press/koen_2026/data/ko261015a1.pdf",
+      "verification_url": "https://www.boj.or.jp/about/press/koen_2026/data/ko261015a1.pdf",
+      "verification_status": "PASS",
+      "fact": "10月15日熊本講演。物価上昇の定着と緩和的な金融環境を説明し、経済・物価をみながら政策金利を適時に調整すべきとの見解を示した。",
+      "analysis": "銀行・不動産・為替への条件付き材料。委員の見解を新しい政策決定や利上げ日程と読み替えない。",
+      "limitations": "個人見解。新規会合決定ではない。金利上昇の家計・企業への影響を丁寧に確認するとの留保もある。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文を実読。PDFは本文・必要な数値表を確認：https://www.boj.or.jp/about/press/koen_2026/data/ko261015a1.pdf"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月15日熊本講演。物価上昇の定着と緩和的な金融環境を説明し、経済・物価をみながら政策金利を適時に調整すべきとの見解を示した。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表2026-10-15、実確認2026-10-16T06:49:12+09:00。公表と業務発生日を区別"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離。記事単独の市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "個人見解。新規会合決定ではない。金利上昇の家計・企業への影響を丁寧に確認するとの留保もある。"
+        }
+      }
+    },
+    {
+      "id": "oct16-4",
+      "title": "OFAC、指定追加と限定的な一般許可を同時公表",
+      "published_date": "2026-10-15",
+      "verified_at": "2026-10-16T06:49:12+09:00",
+      "source_type": "primary",
+      "publisher": "OFAC",
+      "source_url": "https://ofac.treasury.gov/recent-actions/20261015",
+      "verification_url": "https://ofac.treasury.gov/recent-actions/20261015",
+      "verification_status": "PASS",
+      "fact": "10月15日、イラン関連等のSDN追加と一般許可を公表。GL128D・130Bは対象Lukoil取引を2027年4月24日00:01 EDTまで、GL FFは対象銀行取引の整理を2026年10月30日00:01 EDTまで条件付きで許可。",
+      "analysis": "新規制裁と限定例外を分ける。石油・海運・商社の規制実務に関係するが、供給量や原油価格の方向は断定しない。",
+      "limitations": "128Dは国外小売給油所等、130Bは指定ブルガリア企業等に限定。128Dはロシア所在者・口座への送金等を許可しない。FFの対象被制裁者への支払いは凍結口座。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文を実読。PDFは本文・必要な数値表を確認：https://ofac.treasury.gov/recent-actions/20261015"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月15日、イラン関連等のSDN追加と一般許可を公表。GL128D・130Bは対象Lukoil取引を2027年4月24日00:01 EDTまで、GL FFは対象銀行取引の整理を2026年10月30日00:01 EDTまで条件付きで許可。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表2026-10-15、実確認2026-10-16T06:49:12+09:00。公表と業務発生日を区別"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離。記事単独の市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "128Dは国外小売給油所等、130Bは指定ブルガリア企業等に限定。128Dはロシア所在者・口座への送金等を許可しない。FFの対象被制裁者への支払いは凍結口座。"
+        }
+      }
+    },
+    {
+      "id": "oct16-5",
+      "title": "PAG浮動株買収を決定、完了条件と翌期以降の寄与を区別",
+      "published_date": "2026-10-15",
+      "verified_at": "2026-10-16T06:49:12+09:00",
+      "source_type": "primary",
+      "publisher": "三井物産",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261015551440.pdf",
+      "verification_url": "https://www.release.tdnet.info/inbs/140120261015551440.pdf",
+      "verification_status": "PASS",
+      "fact": "10月15日20:00開示。PenskeとPAG浮動株取得を決定。三井の出資は最大16億米ドル、持分は約20.3%から約36%へ予定。2027年3月期Q4完了見込み、当期影響軽微、翌期以降の貢献を想定。",
+      "analysis": "7月の非拘束提案から契約段階へ進展。成長投資は追い風候補だが資金負担と承認条件を評価し、取得完了とは扱わない。",
+      "limitations": "会社見通し・条件付き。発表後の国内現物反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文を実読。PDFは本文・必要な数値表を確認：https://www.release.tdnet.info/inbs/140120261015551440.pdf"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月15日20:00開示。PenskeとPAG浮動株取得を決定。三井の出資は最大16億米ドル、持分は約20.3%から約36%へ予定。2027年3月期Q4完了見込み、当期影響軽微、翌期以降の貢献を想定。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表2026-10-15、実確認2026-10-16T06:49:12+09:00。公表と業務発生日を区別"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離。記事単独の市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "会社見通し・条件付き。発表後の国内現物反応は未確認。"
+        }
+      }
+    },
+    {
+      "id": "oct16-6",
+      "title": "工事採算改善で通期営業利益予想増額・増配",
+      "published_date": "2026-10-15",
+      "verified_at": "2026-10-16T06:49:12+09:00",
+      "source_type": "primary",
+      "publisher": "大末建設",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261015551542.pdf",
+      "verification_url": "https://www.release.tdnet.info/inbs/140120261015551542.pdf",
+      "verification_status": "PASS",
+      "fact": "10月15日16:30開示。2027年3月期連結営業利益予想57.5億円から70.5億円（22.6%増額）、年間配当予想186円から234円。工事進捗・採算改善や設計変更・物価対応の進展が理由。",
+      "analysis": "一時売却益だけでない本業採算の改善は個別追い風候補。ただし会社予想であり、建設全体の利益改善とは断定しない。",
+      "limitations": "会社見通し・条件付き。発表後の国内現物反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文を実読。PDFは本文・必要な数値表を確認：https://www.release.tdnet.info/inbs/140120261015551542.pdf"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月15日16:30開示。2027年3月期連結営業利益予想57.5億円から70.5億円（22.6%増額）、年間配当予想186円から234円。工事進捗・採算改善や設計変更・物価対応の進展が理由。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表2026-10-15、実確認2026-10-16T06:49:12+09:00。公表と業務発生日を区別"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離。記事単独の市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "会社見通し・条件付き。発表後の国内現物反応は未確認。"
+        }
+      }
+    },
+    {
+      "id": "oct16-7",
+      "title": "台湾子会社で個人情報漏洩、会社は業績影響軽微と見込むが精査中",
+      "published_date": "2026-10-15",
+      "verified_at": "2026-10-16T06:49:12+09:00",
+      "source_type": "primary",
+      "publisher": "ACCESS",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261015551574.pdf",
+      "verification_url": "https://www.release.tdnet.info/inbs/140120261015551574.pdf",
+      "verification_status": "PASS",
+      "fact": "10月15日17:00開示。台湾子会社サービスCROSへの不正アクセスと情報漏洩を公表。9月11日に徴候検知。現時点で特定1社向けBIツールが起点、他取引先の漏洩は未確認。連結業績影響は軽微見込みだが精査中。",
+      "analysis": "信用・対応費用の逆風候補。会社の影響軽微見通しを損失確定や影響ゼロとは扱わず、追加開示を監視する。",
+      "limitations": "会社見通し・条件付き。発表後の国内現物反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文を実読。PDFは本文・必要な数値表を確認：https://www.release.tdnet.info/inbs/140120261015551574.pdf"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月15日17:00開示。台湾子会社サービスCROSへの不正アクセスと情報漏洩を公表。9月11日に徴候検知。現時点で特定1社向けBIツールが起点、他取引先の漏洩は未確認。連結業績影響は軽微見込みだが精査中。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表2026-10-15、実確認2026-10-16T06:49:12+09:00。公表と業務発生日を区別"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離。記事単独の市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "会社見通し・条件付き。発表後の国内現物反応は未確認。"
+        }
+      }
+    },
     {
       "id": "oct15-0",
       "title": "米9月CPI、ガソリン上昇で総合加速",

@@ -1,0 +1,193 @@
+{
+  "report_date": "2026-10-16",
+  "target_market_date": "2026-10-14",
+  "updated_at": "2026-10-16T06:49:12+09:00",
+  "report_type": "daily_provisional",
+  "publication_policy": {
+    "status": "QUALIFIED",
+    "mode": "provisional",
+    "updated_at": "2026-10-16T06:49:12+09:00",
+    "complete_gate": "FAIL",
+    "copper_included": false,
+    "note": "注釈付き暫定版MANUAL_REVIEW。正本の基準日遅れと除外値を明示し、確認済みニュースを更新。",
+    "missing_items": [
+      "10月16日JSTのmarket_data成功記録、10月15日の主要米市場・11セクターETF正本値",
+      "Gold・WTI・Brentの保存値に対応する取引所・限月・値種別・基準時刻",
+      "米2年金利・DXYは10月13日、主要米株・米10年金利は14日で基準日が不統一",
+      "時刻付き為替・暗号資産現在値と限月付き日経先物実測値",
+      "アナリスト評価変更の全件網羅と一部政府ページの取得範囲"
+    ]
+  },
+  "japan_quick_view": {
+    "headline": "注釈付き暫定版｜物価警戒は続くが米主要指数は反発。半導体とディフェンシブの分岐を確認",
+    "top_materials": [
+      "米9月PPIは前月比+1.3%・前年比+6.3%、物価警戒継続",
+      "米主要指数反発でも半導体続落、全面回復ではない（外部照合）",
+      "TSMCの増益・強いQ4見通しと半導体株の評価調整が併存",
+      "小枝日銀委員は経済・物価に応じた適時調整に言及、新規決定ではない",
+      "三井物産の投資、大末建設の増額、ACCESSの漏洩を個別評価"
+    ],
+    "focus_sectors": [
+      "半導体製造装置",
+      "医薬品",
+      "生活必需品",
+      "建設",
+      "商社",
+      "情報通信"
+    ],
+    "unpriced_materials": [
+      "15日の米市場反応の国内寄り付きへの波及",
+      "15日大引け後の3社開示"
+    ],
+    "individual_news_review": {
+      "status": "reviewed",
+      "story_count": 3,
+      "source": "TDnet公式一覧・一次PDF3社の本文・コード確認。全521件の網羅調査ではない"
+    }
+  },
+  "top_stories": [
+    {
+      "company": "三井物産",
+      "ticker": "8031",
+      "headline": "PAG浮動株買収を決定、完了条件と翌期以降の寄与を区別",
+      "fact": "10月15日20:00開示。PenskeとPAG浮動株取得を決定。三井の出資は最大16億米ドル、持分は約20.3%から約36%へ予定。2027年3月期Q4完了見込み、当期影響軽微、翌期以降の貢献を想定。",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261015551440.pdf",
+      "analysis": "7月の非拘束提案から契約段階へ進展。成長投資は追い風候補だが資金負担と承認条件を評価し、取得完了とは扱わない。",
+      "category": "セクター限定・条件付き追い風",
+      "related_sectors": [
+        "商社",
+        "自動車流通"
+      ],
+      "today_watch": "投資負担、承認条件、翌期以降の収益寄与",
+      "announced_at": "2026-10-15",
+      "timing": "10月15日大引け後公表・10月16日寄り付き前",
+      "market_pricing_status": "発表後の国内現物反応は未確認",
+      "price_reaction": "未確認",
+      "related_stocks": [],
+      "importance": "high",
+      "confidence": "supported"
+    },
+    {
+      "company": "大末建設",
+      "ticker": "1814",
+      "headline": "工事採算改善で通期営業利益予想増額・増配",
+      "fact": "10月15日16:30開示。2027年3月期連結営業利益予想57.5億円から70.5億円（22.6%増額）、年間配当予想186円から234円。工事進捗・採算改善や設計変更・物価対応の進展が理由。",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261015551542.pdf",
+      "analysis": "一時売却益だけでない本業採算の改善は個別追い風候補。ただし会社予想であり、建設全体の利益改善とは断定しない。",
+      "category": "追い風候補・個別業績と還元",
+      "related_sectors": [
+        "建設"
+      ],
+      "today_watch": "営業利益の実現、出来高、工事採算の持続",
+      "announced_at": "2026-10-15",
+      "timing": "10月15日大引け後公表・10月16日寄り付き前",
+      "market_pricing_status": "発表後の国内現物反応は未確認",
+      "price_reaction": "未確認",
+      "related_stocks": [],
+      "importance": "high",
+      "confidence": "supported"
+    },
+    {
+      "company": "ACCESS",
+      "ticker": "4813",
+      "headline": "台湾子会社で個人情報漏洩、会社は業績影響軽微と見込むが精査中",
+      "fact": "10月15日17:00開示。台湾子会社サービスCROSへの不正アクセスと情報漏洩を公表。9月11日に徴候検知。現時点で特定1社向けBIツールが起点、他取引先の漏洩は未確認。連結業績影響は軽微見込みだが精査中。",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261015551574.pdf",
+      "analysis": "信用・対応費用の逆風候補。会社の影響軽微見通しを損失確定や影響ゼロとは扱わず、追加開示を監視する。",
+      "category": "向かい風候補・個別リスク",
+      "related_sectors": [
+        "情報通信"
+      ],
+      "today_watch": "追加被害、復旧・再発防止費用、業績影響の確定",
+      "announced_at": "2026-10-15",
+      "timing": "10月15日大引け後公表・10月16日寄り付き前",
+      "market_pricing_status": "発表後の国内現物反応は未確認",
+      "price_reaction": "未確認",
+      "related_stocks": [],
+      "importance": "high",
+      "confidence": "supported"
+    }
+  ],
+  "important_stories": [],
+  "other_stories": [],
+  "data_quality": {
+    "overall": "MANUAL_REVIEW",
+    "missing": [
+      "10月16日JSTのmarket_data成功記録、10月15日の主要米市場・11セクターETF正本値",
+      "Gold・WTI・Brentの保存値に対応する取引所・限月・値種別・基準時刻",
+      "米2年金利・DXYは10月13日、主要米株・米10年金利は14日で基準日が不統一",
+      "時刻付き為替・暗号資産現在値と限月付き日経先物実測値",
+      "アナリスト評価変更の全件網羅と一部政府ページの取得範囲"
+    ],
+    "differences": [
+      "10月15日の米主要指数反発・半導体続落は外部照合。market.jsonは14日までで、報道値で置換しない",
+      "PPIの8月前月比は今回公表+0.5%。旧公表・報道の+0.4%と混同しない",
+      "日本株実績データは15日、総合正本の日本指数は14日。別系列・別日として分離"
+    ],
+    "excluded": [
+      "限月不明の商品先物価格・前日比",
+      "Copper価格・在庫（任意非掲載）",
+      "基準日不一致の2s10s",
+      "未確認現在値・日経先物推定・政策確率",
+      "記事単独の株価寄与、未確認の国内初動"
+    ],
+    "cautions": [
+      "部分収集の注釈付き暫定版。完全版FAILを保持",
+      "小売売上は名目値で物価調整済み数量ではない",
+      "会社予想・投資予定・一般許可を実績・完了・全面制裁解除と扱わない"
+    ]
+  },
+  "analyst_rating_changes": {
+    "coverage_status": "十分調査したが取得不能",
+    "headline": "公開情報の掲載範囲は限定。全変更の網羅性は未確認",
+    "items": [],
+    "source_review": [
+      {
+        "source": "公開一覧・IFIS",
+        "result": "公開一覧403、IFIS無料ページは全変更の網羅性未確認"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "name": "基本",
+      "conditions": "主要指数反発と半導体の弱さが併存、物価警戒は残る",
+      "impact_on_japan": "医薬品・生活必需品の相対耐性と個別業績を選別。半導体全面回復は未確認",
+      "invalidation": "国内半導体のTOPIX比・出来高改善が複数銘柄へ広がる"
+    },
+    {
+      "name": "上振れ",
+      "conditions": "金利・為替が安定し、TSMC需要見通しを受け国内半導体の相対反発が広がる",
+      "impact_on_japan": "装置・部品への慎重姿勢を弱める",
+      "invalidation": "資金調達不安再燃または反発が一部銘柄に限定"
+    },
+    {
+      "name": "下振れ",
+      "conditions": "物価警戒とAI財務不安が再燃し、半導体売り・円急変が重なる",
+      "impact_on_japan": "高PER・輸出に逆風、ディフェンシブも絶対上昇は保証しない",
+      "invalidation": "市場幅と半導体相対騰落の持続改善"
+    }
+  ],
+  "monitoring_points": [
+    {
+      "target": "国内半導体",
+      "today_check": "TOPIX比・出来高・複数銘柄の継続反発",
+      "view_change_condition": "相対改善の広がりで警戒を弱める"
+    },
+    {
+      "target": "金利・円相場",
+      "today_check": "基準時刻付き実測値",
+      "view_change_condition": "金利再上昇・円急変で見通し変更"
+    },
+    {
+      "target": "輸出入物価",
+      "today_check": "10月16日21:30 JSTのBLS公表",
+      "view_change_condition": "物価と市場反応の組み合わせ"
+    },
+    {
+      "target": "国内個別開示",
+      "today_check": "承認条件・業績の質・追加被害",
+      "view_change_condition": "会社見通しと実績の乖離"
+    }
+  ]
+}

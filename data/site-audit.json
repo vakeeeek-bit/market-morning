@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-10-15T06:51:07+09:00",
-  "report_publication_status": "10月15日注釈付き暫定版を本番JSONで確認。完全版FAIL、暫定版MANUAL_REVIEW。世界市場の品質欄の項目対応を追加修正。",
+  "checked_at": "2026-10-16T06:49:12+09:00",
+  "report_publication_status": "10月16日注釈付き暫定版。完全版FAIL、暫定版MANUAL_REVIEW。一次情報8件を追加し公開検証エラー0件。",
   "blockers": [
     {
       "item": "金・WTI・Brentの先物定義（3系列）",
@@ -8,11 +8,11 @@
     }
   ],
   "components": {
-    "report": "2026-10-15",
-    "japan_report": "2026-10-15",
-    "world_market": "2026-10-13",
-    "japan_market": "2026-10-14",
-    "news": "2026-10-15"
+    "report": "2026-10-16",
+    "japan_report": "2026-10-16",
+    "world_market": "2026-10-14",
+    "japan_market": "2026-10-15",
+    "news": "2026-10-16"
   },
   "fixes": [
     "取得エラーを部品ごとに隔離",
@@ -64,10 +64,9 @@
   "market_collection_attempt": "2026-10-11 再取得失敗。既存正本保持。data/collection-attempts/2026-10-11-market.json",
   "copper_policy": "任意掲載。非掲載時は価格・在庫の未取得を公開阻害にしない。掲載時は定義・出典確認が必要。",
   "candidate_status": {
-    "report_date": "2026-10-15",
+    "report_date": "2026-10-16",
     "edition": "provisional",
     "complete_gate": "FAIL",
-    "data_quality": "MANUAL_REVIEW",
-    "production_verified": true
+    "data_quality": "MANUAL_REVIEW"
   }
 }

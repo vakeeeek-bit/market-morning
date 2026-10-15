@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-15 21:08:42 JST",
+  "updated_at": "2026-10-16 08:43:24 JST",
   "market_date": "2026-10-15",
-  "data_phase": "大引け後",
+  "data_phase": "取引開始前",
   "data_state": {
     "kind": "normal",
     "label": "通常取引日",
@@ -1034,20 +1034,19 @@
     "market_date": "2026-10-15",
     "title": "昨日のシナリオ検証 → 今日への修正",
     "basis": "前回レポートの注目業種をTOPIX-17業種ETFの実績と照合し、次の取引日へ見方を修正",
-    "status": "対象なし",
+    "status": "寄り付き前・検証保留",
     "checks": [],
-    "previous_condition": "10月14日米国CPI後の海外材料 / 10月14日大引け後の3社開示 / 本日発表予定のTSMC決算",
-    "condition_result": "発生条件を自動判定できる一次データがないため、確認できず",
-    "market_reaction": "医薬品 +3.63% / 不動産 +2.20% / 小売 +1.78%",
-    "unexpected_gap": "比較対象なし",
+    "previous_condition": "15日の米市場反応の国内寄り付きへの波及 / 15日大引け後の3社開示",
+    "condition_result": "本日の条件と日本株現物の反応はまだ発生・確認していません",
+    "market_reaction": "本日の日本株現物は寄り付き前",
+    "unexpected_gap": "新しい取引結果がないため比較しません",
     "gap_reason": "業種ETFの結果だけでは個別ニュースとの因果を分離できないため、理由は断定しません",
-    "revision": "修正対象なし",
+    "revision": "本日の大引け後、実際の条件・市場反応・想定との差を確認して修正",
     "today_watch": [
-      "10月14日米国CPI後の海外材料",
-      "10月14日大引け後の3社開示",
-      "本日発表予定のTSMC決算"
+      "15日の米市場反応の国内寄り付きへの波及",
+      "15日大引け後の3社開示"
     ],
-    "note": "的中・外れを採点するものではありません。前回の見方と実績の差から、今日の監視点を修正します。"
+    "note": "前営業日の値動きを、本日シナリオの結果として採点しません。"
   },
   "data_quality": {
     "sector_total": 17,
@@ -1087,69 +1086,69 @@
   },
   "key_drivers": [
     {
-      "driver": "米国半導体株",
-      "category": "海外株",
-      "assessment": "向かい風",
-      "status": "observed",
-      "market_value": 11684.3828,
-      "change_pct": -4.3,
-      "transmission_path": "国内半導体関連の投資家心理に波及",
-      "reason": "PHLX半導体株指数（SOX） 11684.3828、前日比 -4.30%（2026-10-14）→ 国内半導体関連の投資家心理に波及",
-      "affected_sectors": [
-        "電機・精密",
-        "機械"
-      ],
-      "market_date": "2026-10-14",
-      "selection_factors": {
-        "日本株現物への織り込み": "同日または既反映の参考値",
-        "日本株への波及範囲": 3,
-        "影響業種数": 2,
-        "ニュース重要度": 3,
-        "値動き": 3
-      },
-      "pricing_status": "同日または既反映の参考値",
-      "change_condition": "米半導体株が反転するか、日本の電機・精密が追随しなければ影響を弱く見る"
-    },
-    {
       "driver": "米10年金利",
       "category": "金利",
       "assessment": "高PER株に追い風",
       "status": "observed",
-      "market_value": 5.19,
-      "change_pct": -0.52,
+      "market_value": 5.089,
+      "change_pct": -1.95,
       "transmission_path": "高PER株の割引率と銀行収益期待が変化",
-      "reason": "米10年債利回り 5.19、前日比 -0.52%（2026-10-14）→ 高PER株の割引率と銀行収益期待が変化",
+      "reason": "米10年債利回り 5.089、前日比 -1.95%（2026-10-15）→ 高PER株の割引率と銀行収益期待が変化",
       "affected_sectors": [
         "電機・精密",
         "情報通信・サービス",
         "銀行"
       ],
-      "market_date": "2026-10-14",
+      "market_date": "2026-10-15",
       "selection_factors": {
         "日本株現物への織り込み": "同日または既反映の参考値",
         "日本株への波及範囲": 3,
         "影響業種数": 3,
         "ニュース重要度": 3,
-        "値動き": 2
+        "値動き": 3
       },
       "pricing_status": "同日または既反映の参考値",
       "change_condition": "金利の方向が反転し、電機・精密や銀行の反応も変われば見方を修正する"
+    },
+    {
+      "driver": "米国半導体株",
+      "category": "海外株",
+      "assessment": "向かい風",
+      "status": "observed",
+      "market_value": 11581.2148,
+      "change_pct": -0.88,
+      "transmission_path": "国内半導体関連の投資家心理に波及",
+      "reason": "PHLX半導体株指数（SOX） 11581.2148、前日比 -0.88%（2026-10-15）→ 国内半導体関連の投資家心理に波及",
+      "affected_sectors": [
+        "電機・精密",
+        "機械"
+      ],
+      "market_date": "2026-10-15",
+      "selection_factors": {
+        "日本株現物への織り込み": "同日または既反映の参考値",
+        "日本株への波及範囲": 3,
+        "影響業種数": 2,
+        "ニュース重要度": 3,
+        "値動き": 2
+      },
+      "pricing_status": "同日または既反映の参考値",
+      "change_condition": "米半導体株が反転するか、日本の電機・精密が追随しなければ影響を弱く見る"
     },
     {
       "driver": "ドル円",
       "category": "為替",
       "assessment": "中立",
       "status": "observed",
-      "market_value": 158.322,
-      "change_pct": -0.12,
+      "market_value": 157.957,
+      "change_pct": -0.23,
       "transmission_path": "輸出採算と輸入コストが変化",
-      "reason": "USD/JPY 158.322、前日比 -0.12%（2026-10-14）→ 輸出採算と輸入コストが変化",
+      "reason": "USD/JPY 157.957、前日比 -0.23%（2026-10-15）→ 輸出採算と輸入コストが変化",
       "affected_sectors": [
         "自動車・輸送機",
         "機械",
         "小売"
       ],
-      "market_date": "2026-10-14",
+      "market_date": "2026-10-15",
       "selection_factors": {
         "日本株現物への織り込み": "同日または既反映の参考値",
         "日本株への波及範囲": 3,
@@ -1163,23 +1162,23 @@
     {
       "driver": "米国大型ハイテク株",
       "category": "海外株",
-      "assessment": "向かい風",
+      "assessment": "中立",
       "status": "observed",
-      "market_value": 29950.8164,
-      "change_pct": -2.02,
+      "market_value": 29935.5938,
+      "change_pct": -0.05,
       "transmission_path": "国内グロース株の投資家心理に波及",
-      "reason": "NASDAQ100 29950.8164、前日比 -2.02%（2026-10-14）→ 国内グロース株の投資家心理に波及",
+      "reason": "NASDAQ100 29935.5938、前日比 -0.05%（2026-10-15）→ 国内グロース株の投資家心理に波及",
       "affected_sectors": [
         "電機・精密",
         "情報通信・サービス"
       ],
-      "market_date": "2026-10-14",
+      "market_date": "2026-10-15",
       "selection_factors": {
         "日本株現物への織り込み": "同日または既反映の参考値",
         "日本株への波及範囲": 2,
         "影響業種数": 2,
         "ニュース重要度": 2,
-        "値動き": 3
+        "値動き": 1
       },
       "pricing_status": "同日または既反映の参考値",
       "change_condition": "米国ハイテク株が反転し、日本のグロース株が追随しなければ影響を弱く見る"
@@ -1741,8 +1740,7 @@
       "米10年金利：高PER株に追い風"
     ],
     "headwinds": [
-      "米国半導体株：向かい風",
-      "米国大型ハイテク株：向かい風"
+      "米国半導体株：向かい風"
     ],
     "focus_sectors": [
       "医薬品",

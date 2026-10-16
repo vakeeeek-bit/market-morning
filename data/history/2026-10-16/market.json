@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16 09:28:15",
+  "updated_at": "2026-10-16 10:30:31",
   "timezone": "Asia/Tokyo",
   "source": "Yahoo Finance via yfinance for market closes; FRED DGS2 for US 2Y Treasury yield",
   "notes": {
@@ -82,13 +82,13 @@
     "nikkei225": {
       "name": "日経225",
       "ticker": "^N225",
-      "price": 67744.2891,
-      "previous": 67777.5234,
-      "change": -33.2344,
-      "change_pct": -0.05,
+      "price": 64425.9492,
+      "previous": 67744.2891,
+      "change": -3318.3398,
+      "change_pct": -4.9,
       "status": "取得成功",
-      "market_date": "2026-10-14",
-      "previous_market_date": "2026-10-13"
+      "market_date": "2026-10-15",
+      "previous_market_date": "2026-10-14"
     },
     "topix": {
       "name": "TOPIX参考（1306 ETF）",
@@ -170,79 +170,79 @@
     "sector_xly": {
       "name": "米一般消費財（XLY）",
       "ticker": "XLY",
-      "price": 111.5,
-      "previous": 112.36,
-      "change": -0.86,
-      "change_pct": -0.77,
+      "price": 113.41,
+      "previous": 111.5,
+      "change": 1.91,
+      "change_pct": 1.71,
       "status": "取得成功",
-      "market_date": "2026-10-14",
-      "previous_market_date": "2026-10-13"
+      "market_date": "2026-10-15",
+      "previous_market_date": "2026-10-14"
     },
     "sector_xlp": {
       "name": "米生活必需品（XLP）",
       "ticker": "XLP",
-      "price": 86.06,
-      "previous": 84.19,
-      "change": 1.87,
-      "change_pct": 2.22,
+      "price": 86.68,
+      "previous": 86.06,
+      "change": 0.62,
+      "change_pct": 0.72,
       "status": "取得成功",
-      "market_date": "2026-10-14",
-      "previous_market_date": "2026-10-13"
+      "market_date": "2026-10-15",
+      "previous_market_date": "2026-10-14"
     },
     "sector_xle": {
       "name": "米エネルギー（XLE）",
       "ticker": "XLE",
-      "price": 67.63,
-      "previous": 67.2,
-      "change": 0.43,
-      "change_pct": 0.64,
+      "price": 66.56,
+      "previous": 67.63,
+      "change": -1.07,
+      "change_pct": -1.58,
       "status": "取得成功",
-      "market_date": "2026-10-14",
-      "previous_market_date": "2026-10-13"
+      "market_date": "2026-10-15",
+      "previous_market_date": "2026-10-14"
     },
     "sector_xlf": {
       "name": "米金融（XLF）",
       "ticker": "XLF",
-      "price": 54.52,
-      "previous": 54.82,
-      "change": -0.3,
-      "change_pct": -0.55,
+      "price": 55.27,
+      "previous": 54.52,
+      "change": 0.75,
+      "change_pct": 1.38,
       "status": "取得成功",
-      "market_date": "2026-10-14",
-      "previous_market_date": "2026-10-13"
+      "market_date": "2026-10-15",
+      "previous_market_date": "2026-10-14"
     },
     "sector_xlv": {
       "name": "米ヘルスケア（XLV）",
       "ticker": "XLV",
-      "price": 173.96,
-      "previous": 169.66,
-      "change": 4.3,
-      "change_pct": 2.53,
+      "price": 177.19,
+      "previous": 173.96,
+      "change": 3.23,
+      "change_pct": 1.86,
       "status": "取得成功",
-      "market_date": "2026-10-14",
-      "previous_market_date": "2026-10-13"
+      "market_date": "2026-10-15",
+      "previous_market_date": "2026-10-14"
     },
     "sector_xli": {
       "name": "米資本財（XLI）",
       "ticker": "XLI",
-      "price": 167.04,
-      "previous": 168.67,
-      "change": -1.63,
-      "change_pct": -0.97,
+      "price": 167.89,
+      "previous": 167.04,
+      "change": 0.85,
+      "change_pct": 0.51,
       "status": "取得成功",
-      "market_date": "2026-10-14",
-      "previous_market_date": "2026-10-13"
+      "market_date": "2026-10-15",
+      "previous_market_date": "2026-10-14"
     },
     "sector_xlb": {
       "name": "米素材（XLB）",
       "ticker": "XLB",
-      "price": 49.67,
-      "previous": 49.72,
-      "change": -0.05,
-      "change_pct": -0.1,
+      "price": 50.56,
+      "previous": 49.67,
+      "change": 0.89,
+      "change_pct": 1.79,
       "status": "取得成功",
-      "market_date": "2026-10-14",
-      "previous_market_date": "2026-10-13"
+      "market_date": "2026-10-15",
+      "previous_market_date": "2026-10-14"
     },
     "sector_xlre": {
       "name": "米不動産（XLRE）",
@@ -258,24 +258,24 @@
     "sector_xlk": {
       "name": "米情報技術（XLK）",
       "ticker": "XLK",
-      "price": 190.43,
-      "previous": 196.28,
-      "change": -5.85,
-      "change_pct": -2.98,
+      "price": 189.19,
+      "previous": 190.43,
+      "change": -1.24,
+      "change_pct": -0.65,
       "status": "取得成功",
-      "market_date": "2026-10-14",
-      "previous_market_date": "2026-10-13"
+      "market_date": "2026-10-15",
+      "previous_market_date": "2026-10-14"
     },
     "sector_xlu": {
       "name": "米公益（XLU）",
       "ticker": "XLU",
-      "price": 41.72,
-      "previous": 41.87,
-      "change": -0.15,
-      "change_pct": -0.36,
+      "price": 41.65,
+      "previous": 41.72,
+      "change": -0.07,
+      "change_pct": -0.17,
       "status": "取得成功",
-      "market_date": "2026-10-14",
-      "previous_market_date": "2026-10-13"
+      "market_date": "2026-10-15",
+      "previous_market_date": "2026-10-14"
     },
     "gold": {
       "name": "Gold",

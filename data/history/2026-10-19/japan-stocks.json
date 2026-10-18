@@ -1,0 +1,238 @@
+{
+  "report_date": "2026-10-19",
+  "target_market_date": "2026-10-16",
+  "updated_at": "2026-10-19T06:50:15+09:00",
+  "report_type": "daily_provisional",
+  "japan_quick_view": {
+    "headline": "注釈付き暫定版｜AI信用不安で半導体に逆風。新法の関税免除と既存制裁を分け、週明けの反応を確認",
+    "top_materials": [
+      "米16日はSOX・NASDAQ100がダウより大幅安、AI資金調達への警戒",
+      "米輸入物価は9月+1.1%、燃料以外も上昇",
+      "ロシア関連新法の関税・制裁適用を免除、既存制裁は維持",
+      "日銀は情勢に応じた利上げ継続、ECBは物価・信用リスクを指摘",
+      "三菱電機の再編・減損見込み、パワーエックス受注、キリン漏えいを個別評価"
+    ],
+    "focus_sectors": [
+      "半導体製造装置",
+      "情報通信",
+      "銀行",
+      "不動産",
+      "運輸",
+      "電機",
+      "蓄電池",
+      "食品"
+    ],
+    "unpriced_materials": [
+      "16日米株下落と週末政策の国内初動",
+      "16日大引け後の3社開示"
+    ],
+    "individual_news_review": {
+      "status": "reviewed",
+      "story_count": 3,
+      "source": "TDnet最初100件/全212件の一覧と3社PDF本文・表・コード確認。全件網羅ではない"
+    }
+  },
+  "top_stories": [
+    {
+      "company": "三菱電機",
+      "ticker": "6503",
+      "headline": "モビリティ50%譲渡契約と約1000億円減損見込みを併記",
+      "fact": "16日19:30開示。鴻海系へ三菱電機モビリティ株50%を譲渡する契約を締結。譲渡価額は1150億円見込み、実行は2027年10月予定。2027年3月期に約1000億円減損を見込み、業績予想は10月30日公表予定。",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261016552155.pdf",
+      "analysis": "事業再編の中期効果と当期減損の負担を分離。売却収入だけで買い材料とせず、予想修正と承認条件を確認。",
+      "category": "中立・短期負担と再編を両面評価",
+      "related_sectors": [
+        "電機",
+        "自動車機器"
+      ],
+      "today_watch": "10月30日の業績予想、承認条件、再編後の採算",
+      "announced_at": "2026-10-16",
+      "timing": "16日大引け後公表・19日寄り付き前",
+      "market_pricing_status": "発表後の国内現物反応は未確認",
+      "price_reaction": "未確認",
+      "related_stocks": [],
+      "importance": "high",
+      "confidence": "supported"
+    },
+    {
+      "company": "パワーエックス",
+      "ticker": "485A",
+      "headline": "蓄電システム48.54億円受注、業績増額とは区別",
+      "fact": "16日18:30開示。8月1日～10月16日に47台、48.54億円の販売契約。うち29.16億円は前回の正式受注・見込みに含まれない。売上計上は2026～2028年12月期予定。",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261016552502.pdf",
+      "analysis": "受注積上げは個別追い風候補。ただし未織込み受注額をそのまま業績上方修正や利益と扱わず、納入・採算・資金負担を確認。",
+      "category": "追い風候補・蓄電池に限定",
+      "related_sectors": [
+        "蓄電池",
+        "電気機器"
+      ],
+      "today_watch": "納入・売上計上・利益率と資金繰り",
+      "announced_at": "2026-10-16",
+      "timing": "16日大引け後公表・19日寄り付き前",
+      "market_pricing_status": "発表後の国内現物反応は未確認",
+      "price_reaction": "未確認",
+      "related_stocks": [],
+      "importance": "high",
+      "confidence": "supported"
+    },
+    {
+      "company": "キリンホールディングス",
+      "ticker": "2503",
+      "headline": "ファンケル等の会員情報漏えい、連結影響は精査中",
+      "fact": "16日18:00開示。ファンケル・アテニアECへの10月3～10日の不正アクセスを15日の内部調査で把握し会員情報漏えいを確認。決済情報は対象外。16日時点で二次被害と事業・サービスの重大な影響は未確認、連結影響は精査中。",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261016552454.pdf",
+      "analysis": "信用・対応費用の向かい風候補。未確認を被害ゼロや影響軽微確定とせず、追加開示を監視。",
+      "category": "向かい風候補・企業固有リスク",
+      "related_sectors": [
+        "食品",
+        "化粧品",
+        "通販"
+      ],
+      "today_watch": "追加被害、対策費用、連結業績影響",
+      "announced_at": "2026-10-16",
+      "timing": "16日大引け後公表・19日寄り付き前",
+      "market_pricing_status": "発表後の国内現物反応は未確認",
+      "price_reaction": "未確認",
+      "related_stocks": [],
+      "importance": "high",
+      "confidence": "supported"
+    }
+  ],
+  "important_stories": [],
+  "other_stories": [],
+  "data_quality": {
+    "overall": "MANUAL_REVIEW",
+    "missing": [
+      "10月19日JSTのmarket_data成功記録（statusは18日QUALIFIED、component記録なし）",
+      "米2年・DXYは14日、米10年・USD/JPYは15日で米株16日と非同期",
+      "米11セクターETFは14～15日。16日の同日終値比較が未収集",
+      "Gold・WTI・Brentの正本保存値と取引所・限月・値種別・時刻の対応",
+      "時刻付き為替・暗号資産現在値、限月付き日経先物実測値",
+      "アナリスト変更の全件網羅とCensusの最新動的表"
+    ],
+    "differences": [
+      "Reuters取得本文は取引中表現・正本終値と異なる値を含む。定性背景に限定、終値へ置換しない",
+      "APの16日主要4指数の終値は正本と整合。丸め率と正本の小数率を区別",
+      "11ETFは同日でないため総合順位・上昇業種数は算出しない",
+      "輸入物価8月は今回+0.5%へ改定。旧公表+0.7%を使わない"
+    ],
+    "excluded": [
+      "限月未確認の商品先物価格と騰落率",
+      "Copper価格・在庫（任意非掲載）",
+      "基準日不一致の2s10s",
+      "旧終値を現在値とする表示、日経先物の推定値",
+      "新法免除を全ロシア制裁解除とする断定",
+      "記事単独の株価寄与と19日国内現物初動の断定"
+    ],
+    "cautions": [
+      "部分収集の注釈付き暫定版。完全版FAILを保持",
+      "受注・契約・業績予想を売上実績・完了・利益確定と区別",
+      "16日米株反応とその後の政策情報を混ぜて因果を作らない"
+    ]
+  },
+  "analyst_rating_changes": {
+    "coverage_status": "十分調査したが取得不能",
+    "headline": "公開情報は限定。全変更の網羅性は未確認",
+    "items": [],
+    "source_review": [
+      {
+        "source": "公開一覧・IFIS",
+        "result": "公開一覧403、IFIS無料ページは全件網羅を確認できず"
+      }
+    ]
+  },
+  "sector_implications": [
+    {
+      "driver": "SOX -3.83%",
+      "affected_sectors": [
+        "電機・精密",
+        "機械"
+      ],
+      "possible_impact": "金曜反発の持続性を試す逆風",
+      "confirmation_condition": "TOPIX比・出来高・複数銘柄の寄り後推移"
+    },
+    {
+      "driver": "原油高",
+      "affected_sectors": [
+        "資源・商社",
+        "運輸",
+        "化学"
+      ],
+      "possible_impact": "資源に相対追い風、燃料コスト業種に逆風",
+      "confirmation_condition": "原油と業種相対騰落の同方向確認"
+    },
+    {
+      "driver": "日銀正常化",
+      "affected_sectors": [
+        "銀行",
+        "不動産",
+        "自動車"
+      ],
+      "possible_impact": "利ざや期待・割引率・円相場で分岐",
+      "confirmation_condition": "国内金利とUSD/JPYの実測反応"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "基本",
+      "conditions": "米半導体の弱さと物価警戒が続き、週末の政策免除の反応は未確定",
+      "impact_on_japan": "半導体・高PERに慎重。資源・銀行も条件付きで、個別開示を選別",
+      "invalidation": "国内半導体のTOPIX比・出来高改善が複数銘柄へ広がる"
+    },
+    {
+      "name": "上振れ",
+      "conditions": "通商免除後に原油・金利が安定し、AI信用不安後退と国内市場幅の改善を確認",
+      "impact_on_japan": "半導体への慎重姿勢を弱め、燃料負担業種の見通しを改善",
+      "invalidation": "原油再上昇、AI資金調達悪化、反発が少数銘柄に限定"
+    },
+    {
+      "name": "下振れ",
+      "conditions": "供給障害・物価警戒とAI信用不安が重なり、円急変も発生",
+      "impact_on_japan": "高PER・輸出・燃料負担業種に逆風。防御型の絶対上昇も保証しない",
+      "invalidation": "信用不安後退と半導体・市場幅の持続改善"
+    }
+  ],
+  "monitoring_points": [
+    {
+      "target": "国内半導体と市場幅",
+      "today_check": "TOPIX比、複数銘柄の出来高と継続反発",
+      "view_change_condition": "幅を伴う相対改善なら警戒を弱める"
+    },
+    {
+      "target": "ロシア新法免除と原油",
+      "today_check": "既存制裁・追加措置と限月付き実測値",
+      "view_change_condition": "供給障害再燃・免除変更なら前提修正"
+    },
+    {
+      "target": "金利・為替",
+      "today_check": "基準時刻付き値と銀行・不動産・輸出の反応",
+      "view_change_condition": "金利再上昇・円急変ならシナリオ修正"
+    },
+    {
+      "target": "個別開示",
+      "today_check": "減損・予想修正、受注実現、漏えい追加影響",
+      "view_change_condition": "会社見通しと実績に差が出れば再評価"
+    }
+  ],
+  "source_notes": [
+    "米国株・半導体は10月16日終値",
+    "日本株実績は10月16日大引け",
+    "週末材料は日本株現物に未反映"
+  ],
+  "publication_policy": {
+    "status": "QUALIFIED",
+    "mode": "provisional",
+    "updated_at": "2026-10-19T06:50:15+09:00",
+    "complete_gate": "FAIL",
+    "copper_included": false,
+    "note": "確認済み一次情報9件を更新。欠測を除外した暫定版MANUAL_REVIEW、完全版FAIL。",
+    "missing_items": [
+      "10月19日JSTのmarket_data成功記録（statusは18日QUALIFIED、component記録なし）",
+      "米2年・DXYは14日、米10年・USD/JPYは15日で米株16日と非同期",
+      "米11セクターETFは14～15日。16日の同日終値比較が未収集",
+      "Gold・WTI・Brentの正本保存値と取引所・限月・値種別・時刻の対応",
+      "時刻付き為替・暗号資産現在値、限月付き日経先物実測値",
+      "アナリスト変更の全件網羅とCensusの最新動的表"
+    ]
+  }
+}

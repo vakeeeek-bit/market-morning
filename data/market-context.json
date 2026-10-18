@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "updated_at": "2026-10-18T09:45:00+09:00",
-  "report_date": "2026-10-18",
+  "updated_at": "2026-10-19T06:50:15+09:00",
+  "report_date": "2026-10-19",
   "period_start": "2026-03-18",
-  "period_end": "2026-10-17",
+  "period_end": "2026-10-19",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-10-18",
+    "latest_report_date": "2026-10-19",
     "source_report_count": 9,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
@@ -72,6 +72,16 @@
           "source_ids": [
             "us-close-1016"
           ]
+        },
+        {
+          "date": "2026-10-19",
+          "title": "輸入物価と実体生産を確認",
+          "fact": "16日輸入物価上昇と生産増を一次確認。景気と物価は別に評価（19日朝の確認整理）",
+          "market_impact": "物価警戒は維持。ただし金利は古い正本で当日方向を断定しない",
+          "source_ids": [
+            "oct19-0",
+            "oct19-1"
+          ]
         }
       ],
       "initial_view": {
@@ -79,16 +89,16 @@
         "text": "FRBはインフレを警戒し、利下げを急がない姿勢"
       },
       "new_fact": {
-        "date": "2026-10-16",
-        "text": "物価上振れ後もFedは即時追加利上げを明示せず、国債には逃避需要"
+        "date": "2026-10-19",
+        "text": "16日輸入物価上昇と生産増を一次確認。景気と物価は別に評価"
       },
       "market_reaction": {
-        "date": "2026-10-16",
-        "text": "株安と債券買いが同居し、物価だけでなくAI信用不安が主役に"
+        "date": "2026-10-19",
+        "text": "19日の国内反応は未確認。16日の実績と週末材料を分離"
       },
-      "current_view": "物価警戒は残るが、短期の株安はAI信用不安が主因。原油高は金利低下余地への反証。",
+      "current_view": "物価警戒は維持。ただし金利は古い正本で当日方向を断定しない",
       "japan_impact": "高PER半導体には逆風。円安は輸出株を支える一方、輸入コストを通じて内需・運輸を圧迫します。",
-      "counter_evidence": "TSMCの強い需要見通しと名目小売の底堅さ。ただし数量成長・株価上昇・次回利上げを保証しない。",
+      "counter_evidence": "米製造業生産は増加。新法免除は追加リスクの一部を緩和し得るが、既存制裁・信用不安は残る。",
       "source_ids": [
         "fed-apr29",
         "fed-mar18",
@@ -98,7 +108,9 @@
         "oct16-retail",
         "reaction14",
         "reaction15",
-        "us-close-1016"
+        "us-close-1016",
+        "oct19-0",
+        "oct19-1"
       ]
     },
     {
@@ -160,6 +172,16 @@
             "ai-credit-1016",
             "us-close-1016"
           ]
+        },
+        {
+          "date": "2026-10-19",
+          "title": "週明けは実需・信用・評価を分離",
+          "fact": "16日正本は半導体・NASDAQ100がダウより大幅安（19日朝の確認整理）",
+          "market_impact": "TSMC需要の強さだけでAI信用不安解消とは扱わない",
+          "source_ids": [
+            "us-close-1016",
+            "oct19-3"
+          ]
         }
       ],
       "initial_view": {
@@ -167,16 +189,16 @@
         "text": "AI設備投資と先端半導体需要の強さが株価を支える局面"
       },
       "new_fact": {
-        "date": "2026-10-16",
-        "text": "CoreWeave株・債券の悪化とSOX3.83%安で、AI投資の資金調達が焦点に"
+        "date": "2026-10-19",
+        "text": "16日正本は半導体・NASDAQ100がダウより大幅安"
       },
       "market_reaction": {
-        "date": "2026-10-16",
-        "text": "NASDAQ100 -2.50%、SOX -3.83%。実需の強さより信用・評価倍率懸念が優勢"
+        "date": "2026-10-19",
+        "text": "19日の国内反応は未確認。16日の実績と週末材料を分離"
       },
-      "current_view": "AI需要は強いが、投資主体の資金調達と回収可能性を銘柄別に選別する段階。",
+      "current_view": "TSMC需要の強さだけでAI信用不安解消とは扱わない",
       "japan_impact": "東京エレクトロンなど装置株を一律に弱気とせず、受注と株価評価を分けて確認します。",
-      "counter_evidence": "TSMCの強い需要見通しと名目小売の底堅さ。ただし数量成長・株価上昇・次回利上げを保証しない。",
+      "counter_evidence": "米製造業生産は増加。新法免除は追加リスクの一部を緩和し得るが、既存制裁・信用不安は残る。",
       "source_ids": [
         "ai-apr16",
         "ai-credit-1016",
@@ -186,7 +208,8 @@
         "oct16-tsmc",
         "reaction14",
         "reaction15",
-        "us-close-1016"
+        "us-close-1016",
+        "oct19-3"
       ]
     },
     {
@@ -245,6 +268,16 @@
           "source_ids": [
             "imf-boj-1017"
           ]
+        },
+        {
+          "date": "2026-10-19",
+          "title": "政策発言と新規決定を区別",
+          "fact": "日銀16日挨拶は利上げ継続を説明。新法の免除も確認（19日朝の確認整理）",
+          "market_impact": "銀行・輸出・運輸の見方は金利・円・原油の実測で変更",
+          "source_ids": [
+            "oct19-5",
+            "oct19-2"
+          ]
         }
       ],
       "initial_view": {
@@ -252,38 +285,44 @@
         "text": "政策金利0.75%でも利上げを求める意見が増え、正常化継続が意識された"
       },
       "new_fact": {
-        "date": "2026-10-17",
-        "text": "日銀の正常化継続姿勢に加え、IMFは物価上振れ時の引き締め加速に言及"
+        "date": "2026-10-19",
+        "text": "日銀16日挨拶は利上げ継続を説明。新法の免除も確認"
       },
       "market_reaction": {
-        "date": "2026-10-17",
-        "text": "週末発言は日本株現物に未反映"
+        "date": "2026-10-19",
+        "text": "19日の国内反応は未確認。16日の実績と週末材料を分離"
       },
-      "current_view": "正常化方向は継続。ただし次回会合の決定を先取りせず、円・国内金利・銀行・不動産の実反応で判断。",
+      "current_view": "銀行・輸出・運輸の見方は金利・円・原油の実測で変更",
       "japan_impact": "銀行、輸出、内需、運輸で影響が分かれます。円安を日本株全体の一律追い風とは扱いません。",
-      "counter_evidence": "TSMCの強い需要見通しと名目小売の底堅さ。ただし数量成長・株価上昇・次回利上げを保証しない。",
+      "counter_evidence": "米製造業生産は増加。新法免除は追加リスクの一部を緩和し得るが、既存制裁・信用不安は残る。",
       "source_ids": [
         "boj-apr28",
         "boj-jun16",
         "boj-sep18",
         "global-oct14",
         "imf-boj-1017",
-        "oct16-boj"
+        "oct16-boj",
+        "oct19-5",
+        "oct19-2"
       ]
     }
   ],
   "scenario_change_conditions": [
     {
-      "condition": "国内半導体",
-      "meaning": "相対反発が広がれば警戒を弱める"
+      "condition": "国内半導体と市場幅",
+      "meaning": "幅を伴う相対改善なら警戒を弱める"
     },
     {
-      "condition": "AI信用市場",
-      "meaning": "信用不安後退なら需要側の強さを再評価"
+      "condition": "ロシア新法免除と原油",
+      "meaning": "供給障害再燃・免除変更なら前提修正"
     },
     {
-      "condition": "原油・米金利・円",
-      "meaning": "原油高・円安・金利高の同時進行で下振れ"
+      "condition": "金利・為替",
+      "meaning": "金利再上昇・円急変ならシナリオ修正"
+    },
+    {
+      "condition": "個別開示",
+      "meaning": "会社見通しと実績に差が出れば再評価"
     }
   ],
   "sources": [
@@ -351,6 +390,20 @@
       "url": "https://www.reuters.com/business/wall-st-futures-mixed-tech-wobbles-again-tesla-gains-2026-10-16/"
     },
     {
+      "id": "oct19-0",
+      "title": "米9月輸入物価は燃料以外にも上昇",
+      "publisher": "BLS",
+      "published_at": "2026-10-16",
+      "url": "https://www.bls.gov/news.release/archives/ximpim_10162026.htm"
+    },
+    {
+      "id": "oct19-1",
+      "title": "米鉱工業生産は増加、製造業の回復幅は総合より小さい",
+      "publisher": "Federal Reserve Board",
+      "published_at": "2026-10-16",
+      "url": "https://www.federalreserve.gov/releases/g17/current/default.htm"
+    },
+    {
       "id": "ai-apr16",
       "title": "Strong ASML, TSMC forecasts signal AI spending boom is intact",
       "publisher": "Reuters",
@@ -393,6 +446,13 @@
       "url": "https://pr.tsmc.com/japanese/news/3346"
     },
     {
+      "id": "oct19-3",
+      "title": "ラガルド総裁、エネルギー物価とAI集中リスクに言及",
+      "publisher": "ECB",
+      "published_at": "2026-10-17",
+      "url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261017~7015ea3099.en.html"
+    },
+    {
       "id": "boj-apr28",
       "title": "Statement on Monetary Policy",
       "publisher": "Bank of Japan",
@@ -433,6 +493,20 @@
       "publisher": "日本銀行",
       "published_at": "2026-10-15",
       "url": "https://www.boj.or.jp/about/press/koen_2026/data/ko261015a1.pdf"
+    },
+    {
+      "id": "oct19-5",
+      "title": "植田総裁挨拶、見通しに応じた利上げ継続を説明",
+      "publisher": "日本銀行",
+      "published_at": "2026-10-16",
+      "url": "https://www.boj.or.jp/about/press/koen_2026/ko261016a.htm"
+    },
+    {
+      "id": "oct19-2",
+      "title": "新ロシア法の関税・制裁を免除、既存措置は維持",
+      "publisher": "White House",
+      "published_at": "2026-10-16",
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/"
     }
   ]
 }

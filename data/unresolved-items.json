@@ -1,23 +1,23 @@
 {
-  "updated_at": "2026-10-18T09:45:00+09:00",
-  "source_report_date": "2026-10-18",
+  "updated_at": "2026-10-19T06:50:15+09:00",
+  "source_report_date": "2026-10-19",
   "items": [
     {
-      "id": "missing-1",
+      "id": "market",
       "status": "QUALIFIED",
-      "missing": "米11業種ETF、米2年、DXY、暗号資産の10月16日同一定義値",
-      "impact": "該当系列に依存する数値・断定を除外",
-      "last_checked_at": "2026-10-18T09:45:00+09:00",
-      "next_action": "次回自動取得で同一定義値を再確認",
+      "missing": "10月19日JSTのmarket_data成功記録（statusは18日QUALIFIED、component記録なし）",
+      "impact": "当日収集成功と扱わない",
+      "last_checked_at": "2026-10-19T06:50:15+09:00",
+      "next_action": "最新正本と一次掲載を再確認し、同一定義・同時点を証明できた項目のみ採用。",
       "attempts": [
         {
-          "method": "通常取得と公式・代替照合",
-          "result": "主要指数は確認、該当系列は同一定義値を確認できず",
+          "method": "公開正本・status取得",
+          "result": "18日QUALIFIED、19日成功・componentなし",
           "source_urls": [
-            "https://fred.stlouisfed.org/series/SP500",
-            "https://indexes.nasdaq.com/Index/Overview/SOX"
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/status.json"
           ],
-          "checked_at": "2026-10-18T09:45:00+09:00"
+          "checked_at": "2026-10-19T06:50:15+09:00"
         }
       ],
       "affected_components": [
@@ -25,26 +25,25 @@
         "japan_stocks"
       ],
       "excluded_claims": [
-        "米11業種ETF、米2年、DXY、暗号資産の10月16日同一定義値に依存する方向判断"
+        "当日収集成功と扱わない"
       ],
       "excluded_from_publication": true
     },
     {
-      "id": "missing-2",
+      "id": "current",
       "status": "QUALIFIED",
-      "missing": "Gold・WTI・Brentの限月・値種別・基準時刻に対応する保存値",
-      "impact": "該当系列に依存する数値・断定を除外",
-      "last_checked_at": "2026-10-18T09:45:00+09:00",
-      "next_action": "次回自動取得で同一定義値を再確認",
+      "missing": "米2年・DXYは14日、米10年・USD/JPYは15日で米株16日と非同期／時刻付き為替・暗号資産現在値、限月付き日経先物実測値",
+      "impact": "2s10s・現在値・日経先物を除外",
+      "last_checked_at": "2026-10-19T06:50:15+09:00",
+      "next_action": "最新正本と一次掲載を再確認し、同一定義・同時点を証明できた項目のみ採用。",
       "attempts": [
         {
-          "method": "通常取得と公式・代替照合",
-          "result": "主要指数は確認、該当系列は同一定義値を確認できず",
+          "method": "正本全系列の基準日確認",
+          "result": "米2年DXY14日・米10年円15日",
           "source_urls": [
-            "https://fred.stlouisfed.org/series/SP500",
-            "https://indexes.nasdaq.com/Index/Overview/SOX"
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
           ],
-          "checked_at": "2026-10-18T09:45:00+09:00"
+          "checked_at": "2026-10-19T06:50:15+09:00"
         }
       ],
       "affected_components": [
@@ -52,26 +51,25 @@
         "japan_stocks"
       ],
       "excluded_claims": [
-        "Gold・WTI・Brentの限月・値種別・基準時刻に対応する保存値に依存する方向判断"
+        "2s10s・現在値・日経先物を除外"
       ],
       "excluded_from_publication": true
     },
     {
-      "id": "missing-3",
+      "id": "sectors",
       "status": "QUALIFIED",
-      "missing": "アナリスト評価変更の全件網羅",
-      "impact": "該当系列に依存する数値・断定を除外",
-      "last_checked_at": "2026-10-18T09:45:00+09:00",
-      "next_action": "次回自動取得で同一定義値を再確認",
+      "missing": "米11セクターETFは14～15日。16日の同日終値比較が未収集",
+      "impact": "16日の業種順位・市場幅を保留",
+      "last_checked_at": "2026-10-19T06:50:15+09:00",
+      "next_action": "最新正本と一次掲載を再確認し、同一定義・同時点を証明できた項目のみ採用。",
       "attempts": [
         {
-          "method": "通常取得と公式・代替照合",
-          "result": "主要指数は確認、該当系列は同一定義値を確認できず",
+          "method": "全11ETF日付照合",
+          "result": "XLC・XLRE14日、他15日。保存値は変更しない",
           "source_urls": [
-            "https://fred.stlouisfed.org/series/SP500",
-            "https://indexes.nasdaq.com/Index/Overview/SOX"
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
           ],
-          "checked_at": "2026-10-18T09:45:00+09:00"
+          "checked_at": "2026-10-19T06:50:15+09:00"
         }
       ],
       "affected_components": [
@@ -79,7 +77,76 @@
         "japan_stocks"
       ],
       "excluded_claims": [
-        "アナリスト評価変更の全件網羅に依存する方向判断"
+        "16日の業種順位・市場幅を保留"
+      ],
+      "excluded_from_publication": true
+    },
+    {
+      "id": "contracts",
+      "status": "QUALIFIED",
+      "missing": "Gold・WTI・Brentの正本保存値と取引所・限月・値種別・時刻の対応",
+      "impact": "商品先物数値・騰落を除外",
+      "last_checked_at": "2026-10-19T06:50:15+09:00",
+      "next_action": "最新正本と一次掲載を再確認し、同一定義・同時点を証明できた項目のみ採用。",
+      "attempts": [
+        {
+          "method": "CME Gold",
+          "result": "HTTP200、保存連続足との対応未確認",
+          "source_urls": [
+            "https://www.cmegroup.com/markets/metals/precious/gold.settlements.html"
+          ],
+          "checked_at": "2026-10-19T06:50:15+09:00"
+        },
+        {
+          "method": "CME WTI",
+          "result": "HTTP200、同上",
+          "source_urls": [
+            "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html"
+          ],
+          "checked_at": "2026-10-19T06:50:15+09:00"
+        }
+      ],
+      "affected_components": [
+        "ai_report",
+        "japan_stocks"
+      ],
+      "excluded_claims": [
+        "商品先物数値・騰落を除外"
+      ],
+      "excluded_from_publication": true
+    },
+    {
+      "id": "coverage",
+      "status": "QUALIFIED",
+      "missing": "アナリスト変更の全件網羅とCensusの最新動的表",
+      "impact": "変更なし・全材料なしという断定を除外",
+      "last_checked_at": "2026-10-19T06:50:15+09:00",
+      "next_action": "最新正本と一次掲載を再確認し、同一定義・同時点を証明できた項目のみ採用。",
+      "attempts": [
+        {
+          "method": "公開評価一覧",
+          "result": "HTTP403",
+          "source_urls": [
+            "https://kabutan.jp/news/marketnews/?category=6"
+          ],
+          "checked_at": "2026-10-19T06:50:15+09:00"
+        },
+        {
+          "method": "IFISとCensus",
+          "result": "IFIS無料情報の網羅性未確認、Census通常403→Web本文取得も動的表欠測",
+          "source_urls": [
+            "https://kabuyoho.jp/",
+            "https://www.census.gov/economic-indicators/"
+          ],
+          "checked_at": "2026-10-19T06:50:15+09:00"
+        }
+      ],
+      "affected_components": [
+        "ai_report",
+        "japan_stocks"
+      ],
+      "excluded_claims": [
+        "変更なし・全材料なしという断定を除外"
       ],
       "excluded_from_publication": true
     }

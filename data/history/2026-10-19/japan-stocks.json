@@ -152,14 +152,14 @@
       "confirmation_condition": "TOPIX比・出来高・複数銘柄の寄り後推移"
     },
     {
-      "driver": "原油高",
+      "driver": "16日の原油高報道とその後の新法免除",
       "affected_sectors": [
         "資源・商社",
         "運輸",
         "化学"
       ],
-      "possible_impact": "資源に相対追い風、燃料コスト業種に逆風",
-      "confirmation_condition": "原油と業種相対騰落の同方向確認"
+      "possible_impact": "原油高継続なら資源に相対追い風・燃料負担業種に逆風。免除後の原油反落なら逆方向もあり、初動は未確認",
+      "confirmation_condition": "既存制裁・供給障害と、限月付き原油・国内業種相対騰落の実測確認"
     },
     {
       "driver": "日銀正常化",

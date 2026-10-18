@@ -1,8 +1,6 @@
 {
-  "status": "success",
-  "updated_at": "2026-10-16 10:30:37 JST",
-  "message": "Market data update completed and validation passed.",
-  "component": "market_data",
-  "publication_status": "PASS",
-  "component_updated_at": "2026-10-16 10:30:31"
+  "status": "qualified",
+  "publication_status": "QUALIFIED",
+  "updated_at": "2026-10-18T09:45:00+09:00",
+  "message": "主要指数・重要材料確認済み。未確認系列を除外した注釈付き公開。"
 }

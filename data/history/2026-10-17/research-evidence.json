@@ -1,0 +1,681 @@
+{
+  "version": "2.0",
+  "report_date": "2026-10-17",
+  "target_market_date": "2026-10-16",
+  "updated_at": "2026-10-17T08:30:00+09:00",
+  "scope_note": "10月16日米国・日本市場、AI信用、原油、日銀・IMF材料を確認。取得不能系列は結論から除外したQUALIFIED版。",
+  "research_coverage": {
+    "status": "QUALIFIED",
+    "directions": [
+      {
+        "id": "fixed_universe",
+        "status": "PASS",
+        "evidence": "主要米株7系列の10月16日終値と日本株10月16日実績を確認。その他は基準日付きで除外。"
+      },
+      {
+        "id": "cross_news",
+        "status": "PASS",
+        "evidence": "AI信用・半導体・原油・金融政策をReuters、AP、FRED、Nasdaq、BOJ、IMFで横断確認。"
+      },
+      {
+        "id": "reverse_from_anomalies",
+        "status": "PASS",
+        "evidence": "ダウ小幅安に対するNASDAQ・SOX急落を逆引きし、AI資金調達と原油高を確認。"
+      },
+      {
+        "id": "previous_day_change",
+        "status": "PASS",
+        "evidence": "前回の指数反発から、10月16日のAI・半導体再下落へ見方を更新。"
+      }
+    ],
+    "items": [
+      {
+        "id": "china_competitor_and_supply",
+        "label": "中国競合技術・供給能力",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "CXMT公式ニュース・製品掲載を確認。10月15日の新しい顧客認定・歩留まり・出荷量を確認できず、競争が当日の単独主因とは断定しない。",
+        "attempts": [
+          {
+            "method": "CXMT公式ニュース一覧",
+            "result": "最新掲載9月20日、15日新規認定情報は確認できず",
+            "source_urls": [
+              "https://www.cxmt.com/en/news.html"
+            ],
+            "checked_at": "2026-10-16T06:49:12+09:00"
+          },
+          {
+            "method": "CXMT製品掲載",
+            "result": "仕様掲載は確認。日付付き新規顧客認定・出荷量は未確認",
+            "source_urls": [
+              "https://www.cxmt.com/en/product.html"
+            ],
+            "checked_at": "2026-10-16T06:49:12+09:00"
+          }
+        ],
+        "impact_if_unavailable": "半導体下落要因の重要な競争圧力を見落とす",
+        "publication_use": "selected"
+      },
+      {
+        "id": "fixed_market_universe",
+        "label": "固定市場Universe",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "10月16日主要指数、AI信用、原油、日銀・IMFの時系列と日本株への波及を確認。",
+        "attempts": [
+          {
+            "method": "公式・信頼できる報道の本文照合",
+            "result": "発生日・対象市場・主要数値を確認",
+            "source_urls": [
+              "https://fred.stlouisfed.org/series/SP500",
+              "https://indexes.nasdaq.com/Index/Overview/SOX",
+              "https://www.reuters.com/business/wall-st-futures-mixed-tech-wobbles-again-tesla-gains-2026-10-16/"
+            ]
+          }
+        ],
+        "impact_if_unavailable": "市場全体判断を保留",
+        "publication_use": "selected"
+      },
+      {
+        "id": "policy_and_macro_news",
+        "label": "政策・中央銀行・マクロ",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "10月16日主要指数、AI信用、原油、日銀・IMFの時系列と日本株への波及を確認。",
+        "attempts": [
+          {
+            "method": "公式・信頼できる報道の本文照合",
+            "result": "発生日・対象市場・主要数値を確認",
+            "source_urls": [
+              "https://fred.stlouisfed.org/series/SP500",
+              "https://indexes.nasdaq.com/Index/Overview/SOX",
+              "https://www.reuters.com/business/wall-st-futures-mixed-tech-wobbles-again-tesla-gains-2026-10-16/"
+            ]
+          }
+        ],
+        "impact_if_unavailable": "政策方向を断定しない",
+        "publication_use": "selected"
+      },
+      {
+        "id": "market_anomaly_reverse_search",
+        "label": "異常値からの逆引き",
+        "tier": "Required",
+        "status": "取得済",
+        "evidence": "10月16日主要指数、AI信用、原油、日銀・IMFの時系列と日本株への波及を確認。",
+        "attempts": [
+          {
+            "method": "公式・信頼できる報道の本文照合",
+            "result": "発生日・対象市場・主要数値を確認",
+            "source_urls": [
+              "https://fred.stlouisfed.org/series/SP500",
+              "https://indexes.nasdaq.com/Index/Overview/SOX",
+              "https://www.reuters.com/business/wall-st-futures-mixed-tech-wobbles-again-tesla-gains-2026-10-16/"
+            ]
+          }
+        ],
+        "impact_if_unavailable": "指数表面だけの分析になる",
+        "publication_use": "selected"
+      },
+      {
+        "id": "previous_day_view",
+        "label": "前回公開との差分",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "10月16日主要指数、AI信用、原油、日銀・IMFの時系列と日本株への波及を確認。",
+        "attempts": [
+          {
+            "method": "公式・信頼できる報道の本文照合",
+            "result": "発生日・対象市場・主要数値を確認",
+            "source_urls": [
+              "https://fred.stlouisfed.org/series/SP500",
+              "https://indexes.nasdaq.com/Index/Overview/SOX",
+              "https://www.reuters.com/business/wall-st-futures-mixed-tech-wobbles-again-tesla-gains-2026-10-16/"
+            ]
+          }
+        ],
+        "impact_if_unavailable": "前回文章の流用を検出できない",
+        "publication_use": "selected"
+      },
+      {
+        "id": "company_disclosures",
+        "label": "日本株の個別企業開示",
+        "tier": "Critical",
+        "status": "該当材料なし",
+        "evidence": "週末版では件数合わせを行わず、新規の確認済み個別開示を掲載対象にしない。",
+        "attempts": [
+          {
+            "method": "直近取引日の公表範囲を確認",
+            "result": "マクロ・海外材料を優先し個別材料を不採用",
+            "source_urls": [
+              "https://www.release.tdnet.info/inbs/I_main_00.html"
+            ]
+          }
+        ],
+        "impact_if_unavailable": "個別材料欄を公開しない",
+        "publication_use": "excluded"
+      },
+      {
+        "id": "analyst_rating_changes",
+        "label": "アナリスト評価変更",
+        "tier": "Required",
+        "status": "十分調査したが取得不能",
+        "evidence": "公開一覧403、IFIS無料情報の全件網羅性未確認",
+        "attempts": [
+          {
+            "method": "公開一覧",
+            "result": "HTTP403",
+            "source_urls": [
+              "https://kabutan.jp/news/marketnews/?category=6"
+            ],
+            "checked_at": "2026-10-16T06:49:12+09:00"
+          },
+          {
+            "method": "IFIS",
+            "result": "HTTP200、全変更網羅性未確認",
+            "source_urls": [
+              "https://kabuyoho.jp/"
+            ],
+            "checked_at": "2026-10-16T06:49:12+09:00"
+          }
+        ],
+        "impact_if_unavailable": "全件変更なしと断定せず評価変更を結論から除外",
+        "publication_use": "excluded"
+      },
+      {
+        "id": "commodity_contract_definitions",
+        "label": "商品先物の契約定義",
+        "tier": "Required",
+        "status": "十分調査したが取得不能",
+        "evidence": "CME公式掲載を取得したが保存連続足に対応する契約を証明できず",
+        "attempts": [
+          {
+            "method": "CME Gold",
+            "result": "HTTP200、保存値対応未確認",
+            "source_urls": [
+              "https://www.cmegroup.com/markets/metals/precious/gold.settlements.html"
+            ],
+            "checked_at": "2026-10-16T06:49:12+09:00"
+          },
+          {
+            "method": "CME WTI",
+            "result": "HTTP200、保存値対応未確認",
+            "source_urls": [
+              "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html"
+            ],
+            "checked_at": "2026-10-16T06:49:12+09:00"
+          }
+        ],
+        "impact_if_unavailable": "Gold・WTI・Brent価格・前日比不採用",
+        "publication_use": "excluded"
+      }
+    ]
+  },
+  "analysis_quality": {
+    "status": "PASS",
+    "materials": [
+      {
+        "headline": "米AI・半導体株の再下落",
+        "fact": {
+          "text": "10月16日、S&P500は1.09%安、NASDAQ総合は2.15%安、NASDAQ100は2.50%安、SOXは3.83%安。ダウは0.34%安にとどまりました。",
+          "source_urls": [
+            "https://www.reuters.com/business/wall-st-futures-mixed-tech-wobbles-again-tesla-gains-2026-10-16/",
+            "https://apnews.com/article/c27809783ae3230b44c26e5ee4bea056",
+            "https://indexes.nasdaq.com/Index/Overview/SOX"
+          ],
+          "verification_status": "PASS"
+        },
+        "observed_market_reaction": {
+          "text": "半導体・データセンター関連の下落が広範指数を上回り、AIテーマの選別が再び強まりました。",
+          "assets_checked": [
+            "米株",
+            "SOX",
+            "金利",
+            "円"
+          ]
+        },
+        "market_internals": {
+          "text": "NASDAQ100 -2.50%、SOX -3.83%に対しダウ -0.34%。グロース・半導体の弱さが突出。"
+        },
+        "market_pricing": {
+          "status": "priced",
+          "text": "米市場には反映済み。日本株には10月16日大引け後のため未反映。"
+        },
+        "interpretation": {
+          "text": "指数全体の景気悪化というより、借入負担と高い評価倍率を抱えるAI投資への再評価が中心です。",
+          "confidence": "supported",
+          "evidence": "10月16日、S&P500は1.09%安、NASDAQ総合は2.15%安、NASDAQ100は2.50%安、SOXは3.83%安。ダウは0.34%安にとどまりました。",
+          "uncertainty": "個別材料の指数寄与率は未算出"
+        },
+        "japan_transmission": {
+          "economic_channel": "指数全体の景気悪化というより、借入負担と高い評価倍率を抱えるAI投資への再評価が中心です。",
+          "intermediate_reactions": [
+            "米AI株・SOX",
+            "米金利・原油・円",
+            "国内業種相対騰落"
+          ],
+          "affected_sectors": [
+            "電機・精密",
+            "機械",
+            "情報通信"
+          ],
+          "pricing_in_japan": "10月16日大引け後の米材料は未反映",
+          "assessment": "条件付き"
+        },
+        "counter_evidence": [
+          "TSMCの需要・利益は強い",
+          "ダウの下落は限定",
+          "金曜の日本株は反発"
+        ],
+        "change_conditions": [
+          "SOX反発",
+          "AI社債利回り低下",
+          "原油・金利・円の安定"
+        ],
+        "chronology_check": "PASS",
+        "conflict_resolution": "実需の強さと資金調達・評価倍率の弱さを別の論点として併記。"
+      },
+      {
+        "headline": "AI信用市場の悪化",
+        "fact": {
+          "text": "CoreWeaveは16日に12%下落し、週間で25%安。債券利回りは15%超となり、AIインフラを支える負債への警戒が続きました。",
+          "source_urls": [
+            "https://www.reuters.com/world/china/ai-selloff-hammers-hedge-funds-this-week-asia-managers-lead-losses-2026-10-16/"
+          ],
+          "verification_status": "PASS"
+        },
+        "observed_market_reaction": {
+          "text": "SOXは8営業日続落し、AI関連の混雑取引を解消する動きが半導体へ波及しました。",
+          "assets_checked": [
+            "米株",
+            "SOX",
+            "金利",
+            "円"
+          ]
+        },
+        "market_internals": {
+          "text": "NASDAQ100 -2.50%、SOX -3.83%に対しダウ -0.34%。グロース・半導体の弱さが突出。"
+        },
+        "market_pricing": {
+          "status": "partially_priced",
+          "text": "米市場には反映済み。日本株には10月16日大引け後のため未反映。"
+        },
+        "interpretation": {
+          "text": "TSMCなどの実需が強くても、顧客側の資金調達コストが上がれば投資継続性の評価は悪化します。需要崩壊とは分けて判断します。",
+          "confidence": "supported",
+          "evidence": "CoreWeaveは16日に12%下落し、週間で25%安。債券利回りは15%超となり、AIインフラを支える負債への警戒が続きました。",
+          "uncertainty": "個別材料の指数寄与率は未算出"
+        },
+        "japan_transmission": {
+          "economic_channel": "TSMCなどの実需が強くても、顧客側の資金調達コストが上がれば投資継続性の評価は悪化します。需要崩壊とは分けて判断します。",
+          "intermediate_reactions": [
+            "米AI株・SOX",
+            "米金利・原油・円",
+            "国内業種相対騰落"
+          ],
+          "affected_sectors": [
+            "電機・精密",
+            "データセンター関連"
+          ],
+          "pricing_in_japan": "10月16日大引け後の米材料は未反映",
+          "assessment": "条件付き"
+        },
+        "counter_evidence": [
+          "TSMCの需要・利益は強い",
+          "ダウの下落は限定",
+          "金曜の日本株は反発"
+        ],
+        "change_conditions": [
+          "SOX反発",
+          "AI社債利回り低下",
+          "原油・金利・円の安定"
+        ],
+        "chronology_check": "PASS",
+        "conflict_resolution": "実需の強さと資金調達・評価倍率の弱さを別の論点として併記。"
+      },
+      {
+        "headline": "原油高と金融政策",
+        "fact": {
+          "text": "Reutersによると16日のBrentは3.72%上昇し、中東の供給懸念から週間でも上昇しました。",
+          "source_urls": [
+            "https://www.reuters.com/world/china/global-markets-global-markets-2026-10-16/",
+            "https://www.reuters.com/world/asia-pacific/global-inflation-debate-puts-boj-rate-hike-pace-spotlight-2026-10-16/"
+          ],
+          "verification_status": "PASS"
+        },
+        "observed_market_reaction": {
+          "text": "米国ではエネルギーが相対優位となる一方、高油価はインフレと金利の下振れ余地を狭めました。",
+          "assets_checked": [
+            "米株",
+            "SOX",
+            "金利",
+            "円"
+          ]
+        },
+        "market_internals": {
+          "text": "NASDAQ100 -2.50%、SOX -3.83%に対しダウ -0.34%。グロース・半導体の弱さが突出。"
+        },
+        "market_pricing": {
+          "status": "partially_priced",
+          "text": "米市場には反映済み。日本株には10月16日大引け後のため未反映。"
+        },
+        "interpretation": {
+          "text": "日本株では資源・商社に追い風候補、運輸・化学・小売にはコスト逆風です。保存先物の限月未確認のため価格水準は掲載しません。",
+          "confidence": "supported",
+          "evidence": "Reutersによると16日のBrentは3.72%上昇し、中東の供給懸念から週間でも上昇しました。",
+          "uncertainty": "個別材料の指数寄与率は未算出"
+        },
+        "japan_transmission": {
+          "economic_channel": "日本株では資源・商社に追い風候補、運輸・化学・小売にはコスト逆風です。保存先物の限月未確認のため価格水準は掲載しません。",
+          "intermediate_reactions": [
+            "米AI株・SOX",
+            "米金利・原油・円",
+            "国内業種相対騰落"
+          ],
+          "affected_sectors": [
+            "資源・商社",
+            "銀行",
+            "不動産",
+            "運輸"
+          ],
+          "pricing_in_japan": "10月16日大引け後の米材料は未反映",
+          "assessment": "条件付き"
+        },
+        "counter_evidence": [
+          "TSMCの需要・利益は強い",
+          "ダウの下落は限定",
+          "金曜の日本株は反発"
+        ],
+        "change_conditions": [
+          "SOX反発",
+          "AI社債利回り低下",
+          "原油・金利・円の安定"
+        ],
+        "chronology_check": "PASS",
+        "conflict_resolution": "実需の強さと資金調達・評価倍率の弱さを別の論点として併記。"
+      }
+    ],
+    "template_degradation_audit": {
+      "today_specific": true,
+      "previous_report_compared": true,
+      "actual_market_reaction_checked": true,
+      "multi_asset_checked": true,
+      "conflicting_materials_compared": true,
+      "transmission_explained": true,
+      "observable_change_conditions": true,
+      "comparison_note": "10月15日の指数反発を流用せず、16日のNASDAQ・SOX再下落、AI信用、原油高、日銀・IMF材料へ更新。"
+    }
+  },
+  "counter_evidence_audit": {
+    "status": "PASS",
+    "conclusions": [
+      {
+        "checks": [
+          "TSMCの強い実需",
+          "ダウの相対耐性",
+          "日本株16日の反発"
+        ],
+        "weighing": "AI需要崩壊とは断定せず、資金調達と評価倍率の調整を基本解釈とする。",
+        "uncertainty": "信用不安の継続期間と個別指数寄与率は未確定"
+      }
+    ]
+  },
+  "cross_asset_consistency": {
+    "status": "QUALIFIED",
+    "assets_checked": [
+      "equities",
+      "rates",
+      "fx",
+      "commodities",
+      "crypto"
+    ],
+    "relationships": [
+      {
+        "combination": "AI・半導体安＋国債の逃避需要",
+        "explanation": "物価指標が強くても、AI信用不安で安全資産需要が生じた。",
+        "unresolved": false,
+        "uncertainty": "寄与率は未算出"
+      },
+      {
+        "combination": "原油高＋株安",
+        "explanation": "中東供給懸念がエネルギー株を支える一方、インフレ・コスト面で広範株に逆風。",
+        "unresolved": true,
+        "uncertainty": "保存先物の限月定義は未確認"
+      },
+      {
+        "combination": "暗号資産",
+        "explanation": "10月16日同一定義値を取得できず、日本株の方向判断から除外。",
+        "unresolved": true,
+        "uncertainty": "時刻付き実測値未確認"
+      }
+    ]
+  },
+  "previous_day_change": {
+    "status": "PASS",
+    "prior_view": "10月15日は主要指数反発と半導体弱含みの選別相場。",
+    "new_events": [
+      "10月16日のNASDAQ・SOX再下落",
+      "AI社債利回り上昇",
+      "原油高",
+      "日銀・IMF発言"
+    ],
+    "changed": [
+      "全面回復ではなくAI信用・評価倍率の調整が継続",
+      "日本株の月曜リスクを半導体・原油・円へ具体化"
+    ],
+    "unchanged": [
+      "TSMC実需は強い",
+      "限月不明商品は除外",
+      "アナリスト評価は非網羅"
+    ],
+    "japan_revision": "金曜の国内反発後に米SOXが下落したため、月曜は反発持続性を最優先で確認。"
+  },
+  "source_quality": {
+    "status": "PASS",
+    "checks": [
+      "FRED・Nasdaq公式で主要指数を確認",
+      "Reuters・APで終値と市場内部を照合",
+      "BOJ・IMF関連発言の発生日と位置づけを確認",
+      "週末発言を政策決定と混同しない"
+    ]
+  },
+  "data_integrity": {
+    "status": "QUALIFIED",
+    "checks": [
+      "10月16日主要米株7系列のみ更新",
+      "未確認系列は基準日付き維持・結論除外",
+      "商品先物の価格水準を不掲載",
+      "日本株16日と米株16日の時間順を明示"
+    ]
+  },
+  "quality_gates": {
+    "research_coverage": "QUALIFIED",
+    "source_quality": "PASS",
+    "data_integrity": "QUALIFIED",
+    "analysis_logic": "PASS",
+    "cross_asset_consistency": "QUALIFIED",
+    "japan_transmission": "PASS",
+    "counter_evidence_audit": "PASS",
+    "previous_day_change": "PASS",
+    "final_content_audit": "PASS"
+  },
+  "publication_decision": {
+    "status": "QUALIFIED",
+    "decided_at": "2026-10-17T08:30:00+09:00",
+    "summary": "主要指数・重要材料を確認し、定義不足の系列を除外したQUALIFIED公開。",
+    "components": {
+      "ai_report": {
+        "status": "QUALIFIED",
+        "updated_at": "2026-10-17T08:30:00+09:00",
+        "reason": "主要指数・重要材料を確認し、定義不足の系列を除外したQUALIFIED公開。"
+      },
+      "japan_stocks": {
+        "status": "QUALIFIED",
+        "updated_at": "2026-10-17T08:30:00+09:00",
+        "reason": "主要指数・重要材料を確認し、定義不足の系列を除外したQUALIFIED公開。"
+      }
+    },
+    "unresolved_items": [
+      {
+        "id": "missing-1",
+        "status": "QUALIFIED",
+        "missing": "米11業種ETF、米2年、DXY、暗号資産の10月16日同一定義値",
+        "impact": "該当系列に依存する数値・断定を除外",
+        "last_checked_at": "2026-10-17T08:30:00+09:00",
+        "next_action": "次回自動取得で同一定義値を再確認",
+        "attempts": [
+          {
+            "method": "通常取得と公式・代替照合",
+            "result": "主要指数は確認、該当系列は同一定義値を確認できず",
+            "source_urls": [
+              "https://fred.stlouisfed.org/series/SP500",
+              "https://indexes.nasdaq.com/Index/Overview/SOX"
+            ],
+            "checked_at": "2026-10-17T08:30:00+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "米11業種ETF、米2年、DXY、暗号資産の10月16日同一定義値に依存する方向判断"
+        ],
+        "excluded_from_publication": true
+      },
+      {
+        "id": "missing-2",
+        "status": "QUALIFIED",
+        "missing": "Gold・WTI・Brentの限月・値種別・基準時刻に対応する保存値",
+        "impact": "該当系列に依存する数値・断定を除外",
+        "last_checked_at": "2026-10-17T08:30:00+09:00",
+        "next_action": "次回自動取得で同一定義値を再確認",
+        "attempts": [
+          {
+            "method": "通常取得と公式・代替照合",
+            "result": "主要指数は確認、該当系列は同一定義値を確認できず",
+            "source_urls": [
+              "https://fred.stlouisfed.org/series/SP500",
+              "https://indexes.nasdaq.com/Index/Overview/SOX"
+            ],
+            "checked_at": "2026-10-17T08:30:00+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "Gold・WTI・Brentの限月・値種別・基準時刻に対応する保存値に依存する方向判断"
+        ],
+        "excluded_from_publication": true
+      },
+      {
+        "id": "missing-3",
+        "status": "QUALIFIED",
+        "missing": "アナリスト評価変更の全件網羅",
+        "impact": "該当系列に依存する数値・断定を除外",
+        "last_checked_at": "2026-10-17T08:30:00+09:00",
+        "next_action": "次回自動取得で同一定義値を再確認",
+        "attempts": [
+          {
+            "method": "通常取得と公式・代替照合",
+            "result": "主要指数は確認、該当系列は同一定義値を確認できず",
+            "source_urls": [
+              "https://fred.stlouisfed.org/series/SP500",
+              "https://indexes.nasdaq.com/Index/Overview/SOX"
+            ],
+            "checked_at": "2026-10-17T08:30:00+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "アナリスト評価変更の全件網羅に依存する方向判断"
+        ],
+        "excluded_from_publication": true
+      }
+    ]
+  },
+  "actual_attempts": [
+    {
+      "id": "ppi",
+      "url": "https://www.bls.gov/news.release/archives/ppi_10152026.htm",
+      "checked_at": "2026-10-16T06:45:02+09:00",
+      "result": "HTTP 200"
+    },
+    {
+      "id": "tsmc",
+      "url": "https://pr.tsmc.com/japanese/news/3346",
+      "checked_at": "2026-10-16T06:45:02+09:00",
+      "result": "HTTP 200"
+    },
+    {
+      "id": "tdnet",
+      "url": "https://www.release.tdnet.info/inbs/I_list_001_20261015.html",
+      "checked_at": "2026-10-16T06:45:02+09:00",
+      "result": "HTTP 200"
+    },
+    {
+      "id": "ofac",
+      "url": "https://ofac.treasury.gov/recent-actions/20261015",
+      "checked_at": "2026-10-16T06:45:02+09:00",
+      "result": "HTTP 200"
+    },
+    {
+      "id": "bea",
+      "url": "https://www.bea.gov/news/schedule",
+      "checked_at": "2026-10-16T06:45:02+09:00",
+      "result": "HTTP 200"
+    },
+    {
+      "id": "census",
+      "url": "https://www.census.gov/economic-indicators/",
+      "checked_at": "2026-10-16T06:45:02+09:00",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "ism",
+      "url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/",
+      "checked_at": "2026-10-16T06:45:02+09:00",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "bis",
+      "url": "https://www.bis.gov/news-updates",
+      "checked_at": "2026-10-16T06:45:02+09:00",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "ecb",
+      "url": "https://www.ecb.europa.eu/rss/press.html",
+      "checked_at": "2026-10-16T06:45:06+09:00",
+      "result": "HTTP 200"
+    },
+    {
+      "id": "cme_gold",
+      "url": "https://www.cmegroup.com/markets/metals/precious/gold.settlements.html",
+      "checked_at": "2026-10-16T06:45:06+09:00",
+      "result": "HTTP 200"
+    },
+    {
+      "id": "cme_wti",
+      "url": "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html",
+      "checked_at": "2026-10-16T06:45:06+09:00",
+      "result": "HTTP 200"
+    },
+    {
+      "id": "ratings",
+      "url": "https://kabutan.jp/news/marketnews/?category=6",
+      "checked_at": "2026-10-16T06:45:07+09:00",
+      "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "ifis",
+      "url": "https://kabuyoho.jp/",
+      "checked_at": "2026-10-16T06:45:07+09:00",
+      "result": "HTTP 200"
+    }
+  ]
+}

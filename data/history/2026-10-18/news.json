@@ -1,0 +1,162 @@
+{
+  "report_date": "2026-10-18",
+  "target_market_date": "2026-10-16",
+  "updated_at": "2026-10-18T09:45:00+09:00",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "一次資料で確認できた4件のみ掲載。ニュース全体の網羅を意味しない。",
+  "articles": [
+    {
+      "id": "2026-10-18-sp500",
+      "title": "S&P500の10月16日終値",
+      "published_date": "2026-10-16",
+      "verified_at": "2026-10-18T09:45:00+09:00",
+      "source_type": "primary",
+      "publisher": "Federal Reserve Bank of St. Louis",
+      "source_url": "https://fred.stlouisfed.org/series/SP500",
+      "verification_url": "https://fred.stlouisfed.org/series/SP500",
+      "verification_status": "PASS",
+      "fact": "FRED掲載値で10月16日のS&P500は7,659.44。",
+      "analysis": "広範株指数は前日から下落。理由は別資料と分離する。",
+      "limitations": "指数値のみ。市場下落の原因を単独で示さない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次掲載本文・数値を確認"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "FRED掲載値で10月16日のS&P500は7,659.44。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-16、確認日2026-10-18T09:45:00+09:00"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実欄と条件付き分析を分離"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "指数値のみ。市場下落の原因を単独で示さない。"
+        }
+      }
+    },
+    {
+      "id": "2026-10-18-sox",
+      "title": "SOXの10月16日終値",
+      "published_date": "2026-10-16",
+      "verified_at": "2026-10-18T09:45:00+09:00",
+      "source_type": "primary",
+      "publisher": "Nasdaq",
+      "source_url": "https://indexes.nasdaq.com/Index/Overview/SOX",
+      "verification_url": "https://indexes.nasdaq.com/Index/Overview/SOX",
+      "verification_status": "PASS",
+      "fact": "Nasdaq公式掲載値で10月16日のSOXは11,137.29、前日比-3.83%。",
+      "analysis": "半導体の下落が広範指数を上回った事実を確認。",
+      "limitations": "指数構成銘柄すべての要因を説明するものではない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次掲載本文・数値を確認"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "Nasdaq公式掲載値で10月16日のSOXは11,137.29、前日比-3.83%。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-16、確認日2026-10-18T09:45:00+09:00"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実欄と条件付き分析を分離"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "指数構成銘柄すべての要因を説明するものではない。"
+        }
+      }
+    },
+    {
+      "id": "2026-10-18-ndx",
+      "title": "NASDAQ100の10月16日終値",
+      "published_date": "2026-10-16",
+      "verified_at": "2026-10-18T09:45:00+09:00",
+      "source_type": "primary",
+      "publisher": "Nasdaq",
+      "source_url": "https://indexes.nasdaq.com/Index/Overview/NDX",
+      "verification_url": "https://indexes.nasdaq.com/Index/Overview/NDX",
+      "verification_status": "PASS",
+      "fact": "Nasdaq公式掲載値で10月16日のNASDAQ100は29,187.55、前日比-2.50%。",
+      "analysis": "大型グロースの弱さをダウと比較する材料。",
+      "limitations": "個別銘柄の寄与率は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次掲載本文・数値を確認"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "Nasdaq公式掲載値で10月16日のNASDAQ100は29,187.55、前日比-2.50%。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-16、確認日2026-10-18T09:45:00+09:00"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実欄と条件付き分析を分離"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "個別銘柄の寄与率は未確認。"
+        }
+      }
+    },
+    {
+      "id": "2026-10-18-imf",
+      "title": "IMF世界経済見通しのリスク確認",
+      "published_date": "2026-10-13",
+      "verified_at": "2026-10-18T09:45:00+09:00",
+      "source_type": "primary",
+      "publisher": "IMF",
+      "source_url": "https://www.imf.org/en/Publications/WEO",
+      "verification_url": "https://www.imf.org/en/Publications/WEO",
+      "verification_status": "PASS",
+      "fact": "IMFの2026年10月WEOを確認。AI投資、地政学、債務・金融環境を世界経済の主要リスクとして扱う。",
+      "analysis": "AI・戦争・債務を週末の背景として使用し、日銀の政策決定とは分ける。",
+      "limitations": "週末の市場反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次掲載本文・数値を確認"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "IMFの2026年10月WEOを確認。AI投資、地政学、債務・金融環境を世界経済の主要リスクとして扱う。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-13、確認日2026-10-18T09:45:00+09:00"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実欄と条件付き分析を分離"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "週末の市場反応は未確認。"
+        }
+      }
+    }
+  ]
+}

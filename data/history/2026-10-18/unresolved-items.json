@@ -1,0 +1,87 @@
+{
+  "updated_at": "2026-10-18T09:45:00+09:00",
+  "source_report_date": "2026-10-18",
+  "items": [
+    {
+      "id": "missing-1",
+      "status": "QUALIFIED",
+      "missing": "米11業種ETF、米2年、DXY、暗号資産の10月16日同一定義値",
+      "impact": "該当系列に依存する数値・断定を除外",
+      "last_checked_at": "2026-10-18T09:45:00+09:00",
+      "next_action": "次回自動取得で同一定義値を再確認",
+      "attempts": [
+        {
+          "method": "通常取得と公式・代替照合",
+          "result": "主要指数は確認、該当系列は同一定義値を確認できず",
+          "source_urls": [
+            "https://fred.stlouisfed.org/series/SP500",
+            "https://indexes.nasdaq.com/Index/Overview/SOX"
+          ],
+          "checked_at": "2026-10-18T09:45:00+09:00"
+        }
+      ],
+      "affected_components": [
+        "ai_report",
+        "japan_stocks"
+      ],
+      "excluded_claims": [
+        "米11業種ETF、米2年、DXY、暗号資産の10月16日同一定義値に依存する方向判断"
+      ],
+      "excluded_from_publication": true
+    },
+    {
+      "id": "missing-2",
+      "status": "QUALIFIED",
+      "missing": "Gold・WTI・Brentの限月・値種別・基準時刻に対応する保存値",
+      "impact": "該当系列に依存する数値・断定を除外",
+      "last_checked_at": "2026-10-18T09:45:00+09:00",
+      "next_action": "次回自動取得で同一定義値を再確認",
+      "attempts": [
+        {
+          "method": "通常取得と公式・代替照合",
+          "result": "主要指数は確認、該当系列は同一定義値を確認できず",
+          "source_urls": [
+            "https://fred.stlouisfed.org/series/SP500",
+            "https://indexes.nasdaq.com/Index/Overview/SOX"
+          ],
+          "checked_at": "2026-10-18T09:45:00+09:00"
+        }
+      ],
+      "affected_components": [
+        "ai_report",
+        "japan_stocks"
+      ],
+      "excluded_claims": [
+        "Gold・WTI・Brentの限月・値種別・基準時刻に対応する保存値に依存する方向判断"
+      ],
+      "excluded_from_publication": true
+    },
+    {
+      "id": "missing-3",
+      "status": "QUALIFIED",
+      "missing": "アナリスト評価変更の全件網羅",
+      "impact": "該当系列に依存する数値・断定を除外",
+      "last_checked_at": "2026-10-18T09:45:00+09:00",
+      "next_action": "次回自動取得で同一定義値を再確認",
+      "attempts": [
+        {
+          "method": "通常取得と公式・代替照合",
+          "result": "主要指数は確認、該当系列は同一定義値を確認できず",
+          "source_urls": [
+            "https://fred.stlouisfed.org/series/SP500",
+            "https://indexes.nasdaq.com/Index/Overview/SOX"
+          ],
+          "checked_at": "2026-10-18T09:45:00+09:00"
+        }
+      ],
+      "affected_components": [
+        "ai_report",
+        "japan_stocks"
+      ],
+      "excluded_claims": [
+        "アナリスト評価変更の全件網羅に依存する方向判断"
+      ],
+      "excluded_from_publication": true
+    }
+  ]
+}

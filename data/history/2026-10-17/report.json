@@ -1,0 +1,829 @@
+{
+  "report_date": "2026-10-17",
+  "target_market_date": "2026-10-16",
+  "updated_at": "2026-10-17T08:30:00+09:00",
+  "report_type": "daily",
+  "quick_view": {
+    "headline": "AI・半導体売りが再加速。需要崩壊ではなく資金調達と評価倍率の再点検",
+    "top_news": [
+      {
+        "title": "米株はAI・半導体主導で再下落"
+      },
+      {
+        "title": "AI投資の焦点は需要から資金調達へ"
+      },
+      {
+        "title": "原油高が物価と企業コストの反証材料"
+      }
+    ],
+    "important_today": [
+      "米株はAI・半導体主導で再下落",
+      "AI投資の焦点は需要から資金調達へ",
+      "原油高が物価と企業コストの反証材料",
+      "日銀は利上げ継続姿勢、円安・輸入物価を監視",
+      "日本株は急落後に反発したが、戻りは限定"
+    ]
+  },
+  "executive_summary": {
+    "headline": "AI・半導体売りが再加速。需要崩壊ではなく資金調達と評価倍率の再点検",
+    "market_mood": "AI・半導体主導のリスク回避。全面景気後退ではなく、負債・評価倍率・原油コストの選別",
+    "main_driver": "AI資金調達不安、SOX8日続落、原油高、日銀正常化",
+    "winners": [
+      "エネルギー・資源（相対）",
+      "銀行（条件付き）",
+      "ディフェンシブ（相対）"
+    ],
+    "losers": [
+      "半導体・AI高PER",
+      "借入依存の成長株",
+      "燃料コスト敏感業種"
+    ],
+    "important_today": [
+      "米株はAI・半導体主導で再下落",
+      "AI投資の焦点は需要から資金調達へ",
+      "原油高が物価と企業コストの反証材料",
+      "日銀は利上げ継続姿勢、円安・輸入物価を監視",
+      "日本株は急落後に反発したが、戻りは限定"
+    ],
+    "watch_markets": [
+      "SOX",
+      "AI関連社債",
+      "米10年",
+      "Brent",
+      "USD/JPY",
+      "国内半導体のTOPIX比"
+    ],
+    "current_environment": [
+      "米国株は10月16日終値",
+      "日本株は10月16日大引け",
+      "米国16日終値は日本株16日大引け後"
+    ]
+  },
+  "news": [
+    {
+      "title": "米株はAI・半導体主導で再下落",
+      "fact": "10月16日、S&P500は1.09%安、NASDAQ総合は2.15%安、NASDAQ100は2.50%安、SOXは3.83%安。ダウは0.34%安にとどまりました。",
+      "published_at": "2026-10-16",
+      "market_reaction": "半導体・データセンター関連の下落が広範指数を上回り、AIテーマの選別が再び強まりました。",
+      "analysis": "指数全体の景気悪化というより、借入負担と高い評価倍率を抱えるAI投資への再評価が中心です。",
+      "source_url": "https://www.reuters.com/business/wall-st-futures-mixed-tech-wobbles-again-tesla-gains-2026-10-16/",
+      "related_assets": [
+        "S&P500",
+        "NASDAQ",
+        "NASDAQ100",
+        "SOX"
+      ],
+      "related_japan_sectors": [
+        "半導体製造装置",
+        "電機・精密",
+        "情報通信"
+      ],
+      "importance": "最重要"
+    },
+    {
+      "title": "AI投資の焦点は需要から資金調達へ",
+      "fact": "CoreWeaveは16日に12%下落し、週間で25%安。債券利回りは15%超となり、AIインフラを支える負債への警戒が続きました。",
+      "published_at": "2026-10-16",
+      "market_reaction": "SOXは8営業日続落し、AI関連の混雑取引を解消する動きが半導体へ波及しました。",
+      "analysis": "TSMCなどの実需が強くても、顧客側の資金調達コストが上がれば投資継続性の評価は悪化します。需要崩壊とは分けて判断します。",
+      "source_url": "https://www.reuters.com/world/china/ai-selloff-hammers-hedge-funds-this-week-asia-managers-lead-losses-2026-10-16/",
+      "related_assets": [
+        "AI株",
+        "社債",
+        "SOX"
+      ],
+      "related_japan_sectors": [
+        "半導体製造装置",
+        "データセンター関連"
+      ],
+      "importance": "最重要"
+    },
+    {
+      "title": "原油高が物価と企業コストの反証材料",
+      "fact": "Reutersによると16日のBrentは3.72%上昇し、中東の供給懸念から週間でも上昇しました。",
+      "published_at": "2026-10-16",
+      "market_reaction": "米国ではエネルギーが相対優位となる一方、高油価はインフレと金利の下振れ余地を狭めました。",
+      "analysis": "日本株では資源・商社に追い風候補、運輸・化学・小売にはコスト逆風です。保存先物の限月未確認のため価格水準は掲載しません。",
+      "source_url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-10-16/",
+      "related_assets": [
+        "原油",
+        "米金利"
+      ],
+      "related_japan_sectors": [
+        "エネルギー",
+        "商社",
+        "運輸",
+        "化学"
+      ],
+      "importance": "重要"
+    },
+    {
+      "title": "日銀は利上げ継続姿勢、円安・輸入物価を監視",
+      "fact": "植田総裁は基調的物価を2%付近に定着させるため、経済・物価が見通し通りなら利上げを続ける姿勢を示しました。",
+      "published_at": "2026-10-16",
+      "market_reaction": "ドル円は158円前後で、円高が定着したとはいえません。",
+      "analysis": "銀行には金利上昇の恩恵候補、不動産・高PER株には割引率負担。輸出株の円安メリットと輸入コスト増を同時に見ます。",
+      "source_url": "https://www.reuters.com/world/asia-pacific/global-inflation-debate-puts-boj-rate-hike-pace-spotlight-2026-10-16/",
+      "related_assets": [
+        "USD/JPY",
+        "日本国債"
+      ],
+      "related_japan_sectors": [
+        "銀行",
+        "不動産",
+        "自動車",
+        "小売"
+      ],
+      "importance": "重要"
+    },
+    {
+      "title": "日本株は急落後に反発したが、戻りは限定",
+      "fact": "10月16日の日経平均は1.39%高の65,324.29、TOPIXは1.67%高の4,066.00。前日の急落を一部戻しました。",
+      "published_at": "2026-10-16",
+      "market_reaction": "半導体を含む32業種が上昇しましたが、その後の米SOX3.83%安は日本株現物に未反映です。",
+      "analysis": "金曜の反発だけで調整終了とは判断せず、月曜に半導体の戻りが維持されるか確認します。",
+      "source_url": "https://www.reuters.com/world/china/global-markets-global-markets-2026-10-16/",
+      "related_assets": [
+        "日経平均",
+        "TOPIX",
+        "SOX"
+      ],
+      "related_japan_sectors": [
+        "電機・精密",
+        "機械",
+        "銀行"
+      ],
+      "importance": "重要"
+    }
+  ],
+  "policy": {
+    "economic_indicators": {
+      "fact": "米CPI・PPI上振れと原油高で物価警戒が継続",
+      "source_urls": [
+        "https://www.reuters.com/world/china/global-markets-global-markets-2026-10-16/"
+      ]
+    },
+    "boj_japan": {
+      "fact": "植田総裁は基調的物価を2%付近に定着させるため、経済・物価が見通し通りなら利上げを続ける姿勢を示しました。",
+      "source_url": "https://www.reuters.com/world/asia-pacific/global-inflation-debate-puts-boj-rate-hike-pace-spotlight-2026-10-16/"
+    }
+  },
+  "scenarios": [
+    {
+      "name": "基本",
+      "conditions": "SOX安と原油高が続き、円は158円前後",
+      "impact_on_japan": "半導体・高PERは戻り売りに注意。資源・商社と銀行は相対優位候補",
+      "invalidation": "SOXとAI信用スプレッドが改善し、国内半導体がTOPIX比で反発"
+    },
+    {
+      "name": "上振れ",
+      "conditions": "米金利と原油が安定し、AI関連の信用不安が後退",
+      "impact_on_japan": "金曜の国内半導体反発が継続し、電機・機械へ広がる",
+      "invalidation": "反発が一部大型株だけに限定"
+    },
+    {
+      "name": "下振れ",
+      "conditions": "AI社債不安、原油高、円安が同時進行",
+      "impact_on_japan": "高PER・輸入コスト敏感・小型株へ売りが広がる",
+      "invalidation": "市場幅が改善し、ディフェンシブ以外にも買いが広がる"
+    }
+  ],
+  "market_data": [
+    {
+      "market": "S&P500",
+      "price": "7,659.44",
+      "change_pct": -1.09,
+      "market_date": "2026-10-16"
+    },
+    {
+      "market": "NASDAQ総合",
+      "price": "26,140.03",
+      "change_pct": -2.15,
+      "market_date": "2026-10-16"
+    },
+    {
+      "market": "NASDAQ100",
+      "price": "29,187.55",
+      "change_pct": -2.5,
+      "market_date": "2026-10-16"
+    },
+    {
+      "market": "SOX",
+      "price": "11,137.29",
+      "change_pct": -3.83,
+      "market_date": "2026-10-16"
+    },
+    {
+      "market": "NYダウ",
+      "price": "52,002.41",
+      "change_pct": -0.34,
+      "market_date": "2026-10-16"
+    },
+    {
+      "market": "Russell2000",
+      "price": "2,721.37",
+      "change_pct": -1.66,
+      "market_date": "2026-10-16"
+    },
+    {
+      "market": "VIX",
+      "price": "19.99",
+      "change_pct": 21.45,
+      "market_date": "2026-10-16"
+    }
+  ],
+  "market_overview": [
+    {
+      "market": "米国株",
+      "move": "NASDAQ -2.15%、SOX -3.83%",
+      "relative_strength": "ダウ -0.34%が相対優位",
+      "background": "AI資金調達と評価倍率の再点検",
+      "impact_on_japan": "半導体・高PERに逆風"
+    },
+    {
+      "market": "日本株",
+      "move": "日経平均 +1.39%、TOPIX +1.67%（10月16日）",
+      "relative_strength": "前日急落から一部反発",
+      "background": "押し目買いとアジア半導体反発",
+      "impact_on_japan": "その後の米SOX安は未反映"
+    },
+    {
+      "market": "原油・金利",
+      "move": "Brentは報道ベースで+3.72%、米10年は約5.10%",
+      "relative_strength": "エネルギー相対優位",
+      "background": "中東供給懸念と物価警戒",
+      "impact_on_japan": "資源とコスト敏感業種で分岐"
+    }
+  ],
+  "market_move_explanation": {
+    "title": "なぜ米国株は再び下がったのか",
+    "move": "S&P500 -1.09%、NASDAQ総合 -2.15%、NASDAQ100 -2.50%、SOX -3.83%。ダウは-0.34%。",
+    "trigger": "AIインフラ企業の高い資金調達コストと半導体株の連続安に、原油高による物価懸念が重なりました。",
+    "transmission_chain": [
+      "AI企業の社債利回り上昇",
+      "巨額設備投資の採算・継続性を再評価",
+      "半導体・データセンター株へ売り",
+      "NASDAQ・SOXがダウより大幅安",
+      "原油高がインフレ・金利低下期待を抑制"
+    ],
+    "hit_hardest": [
+      {
+        "market": "SOX",
+        "reason": "AI投資の顧客側資金調達とメモリー競争への警戒"
+      },
+      {
+        "market": "NASDAQ100",
+        "reason": "高い評価倍率と長期利益への依存"
+      },
+      {
+        "market": "Russell2000",
+        "reason": "資金調達コストと景気感応度"
+      }
+    ],
+    "relative_resilience": "ダウの下落は0.34%にとどまり、エネルギーなど非テックが相対的に耐えました。",
+    "japan_impact": "月曜は半導体・高PERに向かい風。資源・商社は原油高、銀行は日銀正常化で相対優位候補。ただし市場全体の下落時に絶対上昇を保証しません。",
+    "confidence": "主要指数・SOX・個別AI信用不安・原油の方向を複数ソースで確認。寄与率は算出していません。",
+    "invalidation": "SOX反発、AI社債利回り低下、原油・米金利の安定が同時に確認されれば弱気度を下げます。"
+  },
+  "internal_strength": {
+    "large_vs_small": "Russell2000 -1.66%で小型株も弱い",
+    "growth_vs_value": "NASDAQ100 -2.50%、ダウ -0.34%でValue・非テック優位",
+    "sectors": "SOX -3.83%。エネルギーは原油高で相対優位",
+    "assessment": "指数安以上にAI・半導体へ売りが集中"
+  },
+  "us_sector_etf_closes": [],
+  "monitoring_points": [
+    {
+      "target": "国内半導体",
+      "today_check": "寄り後30〜60分のTOPIX比・出来高・複数銘柄への広がり",
+      "view_change_condition": "相対反発が広がれば警戒を弱める"
+    },
+    {
+      "target": "AI信用市場",
+      "today_check": "CoreWeave等の社債利回りと株価",
+      "view_change_condition": "信用不安後退なら需要側の強さを再評価"
+    },
+    {
+      "target": "原油・米金利・円",
+      "today_check": "同一時刻の方向",
+      "view_change_condition": "原油高・円安・金利高の同時進行で下振れ"
+    }
+  ],
+  "data_quality": {
+    "overall": "QUALIFIED",
+    "missing": [
+      "米11業種ETF、米2年、DXY、暗号資産の10月16日同一定義値",
+      "Gold・WTI・Brentの限月・値種別・基準時刻に対応する保存値",
+      "アナリスト評価変更の全件網羅"
+    ],
+    "differences": [
+      "主要米株7系列は10月16日終値を公式・報道で再確認",
+      "日本株実績は10月16日、週末材料は日本株現物に未反映"
+    ],
+    "excluded": [
+      "限月不明の商品先物価格",
+      "基準日不一致の2s10s",
+      "未確認の政策確率・日経先物推定",
+      "未確認系列を使った断定"
+    ],
+    "cautions": [
+      "注釈付き公開。確認済み指数と記事だけで因果を構成",
+      "AI実需とAI投資の資金調達を分離",
+      "16日の米市場は16日の日本株大引け後で未反映"
+    ]
+  },
+  "final_conclusion": {
+    "headline": "AI・半導体売りが再加速。需要崩壊ではなく資金調達と評価倍率の再点検",
+    "winners": [
+      "資源・商社",
+      "銀行（条件付き）",
+      "ディフェンシブ（相対）"
+    ],
+    "losers": [
+      "半導体・AI高PER",
+      "燃料コスト敏感",
+      "借入依存小型株"
+    ],
+    "top_three": [
+      "AI資金調達",
+      "SOX3.83%安",
+      "原油高と日銀正常化"
+    ],
+    "triggers": [
+      "SOXとAI信用スプレッドが改善し、国内半導体がTOPIX比で反発",
+      "反発が一部大型株だけに限定",
+      "市場幅が改善し、ディフェンシブ以外にも買いが広がる"
+    ],
+    "disclaimer": "QUALIFIED。未確認系列は結論から除外し、確認済み指数・一次資料・信頼できる報道に限定。"
+  },
+  "japan_equities_preview": {
+    "summary": "金曜の反発後に米SOXが3.83%下落。月曜は半導体の再評価と、資源・銀行の相対強さを確認",
+    "top_materials": [
+      "米株はAI・半導体主導で再下落",
+      "AI投資の焦点は需要から資金調達へ",
+      "原油高が物価と企業コストの反証材料",
+      "日銀は利上げ継続姿勢、円安・輸入物価を監視",
+      "日本株は急落後に反発したが、戻りは限定"
+    ],
+    "focus_sectors": [
+      "電機・精密",
+      "機械",
+      "銀行",
+      "資源・商社",
+      "運輸",
+      "化学"
+    ],
+    "top_stories": [
+      {
+        "company": "三井物産",
+        "ticker": "8031",
+        "headline": "PAG浮動株買収を決定、完了条件と翌期以降の寄与を区別",
+        "importance": "high",
+        "market_pricing_status": "10月16日までに国内現物へ反映済み。週末の新規材料ではない"
+      }
+    ],
+    "total_story_count": 1
+  },
+  "what_changed": {
+    "previous_report_date": "2026-10-16",
+    "changed": [
+      "15日の指数反発から16日はNASDAQ・SOXが再下落",
+      "AI懸念を需要一般ではなく信用・資金調達へ具体化",
+      "原油高と日銀正常化を日本株の分岐材料へ追加"
+    ],
+    "unchanged": [
+      "TSMC等の実需は需要崩壊への反証",
+      "商品先物の契約定義不足",
+      "アナリスト評価の非網羅"
+    ]
+  },
+  "publication_policy": {
+    "status": "QUALIFIED",
+    "mode": "daily",
+    "updated_at": "2026-10-17T08:30:00+09:00",
+    "complete_gate": "QUALIFIED",
+    "copper_included": false,
+    "note": "主要指数と重要材料は確認済み。任意・定義不十分な系列を除外した注釈付き公開。",
+    "missing_items": [
+      "米11業種ETF、米2年、DXY、暗号資産の10月16日同一定義値",
+      "Gold・WTI・Brentの限月・値種別・基準時刻に対応する保存値",
+      "アナリスト評価変更の全件網羅"
+    ]
+  },
+  "market_context_themes": [
+    {
+      "theme": "米物価と金融政策",
+      "timeline": [
+        {
+          "date": "2026-03-18",
+          "title": "FRBは利下げを急がず据え置き",
+          "fact": "FOMCは政策金利を3.50〜3.75%に据え置き、インフレはなおやや高いと説明しました。",
+          "market_impact": "景気を支える利下げ期待より、物価と中東情勢を見極める姿勢が優先されました。",
+          "source_ids": [
+            "fed-mar18"
+          ]
+        },
+        {
+          "date": "2026-04-29",
+          "title": "高金利の長期化が市場の前提に",
+          "fact": "FOMCは3.50〜3.75%を維持しました。",
+          "market_impact": "株式市場では、成長率だけでなく高い資本コストに耐えられる利益と財務が重視される状態が続きました。",
+          "source_ids": [
+            "fed-apr29"
+          ]
+        },
+        {
+          "date": "2026-09-16",
+          "title": "FRBが0.25%利上げ",
+          "fact": "FOMCは政策金利を3.75〜4.00%へ引き上げました。",
+          "market_impact": "物価再加速への警戒が政策変更につながり、高PER株への金利負担が一段と意識されました。",
+          "source_ids": [
+            "fed-sep16"
+          ]
+        },
+        {
+          "date": "2026-10-14",
+          "title": "CPI上振れで追加利上げ観測が再燃",
+          "fact": "米9月CPIは前月比+0.6%、前年比+3.7%。NASDAQ総合は1.88%安、Russell2000は約1.9%安でした。",
+          "market_impact": "高金利が長引くとの見方から、将来利益と借入資金への依存が大きい銘柄ほど売られました。",
+          "source_ids": [
+            "oct15-0",
+            "reaction14"
+          ]
+        },
+        {
+          "date": "2026-10-15",
+          "title": "米PPIと小売が公表",
+          "fact": "PPIの物価上昇と名目小売の増加を確認。前月改定も反映",
+          "market_impact": "物価警戒は残るが主要指数は反発。単一指標から値動きを断定しない",
+          "source_ids": [
+            "oct16-ppi",
+            "oct16-retail",
+            "reaction15"
+          ]
+        },
+        {
+          "date": "2026-10-16",
+          "title": "物価警戒の中で安全資産需要",
+          "fact": "AI・半導体株が下落する一方、国債には逃避需要が入りました。",
+          "market_impact": "『物価高なら金利高・株安』だけでは説明できず、信用不安を加えて読む局面です。",
+          "source_ids": [
+            "us-close-1016"
+          ]
+        }
+      ],
+      "initial_view": {
+        "date": "2026-03-18",
+        "text": "FRBはインフレを警戒し、利下げを急がない姿勢"
+      },
+      "new_fact": {
+        "date": "2026-10-16",
+        "text": "物価上振れ後もFedは即時追加利上げを明示せず、国債には逃避需要"
+      },
+      "market_reaction": {
+        "date": "2026-10-16",
+        "text": "株安と債券買いが同居し、物価だけでなくAI信用不安が主役に"
+      },
+      "current_view": "物価警戒は残るが、短期の株安はAI信用不安が主因。原油高は金利低下余地への反証。",
+      "japan_impact": "高PER半導体には逆風。円安は輸出株を支える一方、輸入コストを通じて内需・運輸を圧迫します。",
+      "counter_evidence": "TSMCの強い需要見通しと名目小売の底堅さ。ただし数量成長・株価上昇・次回利上げを保証しない。",
+      "source_ids": [
+        "fed-apr29",
+        "fed-mar18",
+        "fed-sep16",
+        "oct15-0",
+        "oct16-ppi",
+        "oct16-retail",
+        "reaction14",
+        "reaction15",
+        "us-close-1016"
+      ]
+    },
+    {
+      "theme": "AI・半導体：需要拡大から採算選別へ",
+      "timeline": [
+        {
+          "date": "2026-04-16",
+          "title": "ASML・TSMCがAI需要の強さを確認",
+          "fact": "両社の見通しは、クラウド各社のAI向け設備投資と先端半導体需要の継続を示しました。",
+          "market_impact": "AI投資の持続性が確認され、半導体装置・先端ロジックへの成長期待が相場を支えました。",
+          "source_ids": [
+            "ai-apr16"
+          ]
+        },
+        {
+          "date": "2026-07-20",
+          "title": "ASML株上昇、期待が株価へ集中",
+          "fact": "ASML株は年初来約60%上昇し、AI設備需要への期待が一段と高まりました。",
+          "market_impact": "実需の強さと同時に、株価へ織り込まれた期待の大きさもリスクになりました。",
+          "source_ids": [
+            "ai-jul20"
+          ]
+        },
+        {
+          "date": "2026-09-14",
+          "title": "AI投資の採算懸念で半導体が急落",
+          "fact": "AI投資の減速警戒を受け、米半導体株が大きく売られました。",
+          "market_impact": "『需要が増えるか』だけでなく、『巨額投資を利益で回収できるか』が評価軸に加わりました。",
+          "source_ids": [
+            "ai-sep14"
+          ]
+        },
+        {
+          "date": "2026-10-14",
+          "title": "強い需要見通しでも株価は下落",
+          "fact": "ASMLは2028年まで需要が供給を上回る見通しを示しましたが、SOXは約4%下落しました。",
+          "market_impact": "需要崩壊ではなく、金利上昇・資金調達負担・高い株価評価が実需の強さを上回ったと整理できます。",
+          "source_ids": [
+            "oct15-2",
+            "reaction14"
+          ]
+        },
+        {
+          "date": "2026-10-15",
+          "title": "実需の強さと株価の選別が続く",
+          "fact": "TSMCは増益・強いQ4見通し。米主要指数反発でも半導体弱含み",
+          "market_impact": "設備需要と負債・評価倍率を分離。全面回復は未確認",
+          "source_ids": [
+            "oct16-tsmc",
+            "reaction15"
+          ]
+        },
+        {
+          "date": "2026-10-16",
+          "title": "AI投資の資金調達へ焦点移動",
+          "fact": "CoreWeave株は12%安、債券利回りは15%超。SOXは8日続落しました。",
+          "market_impact": "需要の有無より、誰が高い資本コストで投資を継続できるかが評価軸になりました。",
+          "source_ids": [
+            "ai-credit-1016",
+            "us-close-1016"
+          ]
+        }
+      ],
+      "initial_view": {
+        "date": "2026-04-16",
+        "text": "AI設備投資と先端半導体需要の強さが株価を支える局面"
+      },
+      "new_fact": {
+        "date": "2026-10-16",
+        "text": "CoreWeave株・債券の悪化とSOX3.83%安で、AI投資の資金調達が焦点に"
+      },
+      "market_reaction": {
+        "date": "2026-10-16",
+        "text": "NASDAQ100 -2.50%、SOX -3.83%。実需の強さより信用・評価倍率懸念が優勢"
+      },
+      "current_view": "AI需要は強いが、投資主体の資金調達と回収可能性を銘柄別に選別する段階。",
+      "japan_impact": "東京エレクトロンなど装置株を一律に弱気とせず、受注と株価評価を分けて確認します。",
+      "counter_evidence": "TSMCの強い需要見通しと名目小売の底堅さ。ただし数量成長・株価上昇・次回利上げを保証しない。",
+      "source_ids": [
+        "ai-apr16",
+        "ai-credit-1016",
+        "ai-jul20",
+        "ai-sep14",
+        "oct15-2",
+        "oct16-tsmc",
+        "reaction14",
+        "reaction15",
+        "us-close-1016"
+      ]
+    },
+    {
+      "theme": "日銀・円相場と日本株",
+      "timeline": [
+        {
+          "date": "2026-04-28",
+          "title": "日銀は0.75%を維持",
+          "fact": "日銀は無担保コール翌日物を0.75%程度に誘導しましたが、3委員は1.0%への引き上げを提案しました。",
+          "market_impact": "据え置きでも利上げ方向への圧力が明確になり、銀行・不動産・為替の選別材料になりました。",
+          "source_ids": [
+            "boj-apr28"
+          ]
+        },
+        {
+          "date": "2026-06-16",
+          "title": "日銀が1.0%へ利上げ",
+          "fact": "日銀は政策金利を1.0%程度へ引き上げ、物価上振れリスクと原油高を理由に金融緩和度を調整しました。",
+          "market_impact": "銀行には利ざや期待、住宅・不動産や高PER株には割引率上昇が意識されました。",
+          "source_ids": [
+            "boj-jun16"
+          ]
+        },
+        {
+          "date": "2026-09-18",
+          "title": "日銀が1.25%へ追加利上げ",
+          "fact": "日銀は政策金利を1.25%程度へ引き上げ、AI需要・原油・円安による物価上振れリスクを指摘しました。",
+          "market_impact": "利上げだけでは円高が定着せず、日本株では金利恩恵と輸入コストの影響が分かれました。",
+          "source_ids": [
+            "boj-sep18"
+          ]
+        },
+        {
+          "date": "2026-10-14",
+          "title": "米CPI後にドル高、日米金利差を再評価",
+          "fact": "米CPI上振れで追加利上げ観測が強まり、ドルは18か月ぶり高値圏へ上昇しました。",
+          "market_impact": "円安は輸出採算を支える一方、原油・輸入物価を通じて内需企業と家計の負担を増やします。",
+          "source_ids": [
+            "global-oct14"
+          ]
+        },
+        {
+          "date": "2026-10-15",
+          "title": "小枝委員が適時調整に言及",
+          "fact": "経済・物価に応じた政策調整の見解。新規決定ではない",
+          "market_impact": "銀行・不動産・輸出の反応を金利・為替と照合する",
+          "source_ids": [
+            "oct16-boj"
+          ]
+        },
+        {
+          "date": "2026-10-16",
+          "title": "日銀正常化の継続",
+          "fact": "植田総裁は経済・物価が見通し通りなら利上げを続ける姿勢を示しました。",
+          "market_impact": "銀行の利ざや、不動産・高PERの割引率、円相場の三経路を確認します。",
+          "source_ids": [
+            "boj-1016"
+          ]
+        }
+      ],
+      "initial_view": {
+        "date": "2026-04-28",
+        "text": "政策金利0.75%でも利上げを求める意見が増え、正常化継続が意識された"
+      },
+      "new_fact": {
+        "date": "2026-10-16",
+        "text": "日銀総裁は物価2%定着へ利上げ継続姿勢を表明"
+      },
+      "market_reaction": {
+        "date": "2026-10-16",
+        "text": "ドル円は158円前後で、円高定着は未確認"
+      },
+      "current_view": "正常化方向は継続。ただし次回会合の決定を先取りせず、円・国内金利・銀行・不動産の実反応で判断。",
+      "japan_impact": "銀行、輸出、内需、運輸で影響が分かれます。円安を日本株全体の一律追い風とは扱いません。",
+      "counter_evidence": "TSMCの強い需要見通しと名目小売の底堅さ。ただし数量成長・株価上昇・次回利上げを保証しない。",
+      "source_ids": [
+        "boj-1016",
+        "boj-apr28",
+        "boj-jun16",
+        "boj-sep18",
+        "global-oct14",
+        "oct16-boj"
+      ]
+    }
+  ],
+  "market_context_sources": {
+    "fed-mar18": {
+      "id": "fed-mar18",
+      "title": "Federal Reserve issues FOMC statement",
+      "publisher": "Federal Reserve Board",
+      "published_date": "2026-03-18",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260318a.htm"
+    },
+    "fed-apr29": {
+      "id": "fed-apr29",
+      "title": "Federal Reserve issues FOMC statement",
+      "publisher": "Federal Reserve Board",
+      "published_date": "2026-04-29",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm"
+    },
+    "fed-sep16": {
+      "id": "fed-sep16",
+      "title": "Federal Reserve issues FOMC statement",
+      "publisher": "Federal Reserve Board",
+      "published_date": "2026-09-16",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
+    },
+    "oct15-0": {
+      "id": "oct15-0",
+      "title": "米9月CPI、ガソリン上昇で総合加速",
+      "publisher": "BLS",
+      "published_date": "2026-10-14",
+      "source_url": "https://www.bls.gov/news.release/archives/cpi_10142026.htm"
+    },
+    "reaction14": {
+      "id": "reaction14",
+      "title": "10月14日米株市場反応",
+      "publisher": "Reuters",
+      "published_date": "2026-10-14",
+      "source_url": "https://www.reuters.com/business/sp-500-dow-futures-rise-ahead-big-bank-results-cpi-data-2026-10-14/"
+    },
+    "oct16-ppi": {
+      "id": "oct16-ppi",
+      "title": "米9月PPI、財・サービス双方で上昇",
+      "publisher": "BLS",
+      "published_date": "2026-10-15",
+      "source_url": "https://www.bls.gov/news.release/archives/ppi_10152026.htm"
+    },
+    "oct16-retail": {
+      "id": "oct16-retail",
+      "title": "米小売売上は名目増、8月も上方改定",
+      "publisher": "U.S. Census Bureau",
+      "published_date": "2026-10-15",
+      "source_url": "https://www.census.gov/retail/marts/www/marts_current.pdf"
+    },
+    "reaction15": {
+      "id": "reaction15",
+      "title": "10月15日米市場の終値記事",
+      "publisher": "Reuters",
+      "published_date": "2026-10-15",
+      "source_url": "https://www.reuters.com/business/nasdaq-futures-dive-1-ai-rout-deepens-debt-concerns-2026-10-15/"
+    },
+    "ai-apr16": {
+      "id": "ai-apr16",
+      "title": "Strong ASML, TSMC forecasts signal AI spending boom is intact",
+      "publisher": "Reuters",
+      "published_date": "2026-04-16",
+      "source_url": "https://www.reuters.com/business/strong-asml-tsmc-forecasts-signal-ai-spending-boom-is-intact-2026-04-16/"
+    },
+    "ai-jul20": {
+      "id": "ai-jul20",
+      "title": "Could AI chip boom make ASML Europe's first trillion-dollar firm?",
+      "publisher": "Reuters",
+      "published_date": "2026-07-20",
+      "source_url": "https://www.reuters.com/business/media-telecom/could-ai-chip-boom-make-asml-europes-first-trillion-dollar-firm-2026-07-20/"
+    },
+    "ai-sep14": {
+      "id": "ai-sep14",
+      "title": "Wall Street ends down, calls for AI slowdown pummel chipmakers",
+      "publisher": "Reuters",
+      "published_date": "2026-09-14",
+      "source_url": "https://www.reuters.com/business/ai-warnings-knock-nasdaq-futures-pressure-tech-stocks-2026-09-14/"
+    },
+    "oct15-2": {
+      "id": "oct15-2",
+      "title": "ASML、需要見通しの強さと株価心理を区別",
+      "publisher": "ASML",
+      "published_date": "2026-10-14",
+      "source_url": "https://www.investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026"
+    },
+    "oct16-tsmc": {
+      "id": "oct16-tsmc",
+      "title": "TSMC、Q3純利益68.7%増・Q4売上見通しを公表",
+      "publisher": "TSMC",
+      "published_date": "2026-10-15",
+      "source_url": "https://pr.tsmc.com/japanese/news/3346"
+    },
+    "boj-apr28": {
+      "id": "boj-apr28",
+      "title": "Statement on Monetary Policy",
+      "publisher": "Bank of Japan",
+      "published_date": "2026-04-28",
+      "source_url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260428a.pdf"
+    },
+    "boj-jun16": {
+      "id": "boj-jun16",
+      "title": "Change in the Guideline for Money Market Operations",
+      "publisher": "Bank of Japan",
+      "published_date": "2026-06-16",
+      "source_url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260616a.pdf"
+    },
+    "boj-sep18": {
+      "id": "boj-sep18",
+      "title": "Change in the Guideline for Money Market Operations",
+      "publisher": "Bank of Japan",
+      "published_date": "2026-09-18",
+      "source_url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf"
+    },
+    "global-oct14": {
+      "id": "global-oct14",
+      "title": "Trading Day: Tech melt",
+      "publisher": "Reuters",
+      "published_date": "2026-10-14",
+      "source_url": "https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-10-14/"
+    },
+    "oct16-boj": {
+      "id": "oct16-boj",
+      "title": "小枝日銀委員、物価定着と適時の政策調整に言及",
+      "publisher": "日本銀行",
+      "published_date": "2026-10-15",
+      "source_url": "https://www.boj.or.jp/about/press/koen_2026/data/ko261015a1.pdf"
+    },
+    "us-close-1016": {
+      "id": "us-close-1016",
+      "title": "Wall Street tumbles as AI and oil worries weigh",
+      "publisher": "Reuters",
+      "published_date": "2026-10-16",
+      "source_url": "https://www.reuters.com/business/wall-st-futures-mixed-tech-wobbles-again-tesla-gains-2026-10-16/"
+    },
+    "ai-credit-1016": {
+      "id": "ai-credit-1016",
+      "title": "AI selloff and credit stress",
+      "publisher": "Reuters",
+      "published_date": "2026-10-16",
+      "source_url": "https://www.reuters.com/world/china/ai-selloff-hammers-hedge-funds-this-week-asia-managers-lead-losses-2026-10-16/"
+    },
+    "boj-1016": {
+      "id": "boj-1016",
+      "title": "BOJ chief on continued normalization",
+      "publisher": "Reuters",
+      "published_date": "2026-10-16",
+      "source_url": "https://www.reuters.com/world/asia-pacific/global-inflation-debate-puts-boj-rate-hike-pace-spotlight-2026-10-16/"
+    },
+    "imf-boj-1017": {
+      "id": "imf-boj-1017",
+      "title": "IMF on BOJ normalization",
+      "publisher": "Reuters",
+      "published_date": "2026-10-17",
+      "source_url": "https://www.reuters.com/world/asia-pacific/boj-may-need-tighten-faster-if-inflation-beats-forecast-imf-says-2026-10-17/"
+    }
+  }
+}

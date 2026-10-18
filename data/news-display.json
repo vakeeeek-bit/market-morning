@@ -1,320 +1,33 @@
 {
-  "version": 1,
-  "description": "読者向けの主掲載先・優先度・重要注意点。検証証跡はnews.jsonに保持する。",
+  "version": "1.0",
+  "description": "確認済み一次資料の表示設定",
   "items": {
-    "reuters-us-market-20261012": {
+    "2026-10-18-sp500": {
       "primary_page": "world",
       "priority": 100,
       "attention_points": [
-        "10月13日の日本株現物への波及は寄り付き後に確認する。"
+        "広範株指数は前日から下落。理由は別資料と分離する。"
       ]
     },
-    "bls-cpi-calendar-20261014": {
+    "2026-10-18-sox": {
       "primary_page": "world",
       "priority": 95,
       "attention_points": [
-        "公表予定であり、CPIの実績値や市場予想ではない。"
+        "半導体の下落が広範指数を上回った事実を確認。"
       ]
     },
-    "michigan-preliminary-20261009": {
+    "2026-10-18-ndx": {
       "primary_page": "world",
       "priority": 90,
       "attention_points": [
-        "速報値。10月23日の確報で改定される可能性がある。"
+        "大型グロースの弱さをダウと比較する材料。"
       ]
     },
-    "sifma-bond-holiday-20261012": {
-      "primary_page": "world",
-      "priority": 88,
-      "attention_points": [
-        "SIFMAの休場推奨と、個別の先物・電子取引を同一視しない。"
-      ]
-    },
-    "ofac-gl135-20261009": {
+    "2026-10-18-imf": {
       "primary_page": "world",
       "priority": 85,
       "attention_points": [
-        "許可対象は軽油。原油や全制裁の解除ではない。"
-      ]
-    },
-    "wh-diesel-tax-20261005": {
-      "primary_page": "world",
-      "priority": 82,
-      "attention_points": [
-        "支払い延期の検討であり、免税の確定ではない。"
-      ]
-    },
-    "waller-sep-20261008": {
-      "primary_page": "world",
-      "priority": 78,
-      "attention_points": [
-        "理事個人の見解であり、FOMCの政策決定ではない。"
-      ]
-    },
-    "census-wholesale-20261008": {
-      "primary_page": "world",
-      "priority": 72,
-      "attention_points": [
-        "名目・季節調整済みで、実質需要の伸びとは同一ではない。"
-      ]
-    },
-    "shfe-copper-weekly-20261009": {
-      "primary_page": "world",
-      "priority": 68,
-      "attention_points": [
-        "SHFEのトン表示。COMEXのショートトンと単純合算しない。"
-      ]
-    },
-    "cme-copper-stock-20261009": {
-      "primary_page": "world",
-      "priority": 66,
-      "attention_points": [
-        "COMEXのショートトン表示。他取引所の在庫と単純合算しない。"
-      ]
-    },
-    "fed-scf-20261009": {
-      "primary_page": "world",
-      "priority": 58,
-      "attention_points": [
-        "2025年の家計調査で、10月の景気指標ではない。"
-      ]
-    },
-    "ofac-icc-20261009": {
-      "primary_page": "world",
-      "priority": 50,
-      "attention_points": [
-        "個別許可の条件を、すべての取引へ広げて解釈しない。"
-      ]
-    },
-    "ofac-pegasus-20261009": {
-      "primary_page": "world",
-      "priority": 45,
-      "attention_points": [
-        "過去の違反への和解で、新たな包括関税ではない。"
-      ]
-    },
-    "fujimi-forecast-20261009": {
-      "primary_page": "japan",
-      "priority": 100,
-      "attention_points": [
-        "会社予想の増額であり、実績値ではない。"
-      ]
-    },
-    "osg-buyback-20261009": {
-      "primary_page": "japan",
-      "priority": 96,
-      "attention_points": [
-        "買付予定と実際の取得完了を分けて確認する。"
-      ]
-    },
-    "yaskawa-20261009": {
-      "primary_page": "japan",
-      "priority": 92,
-      "attention_points": [
-        "売上予想は増額、営業利益予想は減額。売上だけで判断しない。"
-      ]
-    },
-    "jins-20261009": {
-      "primary_page": "japan",
-      "priority": 90,
-      "attention_points": [
-        "終了年度の実績と予想の差で、将来年度の一律下方修正ではない。"
-      ]
-    },
-    "aeon-financial-interim-20261009": {
-      "primary_page": "japan",
-      "priority": 86,
-      "attention_points": [
-        "純利益増と営業利益減を分けて評価する。"
-      ]
-    },
-    "hoya-20261009": {
-      "primary_page": "japan",
-      "priority": 82,
-      "attention_points": [
-        "契約締結と譲渡完了を区別し、非開示の対価を推定しない。"
-      ]
-    },
-    "household-20261009": {
-      "primary_page": "japan",
-      "priority": 76,
-      "attention_points": [
-        "8月実績。前年比の弱さと前月比の小幅改善を分けて読む。"
-      ]
-    },
-    "boj-sakura-20261008": {
-      "primary_page": "japan",
-      "priority": 72,
-      "attention_points": [
-        "地域報告であり、政策金利の変更ではない。"
-      ]
-    },
-    "boj-money-market-20261009": {
-      "primary_page": "japan",
-      "priority": 65,
-      "attention_points": [
-        "7月末基準の調査で、10月9日の市場残高ではない。"
-      ]
-    },
-    "oct14-0": {
-      "primary_page": "world",
-      "priority": 90,
-      "attention_points": [
-        "予想値を結果として扱わず、発表後の金利・SOX・円相場でシナリオを変更する。"
-      ]
-    },
-    "oct14-1": {
-      "primary_page": "world",
-      "priority": 90,
-      "attention_points": [
-        "前年比のコスト負担は残る一方、前月比は低下。全面的な物価加速ともインフレ解消とも断定しない。"
-      ]
-    },
-    "oct14-2": {
-      "primary_page": "world",
-      "priority": 90,
-      "attention_points": [
-        "対象施設限定であり、メキシコ全体への新関税や全面輸入禁止とは扱わない。日本企業の直接取引関係は未確認。"
-      ]
-    },
-    "oct14-3": {
-      "primary_page": "world",
-      "priority": 90,
-      "attention_points": [
-        "新規制裁材料あり。日本株全体の方向要因ではなく、該当取引先の確認事項として扱う。"
-      ]
-    },
-    "oct14-4": {
-      "primary_page": "japan",
-      "priority": 90,
-      "attention_points": [
-        "半導体関連の市場心理が弱くても、受配電・電源設備の実需は別評価する。中間改善を通期上方修正と扱わない。"
-      ]
-    },
-    "oct14-5": {
-      "primary_page": "japan",
-      "priority": 90,
-      "attention_points": [
-        "品質対応への警戒と、現時点で操業制限・回収要求ではないという留保を併記。将来影響ゼロを保証しない。"
-      ]
-    },
-    "oct14-6": {
-      "primary_page": "japan",
-      "priority": 90,
-      "attention_points": [
-        "295円は買付条件であり市場現在値ではない。TOB成立、応募結果、買付者側の利益効果は未確定。"
-      ]
-    },
-    "cxmt-g5-official-20260920": {
-      "primary_page": "world",
-      "priority": 94,
-      "attention_points": [
-        "会社公表の量産開始。4F²サーバー製品の商用量産確認ではない。"
-      ]
-    },
-    "oct15-0": {
-      "primary_page": "world",
-      "priority": 100,
-      "attention_points": [
-        "昨日の発表待ちからインフレ警戒へ更新。これ自体はFRBの利上げ決定ではない。"
-      ]
-    },
-    "oct15-1": {
-      "primary_page": "world",
-      "priority": 100,
-      "attention_points": [
-        "購買力低下は米消費関連への逆風候補。日本の給与や全輸出企業の業績へ直接置換しない。"
-      ]
-    },
-    "oct15-2": {
-      "primary_page": "world",
-      "priority": 100,
-      "attention_points": [
-        "装置実需の強さは半導体全面弱気への反証。ただし将来見通しであり、顧客の投資実行や日本企業の受注を保証しない。"
-      ]
-    },
-    "oct15-3": {
-      "primary_page": "world",
-      "priority": 100,
-      "attention_points": [
-        "新規制裁ではなく個人の指定解除。ベネズエラ全体や石油制裁の全面解除と解釈しない。"
-      ]
-    },
-    "oct15-4": {
-      "primary_page": "japan",
-      "priority": 100,
-      "attention_points": [
-        "AI需要の実需材料だが、投資決議は売上・利益確定ではない。稼働・受注・減価償却を確認。"
-      ]
-    },
-    "oct15-5": {
-      "primary_page": "japan",
-      "priority": 100,
-      "attention_points": [
-        "増配は還元材料だが、一時的売却益を本業の利益成長と扱わない。"
-      ]
-    },
-    "oct15-6": {
-      "primary_page": "japan",
-      "priority": 100,
-      "attention_points": [
-        "新規TOBではなく既存案件の条件変更。3682円は買付条件で現在値・成立保証ではない。"
-      ]
-    },
-    "oct16-0": {
-      "primary_page": "world",
-      "priority": 100,
-      "attention_points": [
-        "速報・改定対象。前年比は原系列。除外系列を単に食品・エネルギー除くコアと同一視しない。"
-      ]
-    },
-    "oct16-1": {
-      "primary_page": "world",
-      "priority": 100,
-      "attention_points": [
-        "速報・標本誤差あり。名目値。通常ページ403後に公式PDF本文・表で確認。"
-      ]
-    },
-    "oct16-2": {
-      "primary_page": "world",
-      "priority": 100,
-      "attention_points": [
-        "Q3実績とQ4会社予想を分離。Q4為替前提は1米ドル31.8台湾ドル。"
-      ]
-    },
-    "oct16-3": {
-      "primary_page": "world",
-      "priority": 100,
-      "attention_points": [
-        "個人見解。新規会合決定ではない。金利上昇の家計・企業への影響を丁寧に確認するとの留保もある。"
-      ]
-    },
-    "oct16-4": {
-      "primary_page": "world",
-      "priority": 100,
-      "attention_points": [
-        "128Dは国外小売給油所等、130Bは指定ブルガリア企業等に限定。128Dはロシア所在者・口座への送金等を許可しない。FFの対象被制裁者への支払いは凍結口座。"
-      ]
-    },
-    "oct16-5": {
-      "primary_page": "japan",
-      "priority": 100,
-      "attention_points": [
-        "会社見通し・条件付き。発表後の国内現物反応は未確認。"
-      ]
-    },
-    "oct16-6": {
-      "primary_page": "japan",
-      "priority": 100,
-      "attention_points": [
-        "会社見通し・条件付き。発表後の国内現物反応は未確認。"
-      ]
-    },
-    "oct16-7": {
-      "primary_page": "japan",
-      "priority": 100,
-      "attention_points": [
-        "会社見通し・条件付き。発表後の国内現物反応は未確認。"
+        "AI・戦争・債務を週末の背景として使用し、日銀の政策決定とは分ける。"
       ]
     }
   }

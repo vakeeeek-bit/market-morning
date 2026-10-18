@@ -1,0 +1,178 @@
+{
+  "report_date": "2026-10-18",
+  "target_market_date": "2026-10-16",
+  "updated_at": "2026-10-18T09:45:00+09:00",
+  "report_type": "weekend",
+  "japan_quick_view": {
+    "headline": "週末版｜AI・半導体安と原油高が重なる。月曜の日本株は金利・円・半導体の三点確認",
+    "top_materials": [
+      "米株はAI・半導体主導で再下落",
+      "IMFは日本の物価上振れ時に利上げ加速が必要と指摘",
+      "AI投資の焦点は需要から資金調達へ",
+      "原油高が物価と企業コストの反証材料",
+      "日銀は利上げ継続姿勢、円安・輸入物価を監視"
+    ],
+    "focus_sectors": [
+      "電機・精密",
+      "機械",
+      "銀行",
+      "資源・商社",
+      "運輸",
+      "化学"
+    ],
+    "unpriced_materials": [
+      "10月16日の米SOX3.83%安",
+      "週末の日銀・IMF発言"
+    ],
+    "individual_news_review": {
+      "status": "reviewed",
+      "story_count": 1,
+      "scope": "新規個別株ニュースの件数合わせは行わず、10月15日公表・16日取引済みの重要開示1件を継続監視として明示"
+    }
+  },
+  "top_stories": [
+    {
+      "company": "三井物産",
+      "ticker": "8031",
+      "headline": "PAG浮動株買収を決定、完了条件と翌期以降の寄与を区別",
+      "fact": "10月15日20:00開示。PenskeとPAG浮動株取得を決定。三井の出資は最大16億米ドル、持分は約20.3%から約36%へ予定。2027年3月期Q4完了見込み、当期影響軽微、翌期以降の貢献を想定。",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261015551440.pdf",
+      "analysis": "7月の非拘束提案から契約段階へ進展。成長投資は追い風候補だが資金負担と承認条件を評価し、取得完了とは扱わない。",
+      "category": "セクター限定・条件付き追い風",
+      "related_sectors": [
+        "商社",
+        "自動車流通"
+      ],
+      "today_watch": "投資負担、承認条件、翌期以降の収益寄与",
+      "announced_at": "2026-10-15",
+      "timing": "10月15日大引け後公表・10月16日の国内現物取引を経過",
+      "market_pricing_status": "10月16日までに国内現物へ反映済み。週末の新規材料ではない",
+      "price_reaction": "個別材料だけの寄与は分離できず",
+      "related_stocks": [],
+      "importance": "high",
+      "confidence": "supported"
+    }
+  ],
+  "important_stories": [],
+  "other_stories": [],
+  "data_quality": {
+    "overall": "QUALIFIED",
+    "missing": [
+      "米11業種ETF、米2年、DXY、暗号資産の10月16日同一定義値",
+      "Gold・WTI・Brentの限月・値種別・基準時刻に対応する保存値",
+      "アナリスト評価変更の全件網羅"
+    ],
+    "differences": [
+      "主要米株7系列は10月16日終値を公式・報道で再確認",
+      "日本株実績は10月16日、週末材料は日本株現物に未反映"
+    ],
+    "excluded": [
+      "限月不明の商品先物価格",
+      "基準日不一致の2s10s",
+      "未確認の政策確率・日経先物推定",
+      "未確認系列を使った断定"
+    ],
+    "cautions": [
+      "注釈付き公開。確認済み指数と記事だけで因果を構成",
+      "AI実需とAI投資の資金調達を分離",
+      "週末発言は月曜の値動きへ未反映"
+    ]
+  },
+  "analyst_rating_changes": {
+    "coverage_status": "十分調査したが取得不能",
+    "headline": "公開情報の掲載範囲は限定。全変更の網羅性は未確認",
+    "items": [],
+    "source_review": [
+      {
+        "source": "公開一覧・IFIS",
+        "result": "公開一覧403、IFIS無料ページは全変更の網羅性未確認"
+      }
+    ]
+  },
+  "sector_implications": [
+    {
+      "driver": "SOX -3.83%",
+      "affected_sectors": [
+        "電機・精密",
+        "機械"
+      ],
+      "possible_impact": "金曜反発の持続性を試す逆風",
+      "confirmation_condition": "TOPIX比・出来高・複数銘柄の寄り後推移"
+    },
+    {
+      "driver": "原油高",
+      "affected_sectors": [
+        "資源・商社",
+        "運輸",
+        "化学"
+      ],
+      "possible_impact": "資源に相対追い風、燃料コスト業種に逆風",
+      "confirmation_condition": "原油と業種相対騰落の同方向確認"
+    },
+    {
+      "driver": "日銀正常化",
+      "affected_sectors": [
+        "銀行",
+        "不動産",
+        "自動車"
+      ],
+      "possible_impact": "利ざや期待・割引率・円相場で分岐",
+      "confirmation_condition": "国内金利とUSD/JPYの実測反応"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "基本",
+      "conditions": "SOX安と原油高が続き、円は158円前後",
+      "impact_on_japan": "半導体・高PERは戻り売りに注意。資源・商社と銀行は相対優位候補",
+      "invalidation": "SOXとAI信用スプレッドが改善し、国内半導体がTOPIX比で反発"
+    },
+    {
+      "name": "上振れ",
+      "conditions": "米金利と原油が安定し、AI関連の信用不安が後退",
+      "impact_on_japan": "金曜の国内半導体反発が継続し、電機・機械へ広がる",
+      "invalidation": "反発が一部大型株だけに限定"
+    },
+    {
+      "name": "下振れ",
+      "conditions": "AI社債不安、原油高、円安が同時進行",
+      "impact_on_japan": "高PER・輸入コスト敏感・小型株へ売りが広がる",
+      "invalidation": "市場幅が改善し、ディフェンシブ以外にも買いが広がる"
+    }
+  ],
+  "monitoring_points": [
+    {
+      "target": "国内半導体",
+      "today_check": "寄り後30〜60分のTOPIX比・出来高・複数銘柄への広がり",
+      "view_change_condition": "相対反発が広がれば警戒を弱める"
+    },
+    {
+      "target": "AI信用市場",
+      "today_check": "CoreWeave等の社債利回りと株価",
+      "view_change_condition": "信用不安後退なら需要側の強さを再評価"
+    },
+    {
+      "target": "原油・米金利・円",
+      "today_check": "同一時刻の方向",
+      "view_change_condition": "原油高・円安・金利高の同時進行で下振れ"
+    }
+  ],
+  "source_notes": [
+    "米国株・半導体は10月16日終値",
+    "日本株実績は10月16日大引け",
+    "週末材料は日本株現物に未反映"
+  ],
+  "publication_policy": {
+    "status": "QUALIFIED",
+    "mode": "weekend",
+    "updated_at": "2026-10-18T09:45:00+09:00",
+    "complete_gate": "QUALIFIED",
+    "copper_included": false,
+    "note": "主要指数と重要材料は確認済み。任意・定義不十分な系列を除外した注釈付き公開。",
+    "missing_items": [
+      "米11業種ETF、米2年、DXY、暗号資産の10月16日同一定義値",
+      "Gold・WTI・Brentの限月・値種別・基準時刻に対応する保存値",
+      "アナリスト評価変更の全件網羅"
+    ]
+  }
+}

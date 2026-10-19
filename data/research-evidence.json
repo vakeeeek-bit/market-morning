@@ -1,31 +1,31 @@
 {
   "version": "2.0",
-  "report_date": "2026-10-19",
+  "report_date": "2026-10-20",
   "target_market_date": "2026-10-16",
-  "updated_at": "2026-10-19T06:50:15+09:00",
-  "scope_note": "一次情報9件の部分収集。採用した事実だけを実読検証し、未取得系列と網羅性は除外してQUALIFIED。",
+  "updated_at": "2026-10-20T06:54:20+09:00",
+  "scope_note": "20日朝の一次5件と19日市場報道を実読。欠測は除外した部分調査。",
   "research_coverage": {
     "status": "QUALIFIED",
     "directions": [
       {
         "id": "fixed_universe",
         "status": "QUALIFIED",
-        "evidence": "全系列の値・基準日を正本照合。古い系列・未定義先物は判断から除外"
+        "evidence": "正本32系列と日付確認。16日ETF同日化・15日金利差33bpを確認、19日値未反映"
       },
       {
         "id": "cross_news",
         "status": "PASS",
-        "evidence": "BLS、FRB、WH、ECB、OFAC、BOJ、国内3社を一次確認"
+        "evidence": "OFAC・GL1/2、日銀/BIS、USTR、国内2社を一次実読"
       },
       {
         "id": "reverse_from_anomalies",
         "status": "PASS",
-        "evidence": "半導体とダウの差をAPとReuters本文で逆引き。途中値は除外"
+        "evidence": "19日Reuters終値記事とAPの反発・大型偏重を確認。16日正本に置換せず"
       },
       {
         "id": "previous_day_change",
         "status": "PASS",
-        "evidence": "18日版に不足していた統計・新法免除と企業固有材料を追加"
+        "evidence": "19日版の半導体慎重姿勢を条件付き修正。旧金利非同期とETF異日記載を訂正"
       }
     ],
     "items": [
@@ -34,23 +34,15 @@
         "label": "中国競合技術・供給能力",
         "tier": "Critical",
         "status": "取得済",
-        "evidence": "CXMT公式一覧は最新9月20日。新しい日付付き顧客認定・出荷量を確認できず、当日の単独原因とする主張を除外",
+        "evidence": "CXMT公式ニュースを取得。19日反発の単独原因となる新規供給量・顧客認定は確認できず不採用",
         "attempts": [
           {
-            "method": "CXMTニュース",
-            "result": "HTTP200、最新掲載9月20日",
+            "method": "CXMT公式一覧",
+            "result": "HTTP200、製品情報を時点付き実績とはしない",
             "source_urls": [
               "https://www.cxmt.com/en/news.html"
             ],
-            "checked_at": "2026-10-19T06:50:15+09:00"
-          },
-          {
-            "method": "製品ページ",
-            "result": "HTTP200、仕様と時点付き出荷実績を区別",
-            "source_urls": [
-              "https://www.cxmt.com/en/product.html"
-            ],
-            "checked_at": "2026-10-19T06:50:15+09:00"
+            "checked_at": "2026-10-20T06:54:20+09:00"
           }
         ],
         "impact_if_unavailable": "半導体下落要因の重要な競争圧力を見落とす",
@@ -61,16 +53,16 @@
         "label": "固定市場Universe",
         "tier": "Critical",
         "status": "取得済",
-        "evidence": "全系列の値・基準日を正本照合。古い系列・未定義先物は判断から除外",
+        "evidence": "正本32系列と日付確認。16日ETF同日化・15日金利差33bpを確認、19日値未反映",
         "attempts": [
           {
-            "method": "正本32系列確認",
-            "result": "米株16日、金利・為替・ETFは日差あり",
+            "method": "公開正本・status",
+            "result": "19日成功、16日市場値。20日収集成功なし",
             "source_urls": [
               "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
               "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/status.json"
             ],
-            "checked_at": "2026-10-19T06:50:15+09:00"
+            "checked_at": "2026-10-20T06:54:20+09:00"
           }
         ],
         "impact_if_unavailable": "市場全体判断を保留",
@@ -81,27 +73,29 @@
         "label": "政策・中央銀行・マクロ",
         "tier": "Critical",
         "status": "取得済",
-        "evidence": "輸出入物価・生産の改定値、新法免除と既存制裁、中央銀行発言を区別",
+        "evidence": "OFAC・GL1/2、日銀/BIS、USTR、国内2社を一次実読。BLS・BEA・ISM・FOMC一覧確認、Census表欠測",
         "attempts": [
           {
-            "method": "BLS・FRB一次本文",
-            "result": "通常FRB403→Web本文で表まで確認",
+            "method": "政策一次本文",
+            "result": "OFAC GL1/2例外・期限、USTR施設限定、BOJ原発表日を照合",
             "source_urls": [
-              "https://www.bls.gov/news.release/archives/ximpim_10162026.htm",
-              "https://www.federalreserve.gov/releases/g17/current/default.htm"
+              "https://ofac.treasury.gov/recent-actions/20261019",
+              "https://ofac.treasury.gov/media/937256/download?inline=",
+              "https://ofac.treasury.gov/media/937261/download?inline=",
+              "https://www.boj.or.jp/paym/intlact_pm/cpss/cpss261019a.htm",
+              "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/united-states-announces-successful-resolution-rapid-response-labor-mechanism-matter-alimentos-grole"
             ],
-            "checked_at": "2026-10-19T06:50:15+09:00"
+            "checked_at": "2026-10-20T06:54:20+09:00"
           },
           {
-            "method": "政策一次本文",
-            "result": "免除条文4、FAQ1263、ECB声明・BOJ全文を確認",
+            "method": "統計・政策一覧",
+            "result": "BLS19日主要予定なし・BEA29日・FOMC19日決定掲載なし",
             "source_urls": [
-              "https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/",
-              "https://ofac.treasury.gov/faqs/1263",
-              "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261017~7015ea3099.en.html",
-              "https://www.boj.or.jp/about/press/koen_2026/ko261016a.htm"
+              "https://www.bls.gov/schedule/2026/10_sched.htm",
+              "https://www.bea.gov/news/schedule",
+              "https://www.federalreserve.gov/newsevents/pressreleases/2026-press-fomc.htm"
             ],
-            "checked_at": "2026-10-19T06:50:15+09:00"
+            "checked_at": "2026-10-20T06:54:20+09:00"
           }
         ],
         "impact_if_unavailable": "政策方向を断定しない",
@@ -112,23 +106,23 @@
         "label": "異常値からの逆引き",
         "tier": "Required",
         "status": "取得済",
-        "evidence": "半導体とダウの差をAPとReuters本文で逆引き。途中値は除外",
+        "evidence": "19日Reuters終値記事とAPの反発・大型偏重を確認。16日正本に置換せず",
         "attempts": [
           {
-            "method": "AP終値",
-            "result": "主要4指数正本と一致",
+            "method": "Reuters終値記事",
+            "result": "半導体反発と負の市場幅の定性背景を確認",
             "source_urls": [
-              "https://apnews.com/article/c27809783ae3230b44c26e5ee4bea056"
+              "https://www.reuters.com/business/wall-st-futures-climb-ai-stocks-rebound-oil-yields-fall-2026-10-19/"
             ],
-            "checked_at": "2026-10-19T06:50:15+09:00"
+            "checked_at": "2026-10-20T06:54:20+09:00"
           },
           {
-            "method": "Reuters本文",
-            "result": "途中値のため背景のみ",
+            "method": "AP終値記事",
+            "result": "大型AI主導と市場全体の弱さを確認",
             "source_urls": [
-              "https://www.reuters.com/business/wall-st-futures-mixed-tech-wobbles-again-tesla-gains-2026-10-16/"
+              "https://apnews.com/article/5aec11ee466841cc2a69b2d23ab77f0e"
             ],
-            "checked_at": "2026-10-19T06:50:15+09:00"
+            "checked_at": "2026-10-20T06:54:20+09:00"
           }
         ],
         "impact_if_unavailable": "指数表面だけの分析になる",
@@ -139,15 +133,16 @@
         "label": "前回公開との差分",
         "tier": "Critical",
         "status": "取得済",
-        "evidence": "18日版に不足していた統計・新法免除と企業固有材料を追加",
+        "evidence": "19日版の半導体慎重姿勢を条件付き修正。旧金利非同期とETF異日記載を訂正",
         "attempts": [
           {
-            "method": "18日版比較",
-            "result": "原油一方向の見方と政策例外の不足を修正",
+            "method": "最新main19日版比較",
+            "result": "数値正本更新で旧留保の一部解消",
             "source_urls": [
-              "https://market-morning-gules.vercel.app/data/history/2026-10-18/report.json"
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+              "https://market-morning-gules.vercel.app/data/history/2026-10-19/report.json"
             ],
-            "checked_at": "2026-10-19T06:50:15+09:00"
+            "checked_at": "2026-10-20T06:54:20+09:00"
           }
         ],
         "impact_if_unavailable": "前回文章の流用を検出できない",
@@ -158,25 +153,16 @@
         "label": "日本株の個別企業開示",
         "tier": "Critical",
         "status": "取得済",
-        "evidence": "TDnet最初100件/全212件から3社選定。PDF本文・表・発表時刻・コードを照合",
+        "evidence": "TDnet19日最初100件/全150件、2社PDF本文・表・コード確認。予想と実績を分離",
         "attempts": [
           {
-            "method": "TDnet一覧",
-            "result": "16日大引け後3社を選別",
+            "method": "TDnet一覧とPDF",
+            "result": "中間上方・通期据置、本業据置・純利益増・増配を確認",
             "source_urls": [
-              "https://www.release.tdnet.info/inbs/I_list_001_20261016.html"
+              "https://www.release.tdnet.info/inbs/140120261019552780.pdf",
+              "https://www.release.tdnet.info/inbs/140120261019553071.pdf"
             ],
-            "checked_at": "2026-10-19T06:50:15+09:00"
-          },
-          {
-            "method": "一次PDF",
-            "result": "契約・減損予想、受注・業績、漏えい・精査を区別",
-            "source_urls": [
-              "https://www.release.tdnet.info/inbs/140120261016552155.pdf",
-              "https://www.release.tdnet.info/inbs/140120261016552502.pdf",
-              "https://www.release.tdnet.info/inbs/140120261016552454.pdf"
-            ],
-            "checked_at": "2026-10-19T06:50:15+09:00"
+            "checked_at": "2026-10-20T06:54:20+09:00"
           }
         ],
         "impact_if_unavailable": "個別材料欄を公開しない",
@@ -187,7 +173,7 @@
         "label": "アナリスト評価変更",
         "tier": "Required",
         "status": "十分調査したが取得不能",
-        "evidence": "公開一覧403、IFIS無料情報で全件網羅未確認",
+        "evidence": "公開一覧403・IFIS無料情報200で全件網羅は未確認",
         "attempts": [
           {
             "method": "公開評価一覧",
@@ -195,19 +181,20 @@
             "source_urls": [
               "https://kabutan.jp/news/marketnews/?category=6"
             ],
-            "checked_at": "2026-10-19T06:50:15+09:00"
+            "checked_at": "2026-10-20T06:54:20+09:00"
           },
           {
-            "method": "IFISとCensus",
-            "result": "IFIS無料情報の網羅性未確認、Census通常403→Web本文取得も動的表欠測",
+            "method": "IFIS・Census・ECB",
+            "result": "IFIS200も網羅未確認。CensusWeb本文に動的最新表なし。ECB19日講演はRSS確認、本文取得不可",
             "source_urls": [
               "https://kabuyoho.jp/",
-              "https://www.census.gov/economic-indicators/"
+              "https://www.census.gov/economic-indicators/",
+              "https://www.ecb.europa.eu/rss/press.html"
             ],
-            "checked_at": "2026-10-19T06:50:15+09:00"
+            "checked_at": "2026-10-20T06:54:20+09:00"
           }
         ],
-        "impact_if_unavailable": "全変更なしと断定せず結論から除外",
+        "impact_if_unavailable": "変更なしとせず全件一覧は除外",
         "publication_use": "excluded"
       },
       {
@@ -215,26 +202,26 @@
         "label": "商品先物の契約定義",
         "tier": "Required",
         "status": "十分調査したが取得不能",
-        "evidence": "CME公式ページ取得済みだが正本値との契約対応未確認",
+        "evidence": "公式ページ取得も保存連続足との契約対応未確認",
         "attempts": [
           {
-            "method": "CME Gold",
-            "result": "HTTP200、保存連続足との対応未確認",
+            "method": "CME Gold公式",
+            "result": "HTTP200、保存連続足との契約対応未確認",
             "source_urls": [
               "https://www.cmegroup.com/markets/metals/precious/gold.settlements.html"
             ],
-            "checked_at": "2026-10-19T06:50:15+09:00"
+            "checked_at": "2026-10-20T06:54:20+09:00"
           },
           {
-            "method": "CME WTI",
-            "result": "HTTP200、同上",
+            "method": "CME WTI公式",
+            "result": "HTTP200、保存連続足との契約対応未確認",
             "source_urls": [
               "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html"
             ],
-            "checked_at": "2026-10-19T06:50:15+09:00"
+            "checked_at": "2026-10-20T06:54:20+09:00"
           }
         ],
-        "impact_if_unavailable": "GoldWTIBrent価格・騰落を不採用",
+        "impact_if_unavailable": "数値不採用",
         "publication_use": "excluded"
       }
     ]
@@ -243,16 +230,16 @@
     "status": "PASS",
     "materials": [
       {
-        "headline": "16日の米株は半導体・成長株が相対劣後",
+        "headline": "米19日反発報道は正本未反映",
         "fact": {
-          "text": "正本S&P500 -1.09%、NASDAQ100 -2.50%、SOX -3.83%、ダウ -0.34%。AP終値と主要4指数を照合。",
+          "text": "Reutersの19日終値記事は半導体反発と大型主導、負の市場幅を報道。APもAI主導と市場全体の弱さを確認。19日価格は正本未反映につき採用しない。",
           "source_urls": [
-            "https://apnews.com/article/c27809783ae3230b44c26e5ee4bea056"
+            "https://www.reuters.com/business/wall-st-futures-climb-ai-stocks-rebound-oil-yields-fall-2026-10-19/"
           ],
           "verification_status": "PASS"
         },
         "observed_market_reaction": {
-          "text": "半導体・高PERの弱さを確認。Reutersは信用不安と原油高を背景として報道。",
+          "text": "Reutersの19日終値記事は半導体反発と大型主導、負の市場幅を報道。APもAI主導と市場全体の弱さを確認。19日価格は正本未反映につき採用しない。",
           "assets_checked": [
             "米株",
             "金利",
@@ -261,62 +248,61 @@
           ]
         },
         "market_internals": {
-          "text": "株価下落の重心を半導体・成長株に確認。フロー・単独寄与率は未確認／11ETFは14～15日の異なる基準日。16日の上昇業種数・同日順位は算出不可"
+          "text": "16日の防御・資源優位から19日の大型買戻し報道へ変化。全面的な信用改善・資金流入は未確認"
         },
         "market_pricing": {
           "status": "unknown",
-          "text": "16日の米株実績と後発政策を分離。19日の国内初動は未確認"
+          "text": "19日報道は20日国内初動未確認。個別予想は大引け後"
         },
         "interpretation": {
-          "text": "需要の全面崩壊を断定せず、資金調達・利益・評価を分離。週末政策の反応は別。",
+          "text": "昨日の一律慎重姿勢を条件付きで弱める。ただし反発の広がりと企業利益・資金調達改善を伴うまで信用不安解消とはしない。",
           "confidence": "tentative",
-          "evidence": "正本S&P500 -1.09%、NASDAQ100 -2.50%、SOX -3.83%、ダウ -0.34%。AP終値と主要4指数を照合。",
-          "uncertainty": "単独寄与・最新同時点の価格は未確認"
+          "evidence": "Reutersの19日終値記事は半導体反発と大型主導、負の市場幅を報道。APもAI主導と市場全体の弱さを確認。19日価格は正本未反映につき採用しない。",
+          "uncertainty": "記事単独寄与・最新正本・国内初動は未確認"
         },
         "japan_transmission": {
-          "economic_channel": "需要の全面崩壊を断定せず、資金調達・利益・評価を分離。週末政策の反応は別。",
+          "economic_channel": "昨日の一律慎重姿勢を条件付きで弱める。ただし反発の広がりと企業利益・資金調達改善を伴うまで信用不安解消とはしない。",
           "intermediate_reactions": [
-            "資金コスト・規制実務の変化",
-            "金利・原油・円を確認",
-            "国内業種の相対騰落"
+            "業績・資金コストと取引制約を点検",
+            "複数銘柄の相対騰落・商い確認",
+            "通期見通しと持続性を判定"
           ],
           "affected_sectors": [
             "半導体製造装置",
             "情報通信",
-            "銀行",
-            "不動産",
-            "運輸",
-            "電機",
-            "蓄電池",
-            "食品"
+            "ゲーム",
+            "クラウド",
+            "資源",
+            "空運",
+            "金融"
           ],
-          "pricing_in_japan": "国内寄り付き前、初動未確認",
+          "pricing_in_japan": "20日現物初動未確認",
           "assessment": "条件付き"
         },
         "counter_evidence": [
-          "米生産増は需要全面崩壊への反証",
-          "新法免除で追加制約リスクの一部が後退",
-          "ダウは半導体より下落小さい"
+          "反発の市場幅は弱い",
+          "予想修正には一時利益・通期据置の留保",
+          "供給障害と信用不安は残る"
         ],
         "change_conditions": [
-          "国内半導体・市場幅改善",
-          "原油・金利・円安定",
-          "企業予想修正"
+          "国内市場幅の改善",
+          "継続利益と通期予想の変化",
+          "原油・金利・円の急変"
         ],
         "chronology_check": "PASS",
-        "conflict_resolution": "実需と財務・株価評価、政策免除と既存制裁、契約と実行を分離"
+        "conflict_resolution": "16日正本・19日報道・20日国内初動を分離。本業と一時利益、制裁と例外も区別"
       },
       {
-        "headline": "新ロシア法の関税・制裁を免除、既存措置は維持",
+        "headline": "OFACがPAIPA制裁と一般許可を公表",
         "fact": {
-          "text": "10月16日大統領令はGraham Actの関税・指定条項等の適用免除を明記。免除は追加措置が適切と判断されるまで継続し、法成立前の既存大統領令による制裁は影響を受けない。",
+          "text": "OFACは19日、MiraclePlus関連4主体とShanghai ZhisuanをNon-SDNメニュー型制裁一覧に追加。資産凍結等と物品輸入の例外を記載し、GL1・GL2を発行。",
           "source_urls": [
-            "https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/"
+            "https://ofac.treasury.gov/recent-actions/20261019"
           ],
           "verification_status": "PASS"
         },
         "observed_market_reaction": {
-          "text": "記事単独の市場反応は未確認",
+          "text": "記事単独の初動未確認",
           "assets_checked": [
             "米株",
             "金利",
@@ -325,62 +311,61 @@
           ]
         },
         "market_internals": {
-          "text": "株価下落の重心を半導体・成長株に確認。フロー・単独寄与率は未確認／11ETFは14～15日の異なる基準日。16日の上昇業種数・同日順位は算出不可"
+          "text": "16日の防御・資源優位から19日の大型買戻し報道へ変化。全面的な信用改善・資金流入は未確認"
         },
         "market_pricing": {
           "status": "unknown",
-          "text": "16日の米株実績と後発政策を分離。19日の国内初動は未確認"
+          "text": "19日報道は20日国内初動未確認。個別予想は大引け後"
         },
         "interpretation": {
-          "text": "追加制約リスクの一部後退は通商・調達の安心材料候補。ただし供給増・原油下落・全制裁解除は保証しない。",
+          "text": "中国関連の資金調達・決済・取引先を個別点検。中国全体への禁輸やすべてのAI投資禁止とは扱わない。",
           "confidence": "tentative",
-          "evidence": "10月16日大統領令はGraham Actの関税・指定条項等の適用免除を明記。免除は追加措置が適切と判断されるまで継続し、法成立前の既存大統領令による制裁は影響を受けない。",
-          "uncertainty": "単独寄与・最新同時点の価格は未確認"
+          "evidence": "OFACは19日、MiraclePlus関連4主体とShanghai ZhisuanをNon-SDNメニュー型制裁一覧に追加。資産凍結等と物品輸入の例外を記載し、GL1・GL2を発行。",
+          "uncertainty": "記事単独寄与・最新正本・国内初動は未確認"
         },
         "japan_transmission": {
-          "economic_channel": "追加制約リスクの一部後退は通商・調達の安心材料候補。ただし供給増・原油下落・全制裁解除は保証しない。",
+          "economic_channel": "中国関連の資金調達・決済・取引先を個別点検。中国全体への禁輸やすべてのAI投資禁止とは扱わない。",
           "intermediate_reactions": [
-            "資金コスト・規制実務の変化",
-            "金利・原油・円を確認",
-            "国内業種の相対騰落"
+            "業績・資金コストと取引制約を点検",
+            "複数銘柄の相対騰落・商い確認",
+            "通期見通しと持続性を判定"
           ],
           "affected_sectors": [
             "半導体製造装置",
             "情報通信",
-            "銀行",
-            "不動産",
-            "運輸",
-            "電機",
-            "蓄電池",
-            "食品"
+            "ゲーム",
+            "クラウド",
+            "資源",
+            "空運",
+            "金融"
           ],
-          "pricing_in_japan": "国内寄り付き前、初動未確認",
+          "pricing_in_japan": "20日現物初動未確認",
           "assessment": "条件付き"
         },
         "counter_evidence": [
-          "米生産増は需要全面崩壊への反証",
-          "新法免除で追加制約リスクの一部が後退",
-          "ダウは半導体より下落小さい"
+          "反発の市場幅は弱い",
+          "予想修正には一時利益・通期据置の留保",
+          "供給障害と信用不安は残る"
         ],
         "change_conditions": [
-          "国内半導体・市場幅改善",
-          "原油・金利・円安定",
-          "企業予想修正"
+          "国内市場幅の改善",
+          "継続利益と通期予想の変化",
+          "原油・金利・円の急変"
         ],
         "chronology_check": "PASS",
-        "conflict_resolution": "実需と財務・株価評価、政策免除と既存制裁、契約と実行を分離"
+        "conflict_resolution": "16日正本・19日報道・20日国内初動を分離。本業と一時利益、制裁と例外も区別"
       },
       {
-        "headline": "米9月輸入物価は燃料以外にも上昇",
+        "headline": "中間営業利益予想を上方修正、通期は据え置き",
         "fact": {
-          "text": "10月16日08:30 ET公表。9月輸入物価は前月比+1.1%、前年比+8.1%。非燃料は前月比+0.7%。8月輸入物価は今回+0.5%、輸出物価は9月+2.2%。",
+          "text": "19日16:00公表。2027年3月期中間の売上予想を340億円から370億円、営業利益70億円から115億円、純利益90億円から180億円へ修正。通期予想は現時点で変更なし。",
           "source_urls": [
-            "https://www.bls.gov/news.release/archives/ximpim_10162026.htm"
+            "https://www.release.tdnet.info/inbs/140120261019552780.pdf"
           ],
           "verification_status": "PASS"
         },
         "observed_market_reaction": {
-          "text": "記事単独の市場反応は未確認",
+          "text": "記事単独の初動未確認",
           "assets_checked": [
             "米株",
             "金利",
@@ -389,62 +374,61 @@
           ]
         },
         "market_internals": {
-          "text": "株価下落の重心を半導体・成長株に確認。フロー・単独寄与率は未確認／11ETFは14～15日の異なる基準日。16日の上昇業種数・同日順位は算出不可"
+          "text": "16日の防御・資源優位から19日の大型買戻し報道へ変化。全面的な信用改善・資金流入は未確認"
         },
         "market_pricing": {
           "status": "unknown",
-          "text": "16日の米株実績と後発政策を分離。19日の国内初動は未確認"
+          "text": "19日報道は20日国内初動未確認。個別予想は大引け後"
         },
         "interpretation": {
-          "text": "物価警戒は維持。輸入価格指数を関税率や小売数量と読み替えず、高PER株の割引率リスクを監視。",
+          "text": "旧作・バックカタログの好調による本業改善と運用収支を分離。中間増額だけで通期増額を先取りしない。",
           "confidence": "tentative",
-          "evidence": "10月16日08:30 ET公表。9月輸入物価は前月比+1.1%、前年比+8.1%。非燃料は前月比+0.7%。8月輸入物価は今回+0.5%、輸出物価は9月+2.2%。",
-          "uncertainty": "単独寄与・最新同時点の価格は未確認"
+          "evidence": "19日16:00公表。2027年3月期中間の売上予想を340億円から370億円、営業利益70億円から115億円、純利益90億円から180億円へ修正。通期予想は現時点で変更なし。",
+          "uncertainty": "記事単独寄与・最新正本・国内初動は未確認"
         },
         "japan_transmission": {
-          "economic_channel": "物価警戒は維持。輸入価格指数を関税率や小売数量と読み替えず、高PER株の割引率リスクを監視。",
+          "economic_channel": "旧作・バックカタログの好調による本業改善と運用収支を分離。中間増額だけで通期増額を先取りしない。",
           "intermediate_reactions": [
-            "資金コスト・規制実務の変化",
-            "金利・原油・円を確認",
-            "国内業種の相対騰落"
+            "業績・資金コストと取引制約を点検",
+            "複数銘柄の相対騰落・商い確認",
+            "通期見通しと持続性を判定"
           ],
           "affected_sectors": [
             "半導体製造装置",
             "情報通信",
-            "銀行",
-            "不動産",
-            "運輸",
-            "電機",
-            "蓄電池",
-            "食品"
+            "ゲーム",
+            "クラウド",
+            "資源",
+            "空運",
+            "金融"
           ],
-          "pricing_in_japan": "国内寄り付き前、初動未確認",
+          "pricing_in_japan": "20日現物初動未確認",
           "assessment": "条件付き"
         },
         "counter_evidence": [
-          "米生産増は需要全面崩壊への反証",
-          "新法免除で追加制約リスクの一部が後退",
-          "ダウは半導体より下落小さい"
+          "反発の市場幅は弱い",
+          "予想修正には一時利益・通期据置の留保",
+          "供給障害と信用不安は残る"
         ],
         "change_conditions": [
-          "国内半導体・市場幅改善",
-          "原油・金利・円安定",
-          "企業予想修正"
+          "国内市場幅の改善",
+          "継続利益と通期予想の変化",
+          "原油・金利・円の急変"
         ],
         "chronology_check": "PASS",
-        "conflict_resolution": "実需と財務・株価評価、政策免除と既存制裁、契約と実行を分離"
+        "conflict_resolution": "16日正本・19日報道・20日国内初動を分離。本業と一時利益、制裁と例外も区別"
       },
       {
-        "headline": "モビリティ50%譲渡契約と約1000億円減損見込みを併記",
+        "headline": "純利益予想増額・増配、売上と営業利益は据え置き",
         "fact": {
-          "text": "16日19:30開示。鴻海系へ三菱電機モビリティ株50%を譲渡する契約を締結。譲渡価額は1150億円見込み、実行は2027年10月予定。2027年3月期に約1000億円減損を見込み、業績予想は10月30日公表予定。",
+          "text": "19日16:05公表。2026年12月期純利益予想を10.52億円から13.12億円、期末配当予想を59.67円から74.35円へ修正。売上・営業・経常利益予想は変更なし。",
           "source_urls": [
-            "https://www.release.tdnet.info/inbs/140120261016552155.pdf"
+            "https://www.release.tdnet.info/inbs/140120261019553071.pdf"
           ],
           "verification_status": "PASS"
         },
         "observed_market_reaction": {
-          "text": "19日国内反応は未確認",
+          "text": "記事単独の初動未確認",
           "assets_checked": [
             "米株",
             "金利",
@@ -453,50 +437,49 @@
           ]
         },
         "market_internals": {
-          "text": "株価下落の重心を半導体・成長株に確認。フロー・単独寄与率は未確認／11ETFは14～15日の異なる基準日。16日の上昇業種数・同日順位は算出不可"
+          "text": "16日の防御・資源優位から19日の大型買戻し報道へ変化。全面的な信用改善・資金流入は未確認"
         },
         "market_pricing": {
           "status": "unknown",
-          "text": "16日の米株実績と後発政策を分離。19日の国内初動は未確認"
+          "text": "19日報道は20日国内初動未確認。個別予想は大引け後"
         },
         "interpretation": {
-          "text": "事業再編の中期効果と当期減損の負担を分離。売却収入だけで買い材料とせず、予想修正と承認条件を確認。",
+          "text": "還元増は個別追い風候補。子会社売却益等の寄与を区別し、クラウド本業の利益成長が加速したとは断定しない。",
           "confidence": "tentative",
-          "evidence": "16日19:30開示。鴻海系へ三菱電機モビリティ株50%を譲渡する契約を締結。譲渡価額は1150億円見込み、実行は2027年10月予定。2027年3月期に約1000億円減損を見込み、業績予想は10月30日公表予定。",
-          "uncertainty": "単独寄与・最新同時点の価格は未確認"
+          "evidence": "19日16:05公表。2026年12月期純利益予想を10.52億円から13.12億円、期末配当予想を59.67円から74.35円へ修正。売上・営業・経常利益予想は変更なし。",
+          "uncertainty": "記事単独寄与・最新正本・国内初動は未確認"
         },
         "japan_transmission": {
-          "economic_channel": "事業再編の中期効果と当期減損の負担を分離。売却収入だけで買い材料とせず、予想修正と承認条件を確認。",
+          "economic_channel": "還元増は個別追い風候補。子会社売却益等の寄与を区別し、クラウド本業の利益成長が加速したとは断定しない。",
           "intermediate_reactions": [
-            "資金コスト・規制実務の変化",
-            "金利・原油・円を確認",
-            "国内業種の相対騰落"
+            "業績・資金コストと取引制約を点検",
+            "複数銘柄の相対騰落・商い確認",
+            "通期見通しと持続性を判定"
           ],
           "affected_sectors": [
             "半導体製造装置",
             "情報通信",
-            "銀行",
-            "不動産",
-            "運輸",
-            "電機",
-            "蓄電池",
-            "食品"
+            "ゲーム",
+            "クラウド",
+            "資源",
+            "空運",
+            "金融"
           ],
-          "pricing_in_japan": "国内寄り付き前、初動未確認",
+          "pricing_in_japan": "20日現物初動未確認",
           "assessment": "条件付き"
         },
         "counter_evidence": [
-          "米生産増は需要全面崩壊への反証",
-          "新法免除で追加制約リスクの一部が後退",
-          "ダウは半導体より下落小さい"
+          "反発の市場幅は弱い",
+          "予想修正には一時利益・通期据置の留保",
+          "供給障害と信用不安は残る"
         ],
         "change_conditions": [
-          "国内半導体・市場幅改善",
-          "原油・金利・円安定",
-          "企業予想修正"
+          "国内市場幅の改善",
+          "継続利益と通期予想の変化",
+          "原油・金利・円の急変"
         ],
         "chronology_check": "PASS",
-        "conflict_resolution": "実需と財務・株価評価、政策免除と既存制裁、契約と実行を分離"
+        "conflict_resolution": "16日正本・19日報道・20日国内初動を分離。本業と一時利益、制裁と例外も区別"
       }
     ],
     "template_degradation_audit": {
@@ -507,24 +490,24 @@
       "conflicting_materials_compared": true,
       "transmission_explained": true,
       "observable_change_conditions": true,
-      "comparison_note": "18日版から新法免除・統計結果・国内3社へ更新し、旧因果を再検討"
+      "comparison_note": "19日版の半導体慎重姿勢を条件付き修正。旧金利非同期とETF異日記載を訂正"
     }
   },
   "counter_evidence_audit": {
     "status": "PASS",
     "conclusions": [
       {
-        "conclusion": "半導体には慎重だが全面需要崩壊は断定しない",
+        "conclusion": "半導体慎重姿勢を条件付きで緩和。全面改善ではない",
         "checks": [
-          "正本数値不変・基準日付き表示",
-          "一次9件の本文と留保を実読",
-          "政策条文2だけでなく4の免除も確認",
-          "Reuters途中値を終値として採用しない",
-          "需要増と信用不安を分離",
-          "週末後の国内初動は未確認と表示"
+          "正本32系列の価格と日付を変更せず表示",
+          "一次5件を実読、国内表とGL全文を確認",
+          "記事単独市場反応を未確認と表示",
+          "19日反発と16日ETFを混合しない",
+          "同日FRED15日の33bpを最新としない",
+          "中間と通期、本業と一時利益、制裁と例外を区別"
         ],
-        "weighing": "米生産増・新法免除を反証に置き、信用不安と比較",
-        "uncertainty": "最新同時点系列・国内初動は未確認"
+        "weighing": "反発報道対負の市場幅、上方修正対通期据置・一時利益を比較",
+        "uncertainty": "19日正本と20日国内初動未確認"
       }
     ]
   },
@@ -539,59 +522,52 @@
     ],
     "relationships": [
       {
-        "combination": "株安と物価・信用",
-        "explanation": "生産増でも信用・評価への懸念は残る",
+        "combination": "AI反発と幅・原油",
+        "explanation": "指数反発は信用不安全解消でも燃料安保証でもない",
         "unresolved": true,
-        "uncertainty": "金利・為替の同時点値不足"
-      },
-      {
-        "combination": "原油と制裁",
-        "explanation": "供給懸念と新法免除は反対向きに働き得る。既存制裁は維持",
-        "unresolved": true,
-        "uncertainty": "限月付き価格と初動未確認"
+        "uncertainty": "最新同時点正本と限月付き値不足"
       }
     ]
   },
   "previous_day_change": {
     "status": "PASS",
-    "prior_view": "週末版｜AI・半導体安と原油高が重なる。月曜の日本株は金利・円・半導体の三点確認",
+    "prior_view": "注釈付き暫定版｜AI信用不安で半導体に逆風。新法の関税免除と既存制裁を分け、週明けの反応を確認",
     "new_events": [
-      "米16日はSOX・NASDAQ100がダウより大幅安、AI資金調達への警戒",
-      "米輸入物価は9月+1.1%、燃料以外も上昇",
-      "ロシア関連新法の関税・制裁適用を免除、既存制裁は維持",
-      "日銀は情勢に応じた利上げ継続、ECBは物価・信用リスクを指摘",
-      "三菱電機の再編・減損見込み、パワーエックス受注、キリン漏えいを個別評価"
+      "米19日半導体反発の報道、正本は16日で最新価格未反映",
+      "米株反発は大型株中心、全面リスクオン判断は保留",
+      "原油供給懸念は残り、政策免除だけで燃料安を決めない",
+      "OFACの知財関連制裁、中国関連取引を個別確認",
+      "コーエーテクモ中間上方修正、GMOグローバルサインHDは純利益増額・増配"
     ],
     "changed": [
-      "輸出入物価と鉱工業生産を一次本文・改定値で追加",
-      "ロシア新法の免除を確認し、原油高の一方向解釈を修正",
-      "三菱電機・パワーエックス・キリンの企業固有材料を追加",
-      "Reuters途中値と正本終値の相違を分離"
+      "米19日の反発報道で半導体慎重姿勢を条件付き緩和",
+      "最新mainの16日11ETFと15日同日FRED金利を採用",
+      "PAIPA制裁・例外を追加",
+      "国内2社の予想修正へ更新"
     ],
     "unchanged": [
-      "AI需要と財務負担を分ける",
-      "基準日違いの2s10sを計算しない",
-      "銅は任意非掲載"
+      "市場数値は正本固定",
+      "未定義先物・現在値は不採用",
+      "銅は任意省略"
     ],
-    "japan_revision": "注釈付き暫定版｜AI信用不安で半導体に逆風。新法の関税免除と既存制裁を分け、週明けの反応を確認"
+    "japan_revision": "注釈付き暫定版｜米半導体は反発報道、全面回復とは区別。個別上方修正と制裁範囲を選別"
   },
   "source_quality": {
     "status": "PASS",
     "checks": [
-      "正本数値不変・基準日付き表示",
-      "一次9件の本文と留保を実読",
-      "政策条文2だけでなく4の免除も確認",
-      "Reuters途中値を終値として採用しない",
-      "需要増と信用不安を分離",
-      "週末後の国内初動は未確認と表示"
+      "正本32系列の価格と日付を変更せず表示",
+      "一次5件を実読、国内表とGL全文を確認",
+      "記事単独市場反応を未確認と表示",
+      "19日反発と16日ETFを混合しない",
+      "同日FRED15日の33bpを最新としない",
+      "中間と通期、本業と一時利益、制裁と例外を区別"
     ]
   },
   "data_integrity": {
     "status": "QUALIFIED",
     "checks": [
-      "正本数値不変・基準日付き表示",
-      "2s10s・現在値・未定義先物を除外",
-      "11ETFの異日ランキング不算出"
+      "正本32系列の価格と日付を変更せず表示",
+      "未定義先物と現在値を除外"
     ]
   },
   "quality_gates": {
@@ -607,37 +583,37 @@
   },
   "publication_decision": {
     "status": "QUALIFIED",
-    "decided_at": "2026-10-19T06:50:15+09:00",
-    "summary": "確認済み一次情報9件を更新。欠測を除外した暫定版MANUAL_REVIEW、完全版FAIL。",
+    "decided_at": "2026-10-20T06:54:20+09:00",
+    "summary": "一次情報5件を追加。正本の旧基準日と未確認系列を明示した暫定版。完全版FAIL。",
     "components": {
       "ai_report": {
         "status": "QUALIFIED",
-        "updated_at": "2026-10-19T06:50:15+09:00",
-        "reason": "確認済み一次情報9件を更新。欠測を除外した暫定版MANUAL_REVIEW、完全版FAIL。"
+        "updated_at": "2026-10-20T06:54:20+09:00",
+        "reason": "一次情報5件を追加。正本の旧基準日と未確認系列を明示した暫定版。完全版FAIL。"
       },
       "japan_stocks": {
         "status": "QUALIFIED",
-        "updated_at": "2026-10-19T06:50:15+09:00",
-        "reason": "確認済み一次情報9件を更新。欠測を除外した暫定版MANUAL_REVIEW、完全版FAIL。"
+        "updated_at": "2026-10-20T06:54:20+09:00",
+        "reason": "一次情報5件を追加。正本の旧基準日と未確認系列を明示した暫定版。完全版FAIL。"
       }
     },
     "unresolved_items": [
       {
         "id": "market",
         "status": "QUALIFIED",
-        "missing": "10月19日JSTのmarket_data成功記録（statusは18日QUALIFIED、component記録なし）",
-        "impact": "当日収集成功と扱わない",
-        "last_checked_at": "2026-10-19T06:50:15+09:00",
-        "next_action": "最新正本と一次掲載を再確認し、同一定義・同時点を証明できた項目のみ採用。",
+        "missing": "10月20日JSTのmarket_data成功記録。statusは19日12:52:31成功／米株・VIX・為替・11ETFは16日、米2年・10年は15日。19日の正本未反映",
+        "impact": "19日の正本市場判断を除外",
+        "last_checked_at": "2026-10-20T06:54:20+09:00",
+        "next_action": "最新正本・一次本文を再確認し、同一定義の確認済み情報だけ追加。",
         "attempts": [
           {
-            "method": "公開正本・status取得",
-            "result": "18日QUALIFIED、19日成功・componentなし",
+            "method": "公開正本・status",
+            "result": "19日成功、16日市場値。20日収集成功なし",
             "source_urls": [
               "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
               "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/status.json"
             ],
-            "checked_at": "2026-10-19T06:50:15+09:00"
+            "checked_at": "2026-10-20T06:54:20+09:00"
           }
         ],
         "affected_components": [
@@ -645,25 +621,25 @@
           "japan_stocks"
         ],
         "excluded_claims": [
-          "当日収集成功と扱わない"
+          "19日の正本市場判断を除外"
         ],
         "excluded_from_publication": true
       },
       {
         "id": "current",
         "status": "QUALIFIED",
-        "missing": "米2年・DXYは14日、米10年・USD/JPYは15日で米株16日と非同期／時刻付き為替・暗号資産現在値、限月付き日経先物実測値",
-        "impact": "2s10s・現在値・日経先物を除外",
-        "last_checked_at": "2026-10-19T06:50:15+09:00",
-        "next_action": "最新正本と一次掲載を再確認し、同一定義・同時点を証明できた項目のみ採用。",
+        "missing": "時刻付き為替・暗号資産現在値と限月付き日経先物実測値",
+        "impact": "現在値・日経先物を除外。15日2s10sは旧基準で採用",
+        "last_checked_at": "2026-10-20T06:54:20+09:00",
+        "next_action": "最新正本・一次本文を再確認し、同一定義の確認済み情報だけ追加。",
         "attempts": [
           {
-            "method": "正本全系列の基準日確認",
-            "result": "米2年DXY14日・米10年円15日",
+            "method": "正本全系列基準日",
+            "result": "金利15日・為替16日・暗号17日。現在値でない",
             "source_urls": [
               "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
             ],
-            "checked_at": "2026-10-19T06:50:15+09:00"
+            "checked_at": "2026-10-20T06:54:20+09:00"
           }
         ],
         "affected_components": [
@@ -671,25 +647,25 @@
           "japan_stocks"
         ],
         "excluded_claims": [
-          "2s10s・現在値・日経先物を除外"
+          "現在値・日経先物を除外。15日2s10sは旧基準で採用"
         ],
         "excluded_from_publication": true
       },
       {
         "id": "sectors",
         "status": "QUALIFIED",
-        "missing": "米11セクターETFは14～15日。16日の同日終値比較が未収集",
-        "impact": "16日の業種順位・市場幅を保留",
-        "last_checked_at": "2026-10-19T06:50:15+09:00",
-        "next_action": "最新正本と一次掲載を再確認し、同一定義・同時点を証明できた項目のみ採用。",
+        "missing": "19日11ETF終値未収集。16日は統一済み",
+        "impact": "19日業種順位を正本で算出しない",
+        "last_checked_at": "2026-10-20T06:54:20+09:00",
+        "next_action": "最新正本・一次本文を再確認し、同一定義の確認済み情報だけ追加。",
         "attempts": [
           {
-            "method": "全11ETF日付照合",
-            "result": "XLC・XLRE14日、他15日。保存値は変更しない",
+            "method": "11系列確認",
+            "result": "全て16日。旧異日問題は解消",
             "source_urls": [
               "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
             ],
-            "checked_at": "2026-10-19T06:50:15+09:00"
+            "checked_at": "2026-10-20T06:54:20+09:00"
           }
         ],
         "affected_components": [
@@ -697,33 +673,26 @@
           "japan_stocks"
         ],
         "excluded_claims": [
-          "16日の業種順位・市場幅を保留"
+          "19日業種順位を正本で算出しない"
         ],
         "excluded_from_publication": true
       },
       {
         "id": "contracts",
         "status": "QUALIFIED",
-        "missing": "Gold・WTI・Brentの正本保存値と取引所・限月・値種別・時刻の対応",
-        "impact": "商品先物数値・騰落を除外",
-        "last_checked_at": "2026-10-19T06:50:15+09:00",
-        "next_action": "最新正本と一次掲載を再確認し、同一定義・同時点を証明できた項目のみ採用。",
+        "missing": "Gold・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応",
+        "impact": "商品先物価格・率は除外",
+        "last_checked_at": "2026-10-20T06:54:20+09:00",
+        "next_action": "最新正本・一次本文を再確認し、同一定義の確認済み情報だけ追加。",
         "attempts": [
           {
-            "method": "CME Gold",
-            "result": "HTTP200、保存連続足との対応未確認",
+            "method": "CME Gold/WTI公式",
+            "result": "HTTP200、保存連続足との契約対応未確認",
             "source_urls": [
-              "https://www.cmegroup.com/markets/metals/precious/gold.settlements.html"
-            ],
-            "checked_at": "2026-10-19T06:50:15+09:00"
-          },
-          {
-            "method": "CME WTI",
-            "result": "HTTP200、同上",
-            "source_urls": [
+              "https://www.cmegroup.com/markets/metals/precious/gold.settlements.html",
               "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html"
             ],
-            "checked_at": "2026-10-19T06:50:15+09:00"
+            "checked_at": "2026-10-20T06:54:20+09:00"
           }
         ],
         "affected_components": [
@@ -731,17 +700,17 @@
           "japan_stocks"
         ],
         "excluded_claims": [
-          "商品先物数値・騰落を除外"
+          "商品先物価格・率は除外"
         ],
         "excluded_from_publication": true
       },
       {
         "id": "coverage",
         "status": "QUALIFIED",
-        "missing": "アナリスト変更の全件網羅とCensusの最新動的表",
-        "impact": "変更なし・全材料なしという断定を除外",
-        "last_checked_at": "2026-10-19T06:50:15+09:00",
-        "next_action": "最新正本と一次掲載を再確認し、同一定義・同時点を証明できた項目のみ採用。",
+        "missing": "アナリスト評価変更の網羅性、Census最新動的表、ECB19日講演本文",
+        "impact": "全変更なし・全材料なしの断定を除外",
+        "last_checked_at": "2026-10-20T06:54:20+09:00",
+        "next_action": "最新正本・一次本文を再確認し、同一定義の確認済み情報だけ追加。",
         "attempts": [
           {
             "method": "公開評価一覧",
@@ -749,16 +718,17 @@
             "source_urls": [
               "https://kabutan.jp/news/marketnews/?category=6"
             ],
-            "checked_at": "2026-10-19T06:50:15+09:00"
+            "checked_at": "2026-10-20T06:54:20+09:00"
           },
           {
-            "method": "IFISとCensus",
-            "result": "IFIS無料情報の網羅性未確認、Census通常403→Web本文取得も動的表欠測",
+            "method": "IFIS・Census・ECB",
+            "result": "IFIS200も網羅未確認。CensusWeb本文に動的最新表なし。ECB19日講演はRSS確認、本文取得不可",
             "source_urls": [
               "https://kabuyoho.jp/",
-              "https://www.census.gov/economic-indicators/"
+              "https://www.census.gov/economic-indicators/",
+              "https://www.ecb.europa.eu/rss/press.html"
             ],
-            "checked_at": "2026-10-19T06:50:15+09:00"
+            "checked_at": "2026-10-20T06:54:20+09:00"
           }
         ],
         "affected_components": [
@@ -766,7 +736,7 @@
           "japan_stocks"
         ],
         "excluded_claims": [
-          "変更なし・全材料なしという断定を除外"
+          "全変更なし・全材料なしの断定を除外"
         ],
         "excluded_from_publication": true
       }
@@ -774,137 +744,138 @@
   },
   "actual_attempts": [
     {
-      "id": "bls",
-      "source_url": "https://www.bls.gov/news.release/archives/ximpim_10162026.htm",
-      "checked_at": "2026-10-19T06:45:57+09:00",
-      "status": 200,
-      "bytes": 521034
-    },
-    {
-      "id": "g17",
-      "source_url": "https://www.federalreserve.gov/releases/g17/current/default.htm",
-      "checked_at": "2026-10-19T06:45:57+09:00",
-      "result": "HTTP Error 403: Forbidden"
-    },
-    {
-      "id": "wh",
-      "source_url": "https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/",
-      "checked_at": "2026-10-19T06:45:57+09:00",
-      "status": 200,
-      "bytes": 313732
-    },
-    {
       "id": "ofac",
-      "source_url": "https://ofac.treasury.gov/recent-actions/20261016",
-      "checked_at": "2026-10-19T06:45:57+09:00",
+      "source_url": "https://ofac.treasury.gov/recent-actions/20261019",
+      "checked_at": "2026-10-20T06:51:12+09:00",
       "status": 200,
-      "bytes": 39478
+      "bytes": 49591
+    },
+    {
+      "id": "treasury",
+      "source_url": "https://ofac.treasury.gov/press-releases",
+      "checked_at": "2026-10-20T06:51:12+09:00",
+      "status": 200,
+      "bytes": 63522
     },
     {
       "id": "boj",
-      "source_url": "https://www.boj.or.jp/about/press/koen_2026/index.htm",
-      "checked_at": "2026-10-19T06:45:57+09:00",
+      "source_url": "https://www.boj.or.jp/whatsnew/index.htm",
+      "checked_at": "2026-10-20T06:51:12+09:00",
       "status": 200,
-      "bytes": 49617
+      "bytes": 512064
     },
     {
       "id": "fomc",
       "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/2026-press-fomc.htm",
-      "checked_at": "2026-10-19T06:45:57+09:00",
+      "checked_at": "2026-10-20T06:51:12+09:00",
       "result": "HTTP Error 403: Forbidden"
     },
     {
       "id": "ecb",
       "source_url": "https://www.ecb.europa.eu/rss/press.html",
-      "checked_at": "2026-10-19T06:45:57+09:00",
+      "checked_at": "2026-10-20T06:51:12+09:00",
       "status": 200,
-      "bytes": 5717
+      "bytes": 5759
     },
     {
-      "id": "ustr",
-      "source_url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october",
-      "checked_at": "2026-10-19T06:45:57+09:00",
+      "id": "bls",
+      "source_url": "https://www.bls.gov/schedule/2026/10_sched.htm",
+      "checked_at": "2026-10-20T06:51:12+09:00",
       "status": 200,
-      "bytes": 34021
+      "bytes": 56785
     },
     {
       "id": "bea",
       "source_url": "https://www.bea.gov/news/schedule",
-      "checked_at": "2026-10-19T06:46:02+09:00",
+      "checked_at": "2026-10-20T06:51:12+09:00",
       "status": 200,
       "bytes": 71459
     },
     {
       "id": "census",
       "source_url": "https://www.census.gov/economic-indicators/",
-      "checked_at": "2026-10-19T06:46:02+09:00",
+      "checked_at": "2026-10-20T06:51:12+09:00",
       "result": "HTTP Error 403: Forbidden"
     },
     {
       "id": "ism",
       "source_url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/",
-      "checked_at": "2026-10-19T06:46:02+09:00",
+      "checked_at": "2026-10-20T06:51:12+09:00",
       "result": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "ustr",
+      "source_url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october",
+      "checked_at": "2026-10-20T06:51:12+09:00",
+      "status": 200,
+      "bytes": 35858
     },
     {
       "id": "bis",
       "source_url": "https://www.bis.gov/news-updates",
-      "checked_at": "2026-10-19T06:46:02+09:00",
+      "checked_at": "2026-10-20T06:51:16+09:00",
       "result": "HTTP Error 403: Forbidden"
     },
     {
-      "id": "cxmt",
-      "source_url": "https://www.cxmt.com/en/news.html",
-      "checked_at": "2026-10-19T06:46:02+09:00",
+      "id": "wh",
+      "source_url": "https://www.whitehouse.gov/presidential-actions/",
+      "checked_at": "2026-10-20T06:51:16+09:00",
       "status": 200,
-      "bytes": 35260
+      "bytes": 264007
     },
     {
-      "id": "cxmtp",
-      "source_url": "https://www.cxmt.com/en/product.html",
-      "checked_at": "2026-10-19T06:46:03+09:00",
+      "id": "tdnet",
+      "source_url": "https://www.release.tdnet.info/inbs/I_list_001_20261019.html",
+      "checked_at": "2026-10-20T06:51:17+09:00",
       "status": 200,
-      "bytes": 48328
+      "bytes": 63056
     },
     {
       "id": "ratings",
       "source_url": "https://kabutan.jp/news/marketnews/?category=6",
-      "checked_at": "2026-10-19T06:46:03+09:00",
+      "checked_at": "2026-10-20T06:51:17+09:00",
       "result": "HTTP Error 403: Forbidden"
     },
     {
       "id": "ifis",
       "source_url": "https://kabuyoho.jp/",
-      "checked_at": "2026-10-19T06:46:04+09:00",
+      "checked_at": "2026-10-20T06:51:17+09:00",
       "status": 200,
-      "bytes": 62867
+      "bytes": 62916
     },
     {
       "id": "gold",
       "source_url": "https://www.cmegroup.com/markets/metals/precious/gold.settlements.html",
-      "checked_at": "2026-10-19T06:46:05+09:00",
+      "checked_at": "2026-10-20T06:51:18+09:00",
       "status": 200,
-      "bytes": 267599
+      "bytes": 267588
     },
     {
       "id": "wti",
       "source_url": "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html",
-      "checked_at": "2026-10-19T06:46:06+09:00",
+      "checked_at": "2026-10-20T06:51:18+09:00",
       "status": 200,
-      "bytes": 279361
+      "bytes": 279350
     },
     {
-      "id": "tdnet",
-      "source_url": "https://www.release.tdnet.info/inbs/I_list_001_20261016.html",
-      "checked_at": "2026-10-19T06:46:06+09:00",
+      "id": "cxmt",
+      "source_url": "https://www.cxmt.com/en/news.html",
+      "checked_at": "2026-10-20T06:51:18+09:00",
       "status": 200,
-      "bytes": 62443
+      "bytes": 35260
     },
     {
-      "id": "reaction",
-      "source_url": "https://www.reuters.com/business/wall-st-futures-mixed-tech-wobbles-again-tesla-gains-2026-10-16/",
-      "checked_at": "2026-10-19T06:46:07+09:00",
-      "result": "HTTP Error 401: HTTP Forbidden"
+      "id": "ap",
+      "source_url": "https://apnews.com/article/5aec11ee466841cc2a69b2d23ab77f0e",
+      "checked_at": "2026-10-20T06:51:19+09:00",
+      "status": 200,
+      "bytes": 747153
+    },
+    {
+      "id": "reuters",
+      "source_url": "https://www.reuters.com/business/wall-st-futures-climb-ai-stocks-rebound-oil-yields-fall-2026-10-19/",
+      "checked_at": "2026-10-20T06:51:21+09:00",
+      "result": "HTTP Error 401: Unauthorized"
     }
   ]
 }

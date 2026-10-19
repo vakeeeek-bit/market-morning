@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-19T22:58:42+09:00",
-  "latest": "2026-10-19",
+  "updated_at": "2026-10-20T06:56:03+09:00",
+  "latest": "2026-10-20",
   "dates": [
     "2026-08-28",
     "2026-08-29",
@@ -54,7 +54,8 @@
     "2026-10-16",
     "2026-10-17",
     "2026-10-18",
-    "2026-10-19"
+    "2026-10-19",
+    "2026-10-20"
   ],
   "entries": [
     {
@@ -683,6 +684,18 @@
     },
     {
       "date": "2026-10-19",
+      "status": "complete",
+      "has_report": true,
+      "has_market": true,
+      "has_japan_stocks": true,
+      "has_japan_market": true,
+      "has_research_evidence": true,
+      "report_type": "daily_provisional",
+      "has_news": true,
+      "has_candidate": false
+    },
+    {
+      "date": "2026-10-20",
       "status": "complete",
       "has_report": true,
       "has_market": true,

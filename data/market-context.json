@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "updated_at": "2026-10-19T06:50:15+09:00",
-  "report_date": "2026-10-19",
+  "updated_at": "2026-10-20T06:54:20+09:00",
+  "report_date": "2026-10-20",
   "period_start": "2026-03-18",
-  "period_end": "2026-10-19",
+  "period_end": "2026-10-20",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-10-19",
+    "latest_report_date": "2026-10-20",
     "source_report_count": 9,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
@@ -82,6 +82,16 @@
             "oct19-0",
             "oct19-1"
           ]
+        },
+        {
+          "date": "2026-10-20",
+          "title": "20日朝の認識更新",
+          "fact": "19日米AI反発報道と新制裁を確認。正本値は16日、金利15日",
+          "market_impact": "昨日の一律慎重姿勢を条件付きで弱める。ただし反発の広がりと企業利益・資金調達改善を伴うまで信用不安解消とはしない。",
+          "source_ids": [
+            "oct20-reaction",
+            "oct20-0"
+          ]
         }
       ],
       "initial_view": {
@@ -89,16 +99,16 @@
         "text": "FRBはインフレを警戒し、利下げを急がない姿勢"
       },
       "new_fact": {
-        "date": "2026-10-19",
-        "text": "16日輸入物価上昇と生産増を一次確認。景気と物価は別に評価"
+        "date": "2026-10-20",
+        "text": "反発報道を踏まえ慎重姿勢を条件付き修正"
       },
       "market_reaction": {
-        "date": "2026-10-19",
-        "text": "19日の国内反応は未確認。16日の実績と週末材料を分離"
+        "date": "2026-10-20",
+        "text": "19日の報道と16日正本を分離。20日国内初動未確認"
       },
-      "current_view": "物価警戒は維持。ただし金利は古い正本で当日方向を断定しない",
+      "current_view": "昨日の一律慎重姿勢を条件付きで弱める。ただし反発の広がりと企業利益・資金調達改善を伴うまで信用不安解消とはしない。",
       "japan_impact": "高PER半導体には逆風。円安は輸出株を支える一方、輸入コストを通じて内需・運輸を圧迫します。",
-      "counter_evidence": "米製造業生産は増加。新法免除は追加リスクの一部を緩和し得るが、既存制裁・信用不安は残る。",
+      "counter_evidence": "大型偏重・信用不安・原油供給懸念は反証。個別上方修正も全面需要回復を保証しない。",
       "source_ids": [
         "fed-apr29",
         "fed-mar18",
@@ -110,7 +120,9 @@
         "reaction15",
         "us-close-1016",
         "oct19-0",
-        "oct19-1"
+        "oct19-1",
+        "oct20-reaction",
+        "oct20-0"
       ]
     },
     {
@@ -182,6 +194,16 @@
             "us-close-1016",
             "oct19-3"
           ]
+        },
+        {
+          "date": "2026-10-20",
+          "title": "20日朝の認識更新",
+          "fact": "19日米AI反発報道と新制裁を確認。正本値は16日、金利15日",
+          "market_impact": "昨日の一律慎重姿勢を条件付きで弱める。ただし反発の広がりと企業利益・資金調達改善を伴うまで信用不安解消とはしない。",
+          "source_ids": [
+            "oct20-reaction",
+            "oct20-0"
+          ]
         }
       ],
       "initial_view": {
@@ -189,16 +211,16 @@
         "text": "AI設備投資と先端半導体需要の強さが株価を支える局面"
       },
       "new_fact": {
-        "date": "2026-10-19",
-        "text": "16日正本は半導体・NASDAQ100がダウより大幅安"
+        "date": "2026-10-20",
+        "text": "反発報道を踏まえ慎重姿勢を条件付き修正"
       },
       "market_reaction": {
-        "date": "2026-10-19",
-        "text": "19日の国内反応は未確認。16日の実績と週末材料を分離"
+        "date": "2026-10-20",
+        "text": "19日の報道と16日正本を分離。20日国内初動未確認"
       },
-      "current_view": "TSMC需要の強さだけでAI信用不安解消とは扱わない",
+      "current_view": "昨日の一律慎重姿勢を条件付きで弱める。ただし反発の広がりと企業利益・資金調達改善を伴うまで信用不安解消とはしない。",
       "japan_impact": "東京エレクトロンなど装置株を一律に弱気とせず、受注と株価評価を分けて確認します。",
-      "counter_evidence": "米製造業生産は増加。新法免除は追加リスクの一部を緩和し得るが、既存制裁・信用不安は残る。",
+      "counter_evidence": "大型偏重・信用不安・原油供給懸念は反証。個別上方修正も全面需要回復を保証しない。",
       "source_ids": [
         "ai-apr16",
         "ai-credit-1016",
@@ -209,7 +231,9 @@
         "reaction14",
         "reaction15",
         "us-close-1016",
-        "oct19-3"
+        "oct19-3",
+        "oct20-reaction",
+        "oct20-0"
       ]
     },
     {
@@ -278,6 +302,16 @@
             "oct19-5",
             "oct19-2"
           ]
+        },
+        {
+          "date": "2026-10-20",
+          "title": "20日朝の認識更新",
+          "fact": "19日米AI反発報道と新制裁を確認。正本値は16日、金利15日",
+          "market_impact": "昨日の一律慎重姿勢を条件付きで弱める。ただし反発の広がりと企業利益・資金調達改善を伴うまで信用不安解消とはしない。",
+          "source_ids": [
+            "oct20-reaction",
+            "oct20-0"
+          ]
         }
       ],
       "initial_view": {
@@ -285,16 +319,16 @@
         "text": "政策金利0.75%でも利上げを求める意見が増え、正常化継続が意識された"
       },
       "new_fact": {
-        "date": "2026-10-19",
-        "text": "日銀16日挨拶は利上げ継続を説明。新法の免除も確認"
+        "date": "2026-10-20",
+        "text": "反発報道を踏まえ慎重姿勢を条件付き修正"
       },
       "market_reaction": {
-        "date": "2026-10-19",
-        "text": "19日の国内反応は未確認。16日の実績と週末材料を分離"
+        "date": "2026-10-20",
+        "text": "19日の報道と16日正本を分離。20日国内初動未確認"
       },
-      "current_view": "銀行・輸出・運輸の見方は金利・円・原油の実測で変更",
+      "current_view": "昨日の一律慎重姿勢を条件付きで弱める。ただし反発の広がりと企業利益・資金調達改善を伴うまで信用不安解消とはしない。",
       "japan_impact": "銀行、輸出、内需、運輸で影響が分かれます。円安を日本株全体の一律追い風とは扱いません。",
-      "counter_evidence": "米製造業生産は増加。新法免除は追加リスクの一部を緩和し得るが、既存制裁・信用不安は残る。",
+      "counter_evidence": "大型偏重・信用不安・原油供給懸念は反証。個別上方修正も全面需要回復を保証しない。",
       "source_ids": [
         "boj-apr28",
         "boj-jun16",
@@ -303,26 +337,28 @@
         "imf-boj-1017",
         "oct16-boj",
         "oct19-5",
-        "oct19-2"
+        "oct19-2",
+        "oct20-reaction",
+        "oct20-0"
       ]
     }
   ],
   "scenario_change_conditions": [
     {
-      "condition": "国内半導体と市場幅",
-      "meaning": "幅を伴う相対改善なら警戒を弱める"
+      "condition": "半導体と市場幅",
+      "meaning": "幅を伴う改善なら警戒緩和、失速なら再強化"
     },
     {
-      "condition": "ロシア新法免除と原油",
-      "meaning": "供給障害再燃・免除変更なら前提修正"
+      "condition": "原油・政策",
+      "meaning": "供給懸念再燃なら燃料負担を再評価"
     },
     {
       "condition": "金利・為替",
-      "meaning": "金利再上昇・円急変ならシナリオ修正"
+      "meaning": "円急変・金利高で輸出・高PER見通し修正"
     },
     {
-      "condition": "個別開示",
-      "meaning": "会社見通しと実績に差が出れば再評価"
+      "condition": "個別予想修正",
+      "meaning": "通期増額・減額や実績乖離で再評価"
     }
   ],
   "sources": [
@@ -402,6 +438,20 @@
       "publisher": "Federal Reserve Board",
       "published_at": "2026-10-16",
       "url": "https://www.federalreserve.gov/releases/g17/current/default.htm"
+    },
+    {
+      "id": "oct20-reaction",
+      "title": "19日AI反発・大型偏重",
+      "publisher": "Reuters",
+      "published_at": "2026-10-19",
+      "url": "https://www.reuters.com/business/wall-st-futures-climb-ai-stocks-rebound-oil-yields-fall-2026-10-19/"
+    },
+    {
+      "id": "oct20-0",
+      "title": "OFACがPAIPA制裁と一般許可を公表",
+      "publisher": "OFAC",
+      "published_at": "2026-10-19",
+      "url": "https://ofac.treasury.gov/recent-actions/20261019"
     },
     {
       "id": "ai-apr16",

@@ -1,11 +1,223 @@
 {
-  "report_date": "2026-10-19",
+  "report_date": "2026-10-20",
   "target_market_date": "2026-10-16",
-  "updated_at": "2026-10-19T06:50:15+09:00",
+  "updated_at": "2026-10-20T06:54:20+09:00",
   "publication_mode": "verified_news",
   "coverage_status": "partial",
-  "coverage_note": "19日朝に一次情報9件を追加した部分収集。発表は16～17日、確認日と市場基準日を分離。",
+  "coverage_note": "20日朝、19日発表の一次情報5件を追加した部分収集。既存記事の発表・確認日は維持。最新市場データを収集完了とするものではない。",
   "articles": [
+    {
+      "id": "oct20-0",
+      "title": "OFACがPAIPA制裁と一般許可を公表",
+      "published_date": "2026-10-19",
+      "verified_at": "2026-10-20T06:54:20+09:00",
+      "source_type": "primary",
+      "publisher": "OFAC",
+      "source_url": "https://ofac.treasury.gov/recent-actions/20261019",
+      "verification_url": "https://ofac.treasury.gov/recent-actions/20261019",
+      "verification_status": "PASS",
+      "fact": "OFACは19日、MiraclePlus関連4主体とShanghai ZhisuanをNon-SDNメニュー型制裁一覧に追加。資産凍結等と物品輸入の例外を記載し、GL1・GL2を発行。",
+      "analysis": "中国関連の資金調達・決済・取引先を個別点検。中国全体への禁輸やすべてのAI投資禁止とは扱わない。",
+      "limitations": "GL1はサイバー制裁規則で許可・適用除外される範囲。GL2は指定4主体と50%以上所有先の取引整理に限定し、2027年1月19日00:01 ESTまで。凍結対象への支払は米国内凍結口座。他規制は別途順守。Shanghai ZhisuanをGL2対象としない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "本文を実読・日付と対象・例外を確認：https://ofac.treasury.gov/recent-actions/20261019。GL1全1頁・GL2全2頁も実読。GL2対象外のShanghai Zhisuanを混入しない。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "OFACは19日、MiraclePlus関連4主体とShanghai ZhisuanをNon-SDNメニュー型制裁一覧に追加。資産凍結等と物品輸入の例外を記載し、GL1・GL2を発行。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表19日、実確認2026-10-20T06:54:20+09:00。BIS報告書原発表14日と日銀案内19日を区別"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離、記事単独市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "GL1はサイバー制裁規則で許可・適用除外される範囲。GL2は指定4主体と50%以上所有先の取引整理に限定し、2027年1月19日00:01 ESTまで。凍結対象への支払は米国内凍結口座。他規制は別途順守。Shanghai ZhisuanをGL2対象としない。"
+        }
+      }
+    },
+    {
+      "id": "oct20-1",
+      "title": "日銀がFMIビジネスリスク管理の追加指針を案内",
+      "published_date": "2026-10-19",
+      "verified_at": "2026-10-20T06:54:20+09:00",
+      "source_type": "primary",
+      "publisher": "日本銀行・BIS",
+      "source_url": "https://www.boj.or.jp/paym/intlact_pm/cpss/cpss261019a.htm",
+      "verification_url": "https://www.boj.or.jp/paym/intlact_pm/cpss/cpss261019a.htm",
+      "verification_status": "PASS",
+      "fact": "日銀は19日、CPMI/IOSCOが14日にFMIのビジネスリスク・損失管理に関する最終報告書を公表したと案内。BIS原文はリスク管理、自己資本で賄う流動純資産、ガバナンスを説明。",
+      "analysis": "決済・清算機関の耐性に関する中期テーマ。政策金利変更や当日の金融株利益増と読み替えない。",
+      "limitations": "国際公表14日と日銀案内19日を区別。プレス本文の範囲であり、日本での一律施行日・個別機関の資本不足を断定しない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "本文を実読・日付と対象・例外を確認：https://www.boj.or.jp/paym/intlact_pm/cpss/cpss261019a.htm"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "日銀は19日、CPMI/IOSCOが14日にFMIのビジネスリスク・損失管理に関する最終報告書を公表したと案内。BIS原文はリスク管理、自己資本で賄う流動純資産、ガバナンスを説明。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表19日、実確認2026-10-20T06:54:20+09:00。BIS報告書原発表14日と日銀案内19日を区別"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離、記事単独市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "国際公表14日と日銀案内19日を区別。プレス本文の範囲であり、日本での一律施行日・個別機関の資本不足を断定しない。"
+        }
+      }
+    },
+    {
+      "id": "oct20-2",
+      "title": "USTR、メキシコ食品工場の労働案件解決を発表",
+      "published_date": "2026-10-19",
+      "verified_at": "2026-10-20T06:54:20+09:00",
+      "source_type": "primary",
+      "publisher": "USTR",
+      "source_url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/united-states-announces-successful-resolution-rapid-response-labor-mechanism-matter-alimentos-grole",
+      "verification_url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/united-states-announces-successful-resolution-rapid-response-labor-mechanism-matter-alimentos-grole",
+      "verification_status": "PASS",
+      "fact": "USTRは19日、Alimentos Grole施設のUSMCA迅速対応労働メカニズム案件の是正完了を発表し、同施設商品の未清算輸入申告の清算再開を財務長官に指示。",
+      "analysis": "施設限定の通商手続き改善。日本株全体の関税引下げやメキシコ全工場の規制解除とは扱わない。",
+      "limitations": "権利侵害の是正と施設別措置の解除に限定。日本企業の利益・市場反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "本文を実読・日付と対象・例外を確認：https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/united-states-announces-successful-resolution-rapid-response-labor-mechanism-matter-alimentos-grole"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "USTRは19日、Alimentos Grole施設のUSMCA迅速対応労働メカニズム案件の是正完了を発表し、同施設商品の未清算輸入申告の清算再開を財務長官に指示。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表19日、実確認2026-10-20T06:54:20+09:00。BIS報告書原発表14日と日銀案内19日を区別"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離、記事単独市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "権利侵害の是正と施設別措置の解除に限定。日本企業の利益・市場反応は未確認。"
+        }
+      }
+    },
+    {
+      "id": "oct20-3",
+      "title": "中間営業利益予想を上方修正、通期は据え置き",
+      "published_date": "2026-10-19",
+      "verified_at": "2026-10-20T06:54:20+09:00",
+      "source_type": "primary",
+      "publisher": "コーエーテクモホールディングス",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261019552780.pdf",
+      "verification_url": "https://www.release.tdnet.info/inbs/140120261019552780.pdf",
+      "verification_status": "PASS",
+      "fact": "19日16:00公表。2027年3月期中間の売上予想を340億円から370億円、営業利益70億円から115億円、純利益90億円から180億円へ修正。通期予想は現時点で変更なし。",
+      "analysis": "旧作・バックカタログの好調による本業改善と運用収支を分離。中間増額だけで通期増額を先取りしない。",
+      "limitations": "予想であり実績ではない。経常・純利益の増加には運用収支も含み、全てをゲーム販売効果としない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "本文を実読・日付と対象・例外を確認：https://www.release.tdnet.info/inbs/140120261019552780.pdf。PDF全頁と表・社名・コードを照合。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "19日16:00公表。2027年3月期中間の売上予想を340億円から370億円、営業利益70億円から115億円、純利益90億円から180億円へ修正。通期予想は現時点で変更なし。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表19日、実確認2026-10-20T06:54:20+09:00。BIS報告書原発表14日と日銀案内19日を区別"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離、記事単独市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "予想であり実績ではない。経常・純利益の増加には運用収支も含み、全てをゲーム販売効果としない。"
+        }
+      },
+      "company": "コーエーテクモホールディングス",
+      "ticker": "3635",
+      "category": "追い風候補・ゲームに限定",
+      "related_sectors": [
+        "ゲーム",
+        "情報通信"
+      ],
+      "today_watch": "通期見通し、販売持続性、営業外収支の再現性",
+      "timing": "19日大引け後・20日寄り付き前",
+      "market_pricing_status": "20日現物反応は未確認",
+      "importance": "high"
+    },
+    {
+      "id": "oct20-4",
+      "title": "純利益予想増額・増配、売上と営業利益は据え置き",
+      "published_date": "2026-10-19",
+      "verified_at": "2026-10-20T06:54:20+09:00",
+      "source_type": "primary",
+      "publisher": "GMOグローバルサイン・ホールディングス",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261019553071.pdf",
+      "verification_url": "https://www.release.tdnet.info/inbs/140120261019553071.pdf",
+      "verification_status": "PASS",
+      "fact": "19日16:05公表。2026年12月期純利益予想を10.52億円から13.12億円、期末配当予想を59.67円から74.35円へ修正。売上・営業・経常利益予想は変更なし。",
+      "analysis": "還元増は個別追い風候補。子会社売却益等の寄与を区別し、クラウド本業の利益成長が加速したとは断定しない。",
+      "limitations": "予想であり確定配当ではない。特別利益にはアーンアウト条項の条件付対価を含む。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "本文を実読・日付と対象・例外を確認：https://www.release.tdnet.info/inbs/140120261019553071.pdf。PDF全頁と表・社名・コードを照合。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "19日16:05公表。2026年12月期純利益予想を10.52億円から13.12億円、期末配当予想を59.67円から74.35円へ修正。売上・営業・経常利益予想は変更なし。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表19日、実確認2026-10-20T06:54:20+09:00。BIS報告書原発表14日と日銀案内19日を区別"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離、記事単独市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "予想であり確定配当ではない。特別利益にはアーンアウト条項の条件付対価を含む。"
+        }
+      },
+      "company": "GMOグローバルサイン・ホールディングス",
+      "ticker": "3788",
+      "category": "追い風候補・一時利益の留保",
+      "related_sectors": [
+        "クラウド",
+        "情報通信"
+      ],
+      "today_watch": "継続利益、追加対価の条件、配当実施",
+      "timing": "19日大引け後・20日寄り付き前",
+      "market_pricing_status": "20日現物反応は未確認",
+      "importance": "high"
+    },
     {
       "id": "oct19-0",
       "title": "米9月輸入物価は燃料以外にも上昇",

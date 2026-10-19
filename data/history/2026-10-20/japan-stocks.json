@@ -1,0 +1,216 @@
+{
+  "report_date": "2026-10-20",
+  "target_market_date": "2026-10-16",
+  "updated_at": "2026-10-20T06:54:20+09:00",
+  "report_type": "daily_provisional",
+  "japan_quick_view": {
+    "headline": "注釈付き暫定版｜米半導体は反発報道、全面回復とは区別。個別上方修正と制裁範囲を選別",
+    "top_materials": [
+      "米19日半導体反発の報道、正本は16日で最新価格未反映",
+      "米株反発は大型株中心、全面リスクオン判断は保留",
+      "原油供給懸念は残り、政策免除だけで燃料安を決めない",
+      "OFACの知財関連制裁、中国関連取引を個別確認",
+      "コーエーテクモ中間上方修正、GMOグローバルサインHDは純利益増額・増配"
+    ],
+    "focus_sectors": [
+      "半導体製造装置",
+      "情報通信",
+      "ゲーム",
+      "クラウド",
+      "資源",
+      "空運",
+      "金融"
+    ],
+    "unpriced_materials": [
+      "19日米市場の国内20日初動",
+      "19日大引け後の予想修正"
+    ],
+    "individual_news_review": {
+      "status": "reviewed",
+      "story_count": 2,
+      "scope": "TDnet19日最初100件/全150件を選別し、2社PDF全頁・表・コードを実読。全件網羅ではない。"
+    }
+  },
+  "top_stories": [
+    {
+      "company": "コーエーテクモホールディングス",
+      "ticker": "3635",
+      "headline": "中間営業利益予想を上方修正、通期は据え置き",
+      "fact": "19日16:00公表。2027年3月期中間の売上予想を340億円から370億円、営業利益70億円から115億円、純利益90億円から180億円へ修正。通期予想は現時点で変更なし。",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261019552780.pdf",
+      "analysis": "旧作・バックカタログの好調による本業改善と運用収支を分離。中間増額だけで通期増額を先取りしない。",
+      "category": "追い風候補・ゲームに限定",
+      "related_sectors": [
+        "ゲーム",
+        "情報通信"
+      ],
+      "today_watch": "通期見通し、販売持続性、営業外収支の再現性",
+      "announced_at": "2026-10-19",
+      "timing": "19日大引け後・20日寄り付き前",
+      "market_pricing_status": "20日現物反応は未確認",
+      "price_reaction": "未確認",
+      "related_stocks": [],
+      "importance": "high",
+      "confidence": "supported"
+    },
+    {
+      "company": "GMOグローバルサイン・ホールディングス",
+      "ticker": "3788",
+      "headline": "純利益予想増額・増配、売上と営業利益は据え置き",
+      "fact": "19日16:05公表。2026年12月期純利益予想を10.52億円から13.12億円、期末配当予想を59.67円から74.35円へ修正。売上・営業・経常利益予想は変更なし。",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261019553071.pdf",
+      "analysis": "還元増は個別追い風候補。子会社売却益等の寄与を区別し、クラウド本業の利益成長が加速したとは断定しない。",
+      "category": "追い風候補・一時利益の留保",
+      "related_sectors": [
+        "クラウド",
+        "情報通信"
+      ],
+      "today_watch": "継続利益、追加対価の条件、配当実施",
+      "announced_at": "2026-10-19",
+      "timing": "19日大引け後・20日寄り付き前",
+      "market_pricing_status": "20日現物反応は未確認",
+      "price_reaction": "未確認",
+      "related_stocks": [],
+      "importance": "high",
+      "confidence": "supported"
+    }
+  ],
+  "important_stories": [],
+  "other_stories": [],
+  "data_quality": {
+    "overall": "MANUAL_REVIEW",
+    "missing": [
+      "10月20日JSTのmarket_data成功記録。statusは19日12:52:31成功",
+      "米株・VIX・為替・11ETFは16日、米2年・10年は15日。19日の正本未反映",
+      "Gold・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応",
+      "時刻付き為替・暗号資産現在値と限月付き日経先物実測値",
+      "アナリスト評価変更の網羅性、Census最新動的表、ECB19日講演本文"
+    ],
+    "differences": [
+      "19日米半導体反発・大型中心の報道は16日正本と別。外部価格に置換しない",
+      "最新mainでは11ETFが16日に統一。旧14～15日欠測記載を解消",
+      "米金利はDGS2/DGS10とも15日。正本2s10s33bpは15日限定で採用、19日のカーブではない"
+    ],
+    "excluded": [
+      "限月未確認の商品先物価格・騰落率",
+      "Copper価格・在庫（任意非掲載）",
+      "時刻のない現在値・日経先物推定値",
+      "記事単独の株価寄与率と20日国内初動の断定",
+      "新法免除を全ロシア制裁解除とする主張",
+      "予想修正を確定実績や継続利益とする主張"
+    ],
+    "cautions": [
+      "部分収集の暫定版。完全版FAILを保持",
+      "19日の報道は背景分析のみ。16日のETFランキングとは混合しない",
+      "19日大引け後の企業発表と20日の現物初動を区別"
+    ]
+  },
+  "analyst_rating_changes": {
+    "coverage_status": "十分調査したが取得不能",
+    "headline": "全変更の網羅性は未確認",
+    "items": [],
+    "source_review": [
+      {
+        "name": "公開評価一覧・IFIS",
+        "url": "https://kabuyoho.jp/",
+        "result": "一覧403、IFIS無料ページ取得も全件網羅未確認",
+        "coverage": "公開範囲のみ・全件網羅不可",
+        "freshness": "当日確認状況をJSONに記録",
+        "automation": "契約API未導入",
+        "rights": "確認できた事実だけを掲載"
+      }
+    ],
+    "summary": "契約データ未導入。公開情報で確認できない日は『変更なし』と断定しません。"
+  },
+  "sector_implications": [
+    {
+      "driver": "米19日半導体反発の報道、正本は16日で最新価格未反映",
+      "affected_sectors": [
+        "電気機器",
+        "機械"
+      ],
+      "possible_impact": "半導体に反発候補だが全面強気にはしない",
+      "confirmation_condition": "複数銘柄のTOPIX比・出来高・持続性"
+    },
+    {
+      "driver": "原油供給懸念は残り、政策免除だけで燃料安を決めない",
+      "affected_sectors": [
+        "資源",
+        "空運"
+      ],
+      "possible_impact": "原油高継続なら資源優位・燃料負担、反落なら逆方向",
+      "confirmation_condition": "限月付き実測値と国内相対騰落"
+    },
+    {
+      "driver": "コーエーテクモ中間上方修正、GMOグローバルサインHDは純利益増額・増配",
+      "affected_sectors": [
+        "ゲーム",
+        "クラウド"
+      ],
+      "possible_impact": "個別追い風候補。本業・一時利益と通期据置を区別",
+      "confirmation_condition": "実績・通期見通し・配当実施"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "基本",
+      "conditions": "米半導体反発報道が国内へ波及するが、市場幅・最新金利は未確定",
+      "impact_on_japan": "半導体の反発候補と個別上方修正を選別。資源・空運の方向は原油実測待ち",
+      "invalidation": "国内半導体がTOPIX比で持続劣後、または市場幅を伴う改善"
+    },
+    {
+      "name": "上振れ",
+      "conditions": "国内半導体の複数銘柄で相対反発と商い改善、決算・資金調達への懸念後退",
+      "impact_on_japan": "製造装置・情報通信への警戒を弱める。燃料負担業種は原油反落時のみ改善",
+      "invalidation": "反発が少数銘柄だけ、原油・金利再上昇、投資回収見通し悪化"
+    },
+    {
+      "name": "下振れ",
+      "conditions": "反発失速、AI信用不安再燃、供給障害と円急変が重なる",
+      "impact_on_japan": "高PER・輸出・燃料負担業種に逆風。防御型も絶対上昇は保証しない",
+      "invalidation": "市場幅と信用環境の持続改善"
+    }
+  ],
+  "monitoring_points": [
+    {
+      "target": "半導体と市場幅",
+      "today_check": "複数銘柄のTOPIX比と出来高、反発持続性",
+      "view_change_condition": "幅を伴う改善なら警戒緩和、失速なら再強化"
+    },
+    {
+      "target": "原油・政策",
+      "today_check": "限月付き原油と供給障害、制裁対象・例外",
+      "view_change_condition": "供給懸念再燃なら燃料負担を再評価"
+    },
+    {
+      "target": "金利・為替",
+      "today_check": "基準時刻付き実測値。15日の33bpを最新としない",
+      "view_change_condition": "円急変・金利高で輸出・高PER見通し修正"
+    },
+    {
+      "target": "個別予想修正",
+      "today_check": "中間と通期、本業と一時利益、配当予想の実現",
+      "view_change_condition": "通期増額・減額や実績乖離で再評価"
+    }
+  ],
+  "source_notes": [
+    "市場正本は16日、金利15日",
+    "19日海外報道と20日国内初動を分離",
+    "2社は19日大引け後発表"
+  ],
+  "publication_policy": {
+    "status": "QUALIFIED",
+    "mode": "provisional",
+    "updated_at": "2026-10-20T06:54:20+09:00",
+    "complete_gate": "FAIL",
+    "copper_included": false,
+    "note": "一次情報5件を追加。正本の旧基準日と未確認系列を明示した暫定版。完全版FAIL。",
+    "missing_items": [
+      "10月20日JSTのmarket_data成功記録。statusは19日12:52:31成功",
+      "米株・VIX・為替・11ETFは16日、米2年・10年は15日。19日の正本未反映",
+      "Gold・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応",
+      "時刻付き為替・暗号資産現在値と限月付き日経先物実測値",
+      "アナリスト評価変更の網羅性、Census最新動的表、ECB19日講演本文"
+    ]
+  }
+}

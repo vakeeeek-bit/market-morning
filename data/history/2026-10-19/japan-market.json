@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-19 12:52:28 JST",
-  "market_date": "2026-10-16",
-  "data_phase": "取引中暫定",
+  "updated_at": "2026-10-19 22:58:27 JST",
+  "market_date": "2026-10-19",
+  "data_phase": "大引け後",
   "data_state": {
     "kind": "normal",
     "label": "通常取引日",
@@ -11,224 +11,224 @@
   "scope": "市場・セクター評価は指数連動ETFとTOPIX-17業種ETFを使用。主要監視34銘柄は銘柄ランキングだけに使用",
   "sector_ranking": [
     {
-      "ticker": "1625.T",
-      "name": "電機・精密",
-      "sector": "電機・精密",
-      "price": 64450.0,
-      "change_pct": 2.19,
-      "return_5d_pct": -5.28,
-      "volume": 556,
-      "volume_ratio_20d": 0.97,
-      "trading_value_proxy_yen": 35834200,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "1626.T",
-      "name": "情報通信・サービス",
-      "sector": "情報通信・サービス",
-      "price": 49830.0,
-      "change_pct": 2.17,
-      "return_5d_pct": 1.69,
-      "volume": 370,
-      "volume_ratio_20d": 1.38,
-      "trading_value_proxy_yen": 18437100,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "1622.T",
-      "name": "自動車・輸送機",
-      "sector": "自動車・輸送機",
-      "price": 35570.0,
-      "change_pct": 2.12,
-      "return_5d_pct": 4.31,
-      "volume": 336,
-      "volume_ratio_20d": 0.74,
-      "trading_value_proxy_yen": 11951520,
-      "market_date": "2026-10-16",
+      "ticker": "1618.T",
+      "name": "エネルギー資源",
+      "sector": "エネルギー資源",
+      "price": 36320.0,
+      "change_pct": 2.05,
+      "return_5d_pct": 3.8,
+      "volume": 1146,
+      "volume_ratio_20d": 0.94,
+      "trading_value_proxy_yen": 41622720,
+      "market_date": "2026-10-19",
       "status": "取得成功"
     },
     {
       "ticker": "1633.T",
       "name": "不動産",
       "sector": "不動産",
-      "price": 48700.0,
-      "change_pct": 1.97,
-      "return_5d_pct": 4.3,
-      "volume": 512,
-      "volume_ratio_20d": 1.1,
-      "trading_value_proxy_yen": 24934400,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "1621.T",
-      "name": "医薬品",
-      "sector": "医薬品",
-      "price": 31410.0,
-      "change_pct": 1.85,
-      "return_5d_pct": 5.26,
-      "volume": 1486,
-      "volume_ratio_20d": 1.35,
-      "trading_value_proxy_yen": 46675260,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "1632.T",
-      "name": "金融（銀行除く）",
-      "sector": "金融（銀行除く）",
-      "price": 43360.0,
-      "change_pct": 1.81,
-      "return_5d_pct": 3.19,
-      "volume": 552,
-      "volume_ratio_20d": 0.34,
-      "trading_value_proxy_yen": 23934720,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "1619.T",
-      "name": "建設・資材",
-      "sector": "建設・資材",
-      "price": 43520.0,
-      "change_pct": 1.8,
-      "return_5d_pct": -2.51,
-      "volume": 410,
-      "volume_ratio_20d": 0.92,
-      "trading_value_proxy_yen": 17843200,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "1624.T",
-      "name": "機械",
-      "sector": "機械",
-      "price": 81840.0,
-      "change_pct": 1.63,
-      "return_5d_pct": -2.68,
-      "volume": 110,
-      "volume_ratio_20d": 0.63,
-      "trading_value_proxy_yen": 9002400,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "1629.T",
-      "name": "商社・卸売",
-      "sector": "商社・卸売",
-      "price": 277.6,
-      "change_pct": 1.35,
-      "return_5d_pct": 3.78,
-      "volume": 1140960,
-      "volume_ratio_20d": 1.55,
-      "trading_value_proxy_yen": 316730503,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "1631.T",
-      "name": "銀行",
-      "sector": "銀行",
-      "price": 39720.0,
-      "change_pct": 1.3,
-      "return_5d_pct": -2.86,
-      "volume": 1355,
-      "volume_ratio_20d": 0.23,
-      "trading_value_proxy_yen": 53820600,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "1618.T",
-      "name": "エネルギー資源",
-      "sector": "エネルギー資源",
-      "price": 35590.0,
-      "change_pct": 0.88,
-      "return_5d_pct": 1.89,
-      "volume": 436,
-      "volume_ratio_20d": 0.35,
-      "trading_value_proxy_yen": 15517240,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "1628.T",
-      "name": "運輸・物流",
-      "sector": "運輸・物流",
-      "price": 22145.0,
-      "change_pct": 0.75,
-      "return_5d_pct": 2.05,
-      "volume": 1047,
-      "volume_ratio_20d": 3.45,
-      "trading_value_proxy_yen": 23185815,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "1620.T",
-      "name": "素材・化学",
-      "sector": "素材・化学",
-      "price": 37690.0,
-      "change_pct": 0.69,
-      "return_5d_pct": -0.05,
-      "volume": 80,
-      "volume_ratio_20d": 0.31,
-      "trading_value_proxy_yen": 3015200,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "1623.T",
-      "name": "鉄鋼・非鉄",
-      "sector": "鉄鋼・非鉄",
-      "price": 59160.0,
-      "change_pct": 0.51,
-      "return_5d_pct": -9.76,
-      "volume": 1011,
-      "volume_ratio_20d": 0.92,
-      "trading_value_proxy_yen": 59810760,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "1630.T",
-      "name": "小売",
-      "sector": "小売",
-      "price": 37940.0,
-      "change_pct": 0.34,
-      "return_5d_pct": 2.57,
-      "volume": 489,
-      "volume_ratio_20d": 1.83,
-      "trading_value_proxy_yen": 18552660,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "1617.T",
-      "name": "食品",
-      "sector": "食品",
-      "price": 49660.0,
-      "change_pct": -0.32,
-      "return_5d_pct": 4.04,
-      "volume": 319,
-      "volume_ratio_20d": 1.04,
-      "trading_value_proxy_yen": 15841540,
-      "market_date": "2026-10-16",
+      "price": 49270.0,
+      "change_pct": 1.17,
+      "return_5d_pct": 5.64,
+      "volume": 443,
+      "volume_ratio_20d": 0.91,
+      "trading_value_proxy_yen": 21826610,
+      "market_date": "2026-10-19",
       "status": "取得成功"
     },
     {
       "ticker": "1627.T",
       "name": "電力・ガス",
       "sector": "電力・ガス",
-      "price": 11885.0,
-      "change_pct": -0.38,
-      "return_5d_pct": 0.13,
-      "volume": 5840,
-      "volume_ratio_20d": 1.31,
-      "trading_value_proxy_yen": 69408400,
-      "market_date": "2026-10-16",
+      "price": 12000.0,
+      "change_pct": 0.97,
+      "return_5d_pct": 0.8,
+      "volume": 1403,
+      "volume_ratio_20d": 0.32,
+      "trading_value_proxy_yen": 16836000,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "1617.T",
+      "name": "食品",
+      "sector": "食品",
+      "price": 50030.0,
+      "change_pct": 0.75,
+      "return_5d_pct": 2.46,
+      "volume": 212,
+      "volume_ratio_20d": 0.72,
+      "trading_value_proxy_yen": 10606360,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "1628.T",
+      "name": "運輸・物流",
+      "sector": "運輸・物流",
+      "price": 22285.0,
+      "change_pct": 0.63,
+      "return_5d_pct": 1.94,
+      "volume": 671,
+      "volume_ratio_20d": 1.98,
+      "trading_value_proxy_yen": 14953235,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "1629.T",
+      "name": "商社・卸売",
+      "sector": "商社・卸売",
+      "price": 279.0,
+      "change_pct": 0.5,
+      "return_5d_pct": 4.1,
+      "volume": 353240,
+      "volume_ratio_20d": 0.49,
+      "trading_value_proxy_yen": 98553960,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "1619.T",
+      "name": "建設・資材",
+      "sector": "建設・資材",
+      "price": 43710.0,
+      "change_pct": 0.44,
+      "return_5d_pct": -1.58,
+      "volume": 2948,
+      "volume_ratio_20d": 6.46,
+      "trading_value_proxy_yen": 128857080,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "1632.T",
+      "name": "金融（銀行除く）",
+      "sector": "金融（銀行除く）",
+      "price": 43500.0,
+      "change_pct": 0.32,
+      "return_5d_pct": 3.2,
+      "volume": 686,
+      "volume_ratio_20d": 0.45,
+      "trading_value_proxy_yen": 29841000,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "1621.T",
+      "name": "医薬品",
+      "sector": "医薬品",
+      "price": 31460.0,
+      "change_pct": 0.16,
+      "return_5d_pct": 6.45,
+      "volume": 631,
+      "volume_ratio_20d": 0.55,
+      "trading_value_proxy_yen": 19851260,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "1620.T",
+      "name": "素材・化学",
+      "sector": "素材・化学",
+      "price": 37740.0,
+      "change_pct": 0.13,
+      "return_5d_pct": -1.15,
+      "volume": 80,
+      "volume_ratio_20d": 0.32,
+      "trading_value_proxy_yen": 3019200,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "1626.T",
+      "name": "情報通信・サービス",
+      "sector": "情報通信・サービス",
+      "price": 49880.0,
+      "change_pct": 0.1,
+      "return_5d_pct": 0.81,
+      "volume": 221,
+      "volume_ratio_20d": 0.82,
+      "trading_value_proxy_yen": 11023480,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "1622.T",
+      "name": "自動車・輸送機",
+      "sector": "自動車・輸送機",
+      "price": 35600.0,
+      "change_pct": 0.08,
+      "return_5d_pct": 4.74,
+      "volume": 1110,
+      "volume_ratio_20d": 2.63,
+      "trading_value_proxy_yen": 39516000,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "1631.T",
+      "name": "銀行",
+      "sector": "銀行",
+      "price": 39740.0,
+      "change_pct": 0.05,
+      "return_5d_pct": -1.24,
+      "volume": 3459,
+      "volume_ratio_20d": 0.61,
+      "trading_value_proxy_yen": 137460660,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "1624.T",
+      "name": "機械",
+      "sector": "機械",
+      "price": 81860.0,
+      "change_pct": 0.02,
+      "return_5d_pct": -2.59,
+      "volume": 579,
+      "volume_ratio_20d": 3.33,
+      "trading_value_proxy_yen": 47396940,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "1623.T",
+      "name": "鉄鋼・非鉄",
+      "sector": "鉄鋼・非鉄",
+      "price": 58910.0,
+      "change_pct": -0.42,
+      "return_5d_pct": -9.58,
+      "volume": 731,
+      "volume_ratio_20d": 0.67,
+      "trading_value_proxy_yen": 43063210,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "1630.T",
+      "name": "小売",
+      "sector": "小売",
+      "price": 37760.0,
+      "change_pct": -0.47,
+      "return_5d_pct": 3.2,
+      "volume": 232,
+      "volume_ratio_20d": 0.84,
+      "trading_value_proxy_yen": 8760320,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "1625.T",
+      "name": "電機・精密",
+      "sector": "電機・精密",
+      "price": 63710.0,
+      "change_pct": -1.15,
+      "return_5d_pct": -7.18,
+      "volume": 512,
+      "volume_ratio_20d": 0.88,
+      "trading_value_proxy_yen": 32619520,
+      "market_date": "2026-10-19",
       "status": "取得成功"
     }
   ],
@@ -237,29 +237,29 @@
       "sector": "食品",
       "stocks": [
         {
-          "ticker": "2802.T",
-          "name": "味の素",
-          "sector": "食品",
-          "price": 5280.0,
-          "change_pct": 0.82,
-          "return_5d_pct": -0.25,
-          "volume": 2249200,
-          "volume_ratio_20d": 0.74,
-          "trading_value_proxy_yen": 11875776000,
-          "market_date": "2026-10-16",
-          "status": "取得成功"
-        },
-        {
           "ticker": "2502.T",
           "name": "アサヒグループHD",
           "sector": "食品",
-          "price": 1641.5,
-          "change_pct": 0.55,
-          "return_5d_pct": 5.29,
-          "volume": 7263200,
-          "volume_ratio_20d": 1.14,
-          "trading_value_proxy_yen": 11922542800,
-          "market_date": "2026-10-16",
+          "price": 1657.5,
+          "change_pct": 0.97,
+          "return_5d_pct": 4.91,
+          "volume": 5195100,
+          "volume_ratio_20d": 0.8,
+          "trading_value_proxy_yen": 8610878250,
+          "market_date": "2026-10-19",
+          "status": "取得成功"
+        },
+        {
+          "ticker": "2802.T",
+          "name": "味の素",
+          "sector": "食品",
+          "price": 5263.0,
+          "change_pct": -0.32,
+          "return_5d_pct": -2.52,
+          "volume": 2351400,
+          "volume_ratio_20d": 0.78,
+          "trading_value_proxy_yen": 12375418200,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         }
       ]
@@ -271,26 +271,26 @@
           "ticker": "1605.T",
           "name": "INPEX",
           "sector": "エネルギー資源",
-          "price": 3670.0,
-          "change_pct": 0.85,
-          "return_5d_pct": 1.24,
-          "volume": 3292500,
-          "volume_ratio_20d": 0.65,
-          "trading_value_proxy_yen": 12083475000,
-          "market_date": "2026-10-16",
+          "price": 3806.0,
+          "change_pct": 3.71,
+          "return_5d_pct": 4.56,
+          "volume": 5256300,
+          "volume_ratio_20d": 1.06,
+          "trading_value_proxy_yen": 20005477800,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         },
         {
           "ticker": "5020.T",
           "name": "ENEOS HD",
           "sector": "エネルギー資源",
-          "price": 1387.0,
-          "change_pct": 0.8,
-          "return_5d_pct": 2.25,
-          "volume": 9918000,
-          "volume_ratio_20d": 0.96,
-          "trading_value_proxy_yen": 13756266000,
-          "market_date": "2026-10-16",
+          "price": 1418.0,
+          "change_pct": 2.24,
+          "return_5d_pct": 3.92,
+          "volume": 8215800,
+          "volume_ratio_20d": 0.79,
+          "trading_value_proxy_yen": 11650004400,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         }
       ]
@@ -302,26 +302,26 @@
           "ticker": "1801.T",
           "name": "大成建設",
           "sector": "建設・資材",
-          "price": 11290.0,
-          "change_pct": 2.54,
-          "return_5d_pct": -4.12,
-          "volume": 897800,
-          "volume_ratio_20d": 1.1,
-          "trading_value_proxy_yen": 10136162000,
-          "market_date": "2026-10-16",
+          "price": 11475.0,
+          "change_pct": 1.64,
+          "return_5d_pct": -2.34,
+          "volume": 628700,
+          "volume_ratio_20d": 0.81,
+          "trading_value_proxy_yen": 7214332500,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         },
         {
           "ticker": "1925.T",
           "name": "大和ハウス工業",
           "sector": "建設・資材",
-          "price": 2220.0,
-          "change_pct": 0.77,
-          "return_5d_pct": 2.49,
-          "volume": 4431300,
-          "volume_ratio_20d": 0.97,
-          "trading_value_proxy_yen": 9837486000,
-          "market_date": "2026-10-16",
+          "price": 2253.0,
+          "change_pct": 1.49,
+          "return_5d_pct": 4.4,
+          "volume": 4315900,
+          "volume_ratio_20d": 0.92,
+          "trading_value_proxy_yen": 9723722700,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         }
       ]
@@ -333,26 +333,26 @@
           "ticker": "4188.T",
           "name": "三菱ケミカルグループ",
           "sector": "素材・化学",
-          "price": 1162.0,
-          "change_pct": 1.97,
-          "return_5d_pct": 0.48,
-          "volume": 11169700,
-          "volume_ratio_20d": 1.64,
-          "trading_value_proxy_yen": 12979191400,
-          "market_date": "2026-10-16",
+          "price": 1163.0,
+          "change_pct": 0.09,
+          "return_5d_pct": 1.75,
+          "volume": 6735900,
+          "volume_ratio_20d": 0.94,
+          "trading_value_proxy_yen": 7833851700,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         },
         {
           "ticker": "4063.T",
           "name": "信越化学工業",
           "sector": "素材・化学",
-          "price": 5978.0,
-          "change_pct": 0.25,
-          "return_5d_pct": -2.34,
-          "volume": 5814800,
-          "volume_ratio_20d": 0.9,
-          "trading_value_proxy_yen": 34760874400,
-          "market_date": "2026-10-16",
+          "price": 5966.0,
+          "change_pct": -0.2,
+          "return_5d_pct": -1.96,
+          "volume": 4393700,
+          "volume_ratio_20d": 0.68,
+          "trading_value_proxy_yen": 26212814200,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         }
       ]
@@ -364,26 +364,26 @@
           "ticker": "4568.T",
           "name": "第一三共",
           "sector": "医薬品",
-          "price": 2740.5,
-          "change_pct": 3.38,
-          "return_5d_pct": 3.28,
-          "volume": 9934300,
-          "volume_ratio_20d": 1.5,
-          "trading_value_proxy_yen": 27224949150,
-          "market_date": "2026-10-16",
+          "price": 2759.5,
+          "change_pct": 0.69,
+          "return_5d_pct": 5.2,
+          "volume": 6178100,
+          "volume_ratio_20d": 0.9,
+          "trading_value_proxy_yen": 17048466950,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         },
         {
           "ticker": "4502.T",
           "name": "武田薬品工業",
           "sector": "医薬品",
-          "price": 6223.0,
-          "change_pct": 0.65,
-          "return_5d_pct": 7.0,
-          "volume": 4816000,
-          "volume_ratio_20d": 1.05,
-          "trading_value_proxy_yen": 29969968000,
-          "market_date": "2026-10-16",
+          "price": 6244.0,
+          "change_pct": 0.34,
+          "return_5d_pct": 6.86,
+          "volume": 3572600,
+          "volume_ratio_20d": 0.76,
+          "trading_value_proxy_yen": 22307314400,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         }
       ]
@@ -392,29 +392,29 @@
       "sector": "自動車・輸送機",
       "stocks": [
         {
-          "ticker": "7203.T",
-          "name": "トヨタ自動車",
-          "sector": "自動車・輸送機",
-          "price": 3094.0,
-          "change_pct": 2.15,
-          "return_5d_pct": 6.62,
-          "volume": 25007500,
-          "volume_ratio_20d": 0.98,
-          "trading_value_proxy_yen": 77373205000,
-          "market_date": "2026-10-16",
-          "status": "取得成功"
-        },
-        {
           "ticker": "7267.T",
           "name": "本田技研工業",
           "sector": "自動車・輸送機",
-          "price": 1797.5,
-          "change_pct": 1.21,
-          "return_5d_pct": 4.96,
-          "volume": 19084500,
-          "volume_ratio_20d": 1.29,
-          "trading_value_proxy_yen": 34304388750,
-          "market_date": "2026-10-16",
+          "price": 1807.5,
+          "change_pct": 0.56,
+          "return_5d_pct": 4.69,
+          "volume": 11029300,
+          "volume_ratio_20d": 0.72,
+          "trading_value_proxy_yen": 19935459750,
+          "market_date": "2026-10-19",
+          "status": "取得成功"
+        },
+        {
+          "ticker": "7203.T",
+          "name": "トヨタ自動車",
+          "sector": "自動車・輸送機",
+          "price": 3102.0,
+          "change_pct": 0.26,
+          "return_5d_pct": 6.58,
+          "volume": 19008500,
+          "volume_ratio_20d": 0.74,
+          "trading_value_proxy_yen": 58964367000,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         }
       ]
@@ -423,29 +423,29 @@
       "sector": "鉄鋼・非鉄",
       "stocks": [
         {
-          "ticker": "5713.T",
-          "name": "住友金属鉱山",
-          "sector": "鉄鋼・非鉄",
-          "price": 8783.0,
-          "change_pct": 2.03,
-          "return_5d_pct": -5.18,
-          "volume": 2384800,
-          "volume_ratio_20d": 1.02,
-          "trading_value_proxy_yen": 20945698400,
-          "market_date": "2026-10-16",
-          "status": "取得成功"
-        },
-        {
           "ticker": "5401.T",
           "name": "日本製鉄",
           "sector": "鉄鋼・非鉄",
-          "price": 643.5,
-          "change_pct": 0.39,
-          "return_5d_pct": 1.93,
-          "volume": 21892300,
-          "volume_ratio_20d": 0.75,
-          "trading_value_proxy_yen": 14087695050,
-          "market_date": "2026-10-16",
+          "price": 650.9,
+          "change_pct": 1.15,
+          "return_5d_pct": 3.42,
+          "volume": 18947800,
+          "volume_ratio_20d": 0.65,
+          "trading_value_proxy_yen": 12333123483,
+          "market_date": "2026-10-19",
+          "status": "取得成功"
+        },
+        {
+          "ticker": "5713.T",
+          "name": "住友金属鉱山",
+          "sector": "鉄鋼・非鉄",
+          "price": 8759.0,
+          "change_pct": -0.27,
+          "return_5d_pct": -6.88,
+          "volume": 1375600,
+          "volume_ratio_20d": 0.58,
+          "trading_value_proxy_yen": 12048880400,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         }
       ]
@@ -454,29 +454,29 @@
       "sector": "機械",
       "stocks": [
         {
-          "ticker": "7011.T",
-          "name": "三菱重工業",
-          "sector": "機械",
-          "price": 3796.0,
-          "change_pct": 5.42,
-          "return_5d_pct": 3.15,
-          "volume": 20407400,
-          "volume_ratio_20d": 1.25,
-          "trading_value_proxy_yen": 77466490400,
-          "market_date": "2026-10-16",
-          "status": "取得成功"
-        },
-        {
           "ticker": "6301.T",
           "name": "小松製作所",
           "sector": "機械",
-          "price": 7200.0,
-          "change_pct": 1.67,
-          "return_5d_pct": -2.66,
-          "volume": 3350800,
-          "volume_ratio_20d": 0.96,
-          "trading_value_proxy_yen": 24125760000,
-          "market_date": "2026-10-16",
+          "price": 7256.0,
+          "change_pct": 0.78,
+          "return_5d_pct": -0.58,
+          "volume": 2814000,
+          "volume_ratio_20d": 0.79,
+          "trading_value_proxy_yen": 20418384000,
+          "market_date": "2026-10-19",
+          "status": "取得成功"
+        },
+        {
+          "ticker": "7011.T",
+          "name": "三菱重工業",
+          "sector": "機械",
+          "price": 3781.0,
+          "change_pct": -0.4,
+          "return_5d_pct": 3.05,
+          "volume": 13428100,
+          "volume_ratio_20d": 0.79,
+          "trading_value_proxy_yen": 50771646100,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         }
       ]
@@ -488,26 +488,26 @@
           "ticker": "6501.T",
           "name": "日立製作所",
           "sector": "電機・精密",
-          "price": 5770.0,
-          "change_pct": 3.13,
-          "return_5d_pct": 3.09,
-          "volume": 11872200,
-          "volume_ratio_20d": 1.11,
-          "trading_value_proxy_yen": 68502594000,
-          "market_date": "2026-10-16",
+          "price": 5773.0,
+          "change_pct": 0.05,
+          "return_5d_pct": 1.83,
+          "volume": 11423000,
+          "volume_ratio_20d": 1.05,
+          "trading_value_proxy_yen": 65944979000,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         },
         {
           "ticker": "6758.T",
           "name": "ソニーグループ",
           "sector": "電機・精密",
-          "price": 3959.0,
-          "change_pct": 1.93,
-          "return_5d_pct": 6.83,
-          "volume": 18570000,
-          "volume_ratio_20d": 1.38,
-          "trading_value_proxy_yen": 73518630000,
-          "market_date": "2026-10-16",
+          "price": 3960.0,
+          "change_pct": 0.03,
+          "return_5d_pct": 3.83,
+          "volume": 14658300,
+          "volume_ratio_20d": 1.08,
+          "trading_value_proxy_yen": 58046868000,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         }
       ]
@@ -516,29 +516,29 @@
       "sector": "情報通信・サービス",
       "stocks": [
         {
-          "ticker": "9984.T",
-          "name": "ソフトバンクグループ",
-          "sector": "情報通信・サービス",
-          "price": 4944.0,
-          "change_pct": 1.9,
-          "return_5d_pct": -18.15,
-          "volume": 43833700,
-          "volume_ratio_20d": 0.71,
-          "trading_value_proxy_yen": 216713812800,
-          "market_date": "2026-10-16",
-          "status": "取得成功"
-        },
-        {
           "ticker": "9432.T",
           "name": "NTT",
           "sector": "情報通信・サービス",
-          "price": 174.5,
-          "change_pct": 0.69,
-          "return_5d_pct": 1.39,
-          "volume": 152343000,
-          "volume_ratio_20d": 0.81,
-          "trading_value_proxy_yen": 26583853500,
-          "market_date": "2026-10-16",
+          "price": 175.1,
+          "change_pct": 0.34,
+          "return_5d_pct": 1.27,
+          "volume": 156930800,
+          "volume_ratio_20d": 0.85,
+          "trading_value_proxy_yen": 27478584038,
+          "market_date": "2026-10-19",
+          "status": "取得成功"
+        },
+        {
+          "ticker": "9984.T",
+          "name": "ソフトバンクグループ",
+          "sector": "情報通信・サービス",
+          "price": 4845.0,
+          "change_pct": -2.0,
+          "return_5d_pct": -16.51,
+          "volume": 56034400,
+          "volume_ratio_20d": 0.93,
+          "trading_value_proxy_yen": 271486668000,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         }
       ]
@@ -550,26 +550,26 @@
           "ticker": "9501.T",
           "name": "東京電力HD",
           "sector": "電力・ガス",
-          "price": 500.5,
-          "change_pct": 0.5,
-          "return_5d_pct": -2.74,
-          "volume": 31762700,
-          "volume_ratio_20d": 0.95,
-          "trading_value_proxy_yen": 15897231350,
-          "market_date": "2026-10-16",
+          "price": 510.3,
+          "change_pct": 1.96,
+          "return_5d_pct": -2.02,
+          "volume": 27956800,
+          "volume_ratio_20d": 0.84,
+          "trading_value_proxy_yen": 14266354699,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         },
         {
           "ticker": "9503.T",
           "name": "関西電力",
           "sector": "電力・ガス",
-          "price": 2658.5,
-          "change_pct": -0.95,
-          "return_5d_pct": 0.53,
-          "volume": 2856300,
-          "volume_ratio_20d": 0.65,
-          "trading_value_proxy_yen": 7593473550,
-          "market_date": "2026-10-16",
+          "price": 2690.0,
+          "change_pct": 1.18,
+          "return_5d_pct": 1.51,
+          "volume": 2765300,
+          "volume_ratio_20d": 0.64,
+          "trading_value_proxy_yen": 7438657000,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         }
       ]
@@ -581,26 +581,26 @@
           "ticker": "9020.T",
           "name": "JR東日本",
           "sector": "運輸・物流",
-          "price": 3470.0,
-          "change_pct": 1.37,
-          "return_5d_pct": 3.58,
-          "volume": 2596900,
-          "volume_ratio_20d": 0.91,
-          "trading_value_proxy_yen": 9011243000,
-          "market_date": "2026-10-16",
+          "price": 3527.0,
+          "change_pct": 1.64,
+          "return_5d_pct": 4.47,
+          "volume": 2176600,
+          "volume_ratio_20d": 0.76,
+          "trading_value_proxy_yen": 7676868200,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         },
         {
           "ticker": "9101.T",
           "name": "日本郵船",
           "sector": "運輸・物流",
-          "price": 7259.0,
-          "change_pct": -0.45,
-          "return_5d_pct": 0.46,
-          "volume": 2356600,
-          "volume_ratio_20d": 0.93,
-          "trading_value_proxy_yen": 17106559400,
-          "market_date": "2026-10-16",
+          "price": 7361.0,
+          "change_pct": 1.41,
+          "return_5d_pct": 0.04,
+          "volume": 2031000,
+          "volume_ratio_20d": 0.8,
+          "trading_value_proxy_yen": 14950191000,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         }
       ]
@@ -612,26 +612,26 @@
           "ticker": "8001.T",
           "name": "伊藤忠商事",
           "sector": "商社・卸売",
-          "price": 2284.0,
-          "change_pct": 2.84,
-          "return_5d_pct": 6.8,
-          "volume": 20179800,
-          "volume_ratio_20d": 1.15,
-          "trading_value_proxy_yen": 46090663200,
-          "market_date": "2026-10-16",
+          "price": 2320.0,
+          "change_pct": 1.58,
+          "return_5d_pct": 7.66,
+          "volume": 15946400,
+          "volume_ratio_20d": 0.91,
+          "trading_value_proxy_yen": 36995648000,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         },
         {
           "ticker": "8058.T",
           "name": "三菱商事",
           "sector": "商社・卸売",
-          "price": 4726.0,
-          "change_pct": 1.11,
-          "return_5d_pct": 2.96,
-          "volume": 7650800,
-          "volume_ratio_20d": 1.01,
-          "trading_value_proxy_yen": 36157680800,
-          "market_date": "2026-10-16",
+          "price": 4761.0,
+          "change_pct": 0.74,
+          "return_5d_pct": 3.59,
+          "volume": 5559500,
+          "volume_ratio_20d": 0.73,
+          "trading_value_proxy_yen": 26468779500,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         }
       ]
@@ -643,26 +643,26 @@
           "ticker": "8267.T",
           "name": "イオン",
           "sector": "小売",
-          "price": 1119.5,
-          "change_pct": -0.62,
-          "return_5d_pct": -6.82,
-          "volume": 14756800,
-          "volume_ratio_20d": 1.06,
-          "trading_value_proxy_yen": 16520237600,
-          "market_date": "2026-10-16",
+          "price": 1156.5,
+          "change_pct": 3.31,
+          "return_5d_pct": -4.5,
+          "volume": 14702000,
+          "volume_ratio_20d": 1.04,
+          "trading_value_proxy_yen": 17002863000,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         },
         {
           "ticker": "9983.T",
           "name": "ファーストリテイリング",
           "sector": "小売",
-          "price": 75580.0,
-          "change_pct": -1.07,
-          "return_5d_pct": 1.04,
-          "volume": 1219700,
-          "volume_ratio_20d": 1.03,
-          "trading_value_proxy_yen": 92184926000,
-          "market_date": "2026-10-16",
+          "price": 73850.0,
+          "change_pct": -2.29,
+          "return_5d_pct": 2.88,
+          "volume": 1049900,
+          "volume_ratio_20d": 0.87,
+          "trading_value_proxy_yen": 77535115000,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         }
       ]
@@ -674,26 +674,26 @@
           "ticker": "8306.T",
           "name": "三菱UFJ FG",
           "sector": "銀行",
-          "price": 3475.0,
-          "change_pct": 1.82,
-          "return_5d_pct": -0.83,
-          "volume": 28193000,
-          "volume_ratio_20d": 0.71,
-          "trading_value_proxy_yen": 97970675000,
-          "market_date": "2026-10-16",
+          "price": 3478.0,
+          "change_pct": 0.09,
+          "return_5d_pct": 0.46,
+          "volume": 23862700,
+          "volume_ratio_20d": 0.61,
+          "trading_value_proxy_yen": 82994470600,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         },
         {
           "ticker": "8316.T",
           "name": "三井住友FG",
           "sector": "銀行",
-          "price": 3276.0,
-          "change_pct": 1.68,
-          "return_5d_pct": -0.64,
-          "volume": 18002200,
-          "volume_ratio_20d": 0.76,
-          "trading_value_proxy_yen": 58975207200,
-          "market_date": "2026-10-16",
+          "price": 3274.0,
+          "change_pct": -0.06,
+          "return_5d_pct": 0.55,
+          "volume": 15636100,
+          "volume_ratio_20d": 0.67,
+          "trading_value_proxy_yen": 51192591400,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         }
       ]
@@ -702,29 +702,29 @@
       "sector": "金融（銀行除く）",
       "stocks": [
         {
-          "ticker": "8766.T",
-          "name": "東京海上HD",
-          "sector": "金融（銀行除く）",
-          "price": 558.3,
-          "change_pct": 2.89,
-          "return_5d_pct": 7.76,
-          "volume": 94117600,
-          "volume_ratio_20d": 0.91,
-          "trading_value_proxy_yen": 52545854931,
-          "market_date": "2026-10-16",
-          "status": "取得成功"
-        },
-        {
           "ticker": "8591.T",
           "name": "オリックス",
           "sector": "金融（銀行除く）",
-          "price": 5856.0,
-          "change_pct": 2.36,
-          "return_5d_pct": 1.83,
-          "volume": 4034300,
-          "volume_ratio_20d": 1.07,
-          "trading_value_proxy_yen": 23624860800,
-          "market_date": "2026-10-16",
+          "price": 5851.0,
+          "change_pct": -0.09,
+          "return_5d_pct": 1.4,
+          "volume": 2869700,
+          "volume_ratio_20d": 0.74,
+          "trading_value_proxy_yen": 16790614700,
+          "market_date": "2026-10-19",
+          "status": "取得成功"
+        },
+        {
+          "ticker": "8766.T",
+          "name": "東京海上HD",
+          "sector": "金融（銀行除く）",
+          "price": 554.9,
+          "change_pct": -0.61,
+          "return_5d_pct": 5.55,
+          "volume": 74564100,
+          "volume_ratio_20d": 0.73,
+          "trading_value_proxy_yen": 41375620910,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         }
       ]
@@ -733,29 +733,29 @@
       "sector": "不動産",
       "stocks": [
         {
-          "ticker": "8802.T",
-          "name": "三菱地所",
-          "sector": "不動産",
-          "price": 3670.0,
-          "change_pct": 2.77,
-          "return_5d_pct": 6.62,
-          "volume": 5640300,
-          "volume_ratio_20d": 1.47,
-          "trading_value_proxy_yen": 20699901000,
-          "market_date": "2026-10-16",
-          "status": "取得成功"
-        },
-        {
           "ticker": "8801.T",
           "name": "三井不動産",
           "sector": "不動産",
-          "price": 1501.5,
-          "change_pct": 2.18,
-          "return_5d_pct": 5.37,
-          "volume": 11289600,
-          "volume_ratio_20d": 1.11,
-          "trading_value_proxy_yen": 16951334400,
-          "market_date": "2026-10-16",
+          "price": 1525.5,
+          "change_pct": 1.6,
+          "return_5d_pct": 5.75,
+          "volume": 11942800,
+          "volume_ratio_20d": 1.15,
+          "trading_value_proxy_yen": 18218741400,
+          "market_date": "2026-10-19",
+          "status": "取得成功"
+        },
+        {
+          "ticker": "8802.T",
+          "name": "三菱地所",
+          "sector": "不動産",
+          "price": 3722.0,
+          "change_pct": 1.42,
+          "return_5d_pct": 7.42,
+          "volume": 6113000,
+          "volume_ratio_20d": 1.52,
+          "trading_value_proxy_yen": 22752586000,
+          "market_date": "2026-10-19",
           "status": "取得成功"
         }
       ]
@@ -766,300 +766,300 @@
       "ticker": "9984.T",
       "name": "ソフトバンクグループ",
       "sector": "情報通信・サービス",
-      "price": 4944.0,
-      "change_pct": 1.9,
-      "return_5d_pct": -18.15,
-      "volume": 43833700,
-      "volume_ratio_20d": 0.71,
-      "trading_value_proxy_yen": 216713812800,
-      "market_date": "2026-10-16",
+      "price": 4845.0,
+      "change_pct": -2.0,
+      "return_5d_pct": -16.51,
+      "volume": 56034400,
+      "volume_ratio_20d": 0.93,
+      "trading_value_proxy_yen": 271486668000,
+      "market_date": "2026-10-19",
       "status": "取得成功"
     },
     {
       "ticker": "8306.T",
       "name": "三菱UFJ FG",
       "sector": "銀行",
-      "price": 3475.0,
-      "change_pct": 1.82,
-      "return_5d_pct": -0.83,
-      "volume": 28193000,
-      "volume_ratio_20d": 0.71,
-      "trading_value_proxy_yen": 97970675000,
-      "market_date": "2026-10-16",
+      "price": 3478.0,
+      "change_pct": 0.09,
+      "return_5d_pct": 0.46,
+      "volume": 23862700,
+      "volume_ratio_20d": 0.61,
+      "trading_value_proxy_yen": 82994470600,
+      "market_date": "2026-10-19",
       "status": "取得成功"
     },
     {
       "ticker": "9983.T",
       "name": "ファーストリテイリング",
       "sector": "小売",
-      "price": 75580.0,
-      "change_pct": -1.07,
-      "return_5d_pct": 1.04,
-      "volume": 1219700,
-      "volume_ratio_20d": 1.03,
-      "trading_value_proxy_yen": 92184926000,
-      "market_date": "2026-10-16",
+      "price": 73850.0,
+      "change_pct": -2.29,
+      "return_5d_pct": 2.88,
+      "volume": 1049900,
+      "volume_ratio_20d": 0.87,
+      "trading_value_proxy_yen": 77535115000,
+      "market_date": "2026-10-19",
       "status": "取得成功"
     },
     {
-      "ticker": "7011.T",
-      "name": "三菱重工業",
-      "sector": "機械",
-      "price": 3796.0,
-      "change_pct": 5.42,
-      "return_5d_pct": 3.15,
-      "volume": 20407400,
-      "volume_ratio_20d": 1.25,
-      "trading_value_proxy_yen": 77466490400,
-      "market_date": "2026-10-16",
+      "ticker": "6501.T",
+      "name": "日立製作所",
+      "sector": "電機・精密",
+      "price": 5773.0,
+      "change_pct": 0.05,
+      "return_5d_pct": 1.83,
+      "volume": 11423000,
+      "volume_ratio_20d": 1.05,
+      "trading_value_proxy_yen": 65944979000,
+      "market_date": "2026-10-19",
       "status": "取得成功"
     },
     {
       "ticker": "7203.T",
       "name": "トヨタ自動車",
       "sector": "自動車・輸送機",
-      "price": 3094.0,
-      "change_pct": 2.15,
-      "return_5d_pct": 6.62,
-      "volume": 25007500,
-      "volume_ratio_20d": 0.98,
-      "trading_value_proxy_yen": 77373205000,
-      "market_date": "2026-10-16",
+      "price": 3102.0,
+      "change_pct": 0.26,
+      "return_5d_pct": 6.58,
+      "volume": 19008500,
+      "volume_ratio_20d": 0.74,
+      "trading_value_proxy_yen": 58964367000,
+      "market_date": "2026-10-19",
       "status": "取得成功"
     },
     {
       "ticker": "6758.T",
       "name": "ソニーグループ",
       "sector": "電機・精密",
-      "price": 3959.0,
-      "change_pct": 1.93,
-      "return_5d_pct": 6.83,
-      "volume": 18570000,
-      "volume_ratio_20d": 1.38,
-      "trading_value_proxy_yen": 73518630000,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "6501.T",
-      "name": "日立製作所",
-      "sector": "電機・精密",
-      "price": 5770.0,
-      "change_pct": 3.13,
-      "return_5d_pct": 3.09,
-      "volume": 11872200,
-      "volume_ratio_20d": 1.11,
-      "trading_value_proxy_yen": 68502594000,
-      "market_date": "2026-10-16",
+      "price": 3960.0,
+      "change_pct": 0.03,
+      "return_5d_pct": 3.83,
+      "volume": 14658300,
+      "volume_ratio_20d": 1.08,
+      "trading_value_proxy_yen": 58046868000,
+      "market_date": "2026-10-19",
       "status": "取得成功"
     },
     {
       "ticker": "8316.T",
       "name": "三井住友FG",
       "sector": "銀行",
-      "price": 3276.0,
-      "change_pct": 1.68,
-      "return_5d_pct": -0.64,
-      "volume": 18002200,
-      "volume_ratio_20d": 0.76,
-      "trading_value_proxy_yen": 58975207200,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "8766.T",
-      "name": "東京海上HD",
-      "sector": "金融（銀行除く）",
-      "price": 558.3,
-      "change_pct": 2.89,
-      "return_5d_pct": 7.76,
-      "volume": 94117600,
-      "volume_ratio_20d": 0.91,
-      "trading_value_proxy_yen": 52545854931,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "8001.T",
-      "name": "伊藤忠商事",
-      "sector": "商社・卸売",
-      "price": 2284.0,
-      "change_pct": 2.84,
-      "return_5d_pct": 6.8,
-      "volume": 20179800,
-      "volume_ratio_20d": 1.15,
-      "trading_value_proxy_yen": 46090663200,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    }
-  ],
-  "volume_surge_ranking": [
-    {
-      "ticker": "4188.T",
-      "name": "三菱ケミカルグループ",
-      "sector": "素材・化学",
-      "price": 1162.0,
-      "change_pct": 1.97,
-      "return_5d_pct": 0.48,
-      "volume": 11169700,
-      "volume_ratio_20d": 1.64,
-      "trading_value_proxy_yen": 12979191400,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "4568.T",
-      "name": "第一三共",
-      "sector": "医薬品",
-      "price": 2740.5,
-      "change_pct": 3.38,
-      "return_5d_pct": 3.28,
-      "volume": 9934300,
-      "volume_ratio_20d": 1.5,
-      "trading_value_proxy_yen": 27224949150,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "8802.T",
-      "name": "三菱地所",
-      "sector": "不動産",
-      "price": 3670.0,
-      "change_pct": 2.77,
-      "return_5d_pct": 6.62,
-      "volume": 5640300,
-      "volume_ratio_20d": 1.47,
-      "trading_value_proxy_yen": 20699901000,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "6758.T",
-      "name": "ソニーグループ",
-      "sector": "電機・精密",
-      "price": 3959.0,
-      "change_pct": 1.93,
-      "return_5d_pct": 6.83,
-      "volume": 18570000,
-      "volume_ratio_20d": 1.38,
-      "trading_value_proxy_yen": 73518630000,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "7267.T",
-      "name": "本田技研工業",
-      "sector": "自動車・輸送機",
-      "price": 1797.5,
-      "change_pct": 1.21,
-      "return_5d_pct": 4.96,
-      "volume": 19084500,
-      "volume_ratio_20d": 1.29,
-      "trading_value_proxy_yen": 34304388750,
-      "market_date": "2026-10-16",
+      "price": 3274.0,
+      "change_pct": -0.06,
+      "return_5d_pct": 0.55,
+      "volume": 15636100,
+      "volume_ratio_20d": 0.67,
+      "trading_value_proxy_yen": 51192591400,
+      "market_date": "2026-10-19",
       "status": "取得成功"
     },
     {
       "ticker": "7011.T",
       "name": "三菱重工業",
       "sector": "機械",
-      "price": 3796.0,
-      "change_pct": 5.42,
-      "return_5d_pct": 3.15,
-      "volume": 20407400,
-      "volume_ratio_20d": 1.25,
-      "trading_value_proxy_yen": 77466490400,
-      "market_date": "2026-10-16",
+      "price": 3781.0,
+      "change_pct": -0.4,
+      "return_5d_pct": 3.05,
+      "volume": 13428100,
+      "volume_ratio_20d": 0.79,
+      "trading_value_proxy_yen": 50771646100,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "8766.T",
+      "name": "東京海上HD",
+      "sector": "金融（銀行除く）",
+      "price": 554.9,
+      "change_pct": -0.61,
+      "return_5d_pct": 5.55,
+      "volume": 74564100,
+      "volume_ratio_20d": 0.73,
+      "trading_value_proxy_yen": 41375620910,
+      "market_date": "2026-10-19",
       "status": "取得成功"
     },
     {
       "ticker": "8001.T",
       "name": "伊藤忠商事",
       "sector": "商社・卸売",
-      "price": 2284.0,
-      "change_pct": 2.84,
-      "return_5d_pct": 6.8,
-      "volume": 20179800,
-      "volume_ratio_20d": 1.15,
-      "trading_value_proxy_yen": 46090663200,
-      "market_date": "2026-10-16",
+      "price": 2320.0,
+      "change_pct": 1.58,
+      "return_5d_pct": 7.66,
+      "volume": 15946400,
+      "volume_ratio_20d": 0.91,
+      "trading_value_proxy_yen": 36995648000,
+      "market_date": "2026-10-19",
       "status": "取得成功"
-    },
+    }
+  ],
+  "volume_surge_ranking": [
     {
-      "ticker": "2502.T",
-      "name": "アサヒグループHD",
-      "sector": "食品",
-      "price": 1641.5,
-      "change_pct": 0.55,
-      "return_5d_pct": 5.29,
-      "volume": 7263200,
-      "volume_ratio_20d": 1.14,
-      "trading_value_proxy_yen": 11922542800,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "6501.T",
-      "name": "日立製作所",
-      "sector": "電機・精密",
-      "price": 5770.0,
-      "change_pct": 3.13,
-      "return_5d_pct": 3.09,
-      "volume": 11872200,
-      "volume_ratio_20d": 1.11,
-      "trading_value_proxy_yen": 68502594000,
-      "market_date": "2026-10-16",
+      "ticker": "8802.T",
+      "name": "三菱地所",
+      "sector": "不動産",
+      "price": 3722.0,
+      "change_pct": 1.42,
+      "return_5d_pct": 7.42,
+      "volume": 6113000,
+      "volume_ratio_20d": 1.52,
+      "trading_value_proxy_yen": 22752586000,
+      "market_date": "2026-10-19",
       "status": "取得成功"
     },
     {
       "ticker": "8801.T",
       "name": "三井不動産",
       "sector": "不動産",
-      "price": 1501.5,
-      "change_pct": 2.18,
-      "return_5d_pct": 5.37,
-      "volume": 11289600,
-      "volume_ratio_20d": 1.11,
-      "trading_value_proxy_yen": 16951334400,
-      "market_date": "2026-10-16",
+      "price": 1525.5,
+      "change_pct": 1.6,
+      "return_5d_pct": 5.75,
+      "volume": 11942800,
+      "volume_ratio_20d": 1.15,
+      "trading_value_proxy_yen": 18218741400,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "6758.T",
+      "name": "ソニーグループ",
+      "sector": "電機・精密",
+      "price": 3960.0,
+      "change_pct": 0.03,
+      "return_5d_pct": 3.83,
+      "volume": 14658300,
+      "volume_ratio_20d": 1.08,
+      "trading_value_proxy_yen": 58046868000,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "1605.T",
+      "name": "INPEX",
+      "sector": "エネルギー資源",
+      "price": 3806.0,
+      "change_pct": 3.71,
+      "return_5d_pct": 4.56,
+      "volume": 5256300,
+      "volume_ratio_20d": 1.06,
+      "trading_value_proxy_yen": 20005477800,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "6501.T",
+      "name": "日立製作所",
+      "sector": "電機・精密",
+      "price": 5773.0,
+      "change_pct": 0.05,
+      "return_5d_pct": 1.83,
+      "volume": 11423000,
+      "volume_ratio_20d": 1.05,
+      "trading_value_proxy_yen": 65944979000,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "8267.T",
+      "name": "イオン",
+      "sector": "小売",
+      "price": 1156.5,
+      "change_pct": 3.31,
+      "return_5d_pct": -4.5,
+      "volume": 14702000,
+      "volume_ratio_20d": 1.04,
+      "trading_value_proxy_yen": 17002863000,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "4188.T",
+      "name": "三菱ケミカルグループ",
+      "sector": "素材・化学",
+      "price": 1163.0,
+      "change_pct": 0.09,
+      "return_5d_pct": 1.75,
+      "volume": 6735900,
+      "volume_ratio_20d": 0.94,
+      "trading_value_proxy_yen": 7833851700,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "9984.T",
+      "name": "ソフトバンクグループ",
+      "sector": "情報通信・サービス",
+      "price": 4845.0,
+      "change_pct": -2.0,
+      "return_5d_pct": -16.51,
+      "volume": 56034400,
+      "volume_ratio_20d": 0.93,
+      "trading_value_proxy_yen": 271486668000,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "1925.T",
+      "name": "大和ハウス工業",
+      "sector": "建設・資材",
+      "price": 2253.0,
+      "change_pct": 1.49,
+      "return_5d_pct": 4.4,
+      "volume": 4315900,
+      "volume_ratio_20d": 0.92,
+      "trading_value_proxy_yen": 9723722700,
+      "market_date": "2026-10-19",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "8001.T",
+      "name": "伊藤忠商事",
+      "sector": "商社・卸売",
+      "price": 2320.0,
+      "change_pct": 1.58,
+      "return_5d_pct": 7.66,
+      "volume": 15946400,
+      "volume_ratio_20d": 0.91,
+      "trading_value_proxy_yen": 36995648000,
+      "market_date": "2026-10-19",
       "status": "取得成功"
     }
   ],
   "market_internals": {
-    "nikkei_proxy_change_pct": 1.19,
-    "topix_proxy_change_pct": 1.76,
+    "nikkei_proxy_change_pct": -0.66,
+    "topix_proxy_change_pct": -0.3,
     "relative": "TOPIX優位"
   },
   "scenario_review": {
-    "market_date": "2026-10-16",
+    "market_date": "2026-10-19",
     "title": "昨日のシナリオ検証 → 今日への修正",
     "basis": "前回レポートの注目業種をTOPIX-17業種ETFの実績と照合し、次の取引日へ見方を修正",
-    "status": "寄り付き前・検証保留",
+    "status": "検証可能",
     "checks": [
       {
         "sector": "銀行",
-        "result": "本日大引け後に確認"
+        "result": "中位"
       },
       {
         "sector": "不動産",
-        "result": "本日大引け後に確認"
+        "result": "上位3"
       },
       {
         "sector": "食品",
-        "result": "本日大引け後に確認"
+        "result": "中位"
       }
     ],
     "previous_condition": "16日米株下落と週末政策の国内初動 / 16日大引け後の3社開示",
-    "condition_result": "本日の条件と日本株現物の反応はまだ発生・確認していません",
-    "market_reaction": "本日の日本株現物は寄り付き前",
-    "unexpected_gap": "新しい取引結果がないため比較しません",
+    "condition_result": "発生条件を自動判定できる一次データがないため、確認できず",
+    "market_reaction": "エネルギー資源 +2.05% / 不動産 +1.17% / 電力・ガス +0.97%",
+    "unexpected_gap": "銀行は中位 / 不動産は上位3 / 食品は中位",
     "gap_reason": "業種ETFの結果だけでは個別ニュースとの因果を分離できないため、理由は断定しません",
-    "revision": "本日の大引け後、実際の条件・市場反応・想定との差を確認して修正",
+    "revision": "注目業種の相対順位を踏まえて強弱判断を更新",
     "today_watch": [
       "16日米株下落と週末政策の国内初動",
       "16日大引け後の3社開示"
     ],
-    "note": "前営業日の値動きを、本日シナリオの結果として採点しません。"
+    "note": "的中・外れを採点するものではありません。前回の見方と実績の差から、今日の監視点を修正します。"
   },
   "data_quality": {
     "sector_total": 17,
@@ -1067,28 +1067,28 @@
     "stock_total": 34,
     "stock_available": 34,
     "date_alignment": {
-      "expected_market_date": "2026-10-16",
+      "expected_market_date": "2026-10-19",
       "report_target_market_date": "2026-10-16",
-      "sector_market_date": "2026-10-16",
-      "stock_market_date": "2026-10-16",
-      "benchmark_market_date": "2026-10-16",
+      "sector_market_date": "2026-10-19",
+      "stock_market_date": "2026-10-19",
+      "benchmark_market_date": "2026-10-19",
       "aligned": true,
       "benchmark_aligned": true
     }
   },
   "market_regime": {
-    "headline": "主要指数がそろって上昇",
-    "headline_reason": "日経平均 +1.19%、TOPIX +1.76%",
+    "headline": "主要指数がそろって下落",
+    "headline_reason": "日経平均 -0.66%、TOPIX -0.30%",
     "scoreboard": [
       {
         "label": "日経平均",
-        "value": 1.19,
+        "value": -0.66,
         "unit": "%",
         "meaning": "プラスなら日経平均型が上昇"
       },
       {
         "label": "TOPIX",
-        "value": 1.76,
+        "value": -0.3,
         "unit": "%",
         "meaning": "市場全体の方向"
       }
@@ -1278,16 +1278,16 @@
     "items": [
       {
         "axis": "外需と内需",
-        "label": "外需優位",
-        "result": "外需優位",
+        "label": "内需優位",
+        "result": "内需優位",
         "status": "estimated",
         "left_label": "外需",
         "right_label": "内需",
-        "left_value": 1.56,
-        "right_value": 1.13,
-        "spread_pt": 0.43,
-        "detail": "外需 +1.56% ／ 内需 +1.13%",
-        "reason": "相対騰落：外需 +1.56%／内需 +1.13%（差 +0.43pt）",
+        "left_value": -0.19,
+        "right_value": 0.41,
+        "spread_pt": -0.6,
+        "detail": "外需 -0.19% ／ 内需 +0.41%",
+        "reason": "相対騰落：外需 -0.19%／内需 +0.41%（差 -0.60pt）",
         "basis": "固定セクターETFの相対騰落"
       }
     ],
@@ -1295,16 +1295,295 @@
   },
   "sector_quality": [
     {
-      "sector": "電機・精密",
-      "change_pct": 2.19,
+      "sector": "エネルギー資源",
+      "change_pct": 2.05,
+      "relative_today_pct": 2.35,
+      "quality": "強い",
+      "attention": true,
+      "volume_confirmation": "出来高：普段の0.94倍",
+      "volume_ratio_20d": 0.94,
+      "persistence": "直近5日：TOPIXより強い",
+      "return_5d_pct": 3.8,
+      "relative_5d_pct": 5.05,
+      "axes": {
+        "momentum": {
+          "label": "TOPIXより2.35pt強い",
+          "value": 2.35,
+          "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
+        },
+        "activity": {
+          "label": "出来高：普段の0.94倍",
+          "value": 0.94,
+          "rule": "業種ETFの出来高を直近20日平均と比較"
+        },
+        "persistence": {
+          "label": "直近5日：TOPIXより強い",
+          "value": 5.05,
+          "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
+        }
+      },
+      "comment": "当日+2.05%（TOPIX比+2.35pt）。出来高：普段の0.94倍。直近5日：TOPIXより強い。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
+    },
+    {
+      "sector": "不動産",
+      "change_pct": 1.17,
+      "relative_today_pct": 1.47,
+      "quality": "強い",
+      "attention": false,
+      "volume_confirmation": "出来高：普段の0.91倍",
+      "volume_ratio_20d": 0.91,
+      "persistence": "直近5日：TOPIXより強い",
+      "return_5d_pct": 5.64,
+      "relative_5d_pct": 6.89,
+      "axes": {
+        "momentum": {
+          "label": "TOPIXより1.47pt強い",
+          "value": 1.47,
+          "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
+        },
+        "activity": {
+          "label": "出来高：普段の0.91倍",
+          "value": 0.91,
+          "rule": "業種ETFの出来高を直近20日平均と比較"
+        },
+        "persistence": {
+          "label": "直近5日：TOPIXより強い",
+          "value": 6.89,
+          "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
+        }
+      },
+      "comment": "当日+1.17%（TOPIX比+1.47pt）。出来高：普段の0.91倍。直近5日：TOPIXより強い。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
+    },
+    {
+      "sector": "電力・ガス",
+      "change_pct": 0.97,
+      "relative_today_pct": 1.27,
+      "quality": "強い",
+      "attention": false,
+      "volume_confirmation": "出来高：普段の0.32倍",
+      "volume_ratio_20d": 0.32,
+      "persistence": "直近5日：TOPIXより強い",
+      "return_5d_pct": 0.8,
+      "relative_5d_pct": 2.05,
+      "axes": {
+        "momentum": {
+          "label": "TOPIXより1.27pt強い",
+          "value": 1.27,
+          "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
+        },
+        "activity": {
+          "label": "出来高：普段の0.32倍",
+          "value": 0.32,
+          "rule": "業種ETFの出来高を直近20日平均と比較"
+        },
+        "persistence": {
+          "label": "直近5日：TOPIXより強い",
+          "value": 2.05,
+          "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
+        }
+      },
+      "comment": "当日+0.97%（TOPIX比+1.27pt）。出来高：普段の0.32倍。直近5日：TOPIXより強い。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
+    },
+    {
+      "sector": "食品",
+      "change_pct": 0.75,
+      "relative_today_pct": 1.05,
+      "quality": "強い",
+      "attention": false,
+      "volume_confirmation": "出来高：普段の0.72倍",
+      "volume_ratio_20d": 0.72,
+      "persistence": "直近5日：TOPIXより強い",
+      "return_5d_pct": 2.46,
+      "relative_5d_pct": 3.71,
+      "axes": {
+        "momentum": {
+          "label": "TOPIXより1.05pt強い",
+          "value": 1.05,
+          "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
+        },
+        "activity": {
+          "label": "出来高：普段の0.72倍",
+          "value": 0.72,
+          "rule": "業種ETFの出来高を直近20日平均と比較"
+        },
+        "persistence": {
+          "label": "直近5日：TOPIXより強い",
+          "value": 3.71,
+          "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
+        }
+      },
+      "comment": "当日+0.75%（TOPIX比+1.05pt）。出来高：普段の0.72倍。直近5日：TOPIXより強い。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
+    },
+    {
+      "sector": "運輸・物流",
+      "change_pct": 0.63,
+      "relative_today_pct": 0.93,
+      "quality": "強い",
+      "attention": false,
+      "volume_confirmation": "出来高：普段の1.98倍",
+      "volume_ratio_20d": 1.98,
+      "persistence": "直近5日：TOPIXより強い",
+      "return_5d_pct": 1.94,
+      "relative_5d_pct": 3.19,
+      "axes": {
+        "momentum": {
+          "label": "TOPIXより0.93pt強い",
+          "value": 0.93,
+          "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
+        },
+        "activity": {
+          "label": "出来高：普段の1.98倍",
+          "value": 1.98,
+          "rule": "業種ETFの出来高を直近20日平均と比較"
+        },
+        "persistence": {
+          "label": "直近5日：TOPIXより強い",
+          "value": 3.19,
+          "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
+        }
+      },
+      "comment": "当日+0.63%（TOPIX比+0.93pt）。出来高：普段の1.98倍。直近5日：TOPIXより強い。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
+    },
+    {
+      "sector": "商社・卸売",
+      "change_pct": 0.5,
+      "relative_today_pct": 0.8,
+      "quality": "強い",
+      "attention": false,
+      "volume_confirmation": "出来高：普段の0.49倍",
+      "volume_ratio_20d": 0.49,
+      "persistence": "直近5日：TOPIXより強い",
+      "return_5d_pct": 4.1,
+      "relative_5d_pct": 5.35,
+      "axes": {
+        "momentum": {
+          "label": "TOPIXより0.80pt強い",
+          "value": 0.8,
+          "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
+        },
+        "activity": {
+          "label": "出来高：普段の0.49倍",
+          "value": 0.49,
+          "rule": "業種ETFの出来高を直近20日平均と比較"
+        },
+        "persistence": {
+          "label": "直近5日：TOPIXより強い",
+          "value": 5.35,
+          "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
+        }
+      },
+      "comment": "当日+0.50%（TOPIX比+0.80pt）。出来高：普段の0.49倍。直近5日：TOPIXより強い。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
+    },
+    {
+      "sector": "建設・資材",
+      "change_pct": 0.44,
+      "relative_today_pct": 0.74,
+      "quality": "強い",
+      "attention": true,
+      "volume_confirmation": "出来高：普段の6.46倍",
+      "volume_ratio_20d": 6.46,
+      "persistence": "直近5日：TOPIXと同程度",
+      "return_5d_pct": -1.58,
+      "relative_5d_pct": -0.33,
+      "axes": {
+        "momentum": {
+          "label": "TOPIXより0.74pt強い",
+          "value": 0.74,
+          "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
+        },
+        "activity": {
+          "label": "出来高：普段の6.46倍",
+          "value": 6.46,
+          "rule": "業種ETFの出来高を直近20日平均と比較"
+        },
+        "persistence": {
+          "label": "直近5日：TOPIXと同程度",
+          "value": -0.33,
+          "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
+        }
+      },
+      "comment": "当日+0.44%（TOPIX比+0.74pt）。出来高：普段の6.46倍。直近5日：TOPIXと同程度。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
+    },
+    {
+      "sector": "金融（銀行除く）",
+      "change_pct": 0.32,
+      "relative_today_pct": 0.62,
+      "quality": "強い",
+      "attention": false,
+      "volume_confirmation": "出来高：普段の0.45倍",
+      "volume_ratio_20d": 0.45,
+      "persistence": "直近5日：TOPIXより強い",
+      "return_5d_pct": 3.2,
+      "relative_5d_pct": 4.45,
+      "axes": {
+        "momentum": {
+          "label": "TOPIXより0.62pt強い",
+          "value": 0.62,
+          "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
+        },
+        "activity": {
+          "label": "出来高：普段の0.45倍",
+          "value": 0.45,
+          "rule": "業種ETFの出来高を直近20日平均と比較"
+        },
+        "persistence": {
+          "label": "直近5日：TOPIXより強い",
+          "value": 4.45,
+          "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
+        }
+      },
+      "comment": "当日+0.32%（TOPIX比+0.62pt）。出来高：普段の0.45倍。直近5日：TOPIXより強い。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
+    },
+    {
+      "sector": "医薬品",
+      "change_pct": 0.16,
+      "relative_today_pct": 0.46,
+      "quality": "市場並み",
+      "attention": false,
+      "volume_confirmation": "出来高：普段の0.55倍",
+      "volume_ratio_20d": 0.55,
+      "persistence": "直近5日：TOPIXより強い",
+      "return_5d_pct": 6.45,
+      "relative_5d_pct": 7.7,
+      "axes": {
+        "momentum": {
+          "label": "TOPIXより0.46pt強い",
+          "value": 0.46,
+          "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
+        },
+        "activity": {
+          "label": "出来高：普段の0.55倍",
+          "value": 0.55,
+          "rule": "業種ETFの出来高を直近20日平均と比較"
+        },
+        "persistence": {
+          "label": "直近5日：TOPIXより強い",
+          "value": 7.7,
+          "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
+        }
+      },
+      "comment": "当日+0.16%（TOPIX比+0.46pt）。出来高：普段の0.55倍。直近5日：TOPIXより強い。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
+    },
+    {
+      "sector": "素材・化学",
+      "change_pct": 0.13,
       "relative_today_pct": 0.43,
       "quality": "市場並み",
       "attention": false,
-      "volume_confirmation": "出来高：普段の0.97倍",
-      "volume_ratio_20d": 0.97,
-      "persistence": "直近5日：TOPIXより弱い",
-      "return_5d_pct": -5.28,
-      "relative_5d_pct": -5.02,
+      "volume_confirmation": "出来高：普段の0.32倍",
+      "volume_ratio_20d": 0.32,
+      "persistence": "直近5日：TOPIXと同程度",
+      "return_5d_pct": -1.15,
+      "relative_5d_pct": 0.1,
       "axes": {
         "momentum": {
           "label": "TOPIXより0.43pt強い",
@@ -1312,519 +1591,240 @@
           "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
         },
         "activity": {
-          "label": "出来高：普段の0.97倍",
-          "value": 0.97,
+          "label": "出来高：普段の0.32倍",
+          "value": 0.32,
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより弱い",
-          "value": -5.02,
+          "label": "直近5日：TOPIXと同程度",
+          "value": 0.1,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日+2.19%（TOPIX比+0.43pt）。出来高：普段の0.97倍。直近5日：TOPIXより弱い。",
+      "comment": "当日+0.13%（TOPIX比+0.43pt）。出来高：普段の0.32倍。直近5日：TOPIXと同程度。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
       "sector": "情報通信・サービス",
-      "change_pct": 2.17,
-      "relative_today_pct": 0.41,
+      "change_pct": 0.1,
+      "relative_today_pct": 0.4,
       "quality": "市場並み",
       "attention": false,
-      "volume_confirmation": "出来高：普段の1.38倍",
-      "volume_ratio_20d": 1.38,
+      "volume_confirmation": "出来高：普段の0.82倍",
+      "volume_ratio_20d": 0.82,
       "persistence": "直近5日：TOPIXより強い",
-      "return_5d_pct": 1.69,
-      "relative_5d_pct": 1.95,
+      "return_5d_pct": 0.81,
+      "relative_5d_pct": 2.06,
       "axes": {
         "momentum": {
-          "label": "TOPIXより0.41pt強い",
-          "value": 0.41,
+          "label": "TOPIXより0.40pt強い",
+          "value": 0.4,
           "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
         },
         "activity": {
-          "label": "出来高：普段の1.38倍",
-          "value": 1.38,
+          "label": "出来高：普段の0.82倍",
+          "value": 0.82,
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
           "label": "直近5日：TOPIXより強い",
-          "value": 1.95,
+          "value": 2.06,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日+2.17%（TOPIX比+0.41pt）。出来高：普段の1.38倍。直近5日：TOPIXより強い。",
+      "comment": "当日+0.10%（TOPIX比+0.40pt）。出来高：普段の0.82倍。直近5日：TOPIXより強い。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
       "sector": "自動車・輸送機",
-      "change_pct": 2.12,
-      "relative_today_pct": 0.36,
+      "change_pct": 0.08,
+      "relative_today_pct": 0.38,
       "quality": "市場並み",
-      "attention": false,
-      "volume_confirmation": "出来高：普段の0.74倍",
-      "volume_ratio_20d": 0.74,
+      "attention": true,
+      "volume_confirmation": "出来高：普段の2.63倍",
+      "volume_ratio_20d": 2.63,
       "persistence": "直近5日：TOPIXより強い",
-      "return_5d_pct": 4.31,
-      "relative_5d_pct": 4.57,
+      "return_5d_pct": 4.74,
+      "relative_5d_pct": 5.99,
       "axes": {
         "momentum": {
-          "label": "TOPIXより0.36pt強い",
-          "value": 0.36,
+          "label": "TOPIXより0.38pt強い",
+          "value": 0.38,
           "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
         },
         "activity": {
-          "label": "出来高：普段の0.74倍",
-          "value": 0.74,
+          "label": "出来高：普段の2.63倍",
+          "value": 2.63,
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
           "label": "直近5日：TOPIXより強い",
-          "value": 4.57,
+          "value": 5.99,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日+2.12%（TOPIX比+0.36pt）。出来高：普段の0.74倍。直近5日：TOPIXより強い。",
-      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
-    },
-    {
-      "sector": "不動産",
-      "change_pct": 1.97,
-      "relative_today_pct": 0.21,
-      "quality": "市場並み",
-      "attention": false,
-      "volume_confirmation": "出来高：普段の1.10倍",
-      "volume_ratio_20d": 1.1,
-      "persistence": "直近5日：TOPIXより強い",
-      "return_5d_pct": 4.3,
-      "relative_5d_pct": 4.56,
-      "axes": {
-        "momentum": {
-          "label": "TOPIXより0.21pt強い",
-          "value": 0.21,
-          "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
-        },
-        "activity": {
-          "label": "出来高：普段の1.10倍",
-          "value": 1.1,
-          "rule": "業種ETFの出来高を直近20日平均と比較"
-        },
-        "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 4.56,
-          "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
-        }
-      },
-      "comment": "当日+1.97%（TOPIX比+0.21pt）。出来高：普段の1.10倍。直近5日：TOPIXより強い。",
-      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
-    },
-    {
-      "sector": "医薬品",
-      "change_pct": 1.85,
-      "relative_today_pct": 0.09,
-      "quality": "市場並み",
-      "attention": false,
-      "volume_confirmation": "出来高：普段の1.35倍",
-      "volume_ratio_20d": 1.35,
-      "persistence": "直近5日：TOPIXより強い",
-      "return_5d_pct": 5.26,
-      "relative_5d_pct": 5.52,
-      "axes": {
-        "momentum": {
-          "label": "TOPIXより0.09pt強い",
-          "value": 0.09,
-          "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
-        },
-        "activity": {
-          "label": "出来高：普段の1.35倍",
-          "value": 1.35,
-          "rule": "業種ETFの出来高を直近20日平均と比較"
-        },
-        "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 5.52,
-          "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
-        }
-      },
-      "comment": "当日+1.85%（TOPIX比+0.09pt）。出来高：普段の1.35倍。直近5日：TOPIXより強い。",
-      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
-    },
-    {
-      "sector": "金融（銀行除く）",
-      "change_pct": 1.81,
-      "relative_today_pct": 0.05,
-      "quality": "市場並み",
-      "attention": false,
-      "volume_confirmation": "出来高：普段の0.34倍",
-      "volume_ratio_20d": 0.34,
-      "persistence": "直近5日：TOPIXより強い",
-      "return_5d_pct": 3.19,
-      "relative_5d_pct": 3.45,
-      "axes": {
-        "momentum": {
-          "label": "TOPIXより0.05pt強い",
-          "value": 0.05,
-          "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
-        },
-        "activity": {
-          "label": "出来高：普段の0.34倍",
-          "value": 0.34,
-          "rule": "業種ETFの出来高を直近20日平均と比較"
-        },
-        "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 3.45,
-          "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
-        }
-      },
-      "comment": "当日+1.81%（TOPIX比+0.05pt）。出来高：普段の0.34倍。直近5日：TOPIXより強い。",
-      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
-    },
-    {
-      "sector": "建設・資材",
-      "change_pct": 1.8,
-      "relative_today_pct": 0.04,
-      "quality": "市場並み",
-      "attention": false,
-      "volume_confirmation": "出来高：普段の0.92倍",
-      "volume_ratio_20d": 0.92,
-      "persistence": "直近5日：TOPIXより弱い",
-      "return_5d_pct": -2.51,
-      "relative_5d_pct": -2.25,
-      "axes": {
-        "momentum": {
-          "label": "TOPIXより0.04pt強い",
-          "value": 0.04,
-          "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
-        },
-        "activity": {
-          "label": "出来高：普段の0.92倍",
-          "value": 0.92,
-          "rule": "業種ETFの出来高を直近20日平均と比較"
-        },
-        "persistence": {
-          "label": "直近5日：TOPIXより弱い",
-          "value": -2.25,
-          "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
-        }
-      },
-      "comment": "当日+1.80%（TOPIX比+0.04pt）。出来高：普段の0.92倍。直近5日：TOPIXより弱い。",
-      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
-    },
-    {
-      "sector": "機械",
-      "change_pct": 1.63,
-      "relative_today_pct": -0.13,
-      "quality": "市場並み",
-      "attention": false,
-      "volume_confirmation": "出来高：普段の0.63倍",
-      "volume_ratio_20d": 0.63,
-      "persistence": "直近5日：TOPIXより弱い",
-      "return_5d_pct": -2.68,
-      "relative_5d_pct": -2.42,
-      "axes": {
-        "momentum": {
-          "label": "TOPIXより0.13pt弱い",
-          "value": -0.13,
-          "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
-        },
-        "activity": {
-          "label": "出来高：普段の0.63倍",
-          "value": 0.63,
-          "rule": "業種ETFの出来高を直近20日平均と比較"
-        },
-        "persistence": {
-          "label": "直近5日：TOPIXより弱い",
-          "value": -2.42,
-          "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
-        }
-      },
-      "comment": "当日+1.63%（TOPIX比-0.13pt）。出来高：普段の0.63倍。直近5日：TOPIXより弱い。",
-      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
-    },
-    {
-      "sector": "商社・卸売",
-      "change_pct": 1.35,
-      "relative_today_pct": -0.41,
-      "quality": "市場並み",
-      "attention": false,
-      "volume_confirmation": "出来高：普段の1.55倍",
-      "volume_ratio_20d": 1.55,
-      "persistence": "直近5日：TOPIXより強い",
-      "return_5d_pct": 3.78,
-      "relative_5d_pct": 4.04,
-      "axes": {
-        "momentum": {
-          "label": "TOPIXより0.41pt弱い",
-          "value": -0.41,
-          "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
-        },
-        "activity": {
-          "label": "出来高：普段の1.55倍",
-          "value": 1.55,
-          "rule": "業種ETFの出来高を直近20日平均と比較"
-        },
-        "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 4.04,
-          "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
-        }
-      },
-      "comment": "当日+1.35%（TOPIX比-0.41pt）。出来高：普段の1.55倍。直近5日：TOPIXより強い。",
+      "comment": "当日+0.08%（TOPIX比+0.38pt）。出来高：普段の2.63倍。直近5日：TOPIXより強い。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
       "sector": "銀行",
-      "change_pct": 1.3,
-      "relative_today_pct": -0.46,
+      "change_pct": 0.05,
+      "relative_today_pct": 0.35,
       "quality": "市場並み",
       "attention": false,
-      "volume_confirmation": "出来高：普段の0.23倍",
-      "volume_ratio_20d": 0.23,
-      "persistence": "直近5日：TOPIXより弱い",
-      "return_5d_pct": -2.86,
-      "relative_5d_pct": -2.6,
-      "axes": {
-        "momentum": {
-          "label": "TOPIXより0.46pt弱い",
-          "value": -0.46,
-          "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
-        },
-        "activity": {
-          "label": "出来高：普段の0.23倍",
-          "value": 0.23,
-          "rule": "業種ETFの出来高を直近20日平均と比較"
-        },
-        "persistence": {
-          "label": "直近5日：TOPIXより弱い",
-          "value": -2.6,
-          "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
-        }
-      },
-      "comment": "当日+1.30%（TOPIX比-0.46pt）。出来高：普段の0.23倍。直近5日：TOPIXより弱い。",
-      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
-    },
-    {
-      "sector": "エネルギー資源",
-      "change_pct": 0.88,
-      "relative_today_pct": -0.88,
-      "quality": "弱い",
-      "attention": false,
-      "volume_confirmation": "出来高：普段の0.35倍",
-      "volume_ratio_20d": 0.35,
-      "persistence": "直近5日：TOPIXより強い",
-      "return_5d_pct": 1.89,
-      "relative_5d_pct": 2.15,
-      "axes": {
-        "momentum": {
-          "label": "TOPIXより0.88pt弱い",
-          "value": -0.88,
-          "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
-        },
-        "activity": {
-          "label": "出来高：普段の0.35倍",
-          "value": 0.35,
-          "rule": "業種ETFの出来高を直近20日平均と比較"
-        },
-        "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 2.15,
-          "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
-        }
-      },
-      "comment": "当日+0.88%（TOPIX比-0.88pt）。出来高：普段の0.35倍。直近5日：TOPIXより強い。",
-      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
-    },
-    {
-      "sector": "運輸・物流",
-      "change_pct": 0.75,
-      "relative_today_pct": -1.01,
-      "quality": "弱い",
-      "attention": true,
-      "volume_confirmation": "出来高：普段の3.45倍",
-      "volume_ratio_20d": 3.45,
-      "persistence": "直近5日：TOPIXより強い",
-      "return_5d_pct": 2.05,
-      "relative_5d_pct": 2.31,
-      "axes": {
-        "momentum": {
-          "label": "TOPIXより1.01pt弱い",
-          "value": -1.01,
-          "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
-        },
-        "activity": {
-          "label": "出来高：普段の3.45倍",
-          "value": 3.45,
-          "rule": "業種ETFの出来高を直近20日平均と比較"
-        },
-        "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 2.31,
-          "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
-        }
-      },
-      "comment": "当日+0.75%（TOPIX比-1.01pt）。出来高：普段の3.45倍。直近5日：TOPIXより強い。",
-      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
-    },
-    {
-      "sector": "素材・化学",
-      "change_pct": 0.69,
-      "relative_today_pct": -1.07,
-      "quality": "弱い",
-      "attention": false,
-      "volume_confirmation": "出来高：普段の0.31倍",
-      "volume_ratio_20d": 0.31,
+      "volume_confirmation": "出来高：普段の0.61倍",
+      "volume_ratio_20d": 0.61,
       "persistence": "直近5日：TOPIXと同程度",
-      "return_5d_pct": -0.05,
-      "relative_5d_pct": 0.21,
+      "return_5d_pct": -1.24,
+      "relative_5d_pct": 0.01,
       "axes": {
         "momentum": {
-          "label": "TOPIXより1.07pt弱い",
-          "value": -1.07,
+          "label": "TOPIXより0.35pt強い",
+          "value": 0.35,
           "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
         },
         "activity": {
-          "label": "出来高：普段の0.31倍",
-          "value": 0.31,
+          "label": "出来高：普段の0.61倍",
+          "value": 0.61,
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
           "label": "直近5日：TOPIXと同程度",
-          "value": 0.21,
+          "value": 0.01,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日+0.69%（TOPIX比-1.07pt）。出来高：普段の0.31倍。直近5日：TOPIXと同程度。",
+      "comment": "当日+0.05%（TOPIX比+0.35pt）。出来高：普段の0.61倍。直近5日：TOPIXと同程度。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
+    },
+    {
+      "sector": "機械",
+      "change_pct": 0.02,
+      "relative_today_pct": 0.32,
+      "quality": "市場並み",
+      "attention": true,
+      "volume_confirmation": "出来高：普段の3.33倍",
+      "volume_ratio_20d": 3.33,
+      "persistence": "直近5日：TOPIXより弱い",
+      "return_5d_pct": -2.59,
+      "relative_5d_pct": -1.34,
+      "axes": {
+        "momentum": {
+          "label": "TOPIXより0.32pt強い",
+          "value": 0.32,
+          "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
+        },
+        "activity": {
+          "label": "出来高：普段の3.33倍",
+          "value": 3.33,
+          "rule": "業種ETFの出来高を直近20日平均と比較"
+        },
+        "persistence": {
+          "label": "直近5日：TOPIXより弱い",
+          "value": -1.34,
+          "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
+        }
+      },
+      "comment": "当日+0.02%（TOPIX比+0.32pt）。出来高：普段の3.33倍。直近5日：TOPIXより弱い。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
       "sector": "鉄鋼・非鉄",
-      "change_pct": 0.51,
-      "relative_today_pct": -1.25,
-      "quality": "弱い",
+      "change_pct": -0.42,
+      "relative_today_pct": -0.12,
+      "quality": "市場並み",
       "attention": false,
-      "volume_confirmation": "出来高：普段の0.92倍",
-      "volume_ratio_20d": 0.92,
+      "volume_confirmation": "出来高：普段の0.67倍",
+      "volume_ratio_20d": 0.67,
       "persistence": "直近5日：TOPIXより弱い",
-      "return_5d_pct": -9.76,
-      "relative_5d_pct": -9.5,
+      "return_5d_pct": -9.58,
+      "relative_5d_pct": -8.33,
       "axes": {
         "momentum": {
-          "label": "TOPIXより1.25pt弱い",
-          "value": -1.25,
+          "label": "TOPIXより0.12pt弱い",
+          "value": -0.12,
           "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
         },
         "activity": {
-          "label": "出来高：普段の0.92倍",
-          "value": 0.92,
+          "label": "出来高：普段の0.67倍",
+          "value": 0.67,
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
           "label": "直近5日：TOPIXより弱い",
-          "value": -9.5,
+          "value": -8.33,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日+0.51%（TOPIX比-1.25pt）。出来高：普段の0.92倍。直近5日：TOPIXより弱い。",
+      "comment": "当日-0.42%（TOPIX比-0.12pt）。出来高：普段の0.67倍。直近5日：TOPIXより弱い。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
       "sector": "小売",
-      "change_pct": 0.34,
-      "relative_today_pct": -1.42,
+      "change_pct": -0.47,
+      "relative_today_pct": -0.17,
+      "quality": "市場並み",
+      "attention": false,
+      "volume_confirmation": "出来高：普段の0.84倍",
+      "volume_ratio_20d": 0.84,
+      "persistence": "直近5日：TOPIXより強い",
+      "return_5d_pct": 3.2,
+      "relative_5d_pct": 4.45,
+      "axes": {
+        "momentum": {
+          "label": "TOPIXより0.17pt弱い",
+          "value": -0.17,
+          "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
+        },
+        "activity": {
+          "label": "出来高：普段の0.84倍",
+          "value": 0.84,
+          "rule": "業種ETFの出来高を直近20日平均と比較"
+        },
+        "persistence": {
+          "label": "直近5日：TOPIXより強い",
+          "value": 4.45,
+          "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
+        }
+      },
+      "comment": "当日-0.47%（TOPIX比-0.17pt）。出来高：普段の0.84倍。直近5日：TOPIXより強い。",
+      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
+    },
+    {
+      "sector": "電機・精密",
+      "change_pct": -1.15,
+      "relative_today_pct": -0.85,
       "quality": "弱い",
       "attention": false,
-      "volume_confirmation": "出来高：普段の1.83倍",
-      "volume_ratio_20d": 1.83,
-      "persistence": "直近5日：TOPIXより強い",
-      "return_5d_pct": 2.57,
-      "relative_5d_pct": 2.83,
+      "volume_confirmation": "出来高：普段の0.88倍",
+      "volume_ratio_20d": 0.88,
+      "persistence": "直近5日：TOPIXより弱い",
+      "return_5d_pct": -7.18,
+      "relative_5d_pct": -5.93,
       "axes": {
         "momentum": {
-          "label": "TOPIXより1.42pt弱い",
-          "value": -1.42,
+          "label": "TOPIXより0.85pt弱い",
+          "value": -0.85,
           "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
         },
         "activity": {
-          "label": "出来高：普段の1.83倍",
-          "value": 1.83,
+          "label": "出来高：普段の0.88倍",
+          "value": 0.88,
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 2.83,
+          "label": "直近5日：TOPIXより弱い",
+          "value": -5.93,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日+0.34%（TOPIX比-1.42pt）。出来高：普段の1.83倍。直近5日：TOPIXより強い。",
-      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
-    },
-    {
-      "sector": "食品",
-      "change_pct": -0.32,
-      "relative_today_pct": -2.08,
-      "quality": "弱い",
-      "attention": true,
-      "volume_confirmation": "出来高：普段の1.04倍",
-      "volume_ratio_20d": 1.04,
-      "persistence": "直近5日：TOPIXより強い",
-      "return_5d_pct": 4.04,
-      "relative_5d_pct": 4.3,
-      "axes": {
-        "momentum": {
-          "label": "TOPIXより2.08pt弱い",
-          "value": -2.08,
-          "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
-        },
-        "activity": {
-          "label": "出来高：普段の1.04倍",
-          "value": 1.04,
-          "rule": "業種ETFの出来高を直近20日平均と比較"
-        },
-        "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 4.3,
-          "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
-        }
-      },
-      "comment": "当日-0.32%（TOPIX比-2.08pt）。出来高：普段の1.04倍。直近5日：TOPIXより強い。",
-      "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
-    },
-    {
-      "sector": "電力・ガス",
-      "change_pct": -0.38,
-      "relative_today_pct": -2.14,
-      "quality": "弱い",
-      "attention": true,
-      "volume_confirmation": "出来高：普段の1.31倍",
-      "volume_ratio_20d": 1.31,
-      "persistence": "直近5日：TOPIXと同程度",
-      "return_5d_pct": 0.13,
-      "relative_5d_pct": 0.39,
-      "axes": {
-        "momentum": {
-          "label": "TOPIXより2.14pt弱い",
-          "value": -2.14,
-          "rule": "業種ETFの当日騰落をTOPIXと比較し、差±0.5ptで強弱を判定"
-        },
-        "activity": {
-          "label": "出来高：普段の1.31倍",
-          "value": 1.31,
-          "rule": "業種ETFの出来高を直近20日平均と比較"
-        },
-        "persistence": {
-          "label": "直近5日：TOPIXと同程度",
-          "value": 0.39,
-          "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
-        }
-      },
-      "comment": "当日-0.38%（TOPIX比-2.14pt）。出来高：普段の1.31倍。直近5日：TOPIXと同程度。",
+      "comment": "当日-1.15%（TOPIX比-0.85pt）。出来高：普段の0.88倍。直近5日：TOPIXより弱い。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     }
   ],
   "morning_summary": {
-    "stance": "主要指数がそろって上昇",
-    "reason": "日経平均 +1.19%、TOPIX +1.76%",
+    "stance": "主要指数がそろって下落",
+    "reason": "日経平均 -0.66%、TOPIX -0.30%",
     "tailwinds": [
       "米10年金利：高PER株に追い風"
     ],
@@ -1833,7 +1833,9 @@
       "米国大型ハイテク株：向かい風"
     ],
     "focus_sectors": [
-      "TOPIX比で明確に強い業種は確認できず"
+      "エネルギー資源",
+      "不動産",
+      "電力・ガス"
     ]
   },
   "methodology": {

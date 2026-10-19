@@ -599,6 +599,42 @@
       "required": ["title", "move", "trigger", "transmission_chain", "hit_hardest", "relative_resilience", "japan_impact", "confidence", "invalidation"],
       "additionalProperties": true
     },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "event", "start_at_jst", "jst_time", "forecast", "previous", "focus", "affected_markets", "importance", "source_url", "verified_on"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "event": {"type": "string", "minLength": 1},
+          "start_at_jst": {"type": "string", "format": "date-time"},
+          "end_at_jst": {"type": "string", "format": "date-time"},
+          "jst_time": {"type": "string", "minLength": 1},
+          "forecast": {"type": "string", "minLength": 1},
+          "previous": {"type": "string", "minLength": 1},
+          "focus": {"type": "string", "minLength": 1},
+          "affected_markets": {"type": "string", "minLength": 1},
+          "importance": {"type": "string", "minLength": 1},
+          "source_url": {"type": "string", "pattern": "^https://.+$"},
+          "source_name": {"type": "string"},
+          "verified_on": {"type": "string", "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "events_metadata": {
+      "type": "object",
+      "required": ["status", "updated_at", "window_start", "window_end", "timezone", "source_policy"],
+      "properties": {
+        "status": {"enum": ["取得済", "該当材料なし", "取得不能"]},
+        "updated_at": {"type": "string"},
+        "window_start": {"type": "string", "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"},
+        "window_end": {"type": "string", "pattern": "^20\\d{2}-\\d{2}-\\d{2}$"},
+        "timezone": {"const": "Asia/Tokyo"},
+        "source_policy": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": true
+    },
     "source_notes": {
       "type": "array",
       "items": {
@@ -624,6 +660,8 @@
     "data_quality",
     "final_conclusion",
     "publication_policy",
-    "market_move_explanation"
+    "market_move_explanation",
+    "events",
+    "events_metadata"
   ]
 }

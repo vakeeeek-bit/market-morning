@@ -10,7 +10,7 @@ import os
 import re
 import sys
 from dataclasses import dataclass, field
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 from typing import Any
 
@@ -117,10 +117,60 @@ def parse_iso_date(value: Any, label: str, result: ValidationResult) -> date | N
         return None
 
 
+def validate_events(report: dict, result: ValidationResult) -> None:
+    events = report.get("events")
+    metadata = report.get("events_metadata")
+    if not isinstance(events, list) or not isinstance(metadata, dict):
+        result.error("report.events/events_metadata: 重要イベントと取得状態が必要です")
+        return
+
+    start = parse_iso_date(metadata.get("window_start"), "report.events_metadata.window_start", result)
+    end = parse_iso_date(metadata.get("window_end"), "report.events_metadata.window_end", result)
+    if start and end and (end - start).days not in range(7, 15):
+        result.error("report.events_metadata: 表示期間は7〜14日間にしてください")
+
+    seen: set[str] = set()
+    invalid: list[str] = []
+    for index, event in enumerate(events):
+        if not isinstance(event, dict):
+            invalid.append(str(index))
+            continue
+        event_id = str(event.get("id", "")).strip()
+        if not event_id or event_id in seen:
+            invalid.append(f"{index}.id")
+        seen.add(event_id)
+        try:
+            starts_at = datetime.fromisoformat(str(event.get("start_at_jst", "")))
+            if starts_at.utcoffset() is None:
+                raise ValueError
+            event_date = starts_at.date()
+            if start and event_date < start or end and event_date > end:
+                invalid.append(f"{index}.window")
+        except ValueError:
+            invalid.append(f"{index}.start_at_jst")
+        for key in ("event", "jst_time", "forecast", "previous", "focus", "affected_markets", "importance", "source_name", "verified_on"):
+            if not str(event.get(key, "")).strip():
+                invalid.append(f"{index}.{key}")
+        if "JST" not in str(event.get("jst_time", "")):
+            invalid.append(f"{index}.jst_time")
+        if not str(event.get("source_url", "")).startswith("https://"):
+            invalid.append(f"{index}.source_url")
+
+    expected_status = "取得済" if events else "該当材料なし"
+    if metadata.get("status") != expected_status:
+        invalid.append("metadata.status")
+    if invalid:
+        result.error("report.events: 期間・JST・出典・空欄の検証に失敗: " + ", ".join(invalid))
+    else:
+        result.ok(f"公式日程に基づく重要イベント（{len(events)}件、JST・7〜14日窓）")
+
+
 def validate_relationships(data: dict[str, dict], result: ValidationResult) -> None:
     report = data["report"]
     market = data["market"]
     japan = data["japan-stocks"]
+
+    validate_events(report, result)
 
     top_news = report.get("quick_view", {}).get("top_news")
     if not isinstance(top_news, list) or len(top_news) != 3:
@@ -201,10 +251,15 @@ def validate_relationships(data: dict[str, dict], result: ValidationResult) -> N
             result.error(f"{location}.source_url: 個別株ニュースは企業IR・TDnet等の一次情報を使用してください")
 
     review = japan.get("japan_quick_view", {}).get("individual_news_review", {})
-    if review.get("status") != "reviewed":
-        result.error("japan_quick_view.individual_news_review.status: reviewed が必要です")
+    review_status = review.get("status")
+    if review_status not in {"reviewed", "partial"}:
+        result.error("japan_quick_view.individual_news_review.status: reviewed または partial が必要です")
+    elif stories and review_status != "reviewed":
+        result.error("個別株ニュースがある場合は reviewed が必要です")
     elif review.get("story_count") != stories:
         result.error("個別株ニュースの監査件数と実数が一致しません")
+    elif not str(review.get("scope", "")).strip():
+        result.error("個別株ニュースの確認範囲を明示してください")
     else:
         result.ok("個別株ニュースの一次情報・銘柄コード監査")
 
@@ -234,6 +289,14 @@ def validate_relationships(data: dict[str, dict], result: ValidationResult) -> N
             result.error("アナリスト評価を網羅できない日に『変更なし』と断定できません")
         elif not isinstance(ratings.get("items"), list) or not isinstance(ratings.get("source_review"), list):
             result.error("アナリスト評価変更にはitemsとsource_reviewが必要です")
+        elif not ratings["source_review"] or any(
+            not isinstance(item, dict)
+            or not str(item.get("name", "")).strip()
+            or not str(item.get("url", "")).startswith("https://")
+            or not str(item.get("coverage", "")).strip()
+            for item in ratings["source_review"]
+        ):
+            result.error("アナリスト評価変更の確認元・URL・網羅範囲が必要です")
         else:
             result.ok("アナリスト評価変更の調査状態・非断定表示")
 
@@ -305,6 +368,20 @@ def validate_relationships(data: dict[str, dict], result: ValidationResult) -> N
                 result.error(message)
         if not missing and not stale:
             result.ok("必須市場データのtarget_market_date整合性")
+
+    curve = market.get("derived", {}).get("us_2s10s", {})
+    us2y = market.get("markets", {}).get("us2y", {})
+    us10y = market.get("markets", {}).get("us10y", {})
+    if curve.get("status") == "計算成功":
+        curve_date = curve.get("market_date")
+        if not curve_date or curve_date != us2y.get("market_date") or curve_date != us10y.get("market_date"):
+            result.error("market.derived.us_2s10s: 2年・10年の同一FRED公表日だけで算出してください")
+        elif not all(isinstance(curve.get(key), (int, float)) for key in ("value_bp", "previous_bp", "change_bp")):
+            result.error("market.derived.us_2s10s: スプレッド値が不足しています")
+        else:
+            result.ok(f"米2年・10年金利差（FRED同日 {curve_date}）")
+    elif not str(curve.get("note", "")).strip():
+        result.error("market.derived.us_2s10s: 算出不能理由が必要です")
 
 
 def validate_market_context(data: dict[str, dict], result: ValidationResult) -> None:
@@ -460,6 +537,15 @@ def validate_japan_investor_view(data: dict[str, dict], result: ValidationResult
     else:
         result.ok("今日の市場観は主要2指数に限定（34銘柄Breadthなし）")
 
+    dimensions = market_view.get("dimensions", [])
+    expected_axes = {"大型株/小型株", "グロース/バリュー（代理）", "景気敏感/ディフェンシブ", "半導体/市場全体", "金融/市場全体"}
+    if len(dimensions) != 5 or {item.get("axis") for item in dimensions if isinstance(item, dict)} != expected_axes:
+        result.error("japan-market.market_regime.dimensions: 5軸の詳細評価が必要です")
+    elif any(not str(item.get("status", "")).strip() or not str(item.get("reason", "")).strip() for item in dimensions):
+        result.error("japan-market.market_regime.dimensions: 各軸に評価と根拠が必要です")
+    else:
+        result.ok("市場レジームの詳細5軸")
+
     rotation = japan_market.get("rotation_read", {})
     if rotation.get("label") != "どちらが強い？":
         result.error("japan-market.rotation_read: 一般読者に分かる名称が必要です")
@@ -493,6 +579,8 @@ def validate_japan_investor_view(data: dict[str, dict], result: ValidationResult
         result.error("japan-market.scenario_review: 予想採点ではなく今日への修正として表示してください")
     else:
         result.ok("昨日のシナリオ検証から今日への修正")
+    if not isinstance(review.get("checks"), list) or not review["checks"]:
+        result.error("japan-market.scenario_review.checks: 検証待ちを含め、確認点を空欄にしないでください")
 
     state = japan_market.get("data_state", {})
     if state.get("kind") not in {"normal", "holiday", "data_error"}:

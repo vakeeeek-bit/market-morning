@@ -213,6 +213,8 @@ body {
     <div class="scoreboard" id="market-scoreboard">データ更新待ち</div>
     <div id="regime-alert"></div>
     <div class="insight-grid" id="morning-summary">データ更新待ち</div>
+    <div class="ranking-title" style="margin-top:16px;">市場レジームの詳細評価</div>
+    <div class="insight-grid" id="regime-dimensions">データ更新待ち</div>
     <div class="market-note" id="regime-method">実測値と推定評価を分けて表示します。</div>
     <details class="disclosure">
       <summary>このページに出てくる用語</summary>
@@ -514,8 +516,8 @@ function renderRatingChanges(rating) {
   appendText(body, 'market-note', text(rating.methodology));
   (Array.isArray(rating.source_review) ? rating.source_review : []).forEach(source => {
     const card = document.createElement('div'); card.className = 'summary-box';
-    appendTitleWithHelp(card, 'insight-title', source.name);
-    appendText(card, '', `${text(source.coverage)}｜${text(source.freshness)}｜${text(source.automation)}｜${text(source.rights)}`);
+    appendTitleWithHelp(card, 'insight-title', source.name || source.source || '公開情報');
+    appendText(card, '', [source.result, source.coverage, source.freshness, source.automation, source.rights].filter(Boolean).join('｜') || '取得条件を確認できません');
     if (source.url) { const link = document.createElement('a'); link.className = 'source'; link.href = source.url; link.target = '_blank'; link.rel = 'noopener noreferrer'; link.textContent = '提供元を確認 ↗'; card.appendChild(link); }
     body.appendChild(card);
   });
@@ -645,6 +647,7 @@ function renderJapanMarket(data) {
   const sectors = Array.isArray(data.sector_ranking) ? data.sector_ranking : [];
   renderScoreboard(data.market_regime || {}, data.data_state || {});
   renderRegime(data.market_regime || {}, data.morning_summary || {});
+  renderInsightCards('regime-dimensions', data.market_regime?.dimensions, { empty: '詳細軸は取得状況を確認できません' });
   renderInsightCards('key-drivers', data.key_drivers, { flow: true });
   renderSectorQuality(data.sector_quality);
   rankingRows(document.getElementById('sector-winners'), sectors, row => signedPercent(row.change_pct));

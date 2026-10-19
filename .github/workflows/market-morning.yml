@@ -7,6 +7,9 @@ on:
     paths:
       - ".github/workflows/market-morning.yml"
       - "scripts/update_market.py"
+      - "scripts/update_events.py"
+      - "scripts/normalize_japan_content.py"
+      - "data/economic-events.json"
   schedule:
     # 日本時間 平日6:20（UTCでは前日の21:20）
     # GitHub Actions の cron は UTC
@@ -46,6 +49,12 @@ jobs:
       - name: Create data directory
         run: |
           mkdir -p data
+
+      - name: Update verified upcoming events
+        run: python scripts/update_events.py
+
+      - name: Normalize Japan content collection states
+        run: python scripts/normalize_japan_content.py
 
       - name: Update market data
         run: |
@@ -109,6 +118,8 @@ jobs:
           git config user.email "actions@github.com"
           git add data/market.json
           git add data/japan-market.json
+          git add data/report.json
+          git add data/japan-stocks.json
           git add data/status.json
           git add data/history/
           git add data/news-history.json

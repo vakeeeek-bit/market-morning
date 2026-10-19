@@ -24,6 +24,11 @@ class WorkflowScheduleTests(unittest.TestCase):
         self.assertLess(status_update, final_validation)
         self.assertIn("git add data/status.json", workflow)
 
+    def test_daily_workflow_refreshes_events_and_japan_content(self):
+        workflow = (ROOT / ".github" / "workflows" / "market-morning.yml").read_text(encoding="utf-8")
+        self.assertIn("python scripts/update_events.py", workflow)
+        self.assertIn("python scripts/normalize_japan_content.py", workflow)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 10:24:29",
+  "updated_at": "2026-10-19 12:47:29",
   "timezone": "Asia/Tokyo",
   "source": "Yahoo Finance via yfinance for market closes; FRED DGS2 for US 2Y Treasury yield",
   "notes": {
@@ -136,14 +136,15 @@
     },
     "us10y": {
       "name": "米10年債利回り",
-      "ticker": "^TNX",
-      "price": 5.098,
-      "previous": 5.089,
-      "change": 0.009,
-      "change_pct": 0.18,
+      "ticker": "FRED:DGS10",
+      "price": 5.1,
+      "previous": 5.19,
+      "change": -0.09,
+      "change_pct": -1.73,
       "status": "取得成功",
-      "market_date": "2026-10-16",
-      "previous_market_date": "2026-10-15"
+      "market_date": "2026-10-15",
+      "previous_market_date": "2026-10-14",
+      "stale_reason": "FRED公表値は米株の市場日より1営業日古い。DGS2とDGS10は同一公表日のためスプレッドを算出するが、米株2026-10-16と同日時点のカーブとは扱わない"
     },
     "vix": {
       "name": "VIX",
@@ -369,21 +370,21 @@
       "status": "取得成功",
       "market_date": "2026-10-15",
       "previous_market_date": "2026-10-14",
-      "stale_reason": "FRED DGS2の公表タイミング差。最新公表値を維持し、同日でない米10年債とのスプレッドは算出しません"
+      "stale_reason": "FRED公表値は米株の市場日より1営業日古い。DGS2とDGS10は同一公表日のためスプレッドを算出するが、米株2026-10-16と同日時点のカーブとは扱わない"
     }
   },
   "derived": {
     "us_2s10s": {
       "name": "米2年-10年スプレッド",
-      "value_pct_point": null,
-      "value_bp": null,
-      "previous_pct_point": null,
-      "previous_bp": null,
-      "change_bp": null,
-      "curve": "基準日不一致",
-      "status": "基準日不一致",
-      "us2y_market_date": "2026-10-15",
-      "us10y_market_date": "2026-10-16",
+      "value_pct_point": 0.33,
+      "value_bp": 33.0,
+      "previous_pct_point": 0.37,
+      "previous_bp": 37.0,
+      "change_bp": -4.0,
+      "curve": "順イールド",
+      "status": "計算成功",
+      "market_date": "2026-10-15",
+      "previous_market_date": "2026-10-14",
       "formula": "米10年債利回り - 米2年債利回り"
     }
   },

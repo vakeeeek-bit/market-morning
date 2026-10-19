@@ -1,6 +1,7 @@
 import json
 import math
 import time
+import argparse
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -247,23 +248,23 @@ def get_market_data(info, prior_snapshots=None):
     }
 
 
-def get_fred_2y():
+def get_fred_treasury(series_id, name):
     import pandas as pd
 
-    url = "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2"
+    url = f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}"
     df = pd.read_csv(url)
 
-    if "DGS2" not in df.columns or len(df.columns) < 2:
-        raise ValueError(f"FRED DGS2 CSVの列を確認できません: {list(df.columns)}")
+    if series_id not in df.columns or len(df.columns) < 2:
+        raise ValueError(f"FRED {series_id} CSVの列を確認できません: {list(df.columns)}")
 
     date_column = df.columns[0]
-    df["DGS2"] = pd.to_numeric(df["DGS2"], errors="coerce")
-    df = df.dropna(subset=["DGS2"])
+    df[series_id] = pd.to_numeric(df[series_id], errors="coerce")
+    df = df.dropna(subset=[series_id])
 
     if len(df) < 2:
         return {
-            "name": "米2年債利回り",
-            "ticker": "FRED:DGS2",
+            "name": name,
+            "ticker": f"FRED:{series_id}",
             "price": None,
             "previous": None,
             "change": None,
@@ -275,14 +276,14 @@ def get_fred_2y():
 
     latest = df.iloc[-1]
     previous = df.iloc[-2]
-    price = finite_float(latest["DGS2"], "米2年債最新値")
-    previous_price = finite_float(previous["DGS2"], "米2年債前日値")
+    price = finite_float(latest[series_id], f"{name}最新値")
+    previous_price = finite_float(previous[series_id], f"{name}前日値")
     change = price - previous_price
     change_pct = (change / previous_price) * 100 if previous_price != 0 else None
 
     return {
-        "name": "米2年債利回り",
-        "ticker": "FRED:DGS2",
+        "name": name,
+        "ticker": f"FRED:{series_id}",
         "price": round(price, 4),
         "previous": round(previous_price, 4),
         "change": round(change, 4),
@@ -291,6 +292,14 @@ def get_fred_2y():
         "market_date": str(latest[date_column]),
         "previous_market_date": str(previous[date_column]),
     }
+
+
+def get_fred_2y():
+    return get_fred_treasury("DGS2", "米2年債利回り")
+
+
+def get_fred_10y():
+    return get_fred_treasury("DGS10", "米10年債利回り")
 
 
 def calculate_2s10s(us2y, us10y):
@@ -344,6 +353,12 @@ def calculate_2s10s(us2y, us10y):
         "change_bp": round(change_bp, 1) if change_bp is not None else None,
         "curve": curve,
         "status": "計算成功",
+        "market_date": us2y["market_date"],
+        "previous_market_date": (
+            us2y.get("previous_market_date")
+            if us2y.get("previous_market_date") == us10y.get("previous_market_date")
+            else None
+        ),
         "formula": "米10年債利回り - 米2年債利回り",
     }
 
@@ -404,18 +419,36 @@ def mark_fred_publication_lag(markets):
     """Explain a legitimate FRED publication delay without inventing a value."""
     us_equity_date = markets.get("sp500", {}).get("market_date")
     us2y = markets.get("us2y", {})
+    us10y = markets.get("us10y", {})
     if (
         isinstance(us_equity_date, str)
         and isinstance(us2y.get("market_date"), str)
         and us2y["market_date"] < us_equity_date
     ):
-        us2y["stale_reason"] = (
-            "FRED DGS2の公表タイミング差。最新公表値を維持し、"
-            "同日でない米10年債とのスプレッドは算出しません"
+        aligned = us2y.get("market_date") == us10y.get("market_date")
+        note = (
+            "FRED公表値は米株の市場日より1営業日古い。DGS2とDGS10は同一公表日のため"
+            f"スプレッドを算出するが、米株{us_equity_date}と同日時点のカーブとは扱わない"
+            if aligned else
+            "FRED DGS2/DGS10の公表日が一致しないため、スプレッドは算出しない"
         )
+        us2y["stale_reason"] = note
+        if isinstance(us10y, dict):
+            us10y["stale_reason"] = note
 
 
-def main():
+def refresh_treasury_curve(payload):
+    markets = payload.setdefault("markets", {})
+    markets["us2y"] = get_fred_2y()
+    markets["us10y"] = get_fred_10y()
+    mark_fred_publication_lag(markets)
+    payload.setdefault("derived", {})["us_2s10s"] = calculate_2s10s(
+        markets["us2y"], markets["us10y"]
+    )
+    return payload
+
+
+def main(rates_only=False):
     now = datetime.now(ZoneInfo("Asia/Tokyo"))
     previous_market_sets = []
     market_path = Path("data/market.json")
@@ -424,6 +457,19 @@ def main():
             previous_market_sets.append(json.loads(market_path.read_text(encoding="utf-8")).get("markets", {}))
         except (json.JSONDecodeError, OSError):
             pass
+    if rates_only:
+        if not market_path.exists():
+            raise RuntimeError("data/market.jsonがないため金利だけを更新できません")
+        payload = json.loads(market_path.read_text(encoding="utf-8"))
+        refresh_treasury_curve(payload)
+        payload["updated_at"] = now.strftime("%Y-%m-%d %H:%M:%S")
+        payload["data_quality"] = build_data_quality(payload.get("markets", {}))
+        market_path.write_text(
+            json.dumps(payload, ensure_ascii=False, indent=2, allow_nan=False) + "\n",
+            encoding="utf-8",
+        )
+        print("FRED DGS2/DGS10と2s10sを同一公表日で更新しました")
+        return
     history_root = Path("data/history")
     for archive_path in sorted(history_root.glob("*/market.json"), reverse=True)[:7]:
         try:
@@ -433,15 +479,15 @@ def main():
     result = {
         "updated_at": now.strftime("%Y-%m-%d %H:%M:%S"),
         "timezone": "Asia/Tokyo",
-        "source": "Yahoo Finance via yfinance for market closes; FRED DGS2 for US 2Y Treasury yield",
+        "source": "Yahoo Finance via yfinance for market closes; FRED DGS2/DGS10 for US Treasury yields",
         "notes": {
             "basis": "priceは各tickerの取得可能な最新日足Close。market_dateを必ず併記し、取引中値や日中高値として扱わない",
             "topix": "TOPIXそのものではなく1306.T（TOPIX連動ETF）を参考値として使用",
             "sox": "^SOXをPHLX半導体株指数の参考終値として使用",
             "us_sectors": "S&P500の11業種そのものではなく、各Sector SPDR ETFの日足終値をセクター強弱の参考値として使用",
-            "us10y": "^TNXを米10年債利回りとして使用",
-            "us2y": "米2年債利回りはFRED DGS2を使用。公表タイミングの違いにより、米10年債と基準日がずれる場合があります",
-            "us_2s10s": "米10年債利回り - 米2年債利回り。両系列のmarket_dateも確認してください",
+            "us10y": "米10年債利回りはFRED DGS10を使用",
+            "us2y": "米2年債利回りはFRED DGS2を使用",
+            "us_2s10s": "同じFRED公表日のDGS10 - DGS2。基準日が一致しない場合は算出しない",
             "vix": "^VIXをVIX指数として使用",
         },
         "markets": {},
@@ -464,6 +510,22 @@ def main():
         result["markets"]["us2y"] = {
             "name": "米2年債利回り",
             "ticker": "FRED:DGS2",
+            "price": None,
+            "previous": None,
+            "change": None,
+            "change_pct": None,
+            "status": "取得失敗",
+            "market_date": None,
+            "previous_market_date": None,
+            "error": str(error),
+        }
+
+    try:
+        result["markets"]["us10y"] = get_fred_10y()
+    except Exception as error:
+        result["markets"]["us10y"] = {
+            "name": "米10年債利回り",
+            "ticker": "FRED:DGS10",
             "price": None,
             "previous": None,
             "change": None,
@@ -523,4 +585,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--rates-only", action="store_true")
+    args = parser.parse_args()
+    main(rates_only=args.rates_only)

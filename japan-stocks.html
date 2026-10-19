@@ -717,7 +717,7 @@ async function load() {
     const review = data.japan_quick_view?.individual_news_review || {};
     renderRatingChanges(data.analyst_rating_changes);
     document.getElementById('individual-news-review').textContent = review.status === 'reviewed'
-      ? `確認済み：${text(review.source)}｜掲載 ${storyCount}件`
+      ? `確認済み：${text(review.scope || review.source)}｜掲載 ${storyCount}件`
       : '個別企業の開示確認状況を確認できません';
     if (!storyCount) {
       appendText(holder, 'empty', '確認範囲内に掲載基準を満たす重要な個別株ニュースはありません');

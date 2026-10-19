@@ -126,7 +126,29 @@ def comparison_axis(name, left_label, right_label, left_value, right_value, cove
     }
 
 
-def build_market_regime(sector_rows, stock_rows, internals):
+def market_axis(market, axis, left_label, right_label, left_keys, right_keys, basis):
+    markets = market.get("markets", {}) if isinstance(market, dict) else {}
+    left_rows = [markets.get(key, {}) for key in left_keys]
+    right_rows = [markets.get(key, {}) for key in right_keys]
+    rows = [*left_rows, *right_rows]
+    if not rows or any(
+        row.get("status") != "取得成功"
+        or not isinstance(row.get("change_pct"), (int, float))
+        or not row.get("market_date")
+        for row in rows
+    ):
+        return {"axis": axis, "label": "判定対象外", "status": "unavailable", "reason": f"{basis}に必要な確認済み同日データが不足", "basis": basis}
+    dates = {row["market_date"] for row in rows}
+    if len(dates) != 1:
+        return {"axis": axis, "label": "判定対象外", "status": "unavailable", "reason": f"基準日不一致（{' / '.join(sorted(dates))}）のため比較しない", "basis": basis}
+    left_value = round(sum(row["change_pct"] for row in left_rows) / len(left_rows), 2)
+    right_value = round(sum(row["change_pct"] for row in right_rows) / len(right_rows), 2)
+    item = comparison_axis(axis, left_label, right_label, left_value, right_value, basis)
+    item["market_date"] = next(iter(dates))
+    return item
+
+
+def build_market_regime(sector_rows, stock_rows, internals, market=None):
     nikkei = internals.get("nikkei_proxy_change_pct")
     topix = internals.get("topix_proxy_change_pct")
     divergence = bool(nikkei is not None and topix is not None and nikkei * topix < 0)
@@ -145,6 +167,13 @@ def build_market_regime(sector_rows, stock_rows, internals):
     else:
         posture = "方向感は限定的"
         posture_reason = f"日経平均 {nikkei:+.2f}%、TOPIX {topix:+.2f}%で値動きが小幅です"
+    dimensions = [
+        market_axis(market or {}, "大型株/小型株", "大型株", "小型株", ["sp500"], ["russell2000"], "S&P500とRussell2000の同日騰落率比較"),
+        market_axis(market or {}, "グロース/バリュー（代理）", "大型ハイテク", "ダウ型", ["nasdaq100"], ["dow"], "NASDAQ100とNYダウの同日騰落率による代理比較"),
+        market_axis(market or {}, "景気敏感/ディフェンシブ", "景気敏感", "ディフェンシブ", ["sector_xly", "sector_xli", "sector_xlb", "sector_xlf"], ["sector_xlp", "sector_xlv", "sector_xlu"], "米Sector SPDR ETFの同日平均騰落率比較"),
+        market_axis(market or {}, "半導体/市場全体", "半導体", "市場全体", ["sox"], ["sp500"], "SOXとS&P500の同日騰落率比較"),
+        market_axis(market or {}, "金融/市場全体", "金融", "市場全体", ["sector_xlf"], ["sp500"], "XLFとS&P500の同日騰落率比較"),
+    ]
     return {
         "headline": posture,
         "headline_reason": posture_reason,
@@ -153,8 +182,8 @@ def build_market_regime(sector_rows, stock_rows, internals):
             {"label": "TOPIX", "value": topix, "unit": "%", "meaning": "市場全体の方向"},
         ],
         "divergence_alert": f"主要指数が逆方向：{posture_reason}" if divergence else None,
-        "dimensions": [],
-        "method_note": "市場観は日経平均・TOPIX連動ETFの同日騰落だけで判定します。34銘柄を市場全体の広がりには使用しません。",
+        "dimensions": dimensions,
+        "method_note": "冒頭の市場方向は日経平均・TOPIX連動ETFの同日騰落だけで判定します。詳細軸は確認済みの同日米指数・業種ETFによる相対比較で、投資主体別フローではありません。34銘柄を市場全体の広がりには使用しません。",
     }
 
 
@@ -360,13 +389,13 @@ def scenario_review(report, sector_rows, market_date, ready=True, blocked_reason
     )
     if holiday:
         result["status"] = "休場・検証保留"
-        result["checks"] = []
+        result["checks"] = [{"sector": name, "result": "休場・次回取引日に確認"} for name in watched]
         result["note"] = "東証現物は休場です。前営業日の実績は保持し、次の取引日に見方を修正します。"
         result["market_reaction"] = "休場のため新しい現物株の結果はありません"
         result["revision"] = "先物・海外材料は監視し、現物株の判断は次の取引日まで保留"
     elif awaiting_new_session:
         result["status"] = "寄り付き前・検証保留"
-        result["checks"] = []
+        result["checks"] = [{"sector": name, "result": "本日大引け後に確認"} for name in watched]
         result["condition_result"] = "本日の条件と日本株現物の反応はまだ発生・確認していません"
         result["market_reaction"] = "本日の日本株現物は寄り付き前"
         result["unexpected_gap"] = "新しい取引結果がないため比較しません"
@@ -374,13 +403,13 @@ def scenario_review(report, sector_rows, market_date, ready=True, blocked_reason
         result["note"] = "前営業日の値動きを、本日シナリオの結果として採点しません。"
     elif blocked_reason:
         result["status"] = "判定保留"
-        result["checks"] = []
+        result["checks"] = [{"sector": name, "result": "データ整合後に確認"} for name in watched]
         result["note"] = blocked_reason
         result["market_reaction"] = "日付不一致のため比較しません"
         result["revision"] = "データ整合後に再検証"
     elif not ready:
         result["status"] = "大引け待ち"
-        result["checks"] = []
+        result["checks"] = [{"sector": name, "result": "大引け後に確認"} for name in watched]
         result["note"] = "取引中のため検証しません。大引け後の更新で前回の見方を再点検します"
     return result
 
@@ -404,7 +433,7 @@ def enrich_investor_view(result, market, report):
     stock_rows = [row for group in result.get("sector_stock_ranking", []) for row in group.get("stocks", [])]
     internals = result.get("market_internals", {})
     topix = next((row for row in sector_rows if row.get("ticker") == "1306.T"), None)
-    result["market_regime"] = build_market_regime(sector_rows, stock_rows, internals)
+    result["market_regime"] = build_market_regime(sector_rows, stock_rows, internals, market)
     result["key_drivers"] = build_key_drivers(market, result.get("market_date"), report)
     result["rotation_read"] = build_rotation(sector_rows, internals)
     benchmark_rows = result.get("benchmark_rows", [])

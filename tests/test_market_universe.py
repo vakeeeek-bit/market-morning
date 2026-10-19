@@ -133,6 +133,25 @@ class MarketUniverseTests(unittest.TestCase):
         module.mark_fred_publication_lag(markets)
         self.assertIn("FRED DGS2", markets["us2y"]["stale_reason"])
 
+    def test_2s10s_uses_same_fred_market_date(self):
+        module = importlib.import_module("scripts.update_market")
+        curve = module.calculate_2s10s(
+            {"price": 4.77, "previous": 4.82, "market_date": "2026-10-15", "previous_market_date": "2026-10-14"},
+            {"price": 5.10, "previous": 5.19, "market_date": "2026-10-15", "previous_market_date": "2026-10-14"},
+        )
+        self.assertEqual("計算成功", curve["status"])
+        self.assertEqual("2026-10-15", curve["market_date"])
+        self.assertEqual(33.0, curve["value_bp"])
+
+    def test_2s10s_refuses_mixed_dates(self):
+        module = importlib.import_module("scripts.update_market")
+        curve = module.calculate_2s10s(
+            {"price": 4.77, "previous": 4.82, "market_date": "2026-10-15", "previous_market_date": "2026-10-14"},
+            {"price": 5.10, "previous": 5.19, "market_date": "2026-10-16", "previous_market_date": "2026-10-15"},
+        )
+        self.assertEqual("基準日不一致", curve["status"])
+        self.assertIsNone(curve["value_bp"])
+
 
 if __name__ == "__main__":
     unittest.main()

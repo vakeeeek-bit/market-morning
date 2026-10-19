@@ -29,7 +29,7 @@
     "individual_news_review": {
       "status": "reviewed",
       "story_count": 3,
-      "source": "TDnet最初100件/全212件の一覧と3社PDF本文・表・コード確認。全件網羅ではない"
+      "scope": "一次資料を確認した企業固有材料のみ掲載。件数合わせは行わない"
     }
   },
   "top_stories": [
@@ -136,10 +136,16 @@
     "items": [],
     "source_review": [
       {
-        "source": "公開一覧・IFIS",
-        "result": "公開一覧403、IFIS無料ページは全件網羅を確認できず"
+        "name": "公開一覧・IFIS",
+        "url": "https://kabuyoho.jp/",
+        "result": "公開一覧403、IFIS無料ページは全件網羅を確認できず",
+        "coverage": "公開範囲のみ・全件網羅不可",
+        "freshness": "当日確認状況をJSONに記録",
+        "automation": "契約API未導入",
+        "rights": "確認できた事実だけを掲載"
       }
-    ]
+    ],
+    "summary": "契約データ未導入。公開情報で確認できない日は『変更なし』と断定しません。"
   },
   "sector_implications": [
     {

@@ -145,8 +145,18 @@ class JapanMarketDesignTests(unittest.TestCase):
         sectors = [{"name": "銀行", "change_pct": 3.49, "status": "取得成功"}]
         review = module.scenario_review(report, sectors, "2026-09-25")
         self.assertEqual("寄り付き前・検証保留", review["status"])
-        self.assertEqual([], review["checks"])
+        self.assertTrue(review["checks"])
+        self.assertTrue(all("確認" in item["result"] for item in review["checks"]))
         self.assertIn("前営業日", review["note"])
+
+    def test_market_regime_has_five_visible_dimensions(self):
+        data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))
+        dimensions = data["market_regime"]["dimensions"]
+        self.assertEqual(5, len(dimensions))
+        self.assertEqual(
+            {"大型株/小型株", "グロース/バリュー（代理）", "景気敏感/ディフェンシブ", "半導体/市場全体", "金融/市場全体"},
+            {item["axis"] for item in dimensions},
+        )
 
     def test_holiday_and_data_error_have_distinct_states(self):
         data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))

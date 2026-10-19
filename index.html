@@ -3471,7 +3471,7 @@ function renderSimpleList(
   ) {
 
     element.textContent =
-      '確認中';
+      '未取得または該当なし。データ詳細・品質情報を確認してください。';
 
     return;
 
@@ -3529,7 +3529,7 @@ function renderResultItems(
   ) {
 
     element.textContent =
-      '確認中';
+      '未取得または該当なし。データ詳細・品質情報を確認してください。';
 
     return;
 
@@ -3605,7 +3605,7 @@ function renderCards(
   ) {
 
     element.textContent =
-      '確認中';
+      '未取得または該当なし。データ詳細・品質情報を確認してください。';
 
     return;
 
@@ -4130,7 +4130,7 @@ function renderTable(
   ) {
 
     element.textContent =
-      '確認中';
+      '未取得または該当なし。データ詳細・品質情報を確認してください。';
 
     return;
 
@@ -5357,11 +5357,7 @@ async function loadMarketReport() {
        EVENTS
     ------------------------- */
 
-    if (
-      Array.isArray(
-        report.events
-      )
-    ) {
+    if (Array.isArray(report.events) && report.events.length) {
 
       renderTable(
 
@@ -5398,6 +5394,10 @@ async function loadMarketReport() {
 
       );
 
+    } else {
+      const holder = document.getElementById('event-section');
+      const meta = report.events_metadata || {};
+      holder.textContent = `${safeText(meta.status, '取得状況未確認')}｜${safeText(meta.window_start, '開始日未確認')}〜${safeText(meta.window_end, '終了日未確認')}。${safeText(meta.coverage_note, '公式日程で確認できたイベントのみ掲載します。')}`;
     }
 
 

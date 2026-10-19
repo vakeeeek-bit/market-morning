@@ -38,6 +38,8 @@ TOP_LEVEL_REQUIRED = {
         "final_conclusion",
         "publication_policy",
         "market_move_explanation",
+        "events",
+        "events_metadata",
     ],
     "market": ["updated_at", "timezone", "markets", "data_quality"],
     "japan-stocks": [

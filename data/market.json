@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-10-19 12:47:29",
+  "updated_at": "2026-10-19 12:52:23",
   "timezone": "Asia/Tokyo",
-  "source": "Yahoo Finance via yfinance for market closes; FRED DGS2 for US 2Y Treasury yield",
+  "source": "Yahoo Finance via yfinance for market closes; FRED DGS2/DGS10 for US Treasury yields",
   "notes": {
     "basis": "priceは各tickerの取得可能な最新日足Close。market_dateを必ず併記し、取引中値や日中高値として扱わない",
     "topix": "TOPIXそのものではなく1306.T（TOPIX連動ETF）を参考値として使用",
     "sox": "^SOXをPHLX半導体株指数の参考終値として使用",
     "us_sectors": "S&P500の11業種そのものではなく、各Sector SPDR ETFの日足終値をセクター強弱の参考値として使用",
-    "us10y": "^TNXを米10年債利回りとして使用",
-    "us2y": "米2年債利回りはFRED DGS2を使用。公表タイミングの違いにより、米10年債と基準日がずれる場合があります",
-    "us_2s10s": "米10年債利回り - 米2年債利回り。両系列のmarket_dateも確認してください",
+    "us10y": "米10年債利回りはFRED DGS10を使用",
+    "us2y": "米2年債利回りはFRED DGS2を使用",
+    "us_2s10s": "同じFRED公表日のDGS10 - DGS2。基準日が一致しない場合は算出しない",
     "vix": "^VIXをVIX指数として使用"
   },
   "markets": {

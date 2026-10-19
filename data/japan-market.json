@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19 12:41:03 JST",
+  "updated_at": "2026-10-19 12:52:28 JST",
   "market_date": "2026-10-16",
   "data_phase": "取引中暫定",
   "data_state": {
@@ -496,6 +496,19 @@
           "trading_value_proxy_yen": 68502594000,
           "market_date": "2026-10-16",
           "status": "取得成功"
+        },
+        {
+          "ticker": "6758.T",
+          "name": "ソニーグループ",
+          "sector": "電機・精密",
+          "price": 3959.0,
+          "change_pct": 1.93,
+          "return_5d_pct": 6.83,
+          "volume": 18570000,
+          "volume_ratio_20d": 1.38,
+          "trading_value_proxy_yen": 73518630000,
+          "market_date": "2026-10-16",
+          "status": "取得成功"
         }
       ]
     },
@@ -545,12 +558,38 @@
           "trading_value_proxy_yen": 15897231350,
           "market_date": "2026-10-16",
           "status": "取得成功"
+        },
+        {
+          "ticker": "9503.T",
+          "name": "関西電力",
+          "sector": "電力・ガス",
+          "price": 2658.5,
+          "change_pct": -0.95,
+          "return_5d_pct": 0.53,
+          "volume": 2856300,
+          "volume_ratio_20d": 0.65,
+          "trading_value_proxy_yen": 7593473550,
+          "market_date": "2026-10-16",
+          "status": "取得成功"
         }
       ]
     },
     {
       "sector": "運輸・物流",
       "stocks": [
+        {
+          "ticker": "9020.T",
+          "name": "JR東日本",
+          "sector": "運輸・物流",
+          "price": 3470.0,
+          "change_pct": 1.37,
+          "return_5d_pct": 3.58,
+          "volume": 2596900,
+          "volume_ratio_20d": 0.91,
+          "trading_value_proxy_yen": 9011243000,
+          "market_date": "2026-10-16",
+          "status": "取得成功"
+        },
         {
           "ticker": "9101.T",
           "name": "日本郵船",
@@ -643,6 +682,19 @@
           "trading_value_proxy_yen": 97970675000,
           "market_date": "2026-10-16",
           "status": "取得成功"
+        },
+        {
+          "ticker": "8316.T",
+          "name": "三井住友FG",
+          "sector": "銀行",
+          "price": 3276.0,
+          "change_pct": 1.68,
+          "return_5d_pct": -0.64,
+          "volume": 18002200,
+          "volume_ratio_20d": 0.76,
+          "trading_value_proxy_yen": 58975207200,
+          "market_date": "2026-10-16",
+          "status": "取得成功"
         }
       ]
     },
@@ -690,6 +742,19 @@
           "volume": 5640300,
           "volume_ratio_20d": 1.47,
           "trading_value_proxy_yen": 20699901000,
+          "market_date": "2026-10-16",
+          "status": "取得成功"
+        },
+        {
+          "ticker": "8801.T",
+          "name": "三井不動産",
+          "sector": "不動産",
+          "price": 1501.5,
+          "change_pct": 2.18,
+          "return_5d_pct": 5.37,
+          "volume": 11289600,
+          "volume_ratio_20d": 1.11,
+          "trading_value_proxy_yen": 16951334400,
           "market_date": "2026-10-16",
           "status": "取得成功"
         }
@@ -763,6 +828,19 @@
       "status": "取得成功"
     },
     {
+      "ticker": "6758.T",
+      "name": "ソニーグループ",
+      "sector": "電機・精密",
+      "price": 3959.0,
+      "change_pct": 1.93,
+      "return_5d_pct": 6.83,
+      "volume": 18570000,
+      "volume_ratio_20d": 1.38,
+      "trading_value_proxy_yen": 73518630000,
+      "market_date": "2026-10-16",
+      "status": "取得成功"
+    },
+    {
       "ticker": "6501.T",
       "name": "日立製作所",
       "sector": "電機・精密",
@@ -772,6 +850,19 @@
       "volume": 11872200,
       "volume_ratio_20d": 1.11,
       "trading_value_proxy_yen": 68502594000,
+      "market_date": "2026-10-16",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "8316.T",
+      "name": "三井住友FG",
+      "sector": "銀行",
+      "price": 3276.0,
+      "change_pct": 1.68,
+      "return_5d_pct": -0.64,
+      "volume": 18002200,
+      "volume_ratio_20d": 0.76,
+      "trading_value_proxy_yen": 58975207200,
       "market_date": "2026-10-16",
       "status": "取得成功"
     },
@@ -798,32 +889,6 @@
       "volume": 20179800,
       "volume_ratio_20d": 1.15,
       "trading_value_proxy_yen": 46090663200,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "8058.T",
-      "name": "三菱商事",
-      "sector": "商社・卸売",
-      "price": 4726.0,
-      "change_pct": 1.11,
-      "return_5d_pct": 2.96,
-      "volume": 7650800,
-      "volume_ratio_20d": 1.01,
-      "trading_value_proxy_yen": 36157680800,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "4063.T",
-      "name": "信越化学工業",
-      "sector": "素材・化学",
-      "price": 5978.0,
-      "change_pct": 0.25,
-      "return_5d_pct": -2.34,
-      "volume": 5814800,
-      "volume_ratio_20d": 0.9,
-      "trading_value_proxy_yen": 34760874400,
       "market_date": "2026-10-16",
       "status": "取得成功"
     }
@@ -865,6 +930,19 @@
       "volume": 5640300,
       "volume_ratio_20d": 1.47,
       "trading_value_proxy_yen": 20699901000,
+      "market_date": "2026-10-16",
+      "status": "取得成功"
+    },
+    {
+      "ticker": "6758.T",
+      "name": "ソニーグループ",
+      "sector": "電機・精密",
+      "price": 3959.0,
+      "change_pct": 1.93,
+      "return_5d_pct": 6.83,
+      "volume": 18570000,
+      "volume_ratio_20d": 1.38,
+      "trading_value_proxy_yen": 73518630000,
       "market_date": "2026-10-16",
       "status": "取得成功"
     },
@@ -934,28 +1012,15 @@
       "status": "取得成功"
     },
     {
-      "ticker": "1801.T",
-      "name": "大成建設",
-      "sector": "建設・資材",
-      "price": 11290.0,
-      "change_pct": 2.54,
-      "return_5d_pct": -4.12,
-      "volume": 897800,
-      "volume_ratio_20d": 1.1,
-      "trading_value_proxy_yen": 10136162000,
-      "market_date": "2026-10-16",
-      "status": "取得成功"
-    },
-    {
-      "ticker": "8591.T",
-      "name": "オリックス",
-      "sector": "金融（銀行除く）",
-      "price": 5856.0,
-      "change_pct": 2.36,
-      "return_5d_pct": 1.83,
-      "volume": 4034300,
-      "volume_ratio_20d": 1.07,
-      "trading_value_proxy_yen": 23624860800,
+      "ticker": "8801.T",
+      "name": "三井不動産",
+      "sector": "不動産",
+      "price": 1501.5,
+      "change_pct": 2.18,
+      "return_5d_pct": 5.37,
+      "volume": 11289600,
+      "volume_ratio_20d": 1.11,
+      "trading_value_proxy_yen": 16951334400,
       "market_date": "2026-10-16",
       "status": "取得成功"
     }
@@ -1000,7 +1065,7 @@
     "sector_total": 17,
     "sector_available": 17,
     "stock_total": 34,
-    "stock_available": 29,
+    "stock_available": 34,
     "date_alignment": {
       "expected_market_date": "2026-10-16",
       "report_target_market_date": "2026-10-16",

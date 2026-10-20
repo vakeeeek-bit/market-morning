@@ -1157,16 +1157,30 @@
       "source_url": "https://www.bea.gov/news/schedule",
       "source_name": "U.S. Bureau of Economic Analysis",
       "verified_on": "2026-10-19"
+    },
+    {
+      "id": "ism-manufacturing-2026-10",
+      "event": "米ISM製造業景況指数（10月）",
+      "start_at_jst": "2026-11-03T00:00:00+09:00",
+      "jst_time": "2026-11-03 00:00 JST",
+      "forecast": "未確認",
+      "previous": "未確認",
+      "focus": "新規受注・雇用・価格指数と景気循環の方向",
+      "affected_markets": "米国債・ドル・米国株・日本株",
+      "importance": "高",
+      "source_url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-report-on-business/",
+      "source_name": "Institute for Supply Management",
+      "verified_on": "2026-10-19"
     }
   ],
   "events_metadata": {
     "status": "取得済",
-    "updated_at": "2026-10-19T12:52:22+09:00",
-    "window_start": "2026-10-19",
-    "window_end": "2026-11-02",
+    "updated_at": "2026-10-20T09:26:54+09:00",
+    "window_start": "2026-10-20",
+    "window_end": "2026-11-03",
     "timezone": "Asia/Tokyo",
     "source_policy": "公式日程で確認済みのイベントのみ。予想・前回値は未確認を推測しない",
-    "coverage_note": "公式日程で確認できた主要イベントのみ。市場予想・前回値を確認できない場合は未確認と表示する。既存日程の確認日は各verified_onを保持。本日全日程を再確認したとは扱わない。",
+    "coverage_note": "公式日程で確認できた主要イベントのみ。市場予想・前回値を確認できない場合は未確認と表示する。",
     "catalog_version": "1.0"
   }
 }

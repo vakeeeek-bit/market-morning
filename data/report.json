@@ -1205,12 +1205,12 @@
   ],
   "events_metadata": {
     "status": "取得済",
-    "updated_at": "2026-10-20T10:55:46+09:00",
-    "window_start": "2026-10-20",
-    "window_end": "2026-11-03",
+    "updated_at": "2026-10-21T08:58:26+09:00",
+    "window_start": "2026-10-21",
+    "window_end": "2026-11-04",
     "timezone": "Asia/Tokyo",
     "source_policy": "公式日程で確認済みのイベントのみ。予想・前回値は未確認を推測しない",
-    "coverage_note": "公式日程で確認できた主要イベントのみ。既存日程のverified_onを保持し、10月21日に全日程を再確認したとは扱わない。",
+    "coverage_note": "公式日程で確認できた主要イベントのみ。市場予想・前回値を確認できない場合は未確認と表示する。",
     "catalog_version": "1.0"
   }
 }

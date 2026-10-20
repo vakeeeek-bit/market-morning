@@ -28,8 +28,8 @@
     ],
     "individual_news_review": {
       "status": "reviewed",
-      "story_count": 3,
-      "scope": "20日公表の一次資料からツガミ、JPX市場区分変更、明光ネットワークジャパン訂正資料を実読。TDnet全件網羅ではない。"
+      "story_count": 8,
+      "scope": "一次資料を確認した企業固有材料のみ掲載。件数合わせは行わない"
     }
   },
   "top_stories": [
@@ -75,6 +75,111 @@
       "price_reaction": "未分離",
       "related_stocks": [],
       "importance": "medium",
+      "confidence": "supported"
+    },
+    {
+      "company": "ツガミ",
+      "ticker": "6101",
+      "headline": "ツガミが中間業績・中間配当予想を上方修正",
+      "fact": "ツガミは20日、中間売上収益750億円から812億円、営業利益195億円から252億円、中間利益90億円から123億円へ上方修正。中間配当は49円から61円へ増額し、通期予想は11月12日予定の中間決算時に公表するとした。",
+      "source_url": "https://kabuyoho-sls-disclose.ifis.co.jp/a0c/140120261019552815.pdf",
+      "analysis": "中国・インド等の事業進展は個別追い風候補。通期増額は未発表で、中間予想を確定実績としない。",
+      "category": "追い風候補・機械に限定",
+      "related_sectors": [
+        "機械",
+        "工作機械"
+      ],
+      "today_watch": "21日株価・出来高、11月12日の通期予想",
+      "announced_at": "2026-10-20",
+      "timing": "20日大引け後・21日寄り付き前",
+      "market_pricing_status": "21日現物反応は未確認",
+      "price_reaction": "未確認",
+      "related_stocks": [],
+      "importance": "high",
+      "confidence": "supported"
+    },
+    {
+      "company": "HENNGE",
+      "ticker": "4475",
+      "headline": "HENNGEがプライム市場へ区分変更",
+      "fact": "JPXはHENNGE（4475）について、2026年10月20日付でグロース市場からプライム市場へ変更したと掲載。幹事取引参加者はみずほ証券。",
+      "source_url": "https://www.jpx.co.jp/listing/stocks/transfers/",
+      "analysis": "投資家層・需給変化の可能性はあるが、指数採用や買い需要、株価寄与を断定しない。",
+      "category": "中立・需給確認",
+      "related_sectors": [
+        "情報通信",
+        "クラウド"
+      ],
+      "today_watch": "売買代金、需給持続、公式指数日程",
+      "announced_at": "2026-10-20",
+      "timing": "20日変更済み",
+      "market_pricing_status": "20日終値に一部織り込みの可能性、記事単独反応未分離",
+      "price_reaction": "未確認",
+      "related_stocks": [],
+      "importance": "medium",
+      "confidence": "supported"
+    },
+    {
+      "company": "明光ネットワークジャパン",
+      "ticker": "4668",
+      "headline": "明光ネットワークジャパンが決算説明資料を訂正",
+      "fact": "会社は20日、10月14日公表の2026年8月期決算説明資料の8・12・62ページに数値誤りがあり訂正したと発表。決算短信の数値には訂正なし。",
+      "source_url": "https://www.meikonet.co.jp/ja/ir/ir-news/auto_20261020553478/pdfFile.pdf",
+      "analysis": "説明資料の比較数値と業績予想表示を再確認する必要がある。決算短信まで訂正されたとは扱わない。",
+      "category": "中立・確認注意",
+      "related_sectors": [
+        "サービス",
+        "教育"
+      ],
+      "today_watch": "訂正後資料、追加訂正の有無",
+      "announced_at": "2026-10-20",
+      "timing": "20日公表・21日寄り付き前確認",
+      "market_pricing_status": "記事単独反応は未確認",
+      "price_reaction": "未確認",
+      "related_stocks": [],
+      "importance": "medium",
+      "confidence": "supported"
+    },
+    {
+      "company": "コーエーテクモホールディングス",
+      "ticker": "3635",
+      "headline": "中間営業利益予想を上方修正、通期は据え置き",
+      "fact": "19日16:00公表。2027年3月期中間の売上予想を340億円から370億円、営業利益70億円から115億円、純利益90億円から180億円へ修正。通期予想は現時点で変更なし。",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261019552780.pdf",
+      "analysis": "旧作・バックカタログの好調による本業改善と運用収支を分離。中間増額だけで通期増額を先取りしない。",
+      "category": "追い風候補・ゲームに限定",
+      "related_sectors": [
+        "ゲーム",
+        "情報通信"
+      ],
+      "today_watch": "通期見通し、販売持続性、営業外収支の再現性",
+      "announced_at": "2026-10-19",
+      "timing": "19日大引け後・20日寄り付き前",
+      "market_pricing_status": "20日現物反応は未確認",
+      "price_reaction": "未確認",
+      "related_stocks": [],
+      "importance": "high",
+      "confidence": "supported"
+    },
+    {
+      "company": "GMOグローバルサイン・ホールディングス",
+      "ticker": "3788",
+      "headline": "純利益予想増額・増配、売上と営業利益は据え置き",
+      "fact": "19日16:05公表。2026年12月期純利益予想を10.52億円から13.12億円、期末配当予想を59.67円から74.35円へ修正。売上・営業・経常利益予想は変更なし。",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261019553071.pdf",
+      "analysis": "還元増は個別追い風候補。子会社売却益等の寄与を区別し、クラウド本業の利益成長が加速したとは断定しない。",
+      "category": "追い風候補・一時利益の留保",
+      "related_sectors": [
+        "クラウド",
+        "情報通信"
+      ],
+      "today_watch": "継続利益、追加対価の条件、配当実施",
+      "announced_at": "2026-10-19",
+      "timing": "19日大引け後・20日寄り付き前",
+      "market_pricing_status": "20日現物反応は未確認",
+      "price_reaction": "未確認",
+      "related_stocks": [],
+      "importance": "high",
       "confidence": "supported"
     }
   ],

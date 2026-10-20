@@ -1,0 +1,756 @@
+{
+  "version": "2.0",
+  "report_date": "2026-10-21",
+  "target_market_date": "2026-10-19",
+  "updated_at": "2026-10-21T06:43:56+09:00",
+  "scope_note": "21日朝、BLS・日銀・国内3件の一次資料と20日米国市場背景、日本20日大引けを確認。未確認値は除外した部分調査。",
+  "research_coverage": {
+    "status": "QUALIFIED",
+    "directions": [
+      {
+        "id": "fixed_universe",
+        "status": "QUALIFIED",
+        "evidence": "正本32系列を確認。米株・VIX・USDJPY・11ETFは19日、金利・DXY等は16日で21日当日成功なし"
+      },
+      {
+        "id": "cross_news",
+        "status": "PASS",
+        "evidence": "BLS、日銀PDF、ツガミPDF、JPX市場区分、明光訂正PDFを一次実読"
+      },
+      {
+        "id": "reverse_from_anomalies",
+        "status": "PASS",
+        "evidence": "20日Reuters終値記事と日本20日大引けを照合。米ヘルスケア優位・テック一服と国内医薬品優位・AI弱含みを確認"
+      },
+      {
+        "id": "previous_day_change",
+        "status": "PASS",
+        "evidence": "20日版の半導体条件付き回復から、21日版はヘルスケア・内需ローテーションへ修正"
+      }
+    ],
+    "items": [
+      {
+        "id": "china_competitor_and_supply",
+        "label": "中国競合技術・供給能力",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "CXMT公式ニュースを取得。19日反発の単独原因となる新規供給量・顧客認定は確認できず不採用",
+        "attempts": [
+          {
+            "method": "CXMT公式一覧",
+            "result": "HTTP200、製品情報を時点付き実績とはしない",
+            "source_urls": [
+              "https://www.cxmt.com/en/news.html"
+            ],
+            "checked_at": "2026-10-20T06:54:20+09:00"
+          }
+        ],
+        "impact_if_unavailable": "半導体下落要因の重要な競争圧力を見落とす",
+        "publication_use": "excluded"
+      },
+      {
+        "id": "fixed_market_universe",
+        "label": "固定市場Universe",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "正本32系列と日付確認。米株・11ETFは19日、金利・DXY・商品は16日。21日成功なし",
+        "attempts": [
+          {
+            "method": "公開正本・status",
+            "result": "statusは20日10:55成功。market米株・11ETFは19日、日本大引けはjapan-market20日",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/status.json",
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
+            ],
+            "checked_at": "2026-10-21T06:43:56+09:00"
+          }
+        ],
+        "impact_if_unavailable": "市場全体判断を保留",
+        "publication_use": "selected"
+      },
+      {
+        "id": "policy_and_macro_news",
+        "label": "政策・中央銀行・マクロ",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "BLS州別雇用、日銀総裁会見、FRB・USTR・OFAC・WH・BIS一覧を確認",
+        "attempts": [
+          {
+            "method": "BLS・日銀一次本文",
+            "result": "BLS州別雇用本文と日銀会見PDF全4頁を実読",
+            "source_urls": [
+              "https://www.bls.gov/news.release/laus.nr0.htm",
+              "https://www.boj.or.jp/about/press/kaiken_2026/kk261020a.pdf"
+            ],
+            "checked_at": "2026-10-21T06:43:56+09:00"
+          },
+          {
+            "method": "政策・通商・制裁一覧",
+            "result": "FRB20日新規決定なし、USTR・OFAC・WH・BISの最新一覧は19日以前。確認範囲を限定",
+            "source_urls": [
+              "https://www.federalreserve.gov/newsevents/pressreleases/2026-press-fomc.htm",
+              "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october",
+              "https://ofac.treasury.gov/recent-actions",
+              "https://www.whitehouse.gov/presidential-actions/",
+              "https://www.bis.gov/news-updates"
+            ],
+            "checked_at": "2026-10-21T06:43:56+09:00"
+          }
+        ],
+        "impact_if_unavailable": "政策方向を断定しない",
+        "publication_use": "selected"
+      },
+      {
+        "id": "market_anomaly_reverse_search",
+        "label": "異常値からの逆引き",
+        "tier": "Required",
+        "status": "取得済",
+        "evidence": "20日Reuters終値記事と日本20日大引けでローテーションを照合",
+        "attempts": [
+          {
+            "method": "Reuters20日終値記事",
+            "result": "ダウ・ヘルスケア・ディフェンシブ優位、テック・エネルギー劣後を確認。外部価格は不採用",
+            "source_urls": [
+              "https://www.reuters.com/world/asia-pacific/nasdaq-futures-dip-oil-prices-climb-earnings-loom-2026-10-20/"
+            ],
+            "checked_at": "2026-10-21T06:43:56+09:00"
+          },
+          {
+            "method": "日本20日大引け正本",
+            "result": "指数-1.24%、医薬品・小売優位、ソフトバンクG-6.01%を確認",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
+            ],
+            "checked_at": "2026-10-21T06:43:56+09:00"
+          }
+        ],
+        "impact_if_unavailable": "指数表面だけの分析になる",
+        "publication_use": "selected"
+      },
+      {
+        "id": "previous_day_view",
+        "label": "前回公開との差分",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "20日版と比較し、半導体反発候補からヘルスケア・内需優位へ重点変更",
+        "attempts": [
+          {
+            "method": "最新main20日版比較",
+            "result": "正本更新、日本20日実績、20日米国ローテーションを差分確認",
+            "source_urls": [
+              "https://market-morning-gules.vercel.app/data/history/2026-10-20/report.json",
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-10-21T06:43:56+09:00"
+          }
+        ],
+        "impact_if_unavailable": "前回文章の流用を検出できない",
+        "publication_use": "selected"
+      },
+      {
+        "id": "company_disclosures",
+        "label": "日本株の個別企業開示",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "ツガミ1頁、明光4頁、JPX市場区分一覧を実読。予想・実績・訂正・区分変更を分離",
+        "attempts": [
+          {
+            "method": "企業PDF・JPX一覧",
+            "result": "ツガミ中間予想・配当、HENNGE区分変更、明光説明資料訂正を確認",
+            "source_urls": [
+              "https://kabuyoho-sls-disclose.ifis.co.jp/a0c/140120261019552815.pdf",
+              "https://www.jpx.co.jp/listing/stocks/transfers/",
+              "https://www.meikonet.co.jp/ja/ir/ir-news/auto_20261020553478/pdfFile.pdf"
+            ],
+            "checked_at": "2026-10-21T06:43:56+09:00"
+          }
+        ],
+        "impact_if_unavailable": "個別材料欄を公開しない",
+        "publication_use": "selected"
+      },
+      {
+        "id": "analyst_rating_changes",
+        "label": "アナリスト評価変更",
+        "tier": "Required",
+        "status": "十分調査したが取得不能",
+        "evidence": "公開評価一覧と無料情報では21日全件網羅を確認できず",
+        "attempts": [
+          {
+            "method": "公開評価一覧",
+            "result": "契約なし・全件網羅不可",
+            "source_urls": [
+              "https://kabutan.jp/news/marketnews/?category=6"
+            ],
+            "checked_at": "2026-10-21T06:43:56+09:00"
+          },
+          {
+            "method": "IFIS無料情報",
+            "result": "個別開示は確認できるが評価変更全件の網羅性は未確認",
+            "source_urls": [
+              "https://kabuyoho.jp/"
+            ],
+            "checked_at": "2026-10-21T06:43:56+09:00"
+          }
+        ],
+        "impact_if_unavailable": "変更なしと断定せず、評価変更一覧を除外",
+        "publication_use": "excluded"
+      },
+      {
+        "id": "commodity_contract_definitions",
+        "label": "商品先物の契約定義",
+        "tier": "Required",
+        "status": "十分調査したが取得不能",
+        "evidence": "公式ページ取得も保存連続足との契約対応未確認",
+        "attempts": [
+          {
+            "method": "CME Gold公式",
+            "result": "HTTP200、保存連続足との契約対応未確認",
+            "source_urls": [
+              "https://www.cmegroup.com/markets/metals/precious/gold.settlements.html"
+            ],
+            "checked_at": "2026-10-20T06:54:20+09:00"
+          },
+          {
+            "method": "CME WTI公式",
+            "result": "HTTP200、保存連続足との契約対応未確認",
+            "source_urls": [
+              "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html"
+            ],
+            "checked_at": "2026-10-20T06:54:20+09:00"
+          }
+        ],
+        "impact_if_unavailable": "数値不採用",
+        "publication_use": "excluded"
+      }
+    ]
+  },
+  "analysis_quality": {
+    "status": "PASS",
+    "materials": [
+      {
+        "headline": "米20日はヘルスケア・価値株優位",
+        "fact": {
+          "text": "Reutersは20日、ダウ・S&P上昇、NASDAQ小動き、ヘルスケア・不動産・公益・小型株優位、テック・エネルギー劣後を報道。正本価格には採用しない。",
+          "source_urls": [
+            "https://www.reuters.com/world/asia-pacific/nasdaq-futures-dip-oil-prices-climb-earnings-loom-2026-10-20/"
+          ],
+          "verification_status": "PASS"
+        },
+        "observed_market_reaction": {
+          "text": "記事単独の市場反応は未確認。正本19日・日本20日・米20日背景を分離",
+          "assets_checked": [
+            "米株",
+            "金利",
+            "為替",
+            "原油"
+          ]
+        },
+        "market_internals": {
+          "text": "正本19日ETFは3上昇8下落。日本20日は医薬品・小売優位、AI関連弱含み"
+        },
+        "market_pricing": {
+          "status": "unpriced",
+          "text": "日本20日大引けと米20日市場の時間差を区別。21日国内初動は未確認"
+        },
+        "interpretation": {
+          "text": "半導体全面回復を取り下げ、医薬品・内需とAI関連を選別する。",
+          "confidence": "supported",
+          "evidence": "Reutersは20日、ダウ・S&P上昇、NASDAQ小動き、ヘルスケア・不動産・公益・小型株優位、テック・エネルギー劣後を報道。正本価格には採用しない。",
+          "uncertainty": "21日国内初動・記事単独寄与・最新時点値は未確認"
+        },
+        "japan_transmission": {
+          "economic_channel": "半導体全面回復を取り下げ、医薬品・内需とAI関連を選別する。",
+          "intermediate_reactions": [
+            "米国セクター回転",
+            "日本20日相対騰落",
+            "21日個別株と出来高を確認"
+          ],
+          "affected_sectors": [
+            "医薬品",
+            "小売",
+            "半導体",
+            "情報通信"
+          ],
+          "pricing_in_japan": "20日までの国内実績あり、米20日分と大引け後開示は未反映",
+          "assessment": "条件付き"
+        },
+        "counter_evidence": [
+          "正本19日はSOX+1.61%",
+          "米20日ヘルスケア優位は外部報道",
+          "日本医薬品の出来高比は極端な増加ではない"
+        ],
+        "change_conditions": [
+          "国内半導体の市場幅改善",
+          "医薬品相対優位の反転",
+          "米金利・原油再上昇"
+        ],
+        "chronology_check": "PASS",
+        "conflict_resolution": "正本19日、国内20日大引け、米20日、21日朝を分離。予想と実績、会見と政策決定を区別"
+      },
+      {
+        "headline": "日銀総裁の追加利上げ基本姿勢",
+        "fact": {
+          "text": "日銀20日公表の16日会見で、植田総裁は基本的に政策金利を引き上げ緩和度合いを調整し、時期・ペースは中東・AI需要・為替等を点検すると説明。",
+          "source_urls": [
+            "https://www.boj.or.jp/about/press/kaiken_2026/kk261020a.pdf"
+          ],
+          "verification_status": "PASS"
+        },
+        "observed_market_reaction": {
+          "text": "記事単独の市場反応は未確認。正本19日・日本20日・米20日背景を分離",
+          "assets_checked": [
+            "米株",
+            "金利",
+            "為替",
+            "原油"
+          ]
+        },
+        "market_internals": {
+          "text": "日本20日は指数下落。会見本文公表は20日で記事単独反応未確認"
+        },
+        "market_pricing": {
+          "status": "partially_priced",
+          "text": "日本20日大引けと米20日市場の時間差を区別。21日国内初動は未確認"
+        },
+        "interpretation": {
+          "text": "銀行に相対追い風候補、高PER・不動産に逆風候補。ただし10月会合の決定ではない。",
+          "confidence": "supported",
+          "evidence": "日銀20日公表の16日会見で、植田総裁は基本的に政策金利を引き上げ緩和度合いを調整し、時期・ペースは中東・AI需要・為替等を点検すると説明。",
+          "uncertainty": "21日国内初動・記事単独寄与・最新時点値は未確認"
+        },
+        "japan_transmission": {
+          "economic_channel": "銀行に相対追い風候補、高PER・不動産に逆風候補。ただし10月会合の決定ではない。",
+          "intermediate_reactions": [
+            "米国セクター回転",
+            "日本20日相対騰落",
+            "21日個別株と出来高を確認"
+          ],
+          "affected_sectors": [
+            "銀行",
+            "不動産",
+            "輸送用機器",
+            "高PER"
+          ],
+          "pricing_in_japan": "20日までの国内実績あり、米20日分と大引け後開示は未反映",
+          "assessment": "条件付き"
+        },
+        "counter_evidence": [
+          "中心見通しを変える重要情報はなかった",
+          "具体的時期・幅は未提示",
+          "金融株の絶対上昇は未確認"
+        ],
+        "change_conditions": [
+          "国内金利上昇と銀行優位",
+          "円急伸",
+          "10月会合結果"
+        ],
+        "chronology_check": "PASS",
+        "conflict_resolution": "正本19日、国内20日大引け、米20日、21日朝を分離。予想と実績、会見と政策決定を区別"
+      },
+      {
+        "headline": "ツガミ中間予想・配当上方修正",
+        "fact": {
+          "text": "ツガミは20日、中間売上収益・営業利益・中間利益と中間配当予想を上方修正。通期予想は11月12日予定の中間決算時に公表予定。",
+          "source_urls": [
+            "https://kabuyoho-sls-disclose.ifis.co.jp/a0c/140120261019552815.pdf"
+          ],
+          "verification_status": "PASS"
+        },
+        "observed_market_reaction": {
+          "text": "記事単独の市場反応は未確認。正本19日・日本20日・米20日背景を分離",
+          "assets_checked": [
+            "米株",
+            "金利",
+            "為替",
+            "原油"
+          ]
+        },
+        "market_internals": {
+          "text": "日本20日機械ETFは下落。ツガミ開示は大引け後で21日初動未確認"
+        },
+        "market_pricing": {
+          "status": "unpriced",
+          "text": "日本20日大引けと米20日市場の時間差を区別。21日国内初動は未確認"
+        },
+        "interpretation": {
+          "text": "機械株の個別追い風候補だが、通期増額や確定実績へ拡張しない。",
+          "confidence": "supported",
+          "evidence": "ツガミは20日、中間売上収益・営業利益・中間利益と中間配当予想を上方修正。通期予想は11月12日予定の中間決算時に公表予定。",
+          "uncertainty": "21日国内初動・記事単独寄与・最新時点値は未確認"
+        },
+        "japan_transmission": {
+          "economic_channel": "機械株の個別追い風候補だが、通期増額や確定実績へ拡張しない。",
+          "intermediate_reactions": [
+            "米国セクター回転",
+            "日本20日相対騰落",
+            "21日個別株と出来高を確認"
+          ],
+          "affected_sectors": [
+            "機械",
+            "工作機械"
+          ],
+          "pricing_in_japan": "20日までの国内実績あり、米20日分と大引け後開示は未反映",
+          "assessment": "条件付き"
+        },
+        "counter_evidence": [
+          "通期予想は未公表",
+          "市場全体の不透明感を会社も記載",
+          "中間予想は確定実績ではない"
+        ],
+        "change_conditions": [
+          "21日株価・出来高",
+          "11月通期予想",
+          "中国・インド需要"
+        ],
+        "chronology_check": "PASS",
+        "conflict_resolution": "正本19日、国内20日大引け、米20日、21日朝を分離。予想と実績、会見と政策決定を区別"
+      }
+    ],
+    "template_degradation_audit": {
+      "today_specific": true,
+      "previous_report_compared": true,
+      "actual_market_reaction_checked": true,
+      "multi_asset_checked": true,
+      "conflicting_materials_compared": true,
+      "transmission_explained": true,
+      "observable_change_conditions": true,
+      "comparison_note": "20日版の半導体反発候補から、21日版は米ヘルスケア・価値株回転、日本20日医薬品優位、日銀・ツガミへ重点変更。"
+    }
+  },
+  "counter_evidence_audit": {
+    "status": "PASS",
+    "conclusions": [
+      {
+        "conclusion": "医薬品・内需の相対優位候補",
+        "checks": [
+          "日本20日医薬品ETF+0.92%・小売+1.85%",
+          "米20日ヘルスケア優位の報道",
+          "日本指数は-1.24%で絶対上昇を保証しない"
+        ],
+        "weighing": "相対優位として採用、絶対強気は不採用",
+        "uncertainty": "21日の国内持続性と出来高"
+      },
+      {
+        "conclusion": "半導体は全面回復ではない",
+        "checks": [
+          "正本19日SOX+1.61%",
+          "19日ETFは3上昇8下落",
+          "米20日はテック一服報道",
+          "日本20日ソフトバンクG-6.01%"
+        ],
+        "weighing": "一律追い風から個別確認へ下方修正",
+        "uncertainty": "21日の複数銘柄相対反発"
+      },
+      {
+        "conclusion": "日銀姿勢は銀行に条件付き追い風",
+        "checks": [
+          "追加利上げ基本姿勢",
+          "具体時期・幅未提示",
+          "中心見通し変更なし"
+        ],
+        "weighing": "相対候補に限定",
+        "uncertainty": "10月会合と国内金利"
+      }
+    ]
+  },
+  "cross_asset_consistency": {
+    "status": "QUALIFIED",
+    "assets_checked": [
+      "equities",
+      "rates",
+      "fx",
+      "commodities",
+      "crypto"
+    ],
+    "relationships": [
+      {
+        "combination": "正本19日米株高＋11ETF3上昇8下落",
+        "explanation": "指数反発と市場幅の弱さが併存。全面リスクオンではない",
+        "unresolved": false
+      },
+      {
+        "combination": "日本20日株安＋医薬品・小売優位",
+        "explanation": "指数安の中の防御・内需ローテーション。米20日報道と方向が一部一致",
+        "unresolved": false
+      },
+      {
+        "combination": "米20日金利・原油低下報道＋商品正本16日",
+        "explanation": "外部背景は確認したが限月定義付き正本がなく数値判断は保留",
+        "unresolved": true,
+        "uncertainty": "Gold・WTI・Brentの限月・値種別・基準時刻未確認"
+      },
+      {
+        "combination": "暗号資産18日＋為替19日",
+        "explanation": "現在値ではないため21日リスク選好の判定に使用しない",
+        "unresolved": true,
+        "uncertainty": "時刻付き現在値なし"
+      }
+    ]
+  },
+  "previous_day_change": {
+    "status": "PASS",
+    "prior_view": "20日版は19日米半導体反発を条件付き追い風とした",
+    "new_events": [
+      "20日米国のヘルスケア・価値株優位",
+      "日本20日の指数下落・医薬品優位・AI関連弱含み",
+      "日銀総裁会見要旨",
+      "BLS州別雇用",
+      "ツガミ等国内開示"
+    ],
+    "changed": [
+      "半導体全面回復警戒を強め、医薬品・内需ローテーションを追加",
+      "日銀引締め姿勢を銀行・不動産へ条件付き反映",
+      "ツガミを個別追い風候補に追加"
+    ],
+    "unchanged": [
+      "市場正本を外部価格で置換しない",
+      "未定義先物・現在値は不採用",
+      "Copper任意省略"
+    ],
+    "japan_revision": "20日国内実績を確認し、医薬品・小売優位とソフトバンクG弱含みを21日見通しへ反映"
+  },
+  "source_quality": {
+    "status": "PASS",
+    "checks": [
+      "BLS・日銀・企業PDF・JPXを一次実読",
+      "Reutersは市場背景だけに使用し正本を置換しない",
+      "発表日・対象期間・市場日を分離",
+      "未確認反応・表画像数値を不採用"
+    ]
+  },
+  "data_integrity": {
+    "status": "QUALIFIED",
+    "checks": [
+      "market.jsonは変更しない",
+      "status当日性欠測を明記",
+      "商品連続先物を不採用",
+      "2s10sは同日16日の35bpのみ",
+      "TOP5・日付を両JSONで一致"
+    ]
+  },
+  "quality_gates": {
+    "research_coverage": "QUALIFIED",
+    "source_quality": "PASS",
+    "data_integrity": "QUALIFIED",
+    "analysis_logic": "PASS",
+    "cross_asset_consistency": "QUALIFIED",
+    "japan_transmission": "PASS",
+    "counter_evidence_audit": "PASS",
+    "previous_day_change": "PASS",
+    "final_content_audit": "PASS"
+  },
+  "publication_decision": {
+    "status": "QUALIFIED",
+    "decided_at": "2026-10-21T06:43:56+09:00",
+    "summary": "当日statusと20日米国正本は未取得。一次情報5件、日本20日実績、19日正本、具体的不足注釈で暫定公開。完全版FAIL。",
+    "components": {
+      "ai_report": {
+        "status": "QUALIFIED",
+        "updated_at": "2026-10-21T06:43:56+09:00",
+        "reason": "当日statusと20日米国正本は未取得。一次情報5件、日本20日実績、19日正本、具体的不足注釈で暫定公開。完全版FAIL。"
+      },
+      "japan_stocks": {
+        "status": "QUALIFIED",
+        "updated_at": "2026-10-21T06:43:56+09:00",
+        "reason": "当日statusと20日米国正本は未取得。一次情報5件、日本20日実績、19日正本、具体的不足注釈で暫定公開。完全版FAIL。"
+      }
+    },
+    "unresolved_items": [
+      {
+        "id": "market",
+        "status": "QUALIFIED",
+        "missing": "21日当日成功なし。米株・VIX・USDJPY・11ETFは19日、金利・DXY・商品は16日",
+        "impact": "20日米国価格と21日朝方向を正本で断定しない",
+        "last_checked_at": "2026-10-21T06:43:56+09:00",
+        "next_action": "当日正本・一次情報を再取得し、定義と時刻が揃った確認値だけ完全版へ追加。",
+        "attempts": [
+          {
+            "method": "status・market公開正本",
+            "result": "status20日成功、market米株19日・金利等16日",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/status.json",
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-10-21T06:43:56+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "20日米国市場の価格を正本値として掲載",
+          "21日朝の方向断定"
+        ],
+        "excluded_from_publication": true
+      },
+      {
+        "id": "current",
+        "status": "QUALIFIED",
+        "missing": "時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+        "impact": "現在値と先物方向を除外",
+        "last_checked_at": "2026-10-21T06:43:56+09:00",
+        "next_action": "当日正本・一次情報を再取得し、定義と時刻が揃った確認値だけ完全版へ追加。",
+        "attempts": [
+          {
+            "method": "market基準日確認",
+            "result": "USDJPY19日、暗号18日。日経先物の取引所・限月・時刻付き実測なし",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-10-21T06:43:56+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "旧終値を現在値として表示",
+          "日経先物の推定"
+        ],
+        "excluded_from_publication": true
+      },
+      {
+        "id": "sectors",
+        "status": "QUALIFIED",
+        "missing": "20日米11セクターETF正本終値",
+        "impact": "19日の3上昇8下落だけを正本順位として採用",
+        "last_checked_at": "2026-10-21T06:43:56+09:00",
+        "next_action": "当日正本・一次情報を再取得し、定義と時刻が揃った確認値だけ完全版へ追加。",
+        "attempts": [
+          {
+            "method": "米11ETF全系列確認",
+            "result": "全11系列は19日で同日。20日セクター指数報道と混合しない",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-10-21T06:43:56+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "20日米業種順位を正本として表示"
+        ],
+        "excluded_from_publication": true
+      },
+      {
+        "id": "contracts",
+        "status": "QUALIFIED",
+        "missing": "Gold・WTI・Brent連続足と取引所・限月・値種別・時刻の対応",
+        "impact": "商品先物数値を結論から除外",
+        "last_checked_at": "2026-10-21T06:43:56+09:00",
+        "next_action": "当日正本・一次情報を再取得し、定義と時刻が揃った確認値だけ完全版へ追加。",
+        "attempts": [
+          {
+            "method": "CME公式と保存正本の定義照合",
+            "result": "公式契約ページは確認可能だが保存連続足との対応未確認",
+            "source_urls": [
+              "https://www.cmegroup.com/markets/metals/precious/gold.settlements.html",
+              "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html"
+            ],
+            "checked_at": "2026-10-21T06:43:56+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "商品先物の価格・前日比"
+        ],
+        "excluded_from_publication": true
+      },
+      {
+        "id": "coverage",
+        "status": "QUALIFIED",
+        "missing": "アナリスト評価変更全件とCensus動的最新表",
+        "impact": "変更なし・新規材料なしの包括断定を除外",
+        "last_checked_at": "2026-10-21T06:43:56+09:00",
+        "next_action": "契約データまたは公開一覧の復旧時に再取得。Censusは動的表を再確認。",
+        "attempts": [
+          {
+            "method": "公開評価一覧・IFIS",
+            "result": "全件網羅を確認できず",
+            "source_urls": [
+              "https://kabutan.jp/news/marketnews/?category=6",
+              "https://kabuyoho.jp/"
+            ],
+            "checked_at": "2026-10-21T06:43:56+09:00"
+          },
+          {
+            "method": "Census経済指標",
+            "result": "動的最新表を本文取得できず",
+            "source_urls": [
+              "https://www.census.gov/economic-indicators/"
+            ],
+            "checked_at": "2026-10-21T06:43:56+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "評価変更なし",
+          "Census新規材料なし"
+        ],
+        "excluded_from_publication": true
+      }
+    ]
+  },
+  "actual_attempts": [
+    {
+      "category": "market",
+      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/status.json",
+      "checked_at": "2026-10-21T06:43:56+09:00",
+      "result": "成功記録は20日10:55、21日当日分なし"
+    },
+    {
+      "category": "market",
+      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+      "checked_at": "2026-10-21T06:43:56+09:00",
+      "result": "米株・VIX・USDJPY・11ETFは19日、金利・DXY・商品は16日"
+    },
+    {
+      "category": "macro",
+      "source_url": "https://www.bls.gov/news.release/laus.nr0.htm",
+      "checked_at": "2026-10-21T06:43:56+09:00",
+      "result": "本文実読"
+    },
+    {
+      "category": "central_bank",
+      "source_url": "https://www.boj.or.jp/about/press/kaiken_2026/kk261020a.pdf",
+      "checked_at": "2026-10-21T06:43:56+09:00",
+      "result": "PDF全4頁実読"
+    },
+    {
+      "category": "company",
+      "source_url": "https://kabuyoho-sls-disclose.ifis.co.jp/a0c/140120261019552815.pdf",
+      "checked_at": "2026-10-21T06:43:56+09:00",
+      "result": "PDF全1頁実読"
+    },
+    {
+      "category": "company",
+      "source_url": "https://www.jpx.co.jp/listing/stocks/transfers/",
+      "checked_at": "2026-10-21T06:43:56+09:00",
+      "result": "一覧実読"
+    },
+    {
+      "category": "company",
+      "source_url": "https://www.meikonet.co.jp/ja/ir/ir-news/auto_20261020553478/pdfFile.pdf",
+      "checked_at": "2026-10-21T06:43:56+09:00",
+      "result": "PDF全4頁本文実読、表画像数値不採用"
+    },
+    {
+      "category": "market_background",
+      "source_url": "https://www.reuters.com/world/asia-pacific/nasdaq-futures-dip-oil-prices-climb-earnings-loom-2026-10-20/",
+      "checked_at": "2026-10-21T06:43:56+09:00",
+      "result": "20日終値背景を確認、外部価格不採用"
+    }
+  ]
+}

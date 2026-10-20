@@ -1,0 +1,939 @@
+{
+  "report_date": "2026-10-21",
+  "target_market_date": "2026-10-19",
+  "updated_at": "2026-10-21T06:43:56+09:00",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "20日公表の一次5件を実読した部分収集。市場反応は未確認。正本市場日19日、日本株大引け20日、ニュース発表日20日を分離。",
+  "articles": [
+    {
+      "id": "oct21-0",
+      "title": "米9月州別雇用は大半の州で横ばい",
+      "published_date": "2026-10-20",
+      "verified_at": "2026-10-21T06:43:56+09:00",
+      "source_type": "primary",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "source_url": "https://www.bls.gov/news.release/laus.nr0.htm",
+      "verification_url": "https://www.bls.gov/news.release/laus.nr0.htm",
+      "verification_status": "PASS",
+      "fact": "BLSは20日、9月失業率は5州で低下し45州とDCで安定、非農業雇用は2州で増加、1州で減少、47州とDCで概ね不変と公表。全米失業率4.2%は前月・前年比とも大きな変化なし。",
+      "analysis": "地域雇用の全面加速を示す材料ではない。日本株では金利敏感株の方向を単独で決めない。",
+      "limitations": "州別統計であり、10月雇用や企業利益を示さない。州の増減は統計的有意性に基づく。市場反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "BLS本文の公表日時、州別失業率、雇用増減、全国4.2%、次回日程を実読。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "BLSは20日、9月失業率は5州で低下し45州とDCで安定、非農業雇用は2州で増加、1州で減少、47州とDCで概ね不変と公表。全米失業率4.2%は前月・前年比とも大きな変化なし。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-20、実確認2026-10-21T06:43:56+09:00。発表日・対象期間・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。記事単独の市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "州別統計であり、10月雇用や企業利益を示さない。州の増減は統計的有意性に基づく。市場反応は未確認。"
+        }
+      }
+    },
+    {
+      "id": "oct21-1",
+      "title": "日銀総裁、追加利上げで緩和度合いを調整する基本姿勢",
+      "published_date": "2026-10-20",
+      "verified_at": "2026-10-21T06:43:56+09:00",
+      "source_type": "primary",
+      "publisher": "日本銀行",
+      "source_url": "https://www.boj.or.jp/about/press/kaiken_2026/kk261020a.pdf",
+      "verification_url": "https://www.boj.or.jp/about/press/kaiken_2026/kk261020a.pdf",
+      "verification_status": "PASS",
+      "fact": "日銀が20日公表した16日の総裁会見要旨で、植田総裁は基調物価が2%に近づく中、基本的には政策金利を引き上げ緩和度合いを調整すると説明。時期・ペースは中東、AI需要、為替等を点検するとした。",
+      "analysis": "銀行に中期的追い風候補、不動産・高PERには割引率面の逆風候補。ただし10月会合の決定内容は未確定。",
+      "limitations": "会見日は16日、公表日は20日。追加利上げの具体的時期・幅は示しておらず、10月会合の決定ではない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "日銀PDF全4頁を実読。会見日16日、公表日20日、基本姿勢、条件、中心見通し不変更を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "日銀が20日公表した16日の総裁会見要旨で、植田総裁は基調物価が2%に近づく中、基本的には政策金利を引き上げ緩和度合いを調整すると説明。時期・ペースは中東、AI需要、為替等を点検するとした。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-20、実確認2026-10-21T06:43:56+09:00。発表日・対象期間・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。記事単独の市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "会見日は16日、公表日は20日。追加利上げの具体的時期・幅は示しておらず、10月会合の決定ではない。"
+        }
+      }
+    },
+    {
+      "id": "oct21-2",
+      "title": "ツガミが中間業績・中間配当予想を上方修正",
+      "published_date": "2026-10-20",
+      "verified_at": "2026-10-21T06:43:56+09:00",
+      "source_type": "primary",
+      "publisher": "ツガミ",
+      "source_url": "https://kabuyoho-sls-disclose.ifis.co.jp/a0c/140120261019552815.pdf",
+      "verification_url": "https://kabuyoho-sls-disclose.ifis.co.jp/a0c/140120261019552815.pdf",
+      "verification_status": "PASS",
+      "fact": "ツガミは20日、中間売上収益750億円から812億円、営業利益195億円から252億円、中間利益90億円から123億円へ上方修正。中間配当は49円から61円へ増額し、通期予想は11月12日予定の中間決算時に公表するとした。",
+      "analysis": "中国・インド等の事業進展は個別追い風候補。通期増額は未発表で、中間予想を確定実績としない。",
+      "limitations": "予想であり実績ではない。期末配当49円は据え置き、通期予想は未公表。21日株価反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次PDF全1頁を実読。社名・コード6101、修正前後、理由、配当、通期公表予定を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "ツガミは20日、中間売上収益750億円から812億円、営業利益195億円から252億円、中間利益90億円から123億円へ上方修正。中間配当は49円から61円へ増額し、通期予想は11月12日予定の中間決算時に公表するとした。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-20、実確認2026-10-21T06:43:56+09:00。発表日・対象期間・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。記事単独の市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "予想であり実績ではない。期末配当49円は据え置き、通期予想は未公表。21日株価反応は未確認。"
+        }
+      },
+      "company": "ツガミ",
+      "ticker": "6101",
+      "category": "追い風候補・機械に限定",
+      "related_sectors": [
+        "機械",
+        "工作機械"
+      ],
+      "today_watch": "21日株価・出来高、11月12日の通期予想",
+      "timing": "20日大引け後・21日寄り付き前",
+      "market_pricing_status": "21日現物反応は未確認",
+      "importance": "high"
+    },
+    {
+      "id": "oct21-3",
+      "title": "HENNGEがプライム市場へ区分変更",
+      "published_date": "2026-10-20",
+      "verified_at": "2026-10-21T06:43:56+09:00",
+      "source_type": "primary",
+      "publisher": "日本取引所グループ",
+      "source_url": "https://www.jpx.co.jp/listing/stocks/transfers/",
+      "verification_url": "https://www.jpx.co.jp/listing/stocks/transfers/",
+      "verification_status": "PASS",
+      "fact": "JPXはHENNGE（4475）について、2026年10月20日付でグロース市場からプライム市場へ変更したと掲載。幹事取引参加者はみずほ証券。",
+      "analysis": "投資家層・需給変化の可能性はあるが、指数採用や買い需要、株価寄与を断定しない。",
+      "limitations": "市場区分変更だけから指数組み入れ、資金流入、株価上昇を断定できない。記事単独反応は未分離。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "JPX市場区分変更一覧を実読し、日付、会社名、コード、変更前後、幹事を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "JPXはHENNGE（4475）について、2026年10月20日付でグロース市場からプライム市場へ変更したと掲載。幹事取引参加者はみずほ証券。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-20、実確認2026-10-21T06:43:56+09:00。発表日・対象期間・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。記事単独の市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "市場区分変更だけから指数組み入れ、資金流入、株価上昇を断定できない。記事単独反応は未分離。"
+        }
+      },
+      "company": "HENNGE",
+      "ticker": "4475",
+      "category": "中立・需給確認",
+      "related_sectors": [
+        "情報通信",
+        "クラウド"
+      ],
+      "today_watch": "売買代金、需給持続、公式指数日程",
+      "timing": "20日変更済み",
+      "market_pricing_status": "20日終値に一部織り込みの可能性、記事単独反応未分離",
+      "importance": "medium"
+    },
+    {
+      "id": "oct21-4",
+      "title": "明光ネットワークジャパンが決算説明資料を訂正",
+      "published_date": "2026-10-20",
+      "verified_at": "2026-10-21T06:43:56+09:00",
+      "source_type": "primary",
+      "publisher": "明光ネットワークジャパン",
+      "source_url": "https://www.meikonet.co.jp/ja/ir/ir-news/auto_20261020553478/pdfFile.pdf",
+      "verification_url": "https://www.meikonet.co.jp/ja/ir/ir-news/auto_20261020553478/pdfFile.pdf",
+      "verification_status": "PASS",
+      "fact": "会社は20日、10月14日公表の2026年8月期決算説明資料の8・12・62ページに数値誤りがあり訂正したと発表。決算短信の数値には訂正なし。",
+      "analysis": "説明資料の比較数値と業績予想表示を再確認する必要がある。決算短信まで訂正されたとは扱わない。",
+      "limitations": "訂正箇所の表は画像主体で、各修正数値を本文抽出だけでは確認できないため採用しない。市場反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "会社PDF全4頁の本文を実読。社名・コード4668、訂正対象ページ、決算短信は訂正なしを確認。表画像の個別数値は不採用。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "会社は20日、10月14日公表の2026年8月期決算説明資料の8・12・62ページに数値誤りがあり訂正したと発表。決算短信の数値には訂正なし。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-20、実確認2026-10-21T06:43:56+09:00。発表日・対象期間・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。記事単独の市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "訂正箇所の表は画像主体で、各修正数値を本文抽出だけでは確認できないため採用しない。市場反応は未確認。"
+        }
+      },
+      "company": "明光ネットワークジャパン",
+      "ticker": "4668",
+      "category": "中立・確認注意",
+      "related_sectors": [
+        "サービス",
+        "教育"
+      ],
+      "today_watch": "訂正後資料、追加訂正の有無",
+      "timing": "20日公表・21日寄り付き前確認",
+      "market_pricing_status": "記事単独反応は未確認",
+      "importance": "medium"
+    },
+    {
+      "id": "oct20-0",
+      "title": "OFACがPAIPA制裁と一般許可を公表",
+      "published_date": "2026-10-19",
+      "verified_at": "2026-10-20T06:54:20+09:00",
+      "source_type": "primary",
+      "publisher": "OFAC",
+      "source_url": "https://ofac.treasury.gov/recent-actions/20261019",
+      "verification_url": "https://ofac.treasury.gov/recent-actions/20261019",
+      "verification_status": "PASS",
+      "fact": "OFACは19日、MiraclePlus関連4主体とShanghai ZhisuanをNon-SDNメニュー型制裁一覧に追加。資産凍結等と物品輸入の例外を記載し、GL1・GL2を発行。",
+      "analysis": "中国関連の資金調達・決済・取引先を個別点検。中国全体への禁輸やすべてのAI投資禁止とは扱わない。",
+      "limitations": "GL1はサイバー制裁規則で許可・適用除外される範囲。GL2は指定4主体と50%以上所有先の取引整理に限定し、2027年1月19日00:01 ESTまで。凍結対象への支払は米国内凍結口座。他規制は別途順守。Shanghai ZhisuanをGL2対象としない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "本文を実読・日付と対象・例外を確認：https://ofac.treasury.gov/recent-actions/20261019。GL1全1頁・GL2全2頁も実読。GL2対象外のShanghai Zhisuanを混入しない。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "OFACは19日、MiraclePlus関連4主体とShanghai ZhisuanをNon-SDNメニュー型制裁一覧に追加。資産凍結等と物品輸入の例外を記載し、GL1・GL2を発行。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表19日、実確認2026-10-20T06:54:20+09:00。BIS報告書原発表14日と日銀案内19日を区別"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離、記事単独市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "GL1はサイバー制裁規則で許可・適用除外される範囲。GL2は指定4主体と50%以上所有先の取引整理に限定し、2027年1月19日00:01 ESTまで。凍結対象への支払は米国内凍結口座。他規制は別途順守。Shanghai ZhisuanをGL2対象としない。"
+        }
+      }
+    },
+    {
+      "id": "oct20-1",
+      "title": "日銀がFMIビジネスリスク管理の追加指針を案内",
+      "published_date": "2026-10-19",
+      "verified_at": "2026-10-20T06:54:20+09:00",
+      "source_type": "primary",
+      "publisher": "日本銀行・BIS",
+      "source_url": "https://www.boj.or.jp/paym/intlact_pm/cpss/cpss261019a.htm",
+      "verification_url": "https://www.boj.or.jp/paym/intlact_pm/cpss/cpss261019a.htm",
+      "verification_status": "PASS",
+      "fact": "日銀は19日、CPMI/IOSCOが14日にFMIのビジネスリスク・損失管理に関する最終報告書を公表したと案内。BIS原文はリスク管理、自己資本で賄う流動純資産、ガバナンスを説明。",
+      "analysis": "決済・清算機関の耐性に関する中期テーマ。政策金利変更や当日の金融株利益増と読み替えない。",
+      "limitations": "国際公表14日と日銀案内19日を区別。プレス本文の範囲であり、日本での一律施行日・個別機関の資本不足を断定しない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "本文を実読・日付と対象・例外を確認：https://www.boj.or.jp/paym/intlact_pm/cpss/cpss261019a.htm"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "日銀は19日、CPMI/IOSCOが14日にFMIのビジネスリスク・損失管理に関する最終報告書を公表したと案内。BIS原文はリスク管理、自己資本で賄う流動純資産、ガバナンスを説明。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表19日、実確認2026-10-20T06:54:20+09:00。BIS報告書原発表14日と日銀案内19日を区別"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離、記事単独市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "国際公表14日と日銀案内19日を区別。プレス本文の範囲であり、日本での一律施行日・個別機関の資本不足を断定しない。"
+        }
+      }
+    },
+    {
+      "id": "oct20-2",
+      "title": "USTR、メキシコ食品工場の労働案件解決を発表",
+      "published_date": "2026-10-19",
+      "verified_at": "2026-10-20T06:54:20+09:00",
+      "source_type": "primary",
+      "publisher": "USTR",
+      "source_url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/united-states-announces-successful-resolution-rapid-response-labor-mechanism-matter-alimentos-grole",
+      "verification_url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/united-states-announces-successful-resolution-rapid-response-labor-mechanism-matter-alimentos-grole",
+      "verification_status": "PASS",
+      "fact": "USTRは19日、Alimentos Grole施設のUSMCA迅速対応労働メカニズム案件の是正完了を発表し、同施設商品の未清算輸入申告の清算再開を財務長官に指示。",
+      "analysis": "施設限定の通商手続き改善。日本株全体の関税引下げやメキシコ全工場の規制解除とは扱わない。",
+      "limitations": "権利侵害の是正と施設別措置の解除に限定。日本企業の利益・市場反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "本文を実読・日付と対象・例外を確認：https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/united-states-announces-successful-resolution-rapid-response-labor-mechanism-matter-alimentos-grole"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "USTRは19日、Alimentos Grole施設のUSMCA迅速対応労働メカニズム案件の是正完了を発表し、同施設商品の未清算輸入申告の清算再開を財務長官に指示。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表19日、実確認2026-10-20T06:54:20+09:00。BIS報告書原発表14日と日銀案内19日を区別"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離、記事単独市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "権利侵害の是正と施設別措置の解除に限定。日本企業の利益・市場反応は未確認。"
+        }
+      }
+    },
+    {
+      "id": "oct20-3",
+      "title": "中間営業利益予想を上方修正、通期は据え置き",
+      "published_date": "2026-10-19",
+      "verified_at": "2026-10-20T06:54:20+09:00",
+      "source_type": "primary",
+      "publisher": "コーエーテクモホールディングス",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261019552780.pdf",
+      "verification_url": "https://www.release.tdnet.info/inbs/140120261019552780.pdf",
+      "verification_status": "PASS",
+      "fact": "19日16:00公表。2027年3月期中間の売上予想を340億円から370億円、営業利益70億円から115億円、純利益90億円から180億円へ修正。通期予想は現時点で変更なし。",
+      "analysis": "旧作・バックカタログの好調による本業改善と運用収支を分離。中間増額だけで通期増額を先取りしない。",
+      "limitations": "予想であり実績ではない。経常・純利益の増加には運用収支も含み、全てをゲーム販売効果としない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "本文を実読・日付と対象・例外を確認：https://www.release.tdnet.info/inbs/140120261019552780.pdf。PDF全頁と表・社名・コードを照合。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "19日16:00公表。2027年3月期中間の売上予想を340億円から370億円、営業利益70億円から115億円、純利益90億円から180億円へ修正。通期予想は現時点で変更なし。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表19日、実確認2026-10-20T06:54:20+09:00。BIS報告書原発表14日と日銀案内19日を区別"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離、記事単独市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "予想であり実績ではない。経常・純利益の増加には運用収支も含み、全てをゲーム販売効果としない。"
+        }
+      },
+      "company": "コーエーテクモホールディングス",
+      "ticker": "3635",
+      "category": "追い風候補・ゲームに限定",
+      "related_sectors": [
+        "ゲーム",
+        "情報通信"
+      ],
+      "today_watch": "通期見通し、販売持続性、営業外収支の再現性",
+      "timing": "19日大引け後・20日寄り付き前",
+      "market_pricing_status": "20日現物反応は未確認",
+      "importance": "high"
+    },
+    {
+      "id": "oct20-4",
+      "title": "純利益予想増額・増配、売上と営業利益は据え置き",
+      "published_date": "2026-10-19",
+      "verified_at": "2026-10-20T06:54:20+09:00",
+      "source_type": "primary",
+      "publisher": "GMOグローバルサイン・ホールディングス",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261019553071.pdf",
+      "verification_url": "https://www.release.tdnet.info/inbs/140120261019553071.pdf",
+      "verification_status": "PASS",
+      "fact": "19日16:05公表。2026年12月期純利益予想を10.52億円から13.12億円、期末配当予想を59.67円から74.35円へ修正。売上・営業・経常利益予想は変更なし。",
+      "analysis": "還元増は個別追い風候補。子会社売却益等の寄与を区別し、クラウド本業の利益成長が加速したとは断定しない。",
+      "limitations": "予想であり確定配当ではない。特別利益にはアーンアウト条項の条件付対価を含む。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "本文を実読・日付と対象・例外を確認：https://www.release.tdnet.info/inbs/140120261019553071.pdf。PDF全頁と表・社名・コードを照合。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "19日16:05公表。2026年12月期純利益予想を10.52億円から13.12億円、期末配当予想を59.67円から74.35円へ修正。売上・営業・経常利益予想は変更なし。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表19日、実確認2026-10-20T06:54:20+09:00。BIS報告書原発表14日と日銀案内19日を区別"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き分析を分離、記事単独市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "予想であり確定配当ではない。特別利益にはアーンアウト条項の条件付対価を含む。"
+        }
+      },
+      "company": "GMOグローバルサイン・ホールディングス",
+      "ticker": "3788",
+      "category": "追い風候補・一時利益の留保",
+      "related_sectors": [
+        "クラウド",
+        "情報通信"
+      ],
+      "today_watch": "継続利益、追加対価の条件、配当実施",
+      "timing": "19日大引け後・20日寄り付き前",
+      "market_pricing_status": "20日現物反応は未確認",
+      "importance": "high"
+    },
+    {
+      "id": "oct19-0",
+      "title": "米9月輸入物価は燃料以外にも上昇",
+      "published_date": "2026-10-16",
+      "verified_at": "2026-10-19T06:50:15+09:00",
+      "source_type": "primary",
+      "publisher": "BLS",
+      "source_url": "https://www.bls.gov/news.release/archives/ximpim_10162026.htm",
+      "verification_url": "https://www.bls.gov/news.release/archives/ximpim_10162026.htm",
+      "verification_status": "PASS",
+      "fact": "10月16日08:30 ET公表。9月輸入物価は前月比+1.1%、前年比+8.1%。非燃料は前月比+0.7%。8月輸入物価は今回+0.5%、輸出物価は9月+2.2%。",
+      "analysis": "物価警戒は維持。輸入価格指数を関税率や小売数量と読み替えず、高PER株の割引率リスクを監視。",
+      "limitations": "当初公表後3か月は改定対象。8月旧公表+0.7%と区別。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文を実読。国内開示はPDF本文・表・コードを照合：https://www.bls.gov/news.release/archives/ximpim_10162026.htm"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月16日08:30 ET公表。9月輸入物価は前月比+1.1%、前年比+8.1%。非燃料は前月比+0.7%。8月輸入物価は今回+0.5%、輸出物価は9月+2.2%。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-16、実確認2026-10-19T06:50:15+09:00。事象期間・発表・実行予定を分離"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き解釈を別項目に記録。記事単独の市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "当初公表後3か月は改定対象。8月旧公表+0.7%と区別。"
+        }
+      }
+    },
+    {
+      "id": "oct19-1",
+      "title": "米鉱工業生産は増加、製造業の回復幅は総合より小さい",
+      "published_date": "2026-10-16",
+      "verified_at": "2026-10-19T06:50:15+09:00",
+      "source_type": "primary",
+      "publisher": "Federal Reserve Board",
+      "source_url": "https://www.federalreserve.gov/releases/g17/current/default.htm",
+      "verification_url": "https://www.federalreserve.gov/releases/g17/current/default.htm",
+      "verification_status": "PASS",
+      "fact": "FRBは10月16日、9月鉱工業生産前月比+0.7%、製造業+0.3%、公益+3.5%、設備稼働率76.9%を公表。8月総合は今回+0.1%（前回0.0%）へ改定。",
+      "analysis": "実体生産の増加は需要全面崩壊への反証。総合の伸びを製造業全体の加速と同一視しない。",
+      "limitations": "速報・季節調整済み。11月24日に年次改定予定。金融政策決定ではない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文を実読。国内開示はPDF本文・表・コードを照合：https://www.federalreserve.gov/releases/g17/current/default.htm"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "FRBは10月16日、9月鉱工業生産前月比+0.7%、製造業+0.3%、公益+3.5%、設備稼働率76.9%を公表。8月総合は今回+0.1%（前回0.0%）へ改定。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-16、実確認2026-10-19T06:50:15+09:00。事象期間・発表・実行予定を分離"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き解釈を別項目に記録。記事単独の市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "速報・季節調整済み。11月24日に年次改定予定。金融政策決定ではない。"
+        }
+      }
+    },
+    {
+      "id": "oct19-2",
+      "title": "新ロシア法の関税・制裁を免除、既存措置は維持",
+      "published_date": "2026-10-16",
+      "verified_at": "2026-10-19T06:50:15+09:00",
+      "source_type": "primary",
+      "publisher": "White House",
+      "source_url": "https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/",
+      "verification_url": "https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/",
+      "verification_status": "PASS",
+      "fact": "10月16日大統領令はGraham Actの関税・指定条項等の適用免除を明記。免除は追加措置が適切と判断されるまで継続し、法成立前の既存大統領令による制裁は影響を受けない。",
+      "analysis": "追加制約リスクの一部後退は通商・調達の安心材料候補。ただし供給増・原油下落・全制裁解除は保証しない。",
+      "limitations": "条文2の追加関税だけを切り取らず4の免除を併読。19日国内反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文を実読。国内開示はPDF本文・表・コードを照合：https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月16日大統領令はGraham Actの関税・指定条項等の適用免除を明記。免除は追加措置が適切と判断されるまで継続し、法成立前の既存大統領令による制裁は影響を受けない。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-16、実確認2026-10-19T06:50:15+09:00。事象期間・発表・実行予定を分離"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き解釈を別項目に記録。記事単独の市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "条文2の追加関税だけを切り取らず4の免除を併読。19日国内反応は未確認。"
+        }
+      }
+    },
+    {
+      "id": "oct19-3",
+      "title": "ラガルド総裁、エネルギー物価とAI集中リスクに言及",
+      "published_date": "2026-10-17",
+      "verified_at": "2026-10-19T06:50:15+09:00",
+      "source_type": "primary",
+      "publisher": "ECB",
+      "source_url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261017~7015ea3099.en.html",
+      "verification_url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261017~7015ea3099.en.html",
+      "verification_status": "PASS",
+      "fact": "10月17日IMFC声明でECB総裁は成長の下振れ・物価の上振れリスク、エネルギー価格の波及とAI関連エクスポージャー集中による金融ストレスを指摘。",
+      "analysis": "物価と信用の両面から高評価倍率・借入依存を選別。金融機関の耐性も併記し、危機発生を断定しない。",
+      "limitations": "声明は新規政策金利決定ではない。銀行の資本・流動性等の強さ、民間信用単独の限定的影響も記載。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文を実読。国内開示はPDF本文・表・コードを照合：https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261017~7015ea3099.en.html"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月17日IMFC声明でECB総裁は成長の下振れ・物価の上振れリスク、エネルギー価格の波及とAI関連エクスポージャー集中による金融ストレスを指摘。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-17、実確認2026-10-19T06:50:15+09:00。事象期間・発表・実行予定を分離"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き解釈を別項目に記録。記事単独の市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "声明は新規政策金利決定ではない。銀行の資本・流動性等の強さ、民間信用単独の限定的影響も記載。"
+        }
+      }
+    },
+    {
+      "id": "oct19-4",
+      "title": "ベネズエラ地震救援の支払例外、他の許可条件は維持",
+      "published_date": "2026-10-16",
+      "verified_at": "2026-10-19T06:50:15+09:00",
+      "source_type": "primary",
+      "publisher": "OFAC",
+      "source_url": "https://ofac.treasury.gov/faqs/1263",
+      "verification_url": "https://ofac.treasury.gov/faqs/1263",
+      "verification_status": "PASS",
+      "fact": "OFACは10月16日FAQ1263を改定。GL60Aの地震救援に伴う税・通行料・手数料等はFGDF口座への支払を不要とする一方、他の一般許可のFGDF要件を維持。",
+      "analysis": "人道取引の限定例外であり、石油取引全体の自由化や制裁解除とは扱わない。",
+      "limitations": "FAQで確認できた支払例外に限定。全取引への適用や個別契約の適法性は判断しない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文を実読。国内開示はPDF本文・表・コードを照合：https://ofac.treasury.gov/faqs/1263"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "OFACは10月16日FAQ1263を改定。GL60Aの地震救援に伴う税・通行料・手数料等はFGDF口座への支払を不要とする一方、他の一般許可のFGDF要件を維持。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-16、実確認2026-10-19T06:50:15+09:00。事象期間・発表・実行予定を分離"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き解釈を別項目に記録。記事単独の市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "FAQで確認できた支払例外に限定。全取引への適用や個別契約の適法性は判断しない。"
+        }
+      }
+    },
+    {
+      "id": "oct19-5",
+      "title": "植田総裁挨拶、見通しに応じた利上げ継続を説明",
+      "published_date": "2026-10-16",
+      "verified_at": "2026-10-19T06:50:15+09:00",
+      "source_type": "primary",
+      "publisher": "日本銀行",
+      "source_url": "https://www.boj.or.jp/about/press/koen_2026/ko261016a.htm",
+      "verification_url": "https://www.boj.or.jp/about/press/koen_2026/ko261016a.htm",
+      "verification_status": "PASS",
+      "fact": "10月16日全国信用組合大会の植田総裁挨拶を内田副総裁が代読。経済・物価・金融情勢に応じ政策金利を引き上げる考えを示し、時期・ペースは確度とリスクを点検すると説明。",
+      "analysis": "銀行の収益期待と預金調達費用、不動産の資本コストを両面評価。新しい利上げ決定や日程確約とは扱わない。",
+      "limitations": "緩和的環境とAI需要・輸出の底堅さも説明。挨拶日と9月の政策決定を区別。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文を実読。国内開示はPDF本文・表・コードを照合：https://www.boj.or.jp/about/press/koen_2026/ko261016a.htm"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "10月16日全国信用組合大会の植田総裁挨拶を内田副総裁が代読。経済・物価・金融情勢に応じ政策金利を引き上げる考えを示し、時期・ペースは確度とリスクを点検すると説明。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-16、実確認2026-10-19T06:50:15+09:00。事象期間・発表・実行予定を分離"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き解釈を別項目に記録。記事単独の市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "緩和的環境とAI需要・輸出の底堅さも説明。挨拶日と9月の政策決定を区別。"
+        }
+      }
+    },
+    {
+      "id": "oct19-6",
+      "title": "モビリティ50%譲渡契約と約1000億円減損見込みを併記",
+      "published_date": "2026-10-16",
+      "verified_at": "2026-10-19T06:50:15+09:00",
+      "source_type": "primary",
+      "publisher": "三菱電機",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261016552155.pdf",
+      "verification_url": "https://www.release.tdnet.info/inbs/140120261016552155.pdf",
+      "verification_status": "PASS",
+      "fact": "16日19:30開示。鴻海系へ三菱電機モビリティ株50%を譲渡する契約を締結。譲渡価額は1150億円見込み、実行は2027年10月予定。2027年3月期に約1000億円減損を見込み、業績予想は10月30日公表予定。",
+      "analysis": "事業再編の中期効果と当期減損の負担を分離。売却収入だけで買い材料とせず、予想修正と承認条件を確認。",
+      "limitations": "関係当局承認等が条件。譲渡完了・通期利益確定ではない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文を実読。国内開示はPDF本文・表・コードを照合：https://www.release.tdnet.info/inbs/140120261016552155.pdf"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "16日19:30開示。鴻海系へ三菱電機モビリティ株50%を譲渡する契約を締結。譲渡価額は1150億円見込み、実行は2027年10月予定。2027年3月期に約1000億円減損を見込み、業績予想は10月30日公表予定。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-16、実確認2026-10-19T06:50:15+09:00。事象期間・発表・実行予定を分離"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き解釈を別項目に記録。記事単独の市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "関係当局承認等が条件。譲渡完了・通期利益確定ではない。"
+        }
+      }
+    },
+    {
+      "id": "oct19-7",
+      "title": "蓄電システム48.54億円受注、業績増額とは区別",
+      "published_date": "2026-10-16",
+      "verified_at": "2026-10-19T06:50:15+09:00",
+      "source_type": "primary",
+      "publisher": "パワーエックス",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261016552502.pdf",
+      "verification_url": "https://www.release.tdnet.info/inbs/140120261016552502.pdf",
+      "verification_status": "PASS",
+      "fact": "16日18:30開示。8月1日～10月16日に47台、48.54億円の販売契約。うち29.16億円は前回の正式受注・見込みに含まれない。売上計上は2026～2028年12月期予定。",
+      "analysis": "受注積上げは個別追い風候補。ただし未織込み受注額をそのまま業績上方修正や利益と扱わず、納入・採算・資金負担を確認。",
+      "limitations": "会社は業績予想の増額を示すものではないと明記。全受注を示す集計でもない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文を実読。国内開示はPDF本文・表・コードを照合：https://www.release.tdnet.info/inbs/140120261016552502.pdf"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "16日18:30開示。8月1日～10月16日に47台、48.54億円の販売契約。うち29.16億円は前回の正式受注・見込みに含まれない。売上計上は2026～2028年12月期予定。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-16、実確認2026-10-19T06:50:15+09:00。事象期間・発表・実行予定を分離"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き解釈を別項目に記録。記事単独の市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "会社は業績予想の増額を示すものではないと明記。全受注を示す集計でもない。"
+        }
+      }
+    },
+    {
+      "id": "oct19-8",
+      "title": "ファンケル等の会員情報漏えい、連結影響は精査中",
+      "published_date": "2026-10-16",
+      "verified_at": "2026-10-19T06:50:15+09:00",
+      "source_type": "primary",
+      "publisher": "キリンホールディングス",
+      "source_url": "https://www.release.tdnet.info/inbs/140120261016552454.pdf",
+      "verification_url": "https://www.release.tdnet.info/inbs/140120261016552454.pdf",
+      "verification_status": "PASS",
+      "fact": "16日18:00開示。ファンケル・アテニアECへの10月3～10日の不正アクセスを15日の内部調査で把握し会員情報漏えいを確認。決済情報は対象外。16日時点で二次被害と事業・サービスの重大な影響は未確認、連結影響は精査中。",
+      "analysis": "信用・対応費用の向かい風候補。未確認を被害ゼロや影響軽微確定とせず、追加開示を監視。",
+      "limitations": "事象期間・検知・公表を分離。個人別情報は掲載せず、調査中の損失を推計しない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次本文を実読。国内開示はPDF本文・表・コードを照合：https://www.release.tdnet.info/inbs/140120261016552454.pdf"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "16日18:00開示。ファンケル・アテニアECへの10月3～10日の不正アクセスを15日の内部調査で把握し会員情報漏えいを確認。決済情報は対象外。16日時点で二次被害と事業・サービスの重大な影響は未確認、連結影響は精査中。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-16、実確認2026-10-19T06:50:15+09:00。事象期間・発表・実行予定を分離"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実と条件付き解釈を別項目に記録。記事単独の市場反応は未確認"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "事象期間・検知・公表を分離。個人別情報は掲載せず、調査中の損失を推計しない。"
+        }
+      }
+    },
+    {
+      "id": "2026-10-18-sp500",
+      "title": "S&P500の10月16日終値",
+      "published_date": "2026-10-16",
+      "verified_at": "2026-10-18T09:45:00+09:00",
+      "source_type": "primary",
+      "publisher": "Federal Reserve Bank of St. Louis",
+      "source_url": "https://fred.stlouisfed.org/series/SP500",
+      "verification_url": "https://fred.stlouisfed.org/series/SP500",
+      "verification_status": "PASS",
+      "fact": "FRED掲載値で10月16日のS&P500は7,659.44。",
+      "analysis": "広範株指数は前日から下落。理由は別資料と分離する。",
+      "limitations": "指数値のみ。市場下落の原因を単独で示さない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次掲載本文・数値を確認"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "FRED掲載値で10月16日のS&P500は7,659.44。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-16、確認日2026-10-18T09:45:00+09:00"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実欄と条件付き分析を分離"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "指数値のみ。市場下落の原因を単独で示さない。"
+        }
+      }
+    },
+    {
+      "id": "2026-10-18-sox",
+      "title": "SOXの10月16日終値",
+      "published_date": "2026-10-16",
+      "verified_at": "2026-10-18T09:45:00+09:00",
+      "source_type": "primary",
+      "publisher": "Nasdaq",
+      "source_url": "https://indexes.nasdaq.com/Index/Overview/SOX",
+      "verification_url": "https://indexes.nasdaq.com/Index/Overview/SOX",
+      "verification_status": "PASS",
+      "fact": "Nasdaq公式掲載値で10月16日のSOXは11,137.29、前日比-3.83%。",
+      "analysis": "半導体の下落が広範指数を上回った事実を確認。",
+      "limitations": "指数構成銘柄すべての要因を説明するものではない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次掲載本文・数値を確認"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "Nasdaq公式掲載値で10月16日のSOXは11,137.29、前日比-3.83%。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-16、確認日2026-10-18T09:45:00+09:00"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実欄と条件付き分析を分離"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "指数構成銘柄すべての要因を説明するものではない。"
+        }
+      }
+    },
+    {
+      "id": "2026-10-18-ndx",
+      "title": "NASDAQ100の10月16日終値",
+      "published_date": "2026-10-16",
+      "verified_at": "2026-10-18T09:45:00+09:00",
+      "source_type": "primary",
+      "publisher": "Nasdaq",
+      "source_url": "https://indexes.nasdaq.com/Index/Overview/NDX",
+      "verification_url": "https://indexes.nasdaq.com/Index/Overview/NDX",
+      "verification_status": "PASS",
+      "fact": "Nasdaq公式掲載値で10月16日のNASDAQ100は29,187.55、前日比-2.50%。",
+      "analysis": "大型グロースの弱さをダウと比較する材料。",
+      "limitations": "個別銘柄の寄与率は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次掲載本文・数値を確認"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "Nasdaq公式掲載値で10月16日のNASDAQ100は29,187.55、前日比-2.50%。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-16、確認日2026-10-18T09:45:00+09:00"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実欄と条件付き分析を分離"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "個別銘柄の寄与率は未確認。"
+        }
+      }
+    },
+    {
+      "id": "2026-10-18-imf",
+      "title": "IMF世界経済見通しのリスク確認",
+      "published_date": "2026-10-13",
+      "verified_at": "2026-10-18T09:45:00+09:00",
+      "source_type": "primary",
+      "publisher": "IMF",
+      "source_url": "https://www.imf.org/en/Publications/WEO",
+      "verification_url": "https://www.imf.org/en/Publications/WEO",
+      "verification_status": "PASS",
+      "fact": "IMFの2026年10月WEOを確認。AI投資、地政学、債務・金融環境を世界経済の主要リスクとして扱う。",
+      "analysis": "AI・戦争・債務を週末の背景として使用し、日銀の政策決定とは分ける。",
+      "limitations": "週末の市場反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次掲載本文・数値を確認"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "IMFの2026年10月WEOを確認。AI投資、地政学、債務・金融環境を世界経済の主要リスクとして扱う。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-10-13、確認日2026-10-18T09:45:00+09:00"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "事実欄と条件付き分析を分離"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "週末の市場反応は未確認。"
+        }
+      }
+    }
+  ]
+}

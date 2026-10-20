@@ -1,17 +1,20 @@
 {
   "version": 2,
-  "updated_at": "2026-10-20T06:54:20+09:00",
-  "report_date": "2026-10-20",
+  "updated_at": "2026-10-21T06:43:56+09:00",
+  "report_date": "2026-10-21",
   "period_start": "2026-03-18",
-  "period_end": "2026-10-20",
+  "period_end": "2026-10-21",
   "freshness": {
     "status": "current",
     "latest_report_date": "2026-10-20",
     "source_report_count": 9,
-    "note": "当日レポートと直近の履歴・確認済みニュースから更新"
+    "note": "当日レポートと直近の履歴・確認済みニュースから更新",
+    "report_date": "2026-10-21",
+    "target_market_date": "2026-10-19",
+    "updated_at": "2026-10-21T06:43:56+09:00"
   },
-  "headline": "市場の見方がどう変わったかを3つのテーマで確認",
-  "summary": "約半年の重要な転換点を時系列でたどり、直近のニュースがそれまでの見方をどう変えたかを示します。確認できない変化は作らず、反証も併記します。",
+  "headline": "米半導体反発からヘルスケア・内需選別へ。日銀追加利上げ姿勢を重ねて確認",
+  "summary": "正本19日はSOX反発だが市場幅は弱く、日本20日は指数下落・医薬品優位。米20日はヘルスケア・価値株優位との報道。全面リスクオンではなく、日銀・業績修正を個別選別。",
   "themes": [
     {
       "theme": "米物価と金融政策",
@@ -344,24 +347,40 @@
     }
   ],
   "scenario_change_conditions": [
-    {
-      "condition": "半導体と市場幅",
-      "meaning": "幅を伴う改善なら警戒緩和、失速なら再強化"
-    },
-    {
-      "condition": "原油・政策",
-      "meaning": "供給懸念再燃なら燃料負担を再評価"
-    },
-    {
-      "condition": "金利・為替",
-      "meaning": "円急変・金利高で輸出・高PER見通し修正"
-    },
-    {
-      "condition": "個別予想修正",
-      "meaning": "通期増額・減額や実績乖離で再評価"
-    }
+    "国内半導体の複数銘柄でTOPIX比改善",
+    "医薬品・小売の相対優位反転",
+    "国内金利・円の急変",
+    "ツガミ通期予想・受注変化"
   ],
   "sources": [
+    {
+      "id": "oct21-bls",
+      "title": "State Employment and Unemployment - September 2026",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "published_at": "2026-10-20",
+      "url": "https://www.bls.gov/news.release/laus.nr0.htm"
+    },
+    {
+      "id": "oct21-boj",
+      "title": "総裁記者会見（10月16日）",
+      "publisher": "日本銀行",
+      "published_at": "2026-10-20",
+      "url": "https://www.boj.or.jp/about/press/kaiken_2026/kk261020a.pdf"
+    },
+    {
+      "id": "oct21-tsugami",
+      "title": "中間業績予想および中間配当予想の修正",
+      "publisher": "ツガミ",
+      "published_at": "2026-10-20",
+      "url": "https://kabuyoho-sls-disclose.ifis.co.jp/a0c/140120261019552815.pdf"
+    },
+    {
+      "id": "oct21-market",
+      "title": "20日米国市場のセクターローテーション",
+      "publisher": "Reuters",
+      "published_at": "2026-10-20",
+      "url": "https://www.reuters.com/world/asia-pacific/nasdaq-futures-dip-oil-prices-climb-earnings-loom-2026-10-20/"
+    },
     {
       "id": "fed-apr29",
       "title": "Federal Reserve issues FOMC statement",

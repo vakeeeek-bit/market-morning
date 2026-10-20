@@ -1,226 +1,234 @@
 {
-  "report_date": "2026-10-20",
-  "target_market_date": "2026-10-16",
-  "updated_at": "2026-10-20T06:54:20+09:00",
+  "report_date": "2026-10-21",
+  "target_market_date": "2026-10-19",
+  "updated_at": "2026-10-21T06:43:56+09:00",
   "report_type": "daily_provisional",
   "quick_view": {
-    "headline": "注釈付き暫定版｜米半導体は反発報道、全面回復とは区別。個別上方修正と制裁範囲を選別",
+    "headline": "注釈付き暫定版｜米20日はテック一服・ヘルスケア優位。日銀追加利上げ姿勢と個別開示を選別",
     "top_news": [
       {
-        "title": "米19日半導体反発の報道、正本は16日で最新価格未反映"
+        "title": "米20日はダウ・ヘルスケア優位、NASDAQは小動き"
       },
       {
-        "title": "米株反発は大型株中心、全面リスクオン判断は保留"
+        "title": "正本19日はSOX反発でも米11ETFは3上昇・8下落"
       },
       {
-        "title": "原油供給懸念は残り、政策免除だけで燃料安を決めない"
+        "title": "日本20日は主要指数-1.24%、医薬品優位・ソフトバンクG下落"
       }
     ],
     "important_today": [
-      "米19日半導体反発の報道、正本は16日で最新価格未反映",
-      "米株反発は大型株中心、全面リスクオン判断は保留",
-      "原油供給懸念は残り、政策免除だけで燃料安を決めない",
-      "OFACの知財関連制裁、中国関連取引を個別確認",
-      "コーエーテクモ中間上方修正、GMOグローバルサインHDは純利益増額・増配"
+      "20日米国のセクターローテーション",
+      "日銀総裁会見要旨",
+      "21日寄り付き後の半導体・医薬品・銀行",
+      "ツガミの大引け後開示",
+      "当日正本更新の有無"
     ]
   },
   "executive_summary": {
-    "headline": "注釈付き暫定版｜米半導体は反発報道、全面回復とは区別。個別上方修正と制裁範囲を選別",
-    "market_mood": "米反発報道で慎重姿勢を条件付き修正。全面回復は未確認",
-    "main_driver": "AI買戻し・市場幅・供給リスク・取引制限・個別予想修正",
+    "headline": "注釈付き暫定版｜米20日はテック一服・ヘルスケア優位。日銀追加利上げ姿勢と個別開示を選別",
+    "market_mood": "19日米国は半導体反発、20日米国はヘルスケア・価値株へ回転。日本20日は指数下落で内需・医薬品が相対優位",
+    "main_driver": "AI投資回収懸念、米金利・原油低下報道、日銀追加利上げ姿勢、個別業績修正",
     "winners": [
-      "半導体の反発候補",
-      "確認済み個別予想修正"
+      "医薬品・ヘルスケア",
+      "一部内需・小売",
+      "ツガミの個別材料"
     ],
     "losers": [
-      "市場幅の弱さ",
-      "資金調達依存と燃料負担"
+      "半導体・通信の反発持続性",
+      "原油高メリット株",
+      "高金利に弱い高PER"
     ],
     "important_today": [
-      "米19日半導体反発の報道、正本は16日で最新価格未反映",
-      "米株反発は大型株中心、全面リスクオン判断は保留",
-      "原油供給懸念は残り、政策免除だけで燃料安を決めない",
-      "OFACの知財関連制裁、中国関連取引を個別確認",
-      "コーエーテクモ中間上方修正、GMOグローバルサインHDは純利益増額・増配"
+      "米20日はダウ・ヘルスケア優位、NASDAQは小動き",
+      "正本19日はSOX反発でも米11ETFは3上昇・8下落",
+      "日本20日は主要指数-1.24%、医薬品優位・ソフトバンクG下落",
+      "日銀総裁は利上げ継続姿勢、時期とペースは中東・AI・為替次第",
+      "ツガミが中間業績・中間配当予想を上方修正、通期は11月公表"
     ],
     "watch_markets": [
       "SOX",
-      "米金利",
+      "米11セクター",
+      "米2年・10年金利",
       "USD/JPY",
-      "限月付き原油",
-      "国内市場幅"
+      "日経225先物"
     ],
     "current_environment": [
-      "正本米株・11ETF・為替16日",
-      "金利15日、2s10s33bpは15日基準",
-      "19日反発は外部照合のみ"
+      "正本米国株・VIX・USD/JPY・11ETFは19日",
+      "正本金利・DXY・商品連続足は16日",
+      "日本株大引け後データは20日",
+      "20日米国市場は外部照合で正本未反映"
     ]
   },
   "news": [
     {
-      "title": "米19日反発報道は正本未反映",
-      "fact": "Reutersの19日終値記事は半導体反発と大型主導、負の市場幅を報道。APもAI主導と市場全体の弱さを確認。19日価格は正本未反映につき採用しない。",
-      "published_at": "2026-10-19",
-      "source_url": "https://www.reuters.com/business/wall-st-futures-climb-ai-stocks-rebound-oil-yields-fall-2026-10-19/",
-      "market_reaction": "半導体が反発したとの報道。ただし市場全体の広がりは弱い",
-      "analysis": "昨日の一律慎重姿勢を条件付きで弱める。ただし反発の広がりと企業利益・資金調達改善を伴うまで信用不安解消とはしない。"
+      "title": "米20日はヘルスケア・ディフェンシブ優位、テックは一服",
+      "fact": "Reutersは20日、ダウとS&P500が上昇しNASDAQは小動き、ヘルスケア・不動産・公益・小型株が相対優位、テクノロジーとエネルギーが劣後したと報道。これらは外部照合で正本価格には採用しない。",
+      "source_url": "https://www.reuters.com/world/asia-pacific/nasdaq-futures-dip-oil-prices-climb-earnings-loom-2026-10-20/",
+      "analysis": "19日のAI・半導体反発が20日に全面拡大したとはいえず、日本株では医薬品・内需の相対強さと半導体の反発持続性を分けて確認する。",
+      "published_at": "2026-10-20",
+      "market_reaction": "米国は価値株・ヘルスケア寄りへローテーションしたとの報道。記事値は正本未反映。"
     },
     {
-      "title": "OFACがPAIPA制裁と一般許可を公表",
-      "fact": "OFACは19日、MiraclePlus関連4主体とShanghai ZhisuanをNon-SDNメニュー型制裁一覧に追加。資産凍結等と物品輸入の例外を記載し、GL1・GL2を発行。",
-      "source_url": "https://ofac.treasury.gov/recent-actions/20261019",
-      "analysis": "中国関連の資金調達・決済・取引先を個別点検。中国全体への禁輸やすべてのAI投資禁止とは扱わない。",
-      "published_at": "2026-10-19",
-      "market_reaction": "記事単独の市場反応は未確認"
+      "title": "BLS、9月州別雇用は大半の州で横ばい",
+      "fact": "BLSは20日、9月失業率は5州で低下し45州とDCで安定、非農業雇用は2州で増加、1州で減少、47州とDCで概ね不変と公表。全米失業率4.2%は前月・前年比とも大きな変化なし。",
+      "source_url": "https://www.bls.gov/news.release/laus.nr0.htm",
+      "analysis": "地域雇用の全面加速を示す材料ではない。金融政策や日本株の方向を単独で決める材料とは扱わない。",
+      "published_at": "2026-10-20",
+      "market_reaction": "発表単独の市場反応は未確認。"
     },
     {
-      "title": "日銀がFMIビジネスリスク管理の追加指針を案内",
-      "fact": "日銀は19日、CPMI/IOSCOが14日にFMIのビジネスリスク・損失管理に関する最終報告書を公表したと案内。BIS原文はリスク管理、自己資本で賄う流動純資産、ガバナンスを説明。",
-      "source_url": "https://www.boj.or.jp/paym/intlact_pm/cpss/cpss261019a.htm",
-      "analysis": "決済・清算機関の耐性に関する中期テーマ。政策金利変更や当日の金融株利益増と読み替えない。",
-      "published_at": "2026-10-19",
-      "market_reaction": "記事単独の市場反応は未確認"
+      "title": "日銀総裁、基本的には追加利上げで緩和度合いを調整",
+      "fact": "日銀が20日公表した16日の総裁会見要旨で、植田総裁は基調物価が2%に近づく中、基本的には政策金利を引き上げ緩和度合いを調整すると説明。時期・ペースは中東、AI需要、為替等を点検するとし、中心見通しを変える重要情報はなかったと述べた。",
+      "source_url": "https://www.boj.or.jp/about/press/kaiken_2026/kk261020a.pdf",
+      "analysis": "銀行には中期的追い風候補、不動産・高PERには割引率面の向かい風候補。ただし10月会合の決定内容は未確定。",
+      "published_at": "2026-10-20",
+      "market_reaction": "公表単独の市場反応は未確認。"
     },
     {
-      "title": "USTR、メキシコ食品工場の労働案件解決を発表",
-      "fact": "USTRは19日、Alimentos Grole施設のUSMCA迅速対応労働メカニズム案件の是正完了を発表し、同施設商品の未清算輸入申告の清算再開を財務長官に指示。",
-      "source_url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/united-states-announces-successful-resolution-rapid-response-labor-mechanism-matter-alimentos-grole",
-      "analysis": "施設限定の通商手続き改善。日本株全体の関税引下げやメキシコ全工場の規制解除とは扱わない。",
-      "published_at": "2026-10-19",
-      "market_reaction": "記事単独の市場反応は未確認"
+      "title": "ツガミが中間業績と中間配当予想を上方修正",
+      "fact": "ツガミは20日、中間売上収益750億円から812億円、営業利益195億円から252億円、中間利益90億円から123億円へ上方修正。中間配当は49円から61円へ増額し、通期予想は11月12日予定の中間決算時に公表するとした。",
+      "source_url": "https://kabuyoho-sls-disclose.ifis.co.jp/a0c/140120261019552815.pdf",
+      "analysis": "中国・インド等の事業進展は機械株の個別追い風候補。ただし通期増額は未発表で、中間予想を確定実績としない。",
+      "published_at": "2026-10-20",
+      "market_reaction": "20日大引け後の発表で、21日現物反応は未確認。"
+    },
+    {
+      "title": "HENNGEがプライム市場へ区分変更",
+      "fact": "JPXはHENNGE（4475）について、2026年10月20日付でグロース市場からプライム市場へ変更したと掲載。幹事取引参加者はみずほ証券。",
+      "source_url": "https://www.jpx.co.jp/listing/stocks/transfers/",
+      "analysis": "投資家層・需給の変化余地はあるが、指数採用や買い需要の規模、株価寄与を断定しない。",
+      "published_at": "2026-10-20",
+      "market_reaction": "市場区分変更当日の記事単独反応は未分離。"
     }
   ],
   "policy": {
     "economic_indicators": {
-      "fact": "BLS19日欄に主要新規発表なし、BEA次回主要発表は29日、ISM月次PMIは第1・第3営業日。確認範囲で19日の該当する新規主要材料なし。Census動的最新表は取得不能で不存在とはしない。",
+      "fact": "BLSは20日、9月州別雇用を公表。失業率は5州で低下し45州とDCで安定、非農業雇用は2州増・1州減・47州とDCで概ね不変。BEAの次回主要発表は29日。ISM月次PMIの20日新規公表は確認なし。Census動的最新表は確認不能で不存在とはしない。",
       "source_urls": [
-        "https://www.bls.gov/schedule/2026/10_sched.htm",
+        "https://www.bls.gov/news.release/laus.nr0.htm",
         "https://www.bea.gov/news/schedule",
         "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/",
         "https://www.census.gov/economic-indicators/"
       ]
     },
     "central_banks": {
-      "fact": "日銀は19日、CPMI/IOSCOが14日にFMIのビジネスリスク・損失管理に関する最終報告書を公表したと案内。BIS原文はリスク管理、自己資本で賄う流動純資産、ガバナンスを説明。 FOMC一覧に19日の新規政策決定なし。日銀一覧とECB RSSにも新規政策金利決定は確認できず。ECB19日講演は題名のみ確認、本文未取得で主張は不採用。",
+      "fact": "日銀は20日、16日の総裁会見要旨を公表。追加利上げで緩和度合いを調整する基本姿勢を示したが、10月会合の決定は未確定。FRB一覧に20日の新規政策決定は確認なし。",
       "source_urls": [
-        "https://www.boj.or.jp/paym/intlact_pm/cpss/cpss261019a.htm",
-        "https://www.federalreserve.gov/newsevents/pressreleases/2026-press-fomc.htm",
-        "https://www.ecb.europa.eu/rss/press.html"
+        "https://www.boj.or.jp/about/press/kaiken_2026/kk261020a.pdf",
+        "https://www.federalreserve.gov/newsevents/pressreleases/2026-press-fomc.htm"
       ]
     },
     "trade_tariffs": {
-      "fact": "USTRは19日、Alimentos Grole施設のUSMCA迅速対応労働メカニズム案件の是正完了を発表し、同施設商品の未清算輸入申告の清算再開を財務長官に指示。 USTRの製造施設訪問報告は新規税率決定ではない。確認したWH・BIS一覧に19日付の別の重要新規関税措置は確認できず。",
+      "fact": "USTR10月一覧、White House大統領令一覧、BIS更新一覧を確認。20日付の新規重要関税・輸出規制措置は確認した一覧範囲で該当なし。USTR最新は19日で、未確認を広範な『材料なし』とはしない。",
       "source_urls": [
-        "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/united-states-announces-successful-resolution-rapid-response-labor-mechanism-matter-alimentos-grole",
+        "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october",
         "https://www.whitehouse.gov/presidential-actions/",
         "https://www.bis.gov/news-updates"
       ]
     },
     "sanctions": {
-      "fact": "OFACは19日、MiraclePlus関連4主体とShanghai ZhisuanをNon-SDNメニュー型制裁一覧に追加。資産凍結等と物品輸入の例外を記載し、GL1・GL2を発行。 GL1はサイバー制裁規則で許可・適用除外される範囲。GL2は指定4主体と50%以上所有先の取引整理に限定し、2027年1月19日00:01 ESTまで。凍結対象への支払は米国内凍結口座。他規制は別途順守。Shanghai ZhisuanをGL2対象としない。",
+      "fact": "OFAC Recent Actionsを確認。20日付の新規掲載はなく、最新は19日のPAIPA指定。20日以降の未掲載・遅延可能性を残し、確認時点の一覧に限定する。",
       "source_urls": [
-        "https://ofac.treasury.gov/recent-actions/20261019",
-        "https://ofac.treasury.gov/media/937256/download?inline=",
-        "https://ofac.treasury.gov/media/937261/download?inline="
+        "https://ofac.treasury.gov/recent-actions"
       ]
     }
   },
   "scenarios": [
     {
       "name": "基本",
-      "conditions": "米半導体反発報道が国内へ波及するが、市場幅・最新金利は未確定",
-      "impact_on_japan": "半導体の反発候補と個別上方修正を選別。資源・空運の方向は原油実測待ち",
-      "invalidation": "国内半導体がTOPIX比で持続劣後、または市場幅を伴う改善"
+      "conditions": "米国のヘルスケア・価値株優位とテック一服が続き、日銀の追加利上げ姿勢を選別的に織り込む",
+      "impact_on_japan": "医薬品・小売・銀行を相対優位候補、半導体は個別反発確認、ツガミは個別材料",
+      "invalidation": "SOX・国内半導体が市場幅を伴い反発、または円急伸・金利急低下"
     },
     {
       "name": "上振れ",
-      "conditions": "国内半導体の複数銘柄で相対反発と商い改善、決算・資金調達への懸念後退",
-      "impact_on_japan": "製造装置・情報通信への警戒を弱める。燃料負担業種は原油反落時のみ改善",
-      "invalidation": "反発が少数銘柄だけ、原油・金利再上昇、投資回収見通し悪化"
+      "conditions": "米半導体が再反発し国内複数銘柄もTOPIX比で改善、金利・原油が安定",
+      "impact_on_japan": "半導体製造装置・情報通信へ上昇が広がり、内需優位から循環物色へ",
+      "invalidation": "反発が少数大型株だけ、AI投資回収懸念再燃"
     },
     {
       "name": "下振れ",
-      "conditions": "反発失速、AI信用不安再燃、供給障害と円急変が重なる",
-      "impact_on_japan": "高PER・輸出・燃料負担業種に逆風。防御型も絶対上昇は保証しない",
-      "invalidation": "市場幅と信用環境の持続改善"
+      "conditions": "AI不安再燃、日銀引締め警戒、円急伸、原油再上昇が重なる",
+      "impact_on_japan": "高PER・輸出・燃料負担業種に逆風。銀行も市場全体悪化なら絶対上昇を保証しない",
+      "invalidation": "金利・原油低下と市場幅改善"
     }
   ],
   "market_data": [
     {
       "market": "S&P500",
-      "price": "7659.4399",
-      "change": "-1.09%",
-      "basis_time": "2026-10-16 保存日足Close、現在値ではない",
+      "price": "7690.73",
+      "change": "+31.29 (+0.41%)",
+      "basis_time": "2026-10-19 保存値・現在値ではない",
       "source": "market.json / ^GSPC"
     },
     {
       "market": "NASDAQ総合",
-      "price": "26140.0293",
-      "change": "-2.15%",
-      "basis_time": "2026-10-16 保存日足Close、現在値ではない",
+      "price": "26430.8867",
+      "change": "+290.8574 (+1.11%)",
+      "basis_time": "2026-10-19 保存値・現在値ではない",
       "source": "market.json / ^IXIC"
     },
     {
       "market": "NASDAQ100",
-      "price": "29187.5508",
-      "change": "-2.50%",
-      "basis_time": "2026-10-16 保存日足Close、現在値ではない",
+      "price": "29529.3438",
+      "change": "+341.793 (+1.17%)",
+      "basis_time": "2026-10-19 保存値・現在値ではない",
       "source": "market.json / ^NDX"
     },
     {
       "market": "NYダウ",
-      "price": "52002.4102",
-      "change": "-0.34%",
-      "basis_time": "2026-10-16 保存日足Close、現在値ではない",
+      "price": "51966.0312",
+      "change": "-36.3789 (-0.07%)",
+      "basis_time": "2026-10-19 保存値・現在値ではない",
       "source": "market.json / ^DJI"
     },
     {
       "market": "Russell2000",
-      "price": "2721.3701",
-      "change": "-1.66%",
-      "basis_time": "2026-10-16 保存日足Close、現在値ではない",
+      "price": "2728.2981",
+      "change": "+6.928 (+0.25%)",
+      "basis_time": "2026-10-19 保存値・現在値ではない",
       "source": "market.json / ^RUT"
     },
     {
       "market": "PHLX半導体株指数（SOX）",
-      "price": "11137.29",
-      "change": "-3.83%",
-      "basis_time": "2026-10-16 保存日足Close、現在値ではない",
+      "price": "11316.3428",
+      "change": "+179.0527 (+1.61%)",
+      "basis_time": "2026-10-19 保存値・現在値ではない",
       "source": "market.json / ^SOX"
     },
     {
       "market": "米2年債利回り",
-      "price": "4.77%",
-      "change": "-0.05ポイント",
-      "basis_time": "2026-10-15 FRED公表利回り、現在値ではない",
+      "price": "4.74%",
+      "change": "-0.03ポイント",
+      "basis_time": "2026-10-16 保存値・現在値ではない",
       "source": "market.json / FRED:DGS2"
     },
     {
       "market": "米10年債利回り",
-      "price": "5.1%",
-      "change": "-0.09ポイント",
-      "basis_time": "2026-10-15 FRED公表利回り、現在値ではない",
+      "price": "5.09%",
+      "change": "-0.01ポイント",
+      "basis_time": "2026-10-16 保存値・現在値ではない",
       "source": "market.json / FRED:DGS10"
     },
     {
       "market": "DXY",
       "price": "101.84",
-      "change": "-0.16%",
-      "basis_time": "2026-10-16 保存日足Close、現在値ではない",
+      "change": "-0.16 (-0.16%)",
+      "basis_time": "2026-10-16 保存値・現在値ではない",
       "source": "market.json / DX-Y.NYB"
     },
     {
       "market": "USD/JPY",
-      "price": "158.143",
-      "change": "+0.12%",
-      "basis_time": "2026-10-16 保存日足Close、現在値ではない",
+      "price": "157.806",
+      "change": "-0.337 (-0.21%)",
+      "basis_time": "2026-10-19 保存値・現在値ではない",
       "source": "market.json / JPY=X"
     },
     {
       "market": "VIX",
-      "price": "19.99",
-      "change": "+21.45%",
-      "basis_time": "2026-10-16 保存日足Close、現在値ではない",
+      "price": "18.44",
+      "change": "-1.55 (-7.75%)",
+      "basis_time": "2026-10-19 保存値・現在値ではない",
       "source": "market.json / ^VIX"
     },
     {
@@ -248,131 +256,139 @@
   "market_overview": [
     {
       "market": "米国株",
-      "move": "16日の正本は半導体劣後。19日は反発報道だが正本未更新",
-      "relative_strength": "日付を分けた転換候補",
-      "background": "AI関連買戻しと大型偏重",
-      "impact_on_japan": "半導体の相対反発と広がり確認"
+      "move": "正本19日：S&P500 +0.41%、NASDAQ100 +1.17%、SOX +1.61%、ダウ -0.07%",
+      "relative_strength": "半導体・大型グロース優位だが3/11ETFのみ上昇",
+      "background": "20日はReutersがヘルスケア・価値株優位、テック一服を報道",
+      "impact_on_japan": "半導体追随の弱さと医薬品優位を分けて確認"
+    },
+    {
+      "market": "日本株",
+      "move": "20日：日経平均・TOPIX代理とも-1.24%。医薬品ETF+0.92%、小売+1.85%",
+      "relative_strength": "内需・医薬品優位",
+      "background": "ソフトバンクG-6.01%でAI関連の弱さが残る",
+      "impact_on_japan": "21日は米20日ローテーションの上乗せを確認"
     },
     {
       "market": "金利・為替",
-      "move": "金利15日、為替16日。2s10s33bpは15日",
+      "move": "正本金利は16日、USD/JPYは19日157.806",
       "relative_strength": "当日判断不可",
-      "background": "同日FRED化で旧欠測は一部解消",
-      "impact_on_japan": "銀行・輸出・不動産は新規実測待ち"
+      "background": "Reutersは20日米金利・原油低下を報道",
+      "impact_on_japan": "銀行・輸出・不動産は21日実測待ち"
     }
   ],
   "market_move_explanation": {
-    "title": "米半導体の反発報道で見方を修正、広がりは別に確認",
-    "move": "19日反発報道と16日正本を分離",
-    "trigger": "AI買戻しの背景報道",
+    "title": "米半導体反発からヘルスケア・価値株への回転へ",
+    "move": "19日正本はSOX+1.61%、20日外部照合はダウ・ヘルスケア優位でNASDAQ小動き",
+    "trigger": "AI投資回収懸念と決算選別、米金利・原油低下報道",
     "transmission_chain": [
-      "売られたAI株に買戻し",
-      "大型主導で指数を押上げたとの報道",
-      "国内半導体も候補だが業績・信用・市場幅を再確認"
+      "19日のAI株買戻し",
+      "20日はテック一服・ヘルスケアとディフェンシブ優位",
+      "日本では20日すでに医薬品優位・AI関連弱含み",
+      "21日は日銀姿勢と個別開示を重ねて選別"
     ],
     "hit_hardest": [
       {
-        "market": "市場全体",
-        "reason": "反発の広がりが弱いとの報道。指数高だけで全面改善としない"
+        "market": "日本の情報通信・AI関連",
+        "reason": "20日ソフトバンクG-6.01%、米20日もテックは相対劣後との報道"
       }
     ],
-    "relative_resilience": "個別上方修正は独立材料。本業と一時利益を区別",
-    "japan_impact": "半導体と個別決算を選別、原油感応業種は条件付き",
-    "confidence": "supported。報道背景と正本を分離。単独寄与未確認",
-    "invalidation": "国内の幅を伴う相対改善、またはAI反発失速"
+    "relative_resilience": "日本20日は小売・医薬品・電力ガスが上位。米20日のヘルスケア・ディフェンシブ優位と方向が一部一致",
+    "japan_impact": "医薬品・内需は相対追い風候補、半導体は一律買いではなく複数銘柄の相対騰落で確認",
+    "confidence": "supported。正本19日・日本20日・米20日外部照合を分離",
+    "invalidation": "SOX反発と国内半導体の市場幅改善、または米ヘルスケア優位の反転"
   },
   "internal_strength": {
-    "large_vs_small": "16日正本は大型グロースが小型より弱い。19日報道は大型主導の反発だが価格未反映",
-    "breadth": "16日11ETFは6上昇5下落。19日指数報道とは別の日・対象",
-    "sectors": "16日ETF代理比較はXLE・XLU・XLP上位、XLK・XLC・XLY下位。指数そのものではない",
-    "assessment": "16日の防御・資源優位から19日の大型買戻し報道へ変化。全面的な信用改善・資金流入は未確認"
+    "large_vs_small": "正本19日はS&P500+0.41%、Russell2000+0.25%で大型が小幅優位。20日米国は小型相対優位との報道だが正本未反映",
+    "breadth": "19日Sector SPDR ETF代理は3上昇・8下落。指数そのものではない。20日米国のセクター指数報道とは別日・別対象",
+    "sectors": "19日ETF代理上位XLY+1.78%、XLK+1.36%、XLB+0.06%。下位XLU-2.01%、XLRE-1.16%、XLF-0.83%",
+    "assessment": "19日の指数反発は狭く、20日はテックからヘルスケアへ回転。日本20日の医薬品優位とAI関連弱含みが確認材料"
   },
   "us_sector_etf_closes": [
     {
       "ticker": "XLC",
-      "price": 110.32,
-      "change_pct": -1.89,
-      "market_date": "2026-10-16",
+      "price": 110.09,
+      "change_pct": -0.21,
+      "market_date": "2026-10-19",
       "value_type": "日足Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLY",
-      "price": 112.46,
-      "change_pct": -0.84,
-      "market_date": "2026-10-16",
+      "price": 114.46,
+      "change_pct": 1.78,
+      "market_date": "2026-10-19",
       "value_type": "日足Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLP",
-      "price": 87.62,
-      "change_pct": 1.08,
-      "market_date": "2026-10-16",
+      "price": 87.21,
+      "change_pct": -0.47,
+      "market_date": "2026-10-19",
       "value_type": "日足Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLE",
-      "price": 68.24,
-      "change_pct": 2.52,
-      "market_date": "2026-10-16",
+      "price": 67.8,
+      "change_pct": -0.64,
+      "market_date": "2026-10-19",
       "value_type": "日足Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLF",
-      "price": 55.52,
-      "change_pct": 0.45,
-      "market_date": "2026-10-16",
+      "price": 55.06,
+      "change_pct": -0.83,
+      "market_date": "2026-10-19",
       "value_type": "日足Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLV",
-      "price": 176.71,
-      "change_pct": -0.27,
-      "market_date": "2026-10-16",
+      "price": 175.65,
+      "change_pct": -0.6,
+      "market_date": "2026-10-19",
       "value_type": "日足Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLI",
-      "price": 167.76,
-      "change_pct": -0.08,
-      "market_date": "2026-10-16",
+      "price": 166.68,
+      "change_pct": -0.64,
+      "market_date": "2026-10-19",
       "value_type": "日足Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLB",
-      "price": 50.92,
-      "change_pct": 0.71,
-      "market_date": "2026-10-16",
+      "price": 50.95,
+      "change_pct": 0.06,
+      "market_date": "2026-10-19",
       "value_type": "日足Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLRE",
-      "price": 42.16,
-      "change_pct": 0.4,
-      "market_date": "2026-10-16",
+      "price": 41.67,
+      "change_pct": -1.16,
+      "market_date": "2026-10-19",
       "value_type": "日足Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLK",
-      "price": 183.47,
-      "change_pct": -3.02,
-      "market_date": "2026-10-16",
+      "price": 185.96,
+      "change_pct": 1.36,
+      "market_date": "2026-10-19",
       "value_type": "日足Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLU",
-      "price": 42.21,
-      "change_pct": 1.34,
-      "market_date": "2026-10-16",
+      "price": 41.36,
+      "change_pct": -2.01,
+      "market_date": "2026-10-19",
       "value_type": "日足Close",
       "proxy_for_sector_index": true
     }
@@ -380,121 +396,134 @@
   "monitoring_points": [
     {
       "target": "半導体と市場幅",
-      "today_check": "複数銘柄のTOPIX比と出来高、反発持続性",
-      "view_change_condition": "幅を伴う改善なら警戒緩和、失速なら再強化"
+      "today_check": "東京エレクトロン8035、アドバンテスト6857、ソフトバンクG9984のTOPIX比・出来高",
+      "view_change_condition": "複数銘柄で持続反発なら警戒緩和、再下落なら強化"
     },
     {
-      "target": "原油・政策",
-      "today_check": "限月付き原油と供給障害、制裁対象・例外",
-      "view_change_condition": "供給懸念再燃なら燃料負担を再評価"
+      "target": "医薬品・内需",
+      "today_check": "第一三共4568、武田薬品4502、小売ETFの相対強さ",
+      "view_change_condition": "米ヘルスケア高が国内へ波及せず相対劣後なら追い風評価を下げる"
     },
     {
-      "target": "金利・為替",
-      "today_check": "基準時刻付き実測値。15日の33bpを最新としない",
-      "view_change_condition": "円急変・金利高で輸出・高PER見通し修正"
+      "target": "日銀・金利・円",
+      "today_check": "国内金利、時刻付きUSD/JPY、銀行・不動産反応",
+      "view_change_condition": "円急伸・国内金利上昇で輸出・高PERを下方修正"
     },
     {
-      "target": "個別予想修正",
-      "today_check": "中間と通期、本業と一時利益、配当予想の実現",
-      "view_change_condition": "通期増額・減額や実績乖離で再評価"
+      "target": "ツガミ",
+      "today_check": "6101の寄り付き後反応、中間と通期の区別、中国・インド需要",
+      "view_change_condition": "通期見通しや受注が弱ければ個別追い風を縮小"
     }
   ],
   "data_quality": {
     "overall": "MANUAL_REVIEW",
     "missing": [
-      "10月20日JSTのmarket_data成功記録。statusは19日12:52:31成功",
-      "米株・VIX・為替・11ETFは16日、米2年・10年は15日。19日の正本未反映",
-      "Gold・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応",
-      "時刻付き為替・暗号資産現在値と限月付き日経先物実測値",
-      "アナリスト評価変更の網羅性、Census最新動的表、ECB19日講演本文"
+      "10月21日JSTのmarket_data成功記録。statusは10月20日10:55:55 JST成功",
+      "米株・VIX・USD/JPY・米11セクターETFの正本は10月19日で、10月20日の米市場を未反映",
+      "米2年・10年金利は10月16日、DXYとGold・WTI・Brentは10月16日で対象市場日より古い",
+      "Gold・WTI・Brentの保存連続先物値と取引所・限月・値種別・基準時刻の対応",
+      "10月21日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "アナリスト評価変更の全件網羅、Census動的最新表"
     ],
     "differences": [
-      "19日米半導体反発・大型中心の報道は16日正本と別。外部価格に置換しない",
-      "最新mainでは11ETFが16日に統一。旧14～15日欠測記載を解消",
-      "米金利はDGS2/DGS10とも15日。正本2s10s33bpは15日限定で採用、19日のカーブではない"
+      "正本は19日米国株と20日日本株まで。20日米国株はReutersの背景情報に限定",
+      "正本19日のSOX+1.61%に対し11セクターETFは3上昇・8下落で、反発の広がりは弱い",
+      "日本20日は日経平均・TOPIX代理とも-1.24%。医薬品ETF+0.92%、情報通信のソフトバンクG-6.01%",
+      "米2年・10年は同じ10月16日なので2s10s35bpをその日限定で採用"
     ],
     "excluded": [
-      "限月未確認の商品先物価格・騰落率",
+      "10月20日の外部報道値によるmarket.jsonの置換",
+      "限月・値種別・時刻未確認のGold・WTI・Brent数値",
       "Copper価格・在庫（任意非掲載）",
-      "時刻のない現在値・日経先物推定値",
-      "記事単独の株価寄与率と20日国内初動の断定",
-      "新法免除を全ロシア制裁解除とする主張",
-      "予想修正を確定実績や継続利益とする主張"
+      "時刻のない現在値、暗号資産・日経225先物の推定値",
+      "20日米国のローテーションを全面リスクオンまたは全面リスクオフとする断定",
+      "日銀総裁発言を10月会合の決定済み利上げとする主張",
+      "ツガミ中間予想の上方修正を通期予想または確定実績とする主張"
     ],
     "cautions": [
-      "部分収集の暫定版。完全版FAILを保持",
-      "19日の報道は背景分析のみ。16日のETFランキングとは混合しない",
-      "19日大引け後の企業発表と20日の現物初動を区別"
+      "部分収集の注釈付き暫定版。完全版FAILを保持",
+      "正本19日と外部照合20日、日本株20日を混合しない",
+      "Copperは任意非掲載",
+      "ニュース一次事実と市場解釈を分離"
     ]
   },
   "final_conclusion": {
-    "headline": "注釈付き暫定版｜米半導体は反発報道、全面回復とは区別。個別上方修正と制裁範囲を選別",
+    "headline": "注釈付き暫定版｜米20日はテック一服・ヘルスケア優位。日銀追加利上げ姿勢と個別開示を選別",
     "winners": [
-      "半導体反発候補",
-      "個別予想修正"
+      "医薬品・ヘルスケア",
+      "小売・一部内需",
+      "ツガミ個別材料"
     ],
     "losers": [
-      "幅の弱さ",
-      "信用・燃料負担"
+      "AI・高PERの反発持続性",
+      "原油高メリット株",
+      "日銀引締めに弱い不動産"
     ],
     "top_three": [
-      "米19日半導体反発の報道、正本は16日で最新価格未反映",
-      "米株反発は大型株中心、全面リスクオン判断は保留",
-      "原油供給懸念は残り、政策免除だけで燃料安を決めない"
+      "米20日はダウ・ヘルスケア優位、NASDAQは小動き",
+      "正本19日はSOX反発でも米11ETFは3上昇・8下落",
+      "日本20日は主要指数-1.24%、医薬品優位・ソフトバンクG下落"
     ],
     "triggers": [
-      "国内反発の広がり",
-      "金利・原油の実測",
-      "通期予想と継続利益"
+      "国内半導体の市場幅改善",
+      "医薬品相対優位の持続",
+      "金利・円・原油の定義付き実測"
     ],
-    "disclaimer": "暫定版MANUAL_REVIEW、完全版FAIL。推測補完なし。"
+    "disclaimer": "暫定版MANUAL_REVIEW、完全版FAIL。正本置換・推測補完なし。"
   },
   "japan_equities_preview": {
-    "summary": "注釈付き暫定版｜米半導体は反発報道、全面回復とは区別。個別上方修正と制裁範囲を選別",
+    "summary": "注釈付き暫定版｜米20日はテック一服・ヘルスケア優位。日銀追加利上げ姿勢と個別開示を選別",
     "top_materials": [
-      "米19日半導体反発の報道、正本は16日で最新価格未反映",
-      "米株反発は大型株中心、全面リスクオン判断は保留",
-      "原油供給懸念は残り、政策免除だけで燃料安を決めない",
-      "OFACの知財関連制裁、中国関連取引を個別確認",
-      "コーエーテクモ中間上方修正、GMOグローバルサインHDは純利益増額・増配"
+      "米20日はダウ・ヘルスケア優位、NASDAQは小動き",
+      "正本19日はSOX反発でも米11ETFは3上昇・8下落",
+      "日本20日は主要指数-1.24%、医薬品優位・ソフトバンクG下落",
+      "日銀総裁は利上げ継続姿勢、時期とペースは中東・AI・為替次第",
+      "ツガミが中間業績・中間配当予想を上方修正、通期は11月公表"
     ],
     "focus_sectors": [
+      "医薬品",
+      "小売",
+      "銀行",
       "半導体製造装置",
       "情報通信",
-      "ゲーム",
-      "クラウド",
-      "資源",
-      "空運",
-      "金融"
+      "機械",
+      "資源"
     ],
     "top_stories": [
       {
-        "company": "コーエーテクモホールディングス",
-        "ticker": "3635",
-        "headline": "中間営業利益予想を上方修正、通期は据え置き",
+        "company": "ツガミ",
+        "ticker": "6101",
+        "headline": "中間業績・中間配当予想を上方修正",
         "importance": "high",
-        "market_pricing_status": "20日現物反応は未確認"
+        "market_pricing_status": "21日現物反応は未確認"
       },
       {
-        "company": "GMOグローバルサイン・ホールディングス",
-        "ticker": "3788",
-        "headline": "純利益予想増額・増配、売上と営業利益は据え置き",
-        "importance": "high",
-        "market_pricing_status": "20日現物反応は未確認"
+        "company": "HENNGE",
+        "ticker": "4475",
+        "headline": "20日付でプライム市場へ区分変更",
+        "importance": "medium",
+        "market_pricing_status": "記事単独反応は未分離"
+      },
+      {
+        "company": "明光ネットワークジャパン",
+        "ticker": "4668",
+        "headline": "決算説明資料の一部訂正",
+        "importance": "medium",
+        "market_pricing_status": "記事単独反応は未確認"
       }
     ],
-    "total_story_count": 2
+    "total_story_count": 3
   },
   "what_changed": {
-    "previous_report_date": "2026-10-19",
+    "previous_report_date": "2026-10-20",
     "changed": [
-      "米19日の反発報道で半導体慎重姿勢を条件付き緩和",
-      "最新mainの16日11ETFと15日同日FRED金利を採用",
-      "PAIPA制裁・例外を追加",
-      "国内2社の予想修正へ更新"
+      "正本米国株・USD/JPY・11ETFが19日へ更新",
+      "日本20日大引け後データを追加",
+      "米20日のヘルスケア・価値株ローテーションを背景に追加",
+      "BLS州別雇用・日銀総裁会見・国内3件を一次確認"
     ],
     "unchanged": [
-      "市場数値は正本固定",
+      "市場数値はmarket.json正本固定",
       "未定義先物・現在値は不採用",
       "銅は任意省略"
     ]
@@ -502,16 +531,17 @@
   "publication_policy": {
     "status": "QUALIFIED",
     "mode": "provisional",
-    "updated_at": "2026-10-20T06:54:20+09:00",
+    "updated_at": "2026-10-21T06:43:56+09:00",
     "complete_gate": "FAIL",
     "copper_included": false,
-    "note": "一次情報5件を追加。正本の旧基準日と未確認系列を明示した暫定版。完全版FAIL。",
+    "note": "当日status未更新と最新米国価格欠測を注釈し、確認済み一次情報と日本20日実績を掲載する暫定版。",
     "missing_items": [
-      "10月20日JSTのmarket_data成功記録。statusは19日12:52:31成功",
-      "米株・VIX・為替・11ETFは16日、米2年・10年は15日。19日の正本未反映",
-      "Gold・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応",
-      "時刻付き為替・暗号資産現在値と限月付き日経先物実測値",
-      "アナリスト評価変更の網羅性、Census最新動的表、ECB19日講演本文"
+      "10月21日JSTのmarket_data成功記録。statusは10月20日10:55:55 JST成功",
+      "米株・VIX・USD/JPY・米11セクターETFの正本は10月19日で、10月20日の米市場を未反映",
+      "米2年・10年金利は10月16日、DXYとGold・WTI・Brentは10月16日で対象市場日より古い",
+      "Gold・WTI・Brentの保存連続先物値と取引所・限月・値種別・基準時刻の対応",
+      "10月21日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "アナリスト評価変更の全件網羅、Census動的最新表"
     ]
   },
   "market_context_themes": [
@@ -1180,7 +1210,7 @@
     "window_end": "2026-11-03",
     "timezone": "Asia/Tokyo",
     "source_policy": "公式日程で確認済みのイベントのみ。予想・前回値は未確認を推測しない",
-    "coverage_note": "公式日程で確認できた主要イベントのみ。市場予想・前回値を確認できない場合は未確認と表示する。",
+    "coverage_note": "公式日程で確認できた主要イベントのみ。既存日程のverified_onを保持し、10月21日に全日程を再確認したとは扱わない。",
     "catalog_version": "1.0"
   }
 }

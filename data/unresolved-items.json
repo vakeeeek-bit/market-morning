@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-10-20T06:54:20+09:00",
-  "source_report_date": "2026-10-20",
+  "updated_at": "2026-10-21T06:43:56+09:00",
+  "source_report_date": "2026-10-21",
   "items": [
     {
       "id": "market",
       "status": "QUALIFIED",
-      "missing": "10月20日JSTのmarket_data成功記録。statusは19日12:52:31成功／米株・VIX・為替・11ETFは16日、米2年・10年は15日。19日の正本未反映",
-      "impact": "19日の正本市場判断を除外",
+      "missing": "10月21日JSTのmarket_data成功記録。statusは10月20日10:55:55 JST成功 / 米株・VIX・USD/JPY・米11セクターETFの正本は10月19日で、10月20日の米市場を未反映 / 米2年・10年金利は10月16日、DXYとGold・WTI・Brentは10月16日で対象市場日より古い",
+      "impact": "20日米国の価格と21日朝の方向を正本で断定できない",
       "last_checked_at": "2026-10-20T06:54:20+09:00",
-      "next_action": "最新正本・一次本文を再確認し、同一定義の確認済み情報だけ追加。",
+      "next_action": "当日market_data成功後に20日米国値を再判定",
       "attempts": [
         {
           "method": "公開正本・status",
@@ -27,7 +27,21 @@
       "excluded_claims": [
         "19日の正本市場判断を除外"
       ],
-      "excluded_from_publication": true
+      "excluded_from_publication": true,
+      "actual_attempts": [
+        {
+          "source": "status/market公開正本",
+          "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/status.json",
+          "checked_at": "2026-10-21T06:43:56+09:00",
+          "result": "status20日成功、21日当日成功なし"
+        },
+        {
+          "source": "market正本",
+          "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+          "checked_at": "2026-10-21T06:43:56+09:00",
+          "result": "米株・11ETF19日、金利・DXY・商品16日"
+        }
+      ]
     },
     {
       "id": "current",
@@ -84,8 +98,8 @@
     {
       "id": "contracts",
       "status": "QUALIFIED",
-      "missing": "Gold・WTI・Brentの保存値と取引所・限月・値種別・時刻の対応",
-      "impact": "商品先物価格・率は除外",
+      "missing": "Gold・WTI・Brentの保存連続先物値と取引所・限月・値種別・基準時刻の対応",
+      "impact": "商品価格数値を掲載できない",
       "last_checked_at": "2026-10-20T06:54:20+09:00",
       "next_action": "最新正本・一次本文を再確認し、同一定義の確認済み情報だけ追加。",
       "attempts": [
@@ -147,6 +161,8 @@
   ],
   "partial_resolutions": [
     "15日金利同日化・33bp採用",
-    "16日ETF同日化。19日値は未解決"
+    "米株・VIX・USDJPY・11ETFは19日まで更新",
+    "日本株大引けデータは20日まで更新",
+    "米2年・10年は16日同日で2s10s35bp算出可能"
   ]
 }

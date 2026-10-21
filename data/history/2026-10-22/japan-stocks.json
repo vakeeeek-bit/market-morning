@@ -1,0 +1,253 @@
+{
+  "report_date": "2026-10-22",
+  "target_market_date": "2026-10-20",
+  "updated_at": "2026-10-22T06:49:53+09:00",
+  "report_type": "daily_provisional",
+  "japan_quick_view": {
+    "headline": "注釈付き暫定版｜米21日はAI・半導体反発。日本21日は銀行・素材・電機が上昇",
+    "top_materials": [
+      "米21日はAI・半導体主導で反発、SOX約2%高は正本未反映",
+      "正本20日はダウ・小型株・ヘルスケア優位、NASDAQ100・SOXは小幅安",
+      "日本21日は日経平均+0.78%、TOPIX+0.90%、銀行・鉄鋼非鉄・電機精密が上位",
+      "米9月住宅着工は前月比5.2%減、許可は0.2%減",
+      "OFACがイラン関連指定・一般許可等を公表、日本株全体への直接影響は限定的"
+    ],
+    "focus_sectors": [
+      "半導体製造装置",
+      "電機・精密",
+      "銀行",
+      "鉄鋼・非鉄",
+      "通信",
+      "住宅・不動産"
+    ],
+    "unpriced_materials": [
+      "米21日のAI・半導体反発",
+      "22日朝の為替・日経225先物",
+      "Gold・WTI・Brentの定義付き価格"
+    ],
+    "individual_news_review": {
+      "status": "reviewed",
+      "story_count": 3,
+      "scope": "21日日本株大引け実績と一次資料を確認。未確認企業開示は掲載しない"
+    }
+  },
+  "top_stories": [
+    {
+      "company": "三菱UFJフィナンシャル・グループ",
+      "ticker": "8306",
+      "headline": "21日は銀行優位",
+      "fact": "MUFGは21日+2.39%、銀行ETF代理も+2.39%。",
+      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json",
+      "analysis": "金利感応度の高い銀行が市場を上回った。22日は米21日AI反発との資金配分を確認。",
+      "category": "追い風候補・銀行",
+      "related_sectors": [
+        "銀行"
+      ],
+      "today_watch": "国内金利と相対出来高",
+      "announced_at": "2026-10-21",
+      "timing": "21日大引け後確認",
+      "market_pricing_status": "21日大引け実績",
+      "price_reaction": "MUFGは21日+2.39%、銀行ETF代理も+2.39%。",
+      "related_stocks": [],
+      "importance": "high",
+      "confidence": "supported"
+    }
+  ],
+  "important_stories": [
+    {
+      "company": "ソニーグループ",
+      "ticker": "6758",
+      "headline": "電機・精密が上昇",
+      "fact": "ソニーは21日+1.31%、電機・精密ETF代理は+1.54%。",
+      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json",
+      "analysis": "米21日AI・半導体高が22日に追加波及する候補。",
+      "category": "追い風候補・電機",
+      "related_sectors": [
+        "電機・精密",
+        "半導体"
+      ],
+      "today_watch": "8035・6857・6758のTOPIX比",
+      "announced_at": "2026-10-21",
+      "timing": "21日大引け後確認",
+      "market_pricing_status": "米21日材料は未反映",
+      "price_reaction": "ソニーは21日+1.31%、電機・精密ETF代理は+1.54%。",
+      "related_stocks": [],
+      "importance": "high",
+      "confidence": "supported"
+    },
+    {
+      "company": "三菱地所",
+      "ticker": "8802",
+      "headline": "不動産は21日上昇",
+      "fact": "三菱地所は21日+2.90%、不動産ETF代理は+1.12%。",
+      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json",
+      "analysis": "米住宅着工減速は直接同一市場ではない。国内金利と需給を優先確認。",
+      "category": "中立・金利確認",
+      "related_sectors": [
+        "不動産",
+        "住宅"
+      ],
+      "today_watch": "国内金利と8802の相対騰落",
+      "announced_at": "2026-10-21",
+      "timing": "21日大引け後確認",
+      "market_pricing_status": "21日大引け実績",
+      "price_reaction": "三菱地所は21日+2.90%、不動産ETF代理は+1.12%。",
+      "related_stocks": [],
+      "importance": "medium",
+      "confidence": "supported"
+    }
+  ],
+  "other_stories": [],
+  "data_quality": {
+    "overall": "MANUAL_REVIEW",
+    "missing": [
+      "10月22日JSTのmarket_data成功記録。statusの最終成功は10月21日10:43:11 JST",
+      "米株・VIX・USD/JPY・米11セクターETFの正本は10月20日で、10月21日の米市場を未反映",
+      "米2年・10年金利とDXYは10月19日で、対象市場日より1営業日古い",
+      "Gold・WTI・Brentの保存連続先物値と取引所・限月・値種別・基準時刻の対応",
+      "10月22日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "アナリスト評価変更の全件網羅"
+    ],
+    "differences": [
+      "正本は米国20日・日本21日まで。米国21日はReutersの背景情報に限定",
+      "正本20日は11セクターETF10上昇・1下落でXLV・XLRE・XLU・XLF優位、XLKのみ下落",
+      "米21日はReutersが情報技術+1.6%、SOX約2%高を報道し、正本20日のローテーションから反転",
+      "米2年・10年は同じ10月19日なので2s10s38bpをその日限定で採用"
+    ],
+    "excluded": [
+      "10月21日のReuters市場値によるmarket.jsonの置換",
+      "限月・値種別・時刻未確認のGold・WTI・Brent数値",
+      "Copper価格・在庫（任意非掲載）",
+      "時刻のない現在値、暗号資産・日経225先物の推定値",
+      "米21日のAI反発を日本21日大引けに織り込み済みとする解釈",
+      "OFAC措置から個別日本企業の損益影響を推定すること"
+    ],
+    "cautions": [
+      "部分収集の注釈付き暫定版。完全版FAILを保持",
+      "正本20日と外部照合21日、日本株21日を混合しない",
+      "Copperは任意非掲載",
+      "ニュース一次事実と市場解釈を分離"
+    ]
+  },
+  "analyst_rating_changes": {
+    "coverage_status": "十分調査したが取得不能",
+    "headline": "22日朝までの全変更網羅性は未確認",
+    "items": [],
+    "source_review": [
+      {
+        "name": "公開評価一覧・IFIS",
+        "url": "https://kabuyoho.jp/",
+        "result": "一覧403、IFIS無料ページ取得も全件網羅未確認",
+        "coverage": "公開範囲のみ・全件網羅不可",
+        "freshness": "当日確認状況をJSONに記録",
+        "automation": "契約API未導入",
+        "rights": "確認できた事実だけを掲載"
+      }
+    ],
+    "summary": "契約データ未導入。公開情報で確認できないため『変更なし』と断定しない。"
+  },
+  "sector_implications": [
+    {
+      "driver": "米21日はAI・半導体主導で反発",
+      "affected_sectors": [
+        "半導体製造装置",
+        "電機・精密",
+        "情報通信"
+      ],
+      "possible_impact": "8035・6857・6758・9984に条件付き追い風",
+      "confirmation_condition": "22日寄り付き後のTOPIX比・出来高"
+    },
+    {
+      "driver": "日本21日は銀行・鉄鋼非鉄・電機が上位",
+      "affected_sectors": [
+        "銀行",
+        "鉄鋼・非鉄",
+        "電機・精密"
+      ],
+      "possible_impact": "8306・8316・6758に相対追い風候補",
+      "confirmation_condition": "業種ETFと主要株の相対優位持続"
+    },
+    {
+      "driver": "米住宅着工減速",
+      "affected_sectors": [
+        "住宅",
+        "不動産",
+        "建設"
+      ],
+      "possible_impact": "日本への直接影響は限定的だが金利・景気感応度を確認",
+      "confirmation_condition": "国内金利と8802・1925の相対騰落"
+    },
+    {
+      "driver": "米通信サービス弱含み",
+      "affected_sectors": [
+        "情報通信"
+      ],
+      "possible_impact": "通信はAI関連と通信キャリアを分けて選別",
+      "confirmation_condition": "9984と9432の方向差"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "基本",
+      "conditions": "米21日のAI・半導体反発が日本へ波及しつつ、正本20日の銀行・ヘルスケア優位も残る",
+      "impact_on_japan": "半導体・電機と銀行を選別。通信、住宅関連は慎重",
+      "invalidation": "SOX反落、円急伸、国内半導体がTOPIX比で劣後"
+    },
+    {
+      "name": "上振れ",
+      "conditions": "SOX高が国内複数銘柄へ広がり、USD/JPYが急変せず、銀行も相対優位を維持",
+      "impact_on_japan": "日経・TOPIX双方に買いが広がり、機械・電機・金融が優位",
+      "invalidation": "反発が少数大型株だけ、または米金利急上昇"
+    },
+    {
+      "name": "下振れ",
+      "conditions": "AI反発失速、住宅減速懸念、円急伸または米金利上昇が重なる",
+      "impact_on_japan": "高PER半導体・輸出・住宅関連に逆風。銀行も市場全体悪化なら絶対上昇を保証しない",
+      "invalidation": "SOX続伸、金利安定、市場幅改善"
+    }
+  ],
+  "monitoring_points": [
+    {
+      "target": "半導体とAI",
+      "today_check": "東京エレクトロン8035、アドバンテスト6857、ソフトバンクG9984のTOPIX比・出来高",
+      "view_change_condition": "複数銘柄で持続反発なら上方、再下落なら下方修正"
+    },
+    {
+      "target": "銀行・金利",
+      "today_check": "MUFG8306、SMFG8316、国内長期金利と米金利",
+      "view_change_condition": "金利低下と銀行劣後が重なれば追い風評価を下げる"
+    },
+    {
+      "target": "住宅・不動産",
+      "today_check": "三菱地所8802、住宅関連、米金利",
+      "view_change_condition": "住宅減速懸念を相対株価が無視すれば逆風評価を弱める"
+    },
+    {
+      "target": "円と輸出",
+      "today_check": "時刻付きUSD/JPY、トヨタ7203、ソニー6758",
+      "view_change_condition": "円急伸で輸出株が劣後すれば下方修正"
+    }
+  ],
+  "source_notes": [
+    "市場数値の正本はmarket.json（米国20日、金利・DXYは19日）",
+    "日本21日大引けデータはjapan-market.json",
+    "米21日市場はReuters照合情報で正本を置換しない",
+    "Census・OFAC・日銀は一次本文を実読"
+  ],
+  "publication_policy": {
+    "status": "QUALIFIED",
+    "mode": "provisional",
+    "updated_at": "2026-10-22T06:49:53+09:00",
+    "complete_gate": "FAIL",
+    "copper_included": false,
+    "note": "当日status未更新と米21日価格未反映を注釈し、確認済み一次情報と日本21日実績を掲載する暫定版。",
+    "missing_items": [
+      "10月22日JSTのmarket_data成功記録。statusの最終成功は10月21日10:43:11 JST",
+      "米株・VIX・USD/JPY・米11セクターETFの正本は10月20日で、10月21日の米市場を未反映",
+      "米2年・10年金利とDXYは10月19日で、対象市場日より1営業日古い",
+      "Gold・WTI・Brentの保存連続先物値と取引所・限月・値種別・基準時刻の対応",
+      "10月22日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "アナリスト評価変更の全件網羅"
+    ]
+  }
+}

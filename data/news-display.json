@@ -2,169 +2,28 @@
   "version": "1.0",
   "description": "確認済み一次資料の表示設定",
   "items": {
-    "2026-10-18-sp500": {
+    "oct22-0": {
       "primary_page": "world",
       "priority": 100,
       "attention_points": [
-        "広範株指数は前日から下落。理由は別資料と分離する。"
-      ]
-    },
-    "2026-10-18-sox": {
-      "primary_page": "world",
-      "priority": 95,
-      "attention_points": [
-        "半導体の下落が広範指数を上回った事実を確認。"
-      ]
-    },
-    "2026-10-18-ndx": {
-      "primary_page": "world",
-      "priority": 90,
-      "attention_points": [
-        "大型グロースの弱さをダウと比較する材料。"
-      ]
-    },
-    "2026-10-18-imf": {
-      "primary_page": "world",
-      "priority": 85,
-      "attention_points": [
-        "AI・戦争・債務を週末の背景として使用し、日銀の政策決定とは分ける。"
-      ]
-    },
-    "oct19-0": {
-      "primary_page": "world",
-      "priority": 100,
-      "attention_points": [
-        "当初公表後3か月は改定対象。8月旧公表+0.7%と区別。"
-      ]
-    },
-    "oct19-1": {
-      "primary_page": "world",
-      "priority": 100,
-      "attention_points": [
-        "速報・季節調整済み。11月24日に年次改定予定。金融政策決定ではない。"
-      ]
-    },
-    "oct19-2": {
-      "primary_page": "world",
-      "priority": 100,
-      "attention_points": [
-        "条文2の追加関税だけを切り取らず4の免除を併読。19日国内反応は未確認。"
-      ]
-    },
-    "oct19-3": {
-      "primary_page": "world",
-      "priority": 100,
-      "attention_points": [
-        "声明は新規政策金利決定ではない。銀行の資本・流動性等の強さ、民間信用単独の限定的影響も記載。"
-      ]
-    },
-    "oct19-4": {
-      "primary_page": "world",
-      "priority": 100,
-      "attention_points": [
-        "FAQで確認できた支払例外に限定。全取引への適用や個別契約の適法性は判断しない。"
-      ]
-    },
-    "oct19-5": {
-      "primary_page": "japan",
-      "priority": 100,
-      "attention_points": [
-        "緩和的環境とAI需要・輸出の底堅さも説明。挨拶日と9月の政策決定を区別。"
-      ]
-    },
-    "oct19-6": {
-      "primary_page": "japan",
-      "priority": 100,
-      "attention_points": [
-        "関係当局承認等が条件。譲渡完了・通期利益確定ではない。"
-      ]
-    },
-    "oct19-7": {
-      "primary_page": "japan",
-      "priority": 100,
-      "attention_points": [
-        "会社は業績予想の増額を示すものではないと明記。全受注を示す集計でもない。"
-      ]
-    },
-    "oct19-8": {
-      "primary_page": "japan",
-      "priority": 100,
-      "attention_points": [
-        "事象期間・検知・公表を分離。個人別情報は掲載せず、調査中の損失を推計しない。"
-      ]
-    },
-    "oct20-0": {
-      "primary_page": "world",
-      "priority": 100,
-      "attention_points": [
-        "GL1はサイバー制裁規則で許可・適用除外される範囲。GL2は指定4主体と50%以上所有先の取引整理に限定し、2027年1月19日00:01 ESTまで。凍結対象への支払は米国内凍結口座。他規制は別途順守。Shanghai ZhisuanをGL2対象としない。"
-      ]
-    },
-    "oct20-1": {
-      "primary_page": "japan",
-      "priority": 100,
-      "attention_points": [
-        "国際公表14日と日銀案内19日を区別。プレス本文の範囲であり、日本での一律施行日・個別機関の資本不足を断定しない。"
-      ]
-    },
-    "oct20-2": {
-      "primary_page": "world",
-      "priority": 100,
-      "attention_points": [
-        "権利侵害の是正と施設別措置の解除に限定。日本企業の利益・市場反応は未確認。"
-      ]
-    },
-    "oct20-3": {
-      "primary_page": "japan",
-      "priority": 100,
-      "attention_points": [
-        "予想であり実績ではない。経常・純利益の増加には運用収支も含み、全てをゲーム販売効果としない。"
-      ]
-    },
-    "oct20-4": {
-      "primary_page": "japan",
-      "priority": 100,
-      "attention_points": [
-        "予想であり確定配当ではない。特別利益にはアーンアウト条項の条件付対価を含む。"
-      ]
-    },
-    "oct21-0": {
-      "primary_page": "world",
-      "priority": 100,
-      "attention_points": [
-        "州別統計であり全国雇用の新規月次総合ではない",
+        "住宅着工の前月比5.2%減は誤差幅±11.8%内",
         "市場反応は未確認"
       ]
     },
-    "oct21-1": {
-      "primary_page": "japan",
-      "priority": 100,
+    "oct22-1": {
+      "primary_page": "world",
+      "priority": 95,
       "attention_points": [
-        "会見日16日・公表日20日",
-        "10月会合の決定ではない"
+        "指定追加・削除・一般許可を一括で確認",
+        "日本企業への個別影響は未確認"
       ]
     },
-    "oct21-2": {
-      "primary_page": "japan",
-      "priority": 100,
-      "attention_points": [
-        "中間予想で通期予想は未公表",
-        "21日現物反応は未確認"
-      ]
-    },
-    "oct21-3": {
-      "primary_page": "japan",
-      "priority": 90,
-      "attention_points": [
-        "市場区分変更だけで指数買いを断定しない"
-      ]
-    },
-    "oct21-4": {
+    "oct22-2": {
       "primary_page": "japan",
       "priority": 85,
       "attention_points": [
-        "決算短信の数値には訂正なし",
-        "表画像の個別修正値は不採用"
+        "金融政策決定ではない",
+        "個別金融機関の収益効果は未確認"
       ]
     }
   }

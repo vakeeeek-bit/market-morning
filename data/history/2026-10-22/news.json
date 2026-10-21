@@ -1,0 +1,124 @@
+{
+  "report_date": "2026-10-22",
+  "target_market_date": "2026-10-20",
+  "updated_at": "2026-10-22T06:49:53+09:00",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "20～21日公表の一次3件を実読した部分収集。市場反応は未確認。正本市場日20日、日本株大引け21日、ニュース発表日を分離。",
+  "articles": [
+    {
+      "id": "oct22-0",
+      "title": "米9月住宅着工は前月比5.2%減",
+      "published_date": "2026-10-20",
+      "verified_at": "2026-10-22T06:49:53+09:00",
+      "source_type": "primary",
+      "publisher": "U.S. Census Bureau / HUD",
+      "source_url": "https://www.census.gov/construction/nrc/current/index.html",
+      "verification_url": "https://www.census.gov/construction/nrc/current/index.html",
+      "verification_status": "PASS",
+      "fact": "9月住宅着工は季節調整済み年率122.1万戸で前月比5.2%減、許可は140.0万戸で0.2%減。8月着工は128.8万戸、許可は140.3万戸へ改定。",
+      "analysis": "住宅需要の減速は景気敏感・住宅関連の上値を抑える候補。",
+      "limitations": "着工前月比の誤差幅は±11.8%で、5.2%減は統計的に確定的とはいえない。日本株への直接反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "U.S. Census Bureau / HUD本文の発表日、対象、数値または措置、留保を実読。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "9月住宅着工は季節調整済み年率122.1万戸で前月比5.2%減、許可は140.0万戸で0.2%減。8月着工は128.8万戸、許可は140.3万戸へ改定。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-20、実確認2026-10-22T06:49:53+09:00。発表日・対象期間・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。記事単独の市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "着工前月比の誤差幅は±11.8%で、5.2%減は統計的に確定的とはいえない。日本株への直接反応は未確認。"
+        }
+      }
+    },
+    {
+      "id": "oct22-1",
+      "title": "OFACがイラン関連指定等を更新",
+      "published_date": "2026-10-21",
+      "verified_at": "2026-10-22T06:49:53+09:00",
+      "source_type": "primary",
+      "publisher": "U.S. Treasury OFAC",
+      "source_url": "https://ofac.treasury.gov/recent-actions/20261021",
+      "verification_url": "https://ofac.treasury.gov/recent-actions/20261021",
+      "verification_status": "PASS",
+      "fact": "OFACはイラン関連の個人・企業をSDNリストへ追加し、ベラルーシ・北朝鮮関連の削除、イラン・ロシア関連一般許可とFAQ改定も公表。",
+      "analysis": "海運・商社は相手先と所有関係、一般許可の範囲を個別確認する。",
+      "limitations": "掲載一覧の要約であり、全対象名・許可条項を網羅しない。日本企業の個別影響と市場反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "U.S. Treasury OFAC本文の発表日、対象、数値または措置、留保を実読。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "OFACはイラン関連の個人・企業をSDNリストへ追加し、ベラルーシ・北朝鮮関連の削除、イラン・ロシア関連一般許可とFAQ改定も公表。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-21、実確認2026-10-22T06:49:53+09:00。発表日・対象期間・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。記事単独の市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "掲載一覧の要約であり、全対象名・許可条項を網羅しない。日本企業の個別影響と市場反応は未確認。"
+        }
+      }
+    },
+    {
+      "id": "oct22-2",
+      "title": "日銀が地域DX支援ワークショップを公表",
+      "published_date": "2026-10-21",
+      "verified_at": "2026-10-22T06:49:53+09:00",
+      "source_type": "primary",
+      "publisher": "日本銀行",
+      "source_url": "https://www.boj.or.jp/finsys/c_aft/aft261021a.htm",
+      "verification_url": "https://www.boj.or.jp/finsys/c_aft/aft261021a.htm",
+      "verification_status": "PASS",
+      "fact": "日銀は10月14日に、地域金融機関の経理業務受託等による中小企業DX支援を扱うワークショップを開催したと21日に公表。",
+      "analysis": "地域銀行・IT支援の中期テーマだが、当日業績や政策金利を直接変更する材料ではない。",
+      "limitations": "金融政策決定ではない。個別金融機関の収益効果と市場反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "日本銀行本文の発表日、対象、数値または措置、留保を実読。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "日銀は10月14日に、地域金融機関の経理業務受託等による中小企業DX支援を扱うワークショップを開催したと21日に公表。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-21、実確認2026-10-22T06:49:53+09:00。発表日・対象期間・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。記事単独の市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "金融政策決定ではない。個別金融機関の収益効果と市場反応は未確認。"
+        }
+      }
+    }
+  ]
+}

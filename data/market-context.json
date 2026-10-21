@@ -1,17 +1,17 @@
 {
   "version": 2,
   "updated_at": "2026-10-21T06:43:56+09:00",
-  "report_date": "2026-10-21",
+  "report_date": "2026-10-22",
   "period_start": "2026-03-18",
-  "period_end": "2026-10-21",
+  "period_end": "2026-10-22",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-10-20",
-    "source_report_count": 9,
+    "latest_report_date": "2026-10-22",
+    "source_report_count": 10,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新",
-    "report_date": "2026-10-21",
-    "target_market_date": "2026-10-19",
-    "updated_at": "2026-10-21T06:43:56+09:00"
+    "report_date": "2026-10-22",
+    "target_market_date": "2026-10-20",
+    "updated_at": "2026-10-22T06:49:53+09:00"
   },
   "headline": "米半導体反発からヘルスケア・内需選別へ。日銀追加利上げ姿勢を重ねて確認",
   "summary": "正本19日はSOX反発だが市場幅は弱く、日本20日は指数下落・医薬品優位。米20日はヘルスケア・価値株優位との報道。全面リスクオンではなく、日銀・業績修正を個別選別。",
@@ -576,6 +576,27 @@
       "publisher": "White House",
       "published_at": "2026-10-16",
       "url": "https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/"
+    },
+    {
+      "id": "oct22-census",
+      "title": "New Residential Construction September 2026",
+      "publisher": "U.S. Census Bureau / HUD",
+      "published_at": "2026-10-20",
+      "url": "https://www.census.gov/construction/nrc/current/index.html"
+    },
+    {
+      "id": "oct22-ofac",
+      "title": "Iran-related Designations and General Licenses",
+      "publisher": "U.S. Treasury OFAC",
+      "published_at": "2026-10-21",
+      "url": "https://ofac.treasury.gov/recent-actions/20261021"
+    },
+    {
+      "id": "oct22-market",
+      "title": "Nasdaq leads Wall Street gains as AI sentiment improves",
+      "publisher": "Reuters",
+      "published_at": "2026-10-21",
+      "url": "https://www.reuters.com/legal/transactional/nasdaq-futures-lead-gains-spacex-super-micro-results-lift-ai-trade-2026-10-21/"
     }
   ]
 }

@@ -1,20 +1,17 @@
 {
   "version": 2,
-  "updated_at": "2026-10-21T06:43:56+09:00",
+  "updated_at": "2026-10-22T06:49:53+09:00",
   "report_date": "2026-10-22",
   "period_start": "2026-03-18",
-  "period_end": "2026-10-22",
+  "period_end": "2026-10-21",
   "freshness": {
     "status": "current",
     "latest_report_date": "2026-10-22",
-    "source_report_count": 10,
-    "note": "当日レポートと直近の履歴・確認済みニュースから更新",
-    "report_date": "2026-10-22",
-    "target_market_date": "2026-10-20",
-    "updated_at": "2026-10-22T06:49:53+09:00"
+    "source_report_count": 11,
+    "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
-  "headline": "米半導体反発からヘルスケア・内需選別へ。日銀追加利上げ姿勢を重ねて確認",
-  "summary": "正本19日はSOX反発だが市場幅は弱く、日本20日は指数下落・医薬品優位。米20日はヘルスケア・価値株優位との報道。全面リスクオンではなく、日銀・業績修正を個別選別。",
+  "headline": "市場の見方がどう変わったかを3つのテーマで確認",
+  "summary": "約半年の重要な転換点を時系列でたどり、直近のニュースがそれまでの見方をどう変えたかを示します。確認できない変化は作らず、反証も併記します。",
   "themes": [
     {
       "theme": "米物価と金融政策",
@@ -207,6 +204,15 @@
             "oct20-reaction",
             "oct20-0"
           ]
+        },
+        {
+          "date": "2026-10-21",
+          "title": "AI・半導体が反発",
+          "fact": "Reutersは情報技術とSOXの上昇を報道。外部値は正本価格に採用しない。",
+          "market_impact": "20日の価値株優位から21日はAI・半導体へ日次で回転した。",
+          "source_ids": [
+            "oct22-market"
+          ]
         }
       ],
       "initial_view": {
@@ -214,16 +220,16 @@
         "text": "AI設備投資と先端半導体需要の強さが株価を支える局面"
       },
       "new_fact": {
-        "date": "2026-10-20",
-        "text": "反発報道を踏まえ慎重姿勢を条件付き修正"
+        "date": "2026-10-21",
+        "text": "AI関連決算を受けて情報技術・半導体が反発"
       },
       "market_reaction": {
-        "date": "2026-10-20",
-        "text": "19日の報道と16日正本を分離。20日国内初動未確認"
+        "date": "2026-10-21",
+        "text": "NASDAQ・SOXが上昇。通信サービスは下落し、全面高ではない"
       },
-      "current_view": "昨日の一律慎重姿勢を条件付きで弱める。ただし反発の広がりと企業利益・資金調達改善を伴うまで信用不安解消とはしない。",
+      "current_view": "AI需要の強さは再確認されたが、日次ローテーションが速く、国内半導体の市場幅を確認する。",
       "japan_impact": "東京エレクトロンなど装置株を一律に弱気とせず、受注と株価評価を分けて確認します。",
-      "counter_evidence": "大型偏重・信用不安・原油供給懸念は反証。個別上方修正も全面需要回復を保証しない。",
+      "counter_evidence": "正本20日はSOXとXLKが下落し、21日も通信サービスと一部大型株は弱い。",
       "source_ids": [
         "ai-apr16",
         "ai-credit-1016",
@@ -236,7 +242,8 @@
         "us-close-1016",
         "oct19-3",
         "oct20-reaction",
-        "oct20-0"
+        "oct20-0",
+        "oct22-market"
       ]
     },
     {
@@ -347,40 +354,24 @@
     }
   ],
   "scenario_change_conditions": [
-    "国内半導体の複数銘柄でTOPIX比改善",
-    "医薬品・小売の相対優位反転",
-    "国内金利・円の急変",
-    "ツガミ通期予想・受注変化"
+    {
+      "condition": "半導体とAI",
+      "meaning": "複数銘柄で持続反発なら上方、再下落なら下方修正"
+    },
+    {
+      "condition": "銀行・金利",
+      "meaning": "金利低下と銀行劣後が重なれば追い風評価を下げる"
+    },
+    {
+      "condition": "住宅・不動産",
+      "meaning": "住宅減速懸念を相対株価が無視すれば逆風評価を弱める"
+    },
+    {
+      "condition": "円と輸出",
+      "meaning": "円急伸で輸出株が劣後すれば下方修正"
+    }
   ],
   "sources": [
-    {
-      "id": "oct21-bls",
-      "title": "State Employment and Unemployment - September 2026",
-      "publisher": "U.S. Bureau of Labor Statistics",
-      "published_at": "2026-10-20",
-      "url": "https://www.bls.gov/news.release/laus.nr0.htm"
-    },
-    {
-      "id": "oct21-boj",
-      "title": "総裁記者会見（10月16日）",
-      "publisher": "日本銀行",
-      "published_at": "2026-10-20",
-      "url": "https://www.boj.or.jp/about/press/kaiken_2026/kk261020a.pdf"
-    },
-    {
-      "id": "oct21-tsugami",
-      "title": "中間業績予想および中間配当予想の修正",
-      "publisher": "ツガミ",
-      "published_at": "2026-10-20",
-      "url": "https://kabuyoho-sls-disclose.ifis.co.jp/a0c/140120261019552815.pdf"
-    },
-    {
-      "id": "oct21-market",
-      "title": "20日米国市場のセクターローテーション",
-      "publisher": "Reuters",
-      "published_at": "2026-10-20",
-      "url": "https://www.reuters.com/world/asia-pacific/nasdaq-futures-dip-oil-prices-climb-earnings-loom-2026-10-20/"
-    },
     {
       "id": "fed-apr29",
       "title": "Federal Reserve issues FOMC statement",
@@ -522,6 +513,13 @@
       "url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261017~7015ea3099.en.html"
     },
     {
+      "id": "oct22-market",
+      "title": "Nasdaq leads Wall Street gains as AI sentiment improves",
+      "publisher": "Reuters",
+      "published_at": "2026-10-21",
+      "url": "https://www.reuters.com/legal/transactional/nasdaq-futures-lead-gains-spacex-super-micro-results-lift-ai-trade-2026-10-21/"
+    },
+    {
       "id": "boj-apr28",
       "title": "Statement on Monetary Policy",
       "publisher": "Bank of Japan",
@@ -576,27 +574,6 @@
       "publisher": "White House",
       "published_at": "2026-10-16",
       "url": "https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/"
-    },
-    {
-      "id": "oct22-census",
-      "title": "New Residential Construction September 2026",
-      "publisher": "U.S. Census Bureau / HUD",
-      "published_at": "2026-10-20",
-      "url": "https://www.census.gov/construction/nrc/current/index.html"
-    },
-    {
-      "id": "oct22-ofac",
-      "title": "Iran-related Designations and General Licenses",
-      "publisher": "U.S. Treasury OFAC",
-      "published_at": "2026-10-21",
-      "url": "https://ofac.treasury.gov/recent-actions/20261021"
-    },
-    {
-      "id": "oct22-market",
-      "title": "Nasdaq leads Wall Street gains as AI sentiment improves",
-      "publisher": "Reuters",
-      "published_at": "2026-10-21",
-      "url": "https://www.reuters.com/legal/transactional/nasdaq-futures-lead-gains-spacex-super-micro-results-lift-ai-trade-2026-10-21/"
     }
   ]
 }

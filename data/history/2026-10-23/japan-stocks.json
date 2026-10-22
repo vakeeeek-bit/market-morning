@@ -1,0 +1,259 @@
+{
+  "report_date": "2026-10-23",
+  "target_market_date": "2026-10-21",
+  "updated_at": "2026-10-23T06:43:59+09:00",
+  "report_type": "daily_provisional",
+  "japan_quick_view": {
+    "headline": "注釈付き暫定版｜米AI・半導体急落と原油高。日本はエネルギー優位、電機・機械に警戒",
+    "top_materials": [
+      "米22日はAI投資懸念でNASDAQが2.60%下落、SOXが6.7%下落（正本未反映）",
+      "日本22日は日経平均-2.44%、TOPIX-1.17%、電機・機械・鉄鋼非鉄が下位",
+      "中東供給懸念で原油上昇、エネルギー・運輸への影響は逆方向",
+      "米新規失業保険申請は19.4万件、前週改定値から0.6万件減",
+      "米国は風力タービン輸入でSection 232交渉開始、180日以内に進捗報告"
+    ],
+    "focus_sectors": [
+      "半導体製造装置",
+      "電機・機械",
+      "エネルギー資源",
+      "空運・運輸",
+      "医薬品",
+      "風力関連"
+    ],
+    "unpriced_materials": [
+      "米22日のAI・半導体急落",
+      "米22日の原油上昇",
+      "23日朝の時刻付き為替・日経225先物",
+      "Gold・WTI・Brentの定義付き価格"
+    ],
+    "individual_news_review": {
+      "status": "reviewed",
+      "story_count": 3,
+      "scope": "22日日本株大引け実績、米労働省、White House、日銀一次資料を確認。企業開示・評価変更は全件網羅ではない"
+    }
+  },
+  "top_stories": [
+    {
+      "company": "INPEX",
+      "ticker": "1605",
+      "headline": "22日はエネルギー資源が首位",
+      "fact": "INPEXは22日+3.08%、エネルギー資源ETF代理は+2.87%。",
+      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json",
+      "analysis": "米22日の原油上昇が続く場合は相対追い風候補。ただしReuters価格は限月未確認のため数値不採用。",
+      "category": "追い風候補・資源限定",
+      "related_sectors": [
+        "エネルギー資源"
+      ],
+      "today_watch": "定義付き原油価格と1605のTOPIX比",
+      "announced_at": "2026-10-22",
+      "timing": "22日大引け後確認",
+      "market_pricing_status": "22日大引け実績、米22日原油上昇は未反映",
+      "price_reaction": "INPEX+3.08%、エネルギー資源+2.87%",
+      "related_stocks": [],
+      "importance": "high",
+      "confidence": "supported"
+    }
+  ],
+  "important_stories": [
+    {
+      "company": "ソフトバンクグループ",
+      "ticker": "9984",
+      "headline": "22日は-6.86%、米AI急落が追加逆風",
+      "fact": "正本の日本市場データでソフトバンクGは22日-6.86%。同日大引け後の米市場ではReutersがSOX-6.7%、NASDAQ-2.60%と報道。",
+      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json",
+      "analysis": "23日はAI投資採算懸念が追加逆風。外部市場報道は正本価格に採用せず、8035・6857も含め市場幅を確認。",
+      "category": "向かい風・AI関連",
+      "related_sectors": [
+        "情報通信",
+        "半導体",
+        "電機・精密"
+      ],
+      "today_watch": "9984・8035・6857のTOPIX比と出来高",
+      "announced_at": "2026-10-22",
+      "timing": "米22日大引け・日本23日寄り付き前",
+      "market_pricing_status": "日本22日下落実績あり、米22日急落は未反映",
+      "price_reaction": "9984は22日-6.86%",
+      "related_stocks": [],
+      "importance": "high",
+      "confidence": "supported"
+    },
+    {
+      "company": "ソニーグループ",
+      "ticker": "6758",
+      "headline": "業種劣後でも個別は上昇",
+      "fact": "ソニーは22日+1.72%、出来高は20日平均の1.38倍。一方、電機・精密ETF代理は-2.50%。",
+      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json",
+      "analysis": "個別強さと米AI急落を分けて確認。業種全体の追い風とは扱わない。",
+      "category": "中立・個別強さ",
+      "related_sectors": [
+        "電機・精密"
+      ],
+      "today_watch": "6758が業種・TOPIXを上回り続けるか",
+      "announced_at": "2026-10-22",
+      "timing": "22日大引け後確認",
+      "market_pricing_status": "22日大引け実績、米22日急落は未反映",
+      "price_reaction": "6758+1.72%、電機・精密-2.50%",
+      "related_stocks": [],
+      "importance": "medium",
+      "confidence": "supported"
+    }
+  ],
+  "other_stories": [],
+  "data_quality": {
+    "overall": "MANUAL_REVIEW",
+    "missing": [
+      "10月23日JSTのmarket_data成功記録。statusの最終更新は10月22日10:37:54 JST",
+      "米株・VIX・USD/JPY・米11セクターETFの正本は10月21日で、10月22日の米市場急落を未反映",
+      "米2年・10年金利は10月19日の前回確認値、DXYは10月20日で対象市場日より古い",
+      "Gold・WTI・Brentの保存連続先物値と取引所・限月・値種別・基準時刻の対応",
+      "10月23日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "アナリスト評価変更と企業固有開示の全件網羅"
+    ],
+    "differences": [
+      "正本は米国21日・日本22日まで。米国22日はReutersの背景情報に限定",
+      "正本21日はNASDAQ100+1.13%、SOX+1.97%、XLK+1.67%だが、米22日はReutersがNASDAQ-2.60%、SOX-6.7%を報道",
+      "日本22日は日経平均-2.44%、TOPIX-1.17%。エネルギー+2.87%、運輸+0.94%、医薬品+0.75%が相対優位",
+      "米2年・10年は同じ10月19日なので2s10s38bpをその日限定で採用"
+    ],
+    "excluded": [
+      "10月22日のReuters市場値によるmarket.jsonの置換",
+      "限月・値種別・時刻未確認のGold・WTI・Brent数値",
+      "Copper価格・在庫（任意非掲載）",
+      "時刻のない現在値、暗号資産・日経225先物の推定値",
+      "原油上昇だけからINPEX・空運の当日騰落を断定すること",
+      "風力タービン交渉開始を即時の新規関税発効と扱うこと"
+    ],
+    "cautions": [
+      "部分収集の注釈付き暫定版。完全版FAILを保持",
+      "正本21日、外部照合22日、日本株22日を混合しない",
+      "Copperは任意非掲載",
+      "ニュース一次事実と市場解釈を分離"
+    ]
+  },
+  "analyst_rating_changes": {
+    "coverage_status": "十分調査したが取得不能",
+    "headline": "23日朝までの全変更網羅性は未確認",
+    "items": [],
+    "source_review": [
+      {
+        "name": "公開評価一覧・IFIS",
+        "url": "https://kabuyoho.jp/",
+        "result": "一覧403、IFIS無料ページ取得も全件網羅未確認",
+        "coverage": "公開範囲のみ・全件網羅不可",
+        "freshness": "当日確認状況をJSONに記録",
+        "automation": "契約API未導入",
+        "rights": "確認できた事実だけを掲載"
+      }
+    ],
+    "summary": "契約データ未導入。公開情報で確認できないため『変更なし』と断定しない。"
+  },
+  "sector_implications": [
+    {
+      "driver": "米22日のAI・半導体急落",
+      "affected_sectors": [
+        "半導体製造装置",
+        "電機・精密",
+        "情報通信"
+      ],
+      "possible_impact": "8035・6857・9984に逆風候補",
+      "confirmation_condition": "寄り付き後のTOPIX比・出来高とSOX反発の有無"
+    },
+    {
+      "driver": "中東供給懸念による原油上昇",
+      "affected_sectors": [
+        "エネルギー資源",
+        "空運",
+        "化学",
+        "運輸"
+      ],
+      "possible_impact": "1605に相対追い風、9201・9202に燃油コスト逆風候補",
+      "confirmation_condition": "取引所・限月・値種別を確認した原油価格"
+    },
+    {
+      "driver": "日本22日は資源・運輸・医薬品が相対優位",
+      "affected_sectors": [
+        "エネルギー資源",
+        "運輸・物流",
+        "医薬品"
+      ],
+      "possible_impact": "1605・9020・4502の相対優位持続を確認",
+      "confirmation_condition": "23日の業種ETFと出来高"
+    },
+    {
+      "driver": "風力タービンSection 232交渉",
+      "affected_sectors": [
+        "機械",
+        "電機",
+        "鉄鋼・非鉄",
+        "商社"
+      ],
+      "possible_impact": "対象部品・生産国・既存関税の重複次第でセクター限定の不確実性",
+      "confirmation_condition": "交渉対象、例外、具体的関税措置の公表"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "基本",
+      "conditions": "米22日のAI・半導体急落と原油高が日本寄り付きで重視される",
+      "impact_on_japan": "半導体・機械・電機は慎重。資源・医薬品を相対優位候補、空運は原油コストを確認",
+      "invalidation": "SOX反発、原油反落、国内半導体がTOPIX比で改善"
+    },
+    {
+      "name": "上振れ",
+      "conditions": "SOX急落が一過性で米金利低下・原油反落、国内半導体が複数銘柄で反発",
+      "impact_on_japan": "日経主導で電機・機械が戻り、TOPIXの市場幅も改善",
+      "invalidation": "AI投資懸念の拡大、SOX続落、円急伸"
+    },
+    {
+      "name": "下振れ",
+      "conditions": "SOX続落、原油高止まり、円急伸または高金利が重なる",
+      "impact_on_japan": "半導体・輸出・空運・化学に複合逆風。資源株だけの指数支えには限界",
+      "invalidation": "原油・金利低下と市場幅改善"
+    }
+  ],
+  "monitoring_points": [
+    {
+      "target": "半導体とAI",
+      "today_check": "東京エレクトロン8035、アドバンテスト6857、ソフトバンクG9984のTOPIX比・出来高",
+      "view_change_condition": "複数銘柄が反発しSOX先物材料も改善すれば逆風評価を弱める"
+    },
+    {
+      "target": "原油・資源・空運",
+      "today_check": "定義付き原油価格、INPEX1605、ANA9202、日本航空9201",
+      "view_change_condition": "原油反落なら資源追い風・空運逆風を弱める"
+    },
+    {
+      "target": "内需・医薬品",
+      "today_check": "武田4502、電力ガス、運輸のTOPIX比",
+      "view_change_condition": "指数反発で外需が優位になれば相対優位評価を下げる"
+    },
+    {
+      "target": "円と金利",
+      "today_check": "時刻付きUSD/JPY、米2年・10年、銀行8306・8316",
+      "view_change_condition": "円急伸・金利低下で輸出・銀行が劣後すれば下方修正"
+    }
+  ],
+  "source_notes": [
+    "市場数値の正本はmarket.json",
+    "日本22日大引けはjapan-market.json",
+    "米22日市場・原油はReutersの背景情報で正本を置換しない",
+    "米労働省・White House・日銀一次資料を実読",
+    "Copperは任意非掲載"
+  ],
+  "publication_policy": {
+    "status": "QUALIFIED",
+    "mode": "provisional",
+    "updated_at": "2026-10-23T06:43:59+09:00",
+    "complete_gate": "FAIL",
+    "copper_included": false,
+    "note": "23日当日status未更新、金利・商品定義・現在値の不足を注釈し、確認済み一次情報、米21日正本、日本22日実績、米22日背景を分離した暫定版。",
+    "missing_items": [
+      "10月23日JSTのmarket_data成功記録。statusの最終更新は10月22日10:37:54 JST",
+      "米株・VIX・USD/JPY・米11セクターETFの正本は10月21日で、10月22日の米市場急落を未反映",
+      "米2年・10年金利は10月19日の前回確認値、DXYは10月20日で対象市場日より古い",
+      "Gold・WTI・Brentの保存連続先物値と取引所・限月・値種別・基準時刻の対応",
+      "10月23日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "アナリスト評価変更と企業固有開示の全件網羅"
+    ]
+  }
+}

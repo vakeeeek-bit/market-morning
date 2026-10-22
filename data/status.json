@@ -1,8 +1,8 @@
 {
-  "status": "success",
-  "updated_at": "2026-10-21 10:43:11 JST",
-  "message": "Market data update completed and validation passed.",
+  "status": "qualified",
+  "updated_at": "2026-10-22 09:03:11 JST",
+  "message": "Market data partially refreshed; unavailable series are dated and annotated.",
   "component": "market_data",
-  "publication_status": "PASS",
-  "component_updated_at": "2026-10-21 10:43:03"
+  "publication_status": "QUALIFIED",
+  "component_updated_at": "2026-10-22 09:02:58"
 }

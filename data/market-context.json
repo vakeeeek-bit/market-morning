@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "updated_at": "2026-10-22T06:49:53+09:00",
-  "report_date": "2026-10-22",
+  "updated_at": "2026-10-23T06:43:59+09:00",
+  "report_date": "2026-10-23",
   "period_start": "2026-03-18",
-  "period_end": "2026-10-21",
+  "period_end": "2026-10-22",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-10-22",
-    "source_report_count": 11,
+    "latest_report_date": "2026-10-23",
+    "source_report_count": 12,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
   "headline": "市場の見方がどう変わったかを3つのテーマで確認",
@@ -213,6 +213,15 @@
           "source_ids": [
             "oct22-market"
           ]
+        },
+        {
+          "date": "2026-10-22",
+          "title": "AI投資採算懸念で半導体が再び急落",
+          "fact": "ReutersはNASDAQが2.60%、SOXが6.7%下落したと報道。外部値は正本価格に採用しない。",
+          "market_impact": "前日の反発から一転し、需要の有無より投資回収と資本コストへの警戒が優勢になった。",
+          "source_ids": [
+            "oct23-market"
+          ]
         }
       ],
       "initial_view": {
@@ -220,14 +229,14 @@
         "text": "AI設備投資と先端半導体需要の強さが株価を支える局面"
       },
       "new_fact": {
-        "date": "2026-10-21",
-        "text": "AI関連決算を受けて情報技術・半導体が反発"
+        "date": "2026-10-22",
+        "text": "AI投資の回収懸念でNASDAQ・SOXが急反落"
       },
       "market_reaction": {
-        "date": "2026-10-21",
-        "text": "NASDAQ・SOXが上昇。通信サービスは下落し、全面高ではない"
+        "date": "2026-10-22",
+        "text": "日本22日大引け後に米半導体が急落。日本23日の初動は未確認"
       },
-      "current_view": "AI需要の強さは再確認されたが、日次ローテーションが速く、国内半導体の市場幅を確認する。",
+      "current_view": "AI実需の強さは残るが、投資回収と資本コストへの警戒が再燃。日本23日は半導体の市場幅を確認する。",
       "japan_impact": "東京エレクトロンなど装置株を一律に弱気とせず、受注と株価評価を分けて確認します。",
       "counter_evidence": "正本20日はSOXとXLKが下落し、21日も通信サービスと一部大型株は弱い。",
       "source_ids": [
@@ -243,7 +252,8 @@
         "oct19-3",
         "oct20-reaction",
         "oct20-0",
-        "oct22-market"
+        "oct22-market",
+        "oct23-market"
       ]
     },
     {
@@ -356,19 +366,19 @@
   "scenario_change_conditions": [
     {
       "condition": "半導体とAI",
-      "meaning": "複数銘柄で持続反発なら上方、再下落なら下方修正"
+      "meaning": "複数銘柄が反発しSOX先物材料も改善すれば逆風評価を弱める"
     },
     {
-      "condition": "銀行・金利",
-      "meaning": "金利低下と銀行劣後が重なれば追い風評価を下げる"
+      "condition": "原油・資源・空運",
+      "meaning": "原油反落なら資源追い風・空運逆風を弱める"
     },
     {
-      "condition": "住宅・不動産",
-      "meaning": "住宅減速懸念を相対株価が無視すれば逆風評価を弱める"
+      "condition": "内需・医薬品",
+      "meaning": "指数反発で外需が優位になれば相対優位評価を下げる"
     },
     {
-      "condition": "円と輸出",
-      "meaning": "円急伸で輸出株が劣後すれば下方修正"
+      "condition": "円と金利",
+      "meaning": "円急伸・金利低下で輸出・銀行が劣後すれば下方修正"
     }
   ],
   "sources": [
@@ -518,6 +528,13 @@
       "publisher": "Reuters",
       "published_at": "2026-10-21",
       "url": "https://www.reuters.com/legal/transactional/nasdaq-futures-lead-gains-spacex-super-micro-results-lift-ai-trade-2026-10-21/"
+    },
+    {
+      "id": "oct23-market",
+      "title": "Nasdaq tumbles as AI spending concerns resurface",
+      "publisher": "Reuters",
+      "published_at": "2026-10-22",
+      "url": "https://www.reuters.com/business/nasdaq-futures-drop-over-1-ai-worries-resurface-oil-climbs-2026-10-22/"
     },
     {
       "id": "boj-apr28",

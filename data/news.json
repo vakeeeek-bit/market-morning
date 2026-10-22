@@ -1,38 +1,38 @@
 {
-  "report_date": "2026-10-22",
-  "target_market_date": "2026-10-20",
-  "updated_at": "2026-10-22T06:49:53+09:00",
+  "report_date": "2026-10-23",
+  "target_market_date": "2026-10-21",
+  "updated_at": "2026-10-23T06:43:59+09:00",
   "publication_mode": "verified_news",
   "coverage_status": "partial",
-  "coverage_note": "20～21日公表の一次3件を実読した部分収集。市場反応は未確認。正本市場日20日、日本株大引け21日、ニュース発表日を分離。",
+  "coverage_note": "22日公表の一次3件を実読した部分収集。市場反応は未確認。正本市場日21日、日本株大引け22日、ニュース発表日を分離。",
   "articles": [
     {
-      "id": "oct22-0",
-      "title": "米9月住宅着工は前月比5.2%減",
-      "published_date": "2026-10-20",
-      "verified_at": "2026-10-22T06:49:53+09:00",
+      "id": "oct23-0",
+      "title": "米新規失業保険申請は19.4万件",
+      "published_date": "2026-10-22",
+      "verified_at": "2026-10-23T06:43:59+09:00",
       "source_type": "primary",
-      "publisher": "U.S. Census Bureau / HUD",
-      "source_url": "https://www.census.gov/construction/nrc/current/index.html",
-      "verification_url": "https://www.census.gov/construction/nrc/current/index.html",
+      "publisher": "U.S. Department of Labor",
+      "source_url": "https://www.dol.gov/ui/data.pdf",
+      "verification_url": "https://www.dol.gov/ui/data.pdf",
       "verification_status": "PASS",
-      "fact": "9月住宅着工は季節調整済み年率122.1万戸で前月比5.2%減、許可は140.0万戸で0.2%減。8月着工は128.8万戸、許可は140.3万戸へ改定。",
-      "analysis": "住宅需要の減速は景気敏感・住宅関連の上値を抑える候補。",
-      "limitations": "着工前月比の誤差幅は±11.8%で、5.2%減は統計的に確定的とはいえない。日本株への直接反応は未確認。",
+      "fact": "10月17日終了週の季節調整済み新規申請は19.4万件で前週改定値から0.6万件減。4週平均19万7,750件。10月10日終了週の継続受給者は172.8万人で前週改定値から2.5万人増。",
+      "analysis": "解雇の少なさは景気下支えだが、継続受給者増と併せて雇用全体を一方向に断定しない。",
+      "limitations": "速報値・改定値を含む。発表単独の市場反応、日本株への直接影響は未確認。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
         "source_read": {
           "status": "PASS",
-          "evidence": "U.S. Census Bureau / HUD本文の発表日、対象、数値または措置、留保を実読。"
+          "evidence": "U.S. Department of Labor本文の発表日、対象、数値または措置、留保を実読。"
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "9月住宅着工は季節調整済み年率122.1万戸で前月比5.2%減、許可は140.0万戸で0.2%減。8月着工は128.8万戸、許可は140.3万戸へ改定。"
+          "evidence": "10月17日終了週の季節調整済み新規申請は19.4万件で前週改定値から0.6万件減。4週平均19万7,750件。10月10日終了週の継続受給者は172.8万人で前週改定値から2.5万人増。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日2026-10-20、実確認2026-10-22T06:49:53+09:00。発表日・対象期間・市場日を分離。"
+          "evidence": "発表日2026-10-22、実確認2026-10-23T06:43:59+09:00。発表日・対象期間・市場日を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
@@ -40,37 +40,37 @@
         },
         "limitations": {
           "status": "PASS",
-          "evidence": "着工前月比の誤差幅は±11.8%で、5.2%減は統計的に確定的とはいえない。日本株への直接反応は未確認。"
+          "evidence": "速報値・改定値を含む。発表単独の市場反応、日本株への直接影響は未確認。"
         }
       }
     },
     {
-      "id": "oct22-1",
-      "title": "OFACがイラン関連指定等を更新",
-      "published_date": "2026-10-21",
-      "verified_at": "2026-10-22T06:49:53+09:00",
+      "id": "oct23-1",
+      "title": "米国、風力タービン輸入でSection 232交渉開始",
+      "published_date": "2026-10-22",
+      "verified_at": "2026-10-23T06:43:59+09:00",
       "source_type": "primary",
-      "publisher": "U.S. Treasury OFAC",
-      "source_url": "https://ofac.treasury.gov/recent-actions/20261021",
-      "verification_url": "https://ofac.treasury.gov/recent-actions/20261021",
+      "publisher": "The White House",
+      "source_url": "https://www.whitehouse.gov/presidential-actions/2026/10/adjusting-imports-of-wind-turbines-and-their-parts-and-components-into-the-united-states/",
+      "verification_url": "https://www.whitehouse.gov/presidential-actions/2026/10/adjusting-imports-of-wind-turbines-and-their-parts-and-components-into-the-united-states/",
       "verification_status": "PASS",
-      "fact": "OFACはイラン関連の個人・企業をSDNリストへ追加し、ベラルーシ・北朝鮮関連の削除、イラン・ロシア関連一般許可とFAQ改定も公表。",
-      "analysis": "海運・商社は相手先と所有関係、一般許可の範囲を個別確認する。",
-      "limitations": "掲載一覧の要約であり、全対象名・許可条項を網羅しない。日本企業の個別影響と市場反応は未確認。",
+      "fact": "商務長官のSection 232報告を受け、商務長官とUSTRに風力タービン・部品の輸入を巡る協定交渉を指示し、180日以内の進捗報告を求めた。今回の本文は新たな一律関税率や即時発効日を定めていない。",
+      "analysis": "風力設備、電機、機械、金属部材にセクター限定の不確実性。",
+      "limitations": "対象国・品目・例外・新規税率は未確定。既存の鉄鋼・アルミ・銅関税との重複は個別確認が必要。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
         "source_read": {
           "status": "PASS",
-          "evidence": "U.S. Treasury OFAC本文の発表日、対象、数値または措置、留保を実読。"
+          "evidence": "The White House本文の発表日、対象、数値または措置、留保を実読。"
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "OFACはイラン関連の個人・企業をSDNリストへ追加し、ベラルーシ・北朝鮮関連の削除、イラン・ロシア関連一般許可とFAQ改定も公表。"
+          "evidence": "商務長官のSection 232報告を受け、商務長官とUSTRに風力タービン・部品の輸入を巡る協定交渉を指示し、180日以内の進捗報告を求めた。今回の本文は新たな一律関税率や即時発効日を定めていない。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日2026-10-21、実確認2026-10-22T06:49:53+09:00。発表日・対象期間・市場日を分離。"
+          "evidence": "発表日2026-10-22、実確認2026-10-23T06:43:59+09:00。発表日・対象期間・市場日を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
@@ -78,23 +78,23 @@
         },
         "limitations": {
           "status": "PASS",
-          "evidence": "掲載一覧の要約であり、全対象名・許可条項を網羅しない。日本企業の個別影響と市場反応は未確認。"
+          "evidence": "対象国・品目・例外・新規税率は未確定。既存の鉄鋼・アルミ・銅関税との重複は個別確認が必要。"
         }
       }
     },
     {
-      "id": "oct22-2",
-      "title": "日銀が地域DX支援ワークショップを公表",
-      "published_date": "2026-10-21",
-      "verified_at": "2026-10-22T06:49:53+09:00",
+      "id": "oct23-2",
+      "title": "日銀、10月の貸出動向調査を公表",
+      "published_date": "2026-10-22",
+      "verified_at": "2026-10-23T06:43:59+09:00",
       "source_type": "primary",
       "publisher": "日本銀行",
-      "source_url": "https://www.boj.or.jp/finsys/c_aft/aft261021a.htm",
-      "verification_url": "https://www.boj.or.jp/finsys/c_aft/aft261021a.htm",
+      "source_url": "https://www.boj.or.jp/en/statistics/dl/loan/loos/release/loos2610.pdf",
+      "verification_url": "https://www.boj.or.jp/en/statistics/dl/loan/loos/release/loos2610.pdf",
       "verification_status": "PASS",
-      "fact": "日銀は10月14日に、地域金融機関の経理業務受託等による中小企業DX支援を扱うワークショップを開催したと21日に公表。",
-      "analysis": "地域銀行・IT支援の中期テーマだが、当日業績や政策金利を直接変更する材料ではない。",
-      "limitations": "金融政策決定ではない。個別金融機関の収益効果と市場反応は未確認。",
+      "fact": "9月9日から10月13日に大手50行を調査。企業向け貸出需要DIは3、家計向けは5。企業向け信用基準は回答の大半が基本的に不変。",
+      "analysis": "銀行の貸出需要と姿勢の確認材料。",
+      "limitations": "金融政策決定ではない。個別銀行の収益効果と発表単独の市場反応は未確認。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
@@ -104,11 +104,11 @@
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "日銀は10月14日に、地域金融機関の経理業務受託等による中小企業DX支援を扱うワークショップを開催したと21日に公表。"
+          "evidence": "9月9日から10月13日に大手50行を調査。企業向け貸出需要DIは3、家計向けは5。企業向け信用基準は回答の大半が基本的に不変。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日2026-10-21、実確認2026-10-22T06:49:53+09:00。発表日・対象期間・市場日を分離。"
+          "evidence": "発表日2026-10-22、実確認2026-10-23T06:43:59+09:00。発表日・対象期間・市場日を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
@@ -116,7 +116,7 @@
         },
         "limitations": {
           "status": "PASS",
-          "evidence": "金融政策決定ではない。個別金融機関の収益効果と市場反応は未確認。"
+          "evidence": "金融政策決定ではない。個別銀行の収益効果と発表単独の市場反応は未確認。"
         }
       }
     }

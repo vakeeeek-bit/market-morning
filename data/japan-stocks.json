@@ -28,7 +28,7 @@
     "individual_news_review": {
       "status": "reviewed",
       "story_count": 1,
-      "scope": "10月23日大引けの正本市場実績1件のみ掲載。企業固有開示は網羅性を確定できず未確認記事を除外"
+      "scope": "一次資料を確認した企業固有材料のみ掲載。件数合わせは行わない"
     }
   },
   "top_stories": [
@@ -94,12 +94,20 @@
       {
         "name": "公開レーティング一覧",
         "url": "https://kabutan.jp/news/marketnews/?category=6",
-        "coverage": "無料公開範囲。全件網羅性は確認不能"
+        "result": "確認できず",
+        "coverage": "無料公開範囲。全件網羅性は確認不能",
+        "freshness": "当日確認状況をJSONに記録",
+        "automation": "契約API未導入",
+        "rights": "確認できた事実だけを掲載"
       },
       {
         "name": "IFIS無料情報",
         "url": "https://kabuyoho.jp/",
-        "coverage": "個別情報は確認可能だが当日全件一覧の網羅性は未確認"
+        "result": "確認できず",
+        "coverage": "個別情報は確認可能だが当日全件一覧の網羅性は未確認",
+        "freshness": "当日確認状況をJSONに記録",
+        "automation": "契約API未導入",
+        "rights": "確認できた事実だけを掲載"
       }
     ],
     "summary": "変更なしとは断定しない"

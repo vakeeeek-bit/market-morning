@@ -1,8 +1,10 @@
 {
-  "status": "success",
-  "updated_at": "2026-10-23 10:38:55 JST",
-  "message": "Market data update completed and validation passed.",
+  "updated_at": "2026-10-26 06:52:00 JST",
   "component": "market_data",
+  "status": "success",
+  "market_data": "success",
   "publication_status": "PASS",
-  "component_updated_at": "2026-10-23 10:38:44"
+  "message": "市場データ32系列と日本株23日大引け17業種・34銘柄を取得。AIレポートは独立QUALIFIED判定。",
+  "report_date": "2026-10-26",
+  "target_market_date": "2026-10-23"
 }

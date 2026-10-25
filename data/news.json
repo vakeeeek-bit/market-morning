@@ -1,38 +1,38 @@
 {
-  "report_date": "2026-10-23",
-  "target_market_date": "2026-10-21",
-  "updated_at": "2026-10-23T06:43:59+09:00",
+  "report_date": "2026-10-26",
+  "target_market_date": "2026-10-23",
+  "updated_at": "2026-10-26T06:52:00+09:00",
   "publication_mode": "verified_news",
   "coverage_status": "partial",
-  "coverage_note": "22日公表の一次3件を実読した部分収集。市場反応は未確認。正本市場日21日、日本株大引け22日、ニュース発表日を分離。",
+  "coverage_note": "一次本文を実読できた3件のみ。市場反応の単独因果、企業開示・評価変更の全件網羅は未確認。旧総合レポート日とニュース更新日を分離。",
   "articles": [
     {
-      "id": "oct23-0",
-      "title": "米新規失業保険申請は19.4万件",
-      "published_date": "2026-10-22",
-      "verified_at": "2026-10-23T06:43:59+09:00",
+      "id": "oct26-cpi",
+      "title": "日本9月CPIは総合・生鮮除くとも前年比2.1%",
+      "published_date": "2026-10-23",
+      "verified_at": "2026-10-26T06:52:00+09:00",
       "source_type": "primary",
-      "publisher": "U.S. Department of Labor",
-      "source_url": "https://www.dol.gov/ui/data.pdf",
-      "verification_url": "https://www.dol.gov/ui/data.pdf",
+      "publisher": "Statistics Bureau of Japan",
+      "source_url": "https://www.stat.go.jp/english/data/cpi/1581-z.html",
+      "verification_url": "https://www.stat.go.jp/english/data/cpi/1581-z.html",
       "verification_status": "PASS",
-      "fact": "10月17日終了週の季節調整済み新規申請は19.4万件で前週改定値から0.6万件減。4週平均19万7,750件。10月10日終了週の継続受給者は172.8万人で前週改定値から2.5万人増。",
-      "analysis": "解雇の少なさは景気下支えだが、継続受給者増と併せて雇用全体を一方向に断定しない。",
-      "limitations": "速報値・改定値を含む。発表単独の市場反応、日本株への直接影響は未確認。",
+      "fact": "総合は前年比+2.1%、生鮮食品を除く総合も+2.1%、生鮮食品及びエネルギーを除く総合は+2.4%。季節調整済み前月比は順に+0.4%、+0.5%、+0.5%。",
+      "analysis": "基調インフレは日銀会合前の金利・円・銀行・不動産の選別材料。",
+      "limitations": "発表単独の市場反応・因果は未確認。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
         "source_read": {
           "status": "PASS",
-          "evidence": "U.S. Department of Labor本文の発表日、対象、数値または措置、留保を実読。"
+          "evidence": "Statistics Bureau of Japanの一次本文を実読し、発表日・対象・数値または措置・留保を確認。"
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "10月17日終了週の季節調整済み新規申請は19.4万件で前週改定値から0.6万件減。4週平均19万7,750件。10月10日終了週の継続受給者は172.8万人で前週改定値から2.5万人増。"
+          "evidence": "総合は前年比+2.1%、生鮮食品を除く総合も+2.1%、生鮮食品及びエネルギーを除く総合は+2.4%。季節調整済み前月比は順に+0.4%、+0.5%、+0.5%。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日2026-10-22、実確認2026-10-23T06:43:59+09:00。発表日・対象期間・市場日を分離。"
+          "evidence": "発表日2026-10-23、実確認2026-10-26T06:52:00+09:00。発表日・発効日・市場日を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
@@ -40,37 +40,75 @@
         },
         "limitations": {
           "status": "PASS",
-          "evidence": "速報値・改定値を含む。発表単独の市場反応、日本株への直接影響は未確認。"
+          "evidence": "発表単独の市場反応・因果は未確認。"
         }
       }
     },
     {
-      "id": "oct23-1",
-      "title": "米国、風力タービン輸入でSection 232交渉開始",
-      "published_date": "2026-10-22",
-      "verified_at": "2026-10-23T06:43:59+09:00",
+      "id": "oct26-boj-fsr",
+      "title": "日銀はAI市場調整とNBFI連関を金融システム上のリスクとして点検",
+      "published_date": "2026-10-23",
+      "verified_at": "2026-10-26T06:52:00+09:00",
+      "source_type": "primary",
+      "publisher": "Bank of Japan",
+      "source_url": "https://www.boj.or.jp/research/brp/fsr/data/fsr261023a.pdf",
+      "verification_url": "https://www.boj.or.jp/research/brp/fsr/data/fsr261023a.pdf",
+      "verification_status": "PASS",
+      "fact": "日銀は金融システムレポートで、AI関連資産の急な価格調整、銀行とノンバンク金融仲介の連関、サイバーリスク、不動産市場の過熱を点検対象として示した。",
+      "analysis": "AIテーマを信用・資金調達経路から監視する根拠になる。",
+      "limitations": "金融政策決定ではなく、個別銀行の損失発生を示すものでもない。市場反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Bank of Japanの一次本文を実読し、発表日・対象・数値または措置・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "日銀は金融システムレポートで、AI関連資産の急な価格調整、銀行とノンバンク金融仲介の連関、サイバーリスク、不動産市場の過熱を点検対象として示した。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-23、実確認2026-10-26T06:52:00+09:00。発表日・発効日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。記事単独の市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "金融政策決定ではなく、個別銀行の損失発生を示すものでもない。市場反応は未確認。"
+        }
+      }
+    },
+    {
+      "id": "oct26-canada-tariff",
+      "title": "米国はカナダ製品への50%追加関税の対象品目を10月30日に変更",
+      "published_date": "2026-10-23",
+      "verified_at": "2026-10-26T06:52:00+09:00",
       "source_type": "primary",
       "publisher": "The White House",
-      "source_url": "https://www.whitehouse.gov/presidential-actions/2026/10/adjusting-imports-of-wind-turbines-and-their-parts-and-components-into-the-united-states/",
-      "verification_url": "https://www.whitehouse.gov/presidential-actions/2026/10/adjusting-imports-of-wind-turbines-and-their-parts-and-components-into-the-united-states/",
+      "source_url": "https://www.whitehouse.gov/presidential-actions/2026/10/modifying-the-scope-of-tariffs-on-canada/",
+      "verification_url": "https://www.whitehouse.gov/presidential-actions/2026/10/modifying-the-scope-of-tariffs-on-canada/",
       "verification_status": "PASS",
-      "fact": "商務長官のSection 232報告を受け、商務長官とUSTRに風力タービン・部品の輸入を巡る協定交渉を指示し、180日以内の進捗報告を求めた。今回の本文は新たな一律関税率や即時発効日を定めていない。",
-      "analysis": "風力設備、電機、機械、金属部材にセクター限定の不確実性。",
-      "limitations": "対象国・品目・例外・新規税率は未確定。既存の鉄鋼・アルミ・銅関税との重複は個別確認が必要。",
+      "fact": "合板、一部紙製品、一部機械・冷凍機器、梱包箱などを除外し、バルブ、カーペット、廃棄物等を追加。10月30日発効で、USMCA適合の有無を問わずSection 232措置に上乗せされる。",
+      "analysis": "北米供給網の機械・素材・自動車関連に品目限定の確認材料。",
+      "limitations": "日本製品への一律50%関税ではない。企業別・品目別の市場反応は未確認。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
         "source_read": {
           "status": "PASS",
-          "evidence": "The White House本文の発表日、対象、数値または措置、留保を実読。"
+          "evidence": "The White Houseの一次本文を実読し、発表日・対象・数値または措置・留保を確認。"
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "商務長官のSection 232報告を受け、商務長官とUSTRに風力タービン・部品の輸入を巡る協定交渉を指示し、180日以内の進捗報告を求めた。今回の本文は新たな一律関税率や即時発効日を定めていない。"
+          "evidence": "合板、一部紙製品、一部機械・冷凍機器、梱包箱などを除外し、バルブ、カーペット、廃棄物等を追加。10月30日発効で、USMCA適合の有無を問わずSection 232措置に上乗せされる。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日2026-10-22、実確認2026-10-23T06:43:59+09:00。発表日・対象期間・市場日を分離。"
+          "evidence": "発表日2026-10-23、実確認2026-10-26T06:52:00+09:00。発表日・発効日・市場日を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
@@ -78,45 +116,7 @@
         },
         "limitations": {
           "status": "PASS",
-          "evidence": "対象国・品目・例外・新規税率は未確定。既存の鉄鋼・アルミ・銅関税との重複は個別確認が必要。"
-        }
-      }
-    },
-    {
-      "id": "oct23-2",
-      "title": "日銀、10月の貸出動向調査を公表",
-      "published_date": "2026-10-22",
-      "verified_at": "2026-10-23T06:43:59+09:00",
-      "source_type": "primary",
-      "publisher": "日本銀行",
-      "source_url": "https://www.boj.or.jp/en/statistics/dl/loan/loos/release/loos2610.pdf",
-      "verification_url": "https://www.boj.or.jp/en/statistics/dl/loan/loos/release/loos2610.pdf",
-      "verification_status": "PASS",
-      "fact": "9月9日から10月13日に大手50行を調査。企業向け貸出需要DIは3、家計向けは5。企業向け信用基準は回答の大半が基本的に不変。",
-      "analysis": "銀行の貸出需要と姿勢の確認材料。",
-      "limitations": "金融政策決定ではない。個別銀行の収益効果と発表単独の市場反応は未確認。",
-      "market_reaction_status": "unverified",
-      "market_reaction": "未確認",
-      "verification": {
-        "source_read": {
-          "status": "PASS",
-          "evidence": "日本銀行本文の発表日、対象、数値または措置、留保を実読。"
-        },
-        "facts_verified": {
-          "status": "PASS",
-          "evidence": "9月9日から10月13日に大手50行を調査。企業向け貸出需要DIは3、家計向けは5。企業向け信用基準は回答の大半が基本的に不変。"
-        },
-        "chronology": {
-          "status": "PASS",
-          "evidence": "発表日2026-10-22、実確認2026-10-23T06:43:59+09:00。発表日・対象期間・市場日を分離。"
-        },
-        "fact_analysis_separation": {
-          "status": "PASS",
-          "evidence": "一次事実と条件付き分析を分離。記事単独の市場反応は未確認。"
-        },
-        "limitations": {
-          "status": "PASS",
-          "evidence": "金融政策決定ではない。個別銀行の収益効果と発表単独の市場反応は未確認。"
+          "evidence": "日本製品への一律50%関税ではない。企業別・品目別の市場反応は未確認。"
         }
       }
     }

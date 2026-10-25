@@ -1,0 +1,124 @@
+{
+  "report_date": "2026-10-26",
+  "target_market_date": "2026-10-23",
+  "updated_at": "2026-10-26T06:52:00+09:00",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "一次本文を実読できた3件のみ。市場反応の単独因果、企業開示・評価変更の全件網羅は未確認。旧総合レポート日とニュース更新日を分離。",
+  "articles": [
+    {
+      "id": "oct26-cpi",
+      "title": "日本9月CPIは総合・生鮮除くとも前年比2.1%",
+      "published_date": "2026-10-23",
+      "verified_at": "2026-10-26T06:52:00+09:00",
+      "source_type": "primary",
+      "publisher": "Statistics Bureau of Japan",
+      "source_url": "https://www.stat.go.jp/english/data/cpi/1581-z.html",
+      "verification_url": "https://www.stat.go.jp/english/data/cpi/1581-z.html",
+      "verification_status": "PASS",
+      "fact": "総合は前年比+2.1%、生鮮食品を除く総合も+2.1%、生鮮食品及びエネルギーを除く総合は+2.4%。季節調整済み前月比は順に+0.4%、+0.5%、+0.5%。",
+      "analysis": "基調インフレは日銀会合前の金利・円・銀行・不動産の選別材料。",
+      "limitations": "発表単独の市場反応・因果は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Statistics Bureau of Japanの一次本文を実読し、発表日・対象・数値または措置・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "総合は前年比+2.1%、生鮮食品を除く総合も+2.1%、生鮮食品及びエネルギーを除く総合は+2.4%。季節調整済み前月比は順に+0.4%、+0.5%、+0.5%。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-23、実確認2026-10-26T06:52:00+09:00。発表日・発効日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。記事単独の市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "発表単独の市場反応・因果は未確認。"
+        }
+      }
+    },
+    {
+      "id": "oct26-boj-fsr",
+      "title": "日銀はAI市場調整とNBFI連関を金融システム上のリスクとして点検",
+      "published_date": "2026-10-23",
+      "verified_at": "2026-10-26T06:52:00+09:00",
+      "source_type": "primary",
+      "publisher": "Bank of Japan",
+      "source_url": "https://www.boj.or.jp/research/brp/fsr/data/fsr261023a.pdf",
+      "verification_url": "https://www.boj.or.jp/research/brp/fsr/data/fsr261023a.pdf",
+      "verification_status": "PASS",
+      "fact": "日銀は金融システムレポートで、AI関連資産の急な価格調整、銀行とノンバンク金融仲介の連関、サイバーリスク、不動産市場の過熱を点検対象として示した。",
+      "analysis": "AIテーマを信用・資金調達経路から監視する根拠になる。",
+      "limitations": "金融政策決定ではなく、個別銀行の損失発生を示すものでもない。市場反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Bank of Japanの一次本文を実読し、発表日・対象・数値または措置・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "日銀は金融システムレポートで、AI関連資産の急な価格調整、銀行とノンバンク金融仲介の連関、サイバーリスク、不動産市場の過熱を点検対象として示した。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-23、実確認2026-10-26T06:52:00+09:00。発表日・発効日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。記事単独の市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "金融政策決定ではなく、個別銀行の損失発生を示すものでもない。市場反応は未確認。"
+        }
+      }
+    },
+    {
+      "id": "oct26-canada-tariff",
+      "title": "米国はカナダ製品への50%追加関税の対象品目を10月30日に変更",
+      "published_date": "2026-10-23",
+      "verified_at": "2026-10-26T06:52:00+09:00",
+      "source_type": "primary",
+      "publisher": "The White House",
+      "source_url": "https://www.whitehouse.gov/presidential-actions/2026/10/modifying-the-scope-of-tariffs-on-canada/",
+      "verification_url": "https://www.whitehouse.gov/presidential-actions/2026/10/modifying-the-scope-of-tariffs-on-canada/",
+      "verification_status": "PASS",
+      "fact": "合板、一部紙製品、一部機械・冷凍機器、梱包箱などを除外し、バルブ、カーペット、廃棄物等を追加。10月30日発効で、USMCA適合の有無を問わずSection 232措置に上乗せされる。",
+      "analysis": "北米供給網の機械・素材・自動車関連に品目限定の確認材料。",
+      "limitations": "日本製品への一律50%関税ではない。企業別・品目別の市場反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "The White Houseの一次本文を実読し、発表日・対象・数値または措置・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "合板、一部紙製品、一部機械・冷凍機器、梱包箱などを除外し、バルブ、カーペット、廃棄物等を追加。10月30日発効で、USMCA適合の有無を問わずSection 232措置に上乗せされる。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-23、実確認2026-10-26T06:52:00+09:00。発表日・発効日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。記事単独の市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "日本製品への一律50%関税ではない。企業別・品目別の市場反応は未確認。"
+        }
+      }
+    }
+  ]
+}

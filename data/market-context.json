@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "updated_at": "2026-10-23T06:43:59+09:00",
-  "report_date": "2026-10-23",
+  "updated_at": "2026-10-26T06:52:00+09:00",
+  "report_date": "2026-10-26",
   "period_start": "2026-03-18",
-  "period_end": "2026-10-22",
+  "period_end": "2026-10-26",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-10-23",
-    "source_report_count": 12,
+    "latest_report_date": "2026-10-26",
+    "source_report_count": 13,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
   "headline": "市場の見方がどう変わったかを3つのテーマで確認",
@@ -222,6 +222,69 @@
           "source_ids": [
             "oct23-market"
           ]
+        },
+        {
+          "date": "2026-10-23",
+          "title": "SOXは小幅反発、全面回復ではない",
+          "fact": "正本でSOX+0.44%、XLK+0.49%。S&P500は-0.52%。",
+          "market_impact": "22日の急落後に半導体は下げ止まったが、11業種中上昇は3業種。",
+          "source_ids": [
+            "oct26-market"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "title": "SOXは小幅反発、全面回復ではない",
+          "fact": "正本でSOX+0.44%、XLK+0.49%。S&P500は-0.52%。",
+          "market_impact": "22日の急落後に半導体は下げ止まったが、11業種中上昇は3業種。",
+          "source_ids": [
+            "oct26-market"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "title": "SOXは小幅反発、全面回復ではない",
+          "fact": "正本でSOX+0.44%、XLK+0.49%。S&P500は-0.52%。",
+          "market_impact": "22日の急落後に半導体は下げ止まったが、11業種中上昇は3業種。",
+          "source_ids": [
+            "oct26-market"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "title": "SOXは小幅反発、全面回復ではない",
+          "fact": "正本でSOX+0.44%、XLK+0.49%。S&P500は-0.52%。",
+          "market_impact": "22日の急落後に半導体は下げ止まったが、11業種中上昇は3業種。",
+          "source_ids": [
+            "oct26-market"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "title": "SOXは小幅反発、全面回復ではない",
+          "fact": "正本でSOX+0.44%、XLK+0.49%。S&P500は-0.52%。",
+          "market_impact": "22日の急落後に半導体は下げ止まったが、11業種中上昇は3業種。",
+          "source_ids": [
+            "oct26-market"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "title": "SOXは小幅反発、全面回復ではない",
+          "fact": "正本でSOX+0.44%、XLK+0.49%。S&P500は-0.52%。",
+          "market_impact": "22日の急落後に半導体は下げ止まったが、11業種中上昇は3業種。",
+          "source_ids": [
+            "oct26-market"
+          ]
+        },
+        {
+          "date": "2026-10-26",
+          "title": "週明けは反発の持続性を検証",
+          "fact": "23日正本のSOX反発と、11業種中3業種のみ上昇という狭さを分けて確認。",
+          "market_impact": "半導体を一方向の逆風から、国内市場幅を伴うか確認する段階へ変更。",
+          "source_ids": [
+            "oct26-market"
+          ]
         }
       ],
       "initial_view": {
@@ -229,14 +292,14 @@
         "text": "AI設備投資と先端半導体需要の強さが株価を支える局面"
       },
       "new_fact": {
-        "date": "2026-10-22",
-        "text": "AI投資の回収懸念でNASDAQ・SOXが急反落"
+        "date": "2026-10-23",
+        "text": "SOXは+0.44%と反発したが市場の広がりは弱い"
       },
       "market_reaction": {
-        "date": "2026-10-22",
-        "text": "日本22日大引け後に米半導体が急落。日本23日の初動は未確認"
+        "date": "2026-10-23",
+        "text": "SOX+0.44%、XLK+0.49%、S&P500-0.52%"
       },
-      "current_view": "AI実需の強さは残るが、投資回収と資本コストへの警戒が再燃。日本23日は半導体の市場幅を確認する。",
+      "current_view": "AI実需の強さと投資回収懸念が併存。反発は確認したが全面回復とは扱わず、国内市場幅と受注を確認する。",
       "japan_impact": "東京エレクトロンなど装置株を一律に弱気とせず、受注と株価評価を分けて確認します。",
       "counter_evidence": "正本20日はSOXとXLKが下落し、21日も通信サービスと一部大型株は弱い。",
       "source_ids": [
@@ -253,7 +316,8 @@
         "oct20-reaction",
         "oct20-0",
         "oct22-market",
-        "oct23-market"
+        "oct23-market",
+        "oct26-market"
       ]
     },
     {
@@ -332,6 +396,66 @@
             "oct20-reaction",
             "oct20-0"
           ]
+        },
+        {
+          "date": "2026-10-23",
+          "title": "CPIと金融システムリスクを会合前に確認",
+          "fact": "9月CPIは総合・生鮮除くとも前年比+2.1%。日銀はAI市場調整とNBFI連関を点検。",
+          "market_impact": "銀行・不動産・円敏感株は政策決定と金融安定評価を分けて確認。",
+          "source_ids": [
+            "oct26-cpi",
+            "oct26-boj"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "title": "CPIと金融システムリスクを会合前に確認",
+          "fact": "9月CPIは総合・生鮮除くとも前年比+2.1%。日銀はAI市場調整とNBFI連関を点検。",
+          "market_impact": "銀行・不動産・円敏感株は政策決定と金融安定評価を分けて確認。",
+          "source_ids": [
+            "oct26-cpi",
+            "oct26-boj"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "title": "CPIと金融システムリスクを会合前に確認",
+          "fact": "9月CPIは総合・生鮮除くとも前年比+2.1%。日銀はAI市場調整とNBFI連関を点検。",
+          "market_impact": "銀行・不動産・円敏感株は政策決定と金融安定評価を分けて確認。",
+          "source_ids": [
+            "oct26-cpi",
+            "oct26-boj"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "title": "CPIと金融システムリスクを会合前に確認",
+          "fact": "9月CPIは総合・生鮮除くとも前年比+2.1%。日銀はAI市場調整とNBFI連関を点検。",
+          "market_impact": "銀行・不動産・円敏感株は政策決定と金融安定評価を分けて確認。",
+          "source_ids": [
+            "oct26-cpi",
+            "oct26-boj"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "title": "CPIと金融システムリスクを会合前に確認",
+          "fact": "9月CPIは総合・生鮮除くとも前年比+2.1%。日銀はAI市場調整とNBFI連関を点検。",
+          "market_impact": "銀行・不動産・円敏感株は政策決定と金融安定評価を分けて確認。",
+          "source_ids": [
+            "oct26-cpi",
+            "oct26-boj"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "title": "CPIと金融システムリスクを会合前に確認",
+          "fact": "9月CPIは総合・生鮮除くとも前年比+2.1%。日銀はAI市場調整とNBFI連関を点検。",
+          "market_impact": "銀行・不動産・円敏感株は政策決定と金融安定評価を分けて確認。",
+          "source_ids": [
+            "oct26-cpi",
+            "oct26-boj"
+          ]
         }
       ],
       "initial_view": {
@@ -339,14 +463,14 @@
         "text": "政策金利0.75%でも利上げを求める意見が増え、正常化継続が意識された"
       },
       "new_fact": {
-        "date": "2026-10-20",
-        "text": "反発報道を踏まえ慎重姿勢を条件付き修正"
+        "date": "2026-10-23",
+        "text": "CPI前年比+2.1%と日銀金融システムレポート"
       },
       "market_reaction": {
-        "date": "2026-10-20",
-        "text": "19日の報道と16日正本を分離。20日国内初動未確認"
+        "date": "2026-10-23",
+        "text": "銀行-2.60%、不動産+2.34%。単独因果は未確認"
       },
-      "current_view": "昨日の一律慎重姿勢を条件付きで弱める。ただし反発の広がりと企業利益・資金調達改善を伴うまで信用不安解消とはしない。",
+      "current_view": "日銀会合前に基調インフレと金融安定を分けて評価。銀行・不動産・円の実反応で更新する。",
       "japan_impact": "銀行、輸出、内需、運輸で影響が分かれます。円安を日本株全体の一律追い風とは扱いません。",
       "counter_evidence": "大型偏重・信用不安・原油供給懸念は反証。個別上方修正も全面需要回復を保証しない。",
       "source_ids": [
@@ -359,26 +483,28 @@
         "oct19-5",
         "oct19-2",
         "oct20-reaction",
-        "oct20-0"
+        "oct20-0",
+        "oct26-cpi",
+        "oct26-boj"
       ]
     }
   ],
   "scenario_change_conditions": [
     {
       "condition": "半導体とAI",
-      "meaning": "複数銘柄が反発しSOX先物材料も改善すれば逆風評価を弱める"
+      "meaning": "SOX再下落または国内複数銘柄の劣後で反発評価を撤回"
     },
     {
       "condition": "原油・資源・空運",
-      "meaning": "原油反落なら資源追い風・空運逆風を弱める"
+      "meaning": "原油反落または資源株劣後で資源追い風を弱める"
     },
     {
-      "condition": "内需・医薬品",
-      "meaning": "指数反発で外需が優位になれば相対優位評価を下げる"
+      "condition": "日銀週の金利敏感株",
+      "meaning": "銀行と不動産の相対順位が反転すれば金利見方を更新"
     },
     {
-      "condition": "円と金利",
-      "meaning": "円急伸・金利低下で輸出・銀行が劣後すれば下方修正"
+      "condition": "市場の広がり",
+      "meaning": "上昇業種が過半へ広がれば狭い相場評価を弱める"
     }
   ],
   "sources": [
@@ -537,6 +663,13 @@
       "url": "https://www.reuters.com/business/nasdaq-futures-drop-over-1-ai-worries-resurface-oil-climbs-2026-10-22/"
     },
     {
+      "id": "oct26-market",
+      "title": "Global Markets View USA, October 23",
+      "publisher": "Reuters",
+      "published_at": "2026-10-23",
+      "url": "https://www.reuters.com/world/china/global-markets-view-usa-2026-10-23/"
+    },
+    {
       "id": "boj-apr28",
       "title": "Statement on Monetary Policy",
       "publisher": "Bank of Japan",
@@ -591,6 +724,20 @@
       "publisher": "White House",
       "published_at": "2026-10-16",
       "url": "https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/"
+    },
+    {
+      "id": "oct26-cpi",
+      "title": "Consumer Price Index, September 2026",
+      "publisher": "Statistics Bureau of Japan",
+      "published_at": "2026-10-23",
+      "url": "https://www.stat.go.jp/english/data/cpi/1581-z.html"
+    },
+    {
+      "id": "oct26-boj",
+      "title": "Financial System Report October 2026",
+      "publisher": "Bank of Japan",
+      "published_at": "2026-10-23",
+      "url": "https://www.boj.or.jp/research/brp/fsr/data/fsr261023a.pdf"
     }
   ]
 }

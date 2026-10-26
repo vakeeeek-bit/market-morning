@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26 22:36:06 JST",
+  "updated_at": "2026-10-27T06:58:00+09:00",
   "market_date": "2026-10-26",
   "data_phase": "大引け後",
   "data_state": {
@@ -1034,33 +1034,39 @@
     "market_date": "2026-10-26",
     "title": "昨日のシナリオ検証 → 今日への修正",
     "basis": "前回レポートの注目業種をTOPIX-17業種ETFの実績と照合し、次の取引日へ見方を修正",
-    "status": "検証可能",
+    "status": "寄り付き前・検証保留",
     "checks": [
       {
         "sector": "エネルギー資源",
-        "result": "上位3"
+        "result": "本日大引け後に確認"
+      },
+      {
+        "sector": "商社・卸売",
+        "result": "本日大引け後に確認"
       },
       {
         "sector": "銀行",
-        "result": "中位"
+        "result": "本日大引け後に確認"
       },
       {
         "sector": "不動産",
-        "result": "中位"
+        "result": "本日大引け後に確認"
       }
     ],
-    "previous_condition": "Gold・Silver・WTI・Brentの保存連続先物値と取引所・限月・値種別・基準時刻の対応 / 10月26日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値 / アナリスト評価変更と10月23日大引け後企業開示の全件網羅",
-    "condition_result": "発生条件を自動判定できる一次データがないため、確認できず",
-    "market_reaction": "エネルギー資源 +3.23% / 電力・ガス +3.06% / 商社・卸売 +2.68%",
-    "unexpected_gap": "エネルギー資源は上位3 / 銀行は中位 / 不動産は中位",
+    "previous_condition": "DXY・USD/JPY・EUR/USDの正本は10月23日日足で、米株26日と基準日が不一致 / 米2年・10年利回りは10月23日FREDで、米株26日と基準日が不一致 / Gold・Silver・WTI・Brentの保存連続先物値と取引所・限月・値種別・基準時刻の対応 / 10月27日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値 / アナリスト評価変更と企業固有開示の全件網羅",
+    "condition_result": "本日の条件と日本株現物の反応はまだ発生・確認していません",
+    "market_reaction": "本日の日本株現物は寄り付き前",
+    "unexpected_gap": "新しい取引結果がないため比較しません",
     "gap_reason": "業種ETFの結果だけでは個別ニュースとの因果を分離できないため、理由は断定しません",
-    "revision": "注目業種の相対順位を踏まえて強弱判断を更新",
+    "revision": "本日の大引け後、実際の条件・市場反応・想定との差を確認して修正",
     "today_watch": [
+      "DXY・USD/JPY・EUR/USDの正本は10月23日日足で、米株26日と基準日が不一致",
+      "米2年・10年利回りは10月23日FREDで、米株26日と基準日が不一致",
       "Gold・Silver・WTI・Brentの保存連続先物値と取引所・限月・値種別・基準時刻の対応",
-      "10月26日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
-      "アナリスト評価変更と10月23日大引け後企業開示の全件網羅"
+      "10月27日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "アナリスト評価変更と企業固有開示の全件網羅"
     ],
-    "note": "的中・外れを採点するものではありません。前回の見方と実績の差から、今日の監視点を修正します。"
+    "note": "前営業日の値動きを、本日シナリオの結果として採点しません。"
   },
   "data_quality": {
     "sector_total": 17,
@@ -1098,18 +1104,18 @@
     "dimensions": [
       {
         "axis": "大型株/小型株",
-        "label": "拮抗",
-        "result": "拮抗",
+        "label": "大型株優位",
+        "result": "大型株優位",
         "status": "estimated",
         "left_label": "大型株",
         "right_label": "小型株",
-        "left_value": -0.52,
-        "right_value": -0.29,
-        "spread_pt": -0.23,
-        "detail": "大型株 -0.52% ／ 小型株 -0.29%",
-        "reason": "相対騰落：大型株 -0.52%／小型株 -0.29%（差 -0.23pt）",
+        "left_value": 0.7,
+        "right_value": 0.38,
+        "spread_pt": 0.32,
+        "detail": "大型株 +0.70% ／ 小型株 +0.38%",
+        "reason": "相対騰落：大型株 +0.70%／小型株 +0.38%（差 +0.32pt）",
         "basis": "S&P500とRussell2000の同日騰落率比較",
-        "market_date": "2026-10-23"
+        "market_date": "2026-10-26"
       },
       {
         "axis": "グロース/バリュー（代理）",
@@ -1118,28 +1124,28 @@
         "status": "estimated",
         "left_label": "大型ハイテク",
         "right_label": "ダウ型",
-        "left_value": 0.0,
-        "right_value": -1.23,
-        "spread_pt": 1.23,
-        "detail": "大型ハイテク +0.00% ／ ダウ型 -1.23%",
-        "reason": "相対騰落：大型ハイテク +0.00%／ダウ型 -1.23%（差 +1.23pt）",
+        "left_value": 1.09,
+        "right_value": 0.28,
+        "spread_pt": 0.81,
+        "detail": "大型ハイテク +1.09% ／ ダウ型 +0.28%",
+        "reason": "相対騰落：大型ハイテク +1.09%／ダウ型 +0.28%（差 +0.81pt）",
         "basis": "NASDAQ100とNYダウの同日騰落率による代理比較",
-        "market_date": "2026-10-23"
+        "market_date": "2026-10-26"
       },
       {
         "axis": "景気敏感/ディフェンシブ",
-        "label": "拮抗",
-        "result": "拮抗",
+        "label": "景気敏感優位",
+        "result": "景気敏感優位",
         "status": "estimated",
         "left_label": "景気敏感",
         "right_label": "ディフェンシブ",
-        "left_value": -1.25,
-        "right_value": -1.25,
-        "spread_pt": 0.0,
-        "detail": "景気敏感 -1.25% ／ ディフェンシブ -1.25%",
-        "reason": "相対騰落：景気敏感 -1.25%／ディフェンシブ -1.25%（差 +0.00pt）",
+        "left_value": 0.7,
+        "right_value": -0.12,
+        "spread_pt": 0.82,
+        "detail": "景気敏感 +0.70% ／ ディフェンシブ -0.12%",
+        "reason": "相対騰落：景気敏感 +0.70%／ディフェンシブ -0.12%（差 +0.82pt）",
         "basis": "米Sector SPDR ETFの同日平均騰落率比較",
-        "market_date": "2026-10-23"
+        "market_date": "2026-10-26"
       },
       {
         "axis": "半導体/市場全体",
@@ -1148,13 +1154,13 @@
         "status": "estimated",
         "left_label": "半導体",
         "right_label": "市場全体",
-        "left_value": 0.44,
-        "right_value": -0.52,
-        "spread_pt": 0.96,
-        "detail": "半導体 +0.44% ／ 市場全体 -0.52%",
-        "reason": "相対騰落：半導体 +0.44%／市場全体 -0.52%（差 +0.96pt）",
+        "left_value": 2.82,
+        "right_value": 0.7,
+        "spread_pt": 2.12,
+        "detail": "半導体 +2.82% ／ 市場全体 +0.70%",
+        "reason": "相対騰落：半導体 +2.82%／市場全体 +0.70%（差 +2.12pt）",
         "basis": "SOXとS&P500の同日騰落率比較",
-        "market_date": "2026-10-23"
+        "market_date": "2026-10-26"
       },
       {
         "axis": "金融/市場全体",
@@ -1163,42 +1169,41 @@
         "status": "estimated",
         "left_label": "金融",
         "right_label": "市場全体",
-        "left_value": -1.32,
-        "right_value": -0.52,
-        "spread_pt": -0.8,
-        "detail": "金融 -1.32% ／ 市場全体 -0.52%",
-        "reason": "相対騰落：金融 -1.32%／市場全体 -0.52%（差 -0.80pt）",
+        "left_value": 0.21,
+        "right_value": 0.7,
+        "spread_pt": -0.49,
+        "detail": "金融 +0.21% ／ 市場全体 +0.70%",
+        "reason": "相対騰落：金融 +0.21%／市場全体 +0.70%（差 -0.49pt）",
         "basis": "XLFとS&P500の同日騰落率比較",
-        "market_date": "2026-10-23"
+        "market_date": "2026-10-26"
       }
     ],
     "method_note": "冒頭の市場方向は日経平均・TOPIX連動ETFの同日騰落だけで判定します。詳細軸は確認済みの同日米指数・業種ETFによる相対比較で、投資主体別フローではありません。34銘柄を市場全体の広がりには使用しません。"
   },
   "key_drivers": [
     {
-      "driver": "米10年金利",
-      "category": "金利",
-      "assessment": "高PER株に追い風",
+      "driver": "米国半導体株",
+      "category": "海外株",
+      "assessment": "追い風",
       "status": "observed",
-      "market_value": 4.96,
-      "change_pct": -3.31,
-      "transmission_path": "高PER株の割引率と銀行収益期待が変化",
-      "reason": "米10年債利回り 4.96、前日比 -3.31%（2026-10-22）→ 高PER株の割引率と銀行収益期待が変化",
+      "market_value": 11083.4697,
+      "change_pct": 2.82,
+      "transmission_path": "国内半導体関連の投資家心理に波及",
+      "reason": "PHLX半導体株指数（SOX） 11083.4697、前日比 +2.82%（2026-10-26）→ 国内半導体関連の投資家心理に波及",
       "affected_sectors": [
         "電機・精密",
-        "情報通信・サービス",
-        "銀行"
+        "機械"
       ],
-      "market_date": "2026-10-22",
+      "market_date": "2026-10-26",
       "selection_factors": {
         "日本株現物への織り込み": "同日または既反映の参考値",
         "日本株への波及範囲": 3,
-        "影響業種数": 3,
+        "影響業種数": 2,
         "ニュース重要度": 3,
         "値動き": 3
       },
       "pricing_status": "同日または既反映の参考値",
-      "change_condition": "金利の方向が反転し、電機・精密や銀行の反応も変われば見方を修正する"
+      "change_condition": "米半導体株が反転するか、日本の電機・精密が追随しなければ影響を弱く見る"
     },
     {
       "driver": "ドル円",
@@ -1226,49 +1231,50 @@
       "change_condition": "為替が反転し、自動車・機械の相対方向も変われば見方を修正する"
     },
     {
-      "driver": "米国半導体株",
-      "category": "海外株",
-      "assessment": "中立",
+      "driver": "米10年金利",
+      "category": "金利",
+      "assessment": "高PER株に向かい風",
       "status": "observed",
-      "market_value": 10779.46,
-      "change_pct": 0.44,
-      "transmission_path": "国内半導体関連の投資家心理に波及",
-      "reason": "PHLX半導体株指数（SOX） 10779.46、前日比 +0.44%（2026-10-23）→ 国内半導体関連の投資家心理に波及",
+      "market_value": 5.0,
+      "change_pct": 0.81,
+      "transmission_path": "高PER株の割引率と銀行収益期待が変化",
+      "reason": "米10年債利回り 5.0、前日比 +0.81%（2026-10-23）→ 高PER株の割引率と銀行収益期待が変化",
       "affected_sectors": [
         "電機・精密",
-        "機械"
+        "情報通信・サービス",
+        "銀行"
       ],
       "market_date": "2026-10-23",
       "selection_factors": {
         "日本株現物への織り込み": "同日または既反映の参考値",
         "日本株への波及範囲": 3,
-        "影響業種数": 2,
+        "影響業種数": 3,
         "ニュース重要度": 3,
-        "値動き": 1
+        "値動き": 2
       },
       "pricing_status": "同日または既反映の参考値",
-      "change_condition": "米半導体株が反転するか、日本の電機・精密が追随しなければ影響を弱く見る"
+      "change_condition": "金利の方向が反転し、電機・精密や銀行の反応も変われば見方を修正する"
     },
     {
       "driver": "米国大型ハイテク株",
       "category": "海外株",
-      "assessment": "中立",
+      "assessment": "追い風",
       "status": "observed",
-      "market_value": 28957.5293,
-      "change_pct": -0.0,
+      "market_value": 29273.4043,
+      "change_pct": 1.09,
       "transmission_path": "国内グロース株の投資家心理に波及",
-      "reason": "NASDAQ100 28957.5293、前日比 -0.00%（2026-10-23）→ 国内グロース株の投資家心理に波及",
+      "reason": "NASDAQ100 29273.4043、前日比 +1.09%（2026-10-26）→ 国内グロース株の投資家心理に波及",
       "affected_sectors": [
         "電機・精密",
         "情報通信・サービス"
       ],
-      "market_date": "2026-10-23",
+      "market_date": "2026-10-26",
       "selection_factors": {
         "日本株現物への織り込み": "同日または既反映の参考値",
         "日本株への波及範囲": 2,
         "影響業種数": 2,
         "ニュース重要度": 2,
-        "値動き": 1
+        "値動き": 2
       },
       "pricing_status": "同日または既反映の参考値",
       "change_condition": "米国ハイテク株が反転し、日本のグロース株が追随しなければ影響を弱く見る"
@@ -1303,9 +1309,9 @@
       "attention": true,
       "volume_confirmation": "出来高：普段の1.92倍",
       "volume_ratio_20d": 1.92,
-      "persistence": "直近5日：TOPIXより強い",
+      "persistence": "確認できず",
       "return_5d_pct": 3.85,
-      "relative_5d_pct": 5.89,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより2.73pt強い",
@@ -1318,12 +1324,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 5.89,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日+3.23%（TOPIX比+2.73pt）。出来高：普段の1.92倍。直近5日：TOPIXより強い。",
+      "comment": "当日+3.23%（TOPIX比+2.73pt）。出来高：普段の1.92倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1334,9 +1340,9 @@
       "attention": true,
       "volume_confirmation": "出来高：普段の0.62倍",
       "volume_ratio_20d": 0.62,
-      "persistence": "直近5日：TOPIXより強い",
+      "persistence": "確認できず",
       "return_5d_pct": 3.92,
-      "relative_5d_pct": 5.96,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより2.56pt強い",
@@ -1349,12 +1355,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 5.96,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日+3.06%（TOPIX比+2.56pt）。出来高：普段の0.62倍。直近5日：TOPIXより強い。",
+      "comment": "当日+3.06%（TOPIX比+2.56pt）。出来高：普段の0.62倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1365,9 +1371,9 @@
       "attention": true,
       "volume_confirmation": "出来高：普段の0.88倍",
       "volume_ratio_20d": 0.88,
-      "persistence": "直近5日：TOPIXより強い",
+      "persistence": "確認できず",
       "return_5d_pct": 1.54,
-      "relative_5d_pct": 3.58,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより2.18pt強い",
@@ -1380,12 +1386,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 3.58,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日+2.68%（TOPIX比+2.18pt）。出来高：普段の0.88倍。直近5日：TOPIXより強い。",
+      "comment": "当日+2.68%（TOPIX比+2.18pt）。出来高：普段の0.88倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1396,9 +1402,9 @@
       "attention": true,
       "volume_confirmation": "出来高：普段の2.47倍",
       "volume_ratio_20d": 2.47,
-      "persistence": "直近5日：TOPIXより強い",
+      "persistence": "確認できず",
       "return_5d_pct": 2.11,
-      "relative_5d_pct": 4.15,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより1.75pt強い",
@@ -1411,12 +1417,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 4.15,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日+2.25%（TOPIX比+1.75pt）。出来高：普段の2.47倍。直近5日：TOPIXより強い。",
+      "comment": "当日+2.25%（TOPIX比+1.75pt）。出来高：普段の2.47倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1427,9 +1433,9 @@
       "attention": false,
       "volume_confirmation": "出来高：普段の0.72倍",
       "volume_ratio_20d": 0.72,
-      "persistence": "直近5日：TOPIXより強い",
+      "persistence": "確認できず",
       "return_5d_pct": 3.62,
-      "relative_5d_pct": 5.66,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより1.15pt強い",
@@ -1442,12 +1448,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 5.66,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日+1.65%（TOPIX比+1.15pt）。出来高：普段の0.72倍。直近5日：TOPIXより強い。",
+      "comment": "当日+1.65%（TOPIX比+1.15pt）。出来高：普段の0.72倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1458,9 +1464,9 @@
       "attention": false,
       "volume_confirmation": "出来高：普段の0.69倍",
       "volume_ratio_20d": 0.69,
-      "persistence": "直近5日：TOPIXより強い",
+      "persistence": "確認できず",
       "return_5d_pct": 2.99,
-      "relative_5d_pct": 5.03,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより1.12pt強い",
@@ -1473,12 +1479,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 5.03,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日+1.62%（TOPIX比+1.12pt）。出来高：普段の0.69倍。直近5日：TOPIXより強い。",
+      "comment": "当日+1.62%（TOPIX比+1.12pt）。出来高：普段の0.69倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1489,9 +1495,9 @@
       "attention": false,
       "volume_confirmation": "出来高：普段の0.31倍",
       "volume_ratio_20d": 0.31,
-      "persistence": "直近5日：TOPIXより強い",
+      "persistence": "確認できず",
       "return_5d_pct": 0.97,
-      "relative_5d_pct": 3.01,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより0.93pt強い",
@@ -1504,12 +1510,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 3.01,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日+1.43%（TOPIX比+0.93pt）。出来高：普段の0.31倍。直近5日：TOPIXより強い。",
+      "comment": "当日+1.43%（TOPIX比+0.93pt）。出来高：普段の0.31倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1520,9 +1526,9 @@
       "attention": false,
       "volume_confirmation": "出来高：普段の0.21倍",
       "volume_ratio_20d": 0.21,
-      "persistence": "直近5日：TOPIXより強い",
+      "persistence": "確認できず",
       "return_5d_pct": -0.59,
-      "relative_5d_pct": 1.45,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより0.61pt強い",
@@ -1535,12 +1541,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 1.45,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日+1.11%（TOPIX比+0.61pt）。出来高：普段の0.21倍。直近5日：TOPIXより強い。",
+      "comment": "当日+1.11%（TOPIX比+0.61pt）。出来高：普段の0.21倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1551,9 +1557,9 @@
       "attention": false,
       "volume_confirmation": "出来高：普段の1.52倍",
       "volume_ratio_20d": 1.52,
-      "persistence": "直近5日：TOPIXより強い",
+      "persistence": "確認できず",
       "return_5d_pct": 4.1,
-      "relative_5d_pct": 6.14,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより0.58pt強い",
@@ -1566,12 +1572,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 6.14,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日+1.08%（TOPIX比+0.58pt）。出来高：普段の1.52倍。直近5日：TOPIXより強い。",
+      "comment": "当日+1.08%（TOPIX比+0.58pt）。出来高：普段の1.52倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1582,9 +1588,9 @@
       "attention": false,
       "volume_confirmation": "出来高：普段の1.37倍",
       "volume_ratio_20d": 1.37,
-      "persistence": "直近5日：TOPIXより強い",
+      "persistence": "確認できず",
       "return_5d_pct": 1.08,
-      "relative_5d_pct": 3.12,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより0.54pt強い",
@@ -1597,12 +1603,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 3.12,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日+1.04%（TOPIX比+0.54pt）。出来高：普段の1.37倍。直近5日：TOPIXより強い。",
+      "comment": "当日+1.04%（TOPIX比+0.54pt）。出来高：普段の1.37倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1613,9 +1619,9 @@
       "attention": false,
       "volume_confirmation": "出来高：普段の0.46倍",
       "volume_ratio_20d": 0.46,
-      "persistence": "直近5日：TOPIXより弱い",
+      "persistence": "確認できず",
       "return_5d_pct": -6.14,
-      "relative_5d_pct": -4.1,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより0.10pt弱い",
@@ -1628,12 +1634,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより弱い",
-          "value": -4.1,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日+0.40%（TOPIX比-0.10pt）。出来高：普段の0.46倍。直近5日：TOPIXより弱い。",
+      "comment": "当日+0.40%（TOPIX比-0.10pt）。出来高：普段の0.46倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1644,9 +1650,9 @@
       "attention": false,
       "volume_confirmation": "出来高：普段の0.24倍",
       "volume_ratio_20d": 0.24,
-      "persistence": "直近5日：TOPIXより強い",
+      "persistence": "確認できず",
       "return_5d_pct": -1.49,
-      "relative_5d_pct": 0.55,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより0.13pt弱い",
@@ -1659,12 +1665,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 0.55,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日+0.37%（TOPIX比-0.13pt）。出来高：普段の0.24倍。直近5日：TOPIXより強い。",
+      "comment": "当日+0.37%（TOPIX比-0.13pt）。出来高：普段の0.24倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1675,9 +1681,9 @@
       "attention": false,
       "volume_confirmation": "出来高：普段の0.30倍",
       "volume_ratio_20d": 0.3,
-      "persistence": "直近5日：TOPIXより強い",
+      "persistence": "確認できず",
       "return_5d_pct": -1.5,
-      "relative_5d_pct": 0.54,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより0.32pt弱い",
@@ -1690,12 +1696,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより強い",
-          "value": 0.54,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日+0.18%（TOPIX比-0.32pt）。出来高：普段の0.30倍。直近5日：TOPIXより強い。",
+      "comment": "当日+0.18%（TOPIX比-0.32pt）。出来高：普段の0.30倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1706,9 +1712,9 @@
       "attention": false,
       "volume_confirmation": "出来高：普段の0.31倍",
       "volume_ratio_20d": 0.31,
-      "persistence": "直近5日：TOPIXより弱い",
+      "persistence": "確認できず",
       "return_5d_pct": -2.84,
-      "relative_5d_pct": -0.8,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより0.83pt弱い",
@@ -1721,12 +1727,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより弱い",
-          "value": -0.8,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日-0.33%（TOPIX比-0.83pt）。出来高：普段の0.31倍。直近5日：TOPIXより弱い。",
+      "comment": "当日-0.33%（TOPIX比-0.83pt）。出来高：普段の0.31倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1737,9 +1743,9 @@
       "attention": true,
       "volume_confirmation": "出来高：普段の0.61倍",
       "volume_ratio_20d": 0.61,
-      "persistence": "直近5日：TOPIXより弱い",
+      "persistence": "確認できず",
       "return_5d_pct": -8.59,
-      "relative_5d_pct": -6.55,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより1.69pt弱い",
@@ -1752,12 +1758,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより弱い",
-          "value": -6.55,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日-1.19%（TOPIX比-1.69pt）。出来高：普段の0.61倍。直近5日：TOPIXより弱い。",
+      "comment": "当日-1.19%（TOPIX比-1.69pt）。出来高：普段の0.61倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1768,9 +1774,9 @@
       "attention": true,
       "volume_confirmation": "出来高：普段の0.57倍",
       "volume_ratio_20d": 0.57,
-      "persistence": "直近5日：TOPIXより弱い",
+      "persistence": "確認できず",
       "return_5d_pct": -6.29,
-      "relative_5d_pct": -4.25,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより2.00pt弱い",
@@ -1783,12 +1789,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより弱い",
-          "value": -4.25,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日-1.50%（TOPIX比-2.00pt）。出来高：普段の0.57倍。直近5日：TOPIXより弱い。",
+      "comment": "当日-1.50%（TOPIX比-2.00pt）。出来高：普段の0.57倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     },
     {
@@ -1799,9 +1805,9 @@
       "attention": true,
       "volume_confirmation": "出来高：普段の0.97倍",
       "volume_ratio_20d": 0.97,
-      "persistence": "直近5日：TOPIXより弱い",
+      "persistence": "確認できず",
       "return_5d_pct": -4.87,
-      "relative_5d_pct": -2.83,
+      "relative_5d_pct": null,
       "axes": {
         "momentum": {
           "label": "TOPIXより2.46pt弱い",
@@ -1814,12 +1820,12 @@
           "rule": "業種ETFの出来高を直近20日平均と比較"
         },
         "persistence": {
-          "label": "直近5日：TOPIXより弱い",
-          "value": -2.83,
+          "label": "確認できず",
+          "value": null,
           "rule": "業種ETFの5日騰落をTOPIXと比較し、差±0.5ptで判定"
         }
       },
-      "comment": "当日-1.96%（TOPIX比-2.46pt）。出来高：普段の0.97倍。直近5日：TOPIXより弱い。",
+      "comment": "当日-1.96%（TOPIX比-2.46pt）。出来高：普段の0.97倍。確認できず。",
       "coverage_note": "業種ETF自身の値動き・出来高・5日推移による評価。個別監視銘柄は評価に使用せず、総合点も算出しません。"
     }
   ],
@@ -1827,11 +1833,12 @@
     "stance": "指数ごとに強弱が分かれる相場",
     "reason": "日経平均 -0.72%に対しTOPIX +0.50%",
     "tailwinds": [
-      "米10年金利：高PER株に追い風",
+      "米国半導体株：追い風",
       "ドル円：外需に向かい風／輸入コストに追い風"
     ],
     "headwinds": [
-      "ドル円：外需に向かい風／輸入コストに追い風"
+      "ドル円：外需に向かい風／輸入コストに追い風",
+      "米10年金利：高PER株に向かい風"
     ],
     "focus_sectors": [
       "エネルギー資源",

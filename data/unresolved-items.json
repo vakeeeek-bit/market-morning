@@ -1,23 +1,22 @@
 {
-  "updated_at": "2026-10-26T06:52:00+09:00",
-  "source_report_date": "2026-10-26",
+  "updated_at": "2026-10-27T06:58:00+09:00",
+  "source_report_date": "2026-10-27",
   "items": [
     {
-      "id": "contracts",
+      "id": "stale_cross_asset",
       "status": "QUALIFIED",
-      "missing": "Gold・Silver・WTI・Brent保存連続足と取引所・限月・値種別・時刻の対応",
-      "impact": "商品先物数値を結論から除外",
-      "last_checked_at": "2026-10-26T06:52:00+09:00",
-      "next_action": "公式契約と保存値の対応確認後のみ追加",
+      "missing": "DXY・USD/JPY・EUR/USDの正本は10月23日日足で、米株26日と基準日が不一致。米2年・10年利回りは10月23日FREDで、米株26日と基準日が不一致",
+      "impact": "26日の為替・金利方向と因果を除外",
+      "last_checked_at": "2026-10-27T06:58:00+09:00",
+      "next_action": "同一市場日の正本が得られた時点で再判定",
       "attempts": [
         {
-          "method": "CME/ICE公式と保存正本の定義照合",
-          "result": "価格方向は背景確認、保存連続足との契約対応未確認",
+          "method": "当日正本・公式ソース確認",
+          "result": "株価は26日、金利・為替は23日",
           "source_urls": [
-            "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html",
-            "https://www.ice.com/products/219/Brent-Crude-Futures"
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
           ],
-          "checked_at": "2026-10-26T06:52:00+09:00"
+          "checked_at": "2026-10-27T06:58:00+09:00"
         }
       ],
       "affected_components": [
@@ -25,27 +24,81 @@
         "japan_stocks"
       ],
       "excluded_claims": [
-        "商品先物の価格・前日比"
+        "26日の為替・金利方向と因果を除外"
       ],
       "excluded_from_publication": true,
-      "first_seen_at": "2026-10-26T06:52:00+09:00"
+      "first_seen_at": "2026-10-27T06:58:00+09:00"
+    },
+    {
+      "id": "contracts",
+      "status": "QUALIFIED",
+      "missing": "Gold・Silver・WTI・Brentの保存連続先物値と取引所・限月・値種別・基準時刻の対応",
+      "impact": "商品先物の価格・前日比を除外",
+      "last_checked_at": "2026-10-27T06:58:00+09:00",
+      "next_action": "公式契約と保存値の対応確認後のみ追加",
+      "attempts": [
+        {
+          "method": "当日正本・公式ソース確認",
+          "result": "保存連続足との契約対応未確認",
+          "source_urls": [
+            "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html",
+            "https://www.ice.com/products/219/Brent-Crude-Futures"
+          ],
+          "checked_at": "2026-10-27T06:58:00+09:00"
+        }
+      ],
+      "affected_components": [
+        "ai_report",
+        "japan_stocks"
+      ],
+      "excluded_claims": [
+        "商品先物の価格・前日比を除外"
+      ],
+      "excluded_from_publication": true,
+      "first_seen_at": "2026-10-27T06:58:00+09:00"
+    },
+    {
+      "id": "current_values",
+      "status": "QUALIFIED",
+      "missing": "10月27日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "impact": "朝の現在値・先物示唆を除外",
+      "last_checked_at": "2026-10-27T06:58:00+09:00",
+      "next_action": "定義と確認時刻が揃った値だけ追加",
+      "attempts": [
+        {
+          "method": "当日正本・公式ソース確認",
+          "result": "現在値ソース未採用",
+          "source_urls": [
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+          ],
+          "checked_at": "2026-10-27T06:58:00+09:00"
+        }
+      ],
+      "affected_components": [
+        "ai_report",
+        "japan_stocks"
+      ],
+      "excluded_claims": [
+        "朝の現在値・先物示唆を除外"
+      ],
+      "excluded_from_publication": true,
+      "first_seen_at": "2026-10-27T06:58:00+09:00"
     },
     {
       "id": "coverage",
       "status": "QUALIFIED",
       "missing": "アナリスト評価変更と企業固有開示の全件網羅",
-      "impact": "変更なし・企業ニュース網羅の包括断定を除外",
-      "last_checked_at": "2026-10-26T06:52:00+09:00",
+      "impact": "評価変更なし・企業ニュース網羅の包括断定を除外",
+      "last_checked_at": "2026-10-27T06:58:00+09:00",
       "next_action": "公式一覧・契約データで確認できた記事だけ追加",
       "attempts": [
         {
-          "method": "JPX/TDnet・公開評価一覧",
-          "result": "重要性と全件網羅の確定に至らず個別記事を不採用",
+          "method": "当日正本・公式ソース確認",
+          "result": "全件網羅の確定に至らず",
           "source_urls": [
-            "https://www.release.tdnet.info/inbs/I_main_00.html",
-            "https://kabutan.jp/news/marketnews/?category=6"
+            "https://www.release.tdnet.info/inbs/I_main_00.html"
           ],
-          "checked_at": "2026-10-26T06:52:00+09:00"
+          "checked_at": "2026-10-27T06:58:00+09:00"
         }
       ],
       "affected_components": [
@@ -53,122 +106,26 @@
         "japan_stocks"
       ],
       "excluded_claims": [
-        "評価変更なし",
-        "企業固有材料を全件確認済み"
+        "評価変更なし・企業ニュース網羅の包括断定を除外"
       ],
       "excluded_from_publication": true,
-      "first_seen_at": "2026-10-26T06:52:00+09:00"
-    },
-    {
-      "id": "current",
-      "status": "QUALIFIED",
-      "missing": "時刻付き為替・暗号資産現在値と限月付き日経先物実測値",
-      "impact": "現在値・日経先物を除外。15日2s10sは旧基準で採用",
-      "last_checked_at": "2026-10-20T06:54:20+09:00",
-      "next_action": "最新正本・一次本文を再確認し、同一定義の確認済み情報だけ追加。",
-      "attempts": [
-        {
-          "method": "正本全系列基準日",
-          "result": "金利15日・為替16日・暗号17日。現在値でない",
-          "source_urls": [
-            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
-          ],
-          "checked_at": "2026-10-20T06:54:20+09:00"
-        }
-      ],
-      "affected_components": [
-        "ai_report",
-        "japan_stocks"
-      ],
-      "excluded_claims": [
-        "現在値・日経先物を除外。15日2s10sは旧基準で採用"
-      ],
-      "excluded_from_publication": true
-    },
-    {
-      "id": "current_values",
-      "status": "QUALIFIED",
-      "missing": "10月26日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
-      "impact": "朝の方向と先物示唆を除外",
-      "last_checked_at": "2026-10-26T06:52:00+09:00",
-      "next_action": "定義と確認時刻が揃った値だけ次回追加",
-      "attempts": [
-        {
-          "method": "market正本基準日確認",
-          "result": "USDJPYは23日日足、暗号資産は日足、日経先物なし",
-          "source_urls": [
-            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
-          ],
-          "checked_at": "2026-10-26T06:52:00+09:00"
-        }
-      ],
-      "affected_components": [
-        "ai_report",
-        "japan_stocks"
-      ],
-      "excluded_claims": [
-        "旧終値を現在値として表示",
-        "日経先物推定"
-      ],
-      "excluded_from_publication": true,
-      "first_seen_at": "2026-10-26T06:52:00+09:00"
-    },
-    {
-      "id": "market",
-      "status": "QUALIFIED",
-      "missing": "10月21日JSTのmarket_data成功記録。statusは10月20日10:55:55 JST成功 / 米株・VIX・USD/JPY・米11セクターETFの正本は10月19日で、10月20日の米市場を未反映 / 米2年・10年金利は10月16日、DXYとGold・WTI・Brentは10月16日で対象市場日より古い",
-      "impact": "20日米国の価格と21日朝の方向を正本で断定できない",
-      "last_checked_at": "2026-10-20T06:54:20+09:00",
-      "next_action": "当日market_data成功後に20日米国値を再判定",
-      "attempts": [
-        {
-          "method": "公開正本・status",
-          "result": "19日成功、16日市場値。20日収集成功なし",
-          "source_urls": [
-            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
-            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/status.json"
-          ],
-          "checked_at": "2026-10-20T06:54:20+09:00"
-        }
-      ],
-      "affected_components": [
-        "ai_report",
-        "japan_stocks"
-      ],
-      "excluded_claims": [
-        "19日の正本市場判断を除外"
-      ],
-      "excluded_from_publication": true,
-      "actual_attempts": [
-        {
-          "source": "status/market公開正本",
-          "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/status.json",
-          "checked_at": "2026-10-21T06:43:56+09:00",
-          "result": "status20日成功、21日当日成功なし"
-        },
-        {
-          "source": "market正本",
-          "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
-          "checked_at": "2026-10-21T06:43:56+09:00",
-          "result": "米株・11ETF19日、金利・DXY・商品16日"
-        }
-      ]
+      "first_seen_at": "2026-10-27T06:58:00+09:00"
     },
     {
       "id": "project_docs",
       "status": "QUALIFIED",
-      "missing": "Project添付仕様書3点を接続済みDrive検索で取得できず",
-      "impact": "Project Instructionsとmain現行スキーマ・検証を優先",
-      "last_checked_at": "2026-10-26T06:52:00+09:00",
-      "next_action": "添付の接続状態を次回再確認",
+      "missing": "Project添付仕様書3点は接続済みDrive検索で取得できず、Project Instructionsとmain現行仕様を優先",
+      "impact": "添付仕様書実読済みという主張を除外",
+      "last_checked_at": "2026-10-27T06:58:00+09:00",
+      "next_action": "接続状態を次回再確認",
       "attempts": [
         {
-          "method": "Google Drive完全一致・語句検索",
-          "result": "該当ファイルなし。main現行仕様で検証を継続",
+          "method": "当日正本・公式ソース確認",
+          "result": "完全一致・語句検索とも該当なし",
           "source_urls": [
             "https://drive.google.com/"
           ],
-          "checked_at": "2026-10-26T06:52:00+09:00"
+          "checked_at": "2026-10-27T06:58:00+09:00"
         }
       ],
       "affected_components": [
@@ -176,36 +133,10 @@
         "japan_stocks"
       ],
       "excluded_claims": [
-        "添付仕様書3点を実読済み"
+        "添付仕様書実読済みという主張を除外"
       ],
       "excluded_from_publication": true,
-      "first_seen_at": "2026-10-26T06:52:00+09:00"
-    },
-    {
-      "id": "sectors",
-      "status": "QUALIFIED",
-      "missing": "19日11ETF終値未収集。16日は統一済み",
-      "impact": "19日業種順位を正本で算出しない",
-      "last_checked_at": "2026-10-20T06:54:20+09:00",
-      "next_action": "最新正本・一次本文を再確認し、同一定義の確認済み情報だけ追加。",
-      "attempts": [
-        {
-          "method": "11系列確認",
-          "result": "全て16日。旧異日問題は解消",
-          "source_urls": [
-            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
-          ],
-          "checked_at": "2026-10-20T06:54:20+09:00"
-        }
-      ],
-      "affected_components": [
-        "ai_report",
-        "japan_stocks"
-      ],
-      "excluded_claims": [
-        "19日業種順位を正本で算出しない"
-      ],
-      "excluded_from_publication": true
+      "first_seen_at": "2026-10-27T06:58:00+09:00"
     }
   ]
 }

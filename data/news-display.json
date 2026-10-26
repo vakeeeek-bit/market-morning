@@ -2,28 +2,20 @@
   "version": "1.0",
   "description": "確認済み一次資料の表示設定",
   "items": {
-    "oct26-cpi": {
-      "primary_page": "japan",
+    "oct27-anthropic-s1": {
+      "primary_page": "world",
       "priority": 100,
       "attention_points": [
-        "総合・生鮮除くとも前年比+2.1%",
-        "発表単独の市場反応は未確認"
+        "S-1提出。公開条件・価格・時期は未確定",
+        "損失・計算資源投資・資金調達条件を併記"
       ]
     },
-    "oct26-boj-fsr": {
-      "primary_page": "japan",
-      "priority": 95,
-      "attention_points": [
-        "金融政策決定ではない",
-        "AI市場調整とNBFI連関を金融安定面から点検"
-      ]
-    },
-    "oct26-canada-tariff": {
+    "oct27-ofac-faq": {
       "primary_page": "world",
-      "priority": 90,
+      "priority": 75,
       "attention_points": [
-        "10月30日発効の対象品目入替え",
-        "日本製品への一律50%関税ではない"
+        "取引拒否・報告関連FAQの改定",
+        "新規の包括制裁指定ではない"
       ]
     }
   }

@@ -1,9 +1,9 @@
 {
   "version": "2.0",
-  "report_date": "2026-10-26",
-  "target_market_date": "2026-10-23",
-  "updated_at": "2026-10-26T06:52:00+09:00",
-  "scope_note": "23日注釈付き暫定版。米21日正本、日本22日大引け、米22日外部照合、22日一次情報を分離。完全版FAIL、暫定版QUALIFIED。",
+  "report_date": "2026-10-27",
+  "target_market_date": "2026-10-26",
+  "updated_at": "2026-10-27T06:58:00+09:00",
+  "scope_note": "米26日・日本26日正本終値と一次資料を中心に作成。基準日の古い為替・金利、未定義商品先物、網羅不能項目を除外したQUALIFIED版。",
   "research_coverage": {
     "status": "QUALIFIED",
     "directions": [
@@ -486,37 +486,36 @@
     "status": "PASS",
     "conclusions": [
       {
-        "conclusion": "半導体は反発余地",
+        "conclusion": "AI・半導体は追い風候補",
         "checks": [
-          "SOX+0.44%",
-          "XLK+0.49%",
-          "S&P500-0.52%",
-          "米上昇業種3/11"
+          "SOX+2.82%",
+          "XLK+1.69%",
+          "Anthropic S-1",
+          "日本26日電機・精密-1.96%"
         ],
-        "weighing": "選別的反発に限定",
-        "uncertainty": "国内市場幅"
+        "weighing": "米反発の国内波及は未確認",
+        "uncertainty": "投資コストと資金調達"
       },
       {
-        "conclusion": "資源は条件付き追い風",
+        "conclusion": "米市場幅は改善",
         "checks": [
-          "XLE+2.60%",
-          "供給懸念報道",
-          "日本資源-0.22%",
-          "限月未確認"
+          "7上昇1横ばい3下落",
+          "大型株優位",
+          "XLC-1.57%"
         ],
-        "weighing": "26日の相対騰落確認まで候補",
-        "uncertainty": "原油反落と供給情勢"
+        "weighing": "改善したが全面高ではない",
+        "uncertainty": "FOMC前の持続性"
       },
       {
-        "conclusion": "日銀週は銀行優位とは限らない",
+        "conclusion": "資源・商社は相対優位",
         "checks": [
-          "CPI+2.1%",
-          "銀行-2.60%",
-          "不動産+2.34%",
-          "会合未開催"
+          "日本エネルギー+3.23%",
+          "商社+2.68%",
+          "INPEX+4.90%",
+          "定義付き原油未確認"
         ],
-        "weighing": "金利・円と業種反応で選別",
-        "uncertainty": "会合決定"
+        "weighing": "26日実績として確認、27日継続は条件付き",
+        "uncertainty": "原油方向"
       }
     ]
   },
@@ -551,26 +550,24 @@
   },
   "previous_day_change": {
     "status": "PASS",
-    "prior_view": "23日版は米22日のAI・半導体急落と原油高を警戒",
+    "prior_view": "前回は米主要指数安・SOX小幅反発とエネルギー突出を警戒",
     "new_events": [
-      "米23日のSOX反発と主要指数安",
-      "米エネルギー突出",
-      "日本23日の不動産高・銀行安",
-      "日本9月CPI",
-      "日銀金融システムレポート",
-      "カナダ関税対象変更"
+      "米SOX+2.82%と11業種中7業種上昇",
+      "日本26日の日経平均/TOPIX逆行",
+      "Anthropic S-1提出",
+      "OFAC FAQ改定"
     ],
     "changed": [
-      "半導体を一方向の逆風から反発持続性の監視へ変更",
-      "米市場の広がりを3/11業種上昇と評価",
-      "日本の相対強弱を不動産・小売・食品対銀行・鉄鋼非鉄へ更新"
+      "半導体を小幅反発から強い反発の持続性監視へ変更",
+      "米市場幅を3/11上昇から7上昇1横ばい3下落へ更新",
+      "日本の相対強者を資源・公益・商社、弱者を電機・機械へ更新"
     ],
     "unchanged": [
       "正本価格優先",
       "未定義先物・現在値は不採用",
       "Copperは任意省略"
     ],
-    "japan_revision": "26日は資源・空運・半導体の三方向に加え、日銀週の銀行・不動産・円を相対比較"
+    "japan_revision": "米SOX高が前日の国内電機安を反転できるか、資源・商社優位が続くかを並行監視"
   },
   "source_quality": {
     "status": "PASS",
@@ -604,36 +601,36 @@
   },
   "publication_decision": {
     "status": "QUALIFIED",
-    "decided_at": "2026-10-26T06:52:00+09:00",
-    "summary": "市場32系列、日本17業種・34銘柄、一次資料3件を確認。商品契約定義・朝の現在値・評価変更網羅性を除外したQUALIFIED公開。",
+    "decided_at": "2026-10-27T06:58:00+09:00",
+    "summary": "米26日・日本26日正本、米11業種、一次資料2件を確認。基準日差、商品契約定義、朝の現在値、評価変更網羅性に依存する主張を除外したQUALIFIED公開。",
     "components": {
       "ai_report": {
         "status": "QUALIFIED",
-        "updated_at": "2026-10-26T06:52:00+09:00",
-        "reason": "市場32系列、日本17業種・34銘柄、一次資料3件を確認。商品契約定義・朝の現在値・評価変更網羅性を除外したQUALIFIED公開。"
+        "updated_at": "2026-10-27T06:58:00+09:00",
+        "reason": "米26日・日本26日正本、米11業種、一次資料2件を確認。基準日差、商品契約定義、朝の現在値、評価変更網羅性に依存する主張を除外したQUALIFIED公開。"
       },
       "japan_stocks": {
         "status": "QUALIFIED",
-        "updated_at": "2026-10-26T06:52:00+09:00",
-        "reason": "市場32系列、日本17業種・34銘柄、一次資料3件を確認。商品契約定義・朝の現在値・評価変更網羅性を除外したQUALIFIED公開。"
+        "updated_at": "2026-10-27T06:58:00+09:00",
+        "reason": "米26日・日本26日正本、米11業種、一次資料2件を確認。基準日差、商品契約定義、朝の現在値、評価変更網羅性に依存する主張を除外したQUALIFIED公開。"
       }
     },
     "unresolved_items": [
       {
-        "id": "current_values",
+        "id": "stale_cross_asset",
         "status": "QUALIFIED",
-        "missing": "10月26日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
-        "impact": "朝の方向と先物示唆を除外",
-        "last_checked_at": "2026-10-26T06:52:00+09:00",
-        "next_action": "定義と確認時刻が揃った値だけ次回追加",
+        "missing": "DXY・USD/JPY・EUR/USDの正本は10月23日日足で、米株26日と基準日が不一致。米2年・10年利回りは10月23日FREDで、米株26日と基準日が不一致",
+        "impact": "26日の為替・金利方向と因果を除外",
+        "last_checked_at": "2026-10-27T06:58:00+09:00",
+        "next_action": "同一市場日の正本が得られた時点で再判定",
         "attempts": [
           {
-            "method": "market正本基準日確認",
-            "result": "USDJPYは23日日足、暗号資産は日足、日経先物なし",
+            "method": "当日正本・公式ソース確認",
+            "result": "株価は26日、金利・為替は23日",
             "source_urls": [
               "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
             ],
-            "checked_at": "2026-10-26T06:52:00+09:00"
+            "checked_at": "2026-10-27T06:58:00+09:00"
           }
         ],
         "affected_components": [
@@ -641,27 +638,27 @@
           "japan_stocks"
         ],
         "excluded_claims": [
-          "旧終値を現在値として表示",
-          "日経先物推定"
+          "26日の為替・金利方向と因果を除外"
         ],
-        "excluded_from_publication": true
+        "excluded_from_publication": true,
+        "first_seen_at": "2026-10-27T06:58:00+09:00"
       },
       {
         "id": "contracts",
         "status": "QUALIFIED",
-        "missing": "Gold・Silver・WTI・Brent保存連続足と取引所・限月・値種別・時刻の対応",
-        "impact": "商品先物数値を結論から除外",
-        "last_checked_at": "2026-10-26T06:52:00+09:00",
+        "missing": "Gold・Silver・WTI・Brentの保存連続先物値と取引所・限月・値種別・基準時刻の対応",
+        "impact": "商品先物の価格・前日比を除外",
+        "last_checked_at": "2026-10-27T06:58:00+09:00",
         "next_action": "公式契約と保存値の対応確認後のみ追加",
         "attempts": [
           {
-            "method": "CME/ICE公式と保存正本の定義照合",
-            "result": "価格方向は背景確認、保存連続足との契約対応未確認",
+            "method": "当日正本・公式ソース確認",
+            "result": "保存連続足との契約対応未確認",
             "source_urls": [
               "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html",
               "https://www.ice.com/products/219/Brent-Crude-Futures"
             ],
-            "checked_at": "2026-10-26T06:52:00+09:00"
+            "checked_at": "2026-10-27T06:58:00+09:00"
           }
         ],
         "affected_components": [
@@ -669,26 +666,53 @@
           "japan_stocks"
         ],
         "excluded_claims": [
-          "商品先物の価格・前日比"
+          "商品先物の価格・前日比を除外"
         ],
-        "excluded_from_publication": true
+        "excluded_from_publication": true,
+        "first_seen_at": "2026-10-27T06:58:00+09:00"
+      },
+      {
+        "id": "current_values",
+        "status": "QUALIFIED",
+        "missing": "10月27日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+        "impact": "朝の現在値・先物示唆を除外",
+        "last_checked_at": "2026-10-27T06:58:00+09:00",
+        "next_action": "定義と確認時刻が揃った値だけ追加",
+        "attempts": [
+          {
+            "method": "当日正本・公式ソース確認",
+            "result": "現在値ソース未採用",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-10-27T06:58:00+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "朝の現在値・先物示唆を除外"
+        ],
+        "excluded_from_publication": true,
+        "first_seen_at": "2026-10-27T06:58:00+09:00"
       },
       {
         "id": "coverage",
         "status": "QUALIFIED",
         "missing": "アナリスト評価変更と企業固有開示の全件網羅",
-        "impact": "変更なし・企業ニュース網羅の包括断定を除外",
-        "last_checked_at": "2026-10-26T06:52:00+09:00",
+        "impact": "評価変更なし・企業ニュース網羅の包括断定を除外",
+        "last_checked_at": "2026-10-27T06:58:00+09:00",
         "next_action": "公式一覧・契約データで確認できた記事だけ追加",
         "attempts": [
           {
-            "method": "JPX/TDnet・公開評価一覧",
-            "result": "重要性と全件網羅の確定に至らず個別記事を不採用",
+            "method": "当日正本・公式ソース確認",
+            "result": "全件網羅の確定に至らず",
             "source_urls": [
-              "https://www.release.tdnet.info/inbs/I_main_00.html",
-              "https://kabutan.jp/news/marketnews/?category=6"
+              "https://www.release.tdnet.info/inbs/I_main_00.html"
             ],
-            "checked_at": "2026-10-26T06:52:00+09:00"
+            "checked_at": "2026-10-27T06:58:00+09:00"
           }
         ],
         "affected_components": [
@@ -696,26 +720,26 @@
           "japan_stocks"
         ],
         "excluded_claims": [
-          "評価変更なし",
-          "企業固有材料を全件確認済み"
+          "評価変更なし・企業ニュース網羅の包括断定を除外"
         ],
-        "excluded_from_publication": true
+        "excluded_from_publication": true,
+        "first_seen_at": "2026-10-27T06:58:00+09:00"
       },
       {
         "id": "project_docs",
         "status": "QUALIFIED",
-        "missing": "Project添付仕様書3点を接続済みDrive検索で取得できず",
-        "impact": "Project Instructionsとmain現行スキーマ・検証を優先",
-        "last_checked_at": "2026-10-26T06:52:00+09:00",
-        "next_action": "添付の接続状態を次回再確認",
+        "missing": "Project添付仕様書3点は接続済みDrive検索で取得できず、Project Instructionsとmain現行仕様を優先",
+        "impact": "添付仕様書実読済みという主張を除外",
+        "last_checked_at": "2026-10-27T06:58:00+09:00",
+        "next_action": "接続状態を次回再確認",
         "attempts": [
           {
-            "method": "Google Drive完全一致・語句検索",
-            "result": "該当ファイルなし。main現行仕様で検証を継続",
+            "method": "当日正本・公式ソース確認",
+            "result": "完全一致・語句検索とも該当なし",
             "source_urls": [
               "https://drive.google.com/"
             ],
-            "checked_at": "2026-10-26T06:52:00+09:00"
+            "checked_at": "2026-10-27T06:58:00+09:00"
           }
         ],
         "affected_components": [
@@ -723,54 +747,48 @@
           "japan_stocks"
         ],
         "excluded_claims": [
-          "添付仕様書3点を実読済み"
+          "添付仕様書実読済みという主張を除外"
         ],
-        "excluded_from_publication": true
+        "excluded_from_publication": true,
+        "first_seen_at": "2026-10-27T06:58:00+09:00"
       }
     ]
   },
   "actual_attempts": [
     {
-      "category": "market",
-      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
-      "checked_at": "2026-10-26T06:52:00+09:00",
-      "result": "当日収集32系列成功。米株23日、金利22日"
+      "item": "正本市場収集",
+      "sources": [
+        "scripts/update_market.py",
+        "data/market.json"
+      ],
+      "checked_at": "2026-10-27T06:58:00+09:00",
+      "result": "32/32系列取得。米株26日、金利・為替23日の基準日差を識別"
     },
     {
-      "category": "japan_market",
-      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json",
-      "checked_at": "2026-10-26T06:52:00+09:00",
-      "result": "23日大引け17業種・34銘柄成功"
+      "item": "日本株収集",
+      "sources": [
+        "scripts/update_japan_market.py",
+        "data/japan-market.json"
+      ],
+      "checked_at": "2026-10-27T06:58:00+09:00",
+      "result": "再収集はYahoo 429で縮退したため採用せず、main既存の26日完了版17/17業種・34/34銘柄を維持"
     },
     {
-      "category": "macro",
-      "source_url": "https://www.stat.go.jp/english/data/cpi/1581-z.html",
-      "checked_at": "2026-10-26T06:52:00+09:00",
-      "result": "9月CPI本文実読"
+      "item": "Project添付仕様書",
+      "sources": [
+        "Google Drive exact-title and broad search"
+      ],
+      "checked_at": "2026-10-27T06:58:00+09:00",
+      "result": "該当ファイル取得不可。Project Instructionsとmain現行仕様を優先"
     },
     {
-      "category": "central_bank",
-      "source_url": "https://www.boj.or.jp/research/brp/fsr/data/fsr261023a.pdf",
-      "checked_at": "2026-10-26T06:52:00+09:00",
-      "result": "金融システムレポート本文実読。金融政策決定ではない"
-    },
-    {
-      "category": "trade",
-      "source_url": "https://www.whitehouse.gov/presidential-actions/2026/10/modifying-the-scope-of-tariffs-on-canada/",
-      "checked_at": "2026-10-26T06:52:00+09:00",
-      "result": "対象追加・除外、発効日、USMCA/Section232関係を実読"
-    },
-    {
-      "category": "sanctions",
-      "source_url": "https://ofac.treasury.gov/recent-actions",
-      "checked_at": "2026-10-26T06:52:00+09:00",
-      "result": "今回の確認範囲で23日付日本株主要新規材料なし"
-    },
-    {
-      "category": "market_background",
-      "source_url": "https://www.reuters.com/world/china/global-markets-view-usa-2026-10-23/",
-      "checked_at": "2026-10-26T06:52:00+09:00",
-      "result": "23日終値背景とエネルギー・SOX相対強弱を確認。正本価格は置換しない"
+      "item": "一次ニュース",
+      "sources": [
+        "SEC Anthropic S-1",
+        "OFAC FAQ update"
+      ],
+      "checked_at": "2026-10-27T06:58:00+09:00",
+      "result": "本文・発表日・留保を実読確認"
     }
   ]
 }

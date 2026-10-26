@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "updated_at": "2026-10-26T06:52:00+09:00",
-  "report_date": "2026-10-26",
+  "updated_at": "2026-10-27T06:58:00+09:00",
+  "report_date": "2026-10-27",
   "period_start": "2026-03-18",
   "period_end": "2026-10-26",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-10-26",
+    "latest_report_date": "2026-10-27",
     "source_report_count": 13,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
@@ -397,19 +397,19 @@
   "scenario_change_conditions": [
     {
       "condition": "半導体とAI",
-      "meaning": "SOX再下落または国内複数銘柄の劣後で反発評価を撤回"
+      "meaning": "SOX反落または国内複数銘柄の劣後で追い風評価を撤回"
     },
     {
-      "condition": "原油・資源・空運",
-      "meaning": "原油反落または資源株劣後で資源追い風を弱める"
+      "condition": "資源・商社と国内ローテーション",
+      "meaning": "資源・商社がTOPIX比で劣後すれば前日優位の持続を否定"
     },
     {
       "condition": "日銀週の金利敏感株",
-      "meaning": "銀行と不動産の相対順位が反転すれば金利見方を更新"
+      "meaning": "銀行と不動産の相対順位が反転すれば見方を更新"
     },
     {
       "condition": "市場の広がり",
-      "meaning": "上昇業種が過半へ広がれば狭い相場評価を弱める"
+      "meaning": "米上昇業種が半数未満または日本TOPIXが日経平均に劣後すれば広がり改善を弱める"
     }
   ],
   "sources": [

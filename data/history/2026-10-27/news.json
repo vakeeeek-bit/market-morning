@@ -1,0 +1,86 @@
+{
+  "report_date": "2026-10-27",
+  "target_market_date": "2026-10-26",
+  "updated_at": "2026-10-27T06:58:00+09:00",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "一次本文を実読できた2件のみ掲載。市場反応は別途正本で確認し、記事単独因果は未確認。企業開示・評価変更の全件網羅は未確認。",
+  "articles": [
+    {
+      "id": "oct27-anthropic-s1",
+      "title": "AnthropicがSECへForm S-1を提出",
+      "published_date": "2026-10-26",
+      "verified_at": "2026-10-27T06:58:00+09:00",
+      "source_type": "primary",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2112214/000119312526395797/d127488ds1.htm",
+      "verification_url": "https://www.sec.gov/Archives/edgar/data/2112214/000119312526395797/d127488ds1.htm",
+      "verification_status": "PASS",
+      "fact": "Anthropicは10月26日、SECへForm S-1登録届出書を提出した。提出は公開条件や時期の最終確定を意味しない。",
+      "analysis": "AI資本市場へのアクセス期待は追い風だが、損失・計算資源投資・資金調達条件が評価を左右する。",
+      "limitations": "公開条件・価格・時期は未確定。記事単独の市場反応・因果は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "U.S. Securities and Exchange Commissionの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "Anthropicは10月26日、SECへForm S-1登録届出書を提出した。提出は公開条件や時期の最終確定を意味しない。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-26、実確認2026-10-27T06:58:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。記事単独の市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "公開条件・価格・時期は未確定。記事単独の市場反応・因果は未確認。"
+        }
+      }
+    },
+    {
+      "id": "oct27-ofac-faq",
+      "title": "OFACが取引拒否・報告関連FAQを改定",
+      "published_date": "2026-10-26",
+      "verified_at": "2026-10-27T06:58:00+09:00",
+      "source_type": "primary",
+      "publisher": "U.S. Department of the Treasury, OFAC",
+      "source_url": "https://ofac.treasury.gov/faqs/added/2026-10-26",
+      "verification_url": "https://ofac.treasury.gov/faqs/added/2026-10-26",
+      "verification_status": "PASS",
+      "fact": "OFACは10月26日、ブロッキング、取引拒否、報告に関するFAQ 10、32、33、34、35、36、41、42、49、50、53を改定した。",
+      "analysis": "制裁実務のコンプライアンス更新であり、新規の包括制裁指定とは区別する。",
+      "limitations": "ガイダンス更新であり、新規指定や日本株への直接価格影響は確認していない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "U.S. Department of the Treasury, OFACの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "OFACは10月26日、ブロッキング、取引拒否、報告に関するFAQ 10、32、33、34、35、36、41、42、49、50、53を改定した。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-26、実確認2026-10-27T06:58:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。記事単独の市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "ガイダンス更新であり、新規指定や日本株への直接価格影響は確認していない。"
+        }
+      }
+    }
+  ]
+}

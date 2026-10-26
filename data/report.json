@@ -1,101 +1,92 @@
 {
-  "report_date": "2026-10-26",
-  "target_market_date": "2026-10-23",
-  "updated_at": "2026-10-26T06:52:00+09:00",
-  "report_type": "daily_qualified_update",
+  "report_date": "2026-10-27",
+  "target_market_date": "2026-10-26",
+  "updated_at": "2026-10-27T06:58:00+09:00",
+  "report_type": "daily_provisional",
   "quick_view": {
-    "headline": "注釈付き10月26日版｜米株は下落、SOXは相対耐性。原油供給懸念と日銀週で業種選別",
+    "headline": "注釈付き10月27日版｜米AI・半導体は反発、国内はTOPIX優位。中銀週は広がりを検証",
     "top_news": [
       {
-        "title": "米23日は主要指数安、SOXと情報技術は相対耐性"
+        "title": "米26日はAI・半導体主導で反発"
       },
       {
-        "title": "日本9月CPIは総合・生鮮除くとも前年比+2.1%"
+        "title": "日本26日は日経平均とTOPIXが逆行"
       },
       {
-        "title": "日銀は金融システム面でAI市場調整とNBFI連関を警戒"
+        "title": "AnthropicがSECへS-1を提出"
       }
     ],
     "important_today": [
-      "米23日はS&P500-0.52%、ダウ-1.23%、NASDAQ-0.21%。SOXは+0.44%と相対的に底堅い",
-      "米業種ETFはXLE+2.60%が首位、11業種中上昇は3業種。資源に追い風、運輸にコスト逆風候補",
-      "日本23日は不動産+2.34%が首位、銀行-2.60%が最下位。業種分化が大きい",
-      "日本9月CPIは総合・生鮮除くとも前年比+2.1%。日銀会合前の金利敏感株材料",
-      "米国はカナダ製品への50%追加関税の対象を10月30日に入替え。北米供給網への影響は品目限定で確認"
+      "米26日はS&P500+0.70%、NASDAQ+0.82%、SOX+2.82%。AI・半導体が反発を主導",
+      "米11業種ETFは7上昇・1横ばい・3下落。XLK+1.69%、XLI+1.42%が上位、XLC-1.57%が最下位",
+      "日本26日は日経平均代理-0.72%、TOPIX代理+0.50%。エネルギー+3.23%、電機・精密-1.96%で指数乖離",
+      "Anthropicは10月26日にSECへS-1を提出。AI期待は回復したが投資コストと資金調達懸念は残る",
+      "日銀会合は10月29〜30日、FOMC・ECBも今週。円・金利・銀行/不動産の相対反応を優先"
     ]
   },
   "executive_summary": {
-    "headline": "注釈付き10月26日版｜米株は下落、SOXは相対耐性。原油供給懸念と日銀週で業種選別",
-    "market_mood": "米主要指数は下落したがSOXは反発。エネルギーが突出し、米業種の広がりは弱い。日本は不動産・小売・食品が上位、銀行・鉄鋼非鉄が下位。",
-    "main_driver": "中東供給懸念、AI投資評価の揺り戻し、日銀週を前にした金利・円の再評価",
+    "headline": "注釈付き10月27日版｜米AI・半導体は反発、国内はTOPIX優位。中銀週は広がりを検証",
+    "market_mood": "米国は大型グロースと半導体が主導し、11業種ETFの上昇は7業種へ拡大。日本は資源・公益・商社が強い一方、電機・機械が弱く、日経平均とTOPIXが逆行した。",
+    "main_driver": "Anthropicの上場申請を受けたAI期待の回復と、日本では高PER電機から資源・内需へのローテーション",
     "winners": [
-      "エネルギー資源（原油供給懸念が続く場合）",
-      "不動産・小売・食品の相対強者"
+      "米半導体・情報技術",
+      "日本のエネルギー資源・公益・商社"
     ],
     "losers": [
-      "空運・運輸（燃料コスト上昇時）",
-      "銀行・鉄鋼非鉄の弱いモメンタム"
+      "米通信",
+      "日本の電機・精密・機械"
     ],
     "important_today": [
-      "米23日はS&P500-0.52%、ダウ-1.23%、NASDAQ-0.21%。SOXは+0.44%と相対的に底堅い",
-      "米業種ETFはXLE+2.60%が首位、11業種中上昇は3業種。資源に追い風、運輸にコスト逆風候補",
-      "日本23日は不動産+2.34%が首位、銀行-2.60%が最下位。業種分化が大きい",
-      "日本9月CPIは総合・生鮮除くとも前年比+2.1%。日銀会合前の金利敏感株材料",
-      "米国はカナダ製品への50%追加関税の対象を10月30日に入替え。北米供給網への影響は品目限定で確認"
+      "米26日はS&P500+0.70%、NASDAQ+0.82%、SOX+2.82%。AI・半導体が反発を主導",
+      "米11業種ETFは7上昇・1横ばい・3下落。XLK+1.69%、XLI+1.42%が上位、XLC-1.57%が最下位",
+      "日本26日は日経平均代理-0.72%、TOPIX代理+0.50%。エネルギー+3.23%、電機・精密-1.96%で指数乖離",
+      "Anthropicは10月26日にSECへS-1を提出。AI期待は回復したが投資コストと資金調達懸念は残る",
+      "日銀会合は10月29〜30日、FOMC・ECBも今週。円・金利・銀行/不動産の相対反応を優先"
     ],
     "watch_markets": [
       "SOX",
-      "XLE",
+      "XLK/XLC",
+      "日経平均対TOPIX",
       "米2年・10年",
-      "USD/JPY",
-      "国内銀行・不動産"
+      "USD/JPY"
     ],
     "current_environment": [
-      "米国株・DXY・USD/JPY・VIX・11業種ETFは10月23日正本",
-      "米2年・10年は10月22日FRED同日値",
-      "日本株は10月23日大引け17業種・監視34銘柄",
+      "米株・VIX・11業種ETFは10月26日正本終値",
+      "日本株は10月26日大引け17業種・監視34銘柄",
+      "米2年・10年、DXY・為替は10月23日で対象日より古い",
       "商品先物の契約定義と朝の現在値は除外"
     ]
   },
   "news": [
     {
-      "title": "米23日は主要指数安、SOXと情報技術は相対耐性",
-      "fact": "正本market.jsonでS&P500-0.52%、NASDAQ-0.21%、ダウ-1.23%、Russell2000-0.29%、SOX+0.44%。Reutersはエネルギーが供給懸念で上昇し、情報技術も相対的に底堅かったと報道。",
-      "source_url": "https://www.reuters.com/world/china/global-markets-view-usa-2026-10-23/",
-      "analysis": "これまでの22日AI急落から、23日はSOXが反発した。ただし11業種中上昇は3業種で、全面的なリスク選好回復ではない。日本の半導体は反発余地と高い変動性を同時に見る。",
-      "published_at": "2026-10-23",
-      "market_reaction": "正本23日：SOX+0.44%、XLK+0.49%、一方S&P500-0.52%、VIX+2.21%。"
+      "title": "米26日はAI・半導体主導で反発",
+      "fact": "正本でS&P500+0.70%、NASDAQ+0.82%、SOX+2.82%。ReutersはAnthropicの上場申請を背景にAI関連が買われたと報道。",
+      "source_url": "https://www.reuters.com/world/china/wall-st-futures-climb-ai-optimism-ahead-mega-cap-earnings-fed-decision-2026-10-26/",
+      "analysis": "これまでのAI投資回収懸念から期待が戻ったが、申請書は損失と計算資源コストも示す。日本の半導体は追い風候補だが寄り後の広がりを確認。",
+      "published_at": "2026-10-26",
+      "market_reaction": "正本26日：SOX+2.82%、XLK+1.69%、NASDAQ100+1.09%。"
     },
     {
-      "title": "日本9月CPIは総合・生鮮除くとも前年比+2.1%",
-      "fact": "総務省統計局は23日、9月全国CPIを公表。総合は前年比+2.1%、生鮮食品を除く総合も+2.1%、生鮮食品及びエネルギーを除く総合は+2.4%。季節調整済み前月比は順に+0.4%、+0.5%、+0.5%。",
-      "source_url": "https://www.stat.go.jp/english/data/cpi/1581-z.html",
-      "analysis": "基調インフレは日銀会合前の金利・円・銀行・不動産の選別材料。ただし発表単独で23日の銀行安や不動産高の原因とは断定しない。",
-      "published_at": "2026-10-23",
-      "market_reaction": "日本23日：銀行-2.60%、不動産+2.34%。同時発生でありCPI単独因果は未確認。"
+      "title": "AnthropicがSECへS-1を提出",
+      "fact": "Anthropicは26日、SECへForm S-1を提出した。提出は登録届出で、公開条件や時期が最終確定したことを意味しない。",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2112214/000119312526395797/d127488ds1.htm",
+      "analysis": "AI資本市場のアクセス改善期待はプラス。一方、損失・計算資源投資・資金調達が評価を左右するため、AI株の一方向上昇を前提にしない。",
+      "published_at": "2026-10-26",
+      "market_reaction": "同日SOX+2.82%、NASDAQ100+1.09%。他材料もあり単独因果とは断定しない。"
     },
     {
-      "title": "日銀は金融システム面でAI市場調整とNBFI連関を警戒",
-      "fact": "日銀は23日付金融システムレポートを公表。AI関連資産の急な価格調整、銀行とノンバンク金融仲介の連関、サイバーリスク、不動産市場の過熱を点検対象として示した。金融政策決定ではない。",
-      "source_url": "https://www.boj.or.jp/research/brp/fsr/data/fsr261023a.pdf",
-      "analysis": "AIテーマの信用・資金調達経路を監視する根拠になるが、日銀の利上げシグナルや個別銀行の損失発生とは扱わない。",
-      "published_at": "2026-10-23",
-      "market_reaction": "レポート単独の価格寄与は未確認。日本23日は銀行-2.60%、米23日はSOX+0.44%。"
-    },
-    {
-      "title": "米国はカナダ製品への50%追加関税の対象品目を変更",
-      "fact": "White Houseは23日、Section 338に基づくカナダ製品への50%追加関税の対象を変更。合板、一部紙製品、一部機械・冷凍機器、梱包箱などを除外し、バルブ、カーペット、廃棄物等を追加。10月30日発効で、USMCA適合の有無を問わずSection 232措置に上乗せされる。",
-      "source_url": "https://www.whitehouse.gov/presidential-actions/2026/10/modifying-the-scope-of-tariffs-on-canada/",
-      "analysis": "北米供給網の機械・素材・自動車関連に品目限定の不確実性。日本製品への一律50%関税ではなく、対象品目・原産地・例外の確認が必要。",
-      "published_at": "2026-10-23",
-      "market_reaction": "発表単独の日本株反応は未確認。"
+      "title": "OFACが取引拒否・報告関連FAQを改定",
+      "fact": "OFACは26日、ブロッキング・取引拒否・報告に関するFAQ 10、32〜36、41、42、49、50、53を改定した。",
+      "source_url": "https://ofac.treasury.gov/faqs/added/2026-10-26",
+      "analysis": "制裁実務のコンプライアンス更新であり、新たな包括制裁指定とは区別する。日本株の直接価格反応は未確認。",
+      "published_at": "2026-10-26",
+      "market_reaction": "未確認。"
     }
   ],
   "policy": {
     "economic_indicators": {
-      "fact": "総務省統計局の23日公表資料で日本9月CPIを確認。米BLS・BEA・Census・ISMの公表予定も確認し、今回の日本株TOP5に追加する23日付の米主要一次指標は確認範囲でなし。日本速報PMIはS&P Global調査のReuters報道で製造業53.3、サービス52.0を確認したが政府統計ではない。",
+      "fact": "BLS・BEA・Census・ISMの公式予定を確認。26日付で今回の日本株TOP5に採用する米主要一次指標は確認範囲でなし。未確認範囲まで材料なしとは扱わない。",
       "source_urls": [
-        "https://www.stat.go.jp/english/data/cpi/1581-z.html",
         "https://www.bls.gov/schedule/2026/home.htm",
         "https://www.bea.gov/news/schedule",
         "https://www.census.gov/economic-indicators/",
@@ -103,25 +94,25 @@
       ]
     },
     "central_banks": {
-      "fact": "日銀は23日金融システムレポートを公表したが金融政策決定ではない。FRB・ECB・日銀の公式日程を確認し、FOMCは10月27〜28日米現地、ECBは28日、日銀会合は29〜30日。確認範囲で23日付の新規政策決定なし。",
+      "fact": "FRB・ECB・日銀の公式日程を確認。FOMCは10月27〜28日米現地、ECBは28日、日銀は29〜30日。26日付の新規政策決定は確認範囲でなし。",
       "source_urls": [
-        "https://www.boj.or.jp/research/brp/fsr/data/fsr261023a.pdf",
         "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
         "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
         "https://www.boj.or.jp/mopo/mpmsche_minu/index.htm"
       ]
     },
     "trade_tariffs": {
-      "fact": "White Houseは23日、カナダ製品への50%追加関税の対象品目を変更し10月30日発効とした。日本製品への一律新規関税ではない。USTR・商務省BISの公表一覧も確認し、日本株への追加主要材料はこの品目変更を採用。",
+      "fact": "White House・USTR・商務省BISの公表一覧を確認し、26日付で日本株TOP5に追加する主要な新規通商措置は確認範囲でなし。未確認範囲まで材料なしとは扱わない。",
       "source_urls": [
-        "https://www.whitehouse.gov/presidential-actions/2026/10/modifying-the-scope-of-tariffs-on-canada/",
-        "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october",
+        "https://www.whitehouse.gov/presidential-actions/",
+        "https://ustr.gov/about/policy-offices/press-office/press-releases",
         "https://www.bis.gov/news-updates"
       ]
     },
     "sanctions": {
-      "fact": "OFAC Recent Actionsを26日朝に確認。今回の確認範囲では23日付の日本株主要新規制裁材料なし。未確認範囲まで『新規材料なし』とはしない。",
+      "fact": "OFACは26日、取引拒否・報告等に関するFAQを改定。ガイダンス更新であり、新規指定とは区別する。",
       "source_urls": [
+        "https://ofac.treasury.gov/faqs/added/2026-10-26",
         "https://ofac.treasury.gov/recent-actions"
       ]
     }
@@ -129,100 +120,100 @@
   "scenarios": [
     {
       "name": "基本",
-      "conditions": "米指数安とエネルギー高、SOX反発が併存",
-      "impact_on_japan": "資源を相対優位候補、空運をコスト警戒。半導体は反発余地と変動性を両にらみ",
-      "invalidation": "原油反落、SOX再下落、国内半導体がTOPIX比で劣後"
+      "conditions": "米SOX高と広がり改善、国内は前日TOPIX優位",
+      "impact_on_japan": "半導体の反発余地と、資源・商社の相対優位を並行監視",
+      "invalidation": "SOX反落、国内半導体がTOPIX比で劣後、資源も反落"
     },
     {
       "name": "上振れ",
-      "conditions": "SOXと国内半導体が続伸し、円・金利が安定",
-      "impact_on_japan": "電機・精密の押し目買いが広がり、指数寄与度の高い銘柄が主導",
-      "invalidation": "VIX上昇、米長期金利急騰、銀行・小型株の劣後継続"
+      "conditions": "国内半導体が出来高を伴い反発し、TOPIXの広がりも維持",
+      "impact_on_japan": "電機・機械へ買いが戻り、資源・内需と共に上昇が広がる",
+      "invalidation": "VIX反発、米金利急騰、国内値下がり業種が過半"
     },
     {
       "name": "下振れ",
-      "conditions": "供給懸念で原油高が加速し、日銀週に円・金利変動が拡大",
-      "impact_on_japan": "空運・運輸・化学と高PER株に逆風、資源だけの狭い相場",
-      "invalidation": "供給懸念後退、原油反落、国内Breadth改善"
+      "conditions": "AI資金調達懸念が再燃し、日銀・FOMC前に円・金利変動が拡大",
+      "impact_on_japan": "高PER半導体と金利敏感株が不安定化し、ディフェンシブ優位へ",
+      "invalidation": "SOX続伸、円・金利安定、国内Breadth改善"
     }
   ],
   "market_data": [
     {
       "market": "S&P500",
-      "price": "7623.6802",
-      "change": "-39.7500 (-0.52%)",
-      "basis_time": "2026-10-23 日足Close・現在値ではない",
+      "price": "7676.77",
+      "change": "+53.0898 (+0.70%)",
+      "basis_time": "2026-10-26・日足Close・現在値ではない",
       "source": "market.json / ^GSPC"
     },
     {
       "market": "NASDAQ総合",
-      "price": "25955.3398",
-      "change": "-53.5195 (-0.21%)",
-      "basis_time": "2026-10-23 日足Close・現在値ではない",
+      "price": "26169.3809",
+      "change": "+214.0410 (+0.82%)",
+      "basis_time": "2026-10-26・日足Close・現在値ではない",
       "source": "market.json / ^IXIC"
     },
     {
       "market": "NASDAQ100",
-      "price": "28957.5293",
-      "change": "-1.1602 (-0.00%)",
-      "basis_time": "2026-10-23 日足Close・現在値ではない",
+      "price": "29273.4043",
+      "change": "+315.8750 (+1.09%)",
+      "basis_time": "2026-10-26・日足Close・現在値ではない",
       "source": "market.json / ^NDX"
     },
     {
       "market": "NYダウ",
-      "price": "52215.1602",
-      "change": "-652.8203 (-1.23%)",
-      "basis_time": "2026-10-23 日足Close・現在値ではない",
+      "price": "52361.5781",
+      "change": "+146.4180 (+0.28%)",
+      "basis_time": "2026-10-26・日足Close・現在値ではない",
       "source": "market.json / ^DJI"
     },
     {
       "market": "Russell2000",
-      "price": "2775.8999",
-      "change": "-8.1301 (-0.29%)",
-      "basis_time": "2026-10-23 日足Close・現在値ではない",
+      "price": "2786.4241",
+      "change": "+10.5242 (+0.38%)",
+      "basis_time": "2026-10-26・日足Close・現在値ではない",
       "source": "market.json / ^RUT"
     },
     {
       "market": "PHLX半導体株指数（SOX）",
-      "price": "10779.46",
-      "change": "+47.4795 (+0.44%)",
-      "basis_time": "2026-10-23 日足Close・現在値ではない",
+      "price": "11083.4697",
+      "change": "+304.0098 (+2.82%)",
+      "basis_time": "2026-10-26・日足Close・現在値ではない",
       "source": "market.json / ^SOX"
     },
     {
-      "market": "米2年債利回り",
-      "price": "4.650%",
-      "change": "-0.160ポイント",
-      "basis_time": "2026-10-22 FRED公表値・米株23日と同日時点ではない",
-      "source": "market.json / FRED:DGS2"
-    },
-    {
-      "market": "米10年債利回り",
-      "price": "4.960%",
-      "change": "-0.170ポイント",
-      "basis_time": "2026-10-22 FRED公表値・米株23日と同日時点ではない",
-      "source": "market.json / FRED:DGS10"
+      "market": "VIX",
+      "price": "18.39",
+      "change": "-1.0600 (-5.45%)",
+      "basis_time": "2026-10-26・日足Close・現在値ではない",
+      "source": "market.json / ^VIX"
     },
     {
       "market": "DXY",
       "price": "101.81",
       "change": "+0.2000 (+0.20%)",
-      "basis_time": "2026-10-23 日足Close・現在値ではない",
+      "basis_time": "2026-10-23・対象市場日より古い・現在値ではない",
       "source": "market.json / DX-Y.NYB"
     },
     {
       "market": "USD/JPY",
       "price": "156.494",
       "change": "-1.6380 (-1.04%)",
-      "basis_time": "2026-10-23 日足Close・現在値ではない",
+      "basis_time": "2026-10-23・対象市場日より古い・現在値ではない",
       "source": "market.json / JPY=X"
     },
     {
-      "market": "VIX",
-      "price": "19.45",
-      "change": "+0.4200 (+2.21%)",
-      "basis_time": "2026-10-23 日足Close・現在値ではない",
-      "source": "market.json / ^VIX"
+      "market": "米2年債利回り",
+      "price": "4.690%",
+      "change": "+0.040ポイント",
+      "basis_time": "2026-10-23 FRED公表値・米株26日と同日時点ではない",
+      "source": "market.json / FRED:DGS2"
+    },
+    {
+      "market": "米10年債利回り",
+      "price": "5.000%",
+      "change": "+0.040ポイント",
+      "basis_time": "2026-10-23 FRED公表値・米株26日と同日時点ではない",
+      "source": "market.json / FRED:DGS10"
     },
     {
       "market": "Gold",
@@ -256,139 +247,139 @@
   "market_overview": [
     {
       "market": "米国株",
-      "move": "23日S&P500-0.52%、NASDAQ-0.21%、ダウ-1.23%、SOX+0.44%",
-      "relative_strength": "SOX・情報技術が相対耐性、ダウと通信が弱い",
-      "background": "原油供給懸念とAI評価の揺り戻し",
-      "impact_on_japan": "半導体の反発余地はあるが全面リスクオンではない"
+      "move": "26日S&P500+0.70%、NASDAQ+0.82%、NASDAQ100+1.09%、SOX+2.82%",
+      "relative_strength": "SOX・情報技術・資本財が優位、通信が劣後",
+      "background": "AnthropicのS-1提出でAI期待が改善。大型株優位",
+      "impact_on_japan": "半導体には追い風候補だが、前日の国内電機安から反発の実現を確認"
     },
     {
       "market": "日本株",
-      "move": "23日日経平均-0.59%、TOPIX-1.02%。不動産+2.34%、銀行-2.60%",
-      "relative_strength": "内需の一部が強く、銀行・鉄鋼非鉄・情報通信が弱い",
-      "background": "業種ETF代理で分化を確認",
-      "impact_on_japan": "日銀週は銀行・不動産・円敏感株の反応差を優先"
+      "move": "26日日経平均代理-0.72%、TOPIX代理+0.50%。エネルギー+3.23%、電機・精密-1.96%",
+      "relative_strength": "資源・公益・商社が強く、電機・機械が弱い",
+      "background": "大型テック安と資源・内需へのローテーション",
+      "impact_on_japan": "米SOX高が国内電機の弱さを反転できるかが焦点"
     },
     {
       "market": "金利・為替・商品",
-      "move": "米2年4.65%、10年4.96%は22日FRED。USD/JPY23日終値156.494。商品価格は不採用",
-      "relative_strength": "2s10sは+31bpだが米株23日と同日時点ではない",
-      "background": "円高方向の日足と供給懸念報道が併存",
-      "impact_on_japan": "輸出・銀行・不動産・運輸を一律に扱わない"
+      "move": "米2年4.69%、10年5.00%、DXY101.81、USD/JPY156.494はいずれも23日。商品価格は不採用",
+      "relative_strength": "2s10sは23日に限り+31bp。26日のクロスアセット判断には不使用",
+      "background": "中銀週前だが、26日と同日基準の正本値がない",
+      "impact_on_japan": "円・銀行・不動産への当日方向を断定せず、実測後に更新"
     }
   ],
   "market_move_explanation": {
-    "title": "米株安の中でSOXとエネルギーが相対優位",
-    "move": "S&P500-0.52%、ダウ-1.23%、SOX+0.44%、XLE+2.60%",
-    "trigger": "中東供給懸念と、22日のAI急落後の選別的な買い戻し",
+    "title": "米AI・半導体反発と国内TOPIX優位のねじれ",
+    "move": "米SOX+2.82%、NASDAQ100+1.09%。日本は日経平均代理-0.72%、TOPIX代理+0.50%",
+    "trigger": "AnthropicのS-1提出でAI期待が改善した一方、日本26日は電機・精密と機械が下落",
     "transmission_chain": [
-      "供給懸念でエネルギーが上昇",
-      "インフレ・金利不確実性で広範指数は下落",
-      "SOXは22日急落後に小幅反発",
-      "日本は資源・運輸・半導体を相対比較"
+      "AI上場期待で米半導体・大型グロースに買い",
+      "米11業種の上昇は7業種へ拡大",
+      "日本は前日に資源・公益・商社が相対優位",
+      "本日は米SOX高が国内電機へ波及するか確認"
     ],
     "hit_hardest": [
       {
-        "market": "米ダウ・通信、日本の銀行・鉄鋼非鉄",
-        "reason": "米ダウ-1.23%、XLC-1.78%、日本銀行-2.60%、鉄鋼非鉄-1.78%"
+        "market": "米通信、日本の電機・精密と機械",
+        "reason": "XLC-1.57%、国内電機・精密-1.96%、機械-1.50%"
       }
     ],
-    "relative_resilience": "SOX+0.44%、XLK+0.49%、XLE+2.60%。ただし米11業種中上昇は3業種のみ",
-    "japan_impact": "INPEX1605は資源の相対優位候補、ANA9202・日本航空9201は燃油コストを確認。8035・6857はSOX反発の持続性を確認",
-    "confidence": "supported。価格はmarket.json正本、原油の方向・背景はReuters補足",
-    "invalidation": "原油反落、SOX再下落、国内資源がTOPIX比で劣後"
+    "relative_resilience": "SOX+2.82%、XLK+1.69%、XLI+1.42%。日本はエネルギー+3.23%、公益+3.06%、商社+2.68%",
+    "japan_impact": "8035・6857・6146は反発確認、1605・5020・8058は相対優位の持続性を確認",
+    "confidence": "supported。価格は正本、直接材料はSEC提出とReuters市場報道。単一因果は断定しない",
+    "invalidation": "SOX反落、国内半導体がTOPIX比で劣後、米上昇業種数が再び半数未満"
   },
   "internal_strength": {
-    "large_vs_small": "S&P500-0.52%、Russell2000-0.29%で小型株が相対優位。ただし両方下落",
-    "breadth": "Sector SPDR ETF代理は11業種中3上昇・8下落。全銘柄Breadthではない",
-    "sectors": "上位XLE+2.60%、XLK+0.49%、XLRE+0.12%。下位XLP-1.92%、XLC-1.78%、XLY-1.66%",
-    "assessment": "エネルギーとテックの一部に強さが集中。全面リスクオンではなく狭い相場"
+    "large_vs_small": "S&P500+0.70%、Russell2000+0.38%で大型株優位。NASDAQ100+1.09%も上回る",
+    "breadth": "Sector SPDR ETF代理は11業種中7上昇・1横ばい・3下落。全銘柄Breadthではない",
+    "sectors": "上位XLK+1.69%、XLI+1.42%、XLY+1.03%。下位XLC-1.57%、XLP-0.34%、XLRE+0.54%",
+    "assessment": "前回より上昇の広がりは改善したが、大型グロースと半導体の寄与が大きい"
   },
   "us_sector_etf_closes": [
     {
       "ticker": "XLC",
-      "price": 105.51,
-      "change_pct": -1.78,
-      "market_date": "2026-10-23",
+      "price": 103.85,
+      "change_pct": -1.57,
+      "market_date": "2026-10-26",
       "value_type": "daily Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLY",
-      "price": 113.1,
-      "change_pct": -1.66,
-      "market_date": "2026-10-23",
+      "price": 114.26,
+      "change_pct": 1.03,
+      "market_date": "2026-10-26",
       "value_type": "daily Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLP",
-      "price": 88.26,
-      "change_pct": -1.92,
-      "market_date": "2026-10-23",
+      "price": 87.96,
+      "change_pct": -0.34,
+      "market_date": "2026-10-26",
       "value_type": "daily Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLE",
-      "price": 69.33,
-      "change_pct": 2.6,
-      "market_date": "2026-10-23",
+      "price": 69.64,
+      "change_pct": 0.45,
+      "market_date": "2026-10-26",
       "value_type": "daily Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLF",
-      "price": 55.9,
-      "change_pct": -1.32,
-      "market_date": "2026-10-23",
+      "price": 56.02,
+      "change_pct": 0.21,
+      "market_date": "2026-10-26",
       "value_type": "daily Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLV",
       "price": 179.28,
-      "change_pct": -1.11,
-      "market_date": "2026-10-23",
+      "change_pct": 0.0,
+      "market_date": "2026-10-26",
       "value_type": "daily Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLI",
-      "price": 164.62,
-      "change_pct": -1.27,
-      "market_date": "2026-10-23",
+      "price": 166.96,
+      "change_pct": 1.42,
+      "market_date": "2026-10-26",
       "value_type": "daily Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLB",
-      "price": 51.31,
-      "change_pct": -0.74,
-      "market_date": "2026-10-23",
+      "price": 51.38,
+      "change_pct": 0.14,
+      "market_date": "2026-10-26",
       "value_type": "daily Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLRE",
-      "price": 42.57,
-      "change_pct": 0.12,
-      "market_date": "2026-10-23",
+      "price": 42.8,
+      "change_pct": 0.54,
+      "market_date": "2026-10-26",
       "value_type": "daily Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLK",
-      "price": 183.23,
-      "change_pct": 0.49,
-      "market_date": "2026-10-23",
+      "price": 186.32,
+      "change_pct": 1.69,
+      "market_date": "2026-10-26",
       "value_type": "daily Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLU",
-      "price": 42.56,
-      "change_pct": -0.72,
-      "market_date": "2026-10-23",
+      "price": 42.55,
+      "change_pct": -0.02,
+      "market_date": "2026-10-26",
       "value_type": "daily Close",
       "proxy_for_sector_index": true
     }
@@ -396,124 +387,128 @@
   "monitoring_points": [
     {
       "target": "半導体とAI",
-      "today_check": "東京エレクトロン8035、アドバンテスト6857、ソフトバンクG9984のTOPIX比・出来高",
-      "view_change_condition": "SOX再下落または国内複数銘柄の劣後で反発評価を撤回"
+      "today_check": "8035・6857・6146のTOPIX比、出来高、複数銘柄への広がり",
+      "view_change_condition": "SOX反落または国内複数銘柄の劣後で追い風評価を撤回"
     },
     {
-      "target": "原油・資源・空運",
-      "today_check": "定義付き原油価格、INPEX1605、ANA9202、日本航空9201",
-      "view_change_condition": "原油反落または資源株劣後で資源追い風を弱める"
+      "target": "資源・商社と国内ローテーション",
+      "today_check": "1605・5020・8058とエネルギー/商社のTOPIX比",
+      "view_change_condition": "資源・商社がTOPIX比で劣後すれば前日優位の持続を否定"
     },
     {
       "target": "日銀週の金利敏感株",
-      "today_check": "銀行8306・8316、不動産8801・8802、時刻付き円・国内金利",
-      "view_change_condition": "銀行と不動産の相対順位が反転すれば金利見方を更新"
+      "today_check": "8306・8316、8801・8802、時刻付き円・国内金利",
+      "view_change_condition": "銀行と不動産の相対順位が反転すれば見方を更新"
     },
     {
       "target": "市場の広がり",
-      "today_check": "値上がり業種数、TOPIX、小型株、景気敏感対ディフェンシブ",
-      "view_change_condition": "上昇業種が過半へ広がれば狭い相場評価を弱める"
+      "today_check": "日経平均対TOPIX、値上がり業種数、大型対小型、景気敏感対ディフェンシブ",
+      "view_change_condition": "米上昇業種が半数未満または日本TOPIXが日経平均に劣後すれば広がり改善を弱める"
     }
   ],
   "data_quality": {
     "overall": "MANUAL_REVIEW",
     "missing": [
+      "DXY・USD/JPY・EUR/USDの正本は10月23日日足で、米株26日と基準日が不一致",
+      "米2年・10年利回りは10月23日FREDで、米株26日と基準日が不一致",
       "Gold・Silver・WTI・Brentの保存連続先物値と取引所・限月・値種別・基準時刻の対応",
-      "10月26日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
-      "アナリスト評価変更と10月23日大引け後企業開示の全件網羅",
+      "10月27日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "アナリスト評価変更と企業固有開示の全件網羅",
       "Project添付仕様書3点は接続済みDrive検索で取得できず、Project Instructionsとmain現行仕様を優先"
     ],
     "differences": [
-      "前回23日版は米22日のSOX-6.7%を外部背景として警戒したが、正本23日はSOX+0.44%と反発",
-      "米23日は主要指数安でもXLE+2.60%、XLK+0.49%、XLRE+0.12%の3業種のみ上昇",
-      "日本23日は不動産+2.34%、小売+0.74%、食品+0.54%が上位、銀行-2.60%が最下位",
-      "米2年・10年は同じ10月22日なので2s10s+31bpをその日に限って算出。米株23日と同日時点ではない"
+      "前回23日は米主要指数安・SOX小幅反発だったが、26日はS&P500+0.70%、SOX+2.82%へ反発が拡大",
+      "米11業種ETFは前回3上昇から26日は7上昇・1横ばい・3下落へ広がった",
+      "日本26日は日経平均代理-0.72%に対しTOPIX代理+0.50%。資源・公益・商社が強く、電機・機械が弱い",
+      "米2年・10年は10月23日同日値なので2s10s+31bpを23日に限り算出。米株26日とは同日時点でない"
     ],
     "excluded": [
+      "10月23日のDXY・為替終値を10月27日朝の現在値または26日の方向として扱うこと",
+      "10月23日の米金利を26日の米株反応の直接材料として扱うこと",
       "限月・値種別・時刻未確認のGold・Silver・WTI・Brent数値",
       "Copper価格・在庫（任意非掲載）",
-      "旧日足を現在値として表示すること、暗号資産・日経225先物の推定値",
-      "原油上昇だけからINPEX・空運の当日騰落を断定すること",
-      "カナダ向け関税変更を日本製品への一律新規関税と扱うこと",
+      "旧日足の暗号資産と推定日経225先物",
       "評価変更なし、企業固有材料を全件確認済みという包括断定"
     ],
     "cautions": [
       "注釈付きQUALIFIED版。完全版の未達判定を保持",
-      "米株23日、米金利22日、日本株23日、ニュース発表日を混合しない",
+      "米株26日、日本株26日、米金利・為替23日、ニュース発表日を混合しない",
       "Copperは任意非掲載",
       "正本市場値、一次事実、Reutersによる市場背景、解釈を分離"
     ]
   },
   "final_conclusion": {
-    "headline": "注釈付き10月26日版｜米株は下落、SOXは相対耐性。原油供給懸念と日銀週で業種選別",
+    "headline": "注釈付き10月27日版｜米AI・半導体は反発、国内はTOPIX優位。中銀週は広がりを検証",
     "winners": [
-      "資源（条件付き）",
-      "不動産・小売の相対強者"
+      "米半導体・情報技術",
+      "日本の資源・公益・商社"
     ],
     "losers": [
-      "空運（原油高継続時）",
-      "銀行・鉄鋼非鉄の弱いモメンタム"
+      "米通信",
+      "日本の電機・機械（前日実績）"
     ],
     "top_three": [
-      "米23日はS&P500-0.52%、ダウ-1.23%、NASDAQ-0.21%。SOXは+0.44%と相対的に底堅い",
-      "米業種ETFはXLE+2.60%が首位、11業種中上昇は3業種。資源に追い風、運輸にコスト逆風候補",
-      "日本23日は不動産+2.34%が首位、銀行-2.60%が最下位。業種分化が大きい"
+      "米26日はS&P500+0.70%、NASDAQ+0.82%、SOX+2.82%。AI・半導体が反発を主導",
+      "米11業種ETFは7上昇・1横ばい・3下落。XLK+1.69%、XLI+1.42%が上位、XLC-1.57%が最下位",
+      "日本26日は日経平均代理-0.72%、TOPIX代理+0.50%。エネルギー+3.23%、電機・精密-1.96%で指数乖離"
     ],
     "triggers": [
       "SOX反発の持続",
-      "原油方向",
-      "日銀週の円・金利と銀行/不動産相対騰落"
+      "日経平均対TOPIXの相対順位",
+      "日銀・FOMC前の円・金利"
     ],
-    "disclaimer": "QUALIFIED。未定義商品先物・朝の現在値・網羅不能な評価変更を除外。推測補完なし。"
+    "disclaimer": "QUALIFIED。基準日差のある為替・金利、未定義商品先物、朝の現在値、網羅不能な評価変更を除外。推測補完なし。"
   },
   "japan_equities_preview": {
-    "summary": "注釈付き10月26日版｜米株は下落、SOXは相対耐性。原油供給懸念と日銀週で業種選別",
+    "summary": "注釈付き10月27日版｜米AI・半導体は反発、国内はTOPIX優位。中銀週は広がりを検証",
     "top_materials": [
-      "米23日はS&P500-0.52%、ダウ-1.23%、NASDAQ-0.21%。SOXは+0.44%と相対的に底堅い",
-      "米業種ETFはXLE+2.60%が首位、11業種中上昇は3業種。資源に追い風、運輸にコスト逆風候補",
-      "日本23日は不動産+2.34%が首位、銀行-2.60%が最下位。業種分化が大きい",
-      "日本9月CPIは総合・生鮮除くとも前年比+2.1%。日銀会合前の金利敏感株材料",
-      "米国はカナダ製品への50%追加関税の対象を10月30日に入替え。北米供給網への影響は品目限定で確認"
+      "米26日はS&P500+0.70%、NASDAQ+0.82%、SOX+2.82%。AI・半導体が反発を主導",
+      "米11業種ETFは7上昇・1横ばい・3下落。XLK+1.69%、XLI+1.42%が上位、XLC-1.57%が最下位",
+      "日本26日は日経平均代理-0.72%、TOPIX代理+0.50%。エネルギー+3.23%、電機・精密-1.96%で指数乖離",
+      "Anthropicは10月26日にSECへS-1を提出。AI期待は回復したが投資コストと資金調達懸念は残る",
+      "日銀会合は10月29〜30日、FOMC・ECBも今週。円・金利・銀行/不動産の相対反応を優先"
     ],
     "focus_sectors": [
-      "エネルギー資源",
-      "空運・運輸",
       "半導体・電機",
+      "エネルギー資源",
+      "商社",
+      "公益",
       "銀行",
-      "不動産",
-      "自動車・機械"
+      "不動産"
     ],
     "top_stories": [
       {
-        "company": "三菱地所",
-        "ticker": "8802",
-        "headline": "23日は不動産上昇の中で+2.76%",
+        "company": "INPEX",
+        "ticker": "1605",
+        "headline": "26日はエネルギー資源上昇の中で+4.90%",
         "importance": "high",
-        "market_pricing_status": "23日大引け実績。26日の会合週初動は未確認"
+        "market_pricing_status": "26日大引け実績。27日の持続性は未確認"
       }
     ],
     "total_story_count": 1
   },
   "what_changed": {
-    "summary": "23日版のAI急落警戒から、正本23日のSOX反発とエネルギー突出へ更新。日本23日の不動産高・銀行安、CPIとカナダ関税変更を追加。",
+    "summary": "前回の米主要指数安・SOX小幅反発から、26日はAI・半導体主導の上昇へ更新。日本は日経平均とTOPIXの逆行、資源高・電機安を追加。",
     "items": [
-      "SOXを一方向の逆風から反発持続性の監視へ変更",
-      "米業種の広がりは11業種中3上昇へ悪化",
-      "日本の相対強者を不動産・小売・食品、弱者を銀行・鉄鋼非鉄へ更新",
-      "日銀金融システムレポートとカナダ関税対象変更を追加"
+      "SOXは+0.44%から+2.82%へ反発拡大",
+      "米上昇業種は3から7へ増加",
+      "日本はTOPIX優位で資源・公益・商社が上位",
+      "AnthropicのS-1提出とOFAC FAQ改定を一次資料で確認"
     ]
   },
   "publication_policy": {
     "status": "QUALIFIED",
     "mode": "provisional",
-    "updated_at": "2026-10-26T06:52:00+09:00",
+    "updated_at": "2026-10-27T06:58:00+09:00",
     "complete_gate": "FAIL",
     "copper_included": false,
-    "note": "正本市場値と日本23日大引け、確認済み一次情報を採用。契約定義のない商品先物、朝の現在値、網羅不能な評価変更を除外した注釈付き公開。",
+    "note": "米26日と日本26日の正本終値、実読した一次資料を採用。基準日の古い為替・金利、契約定義のない商品先物、朝の現在値、網羅不能な評価変更を除外した注釈付き公開。",
     "missing_items": [
+      "DXY・USD/JPY・EUR/USDの正本は10月23日日足で、米株26日と基準日が不一致",
+      "米2年・10年利回りは10月23日FREDで、米株26日と基準日が不一致",
       "Gold・Silver・WTI・Brentの保存連続先物値と取引所・限月・値種別・基準時刻の対応",
-      "10月26日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
-      "アナリスト評価変更と10月23日大引け後企業開示の全件網羅",
+      "10月27日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "アナリスト評価変更と企業固有開示の全件網羅",
       "Project添付仕様書3点は接続済みDrive検索で取得できず、Project Instructionsとmain現行仕様を優先"
     ]
   },
@@ -1292,9 +1287,9 @@
   ],
   "events_metadata": {
     "status": "取得済",
-    "updated_at": "2026-10-26T10:21:33+09:00",
-    "window_start": "2026-10-26",
-    "window_end": "2026-11-09",
+    "updated_at": "2026-10-27T06:50:40+09:00",
+    "window_start": "2026-10-27",
+    "window_end": "2026-11-10",
     "timezone": "Asia/Tokyo",
     "source_policy": "公式日程で確認済みのイベントのみ。予想・前回値は未確認を推測しない",
     "coverage_note": "公式日程で確認できた主要イベントのみ。市場予想・前回値を確認できない場合は未確認と表示する。",

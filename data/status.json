@@ -1,22 +1,8 @@
 {
   "status": "success",
-  "updated_at": "2026-10-27T06:58:00+09:00",
+  "updated_at": "2026-10-27 09:35:53 JST",
   "message": "Market data update completed and validation passed.",
   "component": "market_data",
-  "publication_status": "QUALIFIED",
-  "component_updated_at": "2026-10-26 10:21:34",
-  "report_date": "2026-10-27",
-  "target_market_date": "2026-10-26",
-  "market_data": {
-    "status": "success",
-    "updated_at": "2026-10-27 06:47:25",
-    "market_date": "2026-10-26",
-    "note": "update_market.py 32/32取得。金利・為替は提供元最新の23日値で基準日差を注記"
-  },
-  "publication_units": {
-    "ai_report": "QUALIFIED",
-    "world_market": "PASS",
-    "japan_market": "PASS",
-    "verified_news": "PASS"
-  }
+  "publication_status": "PASS",
+  "component_updated_at": "2026-10-27 09:35:40"
 }

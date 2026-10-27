@@ -1157,20 +1157,6 @@
   },
   "events": [
     {
-      "id": "boj-cspi-2026-10",
-      "event": "日銀・企業向けサービス価格指数（9月）",
-      "start_at_jst": "2026-10-27T08:50:00+09:00",
-      "jst_time": "2026-10-27 08:50 JST",
-      "forecast": "未確認",
-      "previous": "未確認",
-      "focus": "サービス価格の基調と国内インフレ圧力",
-      "affected_markets": "円・日本国債・日本株",
-      "importance": "高",
-      "source_url": "https://www.boj.or.jp/about/calendar/index.htm",
-      "source_name": "日本銀行",
-      "verified_on": "2026-10-19"
-    },
-    {
       "id": "fomc-2026-10",
       "event": "FOMC（米連邦公開市場委員会）",
       "start_at_jst": "2026-10-28T00:00:00+09:00",
@@ -1287,7 +1273,7 @@
   ],
   "events_metadata": {
     "status": "取得済",
-    "updated_at": "2026-10-27T06:50:40+09:00",
+    "updated_at": "2026-10-27T09:35:39+09:00",
     "window_start": "2026-10-27",
     "window_end": "2026-11-10",
     "timezone": "Asia/Tokyo",

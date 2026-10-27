@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "updated_at": "2026-10-27T06:58:00+09:00",
-  "report_date": "2026-10-27",
+  "updated_at": "2026-10-28T06:58:00+09:00",
+  "report_date": "2026-10-28",
   "period_start": "2026-03-18",
-  "period_end": "2026-10-26",
+  "period_end": "2026-10-28",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-10-27",
+    "latest_report_date": "2026-10-28",
     "source_report_count": 13,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
@@ -92,6 +92,16 @@
             "oct20-reaction",
             "oct20-0"
           ]
+        },
+        {
+          "date": "2026-10-28",
+          "title": "FOMC決定を控え金利経路を再確認",
+          "fact": "FOMC声明は米現地28日14:00予定。10月28日朝時点では未決定。",
+          "market_impact": "結果前の株高を政策反応とせず、米27日株価と26日金利を分離。",
+          "source_ids": [
+            "oct28-fed-calendar",
+            "oct28-market"
+          ]
         }
       ],
       "initial_view": {
@@ -99,16 +109,16 @@
         "text": "FRBはインフレを警戒し、利下げを急がない姿勢"
       },
       "new_fact": {
-        "date": "2026-10-20",
-        "text": "反発報道を踏まえ慎重姿勢を条件付き修正"
+        "date": "2026-10-28",
+        "text": "FOMCは結果前。米27日株高を政策反応と扱わない"
       },
       "market_reaction": {
-        "date": "2026-10-20",
-        "text": "19日の報道と16日正本を分離。20日国内初動未確認"
+        "date": "2026-10-28",
+        "text": "米株は上昇したが米金利正本は26日で基準日差あり"
       },
-      "current_view": "昨日の一律慎重姿勢を条件付きで弱める。ただし反発の広がりと企業利益・資金調達改善を伴うまで信用不安解消とはしない。",
-      "japan_impact": "高PER半導体には逆風。円安は輸出株を支える一方、輸入コストを通じて内需・運輸を圧迫します。",
-      "counter_evidence": "大型偏重・信用不安・原油供給懸念は反証。個別上方修正も全面需要回復を保証しない。",
+      "current_view": "インフレ警戒と高金利リスクは維持し、政策結果後の同日金利・株価で見方を更新する。",
+      "japan_impact": "円・銀行・不動産・高PER半導体への経路を、発表後の金利と為替で確認する。",
+      "counter_evidence": "政策据え置きでもタカ派ガイダンスや長期金利上昇なら高PER株の追い風を撤回。",
       "source_ids": [
         "fed-apr29",
         "fed-mar18",
@@ -122,7 +132,9 @@
         "oct19-0",
         "oct19-1",
         "oct20-reaction",
-        "oct20-0"
+        "oct20-0",
+        "oct28-fed-calendar",
+        "oct28-market"
       ]
     },
     {
@@ -240,6 +252,15 @@
           "source_ids": [
             "oct26-market"
           ]
+        },
+        {
+          "date": "2026-10-27",
+          "title": "半導体反発が加速する一方、業種幅は縮小",
+          "fact": "SOX+3.60%、NASDAQ100+1.29%。米11業種ETFは5上昇・6下落。",
+          "market_impact": "AI需要期待は回復したが、指数上昇は半導体・大型グロースへの集中を伴う。",
+          "source_ids": [
+            "oct28-market"
+          ]
         }
       ],
       "initial_view": {
@@ -247,16 +268,16 @@
         "text": "AI設備投資と先端半導体需要の強さが株価を支える局面"
       },
       "new_fact": {
-        "date": "2026-10-23",
-        "text": "SOXは+0.44%と反発したが市場の広がりは弱い"
+        "date": "2026-10-27",
+        "text": "SOX続伸と業種Breadth縮小を同時確認"
       },
       "market_reaction": {
-        "date": "2026-10-23",
-        "text": "SOX+0.44%、XLK+0.49%、S&P500-0.52%"
+        "date": "2026-10-27",
+        "text": "SOX+3.60%、XLK+1.70%、米5業種上昇・6業種下落"
       },
-      "current_view": "AI実需の強さと投資回収懸念が併存。反発は確認したが全面回復とは扱わず、国内市場幅と受注を確認する。",
-      "japan_impact": "東京エレクトロンなど装置株を一律に弱気とせず、受注と株価評価を分けて確認します。",
-      "counter_evidence": "正本20日はSOXとXLKが下落し、21日も通信サービスと一部大型株は弱い。",
+      "current_view": "AI・半導体は反発局面だが、決算で投資回収が確認されるまで採算選別の中期テーマは変えない。",
+      "japan_impact": "国内電機・AI関連には追い風候補だが、複数銘柄とTOPIXへの広がりを条件にする。",
+      "counter_evidence": "SOX反落、米上昇業種の減少、国内半導体のTOPIX比劣後で追い風評価を撤回。",
       "source_ids": [
         "ai-apr16",
         "ai-credit-1016",
@@ -272,7 +293,8 @@
         "oct20-0",
         "oct22-market",
         "oct23-market",
-        "oct26-market"
+        "oct26-market",
+        "oct28-market"
       ]
     },
     {
@@ -361,6 +383,16 @@
             "oct26-cpi",
             "oct26-boj"
           ]
+        },
+        {
+          "date": "2026-10-27",
+          "title": "サービス価格と銀行高を会合前に確認",
+          "fact": "9月SPPIは前年比+3.7%。日本27日は銀行+2.55%、日経平均型+1.71%。",
+          "market_impact": "サービス価格の粘着性と会合前の金利感応株上昇を確認したが、単独因果は未確認。",
+          "source_ids": [
+            "oct28-boj-sppi",
+            "oct28-japan-market"
+          ]
         }
       ],
       "initial_view": {
@@ -368,16 +400,16 @@
         "text": "政策金利0.75%でも利上げを求める意見が増え、正常化継続が意識された"
       },
       "new_fact": {
-        "date": "2026-10-23",
-        "text": "CPI前年比+2.1%と日銀金融システムレポート"
+        "date": "2026-10-27",
+        "text": "9月SPPI+3.7%、銀行+2.55%"
       },
       "market_reaction": {
-        "date": "2026-10-23",
-        "text": "銀行-2.60%、不動産+2.34%。単独因果は未確認"
+        "date": "2026-10-27",
+        "text": "日経平均型+1.71%、TOPIX型+0.53%、銀行+2.55%"
       },
-      "current_view": "日銀会合前に基調インフレと金融安定を分けて評価。銀行・不動産・円の実反応で更新する。",
-      "japan_impact": "銀行、輸出、内需、運輸で影響が分かれます。円安を日本株全体の一律追い風とは扱いません。",
-      "counter_evidence": "大型偏重・信用不安・原油供給懸念は反証。個別上方修正も全面需要回復を保証しない。",
+      "current_view": "日銀の正常化観測は維持するが、29〜30日の決定と展望レポート前に政策変更を断定しない。",
+      "japan_impact": "銀行には追い風候補、円高なら輸出株に逆風。不動産との相対順位を政策後に確認。",
+      "counter_evidence": "据え置き・ハト派ガイダンスと金利低下、銀行のTOPIX比劣後なら追い風を弱める。",
       "source_ids": [
         "boj-apr28",
         "boj-jun16",
@@ -390,7 +422,9 @@
         "oct20-reaction",
         "oct20-0",
         "oct26-cpi",
-        "oct26-boj"
+        "oct26-boj",
+        "oct28-boj-sppi",
+        "oct28-japan-market"
       ]
     }
   ],
@@ -400,16 +434,16 @@
       "meaning": "SOX反落または国内複数銘柄の劣後で追い風評価を撤回"
     },
     {
-      "condition": "資源・商社と国内ローテーション",
-      "meaning": "資源・商社がTOPIX比で劣後すれば前日優位の持続を否定"
+      "condition": "銀行と日銀会合",
+      "meaning": "銀行がTOPIX比で劣後、または政策結果後に金利低下なら追い風を弱める"
     },
     {
-      "condition": "日銀週の金利敏感株",
-      "meaning": "銀行と不動産の相対順位が反転すれば見方を更新"
+      "condition": "米市場の広がり",
+      "meaning": "上昇業種がさらに減少しSOXも反落すれば集中リスクを引き上げる"
     },
     {
-      "condition": "市場の広がり",
-      "meaning": "米上昇業種が半数未満または日本TOPIXが日経平均に劣後すれば広がり改善を弱める"
+      "condition": "政策・決算イベント",
+      "meaning": "結果前の値動きを結果反応と扱わず、発表後の正本で全面更新"
     }
   ],
   "sources": [
@@ -503,6 +537,20 @@
       "publisher": "OFAC",
       "published_at": "2026-10-19",
       "url": "https://ofac.treasury.gov/recent-actions/20261019"
+    },
+    {
+      "id": "oct28-fed-calendar",
+      "title": "FOMC October 2026 schedule",
+      "publisher": "Federal Reserve Board",
+      "published_at": "2026-10-28",
+      "url": "https://www.federalreserve.gov/newsevents/2026-october.htm"
+    },
+    {
+      "id": "oct28-market",
+      "title": "27 October canonical market close",
+      "publisher": "Market Morning canonical market data",
+      "published_at": "2026-10-27",
+      "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
     },
     {
       "id": "ai-apr16",
@@ -643,6 +691,20 @@
       "publisher": "Bank of Japan",
       "published_at": "2026-10-23",
       "url": "https://www.boj.or.jp/research/brp/fsr/data/fsr261023a.pdf"
+    },
+    {
+      "id": "oct28-boj-sppi",
+      "title": "September 2026 Services Producer Price Index",
+      "publisher": "Bank of Japan",
+      "published_at": "2026-10-27",
+      "url": "https://www.boj.or.jp/en/statistics/pi/cspi_release/sppi2609.pdf"
+    },
+    {
+      "id": "oct28-japan-market",
+      "title": "27 October Japan market close",
+      "publisher": "Market Morning canonical Japan market data",
+      "published_at": "2026-10-27",
+      "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
     }
   ]
 }

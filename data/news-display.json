@@ -2,20 +2,28 @@
   "version": "1.0",
   "description": "確認済み一次資料の表示設定",
   "items": {
-    "oct27-anthropic-s1": {
-      "primary_page": "world",
+    "oct28-boj-sppi": {
+      "primary_page": "japan",
       "priority": 100,
       "attention_points": [
-        "S-1提出。公開条件・価格・時期は未確定",
-        "損失・計算資源投資・資金調達条件を併記"
+        "9月前年比+3.7%、前月比+0.3%",
+        "会合結果との単独因果は未確認"
       ]
     },
-    "oct27-ofac-faq": {
+    "oct28-fed-calendar": {
       "primary_page": "world",
-      "priority": 75,
+      "priority": 90,
       "attention_points": [
-        "取引拒否・報告関連FAQの改定",
-        "新規の包括制裁指定ではない"
+        "声明は米現地28日14:00予定",
+        "決定前で結果反応は未確認"
+      ]
+    },
+    "oct28-boj-calendar": {
+      "primary_page": "japan",
+      "priority": 85,
+      "attention_points": [
+        "会合は29〜30日、展望レポート30日",
+        "決定内容・時刻は未確定"
       ]
     }
   }

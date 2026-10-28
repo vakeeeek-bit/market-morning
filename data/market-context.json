@@ -95,11 +95,11 @@
         },
         {
           "date": "2026-10-28",
-          "title": "FOMC決定を控え金利経路を再確認",
-          "fact": "FOMC声明は米現地28日14:00予定。10月28日朝時点では未決定。",
-          "market_impact": "結果前の株高を政策反応とせず、米27日株価と26日金利を分離。",
+          "title": "FOMCは据え置き、反対2名は利上げを選好",
+          "fact": "FOMCは政策金利を3.75〜4.00%に据え置いた。採決は10対2で、Cook理事とHammack総裁は0.25ポイント利上げを選好した。",
+          "market_impact": "据え置き後も米株は小幅高、SOXはS&P500を1.47ポイント上回った。ただし米金利正本は10月27日で、決定後の金利反応は未確認。",
           "source_ids": [
-            "oct28-fed-calendar",
+            "oct29-fomc",
             "oct28-market"
           ]
         }
@@ -110,15 +110,15 @@
       },
       "new_fact": {
         "date": "2026-10-28",
-        "text": "FOMCは結果前。米27日株高を政策反応と扱わない"
+        "text": "FOMCは3.75〜4.00%で据え置き。10対2で、反対2名は0.25ポイント利上げを選好"
       },
       "market_reaction": {
         "date": "2026-10-28",
-        "text": "米株は上昇したが米金利正本は26日で基準日差あり"
+        "text": "S&P500+0.28%、NASDAQ100+0.55%、SOX+1.75%。決定後の米金利は正本未収録"
       },
-      "current_view": "インフレ警戒と高金利リスクは維持し、政策結果後の同日金利・株価で見方を更新する。",
-      "japan_impact": "円・銀行・不動産・高PER半導体への経路を、発表後の金利と為替で確認する。",
-      "counter_evidence": "政策据え置きでもタカ派ガイダンスや長期金利上昇なら高PER株の追い風を撤回。",
+      "current_view": "据え置きは確認したが、反対2名の利上げ選好とインフレ高止まり文言から緩和転換とはみなさない。株式は半導体優位だが、決定後の金利反応は未確認。",
+      "japan_impact": "米半導体高は国内電機・機械の追い風候補。円・銀行・不動産への経路は日銀決定と、基準日がそろった金利・為替で再評価する。",
+      "counter_evidence": "SOX反落、国内電機のTOPIX比劣後、または決定後の長期金利上昇なら半導体への追い風評価を撤回。",
       "source_ids": [
         "fed-apr29",
         "fed-mar18",
@@ -133,7 +133,7 @@
         "oct19-1",
         "oct20-reaction",
         "oct20-0",
-        "oct28-fed-calendar",
+        "oct29-fomc",
         "oct28-market"
       ]
     },
@@ -539,11 +539,11 @@
       "url": "https://ofac.treasury.gov/recent-actions/20261019"
     },
     {
-      "id": "oct28-fed-calendar",
-      "title": "FOMC October 2026 schedule",
+      "id": "oct29-fomc",
+      "title": "Federal Reserve issues FOMC statement",
       "publisher": "Federal Reserve Board",
       "published_at": "2026-10-28",
-      "url": "https://www.federalreserve.gov/newsevents/2026-october.htm"
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
     },
     {
       "id": "oct28-market",

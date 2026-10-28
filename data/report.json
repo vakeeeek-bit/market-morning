@@ -1246,6 +1246,21 @@
       "verified_on": "2026-10-19"
     },
     {
+      "id": "boj-mpm-2026-10",
+      "event": "日銀金融政策決定会合",
+      "start_at_jst": "2026-10-29T00:00:00+09:00",
+      "end_at_jst": "2026-10-30T23:59:59+09:00",
+      "jst_time": "2026-10-29〜30 JST（決定内容は10/30、公表時刻未定）",
+      "forecast": "未確認",
+      "previous": "政策金利1.25%程度",
+      "focus": "政策金利・経済物価見通し・植田総裁会見",
+      "affected_markets": "USD/JPY・日本国債・日本株",
+      "importance": "最重要",
+      "source_url": "https://www.boj.or.jp/mopo/mpmsche_minu/index.htm",
+      "source_name": "日本銀行",
+      "verified_on": "2026-10-19"
+    },
+    {
       "id": "us-gdp-2026-q3-advance",
       "event": "米GDP（2026年7〜9月期・速報値）",
       "start_at_jst": "2026-10-29T21:30:00+09:00",
@@ -1271,21 +1286,6 @@
       "importance": "最重要",
       "source_url": "https://www.bea.gov/news/schedule",
       "source_name": "U.S. Bureau of Economic Analysis",
-      "verified_on": "2026-10-19"
-    },
-    {
-      "id": "boj-mpm-2026-10",
-      "event": "日銀金融政策決定会合",
-      "start_at_jst": "2026-10-29T00:00:00+09:00",
-      "end_at_jst": "2026-10-30T23:59:59+09:00",
-      "jst_time": "2026-10-29〜30 JST（決定内容は10/30、公表時刻未定）",
-      "forecast": "未確認",
-      "previous": "政策金利1.25%程度",
-      "focus": "政策金利・経済物価見通し・植田総裁会見",
-      "affected_markets": "USD/JPY・日本国債・日本株",
-      "importance": "最重要",
-      "source_url": "https://www.boj.or.jp/mopo/mpmsche_minu/index.htm",
-      "source_name": "日本銀行",
       "verified_on": "2026-10-19"
     },
     {
@@ -1333,7 +1333,7 @@
   ],
   "events_metadata": {
     "status": "取得済",
-    "updated_at": "2026-10-28T06:58:00+09:00",
+    "updated_at": "2026-10-28T09:33:39+09:00",
     "window_start": "2026-10-28",
     "window_end": "2026-11-11",
     "timezone": "Asia/Tokyo",

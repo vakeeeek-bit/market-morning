@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "updated_at": "2026-10-28T06:58:00+09:00",
-  "report_date": "2026-10-28",
+  "updated_at": "2026-10-29T06:43:00+09:00",
+  "report_date": "2026-10-29",
   "period_start": "2026-03-18",
   "period_end": "2026-10-28",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-10-28",
+    "latest_report_date": "2026-10-29",
     "source_report_count": 13,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
@@ -431,19 +431,19 @@
   "scenario_change_conditions": [
     {
       "condition": "半導体とAI",
-      "meaning": "SOX反落または国内複数銘柄の劣後で追い風評価を撤回"
+      "meaning": "SOX反落または国内複数銘柄の劣後で追い風を撤回"
     },
     {
-      "condition": "銀行と日銀会合",
-      "meaning": "銀行がTOPIX比で劣後、または政策結果後に金利低下なら追い風を弱める"
+      "condition": "日銀会合",
+      "meaning": "30日の決定後に銀行・不動産の相対順位が反転すれば更新"
     },
     {
-      "condition": "米市場の広がり",
-      "meaning": "上昇業種がさらに減少しSOXも反落すれば集中リスクを引き上げる"
+      "condition": "ECB・米指標",
+      "meaning": "金利・円が急変し輸出・高PER株が劣後すれば下振れへ"
     },
     {
-      "condition": "政策・決算イベント",
-      "meaning": "結果前の値動きを結果反応と扱わず、発表後の正本で全面更新"
+      "condition": "市場の広がり",
+      "meaning": "日米で上昇が少数銘柄にさらに集中すれば確信度を下げる"
     }
   ],
   "sources": [

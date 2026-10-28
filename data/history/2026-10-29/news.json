@@ -1,0 +1,162 @@
+{
+  "report_date": "2026-10-29",
+  "target_market_date": "2026-10-28",
+  "updated_at": "2026-10-29T06:43:00+09:00",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "一次本文を実読できた4件のみ掲載。市場反応は正本で分離し、単独因果は断定しない。日本企業開示・評価変更の全件網羅は未確認。",
+  "articles": [
+    {
+      "id": "oct29-fomc",
+      "title": "FOMCは政策金利3.75〜4.00%を据え置き",
+      "published_date": "2026-10-28",
+      "verified_at": "2026-10-29T06:43:00+09:00",
+      "source_type": "primary",
+      "publisher": "Federal Reserve Board",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+      "verification_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+      "verification_status": "PASS",
+      "fact": "FOMCは政策金利を3.75〜4.00%に据え置いた。採決は10対2で、Cook理事とHammack総裁は0.25ポイント利上げを選好した。",
+      "analysis": "据え置きは想定内だが、反対票とインフレ高止まり文言は緩和期待を抑える。",
+      "limitations": "米金利・為替の28日同日正本は未収集。株価反応は複数材料を含み単独因果ではない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Federal Reserve Boardの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "FOMCは政策金利を3.75〜4.00%に据え置いた。採決は10対2で、Cook理事とHammack総裁は0.25ポイント利上げを選好した。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-28、実確認2026-10-29T06:43:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。記事単独の市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "米金利・為替の28日同日正本は未収集。株価反応は複数材料を含み単独因果ではない。"
+        }
+      }
+    },
+    {
+      "id": "oct29-msft",
+      "title": "Microsoft FY27 Q1：売上+19%、Azure+48%",
+      "published_date": "2026-10-28",
+      "verified_at": "2026-10-29T06:43:00+09:00",
+      "source_type": "primary",
+      "publisher": "Microsoft Investor Relations",
+      "source_url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+      "verification_url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+      "verification_status": "PASS",
+      "fact": "MicrosoftはFY27 Q1売上923億ドル（前年比+19%）、営業利益459億ドル（+21%）、Azure売上+48%、Microsoft Cloud売上639億ドル（+30%）を公表した。",
+      "analysis": "AI需要の収益化確認は半導体・データセンター関連に追い風候補。",
+      "limitations": "米取引終了後の発表で、28日現物終値には未反映。時間外・29日の正本反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Microsoft Investor Relationsの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "MicrosoftはFY27 Q1売上923億ドル（前年比+19%）、営業利益459億ドル（+21%）、Azure売上+48%、Microsoft Cloud売上639億ドル（+30%）を公表した。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-28、実確認2026-10-29T06:43:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。記事単独の市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "米取引終了後の発表で、28日現物終値には未反映。時間外・29日の正本反応は未確認。"
+        }
+      }
+    },
+    {
+      "id": "oct29-boj-calendar",
+      "title": "日銀会合は10月29〜30日、決定・展望レポートは30日",
+      "published_date": "2026-10-29",
+      "verified_at": "2026-10-29T06:43:00+09:00",
+      "source_type": "primary",
+      "publisher": "Bank of Japan",
+      "source_url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/",
+      "verification_url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/",
+      "verification_status": "PASS",
+      "fact": "日銀公式日程は金融政策決定会合を10月29〜30日、決定と展望レポートを30日に公表すると示す。",
+      "analysis": "円・国内金利を通じ、銀行・不動産・自動車の相対順位を変え得る。",
+      "limitations": "決定内容・公表時刻・市場反応は未確認。予定を決定として扱わない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Bank of Japanの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "日銀公式日程は金融政策決定会合を10月29〜30日、決定と展望レポートを30日に公表すると示す。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-29、実確認2026-10-29T06:43:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。記事単独の市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "決定内容・公表時刻・市場反応は未確認。予定を決定として扱わない。"
+        }
+      }
+    },
+    {
+      "id": "oct29-ecb-calendar",
+      "title": "ECBは10月29日22:15 JSTに政策決定予定",
+      "published_date": "2026-10-29",
+      "verified_at": "2026-10-29T06:43:00+09:00",
+      "source_type": "primary",
+      "publisher": "European Central Bank",
+      "source_url": "https://www.ecb.europa.eu/press/calendars/weekly/html/index.en.html",
+      "verification_url": "https://www.ecb.europa.eu/press/calendars/weekly/html/index.en.html",
+      "verification_status": "PASS",
+      "fact": "ECB公式日程は政策決定を10月29日14:15 CET、記者会見を14:45 CETと示す。",
+      "analysis": "ユーロ・ドル・欧米金利を通じ日本の輸出・金融株へ間接波及し得る。",
+      "limitations": "決定内容・市場反応は未確認。予定を結果として扱わない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "European Central Bankの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "ECB公式日程は政策決定を10月29日14:15 CET、記者会見を14:45 CETと示す。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-29、実確認2026-10-29T06:43:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。記事単独の市場反応は未確認。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "決定内容・市場反応は未確認。予定を結果として扱わない。"
+        }
+      }
+    }
+  ]
+}

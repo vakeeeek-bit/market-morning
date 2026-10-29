@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29 10:03:55 JST",
+  "updated_at": "2026-10-29 10:51:23 JST",
   "market_date": "2026-10-28",
   "data_phase": "取引中暫定",
   "data_state": {
@@ -1135,13 +1135,13 @@
         "status": "estimated",
         "left_label": "景気敏感",
         "right_label": "ディフェンシブ",
-        "left_value": 0.54,
-        "right_value": -0.09,
-        "spread_pt": 0.63,
-        "detail": "景気敏感 +0.54% ／ ディフェンシブ -0.09%",
-        "reason": "相対騰落：景気敏感 +0.54%／ディフェンシブ -0.09%（差 +0.63pt）",
+        "left_value": 0.21,
+        "right_value": -0.3,
+        "spread_pt": 0.51,
+        "detail": "景気敏感 +0.21% ／ ディフェンシブ -0.30%",
+        "reason": "相対騰落：景気敏感 +0.21%／ディフェンシブ -0.30%（差 +0.51pt）",
         "basis": "米Sector SPDR ETFの同日平均騰落率比較",
-        "market_date": "2026-10-27"
+        "market_date": "2026-10-28"
       },
       {
         "axis": "半導体/市場全体",
@@ -1160,10 +1160,18 @@
       },
       {
         "axis": "金融/市場全体",
-        "label": "判定対象外",
-        "status": "unavailable",
-        "reason": "基準日不一致（2026-10-27 / 2026-10-28）のため比較しない",
-        "basis": "XLFとS&P500の同日騰落率比較"
+        "label": "拮抗",
+        "result": "拮抗",
+        "status": "estimated",
+        "left_label": "金融",
+        "right_label": "市場全体",
+        "left_value": 0.45,
+        "right_value": 0.28,
+        "spread_pt": 0.17,
+        "detail": "金融 +0.45% ／ 市場全体 +0.28%",
+        "reason": "相対騰落：金融 +0.45%／市場全体 +0.28%（差 +0.17pt）",
+        "basis": "XLFとS&P500の同日騰落率比較",
+        "market_date": "2026-10-28"
       }
     ],
     "method_note": "冒頭の市場方向は日経平均・TOPIX連動ETFの同日騰落だけで判定します。詳細軸は確認済みの同日米指数・業種ETFによる相対比較で、投資主体別フローではありません。34銘柄を市場全体の広がりには使用しません。"

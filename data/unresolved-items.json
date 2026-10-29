@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-10-29T06:43:00+09:00",
-  "source_report_date": "2026-10-29",
+  "updated_at": "2026-10-30T06:55:00+09:00",
+  "source_report_date": "2026-10-30",
   "items": [
     {
       "id": "stale_cross_asset",
       "status": "QUALIFIED",
-      "missing": "DXY・USD/JPY・EUR/USDの正本は10月27日日足で、米株28日と基準日が不一致。米2年・10年利回りは10月27日FREDで、米株28日と基準日が不一致",
-      "impact": "28日の為替・金利方向と因果を除外",
-      "last_checked_at": "2026-10-29T06:43:00+09:00",
+      "missing": "米2年・10年利回り、DXY、USD/JPY、EUR/USDの正本は10月28日で、米株29日と基準日が不一致",
+      "impact": "29日の金利・為替方向と株価因果を除外",
+      "last_checked_at": "2026-10-30T06:55:00+09:00",
       "next_action": "同一市場日の正本が得られた時点で再判定",
       "attempts": [
         {
@@ -16,7 +16,7 @@
           "source_urls": [
             "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
           ],
-          "checked_at": "2026-10-28T06:58:00+09:00"
+          "checked_at": "2026-10-30T06:55:00+09:00"
         }
       ],
       "affected_components": [
@@ -34,7 +34,7 @@
       "status": "QUALIFIED",
       "missing": "Gold・Silver・WTI・Brentの保存連続先物値と取引所・限月・値種別・基準時刻の対応",
       "impact": "商品先物の価格・前日比を除外",
-      "last_checked_at": "2026-10-29T06:43:00+09:00",
+      "last_checked_at": "2026-10-30T06:55:00+09:00",
       "next_action": "公式契約と保存値の対応確認後のみ追加",
       "attempts": [
         {
@@ -44,7 +44,7 @@
             "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html",
             "https://www.ice.com/products/219/Brent-Crude-Futures"
           ],
-          "checked_at": "2026-10-28T06:58:00+09:00"
+          "checked_at": "2026-10-30T06:55:00+09:00"
         }
       ],
       "affected_components": [
@@ -60,9 +60,9 @@
     {
       "id": "current_values",
       "status": "QUALIFIED",
-      "missing": "10月29日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "missing": "10月30日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
       "impact": "朝の現在値・先物示唆を除外",
-      "last_checked_at": "2026-10-29T06:43:00+09:00",
+      "last_checked_at": "2026-10-30T06:55:00+09:00",
       "next_action": "定義と確認時刻が揃った値だけ追加",
       "attempts": [
         {
@@ -71,7 +71,7 @@
           "source_urls": [
             "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
           ],
-          "checked_at": "2026-10-28T06:58:00+09:00"
+          "checked_at": "2026-10-30T06:55:00+09:00"
         }
       ],
       "affected_components": [
@@ -89,7 +89,7 @@
       "status": "QUALIFIED",
       "missing": "アナリスト評価変更と日本企業開示の全件網羅",
       "impact": "評価変更なし・企業ニュース網羅の包括断定を除外",
-      "last_checked_at": "2026-10-29T06:43:00+09:00",
+      "last_checked_at": "2026-10-30T06:55:00+09:00",
       "next_action": "公式一覧・契約データで確認できた記事だけ追加",
       "attempts": [
         {
@@ -98,7 +98,7 @@
           "source_urls": [
             "https://www.release.tdnet.info/inbs/I_main_00.html"
           ],
-          "checked_at": "2026-10-28T06:58:00+09:00"
+          "checked_at": "2026-10-30T06:55:00+09:00"
         }
       ],
       "affected_components": [
@@ -114,9 +114,9 @@
     {
       "id": "project_docs",
       "status": "QUALIFIED",
-      "missing": "Project添付仕様書3点は接続済みDrive検索で取得できず、Project Instructionsとmain現行仕様を優先",
+      "missing": "Project添付仕様書3点は接続済みGoogle Driveの完全一致検索で取得できず、Project Instructionsとmain現行仕様を優先",
       "impact": "添付仕様書実読済みという主張を除外",
-      "last_checked_at": "2026-10-29T06:43:00+09:00",
+      "last_checked_at": "2026-10-30T06:55:00+09:00",
       "next_action": "接続状態を次回再確認",
       "attempts": [
         {
@@ -125,7 +125,7 @@
           "source_urls": [
             "https://drive.google.com/"
           ],
-          "checked_at": "2026-10-28T06:58:00+09:00"
+          "checked_at": "2026-10-30T06:55:00+09:00"
         }
       ],
       "affected_components": [
@@ -137,6 +137,34 @@
       ],
       "excluded_from_publication": true,
       "first_seen_at": "2026-10-28T06:58:00+09:00"
+    },
+    {
+      "id": "boj_pending",
+      "status": "QUALIFIED",
+      "missing": "日銀10月30日決定・展望レポートの内容と市場反応は06:55 JST時点で未発表・未確認",
+      "impact": "日銀結果依存の円・金利・銀行・不動産の方向判断を保留",
+      "last_checked_at": "2026-10-30T06:55:00+09:00",
+      "next_action": "公式公表後に一次本文と時刻付き市場反応を確認",
+      "attempts": [
+        {
+          "method": "日銀公式Release Schedule確認",
+          "result": "10月30日、時刻未定・結果未発表",
+          "source_urls": [
+            "https://www.boj.or.jp/en/about/calendar/index.htm"
+          ],
+          "checked_at": "2026-10-30T06:55:00+09:00"
+        }
+      ],
+      "affected_components": [
+        "ai_report",
+        "japan_stocks",
+        "verified_news"
+      ],
+      "excluded_claims": [
+        "日銀決定済み・利上げ/据え置きという断定"
+      ],
+      "excluded_from_publication": true,
+      "first_seen_at": "2026-10-30T06:55:00+09:00"
     }
   ]
 }

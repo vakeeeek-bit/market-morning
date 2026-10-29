@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "updated_at": "2026-10-29T06:43:00+09:00",
-  "report_date": "2026-10-29",
+  "updated_at": "2026-10-30T06:55:00+09:00",
+  "report_date": "2026-10-30",
   "period_start": "2026-03-18",
-  "period_end": "2026-10-28",
+  "period_end": "2026-10-29",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-10-29",
+    "latest_report_date": "2026-10-30",
     "source_report_count": 13,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
@@ -102,6 +102,17 @@
             "oct29-fomc",
             "oct28-market"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "title": "成長加速とPCE物価の粘着を同時確認",
+          "fact": "米Q3実質GDPは年率+3.4%、9月PCE物価は前年比+3.6%、コア+3.1%。",
+          "market_impact": "景気の底堅さとインフレ粘着が同居し、NASDAQ100は下落、小型株・金融は上昇。単独因果は断定しない。",
+          "source_ids": [
+            "oct30-us-gdp",
+            "oct30-us-pce",
+            "oct30-market"
+          ]
         }
       ],
       "initial_view": {
@@ -109,16 +120,16 @@
         "text": "FRBはインフレを警戒し、利下げを急がない姿勢"
       },
       "new_fact": {
-        "date": "2026-10-28",
-        "text": "FOMCは3.75〜4.00%で据え置き。10対2で、反対2名は0.25ポイント利上げを選好"
+        "date": "2026-10-29",
+        "text": "米Q3実質GDP+3.4%、9月PCE物価前年比+3.6%、コア+3.1%"
       },
       "market_reaction": {
-        "date": "2026-10-28",
-        "text": "S&P500+0.28%、NASDAQ100+0.55%、SOX+1.75%。決定後の米金利は正本未収録"
+        "date": "2026-10-29",
+        "text": "S&P500-0.30%、NASDAQ100-1.38%、Russell2000+1.01%。米金利正本は28日で同日反応未確認"
       },
-      "current_view": "据え置きは確認したが、反対2名の利上げ選好とインフレ高止まり文言から緩和転換とはみなさない。株式は半導体優位だが、決定後の金利反応は未確認。",
-      "japan_impact": "米半導体高は国内電機・機械の追い風候補。円・銀行・不動産への経路は日銀決定と、基準日がそろった金利・為替で再評価する。",
-      "counter_evidence": "SOX反落、国内電機のTOPIX比劣後、または決定後の長期金利上昇なら半導体への追い風評価を撤回。",
+      "current_view": "景気加速とインフレ粘着が同居し、早期緩和ではなく高金利に耐える利益・財務の選別が続く。",
+      "japan_impact": "銀行・内需には追い風候補、高PER電機には金利負担。ただし日銀決定と同日金利・為替で再評価する。",
+      "counter_evidence": "次の金利正本が低下し高PER株が反発する、または景気敏感株が失速すれば見方を修正。",
       "source_ids": [
         "fed-apr29",
         "fed-mar18",
@@ -134,7 +145,10 @@
         "oct20-reaction",
         "oct20-0",
         "oct29-fomc",
-        "oct28-market"
+        "oct28-market",
+        "oct30-us-gdp",
+        "oct30-us-pce",
+        "oct30-market"
       ]
     },
     {
@@ -261,6 +275,15 @@
           "source_ids": [
             "oct28-market"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "title": "Alphabet決算後に大型テック集中が逆回転",
+          "fact": "NASDAQ100-1.38%、SOX-1.42%に対しRussell2000+1.01%。11業種ETF代理は9上昇。",
+          "market_impact": "AI需要の有無より、巨額投資の回収と資本負担が再び評価軸になった。",
+          "source_ids": [
+            "oct30-market"
+          ]
         }
       ],
       "initial_view": {
@@ -268,16 +291,16 @@
         "text": "AI設備投資と先端半導体需要の強さが株価を支える局面"
       },
       "new_fact": {
-        "date": "2026-10-27",
-        "text": "SOX続伸と業種Breadth縮小を同時確認"
+        "date": "2026-10-29",
+        "text": "大型テック・半導体安に対し小型・内需高、業種幅は改善"
       },
       "market_reaction": {
-        "date": "2026-10-27",
-        "text": "SOX+3.60%、XLK+1.70%、米5業種上昇・6業種下落"
+        "date": "2026-10-29",
+        "text": "NASDAQ100-1.38%、SOX-1.42%、Russell2000+1.01%、9/11業種ETF代理上昇"
       },
-      "current_view": "AI・半導体は反発局面だが、決算で投資回収が確認されるまで採算選別の中期テーマは変えない。",
-      "japan_impact": "国内電機・AI関連には追い風候補だが、複数銘柄とTOPIXへの広がりを条件にする。",
-      "counter_evidence": "SOX反落、米上昇業種の減少、国内半導体のTOPIX比劣後で追い風評価を撤回。",
+      "current_view": "AI需要の中期拡大は維持するが、投資回収と利益の確認がない銘柄は評価圧縮を受ける選別局面。",
+      "japan_impact": "国内半導体・AIは一律追い風ではなく、日立・コマツなど個別決算と米テック反応を分けて確認する。",
+      "counter_evidence": "SOX・NASDAQ100反発と業種幅維持、国内電機のTOPIX比回復で逆回転評価を撤回。",
       "source_ids": [
         "ai-apr16",
         "ai-credit-1016",
@@ -294,7 +317,8 @@
         "oct22-market",
         "oct23-market",
         "oct26-market",
-        "oct28-market"
+        "oct28-market",
+        "oct30-market"
       ]
     },
     {
@@ -393,6 +417,16 @@
             "oct28-boj-sppi",
             "oct28-japan-market"
           ]
+        },
+        {
+          "date": "2026-10-29",
+          "title": "日銀会合前に銀行高、機械・電機安",
+          "fact": "銀行+2.12%、公益+1.97%に対し機械-2.44%、電機精密-2.22%。日銀決定は30日予定。",
+          "market_impact": "金利敏感株の相対優位候補だが、決定前の価格であり政策結果を織り込んだと断定しない。",
+          "source_ids": [
+            "oct30-boj-schedule",
+            "oct30-japan-market"
+          ]
         }
       ],
       "initial_view": {
@@ -400,16 +434,16 @@
         "text": "政策金利0.75%でも利上げを求める意見が増え、正常化継続が意識された"
       },
       "new_fact": {
-        "date": "2026-10-27",
-        "text": "9月SPPI+3.7%、銀行+2.55%"
+        "date": "2026-10-29",
+        "text": "日銀結果前に銀行+2.12%、機械-2.44%、電機精密-2.22%"
       },
       "market_reaction": {
-        "date": "2026-10-27",
-        "text": "日経平均型+1.71%、TOPIX型+0.53%、銀行+2.55%"
+        "date": "2026-10-29",
+        "text": "日経平均型+0.86%、TOPIX型+0.31%。銀行優位、機械・電機劣後"
       },
-      "current_view": "日銀の正常化観測は維持するが、29〜30日の決定と展望レポート前に政策変更を断定しない。",
-      "japan_impact": "銀行には追い風候補、円高なら輸出株に逆風。不動産との相対順位を政策後に確認。",
-      "counter_evidence": "据え置き・ハト派ガイダンスと金利低下、銀行のTOPIX比劣後なら追い風を弱める。",
+      "current_view": "日銀の正常化観測は維持するが、30日の決定・展望レポート前に政策内容を断定しない。",
+      "japan_impact": "銀行には追い風候補。円・国内金利が逆方向なら不動産・輸出株との相対順位を更新する。",
+      "counter_evidence": "据え置き・ハト派ガイダンスと金利低下、銀行のTOPIX比劣後なら追い風評価を撤回。",
       "source_ids": [
         "boj-apr28",
         "boj-jun16",
@@ -424,26 +458,28 @@
         "oct26-cpi",
         "oct26-boj",
         "oct28-boj-sppi",
-        "oct28-japan-market"
+        "oct28-japan-market",
+        "oct30-boj-schedule",
+        "oct30-japan-market"
       ]
     }
   ],
   "scenario_change_conditions": [
     {
-      "condition": "半導体とAI",
-      "meaning": "SOX反落または国内複数銘柄の劣後で追い風を撤回"
+      "condition": "大型テック対小型・内需",
+      "meaning": "NASDAQ100・SOX反発と小型株失速でローテーション評価を撤回"
     },
     {
       "condition": "日銀会合",
-      "meaning": "30日の決定後に銀行・不動産の相対順位が反転すれば更新"
+      "meaning": "政策結果後に銀行がTOPIX比で劣後すれば銀行追い風を撤回"
     },
     {
-      "condition": "ECB・米指標",
-      "meaning": "金利・円が急変し輸出・高PER株が劣後すれば下振れへ"
+      "condition": "個別決算",
+      "meaning": "翌営業日に下げ止まり、同業が追随しなければ業種逆風を限定"
     },
     {
-      "condition": "市場の広がり",
-      "meaning": "日米で上昇が少数銘柄にさらに集中すれば確信度を下げる"
+      "condition": "米成長と物価",
+      "meaning": "金利低下でも高PER株が反発しなければ利益・投資負担要因を重視"
     }
   ],
   "sources": [
@@ -550,6 +586,27 @@
       "title": "27 October canonical market close",
       "publisher": "Market Morning canonical market data",
       "published_at": "2026-10-27",
+      "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+    },
+    {
+      "id": "oct30-us-gdp",
+      "title": "米Q3実質GDPは前期比年率3.4%",
+      "publisher": "U.S. Bureau of Economic Analysis",
+      "published_at": "2026-10-29",
+      "url": "https://www.bea.gov/news/2026/gross-domestic-product-third-quarter-2026-advance-estimate"
+    },
+    {
+      "id": "oct30-us-pce",
+      "title": "9月PCE物価は前年比3.6%、コア3.1%",
+      "publisher": "U.S. Bureau of Economic Analysis",
+      "published_at": "2026-10-29",
+      "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-september-2026"
+    },
+    {
+      "id": "oct30-market",
+      "title": "2026年10月29日の米国市場正本",
+      "publisher": "Market Morning canonical market.json",
+      "published_at": "2026-10-29",
       "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
     },
     {
@@ -704,6 +761,20 @@
       "title": "27 October Japan market close",
       "publisher": "Market Morning canonical Japan market data",
       "published_at": "2026-10-27",
+      "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
+    },
+    {
+      "id": "oct30-boj-schedule",
+      "title": "日銀は10月30日に決定・展望レポート予定",
+      "publisher": "Bank of Japan",
+      "published_at": "2026-10-30",
+      "url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm"
+    },
+    {
+      "id": "oct30-japan-market",
+      "title": "2026年10月29日の日本市場正本",
+      "publisher": "Market Morning canonical japan-market.json",
+      "published_at": "2026-10-29",
       "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
     }
   ]

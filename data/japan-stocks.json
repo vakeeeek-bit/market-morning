@@ -1,59 +1,82 @@
 {
-  "report_date": "2026-10-29",
-  "target_market_date": "2026-10-28",
-  "updated_at": "2026-10-29T06:43:00+09:00",
+  "report_date": "2026-10-30",
+  "target_market_date": "2026-10-29",
+  "updated_at": "2026-10-30T06:55:00+09:00",
   "report_type": "daily_provisional",
   "japan_quick_view": {
-    "headline": "注釈付き10月29日版｜FOMC据え置き後もSOX優位、日銀・ECB・米指標前で集中度を監視",
+    "headline": "注釈付き10月30日版｜大型テック安の裏で小型・金融・内需へ回転、日銀結果を待つ",
     "top_materials": [
-      "FOMCは政策金利3.75〜4.00%を据え置き。10対2で、反対2名は0.25ポイント利上げを選好",
-      "米28日はS&P500+0.28%、NASDAQ100+0.55%、SOX+1.75%。FOMC後も半導体が相対優位",
-      "米11業種ETFは6上昇・5下落。XLK+0.80%が首位、XLU-0.84%・XLRE-0.73%が下位",
-      "日本28日は日経平均型+1.08%、TOPIX型-0.14%。電機精密+1.84%、機械+1.48%、不動産-1.99%",
-      "Microsoft・Alphabet決算は米取引終了後。ECBは29日22:15 JST、日銀決定は30日で結果未反映"
+      "Alphabet決算後のAI投資負担懸念でNASDAQ100-1.38%、SOX-1.42%。大型テック集中が逆回転",
+      "Russell2000+1.01%。米11業種ETF代理は9上昇・2下落で、XLV+2.40%、XLRE+2.21%、XLF+1.44%",
+      "米7〜9月期GDPは前期比年率+3.4%、9月PCE物価は前年比+3.6%（コア+3.1%）。成長と物価粘着が同居",
+      "日本29日は日経平均型+0.86%、TOPIX型+0.31%。銀行+2.12%に対し機械-2.44%、電機精密-2.22%",
+      "ECBは金利据え置き。日銀は本日決定・展望レポート予定だが、06:55 JST時点で結果・時刻未確認"
     ],
     "focus_sectors": [
-      "半導体・電機",
-      "機械",
       "銀行",
-      "不動産",
-      "自動車"
+      "公益",
+      "その他金融",
+      "機械",
+      "電機・精密"
     ],
     "unpriced_materials": [
-      "DXY・USD/JPY・EUR/USDの正本は10月27日日足で、米株28日と基準日が不一致",
-      "米2年・10年利回りは10月27日FREDで、米株28日と基準日が不一致",
+      "米2年・10年利回り、DXY、USD/JPY、EUR/USDの正本は10月28日で、米株29日と基準日が不一致",
       "Gold・Silver・WTI・Brentの保存連続先物値と取引所・限月・値種別・基準時刻の対応",
-      "10月29日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "10月30日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "日銀10月30日決定・展望レポートの内容と市場反応は06:55 JST時点で未発表・未確認",
       "アナリスト評価変更と日本企業開示の全件網羅"
     ],
     "individual_news_review": {
       "status": "reviewed",
-      "story_count": 1,
-      "scope": "一次資料を確認した企業固有材料のみ掲載。件数合わせは行わない"
+      "story_count": 2,
+      "scope": "一次資料と正本市場実績を確認した企業固有材料のみ。件数合わせなし"
     }
   },
   "top_stories": [
     {
-      "company": "ソフトバンクグループ",
-      "ticker": "9984",
-      "headline": "28日はAI関連優位の中で+4.65%",
-      "fact": "正本でソフトバンクグループは28日+4.65%。米SOXは同日+1.75%。",
-      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json",
-      "analysis": "日米でAI関連の相対優位を確認。ただし米大型テック決算は取引終了後で29日の反応は未確認。",
-      "category": "市場実績・相対強者",
+      "company": "日立製作所",
+      "ticker": "6501",
+      "headline": "決算発表翌日に-9.77%、出来高比4.09倍",
+      "fact": "日立は28日17:00 JSTにFY2026 Q2決算を公表。正本で29日-9.77%、出来高比4.09倍。",
+      "source_url": "https://www.hitachi.com/en/ir/library/fr/",
+      "analysis": "決算後の価格反応は確認したが、下落を単一項目に帰属しない。機械・電機全体への波及は同業反応で確認。",
+      "category": "決算・市場反応",
       "related_sectors": [
-        "情報通信・サービス",
-        "電機・精密"
+        "電機・精密",
+        "機械"
       ],
-      "today_watch": "9984・8035・6857・6501のTOPIX比",
-      "announced_at": "2026-10-28",
-      "timing": "28日大引け後確認",
-      "market_pricing_status": "28日大引け実績。米取引終了後決算は未反映",
-      "price_reaction": "ソフトバンクグループ+4.65%、SOX+1.75%",
+      "today_watch": "安値更新、出来高、6503・6701・8035への波及",
+      "announced_at": "2026-10-28T17:00:00+09:00",
+      "timing": "前日大引け後",
+      "market_pricing_status": "29日大引けに反映",
+      "price_reaction": "-9.77%、5日-11.13%、出来高比4.09倍",
       "related_stocks": [
-        "8035",
-        "6857",
-        "6501"
+        "6503",
+        "6701",
+        "8035"
+      ],
+      "importance": "high",
+      "confidence": "confirmed"
+    },
+    {
+      "company": "コマツ",
+      "ticker": "6301",
+      "headline": "上期増収増益・通期上方修正でも-7.56%",
+      "fact": "コマツは29日14:30 JST、上期売上高2兆1,586億円（前年比+14.1%）、営業利益2,866億円（+3.5%）、通期予想上方修正を発表。正本で同日-7.56%、出来高比3.42倍。",
+      "source_url": "https://www.komatsu.jp/ja/newsroom/2026/20261029_1",
+      "analysis": "増益でも営業利益率は1.3ポイント低下。好材料が織り込まれていた可能性はあるが、単独因果は断定しない。",
+      "category": "決算・市場反応",
+      "related_sectors": [
+        "機械"
+      ],
+      "today_watch": "下げ止まり、同業への波及、利益率評価",
+      "announced_at": "2026-10-29T14:30:00+09:00",
+      "timing": "取引時間中",
+      "market_pricing_status": "29日大引けに反映",
+      "price_reaction": "-7.56%、出来高比3.42倍",
+      "related_stocks": [
+        "6302",
+        "6471"
       ],
       "importance": "high",
       "confidence": "confirmed"
@@ -64,38 +87,38 @@
   "data_quality": {
     "overall": "MANUAL_REVIEW",
     "missing": [
-      "DXY・USD/JPY・EUR/USDの正本は10月27日日足で、米株28日と基準日が不一致",
-      "米2年・10年利回りは10月27日FREDで、米株28日と基準日が不一致",
+      "米2年・10年利回り、DXY、USD/JPY、EUR/USDの正本は10月28日で、米株29日と基準日が不一致",
       "Gold・Silver・WTI・Brentの保存連続先物値と取引所・限月・値種別・基準時刻の対応",
-      "10月29日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "10月30日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "日銀10月30日決定・展望レポートの内容と市場反応は06:55 JST時点で未発表・未確認",
       "アナリスト評価変更と日本企業開示の全件網羅",
-      "Project添付仕様書3点は接続済みDrive検索で取得できず、Project Instructionsとmain現行仕様を優先"
+      "Project添付仕様書3点は接続済みGoogle Driveの完全一致検索で取得できず、Project Instructionsとmain現行仕様を優先"
     ],
     "differences": [
-      "米SOXは27日+3.60%から28日+1.75%へ上昇率が縮小したが、S&P500+0.28%を1.47pt上回った",
-      "米11業種ETFは27日の5上昇から28日は6上昇・5下落へ小幅改善したが、全面高ではない",
-      "日本28日は日経平均型+1.08%に対しTOPIX型-0.14%。電機・機械高と不動産・金融安が同居",
-      "FOMCは据え置きだったが、反対2名は利上げを選好。単純な緩和方向とは解釈しない",
-      "Microsoft・Alphabet決算は28日米取引終了後で、同日の現物終値には未反映"
+      "NASDAQ100-1.38%、SOX-1.42%に対しRussell2000+1.01%。大型テック安と小型株高が同居",
+      "米11業種ETF代理は前日の6上昇から9上昇へ改善。XLV・XLRE・XLFが上位、XLC・XLKが下位",
+      "日本は両指数上昇でも銀行+2.12%に対し機械-2.44%、電機精密-2.22%。日立-9.77%、コマツ-7.56%",
+      "米GDP+3.4%とPCE物価前年比+3.6%が同時に確認され、成長加速とインフレ粘着が併存",
+      "ECBは据え置き。日銀は結果前のため予定と結果を分離"
     ],
     "excluded": [
-      "10月27日の為替・金利を28日または29日朝の方向として扱うこと",
-      "限月・値種別・時刻未確認の商品先物数値",
+      "10月28日の金利・為替を29日または30日朝の方向として扱うこと",
+      "限月・値種別・時刻未確認の商品先物数値、暗号資産現在値、日経225先物",
       "Copper価格・在庫（任意非掲載）",
-      "旧日足の暗号資産と推定日経225先物",
-      "米取引終了後の決算を28日の現物終値の原因とすること",
+      "Alphabet決算だけを米市場全体の下落原因と断定すること",
+      "日銀の予定を決定として扱うこと",
       "評価変更なし、企業材料を全件確認済みという包括断定"
     ],
     "cautions": [
       "注釈付きQUALIFIED版。完全版の未達判定を保持",
-      "米株28日、日本株28日、金利・為替27日、決算発表後を混同しない",
+      "米株・日本株29日、金利・為替28日を混同しない",
+      "Sector SPDR ETFは業種指数そのものではない",
       "Copperは任意非掲載",
-      "ECB・日銀・米GDP/PCEは結果前",
-      "正本市場値、一次事実、Reuters市場背景、解釈を分離"
+      "正本価格、一次事実、二次資料による市場反応、解釈を分離"
     ]
   },
   "analyst_rating_changes": {
-    "headline": "10月28日の評価変更を網羅できず非掲載",
+    "headline": "10月29日の評価変更を網羅できず非掲載",
     "coverage_status": "十分調査したが取得不能",
     "items": [],
     "source_review": [
@@ -113,99 +136,100 @@
   },
   "sector_implications": [
     {
-      "driver": "FOMC据え置きとSOX+1.75%",
+      "driver": "米大型テック安・小型内需高",
       "affected_sectors": [
-        "半導体製造装置",
-        "電機・精密",
-        "情報通信"
+        "銀行",
+        "公益",
+        "その他金融",
+        "電機・精密"
       ],
-      "possible_impact": "9984・8035・6857・6501に追い風候補",
-      "confirmation_condition": "決算後の米半導体、国内TOPIX比と出来高"
+      "possible_impact": "8306・8316が相対優位候補、9984・8035・6857は米テック連動に注意",
+      "confirmation_condition": "日銀後の円・金利、国内TOPIX比と出来高"
     },
     {
-      "driver": "日銀決定前",
+      "driver": "日立・コマツ決算後の大幅安",
+      "affected_sectors": [
+        "機械",
+        "電機・精密"
+      ],
+      "possible_impact": "個別要因が同業へ波及するかを監視",
+      "confirmation_condition": "6503・6701・6302・6471の相対騰落"
+    },
+    {
+      "driver": "米GDP加速とPCE物価粘着",
       "affected_sectors": [
         "銀行",
         "不動産",
-        "自動車"
-      ],
-      "possible_impact": "8306・8316対8801・8802、7203への円経路",
-      "confirmation_condition": "30日の決定、国内金利、時刻付きUSD/JPY"
-    },
-    {
-      "driver": "ECB・米GDP/PCE",
-      "affected_sectors": [
-        "輸出",
         "高PERグロース",
-        "金融"
+        "輸出"
       ],
-      "possible_impact": "金利・ドル・ユーロ経由で29日夜以降に波及",
-      "confirmation_condition": "発表後の同日時点市場値"
+      "possible_impact": "金利高止まりなら銀行優位・高PER逆風の候補",
+      "confirmation_condition": "29日対応の米金利正本と日銀後の国内金利"
     }
   ],
   "scenarios": [
     {
       "name": "基本",
-      "conditions": "FOMC据え置き後も半導体優位、日銀・ECB・米指標前",
-      "impact_on_japan": "半導体・電機を中心に選別。銀行・不動産は政策結果待ち",
-      "invalidation": "SOX反落、国内電機がTOPIX比で劣後"
+      "conditions": "大型テック調整と小型・内需への回転が継続、日銀結果待ち",
+      "impact_on_japan": "銀行・内需を相対優位候補、半導体・機械は選別",
+      "invalidation": "NASDAQ100・SOX反発と国内銀行失速"
     },
     {
       "name": "上振れ",
-      "conditions": "大型テック決算後も米半導体高、GDP/PCEとECB後も金利安定",
-      "impact_on_japan": "電機・機械からTOPIX全体へ広がる",
-      "invalidation": "VIX反発、米金利急騰、国内値下がり業種多数"
+      "conditions": "日銀後の円・金利が安定し、米テックが下げ止まる",
+      "impact_on_japan": "銀行・内需から電機・機械へ広がる",
+      "invalidation": "円急変、VIX上昇、国内値下がり業種拡大"
     },
     {
       "name": "下振れ",
-      "conditions": "AI投資回収懸念、米金利上昇、日銀・ECB後の為替急変",
-      "impact_on_japan": "高PER半導体・不動産・輸出株が不安定化",
-      "invalidation": "SOX続伸、円・金利安定、国内Breadth改善"
+      "conditions": "AI投資回収懸念と高金利が重なり、日銀後に円・金利が急変",
+      "impact_on_japan": "高PER電機・機械・輸出株の変動拡大",
+      "invalidation": "SOX反発、日立・コマツ下げ止まり、国内Breadth改善"
     }
   ],
   "monitoring_points": [
     {
-      "target": "半導体とAI",
-      "today_check": "9984・8035・6857・6501のTOPIX比、出来高、決算後の米半導体",
-      "view_change_condition": "SOX反落または国内複数銘柄の劣後で追い風を撤回"
+      "target": "大型テック対小型・内需",
+      "today_check": "NASDAQ100・SOX対Russell2000、XLK・XLC対XLV・XLRE・XLF",
+      "view_change_condition": "NASDAQ100・SOX反発と小型株失速でローテーション評価を撤回"
     },
     {
       "target": "日銀会合",
-      "today_check": "8306・8316対8801・8802、国内金利、時刻付き円",
-      "view_change_condition": "30日の決定後に銀行・不動産の相対順位が反転すれば更新"
+      "today_check": "結果・展望、時刻付き円、国内金利、8306・8316対8801・8802",
+      "view_change_condition": "政策結果後に銀行がTOPIX比で劣後すれば銀行追い風を撤回"
     },
     {
-      "target": "ECB・米指標",
-      "today_check": "29日21:30 GDP/PCE、22:15 ECB、米金利・DXY・USD/JPY",
-      "view_change_condition": "金利・円が急変し輸出・高PER株が劣後すれば下振れへ"
+      "target": "個別決算",
+      "today_check": "6501・6301の出来高、安値更新、同業への波及",
+      "view_change_condition": "翌営業日に下げ止まり、同業が追随しなければ業種逆風を限定"
     },
     {
-      "target": "市場の広がり",
-      "today_check": "日経平均対TOPIX、米11業種、SOX対S&P500",
-      "view_change_condition": "日米で上昇が少数銘柄にさらに集中すれば確信度を下げる"
+      "target": "米成長と物価",
+      "today_check": "次の金利同日正本と高PER株・景気敏感株の相対順位",
+      "view_change_condition": "金利低下でも高PER株が反発しなければ利益・投資負担要因を重視"
     }
   ],
   "source_notes": [
-    "市場数値の正本はmarket.json、日本28日大引けはjapan-market.json",
+    "市場数値の正本はmarket.json、日本29日大引けはjapan-market.json",
     "米11セクターはSector SPDR ETF日足終値の代理値で指数そのものではない",
-    "FRB・Microsoft・日銀・ECBの一次資料を実読",
-    "Reutersは市場反応補足。正本価格を置換しない",
+    "BEA・ECB・BOJ・Hitachi・Komatsuの一次資料を実読",
+    "Reuters/APは市場反応補足。正本価格を置換しない",
     "Copperは任意非掲載。未定義商品先物は不採用"
   ],
   "publication_policy": {
     "status": "QUALIFIED",
     "mode": "provisional",
-    "updated_at": "2026-10-29T06:43:00+09:00",
+    "updated_at": "2026-10-30T06:55:00+09:00",
     "complete_gate": "FAIL",
     "copper_included": false,
-    "note": "米28日・日本28日の正本終値、FOMC声明、Microsoft決算、日銀・ECB公式日程を採用。基準日の古い為替・金利、未定義先物、朝の現在値、網羅不能項目を除外した注釈付き公開。",
+    "note": "米国・日本の10月29日正本終値、BEA、ECB、日銀公式日程、企業一次資料を採用。基準日が古い金利・為替、未定義先物、朝の現在値、日銀未発表結果、網羅不能項目を除外した注釈付き公開。",
     "missing_items": [
-      "DXY・USD/JPY・EUR/USDの正本は10月27日日足で、米株28日と基準日が不一致",
-      "米2年・10年利回りは10月27日FREDで、米株28日と基準日が不一致",
+      "米2年・10年利回り、DXY、USD/JPY、EUR/USDの正本は10月28日で、米株29日と基準日が不一致",
       "Gold・Silver・WTI・Brentの保存連続先物値と取引所・限月・値種別・基準時刻の対応",
-      "10月29日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "10月30日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "日銀10月30日決定・展望レポートの内容と市場反応は06:55 JST時点で未発表・未確認",
       "アナリスト評価変更と日本企業開示の全件網羅",
-      "Project添付仕様書3点は接続済みDrive検索で取得できず、Project Instructionsとmain現行仕様を優先"
+      "Project添付仕様書3点は接続済みGoogle Driveの完全一致検索で取得できず、Project Instructionsとmain現行仕様を優先"
     ]
   }
 }

@@ -2,36 +2,52 @@
   "version": "1.0",
   "description": "確認済み一次資料の表示設定",
   "items": {
-    "oct29-fomc": {
+    "oct30-us-gdp": {
       "primary_page": "world",
       "priority": 100,
       "attention_points": [
-        "据え置き、10対2",
-        "反対2名は0.25ポイント利上げ選好"
+        "米Q3実質GDPは前期比年率3.4%",
+        "市場予想との比較は未確認。株価は複数材料を含む。"
       ]
     },
-    "oct29-msft": {
+    "oct30-us-pce": {
       "primary_page": "world",
       "priority": 95,
       "attention_points": [
-        "売上+19%、Azure+48%",
-        "取引終了後で現物反応未確認"
+        "9月PCE物価は前年比3.6%、コア3.1%",
+        "市場予想との比較と指標単独の価格反応は未確認。"
       ]
     },
-    "oct29-boj-calendar": {
-      "primary_page": "japan",
+    "oct30-ecb": {
+      "primary_page": "world",
       "priority": 90,
       "attention_points": [
-        "会合29〜30日、決定30日",
-        "結果・時刻は未確認"
+        "ECBは政策金利を据え置き",
+        "日本29日大引け後で国内現物には未反映。"
       ]
     },
-    "oct29-ecb-calendar": {
-      "primary_page": "world",
+    "oct30-boj-schedule": {
+      "primary_page": "japan",
+      "priority": 85,
+      "attention_points": [
+        "日銀は10月30日に決定・展望レポート予定",
+        "06:55 JST時点で公表時刻・内容・市場反応は未確認。予定を決定と扱わない。"
+      ]
+    },
+    "oct30-hitachi": {
+      "primary_page": "japan",
       "priority": 80,
       "attention_points": [
-        "決定22:15 JST",
-        "結果前"
+        "日立はFY2026 Q2決算を公表",
+        "PDFの全項目比較と市場予想比較は未確認。"
+      ]
+    },
+    "oct30-komatsu": {
+      "primary_page": "japan",
+      "priority": 75,
+      "attention_points": [
+        "コマツ上期増収増益、通期予想を上方修正",
+        "市場予想比較は未確認。単独因果は断定しない。"
       ]
     }
   }

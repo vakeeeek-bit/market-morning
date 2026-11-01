@@ -1,0 +1,200 @@
+{
+  "report_date": "2026-11-02",
+  "target_market_date": "2026-10-30",
+  "updated_at": "2026-11-02T06:52:00+09:00",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "一次本文を実読できた5件のみ掲載。市場反応は未確認または別ソースとして分離。企業開示・評価変更の全件網羅は未確認。",
+  "articles": [
+    {
+      "id": "nov2-boj-policy",
+      "title": "日銀は政策金利1.25%を据え置き",
+      "published_date": "2026-10-30",
+      "verified_at": "2026-11-02T06:52:00+09:00",
+      "source_type": "primary",
+      "publisher": "Bank of Japan",
+      "source_url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030a.pdf",
+      "verification_url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030a.pdf",
+      "verification_status": "PASS",
+      "fact": "8対1で1.25%程度に据え置き。見通し実現なら利上げ継続方針。",
+      "analysis": "銀行・不動産・円の相対評価を追加利上げ条件と同日価格で確認。",
+      "limitations": "政策効果の単独価格寄与は未分離。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Bank of Japanの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "8対1で1.25%程度に据え置き。見通し実現なら利上げ継続方針。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-30、実確認2026-11-02T06:52:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "政策効果の単独価格寄与は未分離。"
+        }
+      }
+    },
+    {
+      "id": "nov2-boj-etf",
+      "title": "日銀はETF売却ペースを拡大",
+      "published_date": "2026-10-30",
+      "verified_at": "2026-11-02T06:52:00+09:00",
+      "source_type": "primary",
+      "publisher": "Bank of Japan",
+      "source_url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/rel261030b.pdf",
+      "verification_url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/rel261030b.pdf",
+      "verification_status": "PASS",
+      "fact": "2027年1月から市場価格年2.46兆円程度、日次売買代金の0.1%程度を目安。",
+      "analysis": "需給への日次影響は限定設計だが長期正常化材料。",
+      "limitations": "同日価格への寄与は未分離。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Bank of Japanの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "2027年1月から市場価格年2.46兆円程度、日次売買代金の0.1%程度を目安。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-30、実確認2026-11-02T06:52:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "同日価格への寄与は未分離。"
+        }
+      }
+    },
+    {
+      "id": "nov2-boj-outlook",
+      "title": "日銀はFY2027コアCPI見通しを2.6%へ引き上げ",
+      "published_date": "2026-10-30",
+      "verified_at": "2026-11-02T06:52:00+09:00",
+      "source_type": "primary",
+      "publisher": "Bank of Japan",
+      "source_url": "https://www.boj.or.jp/en/mopo/outlook/gor2610a.pdf",
+      "verification_url": "https://www.boj.or.jp/en/mopo/outlook/gor2610a.pdf",
+      "verification_status": "PASS",
+      "fact": "FY2027コアCPI中央値2.6%、物価リスクは上方偏重。食料品消費税減税は未反映。",
+      "analysis": "追加利上げ条件が残る。",
+      "limitations": "全展望本文は11月2日14時予定で、Bank's Viewを確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Bank of Japanの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "FY2027コアCPI中央値2.6%、物価リスクは上方偏重。食料品消費税減税は未反映。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-30、実確認2026-11-02T06:52:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "全展望本文は11月2日14時予定で、Bank's Viewを確認。"
+        }
+      }
+    },
+    {
+      "id": "nov2-intel-q3",
+      "title": "Intel Q3売上高165億ドル、Q4粗利益率低下を予想",
+      "published_date": "2026-10-29",
+      "verified_at": "2026-11-02T06:52:00+09:00",
+      "source_type": "primary",
+      "publisher": "Intel Corporation",
+      "source_url": "https://www.intc.com/news-events/press-releases/detail/1752/intel-reports-third-quarter-2026-financial-results",
+      "verification_url": "https://www.intc.com/news-events/press-releases/detail/1752/intel-reports-third-quarter-2026-financial-results",
+      "verification_status": "PASS",
+      "fact": "Q3売上高+21%、DCAI+78%。Q4売上高150〜160億ドル、GAAP粗利益率37.1%を予想。",
+      "analysis": "成長と投資負担・PC需要鈍化懸念が併存。",
+      "limitations": "市場予想比較と単独価格寄与は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Intel Corporationの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "Q3売上高+21%、DCAI+78%。Q4売上高150〜160億ドル、GAAP粗利益率37.1%を予想。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-29、実確認2026-11-02T06:52:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "市場予想比較と単独価格寄与は未確認。"
+        }
+      }
+    },
+    {
+      "id": "nov2-us-eci",
+      "title": "米Q3雇用コスト指数は前期比0.8%",
+      "published_date": "2026-10-30",
+      "verified_at": "2026-11-02T06:52:00+09:00",
+      "source_type": "primary",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "source_url": "https://www.bls.gov/news.release/eci.nr0.htm",
+      "verification_url": "https://www.bls.gov/news.release/eci.nr0.htm",
+      "verification_status": "PASS",
+      "fact": "雇用コスト+0.8%、前年比+3.4%。賃金前年比+3.1%、福利厚生+3.9%。",
+      "analysis": "賃金コストと高PER株・金利の再評価材料。",
+      "limitations": "市場予想との比較と指標単独の価格反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "U.S. Bureau of Labor Statisticsの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "雇用コスト+0.8%、前年比+3.4%。賃金前年比+3.1%、福利厚生+3.9%。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-30、実確認2026-11-02T06:52:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "市場予想との比較と指標単独の価格反応は未確認。"
+        }
+      }
+    }
+  ]
+}

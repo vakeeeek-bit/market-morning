@@ -1,8 +1,22 @@
 {
   "status": "success",
-  "updated_at": "2026-10-30 11:42:07 JST",
-  "message": "Market data update completed and validation passed.",
+  "updated_at": "2026-11-02T06:52:00+09:00",
+  "message": "Market data and qualified report update completed; validation pending.",
   "component": "market_data",
-  "publication_status": "PASS",
-  "component_updated_at": "2026-10-30 11:41:56"
+  "publication_status": "QUALIFIED",
+  "component_updated_at": "2026-11-02 06:50:16",
+  "report_date": "2026-11-02",
+  "target_market_date": "2026-10-30",
+  "market_data": {
+    "status": "success",
+    "updated_at": "2026-11-02 06:50:16",
+    "market_date": "2026-10-30",
+    "note": "update_market.py取得。米株・為替30日、米金利29日の差を注記"
+  },
+  "publication_units": {
+    "ai_report": "QUALIFIED",
+    "world_market": "PASS",
+    "japan_market": "PASS",
+    "verified_news": "PASS"
+  }
 }

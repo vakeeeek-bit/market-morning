@@ -2,52 +2,44 @@
   "version": "1.0",
   "description": "確認済み一次資料の表示設定",
   "items": {
-    "oct30-us-gdp": {
-      "primary_page": "world",
+    "nov2-boj-policy": {
+      "primary_page": "japan",
       "priority": 100,
       "attention_points": [
-        "米Q3実質GDPは前期比年率3.4%",
-        "市場予想との比較は未確認。株価は複数材料を含む。"
+        "日銀は政策金利1.25%を据え置き",
+        "政策効果の単独価格寄与は未分離。"
       ]
     },
-    "oct30-us-pce": {
-      "primary_page": "world",
+    "nov2-boj-etf": {
+      "primary_page": "japan",
       "priority": 95,
       "attention_points": [
-        "9月PCE物価は前年比3.6%、コア3.1%",
-        "市場予想との比較と指標単独の価格反応は未確認。"
+        "日銀はETF売却ペースを拡大",
+        "同日価格への寄与は未分離。"
       ]
     },
-    "oct30-ecb": {
-      "primary_page": "world",
+    "nov2-boj-outlook": {
+      "primary_page": "japan",
       "priority": 90,
       "attention_points": [
-        "ECBは政策金利を据え置き",
-        "日本29日大引け後で国内現物には未反映。"
+        "日銀はFY2027コアCPI見通しを2.6%へ引き上げ",
+        "全展望本文は11月2日14時予定で、Bank's Viewを確認。"
       ]
     },
-    "oct30-boj-schedule": {
-      "primary_page": "japan",
+    "nov2-intel-q3": {
+      "primary_page": "world",
       "priority": 85,
       "attention_points": [
-        "日銀は10月30日に決定・展望レポート予定",
-        "06:55 JST時点で公表時刻・内容・市場反応は未確認。予定を決定と扱わない。"
+        "Intel Q3売上高165億ドル、Q4粗利益率低下を予想",
+        "市場予想比較と単独価格寄与は未確認。"
       ]
     },
-    "oct30-hitachi": {
-      "primary_page": "japan",
+    "nov2-us-eci": {
+      "primary_page": "world",
       "priority": 80,
       "attention_points": [
-        "日立はFY2026 Q2決算を公表",
-        "PDFの全項目比較と市場予想比較は未確認。"
-      ]
-    },
-    "oct30-komatsu": {
-      "primary_page": "japan",
-      "priority": 75,
-      "attention_points": [
-        "コマツ上期増収増益、通期予想を上方修正",
-        "市場予想比較は未確認。単独因果は断定しない。"
+        "米Q3雇用コスト指数は前期比0.8%",
+        "市場予想との比較と指標単独の価格反応は未確認。"
       ]
     }
   }

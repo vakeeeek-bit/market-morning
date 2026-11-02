@@ -12,7 +12,7 @@
       "attempts": [
         {
           "method": "当日正本・公式ソース確認",
-          "result": "株価は26日、金利・為替は23日",
+          "result": "米株は11月2日、米金利・為替は10月30日で基準日不一致",
           "source_urls": [
             "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
           ],
@@ -24,7 +24,7 @@
         "japan_stocks"
       ],
       "excluded_claims": [
-        "26日の為替・金利方向と因果を除外"
+        "11月2日の米株と10月30日の為替・金利方向との因果を除外"
       ],
       "excluded_from_publication": true,
       "first_seen_at": "2026-10-28T06:58:00+09:00"
@@ -137,30 +137,6 @@
       ],
       "excluded_from_publication": true,
       "first_seen_at": "2026-10-28T06:58:00+09:00"
-    },
-    {
-      "id": "japan-partial-429",
-      "status": "QUALIFIED",
-      "missing": "日本株17業種のうち4業種、監視34銘柄のうち8銘柄は外部429で再取得できず、取得済み13業種・26銘柄のみ評価",
-      "impact": "日本の全17業種・34銘柄Breadth断定を除外し、取得済み13業種・26銘柄に限定",
-      "last_checked_at": "2026-11-03T06:58:00+09:00",
-      "next_action": "次回収集で429を回避して再取得し、全系列の日付一致を確認",
-      "attempts": [
-        {
-          "method": "yfinance一括取得と再実行",
-          "result": "最初の一括取得で13業種・26銘柄成功。再実行は外部429で12銘柄失敗",
-          "checked_at": "2026-11-03T06:58:00+09:00"
-        }
-      ],
-      "affected_components": [
-        "japan_market",
-        "japan_stocks"
-      ],
-      "excluded_claims": [
-        "日本全業種のBreadth",
-        "未取得銘柄の騰落"
-      ],
-      "excluded_from_publication": true
     },
     {
       "id": "japan-partial-429",

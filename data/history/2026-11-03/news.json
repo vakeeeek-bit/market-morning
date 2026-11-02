@@ -1,0 +1,162 @@
+{
+  "report_date": "2026-11-03",
+  "target_market_date": "2026-11-02",
+  "updated_at": "2026-11-03T06:58:00+09:00",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "一次本文を実読できた4件のみ掲載。市場反応は正本または未確認として分離。企業開示・評価変更の全件網羅は未確認。",
+  "articles": [
+    {
+      "id": "nov3-ism-manufacturing",
+      "title": "米10月ISM製造業PMIは55.5",
+      "published_date": "2026-11-02",
+      "verified_at": "2026-11-03T06:58:00+09:00",
+      "source_type": "primary",
+      "publisher": "Institute for Supply Management",
+      "source_url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/pmi/october/",
+      "verification_url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/pmi/october/",
+      "verification_status": "PASS",
+      "fact": "PMI55.5、9月比+1.0。新規受注55.5、製造59.0、雇用52.4、価格75.2。",
+      "analysis": "成長加速と投入価格圧力が併存し、景気循環株・金利・マージンを同時に点検。",
+      "limitations": "市場予想比較と指標単独の価格寄与は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Institute for Supply Managementの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "PMI55.5、9月比+1.0。新規受注55.5、製造59.0、雇用52.4、価格75.2。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-02、実確認2026-11-03T06:58:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "市場予想比較と指標単独の価格寄与は未確認。"
+        }
+      }
+    },
+    {
+      "id": "nov3-marvell-lumentum",
+      "title": "MarvellがLumentum買収で最終契約",
+      "published_date": "2026-11-02",
+      "verified_at": "2026-11-03T06:58:00+09:00",
+      "source_type": "primary",
+      "publisher": "U.S. Securities and Exchange Commission / Marvell",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000119312526442714/d81187dex991.htm",
+      "verification_url": "https://www.sec.gov/Archives/edgar/data/1835632/000119312526442714/d81187dex991.htm",
+      "verification_status": "PASS",
+      "fact": "全株式交換、企業価値1150億ドル、交換比率4.500、2028年上期完了見込み。株主・規制承認などが条件。",
+      "analysis": "AI光接続の中期需要と大型取引の希薄化・統合・規制リスクを分けて評価。",
+      "limitations": "SOX下落への取引単独寄与は未分離。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "U.S. Securities and Exchange Commission / Marvellの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "全株式交換、企業価値1150億ドル、交換比率4.500、2028年上期完了見込み。株主・規制承認などが条件。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-02、実確認2026-11-03T06:58:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "SOX下落への取引単独寄与は未分離。"
+        }
+      }
+    },
+    {
+      "id": "nov3-boj-full-outlook",
+      "title": "日銀は10月展望レポート全文を公表",
+      "published_date": "2026-11-02",
+      "verified_at": "2026-11-03T06:58:00+09:00",
+      "source_type": "primary",
+      "publisher": "Bank of Japan",
+      "source_url": "https://www.boj.or.jp/en/mopo/outlook/gor2610b.pdf",
+      "verification_url": "https://www.boj.or.jp/en/mopo/outlook/gor2610b.pdf",
+      "verification_status": "PASS",
+      "fact": "日銀は10月展望レポート全文を公表し、政策判断と物価・成長見通しの背景分析を提示。",
+      "analysis": "銀行・不動産・円の評価は政策方針と実際の金利・価格反応を組み合わせる。",
+      "limitations": "全文公表単独の市場寄与は未分離。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Bank of Japanの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "日銀は10月展望レポート全文を公表し、政策判断と物価・成長見通しの背景分析を提示。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-02、実確認2026-11-03T06:58:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "全文公表単独の市場寄与は未分離。"
+        }
+      }
+    },
+    {
+      "id": "nov3-jpx-holiday",
+      "title": "JPXは11月3日にデリバティブ祝日取引を実施",
+      "published_date": "2026-11-02",
+      "verified_at": "2026-11-03T06:58:00+09:00",
+      "source_type": "primary",
+      "publisher": "Japan Exchange Group",
+      "source_url": "https://www.jpx.co.jp/news/2040/20261102-01.html",
+      "verification_url": "https://www.jpx.co.jp/news/2040/20261102-01.html",
+      "verification_status": "PASS",
+      "fact": "11月3日は文化の日で東証現物休場。大阪取引所・東京商品取引所は対象デリバティブの祝日取引を実施。",
+      "analysis": "米2日材料の現物織り込みは4日へ持ち越し。",
+      "limitations": "限月・値種別・確認時刻を特定できない祝日取引値は不採用。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Japan Exchange Groupの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "11月3日は文化の日で東証現物休場。大阪取引所・東京商品取引所は対象デリバティブの祝日取引を実施。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-02、実確認2026-11-03T06:58:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "限月・値種別・確認時刻を特定できない祝日取引値は不採用。"
+        }
+      }
+    }
+  ]
+}

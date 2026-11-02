@@ -1,0 +1,255 @@
+{
+  "report_date": "2026-11-03",
+  "target_market_date": "2026-11-02",
+  "updated_at": "2026-11-03T06:58:00+09:00",
+  "report_type": "holiday_provisional",
+  "japan_quick_view": {
+    "headline": "注釈付き11月3日版｜米AI・半導体は続落、景気循環・内需へ広がる選別",
+    "top_materials": [
+      "米11月2日はS&P500-0.51%、NASDAQ-1.07%、NASDAQ100-1.39%、SOX-3.37%。VIXは+8.91%でAI・半導体の調整が継続",
+      "米11業種ETF代理は8上昇・3下落。一般消費財+2.41%、金融+1.86%、素材+1.76%に対し、エネルギー-3.96%、情報技術-2.95%",
+      "米10月ISM製造業PMIは55.5（9月54.5）。新規受注55.5、製造59.0、雇用52.4、価格75.2で成長と投入価格圧力が併存",
+      "日本11月2日は日経平均型-0.11%、TOPIX型-0.82%。電力・ガス+1.25%、不動産+1.08%、医薬品+0.84%に対し銀行-1.94%",
+      "11月3日の東証現物は文化の日で休場。OSEのデリバティブ祝日取引は実施されるが、限月・値種別を確認できない数値は不採用"
+    ],
+    "focus_sectors": [
+      "半導体・電機",
+      "銀行",
+      "不動産",
+      "素材",
+      "運輸・空運"
+    ],
+    "unpriced_materials": [
+      "米11月2日のSOX-3.37%・NASDAQ100-1.39%は日本2日大引け後",
+      "3日は東証現物休場のため4日に織り込み",
+      "米2年・10年債利回り、DXY、USD/JPYの正本は10月30日で、米株11月2日と基準日がずれる",
+      "Gold・Silver・WTI・Brentの保存連続先物と取引所・限月・値種別・基準時刻の対応",
+      "11月3日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "日本株17業種のうち4業種、監視34銘柄のうち8銘柄は外部429で再取得できず、取得済み13業種・26銘柄のみ評価"
+    ],
+    "individual_news_review": {
+      "status": "reviewed",
+      "story_count": 3,
+      "scope": "正本市場実績と一次資料を確認した市場連動3件のみ。未確認企業固有記事は除外"
+    }
+  },
+  "top_stories": [
+    {
+      "company": "ソフトバンクグループ",
+      "ticker": "9984",
+      "headline": "2日-1.58%、米AI・半導体続落の4日波及を監視",
+      "fact": "正本で2日-1.58%、売買代金 proxy 1位。米2日はNASDAQ100-1.39%、SOX-3.37%。",
+      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json",
+      "analysis": "AI関連集中の逆回転が続けば下押し候補。企業固有の新規IRを原因と断定しない。",
+      "category": "市場連動",
+      "related_sectors": [
+        "情報通信・サービス",
+        "電機・精密"
+      ],
+      "today_watch": "4日のTOPIX比・出来高と米半導体の反発力",
+      "announced_at": "2026-11-02T15:30:00+09:00",
+      "timing": "日本大引け後に米市場続落",
+      "market_pricing_status": "米2日材料は未反映",
+      "price_reaction": "日本2日-1.58%（限定サンプル）",
+      "related_stocks": [],
+      "importance": "high",
+      "confidence": "confirmed"
+    },
+    {
+      "company": "三菱UFJフィナンシャル・グループ",
+      "ticker": "8306",
+      "headline": "2日-1.86%、銀行業ETF代理-1.94%",
+      "fact": "日銀決定後初の取引日、正本で8306は-1.86%、銀行業ETF代理は-1.94%。",
+      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json",
+      "analysis": "追加利上げ期待を単純な追い風とせず、4日の円・国内金利と相対反応で再確認。",
+      "category": "金融政策・市場反応",
+      "related_sectors": [
+        "銀行"
+      ],
+      "today_watch": "4日のTOPIX比、国内金利、8316との連動",
+      "announced_at": "2026-11-02T15:30:00+09:00",
+      "timing": "大引け実績",
+      "market_pricing_status": "日銀決定を一部反映、米2日材料は未反映",
+      "price_reaction": "8306 -1.86%、銀行業ETF代理-1.94%",
+      "related_stocks": [
+        "8316"
+      ],
+      "importance": "high",
+      "confidence": "confirmed"
+    },
+    {
+      "company": "第一三共",
+      "ticker": "4568",
+      "headline": "2日+5.03%、医薬品ETF代理+0.84%",
+      "fact": "正本で4568は+5.03%、出来高20日比1.79倍。医薬品ETF代理は+0.84%。",
+      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json",
+      "analysis": "相対優位は確認したが、企業固有材料の全件実読を満たさないため上昇原因は断定しない。",
+      "category": "市場実績",
+      "related_sectors": [
+        "医薬品"
+      ],
+      "today_watch": "4日の続伸・反落、出来高、医薬品業種との連動",
+      "announced_at": "2026-11-02T15:30:00+09:00",
+      "timing": "大引け実績",
+      "market_pricing_status": "2日実績に反映",
+      "price_reaction": "4568 +5.03%、出来高20日比1.79倍",
+      "related_stocks": [
+        "4502"
+      ],
+      "importance": "medium",
+      "confidence": "confirmed"
+    }
+  ],
+  "important_stories": [],
+  "other_stories": [],
+  "data_quality": {
+    "overall": "MANUAL_REVIEW",
+    "missing": [
+      "米2年・10年債利回り、DXY、USD/JPYの正本は10月30日で、米株11月2日と基準日がずれる",
+      "Gold・Silver・WTI・Brentの保存連続先物と取引所・限月・値種別・基準時刻の対応",
+      "11月3日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "日本株17業種のうち4業種、監視34銘柄のうち8銘柄は外部429で再取得できず、取得済み13業種・26銘柄のみ評価",
+      "アナリスト評価変更と日本企業開示の全件網羅",
+      "Project添付仕様書3点は接続済みGoogle Driveの完全一致・部分一致検索で取得できず、Project Instructionsとmain現行仕様を優先"
+    ],
+    "differences": [
+      "AI・半導体は続落したが、米11業種ETF代理は8上昇・3下落へ改善",
+      "XLEは前営業日の相対優位から-3.96%へ反転、XLY・XLF・XLBが上昇",
+      "ISM製造業は55.5へ上昇し、価格指数75.2と投入価格圧力が残る",
+      "日本11月2日は日経平均型がTOPIX型を0.71ポイント上回り、銀行・情報通信が劣後",
+      "本日は東証現物休場のため、日本への米11月2日材料の現物反応は11月4日に確認"
+    ],
+    "excluded": [
+      "10月30日の米金利・為替を11月2日の米株下落原因として扱うこと",
+      "限月・値種別・時刻未確認の商品先物、暗号資産現在値、日経225先物",
+      "Copper価格・在庫（任意非掲載）",
+      "原油低下観測またはISMだけを11月2日の全市場の単一原因と断定すること",
+      "未取得4業種・8銘柄を含む日本市場全体のBreadth断定",
+      "評価変更なし、企業材料を全件確認済みという包括断定"
+    ],
+    "cautions": [
+      "QUALIFIED注釈付き版",
+      "米株2日、金利・為替30日、日本株2日を混同しない",
+      "Sector SPDR ETFは業種指数そのものではない",
+      "日本株は取得済み13業種・26銘柄の限定サンプル",
+      "Copperは任意非掲載",
+      "事実・市場反応・解釈を分離"
+    ]
+  },
+  "analyst_rating_changes": {
+    "headline": "11月2日の評価変更を網羅できず非掲載",
+    "coverage_status": "十分調査したが取得不能",
+    "items": [],
+    "source_review": [
+      {
+        "name": "TDnet公開一覧",
+        "url": "https://www.release.tdnet.info/inbs/I_main_00.html",
+        "result": "全件網羅を確認できず",
+        "coverage": "公開範囲のみ",
+        "freshness": "11月3日確認状況を記録",
+        "automation": "契約API未導入",
+        "rights": "確認事実のみ掲載"
+      }
+    ],
+    "summary": "変更なしとは断定しない"
+  },
+  "sector_implications": [
+    {
+      "driver": "米AI・半導体続落",
+      "affected_sectors": [
+        "電機・精密",
+        "情報通信・サービス"
+      ],
+      "possible_impact": "4日の9984・半導体関連へ下押し候補",
+      "confirmation_condition": "TOPIX比・出来高とSOX先導銘柄の反応"
+    },
+    {
+      "driver": "米景気循環・内需への回転",
+      "affected_sectors": [
+        "素材",
+        "金融",
+        "小売",
+        "運輸"
+      ],
+      "possible_impact": "成長継続期待は追い風候補、価格圧力は利益率の反証",
+      "confirmation_condition": "4日の業種幅と同日円・金利"
+    },
+    {
+      "driver": "エネルギーETF反落",
+      "affected_sectors": [
+        "エネルギー資源",
+        "空運",
+        "運輸",
+        "化学"
+      ],
+      "possible_impact": "資源に逆風、燃料利用業種にコスト追い風候補",
+      "confirmation_condition": "定義付き原油と国内資源・運輸の相対騰落"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "基本",
+      "conditions": "AI・半導体調整が続く一方、景気循環・内需へ資金が分散",
+      "impact_on_japan": "4日は半導体・AI関連が劣後、内需・金融・素材を選別",
+      "invalidation": "SOX反発と国内半導体のTOPIX比改善"
+    },
+    {
+      "name": "上振れ",
+      "conditions": "SOX反発、VIX低下、米業種幅改善が継続",
+      "impact_on_japan": "電機・機械へ買い戻しが広がる",
+      "invalidation": "VIX再上昇、NASDAQ100続落"
+    },
+    {
+      "name": "下振れ",
+      "conditions": "AI投資回収懸念と高い投入価格が金利・利益率不安に波及",
+      "impact_on_japan": "半導体・高PER株の変動拡大、資源もエネルギー安で劣後",
+      "invalidation": "同日米金利低下と半導体・資源の反発"
+    }
+  ],
+  "monitoring_points": [
+    {
+      "target": "AI・半導体",
+      "today_check": "SOX・NASDAQ100、4日の国内半導体・9984のTOPIX比と出来高",
+      "view_change_condition": "SOX反発と国内半導体のTOPIX比改善で下押し評価を縮小"
+    },
+    {
+      "target": "業種回転",
+      "today_check": "XLY・XLF・XLB対XLK・XLE、4日の内需・金融・資源",
+      "view_change_condition": "景気循環・内需が失速しXLK・XLEが反発すれば回転評価を撤回"
+    },
+    {
+      "target": "日銀後の国内選別",
+      "today_check": "4日の8306・8316対8801・8802、円・国内金利",
+      "view_change_condition": "銀行が反発し不動産が失速すれば11月2日の相対関係を一時的と判断"
+    },
+    {
+      "target": "米イベント",
+      "today_check": "JOLTS、ISMサービス、雇用統計、CPI、PPIと同日米金利",
+      "view_change_condition": "成長・価格鈍化と金利低下でも高PER株が反発しなければ利益要因を重視"
+    }
+  ],
+  "source_notes": [
+    "市場数値の正本はmarket.json、日本2日大引けはjapan-market.json",
+    "米11セクターはSector SPDR ETF日足終値の代理値",
+    "日本株は外部429後も取得できた13業種・26銘柄の限定サンプル",
+    "ISM・SEC・BOJ・JPX一次資料を実読",
+    "Reuters/APは市場反応補足。正本価格を置換しない",
+    "Copperは任意非掲載。未定義商品先物は不採用"
+  ],
+  "publication_policy": {
+    "status": "QUALIFIED",
+    "mode": "provisional",
+    "updated_at": "2026-11-03T06:58:00+09:00",
+    "complete_gate": "FAIL",
+    "copper_included": false,
+    "note": "11月2日の米株・日本株の確認済み終値と一次資料を採用。基準日が古い米金利・為替、未定義先物、現在値、未取得日本系列、網羅不能項目を除外した注釈付き公開。",
+    "missing_items": [
+      "米2年・10年債利回り、DXY、USD/JPYの正本は10月30日で、米株11月2日と基準日がずれる",
+      "Gold・Silver・WTI・Brentの保存連続先物と取引所・限月・値種別・基準時刻の対応",
+      "11月3日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "日本株17業種のうち4業種、監視34銘柄のうち8銘柄は外部429で再取得できず、取得済み13業種・26銘柄のみ評価",
+      "アナリスト評価変更と日本企業開示の全件網羅",
+      "Project添付仕様書3点は接続済みGoogle Driveの完全一致・部分一致検索で取得できず、Project Instructionsとmain現行仕様を優先"
+    ]
+  }
+}

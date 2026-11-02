@@ -1,0 +1,1633 @@
+{
+  "report_date": "2026-11-03",
+  "target_market_date": "2026-11-02",
+  "updated_at": "2026-11-03T06:58:00+09:00",
+  "report_type": "holiday_provisional",
+  "quick_view": {
+    "headline": "注釈付き11月3日版｜米AI・半導体は続落、景気循環・内需へ広がる選別",
+    "top_news": [
+      {
+        "title": "米AI・半導体の続落"
+      },
+      {
+        "title": "米景気循環・内需への選別"
+      },
+      {
+        "title": "日本は文化の日で現物休場"
+      }
+    ],
+    "important_today": [
+      "米11月2日はS&P500-0.51%、NASDAQ-1.07%、NASDAQ100-1.39%、SOX-3.37%。VIXは+8.91%でAI・半導体の調整が継続",
+      "米11業種ETF代理は8上昇・3下落。一般消費財+2.41%、金融+1.86%、素材+1.76%に対し、エネルギー-3.96%、情報技術-2.95%",
+      "米10月ISM製造業PMIは55.5（9月54.5）。新規受注55.5、製造59.0、雇用52.4、価格75.2で成長と投入価格圧力が併存",
+      "日本11月2日は日経平均型-0.11%、TOPIX型-0.82%。電力・ガス+1.25%、不動産+1.08%、医薬品+0.84%に対し銀行-1.94%",
+      "11月3日の東証現物は文化の日で休場。OSEのデリバティブ祝日取引は実施されるが、限月・値種別を確認できない数値は不採用"
+    ]
+  },
+  "executive_summary": {
+    "headline": "注釈付き11月3日版｜米AI・半導体は続落、景気循環・内需へ広がる選別",
+    "market_mood": "米国はAI・半導体が続落して主要ハイテク指数を押し下げた一方、11業種ETF代理の8業種は上昇。景気循環・内需・金融へ資金が広がり、全面リスクオフではない。日本の11月2日実績は日経平均型がTOPIX型より底堅く、電力・不動産・医薬品が相対優位。本日は東証現物休場。",
+    "main_driver": "AI投資の収益化・資金調達への警戒、ISMの成長と高い投入価格、原油供給懸念後退を巡る業種回転",
+    "winners": [
+      "米一般消費財・金融・素材",
+      "日本の電力・不動産・医薬品"
+    ],
+    "losers": [
+      "米半導体・情報技術・エネルギー",
+      "日本の銀行・情報通信・エネルギー資源"
+    ],
+    "important_today": [
+      "米11月2日はS&P500-0.51%、NASDAQ-1.07%、NASDAQ100-1.39%、SOX-3.37%。VIXは+8.91%でAI・半導体の調整が継続",
+      "米11業種ETF代理は8上昇・3下落。一般消費財+2.41%、金融+1.86%、素材+1.76%に対し、エネルギー-3.96%、情報技術-2.95%",
+      "米10月ISM製造業PMIは55.5（9月54.5）。新規受注55.5、製造59.0、雇用52.4、価格75.2で成長と投入価格圧力が併存",
+      "日本11月2日は日経平均型-0.11%、TOPIX型-0.82%。電力・ガス+1.25%、不動産+1.08%、医薬品+0.84%に対し銀行-1.94%",
+      "11月3日の東証現物は文化の日で休場。OSEのデリバティブ祝日取引は実施されるが、限月・値種別を確認できない数値は不採用"
+    ],
+    "watch_markets": [
+      "SOX・NASDAQ100の反発力",
+      "XLK対XLY・XLF・XLB",
+      "11月4日の国内半導体・銀行・不動産",
+      "JOLTS・ISMサービス・雇用統計",
+      "CPI・PPIと同日米金利"
+    ],
+    "current_environment": [
+      "米株・VIX・11業種ETF代理は11月2日終値",
+      "日本株は11月2日大引けの取得済み13業種・26銘柄",
+      "米金利・為替は10月30日で基準日差あり",
+      "商品先物・朝の現在値は除外",
+      "東証現物は11月3日休場、OSEデリバティブは祝日取引"
+    ]
+  },
+  "news": [
+    {
+      "title": "米10月ISM製造業PMIは55.5",
+      "fact": "9月54.5から1.0ポイント上昇。新規受注55.5、製造59.0、雇用52.4、価格75.2。",
+      "source_url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/pmi/october/",
+      "analysis": "成長加速は景気循環株に追い風候補だが、価格75.2は金利・マージンの反証材料。",
+      "published_at": "2026-11-02",
+      "market_reaction": "米2日はXLI+1.38%、XLB+1.76%、XLF+1.86%。指標単独寄与は未分離。"
+    },
+    {
+      "title": "MarvellがLumentum買収で最終契約",
+      "fact": "全株式交換、企業価値1150億ドル、交換比率4.500、2028年上期完了見込み。株主・規制承認などが条件。",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000119312526442714/d81187dex991.htm",
+      "analysis": "AI光接続の中期需要を示す一方、大型取引の希薄化・統合・規制リスクが短期の半導体変動要因。",
+      "published_at": "2026-11-02",
+      "market_reaction": "SOX-3.37%。取引単独寄与は未分離。"
+    },
+    {
+      "title": "日銀は10月展望レポート全文を公表",
+      "fact": "日銀は11月2日に10月展望レポート全文を公表。政策判断・物価見通しのBank's Viewを補完する分析を含む。",
+      "source_url": "https://www.boj.or.jp/en/mopo/outlook/gor2610b.pdf",
+      "analysis": "追加利上げと国内需要・物価の判断材料。11月2日の業種反応と単独因果は分離。",
+      "published_at": "2026-11-02",
+      "market_reaction": "日本2日は銀行-1.94%、不動産+1.08%。全文公表単独の寄与は未分離。"
+    },
+    {
+      "title": "JPXは11月3日にデリバティブ祝日取引を実施",
+      "fact": "東証現物は文化の日で休場。大阪取引所・東京商品取引所は対象デリバティブの祝日取引を実施。",
+      "source_url": "https://www.jpx.co.jp/news/2040/20261102-01.html",
+      "analysis": "現物の米2日材料織り込みは4日へ持ち越し。限月未確認の祝日取引値は不採用。",
+      "published_at": "2026-11-02",
+      "market_reaction": "現物反応は未確認。"
+    }
+  ],
+  "policy": {
+    "economic_indicators": {
+      "fact": "ISMは10月製造業PMI55.5、価格75.2を公表。BLS公式日程でJOLTS、労働生産性、雇用統計、CPI、PPIを確認。",
+      "source_urls": [
+        "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/pmi/october/",
+        "https://www.bls.gov/schedule/2026/11_sched.htm"
+      ]
+    },
+    "central_banks": {
+      "fact": "日銀は11月2日に10月展望レポート全文を公表。政策金利1.25%据え置きと条件付き追加利上げ方針に変更なし。",
+      "source_urls": [
+        "https://www.boj.or.jp/en/mopo/outlook/gor2610b.pdf",
+        "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030a.pdf"
+      ]
+    },
+    "trade_tariffs": {
+      "fact": "White House・USTR・BISの最新一覧を11月3日06:58 JSTまで確認。11月2日付で日本株TOP5を変更する新規主要措置は確認できず。未調査ではなく一覧確認済み。",
+      "source_urls": [
+        "https://www.whitehouse.gov/presidential-actions/",
+        "https://www.ustr.gov/about/policy-offices/press-office/press-releases/2026",
+        "https://www.bis.gov/news-updates"
+      ]
+    },
+    "sanctions": {
+      "fact": "米財務省プレスリリース・OFAC recent actionsを11月3日06:58 JSTまで確認。11月2日付で日本株TOP5を変更する新規主要措置は確認できず。",
+      "source_urls": [
+        "https://home.treasury.gov/news/press-releases",
+        "https://ofac.treasury.gov/recent-actions"
+      ]
+    }
+  },
+  "scenarios": [
+    {
+      "name": "基本",
+      "conditions": "AI・半導体調整が続く一方、景気循環・内需へ資金が分散",
+      "impact_on_japan": "4日は半導体・AI関連が劣後、内需・金融・素材を選別",
+      "invalidation": "SOX反発と国内半導体のTOPIX比改善"
+    },
+    {
+      "name": "上振れ",
+      "conditions": "SOX反発、VIX低下、米業種幅改善が継続",
+      "impact_on_japan": "電機・機械へ買い戻しが広がる",
+      "invalidation": "VIX再上昇、NASDAQ100続落"
+    },
+    {
+      "name": "下振れ",
+      "conditions": "AI投資回収懸念と高い投入価格が金利・利益率不安に波及",
+      "impact_on_japan": "半導体・高PER株の変動拡大、資源もエネルギー安で劣後",
+      "invalidation": "同日米金利低下と半導体・資源の反発"
+    }
+  ],
+  "market_data": [
+    {
+      "market": "S&P500",
+      "price": "7541.3999",
+      "change": "-38.6699 (-0.51%)",
+      "basis_time": "2026-11-02・日足Close・現在値ではない",
+      "source": "market.json / ^GSPC"
+    },
+    {
+      "market": "NASDAQ総合",
+      "price": "25164.3164",
+      "change": "-272.6836 (-1.07%)",
+      "basis_time": "2026-11-02・日足Close・現在値ではない",
+      "source": "market.json / ^IXIC"
+    },
+    {
+      "market": "NASDAQ100",
+      "price": "27989.8203",
+      "change": "-395.0293 (-1.39%)",
+      "basis_time": "2026-11-02・日足Close・現在値ではない",
+      "source": "market.json / ^NDX"
+    },
+    {
+      "market": "NYダウ",
+      "price": "51983.9805",
+      "change": "+213.6719 (+0.41%)",
+      "basis_time": "2026-11-02・日足Close・現在値ではない",
+      "source": "market.json / ^DJI"
+    },
+    {
+      "market": "Russell2000",
+      "price": "2805.876",
+      "change": "-5.9641 (-0.21%)",
+      "basis_time": "2026-11-02・日足Close・現在値ではない",
+      "source": "market.json / ^RUT"
+    },
+    {
+      "market": "PHLX半導体株指数（SOX）",
+      "price": "10328.3291",
+      "change": "-360.4707 (-3.37%)",
+      "basis_time": "2026-11-02・日足Close・現在値ではない",
+      "source": "market.json / ^SOX"
+    },
+    {
+      "market": "VIX",
+      "price": "21.15",
+      "change": "+1.7300 (+8.91%)",
+      "basis_time": "2026-11-02・日足Close・現在値ではない",
+      "source": "market.json / ^VIX"
+    },
+    {
+      "market": "DXY",
+      "price": "101.88",
+      "change": "-0.1600 (-0.16%)",
+      "basis_time": "2026-10-30・日足Close・現在値ではない",
+      "source": "market.json / DX-Y.NYB"
+    },
+    {
+      "market": "USD/JPY",
+      "price": "157.804",
+      "change": "-0.0290 (-0.02%)",
+      "basis_time": "2026-10-30・日足Close・現在値ではない",
+      "source": "market.json / JPY=X"
+    },
+    {
+      "market": "米2年債利回り",
+      "price": "4.560%",
+      "change": "-0.050ポイント",
+      "basis_time": "2026-10-30 FRED公表値・米株2日と同日時点ではない",
+      "source": "market.json / FRED:DGS2"
+    },
+    {
+      "market": "米10年債利回り",
+      "price": "4.940%",
+      "change": "-0.040ポイント",
+      "basis_time": "2026-10-30 FRED公表値・米株2日と同日時点ではない",
+      "source": "market.json / FRED:DGS10"
+    },
+    {
+      "market": "Gold",
+      "price": "不採用",
+      "change": "不採用",
+      "basis_time": "取引所・限月・値種別・基準時刻の対応未確認",
+      "source": "market.json（値は結論から除外）"
+    },
+    {
+      "market": "Silver",
+      "price": "不採用",
+      "change": "不採用",
+      "basis_time": "取引所・限月・値種別・基準時刻の対応未確認",
+      "source": "market.json（値は結論から除外）"
+    },
+    {
+      "market": "WTI",
+      "price": "不採用",
+      "change": "不採用",
+      "basis_time": "取引所・限月・値種別・基準時刻の対応未確認",
+      "source": "market.json（値は結論から除外）"
+    },
+    {
+      "market": "Brent",
+      "price": "不採用",
+      "change": "不採用",
+      "basis_time": "取引所・限月・値種別・基準時刻の対応未確認",
+      "source": "market.json（値は結論から除外）"
+    }
+  ],
+  "market_overview": [
+    {
+      "market": "米国株",
+      "move": "S&P500-0.51%、NASDAQ-1.07%、NASDAQ100-1.39%、SOX-3.37%、ダウ+0.41%、Russell2000-0.21%",
+      "relative_strength": "一般消費財・金融・素材が相対優位、エネルギー・情報技術が劣後",
+      "background": "AI投資回収・資金調達への警戒がテックに残る一方、ISM製造業は拡大加速",
+      "impact_on_japan": "11月4日の半導体・AI関連は下押し候補。金融・素材・内需への回転は国内での再現を確認"
+    },
+    {
+      "market": "日本株",
+      "move": "2日日経平均型-0.11%、TOPIX型-0.82%。電力・ガス+1.25%、不動産+1.08%、医薬品+0.84%、銀行-1.94%",
+      "relative_strength": "日経平均型、電力・不動産・医薬品が相対優位",
+      "background": "日銀決定後初の取引日。取得済み13業種・26銘柄の限定サンプル",
+      "impact_on_japan": "3日は現物休場。米2日材料の現物織り込みは4日へ持ち越し"
+    },
+    {
+      "market": "金利・為替",
+      "move": "米2年4.56%、10年4.94%、DXY101.88、USD/JPY157.804はいずれも10月30日",
+      "relative_strength": "2s10sは同一基準日30日に限り+38bp。米株2日の因果には使用しない",
+      "background": "FRED・日足正本が米株2日より1営業日古い",
+      "impact_on_japan": "4日の銀行・不動産・輸出株判断は時刻付き円・国内外金利で再確認"
+    }
+  ],
+  "market_move_explanation": {
+    "title": "AI・半導体続落の一方、景気循環・内需・金融へ資金回転",
+    "move": "SOX-3.37%、NASDAQ100-1.39%、VIX+8.91%。Sector SPDR ETF代理は8/11上昇",
+    "trigger": "AIインフラ投資の資金調達・収益化懸念がテックに残り、ISM製造業の拡大と原油供給懸念後退が業種間の再配分を促したとの二次資料を確認",
+    "transmission_chain": [
+      "AI投資回収・資金調達への警戒",
+      "半導体・情報技術が劣後",
+      "ISMの成長と高い価格指数で景気循環・金融・素材を選別",
+      "エネルギーETFは供給懸念後退観測で反落",
+      "日本は休場のため11月4日に半導体・銀行・不動産で確認"
+    ],
+    "hit_hardest": [
+      {
+        "market": "米半導体・情報技術・エネルギー",
+        "reason": "SOX-3.37%、XLK-2.95%、XLE-3.96%"
+      }
+    ],
+    "relative_resilience": "XLY+2.41%、XLF+1.86%、XLB+1.76%、ダウ+0.41%",
+    "japan_impact": "半導体・AI関連は下押し候補。原油安観測は空運・運輸のコスト面に追い風、資源に逆風候補だが、定義付き原油値を採用しておらず条件付き",
+    "confidence": "supported。市場数値は正本、ISMと企業取引は一次資料、市場背景はReuters補足。単一因果は断定しない",
+    "invalidation": "SOX・NASDAQ100が反発し、国内半導体がTOPIX比で上昇する一方、XLY・XLF・XLBと国内内需・金融が失速する場合"
+  },
+  "internal_strength": {
+    "large_vs_small": "NASDAQ100-1.39%、S&P500-0.51%、Russell2000-0.21%、ダウ+0.41%。大型ハイテクが最も弱い",
+    "breadth": "Sector SPDR ETF代理は8上昇・3下落。APは米株の多数が上昇と報道したが、全銘柄Breadthの精密値は未採用",
+    "sectors": "上位XLY+2.41%、XLF+1.86%、XLB+1.76%。下位XLE-3.96%、XLK-2.95%、XLV-0.15%",
+    "assessment": "指数はハイテク集中で弱い一方、業種幅は改善。全面リスクオフではなく高バリュエーションから景気循環・内需への回転"
+  },
+  "us_sector_etf_closes": [
+    {
+      "ticker": "XLC",
+      "price": 100.26,
+      "change_pct": 0.36,
+      "market_date": "2026-11-02",
+      "value_type": "daily Close",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLY",
+      "price": 118.16,
+      "change_pct": 2.41,
+      "market_date": "2026-11-02",
+      "value_type": "daily Close",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLP",
+      "price": 90.83,
+      "change_pct": 1.58,
+      "market_date": "2026-11-02",
+      "value_type": "daily Close",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLE",
+      "price": 67.25,
+      "change_pct": -3.96,
+      "market_date": "2026-11-02",
+      "value_type": "daily Close",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLF",
+      "price": 57.56,
+      "change_pct": 1.86,
+      "market_date": "2026-11-02",
+      "value_type": "daily Close",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLV",
+      "price": 184.6,
+      "change_pct": -0.15,
+      "market_date": "2026-11-02",
+      "value_type": "daily Close",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLI",
+      "price": 169.71,
+      "change_pct": 1.38,
+      "market_date": "2026-11-02",
+      "value_type": "daily Close",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLB",
+      "price": 53.67,
+      "change_pct": 1.76,
+      "market_date": "2026-11-02",
+      "value_type": "daily Close",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLRE",
+      "price": 43.64,
+      "change_pct": 1.09,
+      "market_date": "2026-11-02",
+      "value_type": "daily Close",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLK",
+      "price": 174.22,
+      "change_pct": -2.95,
+      "market_date": "2026-11-02",
+      "value_type": "daily Close",
+      "proxy_for_sector_index": true
+    },
+    {
+      "ticker": "XLU",
+      "price": 43.67,
+      "change_pct": 0.55,
+      "market_date": "2026-11-02",
+      "value_type": "daily Close",
+      "proxy_for_sector_index": true
+    }
+  ],
+  "monitoring_points": [
+    {
+      "target": "AI・半導体",
+      "today_check": "SOX・NASDAQ100、4日の国内半導体・9984のTOPIX比と出来高",
+      "view_change_condition": "SOX反発と国内半導体のTOPIX比改善で下押し評価を縮小"
+    },
+    {
+      "target": "業種回転",
+      "today_check": "XLY・XLF・XLB対XLK・XLE、4日の内需・金融・資源",
+      "view_change_condition": "景気循環・内需が失速しXLK・XLEが反発すれば回転評価を撤回"
+    },
+    {
+      "target": "日銀後の国内選別",
+      "today_check": "4日の8306・8316対8801・8802、円・国内金利",
+      "view_change_condition": "銀行が反発し不動産が失速すれば11月2日の相対関係を一時的と判断"
+    },
+    {
+      "target": "米イベント",
+      "today_check": "JOLTS、ISMサービス、雇用統計、CPI、PPIと同日米金利",
+      "view_change_condition": "成長・価格鈍化と金利低下でも高PER株が反発しなければ利益要因を重視"
+    }
+  ],
+  "data_quality": {
+    "overall": "MANUAL_REVIEW",
+    "missing": [
+      "米2年・10年債利回り、DXY、USD/JPYの正本は10月30日で、米株11月2日と基準日がずれる",
+      "Gold・Silver・WTI・Brentの保存連続先物と取引所・限月・値種別・基準時刻の対応",
+      "11月3日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "日本株17業種のうち4業種、監視34銘柄のうち8銘柄は外部429で再取得できず、取得済み13業種・26銘柄のみ評価",
+      "アナリスト評価変更と日本企業開示の全件網羅",
+      "Project添付仕様書3点は接続済みGoogle Driveの完全一致・部分一致検索で取得できず、Project Instructionsとmain現行仕様を優先"
+    ],
+    "differences": [
+      "AI・半導体は続落したが、米11業種ETF代理は8上昇・3下落へ改善",
+      "XLEは前営業日の相対優位から-3.96%へ反転、XLY・XLF・XLBが上昇",
+      "ISM製造業は55.5へ上昇し、価格指数75.2と投入価格圧力が残る",
+      "日本11月2日は日経平均型がTOPIX型を0.71ポイント上回り、銀行・情報通信が劣後",
+      "本日は東証現物休場のため、日本への米11月2日材料の現物反応は11月4日に確認"
+    ],
+    "excluded": [
+      "10月30日の米金利・為替を11月2日の米株下落原因として扱うこと",
+      "限月・値種別・時刻未確認の商品先物、暗号資産現在値、日経225先物",
+      "Copper価格・在庫（任意非掲載）",
+      "原油低下観測またはISMだけを11月2日の全市場の単一原因と断定すること",
+      "未取得4業種・8銘柄を含む日本市場全体のBreadth断定",
+      "評価変更なし、企業材料を全件確認済みという包括断定"
+    ],
+    "cautions": [
+      "QUALIFIED注釈付き版",
+      "米株2日、金利・為替30日、日本株2日を混同しない",
+      "Sector SPDR ETFは業種指数そのものではない",
+      "日本株は取得済み13業種・26銘柄の限定サンプル",
+      "Copperは任意非掲載",
+      "事実・市場反応・解釈を分離"
+    ]
+  },
+  "final_conclusion": {
+    "headline": "注釈付き11月3日版｜米AI・半導体は続落、景気循環・内需へ広がる選別",
+    "winners": [
+      "米一般消費財・金融・素材",
+      "日本の電力・不動産・医薬品"
+    ],
+    "losers": [
+      "米AI・半導体・情報技術・エネルギー",
+      "日本の銀行・情報通信・資源"
+    ],
+    "top_three": [
+      "米11月2日はS&P500-0.51%、NASDAQ-1.07%、NASDAQ100-1.39%、SOX-3.37%。VIXは+8.91%でAI・半導体の調整が継続",
+      "米11業種ETF代理は8上昇・3下落。一般消費財+2.41%、金融+1.86%、素材+1.76%に対し、エネルギー-3.96%、情報技術-2.95%",
+      "米10月ISM製造業PMIは55.5（9月54.5）。新規受注55.5、製造59.0、雇用52.4、価格75.2で成長と投入価格圧力が併存"
+    ],
+    "triggers": [
+      "SOX・NASDAQ100の反発力",
+      "4日の国内半導体・銀行・不動産",
+      "JOLTS・雇用統計・CPIと同日金利"
+    ],
+    "disclaimer": "QUALIFIED。米金利・為替の基準日差、未定義先物、現在値、未取得日本系列、網羅不能項目を除外。推測補完なし。"
+  },
+  "japan_equities_preview": {
+    "summary": "注釈付き11月3日版｜米AI・半導体は続落、景気循環・内需へ広がる選別",
+    "top_materials": [
+      "米11月2日はS&P500-0.51%、NASDAQ-1.07%、NASDAQ100-1.39%、SOX-3.37%。VIXは+8.91%でAI・半導体の調整が継続",
+      "米11業種ETF代理は8上昇・3下落。一般消費財+2.41%、金融+1.86%、素材+1.76%に対し、エネルギー-3.96%、情報技術-2.95%",
+      "米10月ISM製造業PMIは55.5（9月54.5）。新規受注55.5、製造59.0、雇用52.4、価格75.2で成長と投入価格圧力が併存",
+      "日本11月2日は日経平均型-0.11%、TOPIX型-0.82%。電力・ガス+1.25%、不動産+1.08%、医薬品+0.84%に対し銀行-1.94%",
+      "11月3日の東証現物は文化の日で休場。OSEのデリバティブ祝日取引は実施されるが、限月・値種別を確認できない数値は不採用"
+    ],
+    "focus_sectors": [
+      "半導体・電機",
+      "銀行",
+      "不動産",
+      "素材",
+      "運輸・空運"
+    ],
+    "top_stories": [
+      {
+        "company": "ソフトバンクグループ",
+        "ticker": "9984",
+        "headline": "2日-1.58%、米AI・半導体続落の4日波及を監視",
+        "importance": "high",
+        "market_pricing_status": "米2日材料は未反映"
+      },
+      {
+        "company": "三菱UFJフィナンシャル・グループ",
+        "ticker": "8306",
+        "headline": "2日-1.86%、銀行業ETF代理-1.94%",
+        "importance": "high",
+        "market_pricing_status": "日銀決定を一部反映、米2日材料は未反映"
+      },
+      {
+        "company": "第一三共",
+        "ticker": "4568",
+        "headline": "2日+5.03%、医薬品ETF代理+0.84%",
+        "importance": "medium",
+        "market_pricing_status": "2日実績に反映"
+      }
+    ],
+    "total_story_count": 3
+  },
+  "what_changed": {
+    "summary": "前回のAI・半導体急落とディフェンシブ退避から、半導体続落を残しつつ一般消費財・金融・素材へ上昇業種が広がった。日本は11月2日の実績を追加し、休場日の条件付き波及へ更新。",
+    "items": [
+      "SOXは続落、VIXは上昇",
+      "米上昇業種ETF代理は6から8へ増加",
+      "XLEは+1.91%から-3.96%へ反転",
+      "日本は日経平均型がTOPIX型を相対上回る",
+      "ISM製造業55.5と価格75.2を新規反映"
+    ]
+  },
+  "publication_policy": {
+    "status": "QUALIFIED",
+    "mode": "provisional",
+    "updated_at": "2026-11-03T06:58:00+09:00",
+    "complete_gate": "FAIL",
+    "copper_included": false,
+    "note": "11月2日の米株・日本株の確認済み終値と一次資料を採用。基準日が古い米金利・為替、未定義先物、現在値、未取得日本系列、網羅不能項目を除外した注釈付き公開。",
+    "missing_items": [
+      "米2年・10年債利回り、DXY、USD/JPYの正本は10月30日で、米株11月2日と基準日がずれる",
+      "Gold・Silver・WTI・Brentの保存連続先物と取引所・限月・値種別・基準時刻の対応",
+      "11月3日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "日本株17業種のうち4業種、監視34銘柄のうち8銘柄は外部429で再取得できず、取得済み13業種・26銘柄のみ評価",
+      "アナリスト評価変更と日本企業開示の全件網羅",
+      "Project添付仕様書3点は接続済みGoogle Driveの完全一致・部分一致検索で取得できず、Project Instructionsとmain現行仕様を優先"
+    ]
+  },
+  "market_context_themes": [
+    {
+      "theme": "米物価と金融政策",
+      "timeline": [
+        {
+          "date": "2026-03-18",
+          "title": "FRBは利下げを急がず据え置き",
+          "fact": "FOMCは政策金利を3.50〜3.75%に据え置き、インフレはなおやや高いと説明しました。",
+          "market_impact": "景気を支える利下げ期待より、物価と中東情勢を見極める姿勢が優先されました。",
+          "source_ids": [
+            "fed-mar18"
+          ]
+        },
+        {
+          "date": "2026-04-29",
+          "title": "高金利の長期化が市場の前提に",
+          "fact": "FOMCは3.50〜3.75%を維持しました。",
+          "market_impact": "株式市場では、成長率だけでなく高い資本コストに耐えられる利益と財務が重視される状態が続きました。",
+          "source_ids": [
+            "fed-apr29"
+          ]
+        },
+        {
+          "date": "2026-09-16",
+          "title": "FRBが0.25%利上げ",
+          "fact": "FOMCは政策金利を3.75〜4.00%へ引き上げました。",
+          "market_impact": "物価再加速への警戒が政策変更につながり、高PER株への金利負担が一段と意識されました。",
+          "source_ids": [
+            "fed-sep16"
+          ]
+        },
+        {
+          "date": "2026-10-14",
+          "title": "CPI上振れで追加利上げ観測が再燃",
+          "fact": "米9月CPIは前月比+0.6%、前年比+3.7%。NASDAQ総合は1.88%安、Russell2000は約1.9%安でした。",
+          "market_impact": "高金利が長引くとの見方から、将来利益と借入資金への依存が大きい銘柄ほど売られました。",
+          "source_ids": [
+            "oct15-0",
+            "reaction14"
+          ]
+        },
+        {
+          "date": "2026-10-15",
+          "title": "米PPIと小売が公表",
+          "fact": "PPIの物価上昇と名目小売の増加を確認。前月改定も反映",
+          "market_impact": "物価警戒は残るが主要指数は反発。単一指標から値動きを断定しない",
+          "source_ids": [
+            "oct16-ppi",
+            "oct16-retail",
+            "reaction15"
+          ]
+        },
+        {
+          "date": "2026-10-16",
+          "title": "物価警戒の中で安全資産需要",
+          "fact": "AI・半導体株が下落する一方、国債には逃避需要が入りました。",
+          "market_impact": "『物価高なら金利高・株安』だけでは説明できず、信用不安を加えて読む局面です。",
+          "source_ids": [
+            "us-close-1016"
+          ]
+        },
+        {
+          "date": "2026-10-19",
+          "title": "輸入物価と実体生産を確認",
+          "fact": "16日輸入物価上昇と生産増を一次確認。景気と物価は別に評価（19日朝の確認整理）",
+          "market_impact": "物価警戒は維持。ただし金利は古い正本で当日方向を断定しない",
+          "source_ids": [
+            "oct19-0",
+            "oct19-1"
+          ]
+        },
+        {
+          "date": "2026-10-20",
+          "title": "20日朝の認識更新",
+          "fact": "19日米AI反発報道と新制裁を確認。正本値は16日、金利15日",
+          "market_impact": "昨日の一律慎重姿勢を条件付きで弱める。ただし反発の広がりと企業利益・資金調達改善を伴うまで信用不安解消とはしない。",
+          "source_ids": [
+            "oct20-reaction",
+            "oct20-0"
+          ]
+        },
+        {
+          "date": "2026-10-28",
+          "title": "FOMCは据え置き、反対2名は利上げを選好",
+          "fact": "FOMCは政策金利を3.75〜4.00%に据え置いた。採決は10対2で、Cook理事とHammack総裁は0.25ポイント利上げを選好した。",
+          "market_impact": "据え置き後も米株は小幅高、SOXはS&P500を1.47ポイント上回った。ただし米金利正本は10月27日で、決定後の金利反応は未確認。",
+          "source_ids": [
+            "oct29-fomc",
+            "oct28-market"
+          ]
+        },
+        {
+          "date": "2026-10-29",
+          "title": "成長加速とPCE物価の粘着を同時確認",
+          "fact": "米Q3実質GDPは年率+3.4%、9月PCE物価は前年比+3.6%、コア+3.1%。",
+          "market_impact": "景気の底堅さとインフレ粘着が同居し、NASDAQ100は下落、小型株・金融は上昇。単独因果は断定しない。",
+          "source_ids": [
+            "oct30-us-gdp",
+            "oct30-us-pce",
+            "oct30-market"
+          ]
+        },
+        {
+          "date": "2026-11-02",
+          "title": "週明けは米雇用・物価イベント待ち",
+          "fact": "30日ECIは前期比+0.8%、今週はISM・JOLTS・雇用統計、来週はCPIを予定。",
+          "market_impact": "同日米金利が未収集のため金利因果は保留。",
+          "source_ids": [
+            "nov2-weekend"
+          ]
+        },
+        {
+          "date": "2026-11-03",
+          "title": "ISM拡大と価格圧力",
+          "fact": "PMI55.5、価格75.2。米金利2日値は未確認。",
+          "market_impact": "XLI・XLB・XLF上昇、ハイテク下落。単独因果は保留。",
+          "source_ids": [
+            "nov3-ism",
+            "nov3-market"
+          ]
+        }
+      ],
+      "initial_view": {
+        "date": "2026-03-18",
+        "text": "FRBはインフレを警戒し、利下げを急がない姿勢"
+      },
+      "new_fact": {
+        "date": "2026-11-03",
+        "text": "ISM拡大と高い投入価格を確認。"
+      },
+      "market_reaction": {
+        "date": "2026-11-03",
+        "text": "循環・金融・素材上昇、半導体下落。"
+      },
+      "current_view": "景気拡大は循環株の追い風候補だが、価格75.2は金利・利益率の反証。JOLTS・雇用統計・CPIと同日金利で再評価。",
+      "japan_impact": "4日の機械・素材・銀行と高PER電機の相対反応を確認。",
+      "counter_evidence": "成長指標が強くても金利上昇・利益率懸念で循環株が失速すれば見方を修正。",
+      "source_ids": [
+        "fed-apr29",
+        "fed-mar18",
+        "fed-sep16",
+        "oct15-0",
+        "oct16-ppi",
+        "oct16-retail",
+        "reaction14",
+        "reaction15",
+        "us-close-1016",
+        "oct19-0",
+        "oct19-1",
+        "oct20-reaction",
+        "oct20-0",
+        "oct29-fomc",
+        "oct28-market",
+        "oct30-us-gdp",
+        "oct30-us-pce",
+        "oct30-market",
+        "nov2-market",
+        "nov2-weekend",
+        "nov3-market",
+        "nov3-ism"
+      ]
+    },
+    {
+      "theme": "AI・半導体：需要拡大から採算選別へ",
+      "timeline": [
+        {
+          "date": "2026-04-16",
+          "title": "ASML・TSMCがAI需要の強さを確認",
+          "fact": "両社の見通しは、クラウド各社のAI向け設備投資と先端半導体需要の継続を示しました。",
+          "market_impact": "AI投資の持続性が確認され、半導体装置・先端ロジックへの成長期待が相場を支えました。",
+          "source_ids": [
+            "ai-apr16"
+          ]
+        },
+        {
+          "date": "2026-07-20",
+          "title": "ASML株上昇、期待が株価へ集中",
+          "fact": "ASML株は年初来約60%上昇し、AI設備需要への期待が一段と高まりました。",
+          "market_impact": "実需の強さと同時に、株価へ織り込まれた期待の大きさもリスクになりました。",
+          "source_ids": [
+            "ai-jul20"
+          ]
+        },
+        {
+          "date": "2026-09-14",
+          "title": "AI投資の採算懸念で半導体が急落",
+          "fact": "AI投資の減速警戒を受け、米半導体株が大きく売られました。",
+          "market_impact": "『需要が増えるか』だけでなく、『巨額投資を利益で回収できるか』が評価軸に加わりました。",
+          "source_ids": [
+            "ai-sep14"
+          ]
+        },
+        {
+          "date": "2026-10-14",
+          "title": "強い需要見通しでも株価は下落",
+          "fact": "ASMLは2028年まで需要が供給を上回る見通しを示しましたが、SOXは約4%下落しました。",
+          "market_impact": "需要崩壊ではなく、金利上昇・資金調達負担・高い株価評価が実需の強さを上回ったと整理できます。",
+          "source_ids": [
+            "oct15-2",
+            "reaction14"
+          ]
+        },
+        {
+          "date": "2026-10-15",
+          "title": "実需の強さと株価の選別が続く",
+          "fact": "TSMCは増益・強いQ4見通し。米主要指数反発でも半導体弱含み",
+          "market_impact": "設備需要と負債・評価倍率を分離。全面回復は未確認",
+          "source_ids": [
+            "oct16-tsmc",
+            "reaction15"
+          ]
+        },
+        {
+          "date": "2026-10-16",
+          "title": "AI投資の資金調達へ焦点移動",
+          "fact": "CoreWeave株は12%安、債券利回りは15%超。SOXは8日続落しました。",
+          "market_impact": "需要の有無より、誰が高い資本コストで投資を継続できるかが評価軸になりました。",
+          "source_ids": [
+            "ai-credit-1016",
+            "us-close-1016"
+          ]
+        },
+        {
+          "date": "2026-10-19",
+          "title": "週明けは実需・信用・評価を分離",
+          "fact": "16日正本は半導体・NASDAQ100がダウより大幅安（19日朝の確認整理）",
+          "market_impact": "TSMC需要の強さだけでAI信用不安解消とは扱わない",
+          "source_ids": [
+            "us-close-1016",
+            "oct19-3"
+          ]
+        },
+        {
+          "date": "2026-10-20",
+          "title": "20日朝の認識更新",
+          "fact": "19日米AI反発報道と新制裁を確認。正本値は16日、金利15日",
+          "market_impact": "昨日の一律慎重姿勢を条件付きで弱める。ただし反発の広がりと企業利益・資金調達改善を伴うまで信用不安解消とはしない。",
+          "source_ids": [
+            "oct20-reaction",
+            "oct20-0"
+          ]
+        },
+        {
+          "date": "2026-10-21",
+          "title": "AI・半導体が反発",
+          "fact": "Reutersは情報技術とSOXの上昇を報道。外部値は正本価格に採用しない。",
+          "market_impact": "20日の価値株優位から21日はAI・半導体へ日次で回転した。",
+          "source_ids": [
+            "oct22-market"
+          ]
+        },
+        {
+          "date": "2026-10-22",
+          "title": "AI投資採算懸念で半導体が再び急落",
+          "fact": "ReutersはNASDAQが2.60%、SOXが6.7%下落したと報道。外部値は正本価格に採用しない。",
+          "market_impact": "前日の反発から一転し、需要の有無より投資回収と資本コストへの警戒が優勢になった。",
+          "source_ids": [
+            "oct23-market"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "title": "SOXは小幅反発、全面回復ではない",
+          "fact": "正本でSOX+0.44%、XLK+0.49%。S&P500は-0.52%。",
+          "market_impact": "22日の急落後に半導体は下げ止まったが、11業種中上昇は3業種。",
+          "source_ids": [
+            "oct26-market"
+          ]
+        },
+        {
+          "date": "2026-10-26",
+          "title": "週明けは反発の持続性を検証",
+          "fact": "23日正本のSOX反発と、11業種中3業種のみ上昇という狭さを分けて確認。",
+          "market_impact": "半導体を一方向の逆風から、国内市場幅を伴うか確認する段階へ変更。",
+          "source_ids": [
+            "oct26-market"
+          ]
+        },
+        {
+          "date": "2026-10-27",
+          "title": "半導体反発が加速する一方、業種幅は縮小",
+          "fact": "SOX+3.60%、NASDAQ100+1.29%。米11業種ETFは5上昇・6下落。",
+          "market_impact": "AI需要期待は回復したが、指数上昇は半導体・大型グロースへの集中を伴う。",
+          "source_ids": [
+            "oct28-market"
+          ]
+        },
+        {
+          "date": "2026-10-29",
+          "title": "Alphabet決算後に大型テック集中が逆回転",
+          "fact": "NASDAQ100-1.38%、SOX-1.42%に対しRussell2000+1.01%。11業種ETF代理は9上昇。",
+          "market_impact": "AI需要の有無より、巨額投資の回収と資本負担が再び評価軸になった。",
+          "source_ids": [
+            "oct30-market"
+          ]
+        },
+        {
+          "date": "2026-11-02",
+          "title": "Intel後に半導体急落",
+          "fact": "Intel Q3後の30日、SOX-7.20%、NASDAQ100-3.46%。",
+          "market_impact": "AI・半導体集中の逆回転が拡大。",
+          "source_ids": [
+            "nov2-intel",
+            "nov2-market"
+          ]
+        },
+        {
+          "date": "2026-11-03",
+          "title": "半導体続落と大型AI光接続取引",
+          "fact": "SOX-3.37%。MarvellはLumentum買収の最終契約。",
+          "market_impact": "中期需要期待と短期の希薄化・統合リスクが併存。",
+          "source_ids": [
+            "nov3-marvell",
+            "nov3-market"
+          ]
+        }
+      ],
+      "initial_view": {
+        "date": "2026-04-16",
+        "text": "AI設備投資と先端半導体需要の強さが株価を支える局面"
+      },
+      "new_fact": {
+        "date": "2026-11-03",
+        "text": "半導体は続落、AI光接続の大型取引を発表。"
+      },
+      "market_reaction": {
+        "date": "2026-11-03",
+        "text": "SOX-3.37%、XLK-2.95%、VIX+8.91%。"
+      },
+      "current_view": "AI需要の中期拡大は維持するが、収益化・資金調達・大型取引の執行リスクで選別が続く。",
+      "japan_impact": "4日の9984・半導体・電子部品をTOPIX比と出来高で確認。",
+      "counter_evidence": "SOX反発、国内半導体のTOPIX比改善、VIX低下なら下押し評価を撤回。",
+      "source_ids": [
+        "ai-apr16",
+        "ai-credit-1016",
+        "ai-jul20",
+        "ai-sep14",
+        "oct15-2",
+        "oct16-tsmc",
+        "reaction14",
+        "reaction15",
+        "us-close-1016",
+        "oct19-3",
+        "oct20-reaction",
+        "oct20-0",
+        "oct22-market",
+        "oct23-market",
+        "oct26-market",
+        "oct28-market",
+        "oct30-market",
+        "nov2-market",
+        "nov2-weekend",
+        "nov2-intel",
+        "nov3-market",
+        "nov3-marvell"
+      ]
+    },
+    {
+      "theme": "日銀・円相場と日本株",
+      "timeline": [
+        {
+          "date": "2026-04-28",
+          "title": "日銀は0.75%を維持",
+          "fact": "日銀は無担保コール翌日物を0.75%程度に誘導しましたが、3委員は1.0%への引き上げを提案しました。",
+          "market_impact": "据え置きでも利上げ方向への圧力が明確になり、銀行・不動産・為替の選別材料になりました。",
+          "source_ids": [
+            "boj-apr28"
+          ]
+        },
+        {
+          "date": "2026-06-16",
+          "title": "日銀が1.0%へ利上げ",
+          "fact": "日銀は政策金利を1.0%程度へ引き上げ、物価上振れリスクと原油高を理由に金融緩和度を調整しました。",
+          "market_impact": "銀行には利ざや期待、住宅・不動産や高PER株には割引率上昇が意識されました。",
+          "source_ids": [
+            "boj-jun16"
+          ]
+        },
+        {
+          "date": "2026-09-18",
+          "title": "日銀が1.25%へ追加利上げ",
+          "fact": "日銀は政策金利を1.25%程度へ引き上げ、AI需要・原油・円安による物価上振れリスクを指摘しました。",
+          "market_impact": "利上げだけでは円高が定着せず、日本株では金利恩恵と輸入コストの影響が分かれました。",
+          "source_ids": [
+            "boj-sep18"
+          ]
+        },
+        {
+          "date": "2026-10-14",
+          "title": "米CPI後にドル高、日米金利差を再評価",
+          "fact": "米CPI上振れで追加利上げ観測が強まり、ドルは18か月ぶり高値圏へ上昇しました。",
+          "market_impact": "円安は輸出採算を支える一方、原油・輸入物価を通じて内需企業と家計の負担を増やします。",
+          "source_ids": [
+            "global-oct14"
+          ]
+        },
+        {
+          "date": "2026-10-15",
+          "title": "小枝委員が適時調整に言及",
+          "fact": "経済・物価に応じた政策調整の見解。新規決定ではない",
+          "market_impact": "銀行・不動産・輸出の反応を金利・為替と照合する",
+          "source_ids": [
+            "oct16-boj"
+          ]
+        },
+        {
+          "date": "2026-10-17",
+          "title": "日銀正常化の継続",
+          "fact": "物価が想定以上なら引き締めを速める必要性が示されました。",
+          "market_impact": "銀行の利ざや、不動産・高PERの割引率、円相場の三経路を確認します。",
+          "source_ids": [
+            "imf-boj-1017"
+          ]
+        },
+        {
+          "date": "2026-10-19",
+          "title": "政策発言と新規決定を区別",
+          "fact": "日銀16日挨拶は利上げ継続を説明。新法の免除も確認（19日朝の確認整理）",
+          "market_impact": "銀行・輸出・運輸の見方は金利・円・原油の実測で変更",
+          "source_ids": [
+            "oct19-5",
+            "oct19-2"
+          ]
+        },
+        {
+          "date": "2026-10-20",
+          "title": "20日朝の認識更新",
+          "fact": "19日米AI反発報道と新制裁を確認。正本値は16日、金利15日",
+          "market_impact": "昨日の一律慎重姿勢を条件付きで弱める。ただし反発の広がりと企業利益・資金調達改善を伴うまで信用不安解消とはしない。",
+          "source_ids": [
+            "oct20-reaction",
+            "oct20-0"
+          ]
+        },
+        {
+          "date": "2026-10-23",
+          "title": "CPIと金融システムリスクを会合前に確認",
+          "fact": "9月CPIは総合・生鮮除くとも前年比+2.1%。日銀はAI市場調整とNBFI連関を点検。",
+          "market_impact": "銀行・不動産・円敏感株は政策決定と金融安定評価を分けて確認。",
+          "source_ids": [
+            "oct26-cpi",
+            "oct26-boj"
+          ]
+        },
+        {
+          "date": "2026-10-27",
+          "title": "サービス価格と銀行高を会合前に確認",
+          "fact": "9月SPPIは前年比+3.7%。日本27日は銀行+2.55%、日経平均型+1.71%。",
+          "market_impact": "サービス価格の粘着性と会合前の金利感応株上昇を確認したが、単独因果は未確認。",
+          "source_ids": [
+            "oct28-boj-sppi",
+            "oct28-japan-market"
+          ]
+        },
+        {
+          "date": "2026-10-29",
+          "title": "日銀会合前に銀行高、機械・電機安",
+          "fact": "銀行+2.12%、公益+1.97%に対し機械-2.44%、電機精密-2.22%。日銀決定は30日予定。",
+          "market_impact": "金利敏感株の相対優位候補だが、決定前の価格であり政策結果を織り込んだと断定しない。",
+          "source_ids": [
+            "oct30-boj-schedule",
+            "oct30-japan-market"
+          ]
+        },
+        {
+          "date": "2026-11-02",
+          "title": "日銀据え置き後の週明け",
+          "fact": "日銀は1.25%据え置き、物価上振れ、ETF売却加速を決定。",
+          "market_impact": "銀行・不動産・円の週明け反応を監視。",
+          "source_ids": [
+            "nov2-boj"
+          ]
+        },
+        {
+          "date": "2026-11-03",
+          "title": "日銀全文公表と日本休場",
+          "fact": "日銀は展望全文を公表。3日は東証現物休場。",
+          "market_impact": "2日は銀行-1.94%、不動産+1.08%。4日の再評価を待つ。",
+          "source_ids": [
+            "nov3-boj",
+            "nov3-jpx",
+            "nov3-market"
+          ]
+        }
+      ],
+      "initial_view": {
+        "date": "2026-04-28",
+        "text": "政策金利0.75%でも利上げを求める意見が増え、正常化継続が意識された"
+      },
+      "new_fact": {
+        "date": "2026-11-03",
+        "text": "展望全文を確認。3日現物休場、4日再開。"
+      },
+      "market_reaction": {
+        "date": "2026-11-03",
+        "text": "2日は銀行劣後、不動産相対優位。"
+      },
+      "current_view": "正常化方向は維持するが、2日の銀行安を反証として単純な銀行追い風を避ける。",
+      "japan_impact": "4日の円・国内金利と銀行・不動産の相対反応を確認。",
+      "counter_evidence": "銀行反発・不動産失速なら2日の相対関係を一時的と判断。",
+      "source_ids": [
+        "boj-apr28",
+        "boj-jun16",
+        "boj-sep18",
+        "global-oct14",
+        "imf-boj-1017",
+        "oct16-boj",
+        "oct19-5",
+        "oct19-2",
+        "oct20-reaction",
+        "oct20-0",
+        "oct26-cpi",
+        "oct26-boj",
+        "oct28-boj-sppi",
+        "oct28-japan-market",
+        "oct30-boj-schedule",
+        "oct30-japan-market",
+        "nov2-market",
+        "nov2-weekend",
+        "nov2-boj",
+        "nov3-market",
+        "nov3-boj",
+        "nov3-jpx"
+      ]
+    }
+  ],
+  "market_context_sources": {
+    "fed-mar18": {
+      "id": "fed-mar18",
+      "title": "Federal Reserve issues FOMC statement",
+      "publisher": "Federal Reserve Board",
+      "published_date": "2026-03-18",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260318a.htm"
+    },
+    "fed-apr29": {
+      "id": "fed-apr29",
+      "title": "Federal Reserve issues FOMC statement",
+      "publisher": "Federal Reserve Board",
+      "published_date": "2026-04-29",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm"
+    },
+    "fed-sep16": {
+      "id": "fed-sep16",
+      "title": "Federal Reserve issues FOMC statement",
+      "publisher": "Federal Reserve Board",
+      "published_date": "2026-09-16",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
+    },
+    "oct15-0": {
+      "id": "oct15-0",
+      "title": "米9月CPI、ガソリン上昇で総合加速",
+      "publisher": "BLS",
+      "published_date": "2026-10-14",
+      "source_url": "https://www.bls.gov/news.release/archives/cpi_10142026.htm"
+    },
+    "reaction14": {
+      "id": "reaction14",
+      "title": "10月14日米株市場反応",
+      "publisher": "Reuters",
+      "published_date": "2026-10-14",
+      "source_url": "https://www.reuters.com/business/sp-500-dow-futures-rise-ahead-big-bank-results-cpi-data-2026-10-14/"
+    },
+    "oct16-ppi": {
+      "id": "oct16-ppi",
+      "title": "米9月PPI、財・サービス双方で上昇",
+      "publisher": "BLS",
+      "published_date": "2026-10-15",
+      "source_url": "https://www.bls.gov/news.release/archives/ppi_10152026.htm"
+    },
+    "oct16-retail": {
+      "id": "oct16-retail",
+      "title": "米小売売上は名目増、8月も上方改定",
+      "publisher": "U.S. Census Bureau",
+      "published_date": "2026-10-15",
+      "source_url": "https://www.census.gov/retail/marts/www/marts_current.pdf"
+    },
+    "reaction15": {
+      "id": "reaction15",
+      "title": "10月15日米市場の終値記事",
+      "publisher": "Reuters",
+      "published_date": "2026-10-15",
+      "source_url": "https://www.reuters.com/business/nasdaq-futures-dive-1-ai-rout-deepens-debt-concerns-2026-10-15/"
+    },
+    "ai-apr16": {
+      "id": "ai-apr16",
+      "title": "Strong ASML, TSMC forecasts signal AI spending boom is intact",
+      "publisher": "Reuters",
+      "published_date": "2026-04-16",
+      "source_url": "https://www.reuters.com/business/strong-asml-tsmc-forecasts-signal-ai-spending-boom-is-intact-2026-04-16/"
+    },
+    "ai-jul20": {
+      "id": "ai-jul20",
+      "title": "Could AI chip boom make ASML Europe's first trillion-dollar firm?",
+      "publisher": "Reuters",
+      "published_date": "2026-07-20",
+      "source_url": "https://www.reuters.com/business/media-telecom/could-ai-chip-boom-make-asml-europes-first-trillion-dollar-firm-2026-07-20/"
+    },
+    "ai-sep14": {
+      "id": "ai-sep14",
+      "title": "Wall Street ends down, calls for AI slowdown pummel chipmakers",
+      "publisher": "Reuters",
+      "published_date": "2026-09-14",
+      "source_url": "https://www.reuters.com/business/ai-warnings-knock-nasdaq-futures-pressure-tech-stocks-2026-09-14/"
+    },
+    "oct15-2": {
+      "id": "oct15-2",
+      "title": "ASML、需要見通しの強さと株価心理を区別",
+      "publisher": "ASML",
+      "published_date": "2026-10-14",
+      "source_url": "https://www.investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026"
+    },
+    "oct16-tsmc": {
+      "id": "oct16-tsmc",
+      "title": "TSMC、Q3純利益68.7%増・Q4売上見通しを公表",
+      "publisher": "TSMC",
+      "published_date": "2026-10-15",
+      "source_url": "https://pr.tsmc.com/japanese/news/3346"
+    },
+    "boj-apr28": {
+      "id": "boj-apr28",
+      "title": "Statement on Monetary Policy",
+      "publisher": "Bank of Japan",
+      "published_date": "2026-04-28",
+      "source_url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260428a.pdf"
+    },
+    "boj-jun16": {
+      "id": "boj-jun16",
+      "title": "Change in the Guideline for Money Market Operations",
+      "publisher": "Bank of Japan",
+      "published_date": "2026-06-16",
+      "source_url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260616a.pdf"
+    },
+    "boj-sep18": {
+      "id": "boj-sep18",
+      "title": "Change in the Guideline for Money Market Operations",
+      "publisher": "Bank of Japan",
+      "published_date": "2026-09-18",
+      "source_url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf"
+    },
+    "global-oct14": {
+      "id": "global-oct14",
+      "title": "Trading Day: Tech melt",
+      "publisher": "Reuters",
+      "published_date": "2026-10-14",
+      "source_url": "https://www.reuters.com/commentary/reuters-open-interest/global-markets-trading-day-graphic-2026-10-14/"
+    },
+    "oct16-boj": {
+      "id": "oct16-boj",
+      "title": "小枝日銀委員、物価定着と適時の政策調整に言及",
+      "publisher": "日本銀行",
+      "published_date": "2026-10-15",
+      "source_url": "https://www.boj.or.jp/about/press/koen_2026/data/ko261015a1.pdf"
+    },
+    "us-close-1016": {
+      "id": "us-close-1016",
+      "title": "Wall Street tumbles as AI and oil worries weigh",
+      "publisher": "Reuters",
+      "published_date": "2026-10-16",
+      "source_url": "https://www.reuters.com/business/wall-st-futures-mixed-tech-wobbles-again-tesla-gains-2026-10-16/"
+    },
+    "ai-credit-1016": {
+      "id": "ai-credit-1016",
+      "title": "AI selloff and credit stress",
+      "publisher": "Reuters",
+      "published_date": "2026-10-16",
+      "source_url": "https://www.reuters.com/world/china/ai-selloff-hammers-hedge-funds-this-week-asia-managers-lead-losses-2026-10-16/"
+    },
+    "boj-1016": {
+      "id": "boj-1016",
+      "title": "BOJ chief on continued normalization",
+      "publisher": "Reuters",
+      "published_date": "2026-10-16",
+      "source_url": "https://www.reuters.com/world/asia-pacific/global-inflation-debate-puts-boj-rate-hike-pace-spotlight-2026-10-16/"
+    },
+    "imf-boj-1017": {
+      "id": "imf-boj-1017",
+      "title": "IMF on BOJ normalization",
+      "publisher": "Reuters",
+      "published_date": "2026-10-17",
+      "source_url": "https://www.reuters.com/world/asia-pacific/boj-may-need-tighten-faster-if-inflation-beats-forecast-imf-says-2026-10-17/"
+    },
+    "oct19-0": {
+      "id": "oct19-0",
+      "title": "米9月輸入物価は燃料以外にも上昇",
+      "publisher": "BLS",
+      "published_date": "2026-10-16",
+      "source_url": "https://www.bls.gov/news.release/archives/ximpim_10162026.htm"
+    },
+    "oct19-1": {
+      "id": "oct19-1",
+      "title": "米鉱工業生産は増加、製造業の回復幅は総合より小さい",
+      "publisher": "Federal Reserve Board",
+      "published_date": "2026-10-16",
+      "source_url": "https://www.federalreserve.gov/releases/g17/current/default.htm"
+    },
+    "oct19-2": {
+      "id": "oct19-2",
+      "title": "新ロシア法の関税・制裁を免除、既存措置は維持",
+      "publisher": "White House",
+      "published_date": "2026-10-16",
+      "source_url": "https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/"
+    },
+    "oct19-3": {
+      "id": "oct19-3",
+      "title": "ラガルド総裁、エネルギー物価とAI集中リスクに言及",
+      "publisher": "ECB",
+      "published_date": "2026-10-17",
+      "source_url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261017~7015ea3099.en.html"
+    },
+    "oct19-4": {
+      "id": "oct19-4",
+      "title": "ベネズエラ地震救援の支払例外、他の許可条件は維持",
+      "publisher": "OFAC",
+      "published_date": "2026-10-16",
+      "source_url": "https://ofac.treasury.gov/faqs/1263"
+    },
+    "oct19-5": {
+      "id": "oct19-5",
+      "title": "植田総裁挨拶、見通しに応じた利上げ継続を説明",
+      "publisher": "日本銀行",
+      "published_date": "2026-10-16",
+      "source_url": "https://www.boj.or.jp/about/press/koen_2026/ko261016a.htm"
+    },
+    "oct20-0": {
+      "id": "oct20-0",
+      "title": "OFACがPAIPA制裁と一般許可を公表",
+      "publisher": "OFAC",
+      "published_date": "2026-10-19",
+      "source_url": "https://ofac.treasury.gov/recent-actions/20261019"
+    },
+    "oct20-1": {
+      "id": "oct20-1",
+      "title": "日銀がFMIビジネスリスク管理の追加指針を案内",
+      "publisher": "日本銀行・BIS",
+      "published_date": "2026-10-19",
+      "source_url": "https://www.boj.or.jp/paym/intlact_pm/cpss/cpss261019a.htm"
+    },
+    "oct20-2": {
+      "id": "oct20-2",
+      "title": "USTR、メキシコ食品工場の労働案件解決を発表",
+      "publisher": "USTR",
+      "published_date": "2026-10-19",
+      "source_url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/united-states-announces-successful-resolution-rapid-response-labor-mechanism-matter-alimentos-grole"
+    },
+    "oct20-reaction": {
+      "id": "oct20-reaction",
+      "title": "19日AI反発・大型偏重",
+      "publisher": "Reuters",
+      "published_date": "2026-10-19",
+      "source_url": "https://www.reuters.com/business/wall-st-futures-climb-ai-stocks-rebound-oil-yields-fall-2026-10-19/"
+    },
+    "oct22-market": {
+      "id": "oct22-market",
+      "title": "Nasdaq leads Wall Street gains as AI sentiment improves",
+      "publisher": "Reuters",
+      "published_date": "2026-10-21",
+      "source_url": "https://www.reuters.com/legal/transactional/nasdaq-futures-lead-gains-spacex-super-micro-results-lift-ai-trade-2026-10-21/"
+    },
+    "oct23-market": {
+      "id": "oct23-market",
+      "title": "Nasdaq tumbles as AI spending concerns resurface",
+      "publisher": "Reuters",
+      "published_date": "2026-10-22",
+      "source_url": "https://www.reuters.com/business/nasdaq-futures-drop-over-1-ai-worries-resurface-oil-climbs-2026-10-22/"
+    },
+    "oct26-market": {
+      "id": "oct26-market",
+      "title": "Global Markets View USA, October 23",
+      "publisher": "Reuters",
+      "published_date": "2026-10-23",
+      "source_url": "https://www.reuters.com/world/china/global-markets-view-usa-2026-10-23/"
+    },
+    "oct26-cpi": {
+      "id": "oct26-cpi",
+      "title": "Consumer Price Index, September 2026",
+      "publisher": "Statistics Bureau of Japan",
+      "published_date": "2026-10-23",
+      "source_url": "https://www.stat.go.jp/english/data/cpi/1581-z.html"
+    },
+    "oct26-boj": {
+      "id": "oct26-boj",
+      "title": "Financial System Report October 2026",
+      "publisher": "Bank of Japan",
+      "published_date": "2026-10-23",
+      "source_url": "https://www.boj.or.jp/research/brp/fsr/data/fsr261023a.pdf"
+    },
+    "oct28-fed-calendar": {
+      "title": "FOMC October 2026 schedule",
+      "publisher": "Federal Reserve Board",
+      "published_date": "2026-10-28",
+      "source_url": "https://www.federalreserve.gov/newsevents/2026-october.htm"
+    },
+    "oct29-fomc": {
+      "id": "oct29-fomc",
+      "title": "Federal Reserve issues FOMC statement",
+      "publisher": "Federal Reserve Board",
+      "published_date": "2026-10-28",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+    },
+    "oct28-boj-sppi": {
+      "title": "September 2026 Services Producer Price Index",
+      "publisher": "Bank of Japan",
+      "published_date": "2026-10-27",
+      "source_url": "https://www.boj.or.jp/en/statistics/pi/cspi_release/sppi2609.pdf"
+    },
+    "oct28-market": {
+      "title": "27 October canonical market close",
+      "publisher": "Market Morning canonical market data",
+      "published_date": "2026-10-27",
+      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+    },
+    "oct28-japan-market": {
+      "title": "27 October Japan market close",
+      "publisher": "Market Morning canonical Japan market data",
+      "published_date": "2026-10-27",
+      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
+    },
+    "oct30-us-gdp": {
+      "id": "oct30-us-gdp",
+      "title": "米Q3実質GDPは前期比年率3.4%",
+      "published_date": "2026-10-29",
+      "verified_at": "2026-10-30T06:55:00+09:00",
+      "source_type": "primary",
+      "publisher": "U.S. Bureau of Economic Analysis",
+      "source_url": "https://www.bea.gov/news/2026/gross-domestic-product-third-quarter-2026-advance-estimate",
+      "verification_url": "https://www.bea.gov/news/2026/gross-domestic-product-third-quarter-2026-advance-estimate",
+      "verification_status": "PASS",
+      "fact": "実質GDPはQ3に年率3.4%増、Q2は2.2%増。国内民間最終需要は4.9%増。",
+      "analysis": "成長加速は景気敏感株を支え得る一方、金利高止まりリスクも残す。",
+      "limitations": "市場予想との比較は未確認。株価は複数材料を含む。",
+      "market_reaction_status": "verified",
+      "market_reaction": "Russell2000+1.01%、XLF+1.44%。指標単独の反応は未分離。",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "U.S. Bureau of Economic Analysisの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "実質GDPはQ3に年率3.4%増、Q2は2.2%増。国内民間最終需要は4.9%増。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-29、実確認2026-10-30T06:55:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "市場予想との比較は未確認。株価は複数材料を含む。"
+        }
+      }
+    },
+    "oct30-us-pce": {
+      "id": "oct30-us-pce",
+      "title": "9月PCE物価は前年比3.6%、コア3.1%",
+      "published_date": "2026-10-29",
+      "verified_at": "2026-10-30T06:55:00+09:00",
+      "source_type": "primary",
+      "publisher": "U.S. Bureau of Economic Analysis",
+      "source_url": "https://www.bea.gov/news/2026/personal-income-and-outlays-september-2026",
+      "verification_url": "https://www.bea.gov/news/2026/personal-income-and-outlays-september-2026",
+      "verification_status": "PASS",
+      "fact": "個人所得+0.2%、名目PCE+0.5%、実質PCEは0.1%未満の増加。PCE物価前年比+3.6%、コア+3.1%。",
+      "analysis": "実質消費の鈍さと物価粘着が同居し、高PER株の金利感応度に注意。",
+      "limitations": "市場予想との比較と指標単独の価格反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "U.S. Bureau of Economic Analysisの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "個人所得+0.2%、名目PCE+0.5%、実質PCEは0.1%未満の増加。PCE物価前年比+3.6%、コア+3.1%。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-29、実確認2026-10-30T06:55:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "市場予想との比較と指標単独の価格反応は未確認。"
+        }
+      }
+    },
+    "oct30-boj-schedule": {
+      "id": "oct30-boj-schedule",
+      "title": "日銀は10月30日に決定・展望レポート予定",
+      "published_date": "2026-10-30",
+      "verified_at": "2026-10-30T06:55:00+09:00",
+      "source_type": "primary",
+      "publisher": "Bank of Japan",
+      "source_url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm",
+      "verification_url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm",
+      "verification_status": "PASS",
+      "fact": "公式日程は10月29〜30日の会合、30日の決定・展望レポート公表を示す。",
+      "analysis": "円・国内金利を通じ銀行・不動産・自動車へ波及し得る。",
+      "limitations": "06:55 JST時点で公表時刻・内容・市場反応は未確認。予定を決定と扱わない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Bank of Japanの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "公式日程は10月29〜30日の会合、30日の決定・展望レポート公表を示す。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-30、実確認2026-10-30T06:55:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "06:55 JST時点で公表時刻・内容・市場反応は未確認。予定を決定と扱わない。"
+        }
+      }
+    },
+    "oct30-market": {
+      "title": "2026年10月29日の米国市場正本",
+      "publisher": "Market Morning canonical market.json",
+      "published_date": "2026-10-29",
+      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+    },
+    "oct30-japan-market": {
+      "title": "2026年10月29日の日本市場正本",
+      "publisher": "Market Morning canonical japan-market.json",
+      "published_date": "2026-10-29",
+      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
+    },
+    "nov2-market": {
+      "title": "Market Morning canonical market data 2026-10-30",
+      "publisher": "Market Morning",
+      "published_date": "2026-10-30",
+      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+    },
+    "nov2-boj": {
+      "title": "Statement on Monetary Policy",
+      "publisher": "Bank of Japan",
+      "published_date": "2026-10-30",
+      "source_url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030a.pdf"
+    },
+    "nov2-intel": {
+      "title": "Intel Reports Third-Quarter 2026 Financial Results",
+      "publisher": "Intel Corporation",
+      "published_date": "2026-10-29",
+      "source_url": "https://www.intc.com/news-events/press-releases/detail/1752/intel-reports-third-quarter-2026-financial-results"
+    },
+    "nov2-weekend": {
+      "title": "11月2日朝の市場コンテキスト確認",
+      "publisher": "Market Morning",
+      "published_date": "2026-11-02",
+      "source_url": "https://market-morning-gules.vercel.app/"
+    },
+    "nov3-market": {
+      "title": "Market Morning canonical market data 2026-11-02",
+      "publisher": "Market Morning",
+      "published_date": "2026-11-02",
+      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+    },
+    "nov3-ism": {
+      "title": "October 2026 ISM Manufacturing PMI",
+      "publisher": "Institute for Supply Management",
+      "published_date": "2026-11-02",
+      "source_url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/pmi/october/"
+    },
+    "nov3-marvell": {
+      "title": "Marvell and Lumentum to Combine",
+      "publisher": "Marvell / SEC",
+      "published_date": "2026-11-02",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000119312526442714/d81187dex991.htm"
+    },
+    "nov3-boj": {
+      "title": "Outlook for Economic Activity and Prices full text",
+      "publisher": "Bank of Japan",
+      "published_date": "2026-11-02",
+      "source_url": "https://www.boj.or.jp/en/mopo/outlook/gor2610b.pdf"
+    },
+    "nov3-jpx": {
+      "title": "Derivatives Holiday Trading November 3",
+      "publisher": "Japan Exchange Group",
+      "published_date": "2026-11-02",
+      "source_url": "https://www.jpx.co.jp/news/2040/20261102-01.html"
+    }
+  },
+  "events": [
+    {
+      "id": "us-jolts-2026-09",
+      "event": "米JOLTS求人件数（9月）",
+      "start_at_jst": "2026-11-04T00:00:00+09:00",
+      "jst_time": "2026-11-04 00:00 JST（米東部11/3 10:00）",
+      "forecast": "未確認",
+      "previous": "未確認",
+      "focus": "求人・離職・採用の需給バランスと賃金圧力",
+      "affected_markets": "米国債・ドル・米国株・日本株",
+      "importance": "高",
+      "source_url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "source_name": "U.S. Bureau of Labor Statistics",
+      "verified_on": "2026-11-03"
+    },
+    {
+      "id": "ism-services-2026-10",
+      "event": "米ISM非製造業景況指数（10月）",
+      "start_at_jst": "2026-11-05T00:00:00+09:00",
+      "jst_time": "2026-11-05 00:00 JST",
+      "forecast": "未確認",
+      "previous": "未確認",
+      "focus": "サービス需要・雇用・価格指数とインフレ圧力",
+      "affected_markets": "米国債・ドル・米国株・日本株",
+      "importance": "高",
+      "source_url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-report-on-business/",
+      "source_name": "Institute for Supply Management",
+      "verified_on": "2026-10-19"
+    },
+    {
+      "id": "us-productivity-2026-q3-prelim",
+      "event": "米非農業部門労働生産性・単位労働コスト（7〜9月期速報）",
+      "start_at_jst": "2026-11-05T22:30:00+09:00",
+      "jst_time": "2026-11-05 22:30 JST（米東部08:30）",
+      "forecast": "未確認",
+      "previous": "未確認",
+      "focus": "賃金コストと生産性の組み合わせ、インフレ持続性",
+      "affected_markets": "米国債・ドル・米国株・日本株",
+      "importance": "高",
+      "source_url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "source_name": "U.S. Bureau of Labor Statistics",
+      "verified_on": "2026-11-03"
+    },
+    {
+      "id": "us-employment-2026-10",
+      "event": "米雇用統計（10月）",
+      "start_at_jst": "2026-11-06T22:30:00+09:00",
+      "jst_time": "2026-11-06 22:30 JST",
+      "forecast": "未確認",
+      "previous": "未確認",
+      "focus": "非農業部門雇用者数・失業率・平均時給とFRBの政策判断",
+      "affected_markets": "米国債・ドル・米国株・日本株",
+      "importance": "最重要",
+      "source_url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "source_name": "U.S. Bureau of Labor Statistics",
+      "verified_on": "2026-10-19"
+    },
+    {
+      "id": "us-cpi-2026-10",
+      "event": "米消費者物価指数（10月）",
+      "start_at_jst": "2026-11-10T22:30:00+09:00",
+      "jst_time": "2026-11-10 22:30 JST（米東部08:30）",
+      "forecast": "未確認",
+      "previous": "未確認",
+      "focus": "総合・コア物価、サービス価格とFRB政策経路",
+      "affected_markets": "米国債・ドル・米国株・日本株",
+      "importance": "最重要",
+      "source_url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "source_name": "U.S. Bureau of Labor Statistics",
+      "verified_on": "2026-11-03"
+    },
+    {
+      "id": "us-ppi-2026-10",
+      "event": "米生産者物価指数（10月）",
+      "start_at_jst": "2026-11-13T22:30:00+09:00",
+      "jst_time": "2026-11-13 22:30 JST（米東部08:30）",
+      "forecast": "未確認",
+      "previous": "未確認",
+      "focus": "投入価格と企業マージン、CPI・PCEへの波及",
+      "affected_markets": "米国債・ドル・米国株・日本株",
+      "importance": "高",
+      "source_url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "source_name": "U.S. Bureau of Labor Statistics",
+      "verified_on": "2026-11-03"
+    }
+  ],
+  "events_metadata": {
+    "status": "取得済",
+    "updated_at": "2026-11-03T06:58:00+09:00",
+    "window_start": "2026-11-03",
+    "window_end": "2026-11-17",
+    "timezone": "Asia/Tokyo",
+    "source_policy": "公式日程で確認済みのイベントのみ。予想・前回値は未確認を推測しない",
+    "coverage_note": "公式日程で確認できた主要イベントのみ。市場予想・前回値を確認できない場合は未確認と表示する。",
+    "catalog_version": "1.0"
+  }
+}

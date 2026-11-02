@@ -119,6 +119,34 @@
       "verified_on": "2026-10-19"
     },
     {
+      "id": "us-jolts-2026-09",
+      "event": "米JOLTS求人件数（9月）",
+      "start_at_jst": "2026-11-04T00:00:00+09:00",
+      "jst_time": "2026-11-04 00:00 JST（米東部11/3 10:00）",
+      "forecast": "未確認",
+      "previous": "未確認",
+      "focus": "求人・離職・採用の需給バランスと賃金圧力",
+      "affected_markets": "米国債・ドル・米国株・日本株",
+      "importance": "高",
+      "source_url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "source_name": "U.S. Bureau of Labor Statistics",
+      "verified_on": "2026-11-03"
+    },
+    {
+      "id": "us-productivity-2026-q3-prelim",
+      "event": "米非農業部門労働生産性・単位労働コスト（7〜9月期速報）",
+      "start_at_jst": "2026-11-05T22:30:00+09:00",
+      "jst_time": "2026-11-05 22:30 JST（米東部08:30）",
+      "forecast": "未確認",
+      "previous": "未確認",
+      "focus": "賃金コストと生産性の組み合わせ、インフレ持続性",
+      "affected_markets": "米国債・ドル・米国株・日本株",
+      "importance": "高",
+      "source_url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "source_name": "U.S. Bureau of Labor Statistics",
+      "verified_on": "2026-11-03"
+    },
+    {
       "id": "us-employment-2026-10",
       "event": "米雇用統計（10月）",
       "start_at_jst": "2026-11-06T22:30:00+09:00",
@@ -131,6 +159,34 @@
       "source_url": "https://www.bls.gov/schedule/2026/11_sched.htm",
       "source_name": "U.S. Bureau of Labor Statistics",
       "verified_on": "2026-10-19"
+    },
+    {
+      "id": "us-cpi-2026-10",
+      "event": "米消費者物価指数（10月）",
+      "start_at_jst": "2026-11-10T22:30:00+09:00",
+      "jst_time": "2026-11-10 22:30 JST（米東部08:30）",
+      "forecast": "未確認",
+      "previous": "未確認",
+      "focus": "総合・コア物価、サービス価格とFRB政策経路",
+      "affected_markets": "米国債・ドル・米国株・日本株",
+      "importance": "最重要",
+      "source_url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "source_name": "U.S. Bureau of Labor Statistics",
+      "verified_on": "2026-11-03"
+    },
+    {
+      "id": "us-ppi-2026-10",
+      "event": "米生産者物価指数（10月）",
+      "start_at_jst": "2026-11-13T22:30:00+09:00",
+      "jst_time": "2026-11-13 22:30 JST（米東部08:30）",
+      "forecast": "未確認",
+      "previous": "未確認",
+      "focus": "投入価格と企業マージン、CPI・PCEへの波及",
+      "affected_markets": "米国債・ドル・米国株・日本株",
+      "importance": "高",
+      "source_url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "source_name": "U.S. Bureau of Labor Statistics",
+      "verified_on": "2026-11-03"
     },
     {
       "id": "us-gdp-2026-q3-second",

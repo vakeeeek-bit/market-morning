@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03 06:56:30",
+  "updated_at": "2026-11-03 11:57:56",
   "timezone": "Asia/Tokyo",
   "source": "Yahoo Finance via yfinance for market closes; FRED DGS2/DGS10 for US Treasury yields",
   "notes": {
@@ -27,9 +27,9 @@
     "nasdaq": {
       "name": "NASDAQ総合",
       "ticker": "^IXIC",
-      "price": 25164.3164,
+      "price": 25164.3633,
       "previous": 25437.0,
-      "change": -272.6836,
+      "change": -272.6367,
       "change_pct": -1.07,
       "status": "取得成功",
       "market_date": "2026-11-02",
@@ -82,13 +82,13 @@
     "nikkei225": {
       "name": "日経225",
       "ticker": "^N225",
-      "price": 63290.1094,
-      "previous": 64659.4688,
-      "change": -1369.3594,
-      "change_pct": -2.12,
+      "price": 63081.8594,
+      "previous": 63290.1094,
+      "change": -208.25,
+      "change_pct": -0.33,
       "status": "取得成功",
-      "market_date": "2026-10-30",
-      "previous_market_date": "2026-10-29"
+      "market_date": "2026-11-02",
+      "previous_market_date": "2026-10-30"
     },
     "topix": {
       "name": "TOPIX参考（1306 ETF）",
@@ -115,24 +115,24 @@
     "usdjpy": {
       "name": "USD/JPY",
       "ticker": "JPY=X",
-      "price": 157.804,
-      "previous": 157.833,
-      "change": -0.029,
-      "change_pct": -0.02,
+      "price": 157.677,
+      "previous": 157.804,
+      "change": -0.127,
+      "change_pct": -0.08,
       "status": "取得成功",
-      "market_date": "2026-10-30",
-      "previous_market_date": "2026-10-29"
+      "market_date": "2026-11-02",
+      "previous_market_date": "2026-10-30"
     },
     "eurusd": {
       "name": "EUR/USD",
       "ticker": "EURUSD=X",
-      "price": 1.1183,
-      "previous": 1.1156,
-      "change": 0.0027,
-      "change_pct": 0.24,
+      "price": 1.1157,
+      "previous": 1.1183,
+      "change": -0.0026,
+      "change_pct": -0.23,
       "status": "取得成功",
-      "market_date": "2026-10-30",
-      "previous_market_date": "2026-10-29"
+      "market_date": "2026-11-02",
+      "previous_market_date": "2026-10-30"
     },
     "us10y": {
       "name": "米10年債利回り",

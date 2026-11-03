@@ -1,38 +1,38 @@
 {
-  "report_date": "2026-11-03",
-  "target_market_date": "2026-11-02",
-  "updated_at": "2026-11-03T06:58:00+09:00",
+  "report_date": "2026-11-04",
+  "target_market_date": "2026-11-03",
+  "updated_at": "2026-11-04T06:59:00+09:00",
   "publication_mode": "verified_news",
   "coverage_status": "partial",
-  "coverage_note": "一次本文を実読できた4件のみ掲載。市場反応は正本または未確認として分離。企業開示・評価変更の全件網羅は未確認。",
+  "coverage_note": "一次本文を実読できた3件のみ掲載。市場反応は正本または未確認として分離。企業開示・評価変更の全件網羅は未確認。",
   "articles": [
     {
-      "id": "nov3-ism-manufacturing",
-      "title": "米10月ISM製造業PMIは55.5",
-      "published_date": "2026-11-02",
-      "verified_at": "2026-11-03T06:58:00+09:00",
+      "id": "nov4-jolts-sep",
+      "title": "米9月JOLTS求人は752.3万件",
+      "published_date": "2026-11-03",
+      "verified_at": "2026-11-04T06:59:00+09:00",
       "source_type": "primary",
-      "publisher": "Institute for Supply Management",
-      "source_url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/pmi/october/",
-      "verification_url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/pmi/october/",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "source_url": "https://www.bls.gov/news.release/jolts.htm",
+      "verification_url": "https://www.bls.gov/news.release/jolts.htm",
       "verification_status": "PASS",
-      "fact": "PMI55.5、9月比+1.0。新規受注55.5、製造59.0、雇用52.4、価格75.2。",
-      "analysis": "成長加速と投入価格圧力が併存し、景気循環株・金利・マージンを同時に点検。",
-      "limitations": "市場予想比較と指標単独の価格寄与は未確認。",
+      "fact": "求人752.3万件、採用540.2万件、離職336.5万件、解雇160.5万件。8月求人は719.0万件へ上方改定。",
+      "analysis": "労働需要の急減は確認されず、金融緩和期待には反証。ただし離職増と採用横ばいを含む。",
+      "limitations": "指標単独の価格寄与と市場予想との差は未確認。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
         "source_read": {
           "status": "PASS",
-          "evidence": "Institute for Supply Managementの一次本文を実読し、発表日・対象・留保を確認。"
+          "evidence": "U.S. Bureau of Labor Statisticsの一次本文を実読し、発表日・対象・留保を確認。"
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "PMI55.5、9月比+1.0。新規受注55.5、製造59.0、雇用52.4、価格75.2。"
+          "evidence": "求人752.3万件、採用540.2万件、離職336.5万件、解雇160.5万件。8月求人は719.0万件へ上方改定。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日2026-11-02、実確認2026-11-03T06:58:00+09:00。発表日・市場日を分離。"
+          "evidence": "発表日2026-11-03、実確認2026-11-04T06:59:00+09:00。発表日・市場日を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
@@ -40,37 +40,37 @@
         },
         "limitations": {
           "status": "PASS",
-          "evidence": "市場予想比較と指標単独の価格寄与は未確認。"
+          "evidence": "指標単独の価格寄与と市場予想との差は未確認。"
         }
       }
     },
     {
-      "id": "nov3-marvell-lumentum",
-      "title": "MarvellがLumentum買収で最終契約",
+      "id": "nov4-apple-q4",
+      "title": "Appleの7〜9月期売上は1145億ドル",
       "published_date": "2026-11-02",
-      "verified_at": "2026-11-03T06:58:00+09:00",
+      "verified_at": "2026-11-04T06:59:00+09:00",
       "source_type": "primary",
-      "publisher": "U.S. Securities and Exchange Commission / Marvell",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000119312526442714/d81187dex991.htm",
-      "verification_url": "https://www.sec.gov/Archives/edgar/data/1835632/000119312526442714/d81187dex991.htm",
+      "publisher": "Apple",
+      "source_url": "https://www.apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results/",
+      "verification_url": "https://www.apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results/",
       "verification_status": "PASS",
-      "fact": "全株式交換、企業価値1150億ドル、交換比率4.500、2028年上期完了見込み。株主・規制承認などが条件。",
-      "analysis": "AI光接続の中期需要と大型取引の希薄化・統合・規制リスクを分けて評価。",
-      "limitations": "SOX下落への取引単独寄与は未分離。",
+      "fact": "売上高は前年比12%増、EPSは14%増の2.10ドル、粗利率47.9%。関税還付が粗利率を約1ポイント押し上げた。",
+      "analysis": "需要の強さは部品需要を支えるが、メモリー価格とAI投資費用は利益率の反証。",
+      "limitations": "会社発表本文は12月期粗利率ガイダンスの数値を含まないため、二次報道のガイダンス値は事実欄に採用しない。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
         "source_read": {
           "status": "PASS",
-          "evidence": "U.S. Securities and Exchange Commission / Marvellの一次本文を実読し、発表日・対象・留保を確認。"
+          "evidence": "Appleの一次本文を実読し、発表日・対象・留保を確認。"
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "全株式交換、企業価値1150億ドル、交換比率4.500、2028年上期完了見込み。株主・規制承認などが条件。"
+          "evidence": "売上高は前年比12%増、EPSは14%増の2.10ドル、粗利率47.9%。関税還付が粗利率を約1ポイント押し上げた。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日2026-11-02、実確認2026-11-03T06:58:00+09:00。発表日・市場日を分離。"
+          "evidence": "発表日2026-11-02、実確認2026-11-04T06:59:00+09:00。発表日・市場日を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
@@ -78,23 +78,23 @@
         },
         "limitations": {
           "status": "PASS",
-          "evidence": "SOX下落への取引単独寄与は未分離。"
+          "evidence": "会社発表本文は12月期粗利率ガイダンスの数値を含まないため、二次報道のガイダンス値は事実欄に採用しない。"
         }
       }
     },
     {
-      "id": "nov3-boj-full-outlook",
-      "title": "日銀は10月展望レポート全文を公表",
-      "published_date": "2026-11-02",
-      "verified_at": "2026-11-03T06:58:00+09:00",
+      "id": "nov4-boj-calendar",
+      "title": "日銀は11月4日に10月マネタリーベースを公表予定",
+      "published_date": "2026-10-30",
+      "verified_at": "2026-11-04T06:59:00+09:00",
       "source_type": "primary",
       "publisher": "Bank of Japan",
-      "source_url": "https://www.boj.or.jp/en/mopo/outlook/gor2610b.pdf",
-      "verification_url": "https://www.boj.or.jp/en/mopo/outlook/gor2610b.pdf",
+      "source_url": "https://www.boj.or.jp/about/calendar/",
+      "verification_url": "https://www.boj.or.jp/about/calendar/",
       "verification_status": "PASS",
-      "fact": "日銀は10月展望レポート全文を公表し、政策判断と物価・成長見通しの背景分析を提示。",
-      "analysis": "銀行・不動産・円の評価は政策方針と実際の金利・価格反応を組み合わせる。",
-      "limitations": "全文公表単独の市場寄与は未分離。",
+      "fact": "日銀公式予定は11月4日8:50公表。レポート確認時刻07:14 JSTには未公表。",
+      "analysis": "予定を実績として扱わず、公表後に円・銀行・不動産を再確認。",
+      "limitations": "確認時点では未公表で、内容・市場反応は未確認。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
@@ -104,11 +104,11 @@
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "日銀は10月展望レポート全文を公表し、政策判断と物価・成長見通しの背景分析を提示。"
+          "evidence": "日銀公式予定は11月4日8:50公表。レポート確認時刻07:14 JSTには未公表。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日2026-11-02、実確認2026-11-03T06:58:00+09:00。発表日・市場日を分離。"
+          "evidence": "発表日2026-10-30、実確認2026-11-04T06:59:00+09:00。発表日・市場日を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
@@ -116,45 +116,7 @@
         },
         "limitations": {
           "status": "PASS",
-          "evidence": "全文公表単独の市場寄与は未分離。"
-        }
-      }
-    },
-    {
-      "id": "nov3-jpx-holiday",
-      "title": "JPXは11月3日にデリバティブ祝日取引を実施",
-      "published_date": "2026-11-02",
-      "verified_at": "2026-11-03T06:58:00+09:00",
-      "source_type": "primary",
-      "publisher": "Japan Exchange Group",
-      "source_url": "https://www.jpx.co.jp/news/2040/20261102-01.html",
-      "verification_url": "https://www.jpx.co.jp/news/2040/20261102-01.html",
-      "verification_status": "PASS",
-      "fact": "11月3日は文化の日で東証現物休場。大阪取引所・東京商品取引所は対象デリバティブの祝日取引を実施。",
-      "analysis": "米2日材料の現物織り込みは4日へ持ち越し。",
-      "limitations": "限月・値種別・確認時刻を特定できない祝日取引値は不採用。",
-      "market_reaction_status": "unverified",
-      "market_reaction": "未確認",
-      "verification": {
-        "source_read": {
-          "status": "PASS",
-          "evidence": "Japan Exchange Groupの一次本文を実読し、発表日・対象・留保を確認。"
-        },
-        "facts_verified": {
-          "status": "PASS",
-          "evidence": "11月3日は文化の日で東証現物休場。大阪取引所・東京商品取引所は対象デリバティブの祝日取引を実施。"
-        },
-        "chronology": {
-          "status": "PASS",
-          "evidence": "発表日2026-11-02、実確認2026-11-03T06:58:00+09:00。発表日・市場日を分離。"
-        },
-        "fact_analysis_separation": {
-          "status": "PASS",
-          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
-        },
-        "limitations": {
-          "status": "PASS",
-          "evidence": "限月・値種別・確認時刻を特定できない祝日取引値は不採用。"
+          "evidence": "確認時点では未公表で、内容・市場反応は未確認。"
         }
       }
     }

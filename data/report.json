@@ -1,224 +1,214 @@
 {
-  "report_date": "2026-11-03",
-  "target_market_date": "2026-11-02",
-  "updated_at": "2026-11-03T06:58:00+09:00",
-  "report_type": "holiday_provisional",
+  "report_date": "2026-11-04",
+  "target_market_date": "2026-11-03",
+  "updated_at": "2026-11-04T06:59:00+09:00",
+  "report_type": "daily_provisional",
   "quick_view": {
-    "headline": "注釈付き11月3日版｜米AI・半導体は続落、景気循環・内需へ広がる選別",
+    "headline": "注釈付き11月4日版｜米AI・半導体は反発、ただしダウ安と業種幅の弱さが残る",
     "top_news": [
       {
-        "title": "米AI・半導体の続落"
+        "title": "AI・半導体反発と狭い業種幅"
       },
       {
-        "title": "米景気循環・内需への選別"
+        "title": "JOLTSは労働需要の急減を示さず"
       },
       {
-        "title": "日本は文化の日で現物休場"
+        "title": "Apple好決算とコスト懸念"
       }
     ],
     "important_today": [
-      "米11月2日はS&P500-0.51%、NASDAQ-1.07%、NASDAQ100-1.39%、SOX-3.37%。VIXは+8.91%でAI・半導体の調整が継続",
-      "米11業種ETF代理は8上昇・3下落。一般消費財+2.41%、金融+1.86%、素材+1.76%に対し、エネルギー-3.96%、情報技術-2.95%",
-      "米10月ISM製造業PMIは55.5（9月54.5）。新規受注55.5、製造59.0、雇用52.4、価格75.2で成長と投入価格圧力が併存",
-      "日本11月2日は日経平均型-0.11%、TOPIX型-0.82%。電力・ガス+1.25%、不動産+1.08%、医薬品+0.84%に対し銀行-1.94%",
-      "11月3日の東証現物は文化の日で休場。OSEのデリバティブ祝日取引は実施されるが、限月・値種別を確認できない数値は不採用"
+      "米11月3日はS&P500+0.36%、NASDAQ+0.83%、NASDAQ100+0.68%、SOX+2.63%。一方ダウは-0.38%で大型AI・半導体主導",
+      "米11業種ETF代理は5上昇・6下落。情報技術+1.31%、通信+1.18%、資本財+0.95%に対し生活必需品-2.07%、素材-2.01%",
+      "米9月JOLTSは求人752.3万件、採用540.2万件、離職336.5万件。求人は前月719.0万件から増え、労働需要の急減は確認されず",
+      "Appleは7〜9月期売上1145億ドル（前年比+12%）、EPS2.10ドル（+14%）、粗利率47.9%。株価は11月3日に下落し部品コスト懸念が反証",
+      "日本の現物最新日は11月2日。日経平均型-0.33%、TOPIX ETF代理-0.82%で、米11月3日のAI反発は11月4日の国内半導体・電子部品で初めて確認"
     ]
   },
   "executive_summary": {
-    "headline": "注釈付き11月3日版｜米AI・半導体は続落、景気循環・内需へ広がる選別",
-    "market_mood": "米国はAI・半導体が続落して主要ハイテク指数を押し下げた一方、11業種ETF代理の8業種は上昇。景気循環・内需・金融へ資金が広がり、全面リスクオフではない。日本の11月2日実績は日経平均型がTOPIX型より底堅く、電力・不動産・医薬品が相対優位。本日は東証現物休場。",
-    "main_driver": "AI投資の収益化・資金調達への警戒、ISMの成長と高い投入価格、原油供給懸念後退を巡る業種回転",
+    "headline": "注釈付き11月4日版｜米AI・半導体は反発、ただしダウ安と業種幅の弱さが残る",
+    "market_mood": "米国はAI・半導体の買い戻しでS&P500とNASDAQが上昇したが、ダウは下落し、11業種ETF代理も6業種が下落。指数反発を全面的なリスク選好回復とは扱わない。日本は祝日明けで、米3日材料の現物反応を本日初めて確認する。",
+    "main_driver": "AI・半導体の4営業日下落後の反発、JOLTSの労働需要の底堅さ、Appleの需要増とメモリーコスト懸念の併存",
     "winners": [
-      "米一般消費財・金融・素材",
-      "日本の電力・不動産・医薬品"
+      "米半導体・情報技術・通信",
+      "日本の半導体・電子部品（確認条件付き）"
     ],
     "losers": [
-      "米半導体・情報技術・エネルギー",
-      "日本の銀行・情報通信・エネルギー資源"
+      "米生活必需品・素材・エネルギー",
+      "日本のディフェンシブ・素材（相対劣後候補）"
     ],
     "important_today": [
-      "米11月2日はS&P500-0.51%、NASDAQ-1.07%、NASDAQ100-1.39%、SOX-3.37%。VIXは+8.91%でAI・半導体の調整が継続",
-      "米11業種ETF代理は8上昇・3下落。一般消費財+2.41%、金融+1.86%、素材+1.76%に対し、エネルギー-3.96%、情報技術-2.95%",
-      "米10月ISM製造業PMIは55.5（9月54.5）。新規受注55.5、製造59.0、雇用52.4、価格75.2で成長と投入価格圧力が併存",
-      "日本11月2日は日経平均型-0.11%、TOPIX型-0.82%。電力・ガス+1.25%、不動産+1.08%、医薬品+0.84%に対し銀行-1.94%",
-      "11月3日の東証現物は文化の日で休場。OSEのデリバティブ祝日取引は実施されるが、限月・値種別を確認できない数値は不採用"
+      "米11月3日はS&P500+0.36%、NASDAQ+0.83%、NASDAQ100+0.68%、SOX+2.63%。一方ダウは-0.38%で大型AI・半導体主導",
+      "米11業種ETF代理は5上昇・6下落。情報技術+1.31%、通信+1.18%、資本財+0.95%に対し生活必需品-2.07%、素材-2.01%",
+      "米9月JOLTSは求人752.3万件、採用540.2万件、離職336.5万件。求人は前月719.0万件から増え、労働需要の急減は確認されず",
+      "Appleは7〜9月期売上1145億ドル（前年比+12%）、EPS2.10ドル（+14%）、粗利率47.9%。株価は11月3日に下落し部品コスト懸念が反証",
+      "日本の現物最新日は11月2日。日経平均型-0.33%、TOPIX ETF代理-0.82%で、米11月3日のAI反発は11月4日の国内半導体・電子部品で初めて確認"
     ],
     "watch_markets": [
-      "SOX・NASDAQ100の反発力",
-      "XLK対XLY・XLF・XLB",
-      "11月4日の国内半導体・銀行・不動産",
-      "JOLTS・ISMサービス・雇用統計",
+      "国内半導体・電子部品のTOPIX比",
+      "米AI反発の継続性と業種幅",
+      "Apple関連部品株",
+      "ISMサービス・雇用統計",
       "CPI・PPIと同日米金利"
     ],
     "current_environment": [
-      "米株・VIX・11業種ETF代理は11月2日終値",
+      "米株・VIX・11業種ETF代理は11月3日終値",
       "日本株は11月2日大引けの取得済み13業種・26銘柄",
-      "米金利・為替は10月30日で基準日差あり",
+      "米金利・為替は11月2日で基準日差あり",
       "商品先物・朝の現在値は除外",
-      "東証現物は11月3日休場、OSEデリバティブは祝日取引"
+      "3日は東証現物休場、4日再開"
     ]
   },
   "news": [
     {
-      "title": "米10月ISM製造業PMIは55.5",
-      "fact": "9月54.5から1.0ポイント上昇。新規受注55.5、製造59.0、雇用52.4、価格75.2。",
-      "source_url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/pmi/october/",
-      "analysis": "成長加速は景気循環株に追い風候補だが、価格75.2は金利・マージンの反証材料。",
-      "published_at": "2026-11-02",
-      "market_reaction": "米2日はXLI+1.38%、XLB+1.76%、XLF+1.86%。指標単独寄与は未分離。"
+      "title": "米9月JOLTS求人は752.3万件",
+      "fact": "求人752.3万件、採用540.2万件、離職336.5万件、解雇160.5万件。8月求人は719.0万件へ上方改定。",
+      "source_url": "https://www.bls.gov/news.release/jolts.htm",
+      "analysis": "労働需要の急減は確認されず、金融緩和期待には反証。ただし離職増と採用横ばいを含むため一方向に断定しない。",
+      "published_at": "2026-11-03",
+      "market_reaction": "米3日はNASDAQ+0.83%、SOX+2.63%、ダウ-0.38%。指標単独寄与は未分離。"
     },
     {
-      "title": "MarvellがLumentum買収で最終契約",
-      "fact": "全株式交換、企業価値1150億ドル、交換比率4.500、2028年上期完了見込み。株主・規制承認などが条件。",
-      "source_url": "https://www.sec.gov/Archives/edgar/data/1835632/000119312526442714/d81187dex991.htm",
-      "analysis": "AI光接続の中期需要を示す一方、大型取引の希薄化・統合・規制リスクが短期の半導体変動要因。",
+      "title": "Appleの7〜9月期売上は1145億ドル",
+      "fact": "売上高は前年比12%増、EPSは14%増の2.10ドル、粗利率47.9%。関税還付が粗利率を約1ポイント押し上げた。",
+      "source_url": "https://www.apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results/",
+      "analysis": "需要の強さは部品需要を支えるが、メモリー価格とAI投資費用は利益率の反証。日本の電子部品を一律強気にしない。",
       "published_at": "2026-11-02",
-      "market_reaction": "SOX-3.37%。取引単独寄与は未分離。"
+      "market_reaction": "Apple株は11月3日に下落。Reutersはメモリーコスト警戒を背景として報道。単独寄与は未分離。"
     },
     {
-      "title": "日銀は10月展望レポート全文を公表",
-      "fact": "日銀は11月2日に10月展望レポート全文を公表。政策判断・物価見通しのBank's Viewを補完する分析を含む。",
-      "source_url": "https://www.boj.or.jp/en/mopo/outlook/gor2610b.pdf",
-      "analysis": "追加利上げと国内需要・物価の判断材料。11月2日の業種反応と単独因果は分離。",
-      "published_at": "2026-11-02",
-      "market_reaction": "日本2日は銀行-1.94%、不動産+1.08%。全文公表単独の寄与は未分離。"
-    },
-    {
-      "title": "JPXは11月3日にデリバティブ祝日取引を実施",
-      "fact": "東証現物は文化の日で休場。大阪取引所・東京商品取引所は対象デリバティブの祝日取引を実施。",
-      "source_url": "https://www.jpx.co.jp/news/2040/20261102-01.html",
-      "analysis": "現物の米2日材料織り込みは4日へ持ち越し。限月未確認の祝日取引値は不採用。",
-      "published_at": "2026-11-02",
-      "market_reaction": "現物反応は未確認。"
+      "title": "日銀は11月4日に10月マネタリーベースを公表予定",
+      "fact": "日銀公式予定は11月4日8:50公表。レポート確認時刻07:14 JSTには未公表。",
+      "source_url": "https://www.boj.or.jp/about/calendar/",
+      "analysis": "予定を実績として扱わない。公表後の円・銀行・不動産反応は次回確認。",
+      "published_at": "2026-10-30",
+      "market_reaction": "未公表のため市場反応は未確認。"
     }
   ],
   "policy": {
     "economic_indicators": {
-      "fact": "ISMは10月製造業PMI55.5、価格75.2を公表。BLS公式日程でJOLTS、労働生産性、雇用統計、CPI、PPIを確認。",
+      "fact": "BLSは11月3日に9月JOLTSを公表。求人752.3万件、採用540.2万件、離職336.5万件。BLS日程で生産性、雇用統計、CPI、PPIを確認。",
       "source_urls": [
-        "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/pmi/october/",
+        "https://www.bls.gov/news.release/jolts.htm",
         "https://www.bls.gov/schedule/2026/11_sched.htm"
       ]
     },
     "central_banks": {
-      "fact": "日銀は11月2日に10月展望レポート全文を公表。政策金利1.25%据え置きと条件付き追加利上げ方針に変更なし。",
+      "fact": "日銀公式予定を確認。11月4日8:50のマネタリーベースは確認時点では未公表。新規の金融政策決定として扱わない。",
       "source_urls": [
-        "https://www.boj.or.jp/en/mopo/outlook/gor2610b.pdf",
-        "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030a.pdf"
+        "https://www.boj.or.jp/about/calendar/"
       ]
     },
     "trade_tariffs": {
-      "fact": "White House・USTR・BISの最新一覧を11月3日06:58 JSTまで確認。11月2日付で日本株TOP5を変更する新規主要措置は確認できず。未調査ではなく一覧確認済み。",
+      "fact": "White House・USTR・BISの公式一覧を11月4日07:14 JSTまで確認。11月3日付で日本株TOP5を変更する新規主要措置は確認できず。USTRの直近主要項目は11月2日。",
       "source_urls": [
         "https://www.whitehouse.gov/presidential-actions/",
-        "https://www.ustr.gov/about/policy-offices/press-office/press-releases/2026",
-        "https://www.bis.gov/news-updates"
+        "https://www.ustr.gov/about-us/policy-offices/press-office/press-releases",
+        "https://www.bis.gov/regulations/federal-register-notices"
       ]
     },
     "sanctions": {
-      "fact": "米財務省プレスリリース・OFAC recent actionsを11月3日06:58 JSTまで確認。11月2日付で日本株TOP5を変更する新規主要措置は確認できず。",
+      "fact": "OFAC recent actionsを11月4日07:14 JSTまで確認。11月3日付で日本株TOP5を変更する新規主要措置は確認できず。",
       "source_urls": [
-        "https://home.treasury.gov/news/press-releases",
-        "https://ofac.treasury.gov/recent-actions"
+        "https://ofac.treasury.gov/recent-actions/enforcement-actions"
       ]
     }
   },
   "scenarios": [
     {
       "name": "基本",
-      "conditions": "AI・半導体調整が続く一方、景気循環・内需へ資金が分散",
-      "impact_on_japan": "4日は半導体・AI関連が劣後、内需・金融・素材を選別",
-      "invalidation": "SOX反発と国内半導体のTOPIX比改善"
+      "conditions": "AI・半導体の反発は続くが業種幅は狭い",
+      "impact_on_japan": "半導体・電子部品が相対優位、ディフェンシブ・素材は選別",
+      "invalidation": "SOX再下落または国内半導体のTOPIX比悪化"
     },
     {
       "name": "上振れ",
-      "conditions": "SOX反発、VIX低下、米業種幅改善が継続",
+      "conditions": "SOX続伸、VIX低下、米業種幅も改善",
       "impact_on_japan": "電機・機械へ買い戻しが広がる",
-      "invalidation": "VIX再上昇、NASDAQ100続落"
+      "invalidation": "米上昇業種数の減少継続"
     },
     {
       "name": "下振れ",
-      "conditions": "AI投資回収懸念と高い投入価格が金利・利益率不安に波及",
-      "impact_on_japan": "半導体・高PER株の変動拡大、資源もエネルギー安で劣後",
-      "invalidation": "同日米金利低下と半導体・資源の反発"
+      "conditions": "JOLTSの底堅さが金利上昇へ波及し、Appleコスト懸念が部品へ拡大",
+      "impact_on_japan": "高PER半導体・電子部品の変動拡大",
+      "invalidation": "同日米金利低下と国内半導体・部品の反発"
     }
   ],
   "market_data": [
     {
       "market": "S&P500",
-      "price": "7541.3999",
-      "change": "-38.6699 (-0.51%)",
-      "basis_time": "2026-11-02・日足Close・現在値ではない",
+      "price": "7568.9199",
+      "change": "+27.5200 (+0.36%)",
+      "basis_time": "2026-11-03・日足Close・現在値ではない",
       "source": "market.json / ^GSPC"
     },
     {
       "market": "NASDAQ総合",
-      "price": "25164.3164",
-      "change": "-272.6836 (-1.07%)",
-      "basis_time": "2026-11-02・日足Close・現在値ではない",
+      "price": "25372.0098",
+      "change": "+207.6992 (+0.83%)",
+      "basis_time": "2026-11-03・日足Close・現在値ではない",
       "source": "market.json / ^IXIC"
     },
     {
       "market": "NASDAQ100",
-      "price": "27989.8203",
-      "change": "-395.0293 (-1.39%)",
-      "basis_time": "2026-11-02・日足Close・現在値ではない",
+      "price": "28180.2637",
+      "change": "+190.4434 (+0.68%)",
+      "basis_time": "2026-11-03・日足Close・現在値ではない",
       "source": "market.json / ^NDX"
     },
     {
       "market": "NYダウ",
-      "price": "51983.9805",
-      "change": "+213.6719 (+0.41%)",
-      "basis_time": "2026-11-02・日足Close・現在値ではない",
+      "price": "51786.7188",
+      "change": "-197.2617 (-0.38%)",
+      "basis_time": "2026-11-03・日足Close・現在値ではない",
       "source": "market.json / ^DJI"
     },
     {
       "market": "Russell2000",
-      "price": "2805.876",
-      "change": "-5.9641 (-0.21%)",
-      "basis_time": "2026-11-02・日足Close・現在値ではない",
+      "price": "2812.4473",
+      "change": "+6.5674 (+0.23%)",
+      "basis_time": "2026-11-03・日足Close・現在値ではない",
       "source": "market.json / ^RUT"
     },
     {
       "market": "PHLX半導体株指数（SOX）",
-      "price": "10328.3291",
-      "change": "-360.4707 (-3.37%)",
-      "basis_time": "2026-11-02・日足Close・現在値ではない",
+      "price": "10600.3965",
+      "change": "+272.0664 (+2.63%)",
+      "basis_time": "2026-11-03・日足Close・現在値ではない",
       "source": "market.json / ^SOX"
     },
     {
       "market": "VIX",
-      "price": "21.15",
-      "change": "+1.7300 (+8.91%)",
-      "basis_time": "2026-11-02・日足Close・現在値ではない",
+      "price": "20.83",
+      "change": "-0.3200 (-1.51%)",
+      "basis_time": "2026-11-03・日足Close・現在値ではない",
       "source": "market.json / ^VIX"
     },
     {
       "market": "DXY",
-      "price": "101.88",
-      "change": "-0.1600 (-0.16%)",
-      "basis_time": "2026-10-30・日足Close・現在値ではない",
+      "price": "101.75",
+      "change": "-0.1300 (-0.13%)",
+      "basis_time": "2026-11-02・日足Close・現在値ではない",
       "source": "market.json / DX-Y.NYB"
     },
     {
       "market": "USD/JPY",
-      "price": "157.804",
-      "change": "-0.0290 (-0.02%)",
-      "basis_time": "2026-10-30・日足Close・現在値ではない",
+      "price": "157.677",
+      "change": "-0.1270 (-0.08%)",
+      "basis_time": "2026-11-02・日足Close・現在値ではない",
       "source": "market.json / JPY=X"
     },
     {
       "market": "米2年債利回り",
-      "price": "4.560%",
-      "change": "-0.050ポイント",
-      "basis_time": "2026-10-30 FRED公表値・米株2日と同日時点ではない",
+      "price": "4.590%",
+      "change": "+0.030ポイント",
+      "basis_time": "2026-11-02 FRED公表値・米株3日と同日時点ではない",
       "source": "market.json / FRED:DGS2"
     },
     {
       "market": "米10年債利回り",
-      "price": "4.940%",
-      "change": "-0.040ポイント",
-      "basis_time": "2026-10-30 FRED公表値・米株2日と同日時点ではない",
+      "price": "4.910%",
+      "change": "-0.030ポイント",
+      "basis_time": "2026-11-02 FRED公表値・米株3日と同日時点ではない",
       "source": "market.json / FRED:DGS10"
     },
     {
@@ -253,140 +243,140 @@
   "market_overview": [
     {
       "market": "米国株",
-      "move": "S&P500-0.51%、NASDAQ-1.07%、NASDAQ100-1.39%、SOX-3.37%、ダウ+0.41%、Russell2000-0.21%",
-      "relative_strength": "一般消費財・金融・素材が相対優位、エネルギー・情報技術が劣後",
-      "background": "AI投資回収・資金調達への警戒がテックに残る一方、ISM製造業は拡大加速",
-      "impact_on_japan": "11月4日の半導体・AI関連は下押し候補。金融・素材・内需への回転は国内での再現を確認"
+      "move": "S&P500+0.36%、NASDAQ+0.83%、NASDAQ100+0.68%、SOX+2.63%、ダウ-0.38%、Russell2000+0.23%",
+      "relative_strength": "半導体・情報技術・通信が優位、生活必需品・素材が劣後",
+      "background": "AI大型株の買い戻しとJOLTSの労働需要底堅さ。ただし業種幅は弱い",
+      "impact_on_japan": "半導体・電子部品に追い風候補。全面高ではなくTOPIX比と出来高を確認"
     },
     {
       "market": "日本株",
-      "move": "2日日経平均型-0.11%、TOPIX型-0.82%。電力・ガス+1.25%、不動産+1.08%、医薬品+0.84%、銀行-1.94%",
+      "move": "最新11月2日は日経平均-0.33%、TOPIX ETF代理-0.82%。取得済み13業種では電力・不動産・医薬品が上位",
       "relative_strength": "日経平均型、電力・不動産・医薬品が相対優位",
-      "background": "日銀決定後初の取引日。取得済み13業種・26銘柄の限定サンプル",
-      "impact_on_japan": "3日は現物休場。米2日材料の現物織り込みは4日へ持ち越し"
+      "background": "3日は文化の日で現物休場",
+      "impact_on_japan": "米3日のAI反発とApple材料は4日の現物で初めて確認"
     },
     {
       "market": "金利・為替",
-      "move": "米2年4.56%、10年4.94%、DXY101.88、USD/JPY157.804はいずれも10月30日",
-      "relative_strength": "2s10sは同一基準日30日に限り+38bp。米株2日の因果には使用しない",
-      "background": "FRED・日足正本が米株2日より1営業日古い",
-      "impact_on_japan": "4日の銀行・不動産・輸出株判断は時刻付き円・国内外金利で再確認"
+      "move": "米2年4.59%、10年4.91%、DXY101.75、USD/JPY157.677はいずれも11月2日",
+      "relative_strength": "2s10sは同一基準日2日に限り+32bp。米株3日の因果には使用しない",
+      "background": "FRED・日足正本が米株3日より1営業日古い",
+      "impact_on_japan": "銀行・不動産・輸出株は本日の時刻付き円・国内外金利で再確認"
     }
   ],
   "market_move_explanation": {
-    "title": "AI・半導体続落の一方、景気循環・内需・金融へ資金回転",
-    "move": "SOX-3.37%、NASDAQ100-1.39%、VIX+8.91%。Sector SPDR ETF代理は8/11上昇",
-    "trigger": "AIインフラ投資の資金調達・収益化懸念がテックに残り、ISM製造業の拡大と原油供給懸念後退が業種間の再配分を促したとの二次資料を確認",
+    "title": "AI・半導体主導の反発、ただし市場内部は狭い",
+    "move": "SOX+2.63%、NASDAQ+0.83%、VIX-1.51%。Sector SPDR ETF代理は5上昇・6下落",
+    "trigger": "AI・半導体の4営業日下落後の買い戻しとJOLTSの求人増を確認。Apple安と業種幅の弱さは反証",
     "transmission_chain": [
-      "AI投資回収・資金調達への警戒",
-      "半導体・情報技術が劣後",
-      "ISMの成長と高い価格指数で景気循環・金融・素材を選別",
-      "エネルギーETFは供給懸念後退観測で反落",
-      "日本は休場のため11月4日に半導体・銀行・不動産で確認"
+      "AI・半導体の売られ過ぎ修正",
+      "SOX・XLK・XLCが反発",
+      "S&P500・NASDAQを押し上げ",
+      "生活必需品・素材・金融は下落",
+      "日本は半導体・電子部品で反応を確認"
     ],
     "hit_hardest": [
       {
-        "market": "米半導体・情報技術・エネルギー",
-        "reason": "SOX-3.37%、XLK-2.95%、XLE-3.96%"
+        "market": "米生活必需品・素材",
+        "reason": "XLP-2.07%、XLB-2.01%"
       }
     ],
-    "relative_resilience": "XLY+2.41%、XLF+1.86%、XLB+1.76%、ダウ+0.41%",
-    "japan_impact": "半導体・AI関連は下押し候補。原油安観測は空運・運輸のコスト面に追い風、資源に逆風候補だが、定義付き原油値を採用しておらず条件付き",
-    "confidence": "supported。市場数値は正本、ISMと企業取引は一次資料、市場背景はReuters補足。単一因果は断定しない",
-    "invalidation": "SOX・NASDAQ100が反発し、国内半導体がTOPIX比で上昇する一方、XLY・XLF・XLBと国内内需・金融が失速する場合"
+    "relative_resilience": "SOX+2.63%、XLK+1.31%、XLC+1.18%、XLI+0.95%",
+    "japan_impact": "半導体・電子部品に追い風候補。Appleのメモリーコスト警戒は部品株の利益率評価への反証",
+    "confidence": "supported。市場値は正本、JOLTSとApple業績は一次資料、市場背景はReuters補足。単一因果は断定しない",
+    "invalidation": "SOX・NASDAQ100が再下落し、国内半導体がTOPIX比で劣後、または米業種幅がさらに悪化する場合"
   },
   "internal_strength": {
-    "large_vs_small": "NASDAQ100-1.39%、S&P500-0.51%、Russell2000-0.21%、ダウ+0.41%。大型ハイテクが最も弱い",
-    "breadth": "Sector SPDR ETF代理は8上昇・3下落。APは米株の多数が上昇と報道したが、全銘柄Breadthの精密値は未採用",
-    "sectors": "上位XLY+2.41%、XLF+1.86%、XLB+1.76%。下位XLE-3.96%、XLK-2.95%、XLV-0.15%",
-    "assessment": "指数はハイテク集中で弱い一方、業種幅は改善。全面リスクオフではなく高バリュエーションから景気循環・内需への回転"
+    "large_vs_small": "NASDAQ100+0.68%、S&P500+0.36%、Russell2000+0.23%、ダウ-0.38%。大型ハイテクが相対優位",
+    "breadth": "Sector SPDR ETF代理は5上昇・6下落。Reutersは値下がり銘柄が値上がりを上回ったと報道。全銘柄Breadthの精密値は未採用",
+    "sectors": "上位XLK+1.31%、XLC+1.18%、XLI+0.95%。下位XLP-2.07%、XLB-2.01%、XLE-0.85%",
+    "assessment": "指数反発はAI・半導体に集中。広い市場のリスク選好回復ではなく、集中した買い戻し"
   },
   "us_sector_etf_closes": [
     {
       "ticker": "XLC",
-      "price": 100.26,
-      "change_pct": 0.36,
-      "market_date": "2026-11-02",
+      "price": 101.44,
+      "change_pct": 1.18,
+      "market_date": "2026-11-03",
       "value_type": "daily Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLY",
-      "price": 118.16,
-      "change_pct": 2.41,
-      "market_date": "2026-11-02",
+      "price": 117.33,
+      "change_pct": -0.7,
+      "market_date": "2026-11-03",
       "value_type": "daily Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLP",
-      "price": 90.83,
-      "change_pct": 1.58,
-      "market_date": "2026-11-02",
+      "price": 88.95,
+      "change_pct": -2.07,
+      "market_date": "2026-11-03",
       "value_type": "daily Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLE",
-      "price": 67.25,
-      "change_pct": -3.96,
-      "market_date": "2026-11-02",
+      "price": 66.68,
+      "change_pct": -0.85,
+      "market_date": "2026-11-03",
       "value_type": "daily Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLF",
-      "price": 57.56,
-      "change_pct": 1.86,
-      "market_date": "2026-11-02",
+      "price": 57.19,
+      "change_pct": -0.64,
+      "market_date": "2026-11-03",
       "value_type": "daily Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLV",
-      "price": 184.6,
-      "change_pct": -0.15,
-      "market_date": "2026-11-02",
+      "price": 184.02,
+      "change_pct": -0.31,
+      "market_date": "2026-11-03",
       "value_type": "daily Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLI",
-      "price": 169.71,
-      "change_pct": 1.38,
-      "market_date": "2026-11-02",
+      "price": 171.32,
+      "change_pct": 0.95,
+      "market_date": "2026-11-03",
       "value_type": "daily Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLB",
-      "price": 53.67,
-      "change_pct": 1.76,
-      "market_date": "2026-11-02",
+      "price": 52.59,
+      "change_pct": -2.01,
+      "market_date": "2026-11-03",
       "value_type": "daily Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLRE",
-      "price": 43.64,
-      "change_pct": 1.09,
-      "market_date": "2026-11-02",
+      "price": 43.67,
+      "change_pct": 0.07,
+      "market_date": "2026-11-03",
       "value_type": "daily Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLK",
-      "price": 174.22,
-      "change_pct": -2.95,
-      "market_date": "2026-11-02",
+      "price": 176.51,
+      "change_pct": 1.31,
+      "market_date": "2026-11-03",
       "value_type": "daily Close",
       "proxy_for_sector_index": true
     },
     {
       "ticker": "XLU",
-      "price": 43.67,
-      "change_pct": 0.55,
-      "market_date": "2026-11-02",
+      "price": 43.42,
+      "change_pct": -0.57,
+      "market_date": "2026-11-03",
       "value_type": "daily Close",
       "proxy_for_sector_index": true
     }
@@ -394,116 +384,119 @@
   "monitoring_points": [
     {
       "target": "AI・半導体",
-      "today_check": "SOX・NASDAQ100、4日の国内半導体・9984のTOPIX比と出来高",
-      "view_change_condition": "SOX反発と国内半導体のTOPIX比改善で下押し評価を縮小"
+      "today_check": "SOX・NASDAQ100、国内半導体・9984のTOPIX比と出来高",
+      "view_change_condition": "SOX再下落と国内半導体のTOPIX比悪化で反発評価を撤回"
     },
     {
-      "target": "業種回転",
-      "today_check": "XLY・XLF・XLB対XLK・XLE、4日の内需・金融・資源",
-      "view_change_condition": "景気循環・内需が失速しXLK・XLEが反発すれば回転評価を撤回"
+      "target": "市場の広がり",
+      "today_check": "XLK・XLC対XLP・XLB、国内上昇業種数",
+      "view_change_condition": "ディフェンシブ・素材が反発し上昇業種が広がれば集中相場評価を縮小"
     },
     {
-      "target": "日銀後の国内選別",
-      "today_check": "4日の8306・8316対8801・8802、円・国内金利",
-      "view_change_condition": "銀行が反発し不動産が失速すれば11月2日の相対関係を一時的と判断"
+      "target": "Apple供給網",
+      "today_check": "6762・6981・6758など電子部品・デバイスの相対騰落",
+      "view_change_condition": "売上期待よりコスト懸念が優勢で部品株がTOPIX比劣後なら追い風評価を撤回"
     },
     {
       "target": "米イベント",
-      "today_check": "JOLTS、ISMサービス、雇用統計、CPI、PPIと同日米金利",
+      "today_check": "ISMサービス、雇用統計、CPI、PPIと同日米金利",
       "view_change_condition": "成長・価格鈍化と金利低下でも高PER株が反発しなければ利益要因を重視"
     }
   ],
   "data_quality": {
     "overall": "MANUAL_REVIEW",
     "missing": [
-      "米2年・10年債利回り、DXY、USD/JPYの正本は10月30日で、米株11月2日と基準日がずれる",
+      "米2年・10年債利回り、DXY、USD/JPYの正本は11月2日で、米株11月3日と基準日がずれる",
       "Gold・Silver・WTI・Brentの保存連続先物と取引所・限月・値種別・基準時刻の対応",
-      "11月3日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
-      "日本株17業種のうち4業種、監視34銘柄のうち8銘柄は外部429で再取得できず、取得済み13業種・26銘柄のみ評価",
+      "11月4日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "日本株17業種のうち4業種、監視34銘柄のうち8銘柄は直近収集で未取得。取得済み13業種・26銘柄のみ評価",
       "アナリスト評価変更と日本企業開示の全件網羅",
-      "Project添付仕様書3点は接続済みGoogle Driveの完全一致・部分一致検索で取得できず、Project Instructionsとmain現行仕様を優先"
+      "Project添付仕様書3点は接続済みGoogle Driveの完全一致・部分一致検索で取得できず、Project Instructionsとmain現行仕様を優先",
+      "market.jsonのSOXは10600.3965（+2.63%）だがNasdaq公式ページは10687.95（+3.48%）を表示。正本を維持し差異を記録"
     ],
     "differences": [
-      "AI・半導体は続落したが、米11業種ETF代理は8上昇・3下落へ改善",
-      "XLEは前営業日の相対優位から-3.96%へ反転、XLY・XLF・XLBが上昇",
-      "ISM製造業は55.5へ上昇し、価格指数75.2と投入価格圧力が残る",
-      "日本11月2日は日経平均型がTOPIX型を0.71ポイント上回り、銀行・情報通信が劣後",
-      "本日は東証現物休場のため、日本への米11月2日材料の現物反応は11月4日に確認"
+      "11月2日のAI・半導体続落から、3日はSOX+2.63%、NASDAQ100+0.68%へ反発",
+      "S&P500は上昇したがダウは下落、米11業種ETF代理は5上昇・6下落で全面高ではない",
+      "JOLTS求人は719.0万件から752.3万件へ増加、離職は304.4万件から336.5万件へ増加",
+      "Appleは好決算でも株価が下落し、需要の強さとメモリーコスト懸念が併存",
+      "日本は11月3日休場後の再開日で、米3日材料の現物反応は本日確認"
     ],
     "excluded": [
-      "10月30日の米金利・為替を11月2日の米株下落原因として扱うこと",
+      "11月2日の米金利・為替を11月3日の米株上昇原因として扱うこと",
       "限月・値種別・時刻未確認の商品先物、暗号資産現在値、日経225先物",
       "Copper価格・在庫（任意非掲載）",
-      "原油低下観測またはISMだけを11月2日の全市場の単一原因と断定すること",
+      "NASDAQとSOXの反発を米国株全体の全面高と表現すること",
       "未取得4業種・8銘柄を含む日本市場全体のBreadth断定",
-      "評価変更なし、企業材料を全件確認済みという包括断定"
+      "評価変更なし、企業材料を全件確認済みという包括断定",
+      "Nasdaq公式SOX値でmarket.jsonの正本を置換すること"
     ],
     "cautions": [
       "QUALIFIED注釈付き版",
-      "米株2日、金利・為替30日、日本株2日を混同しない",
+      "米株3日、金利・為替2日、日本株2日を混同しない",
       "Sector SPDR ETFは業種指数そのものではない",
       "日本株は取得済み13業種・26銘柄の限定サンプル",
       "Copperは任意非掲載",
+      "SOXの正本と公式照合差を記録",
       "事実・市場反応・解釈を分離"
     ]
   },
   "final_conclusion": {
-    "headline": "注釈付き11月3日版｜米AI・半導体は続落、景気循環・内需へ広がる選別",
+    "headline": "注釈付き11月4日版｜米AI・半導体は反発、ただしダウ安と業種幅の弱さが残る",
     "winners": [
-      "米一般消費財・金融・素材",
-      "日本の電力・不動産・医薬品"
+      "米半導体・情報技術・通信",
+      "日本の半導体・電子部品（確認条件付き）"
     ],
     "losers": [
-      "米AI・半導体・情報技術・エネルギー",
-      "日本の銀行・情報通信・資源"
+      "米生活必需品・素材",
+      "日本のディフェンシブ・素材（相対劣後候補）"
     ],
     "top_three": [
-      "米11月2日はS&P500-0.51%、NASDAQ-1.07%、NASDAQ100-1.39%、SOX-3.37%。VIXは+8.91%でAI・半導体の調整が継続",
-      "米11業種ETF代理は8上昇・3下落。一般消費財+2.41%、金融+1.86%、素材+1.76%に対し、エネルギー-3.96%、情報技術-2.95%",
-      "米10月ISM製造業PMIは55.5（9月54.5）。新規受注55.5、製造59.0、雇用52.4、価格75.2で成長と投入価格圧力が併存"
+      "米11月3日はS&P500+0.36%、NASDAQ+0.83%、NASDAQ100+0.68%、SOX+2.63%。一方ダウは-0.38%で大型AI・半導体主導",
+      "米11業種ETF代理は5上昇・6下落。情報技術+1.31%、通信+1.18%、資本財+0.95%に対し生活必需品-2.07%、素材-2.01%",
+      "米9月JOLTSは求人752.3万件、採用540.2万件、離職336.5万件。求人は前月719.0万件から増え、労働需要の急減は確認されず"
     ],
     "triggers": [
-      "SOX・NASDAQ100の反発力",
-      "4日の国内半導体・銀行・不動産",
-      "JOLTS・雇用統計・CPIと同日金利"
+      "国内半導体のTOPIX比",
+      "米業種幅の改善・悪化",
+      "雇用統計・CPIと同日金利"
     ],
-    "disclaimer": "QUALIFIED。米金利・為替の基準日差、未定義先物、現在値、未取得日本系列、網羅不能項目を除外。推測補完なし。"
+    "disclaimer": "QUALIFIED。米金利・為替の基準日差、未定義先物、現在値、未取得日本系列、SOX照合差異、網羅不能項目を除外。推測補完なし。"
   },
   "japan_equities_preview": {
-    "summary": "注釈付き11月3日版｜米AI・半導体は続落、景気循環・内需へ広がる選別",
+    "summary": "注釈付き11月4日版｜米AI・半導体は反発、ただしダウ安と業種幅の弱さが残る",
     "top_materials": [
-      "米11月2日はS&P500-0.51%、NASDAQ-1.07%、NASDAQ100-1.39%、SOX-3.37%。VIXは+8.91%でAI・半導体の調整が継続",
-      "米11業種ETF代理は8上昇・3下落。一般消費財+2.41%、金融+1.86%、素材+1.76%に対し、エネルギー-3.96%、情報技術-2.95%",
-      "米10月ISM製造業PMIは55.5（9月54.5）。新規受注55.5、製造59.0、雇用52.4、価格75.2で成長と投入価格圧力が併存",
-      "日本11月2日は日経平均型-0.11%、TOPIX型-0.82%。電力・ガス+1.25%、不動産+1.08%、医薬品+0.84%に対し銀行-1.94%",
-      "11月3日の東証現物は文化の日で休場。OSEのデリバティブ祝日取引は実施されるが、限月・値種別を確認できない数値は不採用"
+      "米11月3日はS&P500+0.36%、NASDAQ+0.83%、NASDAQ100+0.68%、SOX+2.63%。一方ダウは-0.38%で大型AI・半導体主導",
+      "米11業種ETF代理は5上昇・6下落。情報技術+1.31%、通信+1.18%、資本財+0.95%に対し生活必需品-2.07%、素材-2.01%",
+      "米9月JOLTSは求人752.3万件、採用540.2万件、離職336.5万件。求人は前月719.0万件から増え、労働需要の急減は確認されず",
+      "Appleは7〜9月期売上1145億ドル（前年比+12%）、EPS2.10ドル（+14%）、粗利率47.9%。株価は11月3日に下落し部品コスト懸念が反証",
+      "日本の現物最新日は11月2日。日経平均型-0.33%、TOPIX ETF代理-0.82%で、米11月3日のAI反発は11月4日の国内半導体・電子部品で初めて確認"
     ],
     "focus_sectors": [
       "半導体・電機",
+      "電子部品",
+      "情報通信",
       "銀行",
-      "不動産",
-      "素材",
-      "運輸・空運"
+      "素材・生活必需品"
     ],
     "top_stories": [
       {
         "company": "ソフトバンクグループ",
         "ticker": "9984",
-        "headline": "2日-1.58%、米AI・半導体続落の4日波及を監視",
+        "headline": "2日-1.58%、米AI・半導体反発の4日波及を監視",
         "importance": "high",
-        "market_pricing_status": "米2日材料は未反映"
+        "market_pricing_status": "米3日材料は未反映"
       },
       {
         "company": "三菱UFJフィナンシャル・グループ",
         "ticker": "8306",
-        "headline": "2日-1.86%、銀行業ETF代理-1.94%",
+        "headline": "2日-1.86%、3日の米金融ETFも-0.64%",
         "importance": "high",
-        "market_pricing_status": "日銀決定を一部反映、米2日材料は未反映"
+        "market_pricing_status": "日銀決定を一部反映、米3日材料は未反映"
       },
       {
         "company": "第一三共",
         "ticker": "4568",
-        "headline": "2日+5.03%、医薬品ETF代理+0.84%",
+        "headline": "2日+5.03%、米生活必需品・素材安との相対性を確認",
         "importance": "medium",
         "market_pricing_status": "2日実績に反映"
       }
@@ -511,29 +504,30 @@
     "total_story_count": 3
   },
   "what_changed": {
-    "summary": "前回のAI・半導体急落とディフェンシブ退避から、半導体続落を残しつつ一般消費財・金融・素材へ上昇業種が広がった。日本は11月2日の実績を追加し、休場日の条件付き波及へ更新。",
+    "summary": "前回のAI・半導体続落から反発へ転じたが、上昇業種ETF代理は8から5へ減少。JOLTSの求人増とApple好決算・コスト懸念を追加し、日本は祝日明けの初動確認へ更新。",
     "items": [
-      "SOXは続落、VIXは上昇",
-      "米上昇業種ETF代理は6から8へ増加",
-      "XLEは+1.91%から-3.96%へ反転",
-      "日本は日経平均型がTOPIX型を相対上回る",
-      "ISM製造業55.5と価格75.2を新規反映"
+      "SOXは-3.37%から+2.63%へ反発",
+      "NASDAQ100は-1.39%から+0.68%へ反発",
+      "米上昇業種ETF代理は8から5へ減少",
+      "JOLTS求人752.3万件を追加",
+      "Appleの好決算と株価下落を両方反映"
     ]
   },
   "publication_policy": {
     "status": "QUALIFIED",
     "mode": "provisional",
-    "updated_at": "2026-11-03T06:58:00+09:00",
+    "updated_at": "2026-11-04T06:59:00+09:00",
     "complete_gate": "FAIL",
     "copper_included": false,
-    "note": "11月2日の米株・日本株の確認済み終値と一次資料を採用。基準日が古い米金利・為替、未定義先物、現在値、未取得日本系列、網羅不能項目を除外した注釈付き公開。",
+    "note": "11月3日の米株・VIX・11業種ETFと9月JOLTS、Apple一次資料を採用。基準日が古い金利・為替、未定義先物、現在値、未取得日本系列、SOX照合差異、網羅不能項目を除外・注記した公開。",
     "missing_items": [
-      "米2年・10年債利回り、DXY、USD/JPYの正本は10月30日で、米株11月2日と基準日がずれる",
+      "米2年・10年債利回り、DXY、USD/JPYの正本は11月2日で、米株11月3日と基準日がずれる",
       "Gold・Silver・WTI・Brentの保存連続先物と取引所・限月・値種別・基準時刻の対応",
-      "11月3日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
-      "日本株17業種のうち4業種、監視34銘柄のうち8銘柄は外部429で再取得できず、取得済み13業種・26銘柄のみ評価",
+      "11月4日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
+      "日本株17業種のうち4業種、監視34銘柄のうち8銘柄は直近収集で未取得。取得済み13業種・26銘柄のみ評価",
       "アナリスト評価変更と日本企業開示の全件網羅",
-      "Project添付仕様書3点は接続済みGoogle Driveの完全一致・部分一致検索で取得できず、Project Instructionsとmain現行仕様を優先"
+      "Project添付仕様書3点は接続済みGoogle Driveの完全一致・部分一致検索で取得できず、Project Instructionsとmain現行仕様を優先",
+      "market.jsonのSOXは10600.3965（+2.63%）だがNasdaq公式ページは10687.95（+3.48%）を表示。正本を維持し差異を記録"
     ]
   },
   "market_context_themes": [
@@ -656,6 +650,16 @@
             "nov3-ism",
             "nov3-market"
           ]
+        },
+        {
+          "date": "2026-11-04",
+          "title": "JOLTS求人は752.3万件",
+          "fact": "求人は8月719.0万件から増加、採用は540.2万件。",
+          "market_impact": "米株はAI主導で上昇。指標単独寄与と同日金利は未確認。",
+          "source_ids": [
+            "nov4-jolts",
+            "nov4-market"
+          ]
         }
       ],
       "initial_view": {
@@ -663,16 +667,16 @@
         "text": "FRBはインフレを警戒し、利下げを急がない姿勢"
       },
       "new_fact": {
-        "date": "2026-11-03",
-        "text": "ISM拡大と高い投入価格を確認。"
+        "date": "2026-11-04",
+        "text": "JOLTSは労働需要の急減を示さず。"
       },
       "market_reaction": {
-        "date": "2026-11-03",
-        "text": "循環・金融・素材上昇、半導体下落。"
+        "date": "2026-11-04",
+        "text": "NASDAQ・SOX上昇、ダウ下落。単独因果は保留。"
       },
-      "current_view": "景気拡大は循環株の追い風候補だが、価格75.2は金利・利益率の反証。JOLTS・雇用統計・CPIと同日金利で再評価。",
-      "japan_impact": "4日の機械・素材・銀行と高PER電機の相対反応を確認。",
-      "counter_evidence": "成長指標が強くても金利上昇・利益率懸念で循環株が失速すれば見方を修正。",
+      "current_view": "労働需要の急減は確認されず、早期緩和期待の反証。ただし雇用統計・CPIと同日金利で再評価。",
+      "japan_impact": "高PER株の追い風は金利未確認のため限定。銀行・輸出も同日円・金利で確認。",
+      "counter_evidence": "雇用統計の減速と金利低下が同時に確認されれば引き締め懸念を縮小。",
       "source_ids": [
         "fed-apr29",
         "fed-mar18",
@@ -695,7 +699,9 @@
         "nov2-market",
         "nov2-weekend",
         "nov3-market",
-        "nov3-ism"
+        "nov3-ism",
+        "nov4-jolts",
+        "nov4-market"
       ]
     },
     {
@@ -851,6 +857,16 @@
             "nov3-marvell",
             "nov3-market"
           ]
+        },
+        {
+          "date": "2026-11-04",
+          "title": "半導体反発とAppleのコスト懸念",
+          "fact": "SOX+2.63%。Appleは売上・EPS増加、粗利率47.9%。",
+          "market_impact": "AI半導体は反発したがApple株は下落。",
+          "source_ids": [
+            "nov4-apple",
+            "nov4-market"
+          ]
         }
       ],
       "initial_view": {
@@ -858,16 +874,16 @@
         "text": "AI設備投資と先端半導体需要の強さが株価を支える局面"
       },
       "new_fact": {
-        "date": "2026-11-03",
-        "text": "半導体は続落、AI光接続の大型取引を発表。"
+        "date": "2026-11-04",
+        "text": "半導体は反発、Appleは需要増とコスト懸念が併存。"
       },
       "market_reaction": {
-        "date": "2026-11-03",
-        "text": "SOX-3.37%、XLK-2.95%、VIX+8.91%。"
+        "date": "2026-11-04",
+        "text": "SOX+2.63%、XLK+1.31%、Apple株は下落。"
       },
-      "current_view": "AI需要の中期拡大は維持するが、収益化・資金調達・大型取引の執行リスクで選別が続く。",
-      "japan_impact": "4日の9984・半導体・電子部品をTOPIX比と出来高で確認。",
-      "counter_evidence": "SOX反発、国内半導体のTOPIX比改善、VIX低下なら下押し評価を撤回。",
+      "current_view": "AI需要の中期拡大は維持するが、利益率・メモリーコスト・資金調達で選別が続く。",
+      "japan_impact": "半導体・電子部品をTOPIX比と出来高で確認。",
+      "counter_evidence": "SOX再下落、国内半導体・部品のTOPIX比悪化なら反発評価を撤回。",
       "source_ids": [
         "ai-apr16",
         "ai-credit-1016",
@@ -890,7 +906,9 @@
         "nov2-weekend",
         "nov2-intel",
         "nov3-market",
-        "nov3-marvell"
+        "nov3-marvell",
+        "nov4-apple",
+        "nov4-market"
       ]
     },
     {
@@ -1019,6 +1037,16 @@
             "nov3-jpx",
             "nov3-market"
           ]
+        },
+        {
+          "date": "2026-11-04",
+          "title": "祝日明けの日本初動待ち",
+          "fact": "3日現物休場、4日再開。日銀マネタリーベースは8:50予定。",
+          "market_impact": "米3日材料の日本現物反応は未確認。",
+          "source_ids": [
+            "nov4-boj-calendar",
+            "nov4-market"
+          ]
         }
       ],
       "initial_view": {
@@ -1026,16 +1054,16 @@
         "text": "政策金利0.75%でも利上げを求める意見が増え、正常化継続が意識された"
       },
       "new_fact": {
-        "date": "2026-11-03",
-        "text": "展望全文を確認。3日現物休場、4日再開。"
+        "date": "2026-11-04",
+        "text": "3日休場後、4日に米AI反発を初めて織り込む。"
       },
       "market_reaction": {
-        "date": "2026-11-03",
-        "text": "2日は銀行劣後、不動産相対優位。"
+        "date": "2026-11-04",
+        "text": "確認時点では現物未開始。"
       },
-      "current_view": "正常化方向は維持するが、2日の銀行安を反証として単純な銀行追い風を避ける。",
-      "japan_impact": "4日の円・国内金利と銀行・不動産の相対反応を確認。",
-      "counter_evidence": "銀行反発・不動産失速なら2日の相対関係を一時的と判断。",
+      "current_view": "2日の銀行劣後・不動産相対優位を起点に、円・金利・半導体の本日初動で再評価。",
+      "japan_impact": "半導体・電子部品、銀行・不動産の相対反応を確認。",
+      "counter_evidence": "半導体劣後・銀行反発・不動産失速なら前回の相対関係を更新。",
       "source_ids": [
         "boj-apr28",
         "boj-jun16",
@@ -1058,7 +1086,9 @@
         "nov2-boj",
         "nov3-market",
         "nov3-boj",
-        "nov3-jpx"
+        "nov3-jpx",
+        "nov4-boj-calendar",
+        "nov4-market"
       ]
     }
   ],
@@ -1532,23 +1562,33 @@
       "publisher": "Japan Exchange Group",
       "published_date": "2026-11-02",
       "source_url": "https://www.jpx.co.jp/news/2040/20261102-01.html"
+    },
+    "nov4-market": {
+      "title": "Market Morning canonical market data 2026-11-03",
+      "publisher": "Market Morning",
+      "published_date": "2026-11-03",
+      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+    },
+    "nov4-jolts": {
+      "title": "JOLTS September 2026",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "published_date": "2026-11-03",
+      "source_url": "https://www.bls.gov/news.release/jolts.htm"
+    },
+    "nov4-apple": {
+      "title": "Apple Q4 2026 results",
+      "publisher": "Apple",
+      "published_date": "2026-11-02",
+      "source_url": "https://www.apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results/"
+    },
+    "nov4-boj-calendar": {
+      "title": "BOJ release calendar",
+      "publisher": "Bank of Japan",
+      "published_date": "2026-10-30",
+      "source_url": "https://www.boj.or.jp/about/calendar/"
     }
   },
   "events": [
-    {
-      "id": "us-jolts-2026-09",
-      "event": "米JOLTS求人件数（9月）",
-      "start_at_jst": "2026-11-04T00:00:00+09:00",
-      "jst_time": "2026-11-04 00:00 JST（米東部11/3 10:00）",
-      "forecast": "未確認",
-      "previous": "未確認",
-      "focus": "求人・離職・採用の需給バランスと賃金圧力",
-      "affected_markets": "米国債・ドル・米国株・日本株",
-      "importance": "高",
-      "source_url": "https://www.bls.gov/schedule/2026/11_sched.htm",
-      "source_name": "U.S. Bureau of Labor Statistics",
-      "verified_on": "2026-11-03"
-    },
     {
       "id": "ism-services-2026-10",
       "event": "米ISM非製造業景況指数（10月）",
@@ -1622,9 +1662,9 @@
   ],
   "events_metadata": {
     "status": "取得済",
-    "updated_at": "2026-11-03T12:57:34+09:00",
-    "window_start": "2026-11-03",
-    "window_end": "2026-11-17",
+    "updated_at": "2026-11-04T06:59:00+09:00",
+    "window_start": "2026-11-04",
+    "window_end": "2026-11-18",
     "timezone": "Asia/Tokyo",
     "source_policy": "公式日程で確認済みのイベントのみ。予想・前回値は未確認を推測しない",
     "coverage_note": "公式日程で確認できた主要イベントのみ。市場予想・前回値を確認できない場合は未確認と表示する。",

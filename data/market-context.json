@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "updated_at": "2026-11-03T06:58:00+09:00",
-  "report_date": "2026-11-03",
+  "updated_at": "2026-11-04T06:59:00+09:00",
+  "report_date": "2026-11-04",
   "period_start": "2026-03-18",
-  "period_end": "2026-11-03",
+  "period_end": "2026-11-04",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-11-03",
+    "latest_report_date": "2026-11-04",
     "source_report_count": 11,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
@@ -132,6 +132,16 @@
             "nov3-ism",
             "nov3-market"
           ]
+        },
+        {
+          "date": "2026-11-04",
+          "title": "JOLTS求人は752.3万件",
+          "fact": "求人は8月719.0万件から増加、採用は540.2万件。",
+          "market_impact": "米株はAI主導で上昇。指標単独寄与と同日金利は未確認。",
+          "source_ids": [
+            "nov4-jolts",
+            "nov4-market"
+          ]
         }
       ],
       "initial_view": {
@@ -139,16 +149,16 @@
         "text": "FRBはインフレを警戒し、利下げを急がない姿勢"
       },
       "new_fact": {
-        "date": "2026-11-03",
-        "text": "ISM拡大と高い投入価格を確認。"
+        "date": "2026-11-04",
+        "text": "JOLTSは労働需要の急減を示さず。"
       },
       "market_reaction": {
-        "date": "2026-11-03",
-        "text": "循環・金融・素材上昇、半導体下落。"
+        "date": "2026-11-04",
+        "text": "NASDAQ・SOX上昇、ダウ下落。単独因果は保留。"
       },
-      "current_view": "景気拡大は循環株の追い風候補だが、価格75.2は金利・利益率の反証。JOLTS・雇用統計・CPIと同日金利で再評価。",
-      "japan_impact": "4日の機械・素材・銀行と高PER電機の相対反応を確認。",
-      "counter_evidence": "成長指標が強くても金利上昇・利益率懸念で循環株が失速すれば見方を修正。",
+      "current_view": "労働需要の急減は確認されず、早期緩和期待の反証。ただし雇用統計・CPIと同日金利で再評価。",
+      "japan_impact": "高PER株の追い風は金利未確認のため限定。銀行・輸出も同日円・金利で確認。",
+      "counter_evidence": "雇用統計の減速と金利低下が同時に確認されれば引き締め懸念を縮小。",
       "source_ids": [
         "fed-apr29",
         "fed-mar18",
@@ -171,7 +181,9 @@
         "nov2-market",
         "nov2-weekend",
         "nov3-market",
-        "nov3-ism"
+        "nov3-ism",
+        "nov4-jolts",
+        "nov4-market"
       ]
     },
     {
@@ -327,6 +339,16 @@
             "nov3-marvell",
             "nov3-market"
           ]
+        },
+        {
+          "date": "2026-11-04",
+          "title": "半導体反発とAppleのコスト懸念",
+          "fact": "SOX+2.63%。Appleは売上・EPS増加、粗利率47.9%。",
+          "market_impact": "AI半導体は反発したがApple株は下落。",
+          "source_ids": [
+            "nov4-apple",
+            "nov4-market"
+          ]
         }
       ],
       "initial_view": {
@@ -334,16 +356,16 @@
         "text": "AI設備投資と先端半導体需要の強さが株価を支える局面"
       },
       "new_fact": {
-        "date": "2026-11-03",
-        "text": "半導体は続落、AI光接続の大型取引を発表。"
+        "date": "2026-11-04",
+        "text": "半導体は反発、Appleは需要増とコスト懸念が併存。"
       },
       "market_reaction": {
-        "date": "2026-11-03",
-        "text": "SOX-3.37%、XLK-2.95%、VIX+8.91%。"
+        "date": "2026-11-04",
+        "text": "SOX+2.63%、XLK+1.31%、Apple株は下落。"
       },
-      "current_view": "AI需要の中期拡大は維持するが、収益化・資金調達・大型取引の執行リスクで選別が続く。",
-      "japan_impact": "4日の9984・半導体・電子部品をTOPIX比と出来高で確認。",
-      "counter_evidence": "SOX反発、国内半導体のTOPIX比改善、VIX低下なら下押し評価を撤回。",
+      "current_view": "AI需要の中期拡大は維持するが、利益率・メモリーコスト・資金調達で選別が続く。",
+      "japan_impact": "半導体・電子部品をTOPIX比と出来高で確認。",
+      "counter_evidence": "SOX再下落、国内半導体・部品のTOPIX比悪化なら反発評価を撤回。",
       "source_ids": [
         "ai-apr16",
         "ai-credit-1016",
@@ -366,7 +388,9 @@
         "nov2-weekend",
         "nov2-intel",
         "nov3-market",
-        "nov3-marvell"
+        "nov3-marvell",
+        "nov4-apple",
+        "nov4-market"
       ]
     },
     {
@@ -495,6 +519,16 @@
             "nov3-jpx",
             "nov3-market"
           ]
+        },
+        {
+          "date": "2026-11-04",
+          "title": "祝日明けの日本初動待ち",
+          "fact": "3日現物休場、4日再開。日銀マネタリーベースは8:50予定。",
+          "market_impact": "米3日材料の日本現物反応は未確認。",
+          "source_ids": [
+            "nov4-boj-calendar",
+            "nov4-market"
+          ]
         }
       ],
       "initial_view": {
@@ -502,16 +536,16 @@
         "text": "政策金利0.75%でも利上げを求める意見が増え、正常化継続が意識された"
       },
       "new_fact": {
-        "date": "2026-11-03",
-        "text": "展望全文を確認。3日現物休場、4日再開。"
+        "date": "2026-11-04",
+        "text": "3日休場後、4日に米AI反発を初めて織り込む。"
       },
       "market_reaction": {
-        "date": "2026-11-03",
-        "text": "2日は銀行劣後、不動産相対優位。"
+        "date": "2026-11-04",
+        "text": "確認時点では現物未開始。"
       },
-      "current_view": "正常化方向は維持するが、2日の銀行安を反証として単純な銀行追い風を避ける。",
-      "japan_impact": "4日の円・国内金利と銀行・不動産の相対反応を確認。",
-      "counter_evidence": "銀行反発・不動産失速なら2日の相対関係を一時的と判断。",
+      "current_view": "2日の銀行劣後・不動産相対優位を起点に、円・金利・半導体の本日初動で再評価。",
+      "japan_impact": "半導体・電子部品、銀行・不動産の相対反応を確認。",
+      "counter_evidence": "半導体劣後・銀行反発・不動産失速なら前回の相対関係を更新。",
       "source_ids": [
         "boj-apr28",
         "boj-jun16",
@@ -534,22 +568,24 @@
         "nov2-boj",
         "nov3-market",
         "nov3-boj",
-        "nov3-jpx"
+        "nov3-jpx",
+        "nov4-boj-calendar",
+        "nov4-market"
       ]
     }
   ],
   "scenario_change_conditions": [
     {
       "condition": "AI・半導体",
-      "meaning": "SOX反発と国内半導体のTOPIX比改善で下押し評価を縮小"
+      "meaning": "SOX再下落と国内半導体のTOPIX比悪化で反発評価を撤回"
     },
     {
-      "condition": "業種回転",
-      "meaning": "景気循環・内需が失速しXLK・XLEが反発すれば回転評価を撤回"
+      "condition": "市場の広がり",
+      "meaning": "ディフェンシブ・素材が反発し上昇業種が広がれば集中相場評価を縮小"
     },
     {
-      "condition": "日銀後の国内選別",
-      "meaning": "銀行が反発し不動産が失速すれば11月2日の相対関係を一時的と判断"
+      "condition": "Apple供給網",
+      "meaning": "売上期待よりコスト懸念が優勢で部品株がTOPIX比劣後なら追い風評価を撤回"
     },
     {
       "condition": "米イベント",
@@ -712,6 +748,20 @@
       "url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/pmi/october/"
     },
     {
+      "id": "nov4-jolts",
+      "title": "JOLTS September 2026",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "published_at": "2026-11-03",
+      "url": "https://www.bls.gov/news.release/jolts.htm"
+    },
+    {
+      "id": "nov4-market",
+      "title": "Market Morning canonical market data 2026-11-03",
+      "publisher": "Market Morning",
+      "published_at": "2026-11-03",
+      "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+    },
+    {
       "id": "ai-apr16",
       "title": "Strong ASML, TSMC forecasts signal AI spending boom is intact",
       "publisher": "Reuters",
@@ -794,6 +844,13 @@
       "publisher": "Marvell / SEC",
       "published_at": "2026-11-02",
       "url": "https://www.sec.gov/Archives/edgar/data/1835632/000119312526442714/d81187dex991.htm"
+    },
+    {
+      "id": "nov4-apple",
+      "title": "Apple Q4 2026 results",
+      "publisher": "Apple",
+      "published_at": "2026-11-02",
+      "url": "https://www.apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results/"
     },
     {
       "id": "boj-apr28",
@@ -913,6 +970,13 @@
       "publisher": "Japan Exchange Group",
       "published_at": "2026-11-02",
       "url": "https://www.jpx.co.jp/news/2040/20261102-01.html"
+    },
+    {
+      "id": "nov4-boj-calendar",
+      "title": "BOJ release calendar",
+      "publisher": "Bank of Japan",
+      "published_at": "2026-10-30",
+      "url": "https://www.boj.or.jp/about/calendar/"
     }
   ]
 }

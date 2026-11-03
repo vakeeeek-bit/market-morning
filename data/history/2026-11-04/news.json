@@ -1,0 +1,124 @@
+{
+  "report_date": "2026-11-04",
+  "target_market_date": "2026-11-03",
+  "updated_at": "2026-11-04T06:59:00+09:00",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "一次本文を実読できた3件のみ掲載。市場反応は正本または未確認として分離。企業開示・評価変更の全件網羅は未確認。",
+  "articles": [
+    {
+      "id": "nov4-jolts-sep",
+      "title": "米9月JOLTS求人は752.3万件",
+      "published_date": "2026-11-03",
+      "verified_at": "2026-11-04T06:59:00+09:00",
+      "source_type": "primary",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "source_url": "https://www.bls.gov/news.release/jolts.htm",
+      "verification_url": "https://www.bls.gov/news.release/jolts.htm",
+      "verification_status": "PASS",
+      "fact": "求人752.3万件、採用540.2万件、離職336.5万件、解雇160.5万件。8月求人は719.0万件へ上方改定。",
+      "analysis": "労働需要の急減は確認されず、金融緩和期待には反証。ただし離職増と採用横ばいを含む。",
+      "limitations": "指標単独の価格寄与と市場予想との差は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "U.S. Bureau of Labor Statisticsの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "求人752.3万件、採用540.2万件、離職336.5万件、解雇160.5万件。8月求人は719.0万件へ上方改定。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-03、実確認2026-11-04T06:59:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "指標単独の価格寄与と市場予想との差は未確認。"
+        }
+      }
+    },
+    {
+      "id": "nov4-apple-q4",
+      "title": "Appleの7〜9月期売上は1145億ドル",
+      "published_date": "2026-11-02",
+      "verified_at": "2026-11-04T06:59:00+09:00",
+      "source_type": "primary",
+      "publisher": "Apple",
+      "source_url": "https://www.apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results/",
+      "verification_url": "https://www.apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results/",
+      "verification_status": "PASS",
+      "fact": "売上高は前年比12%増、EPSは14%増の2.10ドル、粗利率47.9%。関税還付が粗利率を約1ポイント押し上げた。",
+      "analysis": "需要の強さは部品需要を支えるが、メモリー価格とAI投資費用は利益率の反証。",
+      "limitations": "会社発表本文は12月期粗利率ガイダンスの数値を含まないため、二次報道のガイダンス値は事実欄に採用しない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Appleの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "売上高は前年比12%増、EPSは14%増の2.10ドル、粗利率47.9%。関税還付が粗利率を約1ポイント押し上げた。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-02、実確認2026-11-04T06:59:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "会社発表本文は12月期粗利率ガイダンスの数値を含まないため、二次報道のガイダンス値は事実欄に採用しない。"
+        }
+      }
+    },
+    {
+      "id": "nov4-boj-calendar",
+      "title": "日銀は11月4日に10月マネタリーベースを公表予定",
+      "published_date": "2026-10-30",
+      "verified_at": "2026-11-04T06:59:00+09:00",
+      "source_type": "primary",
+      "publisher": "Bank of Japan",
+      "source_url": "https://www.boj.or.jp/about/calendar/",
+      "verification_url": "https://www.boj.or.jp/about/calendar/",
+      "verification_status": "PASS",
+      "fact": "日銀公式予定は11月4日8:50公表。レポート確認時刻07:14 JSTには未公表。",
+      "analysis": "予定を実績として扱わず、公表後に円・銀行・不動産を再確認。",
+      "limitations": "確認時点では未公表で、内容・市場反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Bank of Japanの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "日銀公式予定は11月4日8:50公表。レポート確認時刻07:14 JSTには未公表。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-10-30、実確認2026-11-04T06:59:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "確認時点では未公表で、内容・市場反応は未確認。"
+        }
+      }
+    }
+  ]
+}

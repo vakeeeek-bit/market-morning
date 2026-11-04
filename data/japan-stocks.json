@@ -1,102 +1,108 @@
 {
-  "report_date": "2026-11-04",
-  "target_market_date": "2026-11-03",
-  "updated_at": "2026-11-04T06:59:00+09:00",
+  "report_date": "2026-11-05",
+  "target_market_date": "2026-11-04",
+  "updated_at": "2026-11-05T07:18:00+09:00",
   "report_type": "daily_provisional",
   "japan_quick_view": {
-    "headline": "注釈付き11月4日版｜米AI・半導体は反発、ただしダウ安と業種幅の弱さが残る",
+    "headline": "注釈付き11月5日版｜米国は広い株高、ただし半導体だけ逆行安",
     "top_materials": [
-      "米11月3日はS&P500+0.36%、NASDAQ+0.83%、NASDAQ100+0.68%、SOX+2.63%。一方ダウは-0.38%で大型AI・半導体主導",
-      "米11業種ETF代理は5上昇・6下落。情報技術+1.31%、通信+1.18%、資本財+0.95%に対し生活必需品-2.07%、素材-2.01%",
-      "米9月JOLTSは求人752.3万件、採用540.2万件、離職336.5万件。求人は前月719.0万件から増え、労働需要の急減は確認されず",
-      "Appleは7〜9月期売上1145億ドル（前年比+12%）、EPS2.10ドル（+14%）、粗利率47.9%。株価は11月3日に下落し部品コスト懸念が反証",
-      "日本の現物最新日は11月2日。日経平均型-0.33%、TOPIX ETF代理-0.82%で、米11月3日のAI反発は11月4日の国内半導体・電子部品で初めて確認"
+      "米11月4日はS&P500+1.58%、NASDAQ+1.44%、ダウ+3.03%、Russell2000+1.58%、VIX-20.26%。一方SOXは-3.13%で、全面的なAI相場ではない",
+      "米11業種ETF代理は8上昇・3下落。一般消費財+4.26%、金融+3.51%、通信+3.47%に対し、エネルギー-4.74%、資本財-1.09%、情報技術-0.01%",
+      "米10月ISMサービスPMIは54.5、雇用51.4、価格73.0。サービス拡大と高い投入価格が併存し、同日金利未取得のため金利反応は断定しない",
+      "日本11月4日は日経平均型-1.34%、TOPIX型+0.24%。電力・ガス+2.59%、不動産+1.29%、商社・卸売+0.96%が上位、エネルギー-3.94%、鉄鋼・非鉄-3.64%、電機・精密-2.62%が下位",
+      "三菱商事は上期親会社帰属利益6196.96億円（前年比+74.2%）と最大1兆円の自己株取得を公表し、株価+7.88%。11月5日からの買付実行と商社内の広がりを確認"
     ],
     "focus_sectors": [
-      "半導体・電機",
-      "電子部品",
-      "情報通信",
-      "銀行",
-      "素材・生活必需品"
+      "商社・卸売",
+      "電力・ガス",
+      "不動産",
+      "電機・精密",
+      "エネルギー資源"
     ],
     "unpriced_materials": [
-      "米11月3日のSOX+2.63%・NASDAQ100+0.68%は日本2日大引け後",
-      "3日は東証現物休場のため4日に織り込み",
-      "米2年・10年債利回り、DXY、USD/JPYの正本は11月2日で、米株11月3日と基準日がずれる",
-      "Gold・Silver・WTI・Brentの保存連続先物と取引所・限月・値種別・基準時刻の対応",
-      "11月4日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
-      "日本株17業種のうち4業種、監視34銘柄のうち8銘柄は直近収集で未取得。取得済み13業種・26銘柄のみ評価"
+      "米2年・10年債利回り、DXY、USD/JPYの正本は11月3日で、米株11月4日と基準日が1営業日ずれる",
+      "Gold・Silver・WTI・Brent・暗号資産の保存連続値と取引所・限月・値種別・基準時刻の対応を確定できず結論から除外",
+      "11月5日朝の時刻付き為替現在値と限月付き日経225先物実測値は未取得",
+      "アナリスト評価変更と日本企業開示の全件網羅は確認できず、変更なしとは断定しない",
+      "Project添付仕様書3点は接続済みGoogle Driveの完全一致・部分一致検索で取得できず、Project Instructionsとmain現行仕様を優先",
+      "日本株再収集は外部429で部分化したため不採用。mainに保存済みの11月4日17業種・34銘柄を正本として維持"
     ],
     "individual_news_review": {
       "status": "reviewed",
       "story_count": 3,
-      "scope": "一次資料を確認した企業固有材料のみ掲載。件数合わせは行わない"
+      "scope": "一次資料と正本市場反応を確認した企業固有材料のみ。件数合わせなし"
     }
   },
   "top_stories": [
     {
+      "company": "三菱商事",
+      "ticker": "8058",
+      "headline": "上期利益+74.2%、最大1兆円の自己株取得で+7.88%",
+      "fact": "上期親会社帰属利益6196.96億円、前年比+74.2%。最大420百万株・1兆円、11月5日〜2027年7月31日の市場買付を決議。",
+      "source_url": "https://www.mitsubishicorp.com/jp/en/news/release/2026/20261104001.html",
+      "analysis": "利益増と大規模還元が同日株価反応に整合。実際の買付執行と商社内の波及が確認条件。",
+      "category": "決算・株主還元",
+      "related_sectors": [
+        "商社・卸売"
+      ],
+      "today_watch": "買付初日の需給、8058のTOPIX比、商社ETFと他商社への波及",
+      "announced_at": "2026-11-04T14:00:00+09:00",
+      "timing": "取引時間中公表",
+      "market_pricing_status": "同日一部織り込み",
+      "price_reaction": "8058 +7.88%、出来高20日比2.99倍",
+      "related_stocks": [
+        "8001",
+        "8031",
+        "8002"
+      ],
+      "importance": "high",
+      "confidence": "confirmed"
+    },
+    {
+      "company": "NTT",
+      "ticker": "9432",
+      "headline": "上期営業利益8301億円、株価-6.02%",
+      "fact": "上期営業収益7兆3622億円（前年6兆7727億円）、営業利益8301億円（前年9450億円）、親会社帰属利益5002億円（前年5957億円）。",
+      "source_url": "https://group.ntt/en/newsrelease/2026/11/04/261104a.html",
+      "analysis": "増収でも利益減が同日株価下落と整合するが、決算単独寄与は分離不能。通期予想と費用内訳を監視。",
+      "category": "決算",
+      "related_sectors": [
+        "情報通信・サービス"
+      ],
+      "today_watch": "9432の反発有無、通信内相対騰落、通期予想への評価",
+      "announced_at": "2026-11-04T13:30:00+09:00",
+      "timing": "取引時間中公表",
+      "market_pricing_status": "同日一部織り込み",
+      "price_reaction": "9432 -6.02%、出来高20日比2.46倍",
+      "related_stocks": [
+        "9433",
+        "9434"
+      ],
+      "importance": "high",
+      "confidence": "confirmed"
+    },
+    {
       "company": "ソフトバンクグループ",
       "ticker": "9984",
-      "headline": "2日-1.58%、米AI・半導体反発の4日波及を監視",
-      "fact": "正本で2日-1.58%、売買代金proxy 1位。米3日はNASDAQ100+0.68%、SOX+2.63%。",
+      "headline": "11月4日-3.20%、SOX-3.13%で外部逆風継続",
+      "fact": "正本で9984は-3.20%。日本の電機・精密ETF代理は-2.62%、米11月4日SOXは-3.13%。",
       "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json",
-      "analysis": "米AI・半導体反発は追い風候補。ただし米業種幅は弱く、企業固有IRを原因と断定しない。",
+      "analysis": "AI・半導体規制観測とSOX安は外部逆風。企業固有IRを下落原因と断定せず、SOXとTOPIX比で確認。",
       "category": "市場連動",
       "related_sectors": [
         "情報通信・サービス",
         "電機・精密"
       ],
-      "today_watch": "4日のTOPIX比・出来高と米半導体の反発継続",
-      "announced_at": "2026-11-02T15:30:00+09:00",
-      "timing": "日本大引け後に米市場反発",
-      "market_pricing_status": "米3日材料は未反映",
-      "price_reaction": "日本2日-1.58%（限定サンプル）",
-      "related_stocks": [],
-      "importance": "high",
-      "confidence": "confirmed"
-    },
-    {
-      "company": "三菱UFJフィナンシャル・グループ",
-      "ticker": "8306",
-      "headline": "2日-1.86%、3日の米金融ETFも-0.64%",
-      "fact": "日銀決定後初の取引日、正本で8306は-1.86%、銀行業ETF代理は-1.94%。",
-      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json",
-      "analysis": "国内金利・円の同日時点値が未確認で、銀行の反転を先読みしない。",
-      "category": "金融政策・市場反応",
-      "related_sectors": [
-        "銀行"
-      ],
-      "today_watch": "4日のTOPIX比、国内金利、8316との連動",
-      "announced_at": "2026-11-02T15:30:00+09:00",
-      "timing": "大引け実績",
-      "market_pricing_status": "日銀決定を一部反映、米3日材料は未反映",
-      "price_reaction": "8306 -1.86%、銀行業ETF代理-1.94%",
+      "today_watch": "9984のTOPIX比・出来高とSOX反発の有無",
+      "announced_at": "2026-11-04T15:30:00+09:00",
+      "timing": "日本大引け実績後に米SOX下落",
+      "market_pricing_status": "米11月4日SOX下落は翌日織り込み",
+      "price_reaction": "9984 -3.20%（11月4日）",
       "related_stocks": [
-        "8316"
+        "6758",
+        "6501"
       ],
       "importance": "high",
-      "confidence": "confirmed"
-    },
-    {
-      "company": "第一三共",
-      "ticker": "4568",
-      "headline": "2日+5.03%、米生活必需品・素材安との相対性を確認",
-      "fact": "正本で4568は+5.03%、出来高20日比1.79倍。医薬品ETF代理は+0.84%。",
-      "source_url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json",
-      "analysis": "相対優位は確認したが、企業固有材料の全件実読を満たさないため上昇原因は断定しない。",
-      "category": "市場実績",
-      "related_sectors": [
-        "医薬品"
-      ],
-      "today_watch": "4日の続伸・反落、出来高、医薬品業種との連動",
-      "announced_at": "2026-11-02T15:30:00+09:00",
-      "timing": "大引け実績",
-      "market_pricing_status": "2日実績に反映",
-      "price_reaction": "4568 +5.03%、出来高20日比1.79倍",
-      "related_stocks": [
-        "4502"
-      ],
-      "importance": "medium",
       "confidence": "confirmed"
     }
   ],
@@ -105,51 +111,48 @@
   "data_quality": {
     "overall": "MANUAL_REVIEW",
     "missing": [
-      "米2年・10年債利回り、DXY、USD/JPYの正本は11月2日で、米株11月3日と基準日がずれる",
-      "Gold・Silver・WTI・Brentの保存連続先物と取引所・限月・値種別・基準時刻の対応",
-      "11月4日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
-      "日本株17業種のうち4業種、監視34銘柄のうち8銘柄は直近収集で未取得。取得済み13業種・26銘柄のみ評価",
-      "アナリスト評価変更と日本企業開示の全件網羅",
+      "米2年・10年債利回り、DXY、USD/JPYの正本は11月3日で、米株11月4日と基準日が1営業日ずれる",
+      "Gold・Silver・WTI・Brent・暗号資産の保存連続値と取引所・限月・値種別・基準時刻の対応を確定できず結論から除外",
+      "11月5日朝の時刻付き為替現在値と限月付き日経225先物実測値は未取得",
+      "アナリスト評価変更と日本企業開示の全件網羅は確認できず、変更なしとは断定しない",
       "Project添付仕様書3点は接続済みGoogle Driveの完全一致・部分一致検索で取得できず、Project Instructionsとmain現行仕様を優先",
-      "market.jsonのSOXは10600.3965（+2.63%）だがNasdaq公式ページは10687.95（+3.48%）を表示。正本を維持し差異を記録"
+      "日本株再収集は外部429で部分化したため不採用。mainに保存済みの11月4日17業種・34銘柄を正本として維持"
     ],
     "differences": [
-      "11月2日のAI・半導体続落から、3日はSOX+2.63%、NASDAQ100+0.68%へ反発",
-      "S&P500は上昇したがダウは下落、米11業種ETF代理は5上昇・6下落で全面高ではない",
-      "JOLTS求人は719.0万件から752.3万件へ増加、離職は304.4万件から336.5万件へ増加",
-      "Appleは好決算でも株価が下落し、需要の強さとメモリーコスト懸念が併存",
-      "日本は11月3日休場後の再開日で、米3日材料の現物反応は本日確認"
+      "11月3日のAI・半導体反発から、4日はSOX-3.13%へ反落",
+      "S&P500・ダウ・Russell2000上昇、VIX低下で広い株高だが情報技術は横ばい",
+      "米11業種ETF代理は5上昇・6下落から8上昇・3下落へ改善",
+      "日本は日経平均型-1.34%、TOPIX型+0.24%でバリュー・内需優位",
+      "三菱商事+7.88%、NTT-6.02%と決算反応が分化"
     ],
     "excluded": [
-      "11月2日の米金利・為替を11月3日の米株上昇原因として扱うこと",
+      "11月3日の米金利・為替を11月4日の米株上昇原因として扱うこと",
       "限月・値種別・時刻未確認の商品先物、暗号資産現在値、日経225先物",
       "Copper価格・在庫（任意非掲載）",
-      "NASDAQとSOXの反発を米国株全体の全面高と表現すること",
-      "未取得4業種・8銘柄を含む日本市場全体のBreadth断定",
-      "評価変更なし、企業材料を全件確認済みという包括断定",
-      "Nasdaq公式SOX値でmarket.jsonの正本を置換すること"
+      "S&P500・ダウ上昇をAI・半導体を含む全面高と表現すること",
+      "未確認の選挙結果や規制観測を単独の市場原因として断定すること",
+      "評価変更なし、企業材料を全件確認済みという包括断定"
     ],
     "cautions": [
       "QUALIFIED注釈付き版",
-      "米株3日、金利・為替2日、日本株2日を混同しない",
+      "米株4日、金利・為替3日、日本株4日を混同しない",
       "Sector SPDR ETFは業種指数そのものではない",
-      "日本株は取得済み13業種・26銘柄の限定サンプル",
+      "日本株17業種・34銘柄は監視ユニバースで市場全体のBreadthではない",
       "Copperは任意非掲載",
-      "SOXの正本と公式照合差を記録",
       "事実・市場反応・解釈を分離"
     ]
   },
   "analyst_rating_changes": {
-    "headline": "11月2日の評価変更を網羅できず非掲載",
+    "headline": "11月4日の評価変更を全件網羅できず非掲載",
     "coverage_status": "十分調査したが取得不能",
     "items": [],
     "source_review": [
       {
         "name": "TDnet公開一覧",
         "url": "https://www.release.tdnet.info/inbs/I_main_00.html",
-        "result": "全件網羅を確認できず",
+        "result": "企業開示・評価変更の全件網羅を確認できず",
         "coverage": "公開範囲のみ",
-        "freshness": "11月3日確認状況を記録",
+        "freshness": "11月5日確認状況を記録",
         "automation": "契約API未導入",
         "rights": "確認事実のみ掲載"
       }
@@ -158,100 +161,92 @@
   },
   "sector_implications": [
     {
-      "driver": "米AI・半導体反発",
+      "driver": "米広い株高・半導体安",
       "affected_sectors": [
-        "電機・精密",
-        "情報通信・サービス"
+        "商社・卸売",
+        "小売",
+        "電機・精密"
       ],
-      "possible_impact": "4日の9984・半導体関連へ追い風候補",
-      "confirmation_condition": "TOPIX比・出来高とSOX先導銘柄の反応"
+      "possible_impact": "TOPIX/value優位、半導体は選別",
+      "confirmation_condition": "国内商社・小売と電機精密のTOPIX比"
     },
     {
-      "driver": "Apple好決算とメモリーコスト警戒",
+      "driver": "三菱商事の決算・還元",
       "affected_sectors": [
-        "電子部品",
-        "半導体",
-        "精密"
+        "商社・卸売"
       ],
-      "possible_impact": "需要面は追い風、投入コスト・利益率は逆風候補",
-      "confirmation_condition": "部品株の会社別反応と利益率見通し"
+      "possible_impact": "8058と商社内への波及候補",
+      "confirmation_condition": "買付執行、他商社の相対騰落"
     },
     {
-      "driver": "米業種幅の弱さ",
+      "driver": "ISM価格73.0",
       "affected_sectors": [
-        "生活必需品",
-        "素材",
-        "金融"
+        "銀行",
+        "不動産",
+        "高PER電機"
       ],
-      "possible_impact": "指数高に追随しない可能性",
-      "confirmation_condition": "国内上昇業種数とTOPIX比"
+      "possible_impact": "金利上昇なら銀行追い風・不動産高PER逆風候補",
+      "confirmation_condition": "同日米2年・10年金利と円"
     }
   ],
   "scenarios": [
     {
       "name": "基本",
-      "conditions": "AI・半導体の反発は続くが業種幅は狭い",
-      "impact_on_japan": "半導体・電子部品が相対優位、ディフェンシブ・素材は選別",
-      "invalidation": "SOX再下落または国内半導体のTOPIX比悪化"
+      "conditions": "米国の広い株高が続く一方、半導体は相対劣後",
+      "impact_on_japan": "商社・小売・不動産など非半導体へ資金が回り、電機・精密は選別",
+      "invalidation": "SOXがS&P500比で反発し、国内電機・精密もTOPIX比で改善"
     },
     {
       "name": "上振れ",
-      "conditions": "SOX続伸、VIX低下、米業種幅も改善",
-      "impact_on_japan": "電機・機械へ買い戻しが広がる",
-      "invalidation": "米上昇業種数の減少継続"
+      "conditions": "SOX反発、VIX低位、米8/11業種以上の上昇が継続",
+      "impact_on_japan": "日経平均型とTOPIX型の乖離が縮まり、機械・電機まで買いが広がる",
+      "invalidation": "SOX続落または国内半導体の出来高を伴う下落"
     },
     {
       "name": "下振れ",
-      "conditions": "JOLTSの底堅さが金利上昇へ波及し、Appleコスト懸念が部品へ拡大",
-      "impact_on_japan": "高PER半導体・電子部品の変動拡大",
-      "invalidation": "同日米金利低下と国内半導体・部品の反発"
+      "conditions": "ISM価格高止まりが同日金利上昇につながり、半導体規制懸念も継続",
+      "impact_on_japan": "高PER電機・精密が再下落し、円安恩恵より割引率上昇が優勢",
+      "invalidation": "米金利低下とSOX・国内電機の同時反発"
     }
   ],
   "monitoring_points": [
     {
-      "target": "AI・半導体",
-      "today_check": "SOX・NASDAQ100、国内半導体・9984のTOPIX比と出来高",
-      "view_change_condition": "SOX再下落と国内半導体のTOPIX比悪化で反発評価を撤回"
+      "target": "半導体",
+      "today_check": "SOX、国内電機・精密、9984のTOPIX比と出来高",
+      "view_change_condition": "SOXと国内電機が同時反発なら逆行安評価を縮小"
     },
     {
-      "target": "市場の広がり",
-      "today_check": "XLK・XLC対XLP・XLB、国内上昇業種数",
-      "view_change_condition": "ディフェンシブ・素材が反発し上昇業種が広がれば集中相場評価を縮小"
+      "target": "ローテーション",
+      "today_check": "XLY・XLF・XLC対SOX・XLE、国内商社・小売・不動産",
+      "view_change_condition": "米業種幅が悪化し国内TOPIX型も劣後なら広いリスクオン評価を撤回"
     },
     {
-      "target": "Apple供給網",
-      "today_check": "6762・6981・6758など電子部品・デバイスの相対騰落",
-      "view_change_condition": "売上期待よりコスト懸念が優勢で部品株がTOPIX比劣後なら追い風評価を撤回"
-    },
-    {
-      "target": "米イベント",
-      "today_check": "ISMサービス、雇用統計、CPI、PPIと同日米金利",
-      "view_change_condition": "成長・価格鈍化と金利低下でも高PER株が反発しなければ利益要因を重視"
+      "target": "物価と金利",
+      "today_check": "ISM価格73.0、雇用統計・CPIと同日米2年・10年金利",
+      "view_change_condition": "価格鈍化と金利低下でも高PER株が反発しなければ利益要因を重視"
     }
   ],
   "source_notes": [
     "市場数値はmarket.jsonの正本を使用",
-    "日本株実績はjapan-market.jsonの11月2日取得済み限定サンプル",
-    "3日は文化の日で現物休場",
-    "JOLTS・Apple・BOJ予定は一次資料を実読",
+    "日本株実績はjapan-market.jsonの11月4日17業種・34銘柄",
+    "ISM・三菱商事・NTT・日銀は一次資料を実読",
     "Reutersは市場反応の補足のみ",
     "Copperは任意非掲載"
   ],
   "publication_policy": {
     "status": "QUALIFIED",
     "mode": "provisional",
-    "updated_at": "2026-11-04T06:59:00+09:00",
+    "updated_at": "2026-11-05T07:18:00+09:00",
     "complete_gate": "FAIL",
     "copper_included": false,
-    "note": "11月3日の米株・VIX・11業種ETFと9月JOLTS、Apple一次資料を採用。基準日が古い金利・為替、未定義先物、現在値、未取得日本系列、SOX照合差異、網羅不能項目を除外・注記した公開。",
+    "note": "11月4日の米株・VIX・11業種ETF、日本11月4日17業種・34銘柄、ISM・三菱商事・日銀一次資料を採用。基準日差と未定義値を除外・注記した公開。",
     "missing_items": [
-      "米2年・10年債利回り、DXY、USD/JPYの正本は11月2日で、米株11月3日と基準日がずれる",
-      "Gold・Silver・WTI・Brentの保存連続先物と取引所・限月・値種別・基準時刻の対応",
-      "11月4日朝の時刻付き為替・暗号資産現在値と限月付き日経225先物実測値",
-      "日本株17業種のうち4業種、監視34銘柄のうち8銘柄は直近収集で未取得。取得済み13業種・26銘柄のみ評価",
-      "アナリスト評価変更と日本企業開示の全件網羅",
+      "米2年・10年債利回り、DXY、USD/JPYの正本は11月3日で、米株11月4日と基準日が1営業日ずれる",
+      "Gold・Silver・WTI・Brent・暗号資産の保存連続値と取引所・限月・値種別・基準時刻の対応を確定できず結論から除外",
+      "11月5日朝の時刻付き為替現在値と限月付き日経225先物実測値は未取得",
+      "アナリスト評価変更と日本企業開示の全件網羅は確認できず、変更なしとは断定しない",
       "Project添付仕様書3点は接続済みGoogle Driveの完全一致・部分一致検索で取得できず、Project Instructionsとmain現行仕様を優先",
-      "market.jsonのSOXは10600.3965（+2.63%）だがNasdaq公式ページは10687.95（+3.48%）を表示。正本を維持し差異を記録"
+      "日本株再収集は外部429で部分化したため不採用。mainに保存済みの11月4日17業種・34銘柄を正本として維持"
     ]
   }
 }

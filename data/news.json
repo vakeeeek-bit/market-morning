@@ -1,38 +1,38 @@
 {
-  "report_date": "2026-11-04",
-  "target_market_date": "2026-11-03",
-  "updated_at": "2026-11-04T06:59:00+09:00",
+  "report_date": "2026-11-05",
+  "target_market_date": "2026-11-04",
+  "updated_at": "2026-11-05T07:18:00+09:00",
   "publication_mode": "verified_news",
   "coverage_status": "partial",
-  "coverage_note": "一次本文を実読できた3件のみ掲載。市場反応は正本または未確認として分離。企業開示・評価変更の全件網羅は未確認。",
+  "coverage_note": "一次本文を実読できた5件のみ掲載。市場反応は正本または未確認として分離。企業開示・評価変更の全件網羅は未確認。",
   "articles": [
     {
-      "id": "nov4-jolts-sep",
-      "title": "米9月JOLTS求人は752.3万件",
-      "published_date": "2026-11-03",
-      "verified_at": "2026-11-04T06:59:00+09:00",
+      "id": "nov5-ism-services-oct",
+      "title": "米10月ISMサービスPMIは54.5",
+      "published_date": "2026-11-04",
+      "verified_at": "2026-11-05T07:18:00+09:00",
       "source_type": "primary",
-      "publisher": "U.S. Bureau of Labor Statistics",
-      "source_url": "https://www.bls.gov/news.release/jolts.htm",
-      "verification_url": "https://www.bls.gov/news.release/jolts.htm",
+      "publisher": "Institute for Supply Management",
+      "source_url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-report-on-business/",
+      "verification_url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-report-on-business/",
       "verification_status": "PASS",
-      "fact": "求人752.3万件、採用540.2万件、離職336.5万件、解雇160.5万件。8月求人は719.0万件へ上方改定。",
-      "analysis": "労働需要の急減は確認されず、金融緩和期待には反証。ただし離職増と採用横ばいを含む。",
-      "limitations": "指標単独の価格寄与と市場予想との差は未確認。",
+      "fact": "サービスPMI54.5、事業活動53.8、新規受注55.9、雇用51.4、価格73.0。",
+      "analysis": "サービス拡大を維持する一方、価格高止まりは金融緩和期待と利益率の反証。",
+      "limitations": "同日米金利と指標単独の価格寄与は未確認。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
         "source_read": {
           "status": "PASS",
-          "evidence": "U.S. Bureau of Labor Statisticsの一次本文を実読し、発表日・対象・留保を確認。"
+          "evidence": "Institute for Supply Managementの一次本文を実読し、発表日・対象・留保を確認。"
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "求人752.3万件、採用540.2万件、離職336.5万件、解雇160.5万件。8月求人は719.0万件へ上方改定。"
+          "evidence": "サービスPMI54.5、事業活動53.8、新規受注55.9、雇用51.4、価格73.0。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日2026-11-03、実確認2026-11-04T06:59:00+09:00。発表日・市場日を分離。"
+          "evidence": "発表日2026-11-04、実確認2026-11-05T07:18:00+09:00。発表日・市場日を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
@@ -40,37 +40,37 @@
         },
         "limitations": {
           "status": "PASS",
-          "evidence": "指標単独の価格寄与と市場予想との差は未確認。"
+          "evidence": "同日米金利と指標単独の価格寄与は未確認。"
         }
       }
     },
     {
-      "id": "nov4-apple-q4",
-      "title": "Appleの7〜9月期売上は1145億ドル",
-      "published_date": "2026-11-02",
-      "verified_at": "2026-11-04T06:59:00+09:00",
+      "id": "nov5-mitsubishi-results",
+      "title": "三菱商事、上期利益+74.2%",
+      "published_date": "2026-11-04",
+      "verified_at": "2026-11-05T07:18:00+09:00",
       "source_type": "primary",
-      "publisher": "Apple",
-      "source_url": "https://www.apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results/",
-      "verification_url": "https://www.apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results/",
+      "publisher": "Mitsubishi Corporation",
+      "source_url": "https://www.mitsubishicorp.com/jp/en/ir/library/earnings/pdf/202611e.pdf",
+      "verification_url": "https://www.mitsubishicorp.com/jp/en/ir/library/earnings/pdf/202611e.pdf",
       "verification_status": "PASS",
-      "fact": "売上高は前年比12%増、EPSは14%増の2.10ドル、粗利率47.9%。関税還付が粗利率を約1ポイント押し上げた。",
-      "analysis": "需要の強さは部品需要を支えるが、メモリー価格とAI投資費用は利益率の反証。",
-      "limitations": "会社発表本文は12月期粗利率ガイダンスの数値を含まないため、二次報道のガイダンス値は事実欄に採用しない。",
+      "fact": "上期売上高10兆4104.23億円、親会社帰属利益6196.96億円（前年比+74.2%）、基本EPS169.21円。",
+      "analysis": "利益増は商社株の支援材料。商品市況・一時要因の内訳と通期進捗を監視。",
+      "limitations": "株価反応には同時公表の自己株取得を含むため、決算単独寄与は分離できない。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
         "source_read": {
           "status": "PASS",
-          "evidence": "Appleの一次本文を実読し、発表日・対象・留保を確認。"
+          "evidence": "Mitsubishi Corporationの一次本文を実読し、発表日・対象・留保を確認。"
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "売上高は前年比12%増、EPSは14%増の2.10ドル、粗利率47.9%。関税還付が粗利率を約1ポイント押し上げた。"
+          "evidence": "上期売上高10兆4104.23億円、親会社帰属利益6196.96億円（前年比+74.2%）、基本EPS169.21円。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日2026-11-02、実確認2026-11-04T06:59:00+09:00。発表日・市場日を分離。"
+          "evidence": "発表日2026-11-04、実確認2026-11-05T07:18:00+09:00。発表日・市場日を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
@@ -78,23 +78,61 @@
         },
         "limitations": {
           "status": "PASS",
-          "evidence": "会社発表本文は12月期粗利率ガイダンスの数値を含まないため、二次報道のガイダンス値は事実欄に採用しない。"
+          "evidence": "株価反応には同時公表の自己株取得を含むため、決算単独寄与は分離できない。"
         }
       }
     },
     {
-      "id": "nov4-boj-calendar",
-      "title": "日銀は11月4日に10月マネタリーベースを公表予定",
-      "published_date": "2026-10-30",
-      "verified_at": "2026-11-04T06:59:00+09:00",
+      "id": "nov5-mitsubishi-buyback",
+      "title": "三菱商事、最大1兆円の自己株取得",
+      "published_date": "2026-11-04",
+      "verified_at": "2026-11-05T07:18:00+09:00",
+      "source_type": "primary",
+      "publisher": "Mitsubishi Corporation",
+      "source_url": "https://www.mitsubishicorp.com/jp/en/news/release/2026/files/mcpr261104ze.pdf",
+      "verification_url": "https://www.mitsubishicorp.com/jp/en/news/release/2026/files/mcpr261104ze.pdf",
+      "verification_status": "PASS",
+      "fact": "最大420百万株・1兆円。11月5日から2027年7月31日に東証で市場買付し、取得株は2027年8月31日に全数消却予定。",
+      "analysis": "大規模還元は需給と資本効率の追い風候補。実際の執行と商社内の波及を監視。",
+      "limitations": "取得上限であり実行額を保証しない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Mitsubishi Corporationの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "最大420百万株・1兆円。11月5日から2027年7月31日に東証で市場買付し、取得株は2027年8月31日に全数消却予定。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-04、実確認2026-11-05T07:18:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "取得上限であり実行額を保証しない。"
+        }
+      }
+    },
+    {
+      "id": "nov5-boj-monetary-base",
+      "title": "日銀10月マネタリーベースは前年比-13.6%",
+      "published_date": "2026-11-04",
+      "verified_at": "2026-11-05T07:18:00+09:00",
       "source_type": "primary",
       "publisher": "Bank of Japan",
-      "source_url": "https://www.boj.or.jp/about/calendar/",
-      "verification_url": "https://www.boj.or.jp/about/calendar/",
+      "source_url": "https://www.boj.or.jp/en/statistics/boj/other/mb/base2610.pdf",
+      "verification_url": "https://www.boj.or.jp/en/statistics/boj/other/mb/base2610.pdf",
       "verification_status": "PASS",
-      "fact": "日銀公式予定は11月4日8:50公表。レポート確認時刻07:14 JSTには未公表。",
-      "analysis": "予定を実績として扱わず、公表後に円・銀行・不動産を再確認。",
-      "limitations": "確認時点では未公表で、内容・市場反応は未確認。",
+      "fact": "10月平均残高532兆5717億円、前年比-13.6%。月末残高537兆2137億円。",
+      "analysis": "資金供給縮小の継続を示すが、政策金利の直接シグナルとは限らない。",
+      "limitations": "円・銀行・不動産の指標単独反応は未分離。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
@@ -104,11 +142,11 @@
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "日銀公式予定は11月4日8:50公表。レポート確認時刻07:14 JSTには未公表。"
+          "evidence": "10月平均残高532兆5717億円、前年比-13.6%。月末残高537兆2137億円。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日2026-10-30、実確認2026-11-04T06:59:00+09:00。発表日・市場日を分離。"
+          "evidence": "発表日2026-11-04、実確認2026-11-05T07:18:00+09:00。発表日・市場日を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
@@ -116,7 +154,45 @@
         },
         "limitations": {
           "status": "PASS",
-          "evidence": "確認時点では未公表で、内容・市場反応は未確認。"
+          "evidence": "円・銀行・不動産の指標単独反応は未分離。"
+        }
+      }
+    },
+    {
+      "id": "nov5-ntt-h1",
+      "title": "NTT上期は増収・営業減益",
+      "published_date": "2026-11-04",
+      "verified_at": "2026-11-05T07:18:00+09:00",
+      "source_type": "primary",
+      "publisher": "NTT, Inc.",
+      "source_url": "https://group.ntt/en/newsrelease/2026/11/04/pdf/261104ac.pdf",
+      "verification_url": "https://group.ntt/en/newsrelease/2026/11/04/pdf/261104ac.pdf",
+      "verification_status": "PASS",
+      "fact": "上期営業収益7兆3622億円（前年6兆7727億円）、営業利益8301億円（前年9450億円）、親会社帰属利益5002億円（前年5957億円）。",
+      "analysis": "増収でも利益減が株価下落と整合。通期予想と費用内訳を監視。",
+      "limitations": "株価反応のうち決算単独寄与は分離できない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "NTT, Inc.の一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "上期営業収益7兆3622億円（前年6兆7727億円）、営業利益8301億円（前年9450億円）、親会社帰属利益5002億円（前年5957億円）。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-04、実確認2026-11-05T07:18:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "株価反応のうち決算単独寄与は分離できない。"
         }
       }
     }

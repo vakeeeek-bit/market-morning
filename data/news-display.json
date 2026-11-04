@@ -2,28 +2,44 @@
   "version": "1.0",
   "description": "確認済み一次資料の表示設定",
   "items": {
-    "nov4-jolts-sep": {
+    "nov5-ism-services-oct": {
       "primary_page": "world",
       "priority": 100,
       "attention_points": [
-        "米9月JOLTS求人は752.3万件",
-        "指標単独の価格寄与と市場予想との差は未確認。"
+        "米10月ISMサービスPMIは54.5",
+        "同日米金利と指標単独の価格寄与は未確認。"
       ]
     },
-    "nov4-apple-q4": {
-      "primary_page": "world",
-      "priority": 95,
-      "attention_points": [
-        "Appleの7〜9月期売上は1145億ドル",
-        "会社発表本文は12月期粗利率ガイダンスの数値を含まないため、二次報道のガイダンス値は事実欄に採用しない。"
-      ]
-    },
-    "nov4-boj-calendar": {
+    "nov5-mitsubishi-results": {
       "primary_page": "japan",
-      "priority": 90,
+      "priority": 98,
       "attention_points": [
-        "日銀は11月4日に10月マネタリーベースを公表予定",
-        "確認時点では未公表で、内容・市場反応は未確認。"
+        "三菱商事、上期利益+74.2%",
+        "株価反応には同時公表の自己株取得を含むため、決算単独寄与は分離できない。"
+      ]
+    },
+    "nov5-mitsubishi-buyback": {
+      "primary_page": "japan",
+      "priority": 97,
+      "attention_points": [
+        "三菱商事、最大1兆円の自己株取得",
+        "取得上限であり実行額を保証しない。"
+      ]
+    },
+    "nov5-boj-monetary-base": {
+      "primary_page": "japan",
+      "priority": 92,
+      "attention_points": [
+        "日銀10月マネタリーベースは前年比-13.6%",
+        "円・銀行・不動産の指標単独反応は未分離。"
+      ]
+    },
+    "nov5-ntt-h1": {
+      "primary_page": "japan",
+      "priority": 94,
+      "attention_points": [
+        "NTT上期は増収・営業減益",
+        "株価反応のうち決算単独寄与は分離できない。"
       ]
     }
   }

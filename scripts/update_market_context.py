@@ -75,6 +75,7 @@ def build_context() -> dict:
         if not isinstance(timeline, list) or len(timeline) < 3:
             raise ValueError(f"market_context_themes[{index}].timeline requires at least 3 events")
         timeline_dates = []
+        seen_events: set[tuple[str, str]] = set()
         for event_index, event in enumerate(timeline):
             if not isinstance(event, dict):
                 raise ValueError(f"market_context_themes[{index}].timeline[{event_index}] is invalid")
@@ -89,6 +90,13 @@ def build_context() -> dict:
                     f"market_context_themes[{index}].timeline[{event_index}] has unknown sources"
                 )
             event_day = date.fromisoformat(event["date"])
+            event_key = (event["date"], event["title"].strip())
+            if event_key in seen_events:
+                raise ValueError(
+                    f"market_context_themes[{index}].timeline has duplicate event: "
+                    f"{event['date']} {event['title']}"
+                )
+            seen_events.add(event_key)
             timeline_dates.append(event_day)
             all_dates.append(event_day)
         if timeline_dates != sorted(timeline_dates):

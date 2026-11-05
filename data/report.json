@@ -1629,40 +1629,26 @@
       "jst_time": "2026-11-05 22:30 JST（米東部08:30）",
       "forecast": "未確認",
       "previous": "未確認",
-      "focus": "生産性と単位労働コスト、インフレ持続性",
+      "focus": "賃金コストと生産性の組み合わせ、インフレ持続性",
       "affected_markets": "米国債・ドル・米国株・日本株",
       "importance": "高",
-      "source_url": "https://www.bls.gov/schedule/2026/11_sched_list.htm",
+      "source_url": "https://www.bls.gov/schedule/2026/11_sched.htm",
       "source_name": "U.S. Bureau of Labor Statistics",
-      "verified_on": "2026-11-05"
+      "verified_on": "2026-11-03"
     },
     {
       "id": "us-employment-2026-10",
       "event": "米雇用統計（10月）",
       "start_at_jst": "2026-11-06T22:30:00+09:00",
-      "jst_time": "2026-11-06 22:30 JST（米東部08:30）",
+      "jst_time": "2026-11-06 22:30 JST",
       "forecast": "未確認",
       "previous": "未確認",
-      "focus": "雇用者数・失業率・平均時給とFRB政策経路",
+      "focus": "非農業部門雇用者数・失業率・平均時給とFRBの政策判断",
       "affected_markets": "米国債・ドル・米国株・日本株",
       "importance": "最重要",
-      "source_url": "https://www.bls.gov/schedule/2026/11_sched_list.htm",
+      "source_url": "https://www.bls.gov/schedule/2026/11_sched.htm",
       "source_name": "U.S. Bureau of Labor Statistics",
-      "verified_on": "2026-11-05"
-    },
-    {
-      "id": "boj-summary-2026-10",
-      "event": "日銀10月29・30日会合の主な意見",
-      "start_at_jst": "2026-11-10T08:50:00+09:00",
-      "jst_time": "2026-11-10 08:50 JST",
-      "forecast": "対象外",
-      "previous": "対象外",
-      "focus": "追加利上げ条件、物価・為替・賃金の評価",
-      "affected_markets": "円・日本国債・銀行・不動産・日本株",
-      "importance": "最重要",
-      "source_url": "https://www.boj.or.jp/about/calendar/",
-      "source_name": "Bank of Japan",
-      "verified_on": "2026-11-05"
+      "verified_on": "2026-10-19"
     },
     {
       "id": "us-cpi-2026-10",
@@ -1671,26 +1657,12 @@
       "jst_time": "2026-11-10 22:30 JST（米東部08:30）",
       "forecast": "未確認",
       "previous": "未確認",
-      "focus": "総合・コア、サービス価格とFRB政策経路",
+      "focus": "総合・コア物価、サービス価格とFRB政策経路",
       "affected_markets": "米国債・ドル・米国株・日本株",
       "importance": "最重要",
-      "source_url": "https://www.bls.gov/schedule/2026/11_sched_list.htm",
+      "source_url": "https://www.bls.gov/schedule/2026/11_sched.htm",
       "source_name": "U.S. Bureau of Labor Statistics",
-      "verified_on": "2026-11-05"
-    },
-    {
-      "id": "boj-cgpi-2026-10",
-      "event": "日銀企業物価指数（10月）",
-      "start_at_jst": "2026-11-12T08:50:00+09:00",
-      "jst_time": "2026-11-12 08:50 JST",
-      "forecast": "未確認",
-      "previous": "未確認",
-      "focus": "輸入・国内企業物価と価格転嫁",
-      "affected_markets": "円・日本国債・日本株",
-      "importance": "高",
-      "source_url": "https://www.boj.or.jp/about/calendar/",
-      "source_name": "Bank of Japan",
-      "verified_on": "2026-11-05"
+      "verified_on": "2026-11-03"
     },
     {
       "id": "us-ppi-2026-10",
@@ -1699,22 +1671,22 @@
       "jst_time": "2026-11-13 22:30 JST（米東部08:30）",
       "forecast": "未確認",
       "previous": "未確認",
-      "focus": "投入価格、企業利益率、PCEへの波及",
+      "focus": "投入価格と企業マージン、CPI・PCEへの波及",
       "affected_markets": "米国債・ドル・米国株・日本株",
       "importance": "高",
-      "source_url": "https://www.bls.gov/schedule/2026/11_sched_list.htm",
+      "source_url": "https://www.bls.gov/schedule/2026/11_sched.htm",
       "source_name": "U.S. Bureau of Labor Statistics",
-      "verified_on": "2026-11-05"
+      "verified_on": "2026-11-03"
     }
   ],
   "events_metadata": {
     "status": "取得済",
-    "updated_at": "2026-11-05T07:18:00+09:00",
+    "updated_at": "2026-11-05T10:31:34+09:00",
     "window_start": "2026-11-05",
     "window_end": "2026-11-19",
     "timezone": "Asia/Tokyo",
     "source_policy": "公式日程で確認済みのイベントのみ。予想・前回値は未確認を推測しない",
-    "coverage_note": "BLS・BOJ公式日程で確認できた主要イベントのみ。市場予想・前回値を確認できない場合は未確認と表示。",
+    "coverage_note": "公式日程で確認できた主要イベントのみ。市場予想・前回値を確認できない場合は未確認と表示する。",
     "catalog_version": "1.0"
   }
 }

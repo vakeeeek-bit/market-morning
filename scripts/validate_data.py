@@ -446,6 +446,7 @@ def validate_market_context(data: dict[str, dict], result: ValidationResult) -> 
                 invalid.append(f"{index}.timeline")
             else:
                 timeline_dates = []
+                timeline_event_keys = set()
                 for event_index, event in enumerate(timeline):
                     if not isinstance(event, dict):
                         invalid.append(f"{index}.timeline[{event_index}]")
@@ -466,6 +467,10 @@ def validate_market_context(data: dict[str, dict], result: ValidationResult) -> 
                         source_id not in source_ids for source_id in event.get("source_ids", [])
                     ):
                         invalid.append(f"{index}.timeline[{event_index}].source_ids")
+                    event_key = (event.get("date"), str(event.get("title", "")).strip())
+                    if event_key in timeline_event_keys:
+                        invalid.append(f"{index}.timeline[{event_index}]:duplicate")
+                    timeline_event_keys.add(event_key)
                 if timeline_dates != sorted(timeline_dates):
                     invalid.append(f"{index}.timeline:chronology")
             for key in ("theme", "current_view", "japan_impact", "counter_evidence"):

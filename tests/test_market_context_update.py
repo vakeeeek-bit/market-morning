@@ -59,6 +59,24 @@ class MarketContextUpdateTests(unittest.TestCase):
         self.assertEqual(context["freshness"]["status"], "current")
         self.assertGreaterEqual(context["freshness"]["source_report_count"], 2)
 
+    def test_duplicate_timeline_event_is_rejected(self):
+        original = self.module.load_json
+
+        def duplicate_report(path):
+            data = original(path)
+            if path.name == "report.json" and path.parent.name == "data":
+                data["market_context_themes"][0]["timeline"].append(
+                    dict(data["market_context_themes"][0]["timeline"][-1])
+                )
+            return data
+
+        self.module.load_json = duplicate_report
+        try:
+            with self.assertRaisesRegex(ValueError, "duplicate event"):
+                self.module.build_context()
+        finally:
+            self.module.load_json = original
+
 
 if __name__ == "__main__":
     unittest.main()

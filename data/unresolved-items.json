@@ -1,22 +1,22 @@
 {
-  "updated_at": "2026-11-05T07:18:00+09:00",
-  "source_report_date": "2026-11-05",
+  "updated_at": "2026-11-06T07:05:00+09:00",
+  "source_report_date": "2026-11-06",
   "items": [
     {
       "id": "stale_cross_asset",
       "status": "QUALIFIED",
-      "missing": "米2年・10年債利回り、DXY、USD/JPYの正本は11月3日で、米株11月4日と基準日が1営業日ずれる",
-      "impact": "米11月4日の金利・為替因果を除外",
-      "last_checked_at": "2026-11-05T07:18:00+09:00",
-      "next_action": "同一市場日の正本が得られた時点で再判定",
+      "missing": "米2年・10年債利回り、DXY、USD/JPYの正本は11月4日で、米株11月5日と基準日が1営業日ずれる",
+      "impact": "米11月5日の金利・為替因果を除外",
+      "last_checked_at": "2026-11-06T07:05:00+09:00",
+      "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
       "attempts": [
         {
           "method": "当日正本・公式ソース確認",
-          "result": "米株は11月2日、米金利・為替は10月30日で基準日不一致",
+          "result": "必要な完全性を確定できず",
           "source_urls": [
             "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
           ],
-          "checked_at": "2026-11-04T06:59:00+09:00"
+          "checked_at": "2026-11-06T07:05:00+09:00"
         }
       ],
       "affected_components": [
@@ -24,7 +24,7 @@
         "japan_stocks"
       ],
       "excluded_claims": [
-        "11月2日の米株と10月30日の為替・金利方向との因果を除外"
+        "米11月5日の金利・為替因果を除外"
       ],
       "excluded_from_publication": true,
       "first_seen_at": "2026-10-28T06:58:00+09:00"
@@ -32,19 +32,19 @@
     {
       "id": "contracts",
       "status": "QUALIFIED",
-      "missing": "Gold・Silver・WTI・Brentの保存連続先物と取引所・限月・値種別・基準時刻の対応",
+      "missing": "Gold・Silver・WTI・Brent・暗号資産の保存連続値と取引所・限月・値種別・基準時刻の対応を確定できず結論から除外",
       "impact": "商品先物の価格・前日比を除外",
-      "last_checked_at": "2026-11-05T07:18:00+09:00",
-      "next_action": "公式契約と保存値の対応確認後のみ追加",
+      "last_checked_at": "2026-11-06T07:05:00+09:00",
+      "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
       "attempts": [
         {
           "method": "当日正本・公式ソース確認",
-          "result": "保存連続足との契約対応未確認",
+          "result": "必要な完全性を確定できず",
           "source_urls": [
             "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html",
             "https://www.ice.com/products/219/Brent-Crude-Futures"
           ],
-          "checked_at": "2026-11-04T06:59:00+09:00"
+          "checked_at": "2026-11-06T07:05:00+09:00"
         }
       ],
       "affected_components": [
@@ -60,18 +60,18 @@
     {
       "id": "current_values",
       "status": "QUALIFIED",
-      "missing": "11月5日朝の時刻付き為替現在値と限月付き日経225先物実測値は未取得",
+      "missing": "11月6日朝の時刻付き為替現在値と限月付き日経225先物実測値は未取得",
       "impact": "朝の現在値・先物示唆を除外",
-      "last_checked_at": "2026-11-05T07:18:00+09:00",
-      "next_action": "定義と確認時刻が揃った値だけ追加",
+      "last_checked_at": "2026-11-06T07:05:00+09:00",
+      "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
       "attempts": [
         {
           "method": "当日正本・公式ソース確認",
-          "result": "現在値ソース未採用",
+          "result": "必要な完全性を確定できず",
           "source_urls": [
             "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
           ],
-          "checked_at": "2026-11-04T06:59:00+09:00"
+          "checked_at": "2026-11-06T07:05:00+09:00"
         }
       ],
       "affected_components": [
@@ -87,18 +87,18 @@
     {
       "id": "coverage",
       "status": "QUALIFIED",
-      "missing": "アナリスト評価変更と日本企業開示の全件網羅",
+      "missing": "アナリスト評価変更と日本企業開示の全件網羅は確認できず、変更なしとは断定しない",
       "impact": "評価変更なし・企業ニュース網羅の包括断定を除外",
-      "last_checked_at": "2026-11-05T07:18:00+09:00",
-      "next_action": "公式一覧・契約データで確認できた記事だけ追加",
+      "last_checked_at": "2026-11-06T07:05:00+09:00",
+      "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
       "attempts": [
         {
           "method": "当日正本・公式ソース確認",
-          "result": "全件網羅の確定に至らず",
+          "result": "必要な完全性を確定できず",
           "source_urls": [
             "https://www.release.tdnet.info/inbs/I_main_00.html"
           ],
-          "checked_at": "2026-11-04T06:59:00+09:00"
+          "checked_at": "2026-11-06T07:05:00+09:00"
         }
       ],
       "affected_components": [
@@ -114,18 +114,18 @@
     {
       "id": "project_docs",
       "status": "QUALIFIED",
-      "missing": "Project添付仕様書3点は接続済みGoogle Driveの完全一致・部分一致検索で取得できず、Project Instructionsとmain現行仕様を優先",
+      "missing": "Project添付仕様書3点は接続済みGoogle Drive検索で取得できず、Project Instructionsとmain現行仕様を優先",
       "impact": "添付仕様書実読済みという主張を除外",
-      "last_checked_at": "2026-11-05T07:18:00+09:00",
-      "next_action": "接続状態を次回再確認",
+      "last_checked_at": "2026-11-06T07:05:00+09:00",
+      "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
       "attempts": [
         {
           "method": "当日正本・公式ソース確認",
-          "result": "完全一致・語句検索とも該当なし",
+          "result": "必要な完全性を確定できず",
           "source_urls": [
             "https://drive.google.com/"
           ],
-          "checked_at": "2026-11-04T06:59:00+09:00"
+          "checked_at": "2026-11-06T07:05:00+09:00"
         }
       ],
       "affected_components": [
@@ -137,126 +137,6 @@
       ],
       "excluded_from_publication": true,
       "first_seen_at": "2026-10-28T06:58:00+09:00"
-    },
-    {
-      "id": "japan-retry-429-resolved-by-canonical",
-      "status": "RESOLVED",
-      "missing": "11月5日朝の再収集は429で部分化",
-      "impact": "部分ファイルを不採用にし、main保存済みの11月4日17業種・34銘柄を維持",
-      "last_checked_at": "2026-11-05T07:18:00+09:00",
-      "next_action": "次回はレート制限を考慮して再収集",
-      "attempts": [
-        {
-          "method": "update_japan_market.py再実行",
-          "result": "16業種・29銘柄に部分化したため破棄し、完全な正本へ復元",
-          "checked_at": "2026-11-05T07:18:00+09:00"
-        }
-      ],
-      "affected_components": [
-        "japan_market"
-      ],
-      "excluded_claims": [],
-      "excluded_from_publication": false
-    },
-    {
-      "id": "japan-retry-429-resolved-by-canonical",
-      "status": "RESOLVED",
-      "missing": "11月5日朝の再収集は429で部分化",
-      "impact": "部分ファイルを不採用にし、main保存済みの11月4日17業種・34銘柄を維持",
-      "last_checked_at": "2026-11-05T07:18:00+09:00",
-      "next_action": "次回はレート制限を考慮して再収集",
-      "attempts": [
-        {
-          "method": "update_japan_market.py再実行",
-          "result": "16業種・29銘柄に部分化したため破棄し、完全な正本へ復元",
-          "checked_at": "2026-11-05T07:18:00+09:00"
-        }
-      ],
-      "affected_components": [
-        "japan_market"
-      ],
-      "excluded_claims": [],
-      "excluded_from_publication": false
-    },
-    {
-      "id": "japan-retry-429-resolved-by-canonical",
-      "status": "RESOLVED",
-      "missing": "11月5日朝の再収集は429で部分化",
-      "impact": "部分ファイルを不採用にし、main保存済みの11月4日17業種・34銘柄を維持",
-      "last_checked_at": "2026-11-05T07:18:00+09:00",
-      "next_action": "次回はレート制限を考慮して再収集",
-      "attempts": [
-        {
-          "method": "update_japan_market.py再実行",
-          "result": "16業種・29銘柄に部分化したため破棄し、完全な正本へ復元",
-          "checked_at": "2026-11-05T07:18:00+09:00"
-        }
-      ],
-      "affected_components": [
-        "japan_market"
-      ],
-      "excluded_claims": [],
-      "excluded_from_publication": false
-    },
-    {
-      "id": "japan-retry-429-resolved-by-canonical",
-      "status": "RESOLVED",
-      "missing": "11月5日朝の再収集は429で部分化",
-      "impact": "部分ファイルを不採用にし、main保存済みの11月4日17業種・34銘柄を維持",
-      "last_checked_at": "2026-11-05T07:18:00+09:00",
-      "next_action": "次回はレート制限を考慮して再収集",
-      "attempts": [
-        {
-          "method": "update_japan_market.py再実行",
-          "result": "16業種・29銘柄に部分化したため破棄し、完全な正本へ復元",
-          "checked_at": "2026-11-05T07:18:00+09:00"
-        }
-      ],
-      "affected_components": [
-        "japan_market"
-      ],
-      "excluded_claims": [],
-      "excluded_from_publication": false
-    },
-    {
-      "id": "japan-retry-429-resolved-by-canonical",
-      "status": "RESOLVED",
-      "missing": "11月5日朝の再収集は429で部分化",
-      "impact": "部分ファイルを不採用にし、main保存済みの11月4日17業種・34銘柄を維持",
-      "last_checked_at": "2026-11-05T07:18:00+09:00",
-      "next_action": "次回はレート制限を考慮して再収集",
-      "attempts": [
-        {
-          "method": "update_japan_market.py再実行",
-          "result": "16業種・29銘柄に部分化したため破棄し、完全な正本へ復元",
-          "checked_at": "2026-11-05T07:18:00+09:00"
-        }
-      ],
-      "affected_components": [
-        "japan_market"
-      ],
-      "excluded_claims": [],
-      "excluded_from_publication": false
-    },
-    {
-      "id": "japan-retry-429-resolved-by-canonical",
-      "status": "RESOLVED",
-      "missing": "11月5日朝の再収集は429で部分化",
-      "impact": "部分ファイルを不採用にし、main保存済みの11月4日17業種・34銘柄を維持",
-      "last_checked_at": "2026-11-05T07:18:00+09:00",
-      "next_action": "次回はレート制限を考慮して再収集",
-      "attempts": [
-        {
-          "method": "update_japan_market.py再実行",
-          "result": "16業種・29銘柄に部分化したため破棄し、完全な正本へ復元",
-          "checked_at": "2026-11-05T07:18:00+09:00"
-        }
-      ],
-      "affected_components": [
-        "japan_market"
-      ],
-      "excluded_claims": [],
-      "excluded_from_publication": false
     },
     {
       "id": "japan-retry-429-resolved-by-canonical",

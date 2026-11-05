@@ -1,38 +1,38 @@
 {
-  "report_date": "2026-11-05",
-  "target_market_date": "2026-11-04",
-  "updated_at": "2026-11-05T07:18:00+09:00",
+  "report_date": "2026-11-06",
+  "target_market_date": "2026-11-05",
+  "updated_at": "2026-11-06T07:05:00+09:00",
   "publication_mode": "verified_news",
   "coverage_status": "partial",
-  "coverage_note": "一次本文を実読できた5件のみ掲載。市場反応は正本または未確認として分離。企業開示・評価変更の全件網羅は未確認。",
+  "coverage_note": "一次本文を実読できた4件のみ掲載。市場反応は正本または未確認として分離。企業開示・評価変更の全件網羅は未確認。",
   "articles": [
     {
-      "id": "nov5-ism-services-oct",
-      "title": "米10月ISMサービスPMIは54.5",
-      "published_date": "2026-11-04",
-      "verified_at": "2026-11-05T07:18:00+09:00",
+      "id": "nov6-us-productivity",
+      "title": "米Q3非農業部門生産性は年率+3.6%",
+      "published_date": "2026-11-05",
+      "verified_at": "2026-11-06T07:05:00+09:00",
       "source_type": "primary",
-      "publisher": "Institute for Supply Management",
-      "source_url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-report-on-business/",
-      "verification_url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-report-on-business/",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "source_url": "https://www.bls.gov/news.release/archives/prod2_11052026.htm",
+      "verification_url": "https://www.bls.gov/news.release/archives/prod2_11052026.htm",
       "verification_status": "PASS",
-      "fact": "サービスPMI54.5、事業活動53.8、新規受注55.9、雇用51.4、価格73.0。",
-      "analysis": "サービス拡大を維持する一方、価格高止まりは金融緩和期待と利益率の反証。",
+      "fact": "非農業部門生産性+3.6%、産出+3.7%、労働時間+0.1%。前年比生産性+2.1%。",
+      "analysis": "生産性改善は単位コスト圧力を和らげ得る。",
       "limitations": "同日米金利と指標単独の価格寄与は未確認。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
         "source_read": {
           "status": "PASS",
-          "evidence": "Institute for Supply Managementの一次本文を実読し、発表日・対象・留保を確認。"
+          "evidence": "U.S. Bureau of Labor Statisticsの一次本文を実読し、発表日・対象・留保を確認。"
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "サービスPMI54.5、事業活動53.8、新規受注55.9、雇用51.4、価格73.0。"
+          "evidence": "非農業部門生産性+3.6%、産出+3.7%、労働時間+0.1%。前年比生産性+2.1%。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日2026-11-04、実確認2026-11-05T07:18:00+09:00。発表日・市場日を分離。"
+          "evidence": "発表日2026-11-05、実確認2026-11-06T07:05:00+09:00。発表日・市場日を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
@@ -45,32 +45,32 @@
       }
     },
     {
-      "id": "nov5-mitsubishi-results",
-      "title": "三菱商事、上期利益+74.2%",
-      "published_date": "2026-11-04",
-      "verified_at": "2026-11-05T07:18:00+09:00",
+      "id": "nov6-fed-hammack",
+      "title": "FRBハマック総裁、制約的スタンスへの移行を支持",
+      "published_date": "2026-11-05",
+      "verified_at": "2026-11-06T07:05:00+09:00",
       "source_type": "primary",
-      "publisher": "Mitsubishi Corporation",
-      "source_url": "https://www.mitsubishicorp.com/jp/en/ir/library/earnings/pdf/202611e.pdf",
-      "verification_url": "https://www.mitsubishicorp.com/jp/en/ir/library/earnings/pdf/202611e.pdf",
+      "publisher": "Federal Reserve Bank of Cleveland",
+      "source_url": "https://www.clevelandfed.org/collections/speeches/2026/sp-20261105-reserve-currencies-and-stablecoins",
+      "verification_url": "https://www.clevelandfed.org/collections/speeches/2026/sp-20261105-reserve-currencies-and-stablecoins",
       "verification_status": "PASS",
-      "fact": "上期売上高10兆4104.23億円、親会社帰属利益6196.96億円（前年比+74.2%）、基本EPS169.21円。",
-      "analysis": "利益増は商社株の支援材料。商品市況・一時要因の内訳と通期進捗を監視。",
-      "limitations": "株価反応には同時公表の自己株取得を含むため、決算単独寄与は分離できない。",
+      "fact": "インフレ圧力は広範で、2%へ戻すため政策を制約的にする必要があり、小刻みな調整を選好すると発言。",
+      "analysis": "高PER株の割引率には逆風候補。",
+      "limitations": "同日米金利と株価急落への単独寄与は未確認。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
         "source_read": {
           "status": "PASS",
-          "evidence": "Mitsubishi Corporationの一次本文を実読し、発表日・対象・留保を確認。"
+          "evidence": "Federal Reserve Bank of Clevelandの一次本文を実読し、発表日・対象・留保を確認。"
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "上期売上高10兆4104.23億円、親会社帰属利益6196.96億円（前年比+74.2%）、基本EPS169.21円。"
+          "evidence": "インフレ圧力は広範で、2%へ戻すため政策を制約的にする必要があり、小刻みな調整を選好すると発言。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日2026-11-04、実確認2026-11-05T07:18:00+09:00。発表日・市場日を分離。"
+          "evidence": "発表日2026-11-05、実確認2026-11-06T07:05:00+09:00。発表日・市場日を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
@@ -78,61 +78,23 @@
         },
         "limitations": {
           "status": "PASS",
-          "evidence": "株価反応には同時公表の自己株取得を含むため、決算単独寄与は分離できない。"
+          "evidence": "同日米金利と株価急落への単独寄与は未確認。"
         }
       }
     },
     {
-      "id": "nov5-mitsubishi-buyback",
-      "title": "三菱商事、最大1兆円の自己株取得",
-      "published_date": "2026-11-04",
-      "verified_at": "2026-11-05T07:18:00+09:00",
-      "source_type": "primary",
-      "publisher": "Mitsubishi Corporation",
-      "source_url": "https://www.mitsubishicorp.com/jp/en/news/release/2026/files/mcpr261104ze.pdf",
-      "verification_url": "https://www.mitsubishicorp.com/jp/en/news/release/2026/files/mcpr261104ze.pdf",
-      "verification_status": "PASS",
-      "fact": "最大420百万株・1兆円。11月5日から2027年7月31日に東証で市場買付し、取得株は2027年8月31日に全数消却予定。",
-      "analysis": "大規模還元は需給と資本効率の追い風候補。実際の執行と商社内の波及を監視。",
-      "limitations": "取得上限であり実行額を保証しない。",
-      "market_reaction_status": "unverified",
-      "market_reaction": "未確認",
-      "verification": {
-        "source_read": {
-          "status": "PASS",
-          "evidence": "Mitsubishi Corporationの一次本文を実読し、発表日・対象・留保を確認。"
-        },
-        "facts_verified": {
-          "status": "PASS",
-          "evidence": "最大420百万株・1兆円。11月5日から2027年7月31日に東証で市場買付し、取得株は2027年8月31日に全数消却予定。"
-        },
-        "chronology": {
-          "status": "PASS",
-          "evidence": "発表日2026-11-04、実確認2026-11-05T07:18:00+09:00。発表日・市場日を分離。"
-        },
-        "fact_analysis_separation": {
-          "status": "PASS",
-          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
-        },
-        "limitations": {
-          "status": "PASS",
-          "evidence": "取得上限であり実行額を保証しない。"
-        }
-      }
-    },
-    {
-      "id": "nov5-boj-monetary-base",
-      "title": "日銀10月マネタリーベースは前年比-13.6%",
-      "published_date": "2026-11-04",
-      "verified_at": "2026-11-05T07:18:00+09:00",
+      "id": "nov6-boj-minutes",
+      "title": "日銀9月会合議事要旨、追加利上げ継続を議論",
+      "published_date": "2026-11-05",
+      "verified_at": "2026-11-06T07:05:00+09:00",
       "source_type": "primary",
       "publisher": "Bank of Japan",
-      "source_url": "https://www.boj.or.jp/en/statistics/boj/other/mb/base2610.pdf",
-      "verification_url": "https://www.boj.or.jp/en/statistics/boj/other/mb/base2610.pdf",
+      "source_url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2026/g260918.pdf",
+      "verification_url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2026/g260918.pdf",
       "verification_status": "PASS",
-      "fact": "10月平均残高532兆5717億円、前年比-13.6%。月末残高537兆2137億円。",
-      "analysis": "資金供給縮小の継続を示すが、政策金利の直接シグナルとは限らない。",
-      "limitations": "円・銀行・不動産の指標単独反応は未分離。",
+      "fact": "物価見通しに沿えば政策金利を引き上げ、緩和度合いを調整する方針を確認。",
+      "analysis": "銀行には利ざや期待、不動産・高PER株には割引率上昇の反証。",
+      "limitations": "議事要旨単独の円・業種反応は未分離。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
@@ -142,11 +104,11 @@
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "10月平均残高532兆5717億円、前年比-13.6%。月末残高537兆2137億円。"
+          "evidence": "物価見通しに沿えば政策金利を引き上げ、緩和度合いを調整する方針を確認。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日2026-11-04、実確認2026-11-05T07:18:00+09:00。発表日・市場日を分離。"
+          "evidence": "発表日2026-11-05、実確認2026-11-06T07:05:00+09:00。発表日・市場日を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
@@ -154,37 +116,37 @@
         },
         "limitations": {
           "status": "PASS",
-          "evidence": "円・銀行・不動産の指標単独反応は未分離。"
+          "evidence": "議事要旨単独の円・業種反応は未分離。"
         }
       }
     },
     {
-      "id": "nov5-ntt-h1",
-      "title": "NTT上期は増収・営業減益",
-      "published_date": "2026-11-04",
-      "verified_at": "2026-11-05T07:18:00+09:00",
+      "id": "nov6-toyota-results",
+      "title": "トヨタ上期営業利益2兆1911億円",
+      "published_date": "2026-11-05",
+      "verified_at": "2026-11-06T07:05:00+09:00",
       "source_type": "primary",
-      "publisher": "NTT, Inc.",
-      "source_url": "https://group.ntt/en/newsrelease/2026/11/04/pdf/261104ac.pdf",
-      "verification_url": "https://group.ntt/en/newsrelease/2026/11/04/pdf/261104ac.pdf",
+      "publisher": "Toyota Motor Corporation",
+      "source_url": "https://global.toyota/pages/global_toyota/ir/financial-results/2027_2q_presentation_en.pdf",
+      "verification_url": "https://global.toyota/pages/global_toyota/ir/financial-results/2027_2q_presentation_en.pdf",
       "verification_status": "PASS",
-      "fact": "上期営業収益7兆3622億円（前年6兆7727億円）、営業利益8301億円（前年9450億円）、親会社帰属利益5002億円（前年5957億円）。",
-      "analysis": "増収でも利益減が株価下落と整合。通期予想と費用内訳を監視。",
-      "limitations": "株価反応のうち決算単独寄与は分離できない。",
+      "fact": "上期売上高26.962兆円、営業利益2.1911兆円、通期営業利益予想3.9兆円、親会社帰属利益予想3.57兆円。",
+      "analysis": "改善努力と円安が中東・材料価格の負担を補い、自動車の相対優位を支えた。",
+      "limitations": "米急落後の株価持続性と決算単独寄与は未確認。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
         "source_read": {
           "status": "PASS",
-          "evidence": "NTT, Inc.の一次本文を実読し、発表日・対象・留保を確認。"
+          "evidence": "Toyota Motor Corporationの一次本文を実読し、発表日・対象・留保を確認。"
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "上期営業収益7兆3622億円（前年6兆7727億円）、営業利益8301億円（前年9450億円）、親会社帰属利益5002億円（前年5957億円）。"
+          "evidence": "上期売上高26.962兆円、営業利益2.1911兆円、通期営業利益予想3.9兆円、親会社帰属利益予想3.57兆円。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日2026-11-04、実確認2026-11-05T07:18:00+09:00。発表日・市場日を分離。"
+          "evidence": "発表日2026-11-05、実確認2026-11-06T07:05:00+09:00。発表日・市場日を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
@@ -192,7 +154,7 @@
         },
         "limitations": {
           "status": "PASS",
-          "evidence": "株価反応のうち決算単独寄与は分離できない。"
+          "evidence": "米急落後の株価持続性と決算単独寄与は未確認。"
         }
       }
     }

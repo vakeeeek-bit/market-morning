@@ -1,0 +1,162 @@
+{
+  "report_date": "2026-11-06",
+  "target_market_date": "2026-11-05",
+  "updated_at": "2026-11-06T07:05:00+09:00",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "一次本文を実読できた4件のみ掲載。市場反応は正本または未確認として分離。企業開示・評価変更の全件網羅は未確認。",
+  "articles": [
+    {
+      "id": "nov6-us-productivity",
+      "title": "米Q3非農業部門生産性は年率+3.6%",
+      "published_date": "2026-11-05",
+      "verified_at": "2026-11-06T07:05:00+09:00",
+      "source_type": "primary",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "source_url": "https://www.bls.gov/news.release/archives/prod2_11052026.htm",
+      "verification_url": "https://www.bls.gov/news.release/archives/prod2_11052026.htm",
+      "verification_status": "PASS",
+      "fact": "非農業部門生産性+3.6%、産出+3.7%、労働時間+0.1%。前年比生産性+2.1%。",
+      "analysis": "生産性改善は単位コスト圧力を和らげ得る。",
+      "limitations": "同日米金利と指標単独の価格寄与は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "U.S. Bureau of Labor Statisticsの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "非農業部門生産性+3.6%、産出+3.7%、労働時間+0.1%。前年比生産性+2.1%。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-05、実確認2026-11-06T07:05:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "同日米金利と指標単独の価格寄与は未確認。"
+        }
+      }
+    },
+    {
+      "id": "nov6-fed-hammack",
+      "title": "FRBハマック総裁、制約的スタンスへの移行を支持",
+      "published_date": "2026-11-05",
+      "verified_at": "2026-11-06T07:05:00+09:00",
+      "source_type": "primary",
+      "publisher": "Federal Reserve Bank of Cleveland",
+      "source_url": "https://www.clevelandfed.org/collections/speeches/2026/sp-20261105-reserve-currencies-and-stablecoins",
+      "verification_url": "https://www.clevelandfed.org/collections/speeches/2026/sp-20261105-reserve-currencies-and-stablecoins",
+      "verification_status": "PASS",
+      "fact": "インフレ圧力は広範で、2%へ戻すため政策を制約的にする必要があり、小刻みな調整を選好すると発言。",
+      "analysis": "高PER株の割引率には逆風候補。",
+      "limitations": "同日米金利と株価急落への単独寄与は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Federal Reserve Bank of Clevelandの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "インフレ圧力は広範で、2%へ戻すため政策を制約的にする必要があり、小刻みな調整を選好すると発言。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-05、実確認2026-11-06T07:05:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "同日米金利と株価急落への単独寄与は未確認。"
+        }
+      }
+    },
+    {
+      "id": "nov6-boj-minutes",
+      "title": "日銀9月会合議事要旨、追加利上げ継続を議論",
+      "published_date": "2026-11-05",
+      "verified_at": "2026-11-06T07:05:00+09:00",
+      "source_type": "primary",
+      "publisher": "Bank of Japan",
+      "source_url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2026/g260918.pdf",
+      "verification_url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2026/g260918.pdf",
+      "verification_status": "PASS",
+      "fact": "物価見通しに沿えば政策金利を引き上げ、緩和度合いを調整する方針を確認。",
+      "analysis": "銀行には利ざや期待、不動産・高PER株には割引率上昇の反証。",
+      "limitations": "議事要旨単独の円・業種反応は未分離。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Bank of Japanの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "物価見通しに沿えば政策金利を引き上げ、緩和度合いを調整する方針を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-05、実確認2026-11-06T07:05:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "議事要旨単独の円・業種反応は未分離。"
+        }
+      }
+    },
+    {
+      "id": "nov6-toyota-results",
+      "title": "トヨタ上期営業利益2兆1911億円",
+      "published_date": "2026-11-05",
+      "verified_at": "2026-11-06T07:05:00+09:00",
+      "source_type": "primary",
+      "publisher": "Toyota Motor Corporation",
+      "source_url": "https://global.toyota/pages/global_toyota/ir/financial-results/2027_2q_presentation_en.pdf",
+      "verification_url": "https://global.toyota/pages/global_toyota/ir/financial-results/2027_2q_presentation_en.pdf",
+      "verification_status": "PASS",
+      "fact": "上期売上高26.962兆円、営業利益2.1911兆円、通期営業利益予想3.9兆円、親会社帰属利益予想3.57兆円。",
+      "analysis": "改善努力と円安が中東・材料価格の負担を補い、自動車の相対優位を支えた。",
+      "limitations": "米急落後の株価持続性と決算単独寄与は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Toyota Motor Corporationの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "上期売上高26.962兆円、営業利益2.1911兆円、通期営業利益予想3.9兆円、親会社帰属利益予想3.57兆円。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-05、実確認2026-11-06T07:05:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "米急落後の株価持続性と決算単独寄与は未確認。"
+        }
+      }
+    }
+  ]
+}

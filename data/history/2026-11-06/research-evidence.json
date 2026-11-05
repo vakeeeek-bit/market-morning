@@ -1,0 +1,716 @@
+{
+  "version": "2.0",
+  "report_date": "2026-11-06",
+  "target_market_date": "2026-11-05",
+  "updated_at": "2026-11-06T07:05:00+09:00",
+  "scope_note": "市場32系列、日本17業種・34銘柄、一次資料、異常値、前日差分を確認。未定義値と網羅不能項目は除外。",
+  "research_coverage": {
+    "status": "QUALIFIED",
+    "directions": [
+      {
+        "id": "fixed_universe",
+        "status": "PASS",
+        "evidence": "市場32系列すべて取得成功、日本17業種・34銘柄取得済み。"
+      },
+      {
+        "id": "cross_news",
+        "status": "PASS",
+        "evidence": "BLS・FRB・日銀・トヨタ・米財務省・USTR・White Houseを横断確認。"
+      },
+      {
+        "id": "reverse_from_anomalies",
+        "status": "PASS",
+        "evidence": "SOX-12.25%、VIX+69.66%、米11業種全面安、日本の指数分化と自動車急伸から材料と反証を逆引き。"
+      },
+      {
+        "id": "previous_day_change",
+        "status": "PASS",
+        "evidence": "11月5日版から米全面急落、VIX急騰、トヨタ決算、日本5日実績へ更新。"
+      }
+    ],
+    "items": [
+      {
+        "id": "fixed_market_universe",
+        "label": "固定市場Universe",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "market.json32系列とjapan-market.json17業種・34銘柄を確認。",
+        "attempts": [
+          {
+            "method": "当日収集と正本照合",
+            "result": "米株5日、日本株5日、金利為替4日の基準日を保持",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
+            ],
+            "checked_at": "2026-11-06T07:05:00+09:00"
+          }
+        ],
+        "impact_if_unavailable": "市場方向を保留",
+        "publication_use": "selected"
+      },
+      {
+        "id": "policy_and_macro_news",
+        "label": "政策・中央銀行・マクロ",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "BLS生産性、FRB発言、日銀議事要旨、公式日程を実読。",
+        "attempts": [
+          {
+            "method": "一次本文実読",
+            "result": "発表日時・対象・数値・留保を確認",
+            "source_urls": [
+              "https://www.bls.gov/news.release/archives/prod2_11052026.htm",
+              "https://www.clevelandfed.org/collections/speeches/2026/sp-20261105-reserve-currencies-and-stablecoins",
+              "https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2026/g260918.pdf"
+            ],
+            "checked_at": "2026-11-06T07:05:00+09:00"
+          }
+        ],
+        "impact_if_unavailable": "政策方向を断定しない",
+        "publication_use": "selected"
+      },
+      {
+        "id": "market_anomaly_reverse_search",
+        "label": "異常値からの逆引き",
+        "tier": "Required",
+        "status": "取得済",
+        "evidence": "SOX・VIX・11業種、日本指数・業種の異常値を正本とAP/Reuters背景で照合。",
+        "attempts": [
+          {
+            "method": "正本市場比較",
+            "result": "SOX-12.25%、VIX+69.66%、0/11業種上昇を確認",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-11-06T07:05:00+09:00"
+          },
+          {
+            "method": "市場背景記事",
+            "result": "AI投資懸念・変動率連動売りを補足。単一因果は不採用",
+            "source_urls": [
+              "https://apnews.com/article/afe254c608c3d1fe2ea792812ba9765a"
+            ],
+            "checked_at": "2026-11-06T07:05:00+09:00"
+          }
+        ],
+        "impact_if_unavailable": "指数表面だけの分析になる",
+        "publication_use": "selected"
+      },
+      {
+        "id": "previous_day_view",
+        "label": "前回公開との差分",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "前日版の広い株高・半導体逆行安から全面急落へ変更。",
+        "attempts": [
+          {
+            "method": "前日report比較",
+            "result": "SOX、VIX、業種幅、日本実績、個別材料を差分確認",
+            "source_urls": [
+              "https://market-morning-gules.vercel.app/data/history/2026-11-05/report.json",
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-11-06T07:05:00+09:00"
+          }
+        ],
+        "impact_if_unavailable": "前日文章の流用を検出できない",
+        "publication_use": "selected"
+      },
+      {
+        "id": "company_disclosures",
+        "label": "日本株の個別企業開示",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "トヨタ決算を一次確認。全件網羅は主張せず確認済み1件のみ採用。",
+        "attempts": [
+          {
+            "method": "企業IR実読",
+            "result": "発表時刻・上期実績・通期予想・留保を確認",
+            "source_urls": [
+              "https://global.toyota/pages/global_toyota/ir/financial-results/2027_2q_presentation_en.pdf"
+            ],
+            "checked_at": "2026-11-06T07:05:00+09:00"
+          }
+        ],
+        "impact_if_unavailable": "個別材料欄を除外",
+        "publication_use": "selected"
+      },
+      {
+        "id": "analyst_rating_changes",
+        "label": "アナリスト評価変更",
+        "tier": "Required",
+        "status": "十分調査したが取得不能",
+        "evidence": "無料公開情報で11月5日全件網羅を確認できず非掲載。",
+        "attempts": [
+          {
+            "method": "公開評価一覧",
+            "result": "無料公開範囲で全件網羅不可",
+            "source_urls": [
+              "https://kabutan.jp/news/marketnews/?category=6"
+            ],
+            "checked_at": "2026-11-06T07:05:00+09:00"
+          },
+          {
+            "method": "IFIS無料情報",
+            "result": "個別情報はあるが当日全件一覧の網羅性は未確認",
+            "source_urls": [
+              "https://kabuyoho.jp/"
+            ],
+            "checked_at": "2026-11-06T07:05:00+09:00"
+          }
+        ],
+        "impact_if_unavailable": "変更なしと断定せず一覧を除外",
+        "publication_use": "excluded"
+      },
+      {
+        "id": "commodity_contract_definitions",
+        "label": "商品先物の契約定義",
+        "tier": "Required",
+        "status": "十分調査したが取得不能",
+        "evidence": "保存連続足と公式限月・値種別・基準時刻の対応を確定できず不採用。",
+        "attempts": [
+          {
+            "method": "CME公式",
+            "result": "個別限月ページは確認したが保存連続足との対応未確認",
+            "source_urls": [
+              "https://www.cmegroup.com/markets/metals/precious/gold.settlements.html",
+              "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html"
+            ],
+            "checked_at": "2026-11-06T07:05:00+09:00"
+          },
+          {
+            "method": "ICE公式",
+            "result": "Brent契約仕様は確認したが保存値との限月対応未確認",
+            "source_urls": [
+              "https://www.ice.com/products/219/Brent-Crude-Futures"
+            ],
+            "checked_at": "2026-11-06T07:05:00+09:00"
+          }
+        ],
+        "impact_if_unavailable": "商品先物数値を結論から除外",
+        "publication_use": "excluded"
+      },
+      {
+        "id": "project_docs",
+        "label": "Project添付仕様書",
+        "tier": "Required",
+        "status": "十分調査したが取得不能",
+        "evidence": "Google Driveで仕様書3点を検索したが該当なし。",
+        "attempts": [
+          {
+            "method": "完全一致検索",
+            "result": "3点とも該当なし",
+            "source_urls": [
+              "https://drive.google.com/"
+            ],
+            "checked_at": "2026-11-06T07:05:00+09:00"
+          },
+          {
+            "method": "部分一致検索",
+            "result": "Market Morning関連の仕様書を特定できず",
+            "source_urls": [
+              "https://drive.google.com/"
+            ],
+            "checked_at": "2026-11-06T07:05:00+09:00"
+          }
+        ],
+        "impact_if_unavailable": "添付仕様書実読済みとは主張せずProject Instructionsとmainを優先",
+        "publication_use": "excluded"
+      }
+    ]
+  },
+  "analysis_quality": {
+    "status": "PASS",
+    "materials": [
+      {
+        "headline": "米株急落・VIX急騰",
+        "fact": {
+          "text": "S&P500-4.36%、NASDAQ-5.52%、ダウ-3.44%、VIX+69.66%。",
+          "source_urls": [
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+            "https://apnews.com/article/afe254c608c3d1fe2ea792812ba9765a"
+          ],
+          "verification_status": "PASS"
+        },
+        "observed_market_reaction": {
+          "text": "主要指数と11業種ETF代理が全て下落。",
+          "assets_checked": [
+            "米株",
+            "米業種",
+            "日本株",
+            "VIX"
+          ]
+        },
+        "market_internals": {
+          "text": "通信・公益・生活必需品が相対耐性、情報技術・資本財が劣後。"
+        },
+        "market_pricing": {
+          "status": "unpriced",
+          "text": "米5日急落は日本6日に初回織り込み。"
+        },
+        "interpretation": {
+          "text": "AI関連から始まった売りが変動率上昇で全体へ拡大。",
+          "confidence": "supported",
+          "evidence": "指数・業種ETF・VIXの同日終値",
+          "uncertainty": "選挙・規制観測・機械的売りの寄与分離"
+        },
+        "japan_transmission": {
+          "economic_channel": "米AI急落→VIX上昇→グローバルリスク削減→日本半導体・日経平均型",
+          "intermediate_reactions": [
+            "米半導体下落",
+            "VIX急騰",
+            "米指数全面安",
+            "日本翌日織り込み"
+          ],
+          "affected_sectors": [
+            "電機・精密",
+            "情報通信・サービス",
+            "機械"
+          ],
+          "pricing_in_japan": "11月6日に初回織り込み",
+          "assessment": "強い向かい風"
+        },
+        "counter_evidence": [
+          "日本5日TOPIX型+0.39%",
+          "トヨタ+16.68%",
+          "米ディフェンシブの相対耐性"
+        ],
+        "change_conditions": [
+          "SOX反発",
+          "VIX20台前半",
+          "国内電機TOPIX比改善"
+        ],
+        "chronology_check": "PASS",
+        "conflict_resolution": "急落の単一原因を断定せず価格・報道・政策事実を分離。"
+      },
+      {
+        "headline": "生産性改善とFRB引き締め姿勢",
+        "fact": {
+          "text": "Q3生産性+3.6%。ハマック総裁は制約的スタンスへの移行を支持。",
+          "source_urls": [
+            "https://www.bls.gov/news.release/archives/prod2_11052026.htm",
+            "https://www.clevelandfed.org/collections/speeches/2026/sp-20261105-reserve-currencies-and-stablecoins"
+          ],
+          "verification_status": "PASS"
+        },
+        "observed_market_reaction": {
+          "text": "同日米株は急落したが、同日金利と個別寄与は未確認。",
+          "assets_checked": [
+            "米株",
+            "米金利",
+            "為替",
+            "日本株"
+          ]
+        },
+        "market_internals": {
+          "text": "グロース・半導体が最も弱く、ディフェンシブが相対耐性。"
+        },
+        "market_pricing": {
+          "status": "partially_priced",
+          "text": "株式反応は確認、金利反応は基準日差で保留。"
+        },
+        "interpretation": {
+          "text": "生産性改善はコスト抑制要因だがFRBのインフレ警戒が割引率を支える。",
+          "confidence": "supported",
+          "evidence": "BLS一次数値とFRB一次発言",
+          "uncertainty": "同日金利と雇用統計前のポジション影響"
+        },
+        "japan_transmission": {
+          "economic_channel": "米政策金利見通し→米金利・円→日本高PER株・銀行",
+          "intermediate_reactions": [
+            "一次発表",
+            "米株急落",
+            "金利未確認",
+            "雇用統計待ち"
+          ],
+          "affected_sectors": [
+            "銀行",
+            "不動産",
+            "電機・精密"
+          ],
+          "pricing_in_japan": "米5日材料は6日に初回織り込み",
+          "assessment": "条件付き"
+        },
+        "counter_evidence": [
+          "生産性+3.6%",
+          "同日金利未確認",
+          "雇用統計前"
+        ],
+        "change_conditions": [
+          "雇用統計",
+          "CPI",
+          "同日米金利"
+        ],
+        "chronology_check": "PASS",
+        "conflict_resolution": "生産性の改善と政策引き締め姿勢を別方向の材料として併記。"
+      },
+      {
+        "headline": "日本はTOPIX・自動車優位",
+        "fact": {
+          "text": "日経平均型-2.02%、TOPIX型+0.39%、自動車+10.29%、7203+16.68%。",
+          "source_urls": [
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json",
+            "https://global.toyota/pages/global_toyota/ir/financial-results/2027_2q_presentation_en.pdf"
+          ],
+          "verification_status": "PASS"
+        },
+        "observed_market_reaction": {
+          "text": "自動車・不動産・小売が上位、電機精密・資源関連が劣後。",
+          "assets_checked": [
+            "日本指数代理",
+            "日本17業種",
+            "日本34銘柄"
+          ]
+        },
+        "market_internals": {
+          "text": "日経平均型安・TOPIX型高、企業決算と内需へのローテーション。"
+        },
+        "market_pricing": {
+          "status": "partially_priced",
+          "text": "トヨタ決算は5日に織り込み、米5日急落は6日に未反映。"
+        },
+        "interpretation": {
+          "text": "トヨタ固有の上方修正が自動車とTOPIXを支えたが、米急落後の耐性は未確認。",
+          "confidence": "confirmed",
+          "evidence": "17業種・34銘柄とトヨタ一次資料",
+          "uncertainty": "米急落後の持続性と自動車内の広がり"
+        },
+        "japan_transmission": {
+          "economic_channel": "業績上方修正・円安→トヨタ急伸→自動車・TOPIX支援",
+          "intermediate_reactions": [
+            "企業発表",
+            "同日株価反応",
+            "業種急伸",
+            "米夜間急落"
+          ],
+          "affected_sectors": [
+            "自動車・輸送機",
+            "鉄鋼・非鉄",
+            "機械"
+          ],
+          "pricing_in_japan": "決算は一部織り込み、米急落は未反映",
+          "assessment": "条件付き追い風"
+        },
+        "counter_evidence": [
+          "日経平均型-2.02%",
+          "米S&P500-4.36%",
+          "米SOX-12.25%"
+        ],
+        "change_conditions": [
+          "7203のTOPIX比",
+          "自動車内波及",
+          "USD/JPY"
+        ],
+        "chronology_check": "PASS",
+        "conflict_resolution": "企業発表時刻と同日株価を確認し、翌夜の米急落を分離。"
+      }
+    ],
+    "template_degradation_audit": {
+      "today_specific": true,
+      "previous_report_compared": true,
+      "actual_market_reaction_checked": true,
+      "multi_asset_checked": true,
+      "conflicting_materials_compared": true,
+      "transmission_explained": true,
+      "observable_change_conditions": true,
+      "comparison_note": "11月5日版の広い株高・半導体逆行安から、11月6日版は全面急落、VIX急騰、日本5日実績、トヨタ決算へ更新。"
+    }
+  },
+  "counter_evidence_audit": {
+    "status": "PASS",
+    "conclusions": [
+      {
+        "conclusion": "米国株は全面急落",
+        "checks": [
+          "主要6指数すべて下落",
+          "11/11業種ETF下落",
+          "VIX+69.66%"
+        ],
+        "weighing": "ディフェンシブの相対耐性と日本TOPIX高を併記",
+        "uncertainty": "全銘柄Breadthと機械的売りの寄与"
+      },
+      {
+        "conclusion": "半導体が最弱",
+        "checks": [
+          "SOX-12.25%",
+          "XLK-8.00%",
+          "NASDAQ100-6.36%"
+        ],
+        "weighing": "AI需要の中期仮説消滅とは断定しない",
+        "uncertainty": "規制観測と採算懸念の寄与分離"
+      },
+      {
+        "conclusion": "日本はTOPIX・自動車優位",
+        "checks": [
+          "日経型-2.02%",
+          "TOPIX型+0.39%",
+          "自動車+10.29%"
+        ],
+        "weighing": "17業種監視ユニバースに限定し米急落未反映を明示",
+        "uncertainty": "11月6日の持続性"
+      }
+    ]
+  },
+  "cross_asset_consistency": {
+    "status": "QUALIFIED",
+    "assets_checked": [
+      "equities",
+      "rates",
+      "fx",
+      "commodities",
+      "crypto"
+    ],
+    "relationships": [
+      {
+        "combination": "米株急落＋VIX急騰",
+        "observations": [
+          "S&P500-4.36%",
+          "SOX-12.25%",
+          "VIX+69.66%"
+        ],
+        "explanation": "AI関連の売りと変動率上昇によるリスク削減",
+        "confidence": "supported",
+        "unresolved": false,
+        "uncertainty": "全銘柄Breadth"
+      },
+      {
+        "combination": "株式5日＋金利為替4日",
+        "observations": [
+          "米2年4.58%、10年4.90%",
+          "DXY101.51、USD/JPY158.469"
+        ],
+        "explanation": "同日因果を保留、2s10sは4日スプレッド+32bpに限定",
+        "confidence": "supported",
+        "unresolved": true,
+        "uncertainty": "5日の同日金利・為替"
+      }
+    ]
+  },
+  "previous_day_change": {
+    "status": "PASS",
+    "prior_view": "米国は広い株高、半導体だけ逆行安。日本はTOPIX/value優位。",
+    "new_events": [
+      "S&P500-4.36%",
+      "SOX-12.25%",
+      "VIX+69.66%",
+      "米0/11業種上昇",
+      "トヨタ+16.68%"
+    ],
+    "changed": [
+      "広いリスク選好から全面リスク回避へ",
+      "半導体相対劣後から急落主導へ",
+      "日本を11月5日実績へ更新"
+    ],
+    "unchanged": [
+      "基準日差のある金利為替は因果に不使用",
+      "未定義先物は除外",
+      "Copper任意非掲載"
+    ],
+    "japan_revision": "日本の11月5日実績とトヨタ決算を反映し、米急落の翌日初回織り込みを明記。"
+  },
+  "source_quality": {
+    "status": "PASS",
+    "checks": [
+      "BLS・FRB・日銀・トヨタ・米財務省の一次本文を実読",
+      "AP/Reutersは市場背景だけに使用し正本価格を置換しない",
+      "発表日・市場日・確認日を分離",
+      "未確認反応・限月不明価格を不採用"
+    ]
+  },
+  "data_integrity": {
+    "status": "QUALIFIED",
+    "checks": [
+      "report・Japanの日付・TOP5・1記事を一致",
+      "米株5日と金利・為替4日を分離",
+      "商品先物・朝の現在値を不採用",
+      "日本5日17業種・34銘柄",
+      "Copper任意省略"
+    ]
+  },
+  "quality_gates": {
+    "research_coverage": "QUALIFIED",
+    "source_quality": "PASS",
+    "data_integrity": "QUALIFIED",
+    "analysis_logic": "PASS",
+    "cross_asset_consistency": "QUALIFIED",
+    "japan_transmission": "PASS",
+    "counter_evidence_audit": "PASS",
+    "previous_day_change": "PASS",
+    "final_content_audit": "PASS"
+  },
+  "publication_decision": {
+    "status": "QUALIFIED",
+    "decided_at": "2026-11-06T07:05:00+09:00",
+    "summary": "問題項目と依存主張を除外し、AIレポート・世界市場・日本株・確認済みニュースを注釈付き公開可能。",
+    "components": {
+      "ai_report": {
+        "status": "QUALIFIED",
+        "updated_at": "2026-11-06T07:05:00+09:00",
+        "reason": "基準日差と未定義値を除外"
+      },
+      "world_market": {
+        "status": "PASS",
+        "updated_at": "2026-11-06T07:05:00+09:00",
+        "reason": "米株・VIX・11業種ETFは11月5日同日正本"
+      },
+      "japan_market": {
+        "status": "PASS",
+        "updated_at": "2026-11-05 23:58:04 JST",
+        "reason": "11月5日17業種・34銘柄取得済み"
+      },
+      "japan_stocks": {
+        "status": "QUALIFIED",
+        "updated_at": "2026-11-06T07:05:00+09:00",
+        "reason": "確認済み企業固有材料と限定ユニバースを明示"
+      },
+      "verified_news": {
+        "status": "PASS",
+        "updated_at": "2026-11-06T07:05:00+09:00",
+        "reason": "4件の一次本文を実読"
+      }
+    },
+    "unresolved_items": [
+      {
+        "id": "stale_cross_asset",
+        "status": "QUALIFIED",
+        "missing": "米2年・10年債利回り、DXY、USD/JPYの正本は11月4日で、米株11月5日と基準日が1営業日ずれる",
+        "impact": "米11月5日の金利・為替因果を除外",
+        "last_checked_at": "2026-11-06T07:05:00+09:00",
+        "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
+        "attempts": [
+          {
+            "method": "当日正本・公式ソース確認",
+            "result": "必要な完全性を確定できず",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-11-06T07:05:00+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "米11月5日の金利・為替因果を除外"
+        ],
+        "excluded_from_publication": true,
+        "first_seen_at": "2026-10-28T06:58:00+09:00"
+      },
+      {
+        "id": "contracts",
+        "status": "QUALIFIED",
+        "missing": "Gold・Silver・WTI・Brent・暗号資産の保存連続値と取引所・限月・値種別・基準時刻の対応を確定できず結論から除外",
+        "impact": "商品先物の価格・前日比を除外",
+        "last_checked_at": "2026-11-06T07:05:00+09:00",
+        "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
+        "attempts": [
+          {
+            "method": "当日正本・公式ソース確認",
+            "result": "必要な完全性を確定できず",
+            "source_urls": [
+              "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html",
+              "https://www.ice.com/products/219/Brent-Crude-Futures"
+            ],
+            "checked_at": "2026-11-06T07:05:00+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "商品先物の価格・前日比を除外"
+        ],
+        "excluded_from_publication": true,
+        "first_seen_at": "2026-10-28T06:58:00+09:00"
+      },
+      {
+        "id": "current_values",
+        "status": "QUALIFIED",
+        "missing": "11月6日朝の時刻付き為替現在値と限月付き日経225先物実測値は未取得",
+        "impact": "朝の現在値・先物示唆を除外",
+        "last_checked_at": "2026-11-06T07:05:00+09:00",
+        "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
+        "attempts": [
+          {
+            "method": "当日正本・公式ソース確認",
+            "result": "必要な完全性を確定できず",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-11-06T07:05:00+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "朝の現在値・先物示唆を除外"
+        ],
+        "excluded_from_publication": true,
+        "first_seen_at": "2026-10-28T06:58:00+09:00"
+      },
+      {
+        "id": "coverage",
+        "status": "QUALIFIED",
+        "missing": "アナリスト評価変更と日本企業開示の全件網羅は確認できず、変更なしとは断定しない",
+        "impact": "評価変更なし・企業ニュース網羅の包括断定を除外",
+        "last_checked_at": "2026-11-06T07:05:00+09:00",
+        "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
+        "attempts": [
+          {
+            "method": "当日正本・公式ソース確認",
+            "result": "必要な完全性を確定できず",
+            "source_urls": [
+              "https://www.release.tdnet.info/inbs/I_main_00.html"
+            ],
+            "checked_at": "2026-11-06T07:05:00+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "評価変更なし・企業ニュース網羅の包括断定を除外"
+        ],
+        "excluded_from_publication": true,
+        "first_seen_at": "2026-10-28T06:58:00+09:00"
+      },
+      {
+        "id": "project_docs",
+        "status": "QUALIFIED",
+        "missing": "Project添付仕様書3点は接続済みGoogle Drive検索で取得できず、Project Instructionsとmain現行仕様を優先",
+        "impact": "添付仕様書実読済みという主張を除外",
+        "last_checked_at": "2026-11-06T07:05:00+09:00",
+        "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
+        "attempts": [
+          {
+            "method": "当日正本・公式ソース確認",
+            "result": "必要な完全性を確定できず",
+            "source_urls": [
+              "https://drive.google.com/"
+            ],
+            "checked_at": "2026-11-06T07:05:00+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "添付仕様書実読済みという主張を除外"
+        ],
+        "excluded_from_publication": true,
+        "first_seen_at": "2026-10-28T06:58:00+09:00"
+      }
+    ],
+    "resolved_item_ids": [
+      "japan-partial-429",
+      "sox-source-difference"
+    ]
+  }
+}

@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "updated_at": "2026-11-05T07:18:00+09:00",
-  "report_date": "2026-11-05",
+  "updated_at": "2026-11-06T07:05:00+09:00",
+  "report_date": "2026-11-06",
   "period_start": "2026-03-18",
-  "period_end": "2026-11-04",
+  "period_end": "2026-11-05",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-11-05",
+    "latest_report_date": "2026-11-06",
     "source_report_count": 11,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
@@ -142,6 +142,61 @@
             "nov5-ism",
             "nov5-market"
           ]
+        },
+        {
+          "date": "2026-11-05",
+          "title": "生産性改善でもFRBの引き締め姿勢継続",
+          "fact": "Q3非農業部門生産性は年率+3.6%。ハマック総裁は制約的スタンスへの移行を支持。",
+          "market_impact": "同日株価は急落。金利反応は基準日差で保留。",
+          "source_ids": [
+            "nov6-bls",
+            "nov6-hammack",
+            "nov6-market"
+          ]
+        },
+        {
+          "date": "2026-11-05",
+          "title": "生産性改善でもFRBの引き締め姿勢継続",
+          "fact": "Q3非農業部門生産性は年率+3.6%。ハマック総裁は制約的スタンスへの移行を支持。",
+          "market_impact": "同日株価は急落。金利反応は基準日差で保留。",
+          "source_ids": [
+            "nov6-bls",
+            "nov6-hammack",
+            "nov6-market"
+          ]
+        },
+        {
+          "date": "2026-11-05",
+          "title": "生産性改善でもFRBの引き締め姿勢継続",
+          "fact": "Q3非農業部門生産性は年率+3.6%。ハマック総裁は制約的スタンスへの移行を支持。",
+          "market_impact": "同日株価は急落。金利反応は基準日差で保留。",
+          "source_ids": [
+            "nov6-bls",
+            "nov6-hammack",
+            "nov6-market"
+          ]
+        },
+        {
+          "date": "2026-11-05",
+          "title": "生産性改善でもFRBの引き締め姿勢継続",
+          "fact": "Q3非農業部門生産性は年率+3.6%。ハマック総裁は制約的スタンスへの移行を支持。",
+          "market_impact": "同日株価は急落。金利反応は基準日差で保留。",
+          "source_ids": [
+            "nov6-bls",
+            "nov6-hammack",
+            "nov6-market"
+          ]
+        },
+        {
+          "date": "2026-11-05",
+          "title": "生産性改善でもFRBの引き締め姿勢継続",
+          "fact": "Q3非農業部門生産性は年率+3.6%。ハマック総裁は制約的スタンスへの移行を支持。",
+          "market_impact": "同日株価は急落。金利反応は基準日差で保留。",
+          "source_ids": [
+            "nov6-bls",
+            "nov6-hammack",
+            "nov6-market"
+          ]
         }
       ],
       "initial_view": {
@@ -149,43 +204,46 @@
         "text": "FRBはインフレを警戒し、利下げを急がない姿勢"
       },
       "new_fact": {
-        "date": "2026-11-04",
-        "text": "10月ISMサービスPMI54.5、雇用51.4、価格73.0。"
+        "date": "2026-11-05",
+        "text": "生産性+3.6%、ハマック総裁は制約的スタンスを支持。"
       },
       "market_reaction": {
-        "date": "2026-11-04",
-        "text": "米株は広く上昇したが、同日金利と指標単独寄与は未確認。"
+        "date": "2026-11-05",
+        "text": "米株は急落したが、同日金利と指標単独寄与は未確認。"
       },
-      "current_view": "米サービス需要は拡大を維持する一方、価格73.0で早期緩和期待には反証。雇用統計・CPIと同日金利で再評価。",
-      "japan_impact": "高PER株の追い風は金利未確認のため限定。銀行・輸出も同日円・金利で確認。",
-      "counter_evidence": "雇用統計の減速と金利低下が同時に確認されれば引き締め懸念を縮小。",
+      "current_view": "生産性改善はコスト圧力の緩和要因だが、FRBのインフレ警戒は継続。雇用統計・CPIと同日金利で再評価。",
+      "japan_impact": "金利未確認のため高PER株・銀行への方向断定は避け、雇用統計後の円・米金利を確認。",
+      "counter_evidence": "雇用減速と金利低下が同時に確認されれば追加引き締め懸念を縮小。",
       "source_ids": [
         "fed-apr29",
         "fed-mar18",
         "fed-sep16",
-        "oct15-0",
-        "oct16-ppi",
-        "oct16-retail",
-        "reaction14",
-        "reaction15",
-        "us-close-1016",
-        "oct19-0",
-        "oct19-1",
-        "oct20-reaction",
-        "oct20-0",
-        "oct29-fomc",
-        "oct28-market",
-        "oct30-us-gdp",
-        "oct30-us-pce",
-        "oct30-market",
         "nov2-market",
         "nov2-weekend",
-        "nov3-market",
         "nov3-ism",
+        "nov3-market",
         "nov4-jolts",
         "nov4-market",
         "nov5-ism",
-        "nov5-market"
+        "nov5-market",
+        "nov6-bls",
+        "nov6-hammack",
+        "nov6-market",
+        "oct15-0",
+        "oct16-ppi",
+        "oct16-retail",
+        "oct19-0",
+        "oct19-1",
+        "oct20-0",
+        "oct20-reaction",
+        "oct28-market",
+        "oct29-fomc",
+        "oct30-market",
+        "oct30-us-gdp",
+        "oct30-us-pce",
+        "reaction14",
+        "reaction15",
+        "us-close-1016"
       ]
     },
     {
@@ -350,6 +408,56 @@
           "source_ids": [
             "nov5-market"
           ]
+        },
+        {
+          "date": "2026-11-05",
+          "title": "SOX-12.25%、AI投資選別が全面急落へ",
+          "fact": "SOX-12.25%、NASDAQ100-6.36%、XLK-8.00%、VIX+69.66%。",
+          "market_impact": "AI関連の売りが11業種すべてへ拡大。",
+          "source_ids": [
+            "nov6-market",
+            "nov6-ap"
+          ]
+        },
+        {
+          "date": "2026-11-05",
+          "title": "SOX-12.25%、AI投資選別が全面急落へ",
+          "fact": "SOX-12.25%、NASDAQ100-6.36%、XLK-8.00%、VIX+69.66%。",
+          "market_impact": "AI関連の売りが11業種すべてへ拡大。",
+          "source_ids": [
+            "nov6-market",
+            "nov6-ap"
+          ]
+        },
+        {
+          "date": "2026-11-05",
+          "title": "SOX-12.25%、AI投資選別が全面急落へ",
+          "fact": "SOX-12.25%、NASDAQ100-6.36%、XLK-8.00%、VIX+69.66%。",
+          "market_impact": "AI関連の売りが11業種すべてへ拡大。",
+          "source_ids": [
+            "nov6-market",
+            "nov6-ap"
+          ]
+        },
+        {
+          "date": "2026-11-05",
+          "title": "SOX-12.25%、AI投資選別が全面急落へ",
+          "fact": "SOX-12.25%、NASDAQ100-6.36%、XLK-8.00%、VIX+69.66%。",
+          "market_impact": "AI関連の売りが11業種すべてへ拡大。",
+          "source_ids": [
+            "nov6-market",
+            "nov6-ap"
+          ]
+        },
+        {
+          "date": "2026-11-05",
+          "title": "SOX-12.25%、AI投資選別が全面急落へ",
+          "fact": "SOX-12.25%、NASDAQ100-6.36%、XLK-8.00%、VIX+69.66%。",
+          "market_impact": "AI関連の売りが11業種すべてへ拡大。",
+          "source_ids": [
+            "nov6-market",
+            "nov6-ap"
+          ]
         }
       ],
       "initial_view": {
@@ -357,42 +465,44 @@
         "text": "AI設備投資と先端半導体需要の強さが株価を支える局面"
       },
       "new_fact": {
-        "date": "2026-11-04",
-        "text": "S&P500+1.58%、ダウ+3.03%に対しSOX-3.13%、XLK-0.01%。"
+        "date": "2026-11-05",
+        "text": "SOX-12.25%、NASDAQ100-6.36%、XLK-8.00%、VIX+69.66%。"
       },
       "market_reaction": {
-        "date": "2026-11-04",
-        "text": "半導体は市場全体を4.71pt下回り、一般消費財・金融・通信が優位。"
+        "date": "2026-11-05",
+        "text": "米主要指数・11業種ETF代理が全面安。"
       },
-      "current_view": "AI需要の中期拡大は維持するが、11月4日はSOX-3.13%で非半導体株へローテーション。規制・利益率・資本負担で選別継続。",
-      "japan_impact": "半導体・電子部品をTOPIX比と出来高で確認。",
-      "counter_evidence": "SOX再下落、国内半導体・部品のTOPIX比悪化なら反発評価を撤回。",
+      "current_view": "AI需要の中期拡大仮説は残るが、規制・採算・混雑ポジションへの懸念が全面急落へ発展。反発だけでなく市場幅とVIXの改善を確認する。",
+      "japan_impact": "半導体装置・AI関連に強い逆風。自動車・内需へのローテーションが米急落後も持続するかを確認。",
+      "counter_evidence": "SOXがS&P500比で反発しVIXが20台前半へ低下、国内電機精密もTOPIX比で改善すれば急落継続評価を縮小。",
       "source_ids": [
         "ai-apr16",
         "ai-credit-1016",
         "ai-jul20",
         "ai-sep14",
+        "nov2-intel",
+        "nov2-market",
+        "nov2-weekend",
+        "nov3-market",
+        "nov3-marvell",
+        "nov4-apple",
+        "nov4-market",
+        "nov5-market",
+        "nov6-ap",
+        "nov6-market",
         "oct15-2",
         "oct16-tsmc",
-        "reaction14",
-        "reaction15",
-        "us-close-1016",
         "oct19-3",
-        "oct20-reaction",
         "oct20-0",
+        "oct20-reaction",
         "oct22-market",
         "oct23-market",
         "oct26-market",
         "oct28-market",
         "oct30-market",
-        "nov2-market",
-        "nov2-weekend",
-        "nov2-intel",
-        "nov3-market",
-        "nov3-marvell",
-        "nov4-apple",
-        "nov4-market",
-        "nov5-market"
+        "reaction14",
+        "reaction15",
+        "us-close-1016"
       ]
     },
     {
@@ -532,6 +642,56 @@
             "nov5-mitsubishi",
             "nov5-boj"
           ]
+        },
+        {
+          "date": "2026-11-05",
+          "title": "TOPIX・自動車が相対優位",
+          "fact": "日経平均型-2.02%、TOPIX型+0.39%、自動車+10.29%、7203+16.68%。",
+          "market_impact": "トヨタ決算と内需ローテーションが日経平均型の下落を相殺。",
+          "source_ids": [
+            "nov6-toyota",
+            "nov6-market"
+          ]
+        },
+        {
+          "date": "2026-11-05",
+          "title": "TOPIX・自動車が相対優位",
+          "fact": "日経平均型-2.02%、TOPIX型+0.39%、自動車+10.29%、7203+16.68%。",
+          "market_impact": "トヨタ決算と内需ローテーションが日経平均型の下落を相殺。",
+          "source_ids": [
+            "nov6-toyota",
+            "nov6-market"
+          ]
+        },
+        {
+          "date": "2026-11-05",
+          "title": "TOPIX・自動車が相対優位",
+          "fact": "日経平均型-2.02%、TOPIX型+0.39%、自動車+10.29%、7203+16.68%。",
+          "market_impact": "トヨタ決算と内需ローテーションが日経平均型の下落を相殺。",
+          "source_ids": [
+            "nov6-toyota",
+            "nov6-market"
+          ]
+        },
+        {
+          "date": "2026-11-05",
+          "title": "TOPIX・自動車が相対優位",
+          "fact": "日経平均型-2.02%、TOPIX型+0.39%、自動車+10.29%、7203+16.68%。",
+          "market_impact": "トヨタ決算と内需ローテーションが日経平均型の下落を相殺。",
+          "source_ids": [
+            "nov6-toyota",
+            "nov6-market"
+          ]
+        },
+        {
+          "date": "2026-11-05",
+          "title": "TOPIX・自動車が相対優位",
+          "fact": "日経平均型-2.02%、TOPIX型+0.39%、自動車+10.29%、7203+16.68%。",
+          "market_impact": "トヨタ決算と内需ローテーションが日経平均型の下落を相殺。",
+          "source_ids": [
+            "nov6-toyota",
+            "nov6-market"
+          ]
         }
       ],
       "initial_view": {
@@ -539,59 +699,66 @@
         "text": "政策金利0.75%でも利上げを求める意見が増え、正常化継続が意識された"
       },
       "new_fact": {
-        "date": "2026-11-04",
-        "text": "電力+2.59%、不動産+1.29%、商社+0.96%、電機精密-2.62%。8058は+7.88%。"
+        "date": "2026-11-05",
+        "text": "日経平均型-2.02%、TOPIX型+0.39%、自動車+10.29%、7203+16.68%。"
       },
       "market_reaction": {
-        "date": "2026-11-04",
-        "text": "TOPIX/value優位。米11月4日SOX安は11月5日に初回織り込み。"
+        "date": "2026-11-05",
+        "text": "自動車・不動産・小売が上位、半導体・資源関連が劣後。"
       },
-      "current_view": "日本は日経平均型-1.34%、TOPIX型+0.24%で内需・商社優位。三菱商事の利益増・1兆円還元と米SOX安の翌日波及を両面監視。",
-      "japan_impact": "半導体・電子部品、銀行・不動産の相対反応を確認。",
-      "counter_evidence": "半導体劣後・銀行反発・不動産失速なら前回の相対関係を更新。",
+      "current_view": "日銀正常化観測下でもTOPIX・自動車・内需が相対優位。米急落後にこの耐性が維持できるかが焦点。",
+      "japan_impact": "トヨタの企業固有材料は自動車を支える一方、米SOX急落は半導体・日経平均型へ逆風。",
+      "counter_evidence": "円高、米リスク回避の拡大、トヨタのTOPIX比反落で自動車優位を見直す。",
       "source_ids": [
         "boj-apr28",
         "boj-jun16",
         "boj-sep18",
         "global-oct14",
         "imf-boj-1017",
+        "nov2-boj",
+        "nov2-market",
+        "nov2-weekend",
+        "nov3-boj",
+        "nov3-jpx",
+        "nov3-market",
+        "nov4-boj-calendar",
+        "nov4-market",
+        "nov5-boj",
+        "nov5-japan-market",
+        "nov5-mitsubishi",
+        "nov6-boj",
+        "nov6-market",
+        "nov6-toyota",
         "oct16-boj",
-        "oct19-5",
         "oct19-2",
-        "oct20-reaction",
+        "oct19-5",
         "oct20-0",
-        "oct26-cpi",
+        "oct20-reaction",
         "oct26-boj",
+        "oct26-cpi",
         "oct28-boj-sppi",
         "oct28-japan-market",
         "oct30-boj-schedule",
-        "oct30-japan-market",
-        "nov2-market",
-        "nov2-weekend",
-        "nov2-boj",
-        "nov3-market",
-        "nov3-boj",
-        "nov3-jpx",
-        "nov4-boj-calendar",
-        "nov4-market",
-        "nov5-japan-market",
-        "nov5-mitsubishi",
-        "nov5-boj"
+        "oct30-japan-market"
       ]
     }
   ],
   "scenario_change_conditions": [
     {
-      "condition": "半導体",
-      "meaning": "SOXと国内電機が同時反発なら逆行安評価を縮小"
+      "condition": "半導体・AI",
+      "meaning": "SOXと国内電機が同時反発なら急落継続評価を縮小"
     },
     {
-      "condition": "ローテーション",
-      "meaning": "米業種幅が悪化し国内TOPIX型も劣後なら広いリスクオン評価を撤回"
+      "condition": "変動率・市場幅",
+      "meaning": "VIX20台前半と米業種の過半上昇でシステマティック売り懸念を縮小"
     },
     {
-      "condition": "物価と金利",
-      "meaning": "価格鈍化と金利低下でも高PER株が反発しなければ利益要因を重視"
+      "condition": "雇用・金利・円",
+      "meaning": "雇用減速と金利低下でも高PER株が戻らなければ利益・規制要因を重視"
+    },
+    {
+      "condition": "トヨタ・自動車",
+      "meaning": "米急落下でも自動車優位維持なら企業固有材料を重視"
     }
   ],
   "sources": [
@@ -617,111 +784,6 @@
       "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
     },
     {
-      "id": "oct15-0",
-      "title": "米9月CPI、ガソリン上昇で総合加速",
-      "publisher": "BLS",
-      "published_at": "2026-10-14",
-      "url": "https://www.bls.gov/news.release/archives/cpi_10142026.htm"
-    },
-    {
-      "id": "oct16-ppi",
-      "title": "米9月PPI、財・サービス双方で上昇",
-      "publisher": "BLS",
-      "published_at": "2026-10-15",
-      "url": "https://www.bls.gov/news.release/archives/ppi_10152026.htm"
-    },
-    {
-      "id": "oct16-retail",
-      "title": "米小売売上は名目増、8月も上方改定",
-      "publisher": "U.S. Census Bureau",
-      "published_at": "2026-10-15",
-      "url": "https://www.census.gov/retail/marts/www/marts_current.pdf"
-    },
-    {
-      "id": "reaction14",
-      "title": "10月14日米株市場反応",
-      "publisher": "Reuters",
-      "published_at": "2026-10-14",
-      "url": "https://www.reuters.com/business/sp-500-dow-futures-rise-ahead-big-bank-results-cpi-data-2026-10-14/"
-    },
-    {
-      "id": "reaction15",
-      "title": "10月15日米市場の終値記事",
-      "publisher": "Reuters",
-      "published_at": "2026-10-15",
-      "url": "https://www.reuters.com/business/nasdaq-futures-dive-1-ai-rout-deepens-debt-concerns-2026-10-15/"
-    },
-    {
-      "id": "us-close-1016",
-      "title": "Wall Street tumbles as AI and oil worries weigh",
-      "publisher": "Reuters",
-      "published_at": "2026-10-16",
-      "url": "https://www.reuters.com/business/wall-st-futures-mixed-tech-wobbles-again-tesla-gains-2026-10-16/"
-    },
-    {
-      "id": "oct19-0",
-      "title": "米9月輸入物価は燃料以外にも上昇",
-      "publisher": "BLS",
-      "published_at": "2026-10-16",
-      "url": "https://www.bls.gov/news.release/archives/ximpim_10162026.htm"
-    },
-    {
-      "id": "oct19-1",
-      "title": "米鉱工業生産は増加、製造業の回復幅は総合より小さい",
-      "publisher": "Federal Reserve Board",
-      "published_at": "2026-10-16",
-      "url": "https://www.federalreserve.gov/releases/g17/current/default.htm"
-    },
-    {
-      "id": "oct20-reaction",
-      "title": "19日AI反発・大型偏重",
-      "publisher": "Reuters",
-      "published_at": "2026-10-19",
-      "url": "https://www.reuters.com/business/wall-st-futures-climb-ai-stocks-rebound-oil-yields-fall-2026-10-19/"
-    },
-    {
-      "id": "oct20-0",
-      "title": "OFACがPAIPA制裁と一般許可を公表",
-      "publisher": "OFAC",
-      "published_at": "2026-10-19",
-      "url": "https://ofac.treasury.gov/recent-actions/20261019"
-    },
-    {
-      "id": "oct29-fomc",
-      "title": "Federal Reserve issues FOMC statement",
-      "publisher": "Federal Reserve Board",
-      "published_at": "2026-10-28",
-      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
-    },
-    {
-      "id": "oct28-market",
-      "title": "27 October canonical market close",
-      "publisher": "Market Morning canonical market data",
-      "published_at": "2026-10-27",
-      "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
-    },
-    {
-      "id": "oct30-us-gdp",
-      "title": "米Q3実質GDPは前期比年率3.4%",
-      "publisher": "U.S. Bureau of Economic Analysis",
-      "published_at": "2026-10-29",
-      "url": "https://www.bea.gov/news/2026/gross-domestic-product-third-quarter-2026-advance-estimate"
-    },
-    {
-      "id": "oct30-us-pce",
-      "title": "9月PCE物価は前年比3.6%、コア3.1%",
-      "publisher": "U.S. Bureau of Economic Analysis",
-      "published_at": "2026-10-29",
-      "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-september-2026"
-    },
-    {
-      "id": "oct30-market",
-      "title": "2026年10月29日の米国市場正本",
-      "publisher": "Market Morning canonical market.json",
-      "published_at": "2026-10-29",
-      "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
-    },
-    {
       "id": "nov2-market",
       "title": "Market Morning canonical market data 2026-10-30",
       "publisher": "Market Morning",
@@ -736,18 +798,18 @@
       "url": "https://market-morning-gules.vercel.app/"
     },
     {
-      "id": "nov3-market",
-      "title": "Market Morning canonical market data 2026-11-02",
-      "publisher": "Market Morning",
-      "published_at": "2026-11-02",
-      "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
-    },
-    {
       "id": "nov3-ism",
       "title": "October 2026 ISM Manufacturing PMI",
       "publisher": "Institute for Supply Management",
       "published_at": "2026-11-02",
       "url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/pmi/october/"
+    },
+    {
+      "id": "nov3-market",
+      "title": "Market Morning canonical market data 2026-11-02",
+      "publisher": "Market Morning",
+      "published_at": "2026-11-02",
+      "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
     },
     {
       "id": "nov4-jolts",
@@ -778,6 +840,132 @@
       "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
     },
     {
+      "id": "nov6-bls",
+      "title": "Productivity and Costs, Third Quarter 2026",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "published_at": "2026-11-05",
+      "url": "https://www.bls.gov/news.release/archives/prod2_11052026.htm"
+    },
+    {
+      "id": "nov6-hammack",
+      "title": "Reserve Currencies and Stablecoins",
+      "publisher": "Federal Reserve Bank of Cleveland",
+      "published_at": "2026-11-05",
+      "url": "https://www.clevelandfed.org/collections/speeches/2026/sp-20261105-reserve-currencies-and-stablecoins"
+    },
+    {
+      "id": "nov6-market",
+      "title": "Market Morning canonical market snapshot",
+      "publisher": "Market Morning",
+      "published_at": "2026-11-05",
+      "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+    },
+    {
+      "id": "oct15-0",
+      "title": "米9月CPI、ガソリン上昇で総合加速",
+      "publisher": "BLS",
+      "published_at": "2026-10-14",
+      "url": "https://www.bls.gov/news.release/archives/cpi_10142026.htm"
+    },
+    {
+      "id": "oct16-ppi",
+      "title": "米9月PPI、財・サービス双方で上昇",
+      "publisher": "BLS",
+      "published_at": "2026-10-15",
+      "url": "https://www.bls.gov/news.release/archives/ppi_10152026.htm"
+    },
+    {
+      "id": "oct16-retail",
+      "title": "米小売売上は名目増、8月も上方改定",
+      "publisher": "U.S. Census Bureau",
+      "published_at": "2026-10-15",
+      "url": "https://www.census.gov/retail/marts/www/marts_current.pdf"
+    },
+    {
+      "id": "oct19-0",
+      "title": "米9月輸入物価は燃料以外にも上昇",
+      "publisher": "BLS",
+      "published_at": "2026-10-16",
+      "url": "https://www.bls.gov/news.release/archives/ximpim_10162026.htm"
+    },
+    {
+      "id": "oct19-1",
+      "title": "米鉱工業生産は増加、製造業の回復幅は総合より小さい",
+      "publisher": "Federal Reserve Board",
+      "published_at": "2026-10-16",
+      "url": "https://www.federalreserve.gov/releases/g17/current/default.htm"
+    },
+    {
+      "id": "oct20-0",
+      "title": "OFACがPAIPA制裁と一般許可を公表",
+      "publisher": "OFAC",
+      "published_at": "2026-10-19",
+      "url": "https://ofac.treasury.gov/recent-actions/20261019"
+    },
+    {
+      "id": "oct20-reaction",
+      "title": "19日AI反発・大型偏重",
+      "publisher": "Reuters",
+      "published_at": "2026-10-19",
+      "url": "https://www.reuters.com/business/wall-st-futures-climb-ai-stocks-rebound-oil-yields-fall-2026-10-19/"
+    },
+    {
+      "id": "oct28-market",
+      "title": "27 October canonical market close",
+      "publisher": "Market Morning canonical market data",
+      "published_at": "2026-10-27",
+      "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+    },
+    {
+      "id": "oct29-fomc",
+      "title": "Federal Reserve issues FOMC statement",
+      "publisher": "Federal Reserve Board",
+      "published_at": "2026-10-28",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+    },
+    {
+      "id": "oct30-market",
+      "title": "2026年10月29日の米国市場正本",
+      "publisher": "Market Morning canonical market.json",
+      "published_at": "2026-10-29",
+      "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+    },
+    {
+      "id": "oct30-us-gdp",
+      "title": "米Q3実質GDPは前期比年率3.4%",
+      "publisher": "U.S. Bureau of Economic Analysis",
+      "published_at": "2026-10-29",
+      "url": "https://www.bea.gov/news/2026/gross-domestic-product-third-quarter-2026-advance-estimate"
+    },
+    {
+      "id": "oct30-us-pce",
+      "title": "9月PCE物価は前年比3.6%、コア3.1%",
+      "publisher": "U.S. Bureau of Economic Analysis",
+      "published_at": "2026-10-29",
+      "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-september-2026"
+    },
+    {
+      "id": "reaction14",
+      "title": "10月14日米株市場反応",
+      "publisher": "Reuters",
+      "published_at": "2026-10-14",
+      "url": "https://www.reuters.com/business/sp-500-dow-futures-rise-ahead-big-bank-results-cpi-data-2026-10-14/"
+    },
+    {
+      "id": "reaction15",
+      "title": "10月15日米市場の終値記事",
+      "publisher": "Reuters",
+      "published_at": "2026-10-15",
+      "url": "https://www.reuters.com/business/nasdaq-futures-dive-1-ai-rout-deepens-debt-concerns-2026-10-15/"
+    },
+    {
+      "id": "us-close-1016",
+      "title": "Wall Street tumbles as AI and oil worries weigh",
+      "publisher": "Reuters",
+      "published_at": "2026-10-16",
+      "url": "https://www.reuters.com/business/wall-st-futures-mixed-tech-wobbles-again-tesla-gains-2026-10-16/"
+    },
+    {
       "id": "ai-apr16",
       "title": "Strong ASML, TSMC forecasts signal AI spending boom is intact",
       "publisher": "Reuters",
@@ -804,6 +992,34 @@
       "publisher": "Reuters",
       "published_at": "2026-09-14",
       "url": "https://www.reuters.com/business/ai-warnings-knock-nasdaq-futures-pressure-tech-stocks-2026-09-14/"
+    },
+    {
+      "id": "nov2-intel",
+      "title": "Intel Reports Third-Quarter 2026 Financial Results",
+      "publisher": "Intel Corporation",
+      "published_at": "2026-10-29",
+      "url": "https://www.intc.com/news-events/press-releases/detail/1752/intel-reports-third-quarter-2026-financial-results"
+    },
+    {
+      "id": "nov3-marvell",
+      "title": "Marvell and Lumentum to Combine",
+      "publisher": "Marvell / SEC",
+      "published_at": "2026-11-02",
+      "url": "https://www.sec.gov/Archives/edgar/data/1835632/000119312526442714/d81187dex991.htm"
+    },
+    {
+      "id": "nov4-apple",
+      "title": "Apple Q4 2026 results",
+      "publisher": "Apple",
+      "published_at": "2026-11-02",
+      "url": "https://www.apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results/"
+    },
+    {
+      "id": "nov6-ap",
+      "title": "How major US stock indexes fared Thursday",
+      "publisher": "Associated Press",
+      "published_at": "2026-11-05",
+      "url": "https://apnews.com/article/afe254c608c3d1fe2ea792812ba9765a"
     },
     {
       "id": "oct15-2",
@@ -848,27 +1064,6 @@
       "url": "https://www.reuters.com/world/china/global-markets-view-usa-2026-10-23/"
     },
     {
-      "id": "nov2-intel",
-      "title": "Intel Reports Third-Quarter 2026 Financial Results",
-      "publisher": "Intel Corporation",
-      "published_at": "2026-10-29",
-      "url": "https://www.intc.com/news-events/press-releases/detail/1752/intel-reports-third-quarter-2026-financial-results"
-    },
-    {
-      "id": "nov3-marvell",
-      "title": "Marvell and Lumentum to Combine",
-      "publisher": "Marvell / SEC",
-      "published_at": "2026-11-02",
-      "url": "https://www.sec.gov/Archives/edgar/data/1835632/000119312526442714/d81187dex991.htm"
-    },
-    {
-      "id": "nov4-apple",
-      "title": "Apple Q4 2026 results",
-      "publisher": "Apple",
-      "published_at": "2026-11-02",
-      "url": "https://www.apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results/"
-    },
-    {
       "id": "boj-apr28",
       "title": "Statement on Monetary Policy",
       "publisher": "Bank of Japan",
@@ -904,69 +1099,6 @@
       "url": "https://www.reuters.com/world/asia-pacific/boj-may-need-tighten-faster-if-inflation-beats-forecast-imf-says-2026-10-17/"
     },
     {
-      "id": "oct16-boj",
-      "title": "小枝日銀委員、物価定着と適時の政策調整に言及",
-      "publisher": "日本銀行",
-      "published_at": "2026-10-15",
-      "url": "https://www.boj.or.jp/about/press/koen_2026/data/ko261015a1.pdf"
-    },
-    {
-      "id": "oct19-5",
-      "title": "植田総裁挨拶、見通しに応じた利上げ継続を説明",
-      "publisher": "日本銀行",
-      "published_at": "2026-10-16",
-      "url": "https://www.boj.or.jp/about/press/koen_2026/ko261016a.htm"
-    },
-    {
-      "id": "oct19-2",
-      "title": "新ロシア法の関税・制裁を免除、既存措置は維持",
-      "publisher": "White House",
-      "published_at": "2026-10-16",
-      "url": "https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/"
-    },
-    {
-      "id": "oct26-cpi",
-      "title": "Consumer Price Index, September 2026",
-      "publisher": "Statistics Bureau of Japan",
-      "published_at": "2026-10-23",
-      "url": "https://www.stat.go.jp/english/data/cpi/1581-z.html"
-    },
-    {
-      "id": "oct26-boj",
-      "title": "Financial System Report October 2026",
-      "publisher": "Bank of Japan",
-      "published_at": "2026-10-23",
-      "url": "https://www.boj.or.jp/research/brp/fsr/data/fsr261023a.pdf"
-    },
-    {
-      "id": "oct28-boj-sppi",
-      "title": "September 2026 Services Producer Price Index",
-      "publisher": "Bank of Japan",
-      "published_at": "2026-10-27",
-      "url": "https://www.boj.or.jp/en/statistics/pi/cspi_release/sppi2609.pdf"
-    },
-    {
-      "id": "oct28-japan-market",
-      "title": "27 October Japan market close",
-      "publisher": "Market Morning canonical Japan market data",
-      "published_at": "2026-10-27",
-      "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
-    },
-    {
-      "id": "oct30-boj-schedule",
-      "title": "日銀は10月30日に決定・展望レポート予定",
-      "publisher": "Bank of Japan",
-      "published_at": "2026-10-30",
-      "url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm"
-    },
-    {
-      "id": "oct30-japan-market",
-      "title": "2026年10月29日の日本市場正本",
-      "publisher": "Market Morning canonical japan-market.json",
-      "published_at": "2026-10-29",
-      "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
-    },
-    {
       "id": "nov2-boj",
       "title": "Statement on Monetary Policy",
       "publisher": "Bank of Japan",
@@ -995,6 +1127,13 @@
       "url": "https://www.boj.or.jp/about/calendar/"
     },
     {
+      "id": "nov5-boj",
+      "title": "Monetary Base October 2026",
+      "publisher": "Bank of Japan",
+      "published_at": "2026-11-04",
+      "url": "https://www.boj.or.jp/en/statistics/boj/other/mb/base2610.pdf"
+    },
+    {
       "id": "nov5-japan-market",
       "title": "Market Morning Japan market data 2026-11-04",
       "publisher": "Market Morning",
@@ -1009,11 +1148,81 @@
       "url": "https://www.mitsubishicorp.com/jp/en/news/release/2026/20261104001.html"
     },
     {
-      "id": "nov5-boj",
-      "title": "Monetary Base October 2026",
+      "id": "nov6-boj",
+      "title": "Minutes of the Monetary Policy Meeting on September 17 and 18, 2026",
       "publisher": "Bank of Japan",
-      "published_at": "2026-11-04",
-      "url": "https://www.boj.or.jp/en/statistics/boj/other/mb/base2610.pdf"
+      "published_at": "2026-11-05",
+      "url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2026/g260918.pdf"
+    },
+    {
+      "id": "nov6-toyota",
+      "title": "FY2027 Second Quarter Financial Results",
+      "publisher": "Toyota Motor Corporation",
+      "published_at": "2026-11-05",
+      "url": "https://global.toyota/pages/global_toyota/ir/financial-results/2027_2q_presentation_en.pdf"
+    },
+    {
+      "id": "oct16-boj",
+      "title": "小枝日銀委員、物価定着と適時の政策調整に言及",
+      "publisher": "日本銀行",
+      "published_at": "2026-10-15",
+      "url": "https://www.boj.or.jp/about/press/koen_2026/data/ko261015a1.pdf"
+    },
+    {
+      "id": "oct19-2",
+      "title": "新ロシア法の関税・制裁を免除、既存措置は維持",
+      "publisher": "White House",
+      "published_at": "2026-10-16",
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/"
+    },
+    {
+      "id": "oct19-5",
+      "title": "植田総裁挨拶、見通しに応じた利上げ継続を説明",
+      "publisher": "日本銀行",
+      "published_at": "2026-10-16",
+      "url": "https://www.boj.or.jp/about/press/koen_2026/ko261016a.htm"
+    },
+    {
+      "id": "oct26-boj",
+      "title": "Financial System Report October 2026",
+      "publisher": "Bank of Japan",
+      "published_at": "2026-10-23",
+      "url": "https://www.boj.or.jp/research/brp/fsr/data/fsr261023a.pdf"
+    },
+    {
+      "id": "oct26-cpi",
+      "title": "Consumer Price Index, September 2026",
+      "publisher": "Statistics Bureau of Japan",
+      "published_at": "2026-10-23",
+      "url": "https://www.stat.go.jp/english/data/cpi/1581-z.html"
+    },
+    {
+      "id": "oct28-boj-sppi",
+      "title": "September 2026 Services Producer Price Index",
+      "publisher": "Bank of Japan",
+      "published_at": "2026-10-27",
+      "url": "https://www.boj.or.jp/en/statistics/pi/cspi_release/sppi2609.pdf"
+    },
+    {
+      "id": "oct28-japan-market",
+      "title": "27 October Japan market close",
+      "publisher": "Market Morning canonical Japan market data",
+      "published_at": "2026-10-27",
+      "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
+    },
+    {
+      "id": "oct30-boj-schedule",
+      "title": "日銀は10月30日に決定・展望レポート予定",
+      "publisher": "Bank of Japan",
+      "published_at": "2026-10-30",
+      "url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm"
+    },
+    {
+      "id": "oct30-japan-market",
+      "title": "2026年10月29日の日本市場正本",
+      "publisher": "Market Morning canonical japan-market.json",
+      "published_at": "2026-10-29",
+      "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
     }
   ]
 }

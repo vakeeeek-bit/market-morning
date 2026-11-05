@@ -2,44 +2,36 @@
   "version": "1.0",
   "description": "確認済み一次資料の表示設定",
   "items": {
-    "nov5-ism-services-oct": {
+    "nov6-us-productivity": {
       "primary_page": "world",
-      "priority": 100,
+      "priority": 92,
       "attention_points": [
-        "米10月ISMサービスPMIは54.5",
+        "米Q3非農業部門生産性は年率+3.6%",
         "同日米金利と指標単独の価格寄与は未確認。"
       ]
     },
-    "nov5-mitsubishi-results": {
-      "primary_page": "japan",
-      "priority": 98,
-      "attention_points": [
-        "三菱商事、上期利益+74.2%",
-        "株価反応には同時公表の自己株取得を含むため、決算単独寄与は分離できない。"
-      ]
-    },
-    "nov5-mitsubishi-buyback": {
-      "primary_page": "japan",
-      "priority": 97,
-      "attention_points": [
-        "三菱商事、最大1兆円の自己株取得",
-        "取得上限であり実行額を保証しない。"
-      ]
-    },
-    "nov5-boj-monetary-base": {
-      "primary_page": "japan",
-      "priority": 92,
-      "attention_points": [
-        "日銀10月マネタリーベースは前年比-13.6%",
-        "円・銀行・不動産の指標単独反応は未分離。"
-      ]
-    },
-    "nov5-ntt-h1": {
-      "primary_page": "japan",
+    "nov6-fed-hammack": {
+      "primary_page": "world",
       "priority": 94,
       "attention_points": [
-        "NTT上期は増収・営業減益",
-        "株価反応のうち決算単独寄与は分離できない。"
+        "FRBハマック総裁、制約的スタンスへの移行を支持",
+        "同日米金利と株価急落への単独寄与は未確認。"
+      ]
+    },
+    "nov6-boj-minutes": {
+      "primary_page": "japan",
+      "priority": 96,
+      "attention_points": [
+        "日銀9月会合議事要旨、追加利上げ継続を議論",
+        "議事要旨単独の円・業種反応は未分離。"
+      ]
+    },
+    "nov6-toyota-results": {
+      "primary_page": "japan",
+      "priority": 100,
+      "attention_points": [
+        "トヨタ上期営業利益2兆1911億円",
+        "米急落後の株価持続性と決算単独寄与は未確認。"
       ]
     }
   }

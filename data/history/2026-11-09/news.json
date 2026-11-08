@@ -1,0 +1,162 @@
+{
+  "report_date": "2026-11-09",
+  "target_market_date": "2026-11-06",
+  "updated_at": "2026-11-09T07:18:00+09:00",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "一次本文を実読できた4件のみ掲載。市場反応は正本または未確認として分離。企業開示・評価変更の全件網羅は未確認。",
+  "articles": [
+    {
+      "id": "nov9-us-employment",
+      "title": "米10月雇用は+16.5万人、失業率4.1%",
+      "published_date": "2026-11-06",
+      "verified_at": "2026-11-09T07:18:00+09:00",
+      "source_type": "primary",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "source_url": "https://www.bls.gov/news.release/archives/empsit_11062026.htm",
+      "verification_url": "https://www.bls.gov/news.release/archives/empsit_11062026.htm",
+      "verification_status": "PASS",
+      "fact": "非農業部門雇用+16.5万人、失業率4.1%、平均時給前月比+0.4%・前年比+3.1%。8・9月は合計8.4万人上方改定。",
+      "analysis": "景気急減速観測を後退させる一方、金利高止まりリスクを残す。",
+      "limitations": "同日金利と指標単独の株価寄与は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "U.S. Bureau of Labor Statisticsの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "非農業部門雇用+16.5万人、失業率4.1%、平均時給前月比+0.4%・前年比+3.1%。8・9月は合計8.4万人上方改定。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-06、実確認2026-11-09T07:18:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "同日金利と指標単独の株価寄与は未確認。"
+        }
+      }
+    },
+    {
+      "id": "nov9-boj-ueda",
+      "title": "植田総裁、経常黒字と企業行動の変容を講演",
+      "published_date": "2026-11-07",
+      "verified_at": "2026-11-09T07:18:00+09:00",
+      "source_type": "primary",
+      "publisher": "Bank of Japan",
+      "source_url": "https://www.boj.or.jp/about/press/koen_2026/ko261107a.htm",
+      "verification_url": "https://www.boj.or.jp/about/press/koen_2026/ko261107a.htm",
+      "verification_status": "PASS",
+      "fact": "日銀はIMF講演『日本の経常収支黒字と企業行動の変容』の全文を公表。",
+      "analysis": "海外収益・国内投資・円の中期文脈。新規政策決定とは扱わない。",
+      "limitations": "週末公表で日本株の反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Bank of Japanの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "日銀はIMF講演『日本の経常収支黒字と企業行動の変容』の全文を公表。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-07、実確認2026-11-09T07:18:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "週末公表で日本株の反応は未確認。"
+        }
+      }
+    },
+    {
+      "id": "nov9-ustr-china",
+      "title": "米中、農産品・レアアース等の過去合意履行を協議",
+      "published_date": "2026-11-06",
+      "verified_at": "2026-11-09T07:18:00+09:00",
+      "source_type": "primary",
+      "publisher": "Office of the U.S. Trade Representative",
+      "source_url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/readout-ambassador-greers-call-chinas-vice-premier-he-lifeng",
+      "verification_url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/readout-ambassador-greers-call-chinas-vice-premier-he-lifeng",
+      "verification_status": "PASS",
+      "fact": "米通商代表と財務長官が中国副首相と協議し、農産品購入・レアアース・重要鉱物の過去合意履行を求めた。",
+      "analysis": "供給網の監視材料だが、新規関税・新合意ではない。",
+      "limitations": "同日市場反応と日本企業への直接影響は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Office of the U.S. Trade Representativeの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "米通商代表と財務長官が中国副首相と協議し、農産品購入・レアアース・重要鉱物の過去合意履行を求めた。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-06、実確認2026-11-09T07:18:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "同日市場反応と日本企業への直接影響は未確認。"
+        }
+      }
+    },
+    {
+      "id": "nov9-ofac-iran",
+      "title": "米財務省、イラン関連でカナダ送金事業者8社を指定",
+      "published_date": "2026-11-06",
+      "verified_at": "2026-11-09T07:18:00+09:00",
+      "source_type": "primary",
+      "publisher": "U.S. Department of the Treasury / OFAC",
+      "source_url": "https://ofac.treasury.gov/recent-actions/sanctions-list-updates",
+      "verification_url": "https://ofac.treasury.gov/recent-actions/sanctions-list-updates",
+      "verification_status": "PASS",
+      "fact": "OFACはイラン関連の指定を11月6日に更新し、財務省はカナダの送金事業者8社を対象と説明。",
+      "analysis": "金融制裁網強化だが、日本株の主要因とは扱わない。",
+      "limitations": "対象企業・50%ルールの個別日本企業影響と市場反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "U.S. Department of the Treasury / OFACの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "OFACはイラン関連の指定を11月6日に更新し、財務省はカナダの送金事業者8社を対象と説明。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-06、実確認2026-11-09T07:18:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "対象企業・50%ルールの個別日本企業影響と市場反応は未確認。"
+        }
+      }
+    }
+  ]
+}

@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "updated_at": "2026-11-06T07:05:00+09:00",
-  "report_date": "2026-11-06",
+  "updated_at": "2026-11-09T07:18:00+09:00",
+  "report_date": "2026-11-09",
   "period_start": "2026-03-18",
-  "period_end": "2026-11-05",
+  "period_end": "2026-11-08",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-11-06",
+    "latest_report_date": "2026-11-09",
     "source_report_count": 11,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
@@ -153,6 +153,15 @@
             "nov6-hammack",
             "nov6-market"
           ]
+        },
+        {
+          "date": "2026-11-06",
+          "title": "米雇用は底堅く賃金も増加",
+          "fact": "非農業部門雇用+16.5万人、失業率4.1%、平均時給前月比+0.4%。過去2か月は合計+8.4万人改定。",
+          "market_impact": "景気急減速観測を後退させる一方、金利高止まりリスクを残した。",
+          "source_ids": [
+            "nov9-bls"
+          ]
         }
       ],
       "initial_view": {
@@ -160,16 +169,16 @@
         "text": "FRBはインフレを警戒し、利下げを急がない姿勢"
       },
       "new_fact": {
-        "date": "2026-11-05",
-        "text": "生産性+3.6%、ハマック総裁は制約的スタンスを支持。"
+        "date": "2026-11-06",
+        "text": "米10月雇用+16.5万人、失業率4.1%、平均時給前月比+0.4%。8・9月は合計+8.4万人上方改定。"
       },
       "market_reaction": {
-        "date": "2026-11-05",
-        "text": "米株は急落したが、同日金利と指標単独寄与は未確認。"
+        "date": "2026-11-06",
+        "text": "NASDAQ+1.09%、SOX+4.21%。ただし雇用後の同日米金利は未確認。"
       },
-      "current_view": "生産性改善はコスト圧力の緩和要因だが、FRBのインフレ警戒は継続。雇用統計・CPIと同日金利で再評価。",
-      "japan_impact": "金利未確認のため高PER株・銀行への方向断定は避け、雇用統計後の円・米金利を確認。",
-      "counter_evidence": "雇用減速と金利低下が同時に確認されれば追加引き締め懸念を縮小。",
+      "current_view": "雇用は急減速を示さず、景気不安を和らげる一方で金利高止まりリスクを残す。10日CPIで物価経路を再確認。",
+      "japan_impact": "米テック反発は電機・精密の戻り候補。金利未確認のため銀行・不動産・円の方向は断定しない。",
+      "counter_evidence": "NASDAQは週間4週続落、VIX25.64、米11業種ETFは8業種下落。",
       "source_ids": [
         "fed-apr29",
         "fed-mar18",
@@ -199,7 +208,8 @@
         "oct30-us-pce",
         "reaction14",
         "reaction15",
-        "us-close-1016"
+        "us-close-1016",
+        "nov9-bls"
       ]
     },
     {
@@ -374,6 +384,26 @@
             "nov6-market",
             "nov6-ap"
           ]
+        },
+        {
+          "date": "2026-11-06",
+          "title": "急落後に半導体が自律反発",
+          "fact": "SOX+4.21%、NASDAQ100+1.35%だが前日の下落を取り戻せず、NASDAQは週間4週続落。",
+          "market_impact": "AI投資テーマは崩壊ではなく高ボラの採算選別局面。日本は同日全面安。",
+          "source_ids": [
+            "nov9-reuters-us",
+            "nov9-reuters-jp"
+          ]
+        },
+        {
+          "date": "2026-11-08",
+          "title": "週末時点でも調整継続を基本線",
+          "fact": "6日はSOXが反発した一方、NASDAQは週間4週続落。日本は6日に全面安となった。",
+          "market_impact": "単日の反発をトレンド転換とせず、9日は市場幅とVIXを確認する。",
+          "source_ids": [
+            "nov9-reuters-us",
+            "nov9-reuters-jp"
+          ]
         }
       ],
       "initial_view": {
@@ -381,16 +411,16 @@
         "text": "AI設備投資と先端半導体需要の強さが株価を支える局面"
       },
       "new_fact": {
-        "date": "2026-11-05",
-        "text": "SOX-12.25%、NASDAQ100-6.36%、XLK-8.00%、VIX+69.66%。"
+        "date": "2026-11-06",
+        "text": "SOX+4.21%、NASDAQ100+1.35%と前日の急落から反発。"
       },
       "market_reaction": {
-        "date": "2026-11-05",
-        "text": "米主要指数・11業種ETF代理が全面安。"
+        "date": "2026-11-08",
+        "text": "単日反発でもNASDAQは週間4週続落、日本は6日に日経平均-5.96%の全面安。"
       },
-      "current_view": "AI需要の中期拡大仮説は残るが、規制・採算・混雑ポジションへの懸念が全面急落へ発展。反発だけでなく市場幅とVIXの改善を確認する。",
-      "japan_impact": "半導体装置・AI関連に強い逆風。自動車・内需へのローテーションが米急落後も持続するかを確認。",
-      "counter_evidence": "SOXがS&P500比で反発しVIXが20台前半へ低下、国内電機精密もTOPIX比で改善すれば急落継続評価を縮小。",
+      "current_view": "AI需要仮説の消滅ではなく、高ボラの採算・規制選別局面。SOX続伸と日本の市場幅改善まで反発を転換と扱わない。",
+      "japan_impact": "半導体・AI関連は自律反発候補だが、9984や指数寄与大型株の戻り持続を確認。",
+      "counter_evidence": "SOXの反発、XLK+1.45%、日本ではソニー・日本製鉄が相対耐性。",
       "source_ids": [
         "ai-apr16",
         "ai-credit-1016",
@@ -418,7 +448,9 @@
         "oct30-market",
         "reaction14",
         "reaction15",
-        "us-close-1016"
+        "us-close-1016",
+        "nov9-reuters-us",
+        "nov9-reuters-jp"
       ]
     },
     {
@@ -568,6 +600,15 @@
             "nov6-toyota",
             "nov6-market"
           ]
+        },
+        {
+          "date": "2026-11-07",
+          "title": "植田総裁が経常黒字と企業行動を講演",
+          "fact": "日銀はIMF講演全文を公表。11月10日に10月会合の主な意見を公表予定。",
+          "market_impact": "週末公表で反応は未確認。新規政策決定とは扱わない。",
+          "source_ids": [
+            "nov9-boj"
+          ]
         }
       ],
       "initial_view": {
@@ -575,16 +616,16 @@
         "text": "政策金利0.75%でも利上げを求める意見が増え、正常化継続が意識された"
       },
       "new_fact": {
-        "date": "2026-11-05",
-        "text": "日経平均型-2.02%、TOPIX型+0.39%、自動車+10.29%、7203+16.68%。"
+        "date": "2026-11-07",
+        "text": "植田総裁のIMF講演全文を公表。経常黒字と企業行動の変容を論じた。"
       },
       "market_reaction": {
-        "date": "2026-11-05",
-        "text": "自動車・不動産・小売が上位、半導体・資源関連が劣後。"
+        "date": "2026-11-08",
+        "text": "週末公表で日本株の反応は未確認。新規政策決定とは扱わない。"
       },
-      "current_view": "日銀正常化観測下でもTOPIX・自動車・内需が相対優位。米急落後にこの耐性が維持できるかが焦点。",
-      "japan_impact": "トヨタの企業固有材料は自動車を支える一方、米SOX急落は半導体・日経平均型へ逆風。",
-      "counter_evidence": "円高、米リスク回避の拡大、トヨタのTOPIX比反落で自動車優位を見直す。",
+      "current_view": "10日8:50の10月会合『主な意見』で基調物価2%到達後の追加利上げ見解を確認。",
+      "japan_impact": "円・国内金利を通じ銀行・不動産・輸出株へ分岐。朝の現在値未取得のため方向は条件付き。",
+      "counter_evidence": "11月6日は銀行ETF代理-6.94%、不動産-7.67%で、前日のTOPIX/value優位は崩れた。",
       "source_ids": [
         "boj-apr28",
         "boj-jun16",
@@ -615,28 +656,12 @@
         "oct28-boj-sppi",
         "oct28-japan-market",
         "oct30-boj-schedule",
-        "oct30-japan-market"
+        "oct30-japan-market",
+        "nov9-boj"
       ]
     }
   ],
-  "scenario_change_conditions": [
-    {
-      "condition": "半導体・AI",
-      "meaning": "SOXと国内電機が同時反発なら急落継続評価を縮小"
-    },
-    {
-      "condition": "変動率・市場幅",
-      "meaning": "VIX20台前半と米業種の過半上昇でシステマティック売り懸念を縮小"
-    },
-    {
-      "condition": "雇用・金利・円",
-      "meaning": "雇用減速と金利低下でも高PER株が戻らなければ利益・規制要因を重視"
-    },
-    {
-      "condition": "トヨタ・自動車",
-      "meaning": "米急落下でも自動車優位維持なら企業固有材料を重視"
-    }
-  ],
+  "scenario_change_conditions": [],
   "sources": [
     {
       "id": "fed-apr29",
@@ -842,6 +867,13 @@
       "url": "https://www.reuters.com/business/wall-st-futures-mixed-tech-wobbles-again-tesla-gains-2026-10-16/"
     },
     {
+      "id": "nov9-bls",
+      "title": "The Employment Situation — October 2026",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "published_at": "2026-11-06",
+      "url": "https://www.bls.gov/news.release/archives/empsit_11062026.htm"
+    },
+    {
       "id": "ai-apr16",
       "title": "Strong ASML, TSMC forecasts signal AI spending boom is intact",
       "publisher": "Reuters",
@@ -938,6 +970,20 @@
       "publisher": "Reuters",
       "published_at": "2026-10-23",
       "url": "https://www.reuters.com/world/china/global-markets-view-usa-2026-10-23/"
+    },
+    {
+      "id": "nov9-reuters-us",
+      "title": "Nasdaq rebounds but posts fourth straight weekly decline",
+      "publisher": "Reuters",
+      "published_at": "2026-11-06",
+      "url": "https://www.fidelity.com/news/article/us-markets/202611061602RTRSNEWSCOMBINED_L6N46N1AI_1"
+    },
+    {
+      "id": "nov9-reuters-jp",
+      "title": "日経平均株価は大幅に5日続落",
+      "publisher": "Reuters / Newsweek Japan",
+      "published_at": "2026-11-06",
+      "url": "https://www.newsweekjapan.jp/articles/-/339313"
     },
     {
       "id": "boj-apr28",
@@ -1099,6 +1145,13 @@
       "publisher": "Market Morning canonical japan-market.json",
       "published_at": "2026-10-29",
       "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
+    },
+    {
+      "id": "nov9-boj",
+      "title": "日本の経常収支黒字と企業行動の変容",
+      "publisher": "Bank of Japan",
+      "published_at": "2026-11-07",
+      "url": "https://www.boj.or.jp/about/press/koen_2026/ko261107a.htm"
     }
   ]
 }

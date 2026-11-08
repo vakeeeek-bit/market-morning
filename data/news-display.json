@@ -2,36 +2,36 @@
   "version": "1.0",
   "description": "確認済み一次資料の表示設定",
   "items": {
-    "nov6-us-productivity": {
+    "nov9-us-employment": {
       "primary_page": "world",
-      "priority": 92,
-      "attention_points": [
-        "米Q3非農業部門生産性は年率+3.6%",
-        "同日米金利と指標単独の価格寄与は未確認。"
-      ]
-    },
-    "nov6-fed-hammack": {
-      "primary_page": "world",
-      "priority": 94,
-      "attention_points": [
-        "FRBハマック総裁、制約的スタンスへの移行を支持",
-        "同日米金利と株価急落への単独寄与は未確認。"
-      ]
-    },
-    "nov6-boj-minutes": {
-      "primary_page": "japan",
-      "priority": 96,
-      "attention_points": [
-        "日銀9月会合議事要旨、追加利上げ継続を議論",
-        "議事要旨単独の円・業種反応は未分離。"
-      ]
-    },
-    "nov6-toyota-results": {
-      "primary_page": "japan",
       "priority": 100,
       "attention_points": [
-        "トヨタ上期営業利益2兆1911億円",
-        "米急落後の株価持続性と決算単独寄与は未確認。"
+        "米10月雇用は+16.5万人、失業率4.1%",
+        "同日金利と指標単独の株価寄与は未確認。"
+      ]
+    },
+    "nov9-boj-ueda": {
+      "primary_page": "japan",
+      "priority": 94,
+      "attention_points": [
+        "植田総裁が経常黒字と企業行動の変容を講演",
+        "週末公表で日本株の反応は未確認。"
+      ]
+    },
+    "nov9-ustr-china": {
+      "primary_page": "world",
+      "priority": 88,
+      "attention_points": [
+        "米中が農産品・レアアース等の履行を協議",
+        "新規関税・新合意ではない。"
+      ]
+    },
+    "nov9-ofac-iran": {
+      "primary_page": "world",
+      "priority": 80,
+      "attention_points": [
+        "米財務省がイラン関連でカナダ送金事業者8社を指定",
+        "日本株への直接影響は未確認。"
       ]
     }
   }

@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-11-09 07:01:51 JST",
+  "updated_at": "2026-11-09 10:01:20 JST",
   "market_date": "2026-11-06",
-  "data_phase": "取引開始前",
+  "data_phase": "取引中暫定",
   "data_state": {
     "kind": "normal",
     "label": "通常取引日",
@@ -1089,16 +1089,16 @@
   },
   "market_regime": {
     "headline": "主要指数がそろって下落",
-    "headline_reason": "日経225連動ETF代理 -5.13%、TOPIX連動ETF代理 -6.50%",
+    "headline_reason": "日経平均 -5.13%、TOPIX -6.50%",
     "scoreboard": [
       {
-        "label": "日経225連動ETF代理",
+        "label": "日経平均",
         "value": -5.13,
         "unit": "%",
         "meaning": "プラスなら日経平均型が上昇"
       },
       {
-        "label": "TOPIX連動ETF代理",
+        "label": "TOPIX",
         "value": -6.5,
         "unit": "%",
         "meaning": "市場全体の方向"

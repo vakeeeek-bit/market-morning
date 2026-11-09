@@ -2,36 +2,28 @@
   "version": "1.0",
   "description": "確認済み一次資料の表示設定",
   "items": {
-    "nov9-us-employment": {
+    "nov10-ustr-exclusions": {
       "primary_page": "world",
       "priority": 100,
       "attention_points": [
-        "米10月雇用は+16.5万人、失業率4.1%",
-        "同日金利と指標単独の株価寄与は未確認。"
+        "178除外を2027年1月9日まで延長",
+        "対象限定で包括合意ではない"
       ]
     },
-    "nov9-boj-ueda": {
-      "primary_page": "japan",
-      "priority": 94,
-      "attention_points": [
-        "植田総裁が経常黒字と企業行動の変容を講演",
-        "週末公表で日本株の反応は未確認。"
-      ]
-    },
-    "nov9-ustr-china": {
+    "nov10-ustr-call": {
       "primary_page": "world",
-      "priority": 88,
+      "priority": 90,
       "attention_points": [
-        "米中が農産品・レアアース等の履行を協議",
-        "新規関税・新合意ではない。"
+        "農産品・レアアース等の履行を協議",
+        "新規合意成立ではない"
       ]
     },
-    "nov9-ofac-iran": {
+    "nov10-ofac-latest": {
       "primary_page": "world",
-      "priority": 80,
+      "priority": 70,
       "attention_points": [
-        "米財務省がイラン関連でカナダ送金事業者8社を指定",
-        "日本株への直接影響は未確認。"
+        "11月9日の新規指定は確認できず",
+        "日本株への直接影響は未確認"
       ]
     }
   }

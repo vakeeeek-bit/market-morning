@@ -1,0 +1,124 @@
+{
+  "report_date": "2026-11-10",
+  "target_market_date": "2026-11-09",
+  "updated_at": "2026-11-10T06:56:00+09:00",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "一次本文を実読できた3件のみ掲載。市場反応は未確認として分離。11月9日の新規中央銀行決定・制裁指定は公式一覧で確認できず、未調査を材料なしとは扱っていない。",
+  "articles": [
+    {
+      "id": "nov10-ustr-exclusions",
+      "title": "USTR、中国製品178除外を2027年1月9日まで延長",
+      "published_date": "2026-11-06",
+      "verified_at": "2026-11-10T06:56:00+09:00",
+      "source_type": "primary",
+      "publisher": "Office of the U.S. Trade Representative",
+      "source_url": "https://ustr.gov/sites/default/files/files/Issue_Areas/Enforcement/Section%20301/USTR%20FRN%20Extending%20Section%20301%20China%20FTT%20Exclusions%20to%20Jan%202027.pdf",
+      "verification_url": "https://ustr.gov/sites/default/files/files/Issue_Areas/Enforcement/Section%20301/USTR%20FRN%20Extending%20Section%20301%20China%20FTT%20Exclusions%20to%20Jan%202027.pdf",
+      "verification_status": "PASS",
+      "fact": "USTRはSection 301の現行178除外を2027年1月9日23:59 ETまで延長。11月10日00:01 ET以降の消費向け輸入等に適用。",
+      "analysis": "対象品目の短期的な供給網安定材料。ただし米中包括合意ではない。",
+      "limitations": "対象は通知のHTSUS記載品目に限定。日本企業別の直接影響と市場の単独反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Office of the U.S. Trade Representativeの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "USTRはSection 301の現行178除外を2027年1月9日23:59 ETまで延長。11月10日00:01 ET以降の消費向け輸入等に適用。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-06、実確認2026-11-10T06:56:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "対象は通知のHTSUS記載品目に限定。日本企業別の直接影響と市場の単独反応は未確認。"
+        }
+      }
+    },
+    {
+      "id": "nov10-ustr-call",
+      "title": "米中、農産品・レアアース等の過去合意履行を協議",
+      "published_date": "2026-11-06",
+      "verified_at": "2026-11-10T06:56:00+09:00",
+      "source_type": "primary",
+      "publisher": "Office of the U.S. Trade Representative",
+      "source_url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/readout-ambassador-greers-call-chinas-vice-premier-he-lifeng",
+      "verification_url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/readout-ambassador-greers-call-chinas-vice-premier-he-lifeng",
+      "verification_status": "PASS",
+      "fact": "米通商代表と財務長官が中国副首相と協議し、農産品購入・レアアース・重要鉱物の過去合意履行を求めた。",
+      "analysis": "供給網の監視材料だが、新規合意成立とは扱わない。",
+      "limitations": "同日市場反応と日本企業への直接影響は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Office of the U.S. Trade Representativeの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "米通商代表と財務長官が中国副首相と協議し、農産品購入・レアアース・重要鉱物の過去合意履行を求めた。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-06、実確認2026-11-10T06:56:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "同日市場反応と日本企業への直接影響は未確認。"
+        }
+      }
+    },
+    {
+      "id": "nov10-ofac-latest",
+      "title": "米財務省・OFACの最新指定は11月6日のイラン関連",
+      "published_date": "2026-11-06",
+      "verified_at": "2026-11-10T06:56:00+09:00",
+      "source_type": "primary",
+      "publisher": "U.S. Department of the Treasury / OFAC",
+      "source_url": "https://ofac.treasury.gov/recent-actions/sanctions-list-updates",
+      "verification_url": "https://ofac.treasury.gov/recent-actions/sanctions-list-updates",
+      "verification_status": "PASS",
+      "fact": "11月10日朝に公式最新一覧を確認し、11月9日の新規指定は確認できず、最新は11月6日のイラン関連指定。",
+      "analysis": "日本株の主要因とは扱わず、制裁更新の確認記録として保持。",
+      "limitations": "日本企業への直接影響、50%ルールの個別適用、市場反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "U.S. Department of the Treasury / OFACの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "11月10日朝に公式最新一覧を確認し、11月9日の新規指定は確認できず、最新は11月6日のイラン関連指定。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-06、実確認2026-11-10T06:56:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。単独因果は断定しない。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "日本企業への直接影響、50%ルールの個別適用、市場反応は未確認。"
+        }
+      }
+    }
+  ]
+}

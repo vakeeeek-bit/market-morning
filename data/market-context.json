@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "updated_at": "2026-11-09T07:18:00+09:00",
-  "report_date": "2026-11-09",
+  "updated_at": "2026-11-10T06:56:00+09:00",
+  "report_date": "2026-11-10",
   "period_start": "2026-03-18",
-  "period_end": "2026-11-08",
+  "period_end": "2026-11-09",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-11-09",
+    "latest_report_date": "2026-11-10",
     "source_report_count": 11,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
@@ -162,6 +162,15 @@
           "source_ids": [
             "nov9-bls"
           ]
+        },
+        {
+          "date": "2026-11-09",
+          "title": "日米株が広く反発",
+          "fact": "日本は日経平均+2.33%、TOPIX+2.97%。米国は主要6指数と11業種ETF代理が全て上昇し、SOX+6.85%。",
+          "market_impact": "VIXは19.92へ低下。ただしNVIDIA逆行安とNASDAQ新安値超過で内部選別は残存。",
+          "source_ids": [
+            "nov10-market-rebound"
+          ]
         }
       ],
       "initial_view": {
@@ -209,7 +218,8 @@
         "reaction14",
         "reaction15",
         "us-close-1016",
-        "nov9-bls"
+        "nov9-bls",
+        "nov10-market-rebound"
       ]
     },
     {
@@ -872,6 +882,13 @@
       "publisher": "U.S. Bureau of Labor Statistics",
       "published_at": "2026-11-06",
       "url": "https://www.bls.gov/news.release/archives/empsit_11062026.htm"
+    },
+    {
+      "id": "nov10-market-rebound",
+      "title": "US stocks rally as AI debate simmers, oil prices fall",
+      "publisher": "Reuters",
+      "published_at": "2026-11-09",
+      "url": "https://www.reuters.com/business/us-stocks-rally-ai-debate-simmers-oil-prices-fall-2026-11-09/"
     },
     {
       "id": "ai-apr16",

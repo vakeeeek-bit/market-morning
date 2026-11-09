@@ -1,8 +1,8 @@
 {
   "version": "2.0",
-  "report_date": "2026-11-09",
-  "target_market_date": "2026-11-06",
-  "updated_at": "2026-11-09T07:18:00+09:00",
+  "report_date": "2026-11-10",
+  "target_market_date": "2026-11-09",
+  "updated_at": "2026-11-10T06:56:00+09:00",
   "scope_note": "市場32系列、日本17業種・34銘柄、一次資料、異常値、前日差分を確認。未定義値と網羅不能項目は除外。",
   "research_coverage": {
     "status": "QUALIFIED",
@@ -10,22 +10,22 @@
       {
         "id": "fixed_universe",
         "status": "PASS",
-        "evidence": "市場32系列、日本17業種・34銘柄を取得。"
+        "evidence": "米主要株・11業種、日本17業種・34銘柄を11月9日で取得。"
       },
       {
         "id": "cross_news",
         "status": "PASS",
-        "evidence": "BLS・日銀・USTR・OFACを実読。"
+        "evidence": "BLS・日銀・USTR・OFAC・Censusを確認。"
       },
       {
         "id": "reverse_from_anomalies",
         "status": "PASS",
-        "evidence": "日本約6%安・98%下落と米SOX反発から逆引き。"
+        "evidence": "SOX+6.85%とNVIDIA-4.2%、NASDAQ新安値超過から逆引き。"
       },
       {
         "id": "previous_day_change",
         "status": "PASS",
-        "evidence": "前回の米急落から日本全面安・米反発へ更新。"
+        "evidence": "前回の全面安から日米反発へ更新。"
       }
     ],
     "items": [
@@ -43,7 +43,7 @@
               "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
               "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
             ],
-            "checked_at": "2026-11-09T07:18:00+09:00"
+            "checked_at": "2026-11-10T06:52:00+09:00"
           }
         ],
         "impact_if_unavailable": "市場方向を保留",
@@ -64,7 +64,7 @@
               "https://www.clevelandfed.org/collections/speeches/2026/sp-20261105-reserve-currencies-and-stablecoins",
               "https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2026/g260918.pdf"
             ],
-            "checked_at": "2026-11-09T07:18:00+09:00"
+            "checked_at": "2026-11-10T06:52:00+09:00"
           }
         ],
         "impact_if_unavailable": "政策方向を断定しない",
@@ -83,7 +83,7 @@
             "source_urls": [
               "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
             ],
-            "checked_at": "2026-11-09T07:18:00+09:00"
+            "checked_at": "2026-11-10T06:52:00+09:00"
           },
           {
             "method": "市場背景記事",
@@ -91,7 +91,7 @@
             "source_urls": [
               "https://apnews.com/article/afe254c608c3d1fe2ea792812ba9765a"
             ],
-            "checked_at": "2026-11-09T07:18:00+09:00"
+            "checked_at": "2026-11-10T06:52:00+09:00"
           }
         ],
         "impact_if_unavailable": "指数表面だけの分析になる",
@@ -111,7 +111,7 @@
               "https://market-morning-gules.vercel.app/data/history/2026-11-05/report.json",
               "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
             ],
-            "checked_at": "2026-11-09T07:18:00+09:00"
+            "checked_at": "2026-11-10T06:52:00+09:00"
           }
         ],
         "impact_if_unavailable": "前日文章の流用を検出できない",
@@ -130,7 +130,7 @@
             "source_urls": [
               "https://global.toyota/pages/global_toyota/ir/financial-results/2027_2q_presentation_en.pdf"
             ],
-            "checked_at": "2026-11-09T07:18:00+09:00"
+            "checked_at": "2026-11-10T06:52:00+09:00"
           }
         ],
         "impact_if_unavailable": "個別材料欄を除外",
@@ -149,7 +149,7 @@
             "source_urls": [
               "https://kabutan.jp/news/marketnews/?category=6"
             ],
-            "checked_at": "2026-11-09T07:18:00+09:00"
+            "checked_at": "2026-11-10T06:52:00+09:00"
           },
           {
             "method": "IFIS無料情報",
@@ -157,7 +157,7 @@
             "source_urls": [
               "https://kabuyoho.jp/"
             ],
-            "checked_at": "2026-11-09T07:18:00+09:00"
+            "checked_at": "2026-11-10T06:52:00+09:00"
           }
         ],
         "impact_if_unavailable": "変更なしと断定せず一覧を除外",
@@ -177,7 +177,7 @@
               "https://www.cmegroup.com/markets/metals/precious/gold.settlements.html",
               "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html"
             ],
-            "checked_at": "2026-11-09T07:18:00+09:00"
+            "checked_at": "2026-11-10T06:52:00+09:00"
           },
           {
             "method": "ICE公式",
@@ -185,7 +185,7 @@
             "source_urls": [
               "https://www.ice.com/products/219/Brent-Crude-Futures"
             ],
-            "checked_at": "2026-11-09T07:18:00+09:00"
+            "checked_at": "2026-11-10T06:52:00+09:00"
           }
         ],
         "impact_if_unavailable": "商品先物数値を結論から除外",
@@ -204,7 +204,7 @@
             "source_urls": [
               "https://drive.google.com/"
             ],
-            "checked_at": "2026-11-09T07:18:00+09:00"
+            "checked_at": "2026-11-10T06:52:00+09:00"
           },
           {
             "method": "部分一致検索",
@@ -212,7 +212,7 @@
             "source_urls": [
               "https://drive.google.com/"
             ],
-            "checked_at": "2026-11-09T07:18:00+09:00"
+            "checked_at": "2026-11-10T06:52:00+09:00"
           }
         ],
         "impact_if_unavailable": "添付仕様書実読済みとは主張せずProject Instructionsとmainを優先",
@@ -224,124 +224,120 @@
     "status": "PASS",
     "materials": [
       {
-        "headline": "日本株の全面安",
+        "headline": "日米株の広い反発",
         "fact": {
-          "text": "日本11月6日は日経平均57,434.77（-5.96%）、TOPIX 3,707.99（-5.90%）。東証プライムの98%が下落し、AI・半導体から全面安へ波及",
+          "text": "日本11月9日は日経平均58,775.50（+2.33%）。TOPIXも+2.97%と反発し、東証プライムは9割超が上昇。ただし内部正本は日付混在のため業種・個別順位は除外 米11月9日はS&P500+2.35%、NASDAQ+2.74%、NASDAQ100+3.40%、ダウ+2.15%、Russell2000+3.15%、VIX-22.31%。11業種ETF代理も全て上昇",
           "source_urls": [
-            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json",
-            "https://www.newsweekjapan.jp/articles/-/339313"
+            "https://indexes.nikkei.co.jp/en/nkave/index/profile?idx=nk225",
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+            "https://www.reuters.com/business/us-stocks-rally-ai-debate-simmers-oil-prices-fall-2026-11-09/"
           ],
           "verification_status": "PASS"
         },
         "observed_market_reaction": {
-          "text": "日経平均-5.96%、TOPIX-5.90%、プライム98%下落。",
+          "text": "日本の両指数反発、米主要6指数と11業種ETF代理が全上昇。",
           "assets_checked": [
             "日本指数",
-            "日本17業種",
-            "日本34銘柄"
+            "米主要株",
+            "米11業種ETF",
+            "VIX"
           ]
         },
         "market_internals": {
-          "text": "17業種全て下落、自動車が相対上位、食品が最下位。"
+          "text": "NYSE・NASDAQの騰落比は改善。ただしNASDAQ新安値が新高値を上回る。日本内部正本はBLOCK。"
         },
         "market_pricing": {
           "status": "priced",
-          "text": "米5日急落を日本6日に初回織り込み。"
+          "text": "11月9日の現物終値に反映。"
         },
         "interpretation": {
-          "text": "AI株安から追い証・リスク削減へ波及。",
+          "text": "前週急落後の広い買い戻しだが全面強気への転換は未確定。",
           "confidence": "supported",
-          "evidence": "正本値とReuters/NQN",
-          "uncertainty": "各増幅要因の寄与分離"
+          "evidence": "正本価格、公式日経平均、Reuters市場内部",
+          "uncertainty": "CPI前の持続性と日本内部データ"
         },
         "japan_transmission": {
-          "economic_channel": "米AI急落→日本半導体・大型株→追い証・全面安",
+          "economic_channel": "米リスク回復→日本指数反発→CPI後の金利・円で再評価",
           "intermediate_reactions": [
-            "米AI急落",
-            "日本寄り付き下落",
-            "先物・追い証",
-            "業種全面安"
+            "米株反発",
+            "日本指数反発",
+            "米半導体加速",
+            "CPI待ち"
           ],
           "affected_sectors": [
             "電機・精密",
-            "情報通信・サービス",
-            "食品"
+            "機械",
+            "自動車・輸送機"
           ],
-          "pricing_in_japan": "11月6日織り込み",
-          "assessment": "強い向かい風"
+          "pricing_in_japan": "11月9日に一部反映",
+          "assessment": "条件付き追い風"
         },
         "counter_evidence": [
-          "米6日SOX+4.21%",
-          "日本の自動車相対上位"
+          "NVIDIA-4.2%",
+          "NASDAQ新安値超過",
+          "CPI未発表"
         ],
         "change_conditions": [
-          "17業種過半上昇",
-          "TOPIX3,700維持",
-          "VIX低下"
+          "CPI後の米金利・VIX",
+          "SOXとNVIDIA",
+          "日本内部データ再取得"
         ],
         "chronology_check": "PASS",
-        "conflict_resolution": "日本の下落と米夜間反発の時系列を分離。"
+        "conflict_resolution": "日本6日急落→9日反発→米9日反発→10日CPIの順を分離。"
       },
       {
-        "headline": "米テック限定反発と雇用の底堅さ",
+        "headline": "USTR除外延長",
         "fact": {
-          "text": "米11月6日はNASDAQ+1.09%、NASDAQ100+1.35%、SOX+4.21%、VIX-9.01%と前日の急落から反発。ただしNASDAQは週間で4週続落 米10月雇用は+16.5万人、失業率4.1%、平均時給は前月比+0.4%・前年比+3.1%。8・9月は合計8.4万人上方改定され、急速な景気悪化観測を後退させた",
+          "text": "USTRは中国製品178除外を2027年1月9日23:59 ETまで延長。供給網には短期の安定材料だが、対象限定で米中の包括合意ではない",
           "source_urls": [
-            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
-            "https://www.bls.gov/news.release/archives/empsit_11062026.htm"
+            "https://ustr.gov/sites/default/files/files/Issue_Areas/Enforcement/Section%20301/USTR%20FRN%20Extending%20Section%20301%20China%20FTT%20Exclusions%20to%20Jan%202027.pdf"
           ],
           "verification_status": "PASS"
         },
         "observed_market_reaction": {
-          "text": "NASDAQ+1.09%、SOX+4.21%、ダウ-0.46%、3/11業種上昇。",
+          "text": "単独の価格反応は未確認。",
           "assets_checked": [
             "米株",
-            "米業種",
-            "VIX",
-            "米金利"
+            "日本株"
           ]
         },
         "market_internals": {
-          "text": "反発は情報技術に偏重。"
+          "text": "市場内部との単独対応は確認できず。"
         },
         "market_pricing": {
           "status": "partially_priced",
-          "text": "株式反応は確認、雇用後金利は未確認。"
+          "text": "公表後の市場は上昇したが単独寄与は分離不能。"
         },
         "interpretation": {
-          "text": "自律反発と雇用の底堅さが同居。",
-          "confidence": "supported",
-          "evidence": "正本市場値とBLS",
-          "uncertainty": "雇用単独寄与と金利反応"
+          "text": "対象品目の短期安定材料。包括合意とは扱わない。",
+          "confidence": "confirmed",
+          "evidence": "USTR Federal Register notice",
+          "uncertainty": "企業別影響"
         },
         "japan_transmission": {
-          "economic_channel": "米テック反発→日本半導体の戻り候補、雇用→金利・円→輸出・銀行",
+          "economic_channel": "対象中国製品の追加関税除外→調達コスト・供給網",
           "intermediate_reactions": [
-            "雇用発表",
-            "米テック反発",
-            "金利未確認",
-            "日本次営業日"
+            "除外延長",
+            "輸入コスト猶予",
+            "企業別影響"
           ],
           "affected_sectors": [
             "電機・精密",
-            "銀行",
-            "自動車・輸送機"
+            "機械"
           ],
-          "pricing_in_japan": "11月9日に初回織り込み",
-          "assessment": "条件付き追い風"
+          "pricing_in_japan": "企業別に未確認",
+          "assessment": "セクター限定の中立～追い風"
         },
         "counter_evidence": [
-          "NASDAQ週間4週続落",
-          "VIX25.64",
-          "8/11業種下落"
+          "対象は178除外に限定",
+          "米中包括合意ではない"
         ],
         "change_conditions": [
-          "SOX続伸",
-          "VIX20台前半",
-          "同日金利更新"
+          "対象HTSUSと日本企業調達の照合",
+          "追加合意・再制裁"
         ],
         "chronology_check": "PASS",
-        "conflict_resolution": "反発と週次調整、雇用と金利未確認を併記。"
+        "conflict_resolution": "既存措置の延長と新規合意を分離。"
       }
     ],
     "template_degradation_audit": {
@@ -352,41 +348,39 @@
       "conflicting_materials_compared": true,
       "transmission_explained": true,
       "observable_change_conditions": true,
-      "comparison_note": "11月6日版の米急落・日本未反映から、日本全面安、米テック反発、雇用統計へ更新。"
+      "comparison_note": "11月9日版の日本全面安・米テック限定反発から、日米の広い反発、半導体内部選別、CPI前へ更新。"
     }
   },
   "counter_evidence_audit": {
     "status": "PASS",
     "conclusions": [
       {
-        "conclusion": "日本は全面安",
+        "conclusion": "反発は広い",
         "checks": [
-          "日経平均-5.96%",
-          "TOPIX-5.90%",
-          "プライム98%下落"
+          "米11業種全上昇",
+          "日本プライム9割超上昇"
         ],
-        "weighing": "自動車・ソニー・日本製鉄の相対耐性を併記",
-        "uncertainty": "次営業日の自律反発"
+        "weighing": "NASDAQ新安値超過とNVIDIA逆行安を併記",
+        "uncertainty": "CPI後の持続"
       },
       {
-        "conclusion": "米テックは反発",
+        "conclusion": "半導体が主導",
         "checks": [
-          "SOX+4.21%",
-          "NASDAQ100+1.35%",
-          "XLK+1.45%"
+          "SOX+6.85%",
+          "XLK+3.73%"
         ],
-        "weighing": "NASDAQ週間4週続落、VIX25.64、8/11業種下落を併記",
-        "uncertainty": "反発の持続性"
+        "weighing": "NVIDIA-4.2%を反証として明示",
+        "uncertainty": "AI内部選別"
       },
       {
-        "conclusion": "米雇用は底堅い",
+        "conclusion": "日本株も広く反発",
         "checks": [
-          "雇用+16.5万人",
-          "失業率4.1%",
-          "賃金+0.4%"
+          "日経平均+2.33%",
+          "TOPIX+2.97%",
+          "17業種ETF代理16上昇・1下落"
         ],
-        "weighing": "雇用後金利未確認を明示",
-        "uncertainty": "CPIと金利反応"
+        "weighing": "食品-0.97%と電機・情報通信のTOPIX劣後を併記",
+        "uncertainty": "CPI後の持続性"
       }
     ]
   },
@@ -401,61 +395,61 @@
     ],
     "relationships": [
       {
-        "combination": "日本全面安＋米テック反発",
+        "combination": "日米株反発＋VIX低下",
         "observations": [
-          "日経平均-5.96%",
-          "SOX+4.21%",
-          "VIX-9.01%"
+          "日経平均+2.33%",
+          "S&P500+2.35%",
+          "VIX-22.31%"
         ],
-        "explanation": "日本は前夜の米急落を初回織り込み、米国は同夜に自律反発",
+        "explanation": "広いリスク回復を確認",
         "confidence": "supported",
         "unresolved": false,
-        "uncertainty": "日本次営業日の反発持続"
+        "uncertainty": "CPI後の持続性"
       },
       {
-        "combination": "米株・為替6日＋金利5日",
+        "combination": "SOX上昇＋NVIDIA下落",
         "observations": [
-          "米2年4.46%、10年4.84%",
+          "SOX+6.85%",
+          "NVIDIA-4.2%"
+        ],
+        "explanation": "半導体指数上昇とAI内部選別が同居",
+        "confidence": "supported",
+        "unresolved": false,
+        "uncertainty": "個別要因の持続"
+      },
+      {
+        "combination": "米株9日＋金利・FX6日",
+        "observations": [
+          "米2年4.51%、10年4.86%",
           "DXY102.30、USD/JPY157.498"
         ],
-        "explanation": "雇用後の金利因果を保留、2s10sは5日+38bpに限定",
+        "explanation": "日付差のため株価因果に使用しない",
         "confidence": "supported",
         "unresolved": true,
-        "uncertainty": "6日の同日金利"
-      },
-      {
-        "combination": "商品・暗号資産",
-        "observations": [
-          "連続足は取得",
-          "限月・値種別・基準時刻未確認"
-        ],
-        "explanation": "結論から除外し、未確認を材料なしと扱わない",
-        "confidence": "supported",
-        "unresolved": true,
-        "uncertainty": "契約定義"
+        "uncertainty": "9日同日金利・為替"
       }
     ]
   },
   "previous_day_change": {
     "status": "PASS",
-    "prior_view": "米国はAI・半導体主導の全面急落、日本は11月6日に初回織り込み予定。",
+    "prior_view": "日本全面安と米テック限定反発。",
     "new_events": [
-      "日本日経平均-5.96%・TOPIX-5.90%",
-      "プライム98%下落",
-      "米SOX+4.21%",
-      "米雇用+16.5万人"
+      "日本指数反発",
+      "米主要6指数・11業種全上昇",
+      "SOX+6.85%とNVIDIA逆行安",
+      "USTR178除外延長"
     ],
     "changed": [
-      "日本の未織り込みから全面安実績へ",
-      "米半導体急落から限定反発へ",
-      "雇用統計を実績へ更新"
+      "日本急落から反発へ",
+      "米テック限定から広い反発へ",
+      "VIX25.64から19.92へ"
     ],
     "unchanged": [
-      "金利基準日差は因果に不使用",
+      "古い金利・FXは因果に不使用",
       "未定義先物は除外",
       "Copper任意非掲載"
     ],
-    "japan_revision": "日本6日実績を反映し、9日は自律反発と高ボラ継続の両にらみへ修正。"
+    "japan_revision": "指数反発を確認しつつ、内部データBLOCKとCPIイベントで持続性を条件付きとした。"
   },
   "source_quality": {
     "status": "PASS",
@@ -469,10 +463,10 @@
   "data_integrity": {
     "status": "QUALIFIED",
     "checks": [
-      "report・Japanの日付・TOP5・1記事を一致",
-      "米株・為替6日と米金利5日を分離",
+      "report・Japanの日付・TOP5を一致",
+      "米株9日と米金利・FX6日を分離",
+      "日本17業種・34銘柄・ベンチマークを11月9日に整合",
       "商品先物・朝の現在値を不採用",
-      "日本6日17業種・34銘柄",
       "Copper任意省略"
     ]
   },
@@ -489,42 +483,42 @@
   },
   "publication_decision": {
     "status": "QUALIFIED",
-    "decided_at": "2026-11-09T07:18:00+09:00",
-    "summary": "問題項目と依存主張を除外し、AIレポート・世界市場・日本株・確認済みニュースを注釈付き公開可能。",
+    "decided_at": "2026-11-10T06:56:00+09:00",
+    "summary": "日本内部データの再取得に成功。古い金利・FX、未定義先物、網羅不能項目を除外し、全公開単位を注釈付きで公開可能。",
     "components": {
       "ai_report": {
         "status": "QUALIFIED",
-        "updated_at": "2026-11-09T07:18:00+09:00",
-        "reason": "金利基準日差と未定義値を除外"
+        "updated_at": "2026-11-10T06:56:00+09:00",
+        "reason": "日本内部BLOCK、古い金利・FX、未定義値を除外"
       },
       "world_market": {
         "status": "PASS",
-        "updated_at": "2026-11-09T07:18:00+09:00",
-        "reason": "米株・為替・VIX・11業種ETFは11月6日同日正本"
+        "updated_at": "2026-11-10T06:56:00+09:00",
+        "reason": "米主要株・VIX・11業種ETFは11月9日同日正本"
       },
       "japan_market": {
         "status": "PASS",
-        "updated_at": "2026-11-09 07:18:00 JST",
-        "reason": "11月6日指数・17業種・34銘柄取得済み"
+        "updated_at": "2026-11-10T06:58:16+09:00",
+        "reason": "11月9日の17業種・34銘柄・ベンチマークを同一市場日で取得"
       },
       "japan_stocks": {
         "status": "QUALIFIED",
-        "updated_at": "2026-11-09T07:18:00+09:00",
-        "reason": "限定ユニバースと確認済み企業材料を明示"
+        "updated_at": "2026-11-10T06:56:00+09:00",
+        "reason": "市場内部は取得済み。古い金利・FXと企業ニュース網羅不能を注記"
       },
       "verified_news": {
         "status": "PASS",
-        "updated_at": "2026-11-09T07:18:00+09:00",
-        "reason": "4件の一次本文を実読"
+        "updated_at": "2026-11-10T06:56:00+09:00",
+        "reason": "3件の一次本文を実読"
       }
     },
     "unresolved_items": [
       {
         "id": "stale_cross_asset",
         "status": "QUALIFIED",
-        "missing": "米2年・10年債利回りの正本は11月5日で、米株11月6日より1営業日古い。11月6日の金利因果は保留",
-        "impact": "11月6日の金利因果を除外",
-        "last_checked_at": "2026-11-09T07:18:00+09:00",
+        "missing": "market.jsonのDXY・USD/JPY・日経平均は11月6日、米2年・10年債利回りは11月6日で、米株11月9日より1営業日以上古い。11月9日の株価変動との因果を保留",
+        "impact": "11月9日の株価因果から除外",
+        "last_checked_at": "2026-11-10T06:56:00+09:00",
         "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
         "attempts": [
           {
@@ -590,6 +584,54 @@
               "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
             ],
             "checked_at": "2026-11-09T07:18:00+09:00"
+          },
+          {
+            "method": "2026-11-09再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-11-10T06:52:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
           }
         ],
         "affected_components": [
@@ -605,9 +647,9 @@
       {
         "id": "contracts",
         "status": "QUALIFIED",
-        "missing": "Gold・Silver・Copper・WTI・Brentの保存連続値は限月・取引所清算値との対応未確認のため結論から除外",
+        "missing": "Gold・Silver・Copper・WTI・Brentは11月6日値のうえ、取引所・限月・清算値対応を確認できず、結論から除外。Copperは任意非掲載",
         "impact": "商品先物の価格・前日比を結論から除外",
-        "last_checked_at": "2026-11-09T07:18:00+09:00",
+        "last_checked_at": "2026-11-10T06:56:00+09:00",
         "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
         "attempts": [
           {
@@ -681,6 +723,60 @@
               "https://www.ice.com/products/219/Brent-Crude-Futures"
             ],
             "checked_at": "2026-11-09T07:18:00+09:00"
+          },
+          {
+            "method": "2026-11-09再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html",
+              "https://www.ice.com/products/219/Brent-Crude-Futures"
+            ],
+            "checked_at": "2026-11-10T06:52:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html",
+              "https://www.ice.com/products/219/Brent-Crude-Futures"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html",
+              "https://www.ice.com/products/219/Brent-Crude-Futures"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html",
+              "https://www.ice.com/products/219/Brent-Crude-Futures"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html",
+              "https://www.ice.com/products/219/Brent-Crude-Futures"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html",
+              "https://www.ice.com/products/219/Brent-Crude-Futures"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
           }
         ],
         "affected_components": [
@@ -696,9 +792,9 @@
       {
         "id": "current_values",
         "status": "QUALIFIED",
-        "missing": "11月9日朝の時刻付きUSD/JPY現在値と限月付き日経225先物実測値は未取得",
+        "missing": "11月10日朝の時刻付きUSD/JPY現在値と限月付き日経225先物実測値は未取得",
         "impact": "朝の現在値・先物示唆を除外",
-        "last_checked_at": "2026-11-09T07:18:00+09:00",
+        "last_checked_at": "2026-11-10T06:56:00+09:00",
         "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
         "attempts": [
           {
@@ -764,6 +860,54 @@
               "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
             ],
             "checked_at": "2026-11-09T07:18:00+09:00"
+          },
+          {
+            "method": "2026-11-09再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-11-10T06:52:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
           }
         ],
         "affected_components": [
@@ -779,9 +923,9 @@
       {
         "id": "coverage",
         "status": "QUALIFIED",
-        "missing": "アナリスト評価変更と日本企業開示の全件網羅は確認できず、変更なしとは断定しない",
-        "impact": "評価変更なし・企業ニュース網羅の包括断定を除外",
-        "last_checked_at": "2026-11-09T07:18:00+09:00",
+        "missing": "アナリスト評価変更と日本企業開示の全件網羅は未確認で、変更なしとは断定しない",
+        "impact": "変更なし・企業ニュース網羅の包括断定を除外",
+        "last_checked_at": "2026-11-10T06:56:00+09:00",
         "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
         "attempts": [
           {
@@ -847,6 +991,54 @@
               "https://www.release.tdnet.info/inbs/I_main_00.html"
             ],
             "checked_at": "2026-11-09T07:18:00+09:00"
+          },
+          {
+            "method": "2026-11-09再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://www.release.tdnet.info/inbs/I_main_00.html"
+            ],
+            "checked_at": "2026-11-10T06:52:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://www.release.tdnet.info/inbs/I_main_00.html"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://www.release.tdnet.info/inbs/I_main_00.html"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://www.release.tdnet.info/inbs/I_main_00.html"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://www.release.tdnet.info/inbs/I_main_00.html"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://www.release.tdnet.info/inbs/I_main_00.html"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
           }
         ],
         "affected_components": [
@@ -862,9 +1054,9 @@
       {
         "id": "project_docs",
         "status": "QUALIFIED",
-        "missing": "Project添付仕様書3点は接続済みGoogle Drive検索で取得できず、Project Instructionsとmain現行仕様を優先",
+        "missing": "Project添付仕様書3点は接続済みGoogle Driveで完全一致・部分一致検索とも0件。Project Instructionsとmain現行スキーマ・検証を優先",
         "impact": "添付仕様書実読済みという主張を除外",
-        "last_checked_at": "2026-11-09T07:18:00+09:00",
+        "last_checked_at": "2026-11-10T06:56:00+09:00",
         "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
         "attempts": [
           {
@@ -930,6 +1122,54 @@
               "https://drive.google.com/"
             ],
             "checked_at": "2026-11-09T07:18:00+09:00"
+          },
+          {
+            "method": "2026-11-09再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://drive.google.com/"
+            ],
+            "checked_at": "2026-11-10T06:52:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://drive.google.com/"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://drive.google.com/"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://drive.google.com/"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://drive.google.com/"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
+          },
+          {
+            "method": "2026-11-10再確認",
+            "result": "必要な完全性を確定できず、依存主張を除外",
+            "source_urls": [
+              "https://drive.google.com/"
+            ],
+            "checked_at": "2026-11-10T06:56:00+09:00"
           }
         ],
         "affected_components": [
@@ -944,7 +1184,8 @@
       }
     ],
     "resolved_item_ids": [
-      "japan-retry-429-resolved-by-canonical"
+      "japan-retry-429-resolved-by-canonical",
+      "japan_mixed_dates_20261109"
     ]
   }
 }

@@ -1034,35 +1034,35 @@
     "market_date": "2026-11-09",
     "title": "昨日のシナリオ検証 → 今日への修正",
     "basis": "前回レポートの注目業種をTOPIX-17業種ETFの実績と照合し、次の取引日へ見方を修正",
-    "status": "寄り付き前・検証保留",
+    "status": "11月9日実績で限定検証済み",
     "checks": [
       {
         "sector": "電機・精密",
-        "result": "本日大引け後に確認"
+        "result": "TOPIX-17業種ETF代理 +2.16%（5日 -9.98%）"
       },
       {
         "sector": "機械",
-        "result": "本日大引け後に確認"
+        "result": "TOPIX-17業種ETF代理 +3.57%（5日 -7.36%）"
       },
       {
         "sector": "自動車・輸送機",
-        "result": "本日大引け後に確認"
+        "result": "TOPIX-17業種ETF代理 +3.19%（5日 +7.44%）"
       },
       {
         "sector": "銀行",
-        "result": "本日大引け後に確認"
+        "result": "TOPIX-17業種ETF代理 +4.43%（17業種首位、5日 -2.53%）"
       },
       {
         "sector": "不動産",
-        "result": "本日大引け後に確認"
+        "result": "TOPIX-17業種ETF代理 +1.09%（5日 +2.49%）"
       }
     ],
     "previous_condition": "market.jsonのDXY・USD/JPY・日経平均は11月6日、米2年・10年債利回りは11月6日で、米株11月9日より1営業日以上古い。11月9日の株価変動との因果を保留 / Gold・Silver・Copper・WTI・Brentは11月6日値のうえ、取引所・限月・清算値対応を確認できず、結論から除外。Copperは任意非掲載 / 11月10日朝の時刻付きUSD/JPY現在値と限月付き日経225先物実測値は未取得 / アナリスト評価変更と日本企業開示の全件網羅は未確認で、変更なしとは断定しない / Project添付仕様書3点は接続済みGoogle Driveで完全一致・部分一致検索とも0件。Project Instructionsとmain現行スキーマ・検証を優先",
-    "condition_result": "本日の条件と日本株現物の反応はまだ発生・確認していません",
-    "market_reaction": "本日の日本株現物は寄り付き前",
-    "unexpected_gap": "新しい取引結果がないため比較しません",
-    "gap_reason": "業種ETFの結果だけでは個別ニュースとの因果を分離できないため、理由は断定しません",
-    "revision": "本日の大引け後、実際の条件・市場反応・想定との差を確認して修正",
+    "condition_result": "前回注目5業種は11月9日に全て上昇。銀行が最も強く、不動産が相対的に弱かった。",
+    "market_reaction": "17業種ETF代理は16上昇・1下落で、前回注目5業種だけに限らない広い反発。",
+    "unexpected_gap": "電機・精密と機械は日次反発したが、5日リターンはなおマイナス。短期反発と中期回復を同一視できない。",
+    "gap_reason": "前営業日の日本株反発と米国11月9日の上昇は時系列が逆であり、米国上昇を日本の11月9日実績の原因とは扱わない。",
+    "revision": "銀行の相対強さを継続監視。半導体・機械は米SOX反発を追い風候補とする一方、NVIDIA逆行安と5日弱含みを反証条件に置く。",
     "today_watch": [
       "market.jsonのDXY・USD/JPY・日経平均は11月6日、米2年・10年債利回りは11月6日で、米株11月9日より1営業日以上古い。11月9日の株価変動との因果を保留",
       "Gold・Silver・Copper・WTI・Brentは11月6日値のうえ、取引所・限月・清算値対応を確認できず、結論から除外。Copperは任意非掲載",
@@ -1070,7 +1070,7 @@
       "アナリスト評価変更と日本企業開示の全件網羅は未確認で、変更なしとは断定しない",
       "Project添付仕様書3点は接続済みGoogle Driveで完全一致・部分一致検索とも0件。Project Instructionsとmain現行スキーマ・検証を優先"
     ],
-    "note": "前営業日の値動きを、本日シナリオの結果として採点しません。"
+    "note": "数値はETF代理の実績。個別ニュースとの因果は確認できないため断定しない。"
   },
   "data_quality": {
     "sector_total": 17,
@@ -1088,20 +1088,20 @@
     }
   },
   "market_regime": {
-    "headline": "主要指数がそろって上昇",
-    "headline_reason": "日経平均 +1.41%、TOPIX +3.47%",
+    "headline": "指数連動ETF代理がそろって上昇",
+    "headline_reason": "日経平均連動ETF代理 +1.41%、TOPIX連動ETF代理 +3.47%",
     "scoreboard": [
       {
-        "label": "日経平均",
+        "label": "日経平均連動ETF代理",
         "value": 1.41,
         "unit": "%",
-        "meaning": "プラスなら日経平均型が上昇"
+        "meaning": "日経平均型の方向をみる代理値"
       },
       {
-        "label": "TOPIX",
+        "label": "TOPIX連動ETF代理",
         "value": 3.47,
         "unit": "%",
-        "meaning": "市場全体の方向"
+        "meaning": "TOPIX型の方向をみる代理値"
       }
     ],
     "divergence_alert": null,
@@ -1834,8 +1834,8 @@
     }
   ],
   "morning_summary": {
-    "stance": "主要指数がそろって上昇",
-    "reason": "日経平均 +1.41%、TOPIX +3.47%",
+    "stance": "指数連動ETF代理がそろって上昇",
+    "reason": "日経平均連動ETF代理 +1.41%、TOPIX連動ETF代理 +3.47%",
     "tailwinds": [
       "米国半導体株：追い風",
       "ドル円：外需に向かい風／輸入コストに追い風"

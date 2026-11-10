@@ -1810,46 +1810,18 @@
   },
   "events": [
     {
-      "id": "boj-opinions-2026-10",
-      "event": "日銀10月会合の主な意見",
-      "start_at_jst": "2026-11-10T08:50:00+09:00",
-      "jst_time": "2026-11-10 08:50 JST",
-      "forecast": "対象外",
-      "previous": "対象外",
-      "focus": "基調物価と追加利上げ判断、委員間の見解差",
-      "affected_markets": "円・国内金利・銀行・不動産・輸出株",
-      "importance": "最重要",
-      "source_url": "https://www.boj.or.jp/about/calendar/",
-      "source_name": "Bank of Japan",
-      "verified_on": "2026-11-10"
-    },
-    {
       "id": "us-cpi-2026-10",
       "event": "米消費者物価指数（10月）",
       "start_at_jst": "2026-11-10T22:30:00+09:00",
       "jst_time": "2026-11-10 22:30 JST（米東部08:30）",
       "forecast": "未確認",
       "previous": "未確認",
-      "focus": "総合・コア・サービス価格とFed政策経路",
+      "focus": "総合・コア物価、サービス価格とFRB政策経路",
       "affected_markets": "米国債・ドル・米国株・日本株",
       "importance": "最重要",
       "source_url": "https://www.bls.gov/schedule/2026/11_sched.htm",
       "source_name": "U.S. Bureau of Labor Statistics",
-      "verified_on": "2026-11-10"
-    },
-    {
-      "id": "boj-cgpi-2026-10",
-      "event": "日本・企業物価指数（10月）",
-      "start_at_jst": "2026-11-12T08:50:00+09:00",
-      "jst_time": "2026-11-12 08:50 JST",
-      "forecast": "未確認",
-      "previous": "未確認",
-      "focus": "投入価格と国内物価転嫁",
-      "affected_markets": "円・国内金利・日本株",
-      "importance": "高",
-      "source_url": "https://www.boj.or.jp/about/calendar/",
-      "source_name": "Bank of Japan",
-      "verified_on": "2026-11-10"
+      "verified_on": "2026-11-03"
     },
     {
       "id": "us-ppi-2026-10",
@@ -1858,36 +1830,22 @@
       "jst_time": "2026-11-13 22:30 JST（米東部08:30）",
       "forecast": "未確認",
       "previous": "未確認",
-      "focus": "投入価格と企業マージン",
+      "focus": "投入価格と企業マージン、CPI・PCEへの波及",
       "affected_markets": "米国債・ドル・米国株・日本株",
       "importance": "高",
       "source_url": "https://www.bls.gov/schedule/2026/11_sched.htm",
       "source_name": "U.S. Bureau of Labor Statistics",
-      "verified_on": "2026-11-10"
-    },
-    {
-      "id": "us-import-export-2026-10",
-      "event": "米輸出入物価指数（10月）",
-      "start_at_jst": "2026-11-17T22:30:00+09:00",
-      "jst_time": "2026-11-17 22:30 JST（米東部08:30）",
-      "forecast": "未確認",
-      "previous": "未確認",
-      "focus": "関税・為替の輸入物価波及",
-      "affected_markets": "ドル・米国債・輸出関連株",
-      "importance": "中",
-      "source_url": "https://www.bls.gov/schedule/2026/11_sched.htm",
-      "source_name": "U.S. Bureau of Labor Statistics",
-      "verified_on": "2026-11-10"
+      "verified_on": "2026-11-03"
     }
   ],
   "events_metadata": {
     "status": "取得済",
-    "updated_at": "2026-11-10T06:56:00+09:00",
+    "updated_at": "2026-11-10T12:38:49+09:00",
     "window_start": "2026-11-10",
     "window_end": "2026-11-24",
     "timezone": "Asia/Tokyo",
     "source_policy": "公式日程で確認済みのイベントのみ。予想・前回値は未確認を推測しない",
-    "coverage_note": "公式日程で確認できた主要イベントのみ。市場予想・前回値が未確認の場合は未確認と表示。",
+    "coverage_note": "公式日程で確認できた主要イベントのみ。市場予想・前回値を確認できない場合は未確認と表示する。",
     "catalog_version": "1.0"
   }
 }

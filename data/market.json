@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10 06:47:11",
+  "updated_at": "2026-11-10 12:38:49",
   "timezone": "Asia/Tokyo",
   "source": "Yahoo Finance via yfinance for market closes; FRED DGS2/DGS10 for US Treasury yields",
   "notes": {
@@ -82,13 +82,13 @@
     "nikkei225": {
       "name": "日経225",
       "ticker": "^N225",
-      "price": 57434.7695,
-      "previous": 61077.8984,
-      "change": -3643.1289,
-      "change_pct": -5.96,
+      "price": 58775.5,
+      "previous": 57434.7695,
+      "change": 1340.7305,
+      "change_pct": 2.33,
       "status": "取得成功",
-      "market_date": "2026-11-06",
-      "previous_market_date": "2026-11-05"
+      "market_date": "2026-11-09",
+      "previous_market_date": "2026-11-06"
     },
     "topix": {
       "name": "TOPIX参考（1306 ETF）",
@@ -115,24 +115,24 @@
     "usdjpy": {
       "name": "USD/JPY",
       "ticker": "JPY=X",
-      "price": 157.498,
-      "previous": 158.357,
-      "change": -0.859,
-      "change_pct": -0.54,
+      "price": 158.292,
+      "previous": 157.498,
+      "change": 0.794,
+      "change_pct": 0.5,
       "status": "取得成功",
-      "market_date": "2026-11-06",
-      "previous_market_date": "2026-11-05"
+      "market_date": "2026-11-09",
+      "previous_market_date": "2026-11-06"
     },
     "eurusd": {
       "name": "EUR/USD",
       "ticker": "EURUSD=X",
-      "price": 1.1228,
-      "previous": 1.1235,
-      "change": -0.0007,
-      "change_pct": -0.06,
+      "price": 1.1147,
+      "previous": 1.1228,
+      "change": -0.0081,
+      "change_pct": -0.72,
       "status": "取得成功",
-      "market_date": "2026-11-06",
-      "previous_market_date": "2026-11-05"
+      "market_date": "2026-11-09",
+      "previous_market_date": "2026-11-06"
     },
     "us10y": {
       "name": "米10年債利回り",

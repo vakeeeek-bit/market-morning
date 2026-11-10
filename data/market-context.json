@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "updated_at": "2026-11-10T06:56:00+09:00",
-  "report_date": "2026-11-10",
+  "updated_at": "2026-11-11T06:52:00+09:00",
+  "report_date": "2026-11-11",
   "period_start": "2026-03-18",
-  "period_end": "2026-11-09",
+  "period_end": "2026-11-10",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-11-10",
+    "latest_report_date": "2026-11-11",
     "source_report_count": 11,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
@@ -171,6 +171,16 @@
           "source_ids": [
             "nov10-market-rebound"
           ]
+        },
+        {
+          "date": "2026-11-10",
+          "title": "CPI上振れで米株が反落",
+          "fact": "10月CPIは総合+0.4%、コア+0.3%前月比。米主要6指数は下落。",
+          "market_impact": "米金利とドルが上昇し、情報技術ETF代理が11業種最下位。",
+          "source_ids": [
+            "nov11-us-cpi",
+            "nov11-us-market"
+          ]
         }
       ],
       "initial_view": {
@@ -178,12 +188,12 @@
         "text": "FRBはインフレを警戒し、利下げを急がない姿勢"
       },
       "new_fact": {
-        "date": "2026-11-06",
-        "text": "米10月雇用+16.5万人、失業率4.1%、平均時給前月比+0.4%。8・9月は合計+8.4万人上方改定。"
+        "date": "2026-11-10",
+        "text": "10月CPIは総合+0.4%、コア+0.3%前月比。米主要6指数は下落。"
       },
       "market_reaction": {
-        "date": "2026-11-06",
-        "text": "NASDAQ+1.09%、SOX+4.21%。ただし雇用後の同日米金利は未確認。"
+        "date": "2026-11-10",
+        "text": "米金利とドルが上昇し、情報技術ETF代理が11業種最下位。"
       },
       "current_view": "雇用は急減速を示さず、景気不安を和らげる一方で金利高止まりリスクを残す。10日CPIで物価経路を再確認。",
       "japan_impact": "米テック反発は電機・精密の戻り候補。金利未確認のため銀行・不動産・円の方向は断定しない。",
@@ -219,7 +229,9 @@
         "reaction15",
         "us-close-1016",
         "nov9-bls",
-        "nov10-market-rebound"
+        "nov10-market-rebound",
+        "nov11-us-cpi",
+        "nov11-us-market"
       ]
     },
     {
@@ -414,6 +426,15 @@
             "nov9-reuters-us",
             "nov9-reuters-jp"
           ]
+        },
+        {
+          "date": "2026-11-10",
+          "title": "CPI後はテックが相対劣後",
+          "fact": "NASDAQ-0.74%、NASDAQ100-0.60%、SOX-0.35%。",
+          "market_impact": "XLK-1.15%が業種最下位。ただしSOXはS&P500並みで全面崩れではない。",
+          "source_ids": [
+            "nov11-us-market"
+          ]
         }
       ],
       "initial_view": {
@@ -421,12 +442,12 @@
         "text": "AI設備投資と先端半導体需要の強さが株価を支える局面"
       },
       "new_fact": {
-        "date": "2026-11-06",
-        "text": "SOX+4.21%、NASDAQ100+1.35%と前日の急落から反発。"
+        "date": "2026-11-10",
+        "text": "NASDAQ-0.74%、NASDAQ100-0.60%、SOX-0.35%。"
       },
       "market_reaction": {
-        "date": "2026-11-08",
-        "text": "単日反発でもNASDAQは週間4週続落、日本は6日に日経平均-5.96%の全面安。"
+        "date": "2026-11-10",
+        "text": "XLK-1.15%が業種最下位。ただしSOXはS&P500並みで全面崩れではない。"
       },
       "current_view": "AI需要仮説の消滅ではなく、高ボラの採算・規制選別局面。SOX続伸と日本の市場幅改善まで反発を転換と扱わない。",
       "japan_impact": "半導体・AI関連は自律反発候補だが、9984や指数寄与大型株の戻り持続を確認。",
@@ -460,7 +481,8 @@
         "reaction15",
         "us-close-1016",
         "nov9-reuters-us",
-        "nov9-reuters-jp"
+        "nov9-reuters-jp",
+        "nov11-us-market"
       ]
     },
     {
@@ -619,6 +641,15 @@
           "source_ids": [
             "nov9-boj"
           ]
+        },
+        {
+          "date": "2026-11-10",
+          "title": "日銀主な意見に利上げ継続論",
+          "fact": "追加利上げ継続や中立金利への接近を唱える意見を確認。",
+          "market_impact": "新規政策決定ではなく、次回会合の確定経路とは扱わない。",
+          "source_ids": [
+            "nov11-boj-opinions"
+          ]
         }
       ],
       "initial_view": {
@@ -626,12 +657,12 @@
         "text": "政策金利0.75%でも利上げを求める意見が増え、正常化継続が意識された"
       },
       "new_fact": {
-        "date": "2026-11-07",
-        "text": "植田総裁のIMF講演全文を公表。経常黒字と企業行動の変容を論じた。"
+        "date": "2026-11-10",
+        "text": "追加利上げ継続や中立金利への接近を唱える意見を確認。"
       },
       "market_reaction": {
-        "date": "2026-11-08",
-        "text": "週末公表で日本株の反応は未確認。新規政策決定とは扱わない。"
+        "date": "2026-11-10",
+        "text": "新規政策決定ではなく、次回会合の確定経路とは扱わない。"
       },
       "current_view": "10日8:50の10月会合『主な意見』で基調物価2%到達後の追加利上げ見解を確認。",
       "japan_impact": "円・国内金利を通じ銀行・不動産・輸出株へ分岐。朝の現在値未取得のため方向は条件付き。",
@@ -667,7 +698,8 @@
         "oct28-japan-market",
         "oct30-boj-schedule",
         "oct30-japan-market",
-        "nov9-boj"
+        "nov9-boj",
+        "nov11-boj-opinions"
       ]
     }
   ],
@@ -889,6 +921,20 @@
       "publisher": "Reuters",
       "published_at": "2026-11-09",
       "url": "https://www.reuters.com/business/us-stocks-rally-ai-debate-simmers-oil-prices-fall-2026-11-09/"
+    },
+    {
+      "id": "nov11-us-cpi",
+      "title": "Consumer Price Index - October 2026",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "published_at": "2026-11-10",
+      "url": "https://www.bls.gov/news.release/cpi.nr0.htm"
+    },
+    {
+      "id": "nov11-us-market",
+      "title": "How major US stock indexes fared Tuesday 11/10/2026",
+      "publisher": "Associated Press",
+      "published_at": "2026-11-10",
+      "url": "https://apnews.com/article/wall-street-stocks-dow-nasdaq-a97eb31c415811065561f2c2ac552cd7"
     },
     {
       "id": "ai-apr16",
@@ -1169,6 +1215,13 @@
       "publisher": "Bank of Japan",
       "published_at": "2026-11-07",
       "url": "https://www.boj.or.jp/about/press/koen_2026/ko261107a.htm"
+    },
+    {
+      "id": "nov11-boj-opinions",
+      "title": "Summary of Opinions at the Monetary Policy Meeting on October 29 and 30, 2026",
+      "publisher": "Bank of Japan",
+      "published_at": "2026-11-10",
+      "url": "https://www.boj.or.jp/mopo/mpmsche_minu/opinion_2026/opi261030.pdf"
     }
   ]
 }

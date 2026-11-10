@@ -184,9 +184,9 @@
       "focus": "投入価格と企業マージン、CPI・PCEへの波及",
       "affected_markets": "米国債・ドル・米国株・日本株",
       "importance": "高",
-      "source_url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "source_url": "https://www.bls.gov/schedule/news_release/ppi.htm",
       "source_name": "U.S. Bureau of Labor Statistics",
-      "verified_on": "2026-11-03"
+      "verified_on": "2026-11-11"
     },
     {
       "id": "us-gdp-2026-q3-second",
@@ -230,6 +230,62 @@
       "source_url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
       "source_name": "Federal Reserve Board",
       "verified_on": "2026-10-19"
+    },
+    {
+      "id": "boj-cgpi-2026-10",
+      "event": "日本・企業物価指数（10月）",
+      "start_at_jst": "2026-11-12T08:50:00+09:00",
+      "jst_time": "2026-11-12 08:50 JST",
+      "forecast": "未確認",
+      "previous": "未確認",
+      "focus": "投入価格と国内物価転嫁",
+      "affected_markets": "円・国内金利・日本株",
+      "importance": "高",
+      "source_url": "https://www.boj.or.jp/about/calendar/",
+      "source_name": "Bank of Japan",
+      "verified_on": "2026-11-11"
+    },
+    {
+      "id": "jp-gdp-2026-q3-first",
+      "event": "日本GDP（2026年7〜9月期・1次速報）",
+      "start_at_jst": "2026-11-16T08:50:00+09:00",
+      "jst_time": "2026-11-16 08:50 JST",
+      "forecast": "未確認",
+      "previous": "未確認",
+      "focus": "内需・外需・設備投資と日銀政策余地",
+      "affected_markets": "円・国内金利・日本株",
+      "importance": "最重要",
+      "source_url": "https://www.esri.cao.go.jp/jp/sna/kouhyou/kouhyou_top.html",
+      "source_name": "内閣府 経済社会総合研究所",
+      "verified_on": "2026-11-11"
+    },
+    {
+      "id": "us-import-export-2026-10",
+      "event": "米輸出入物価指数（10月）",
+      "start_at_jst": "2026-11-17T22:30:00+09:00",
+      "jst_time": "2026-11-17 22:30 JST（米東部08:30）",
+      "forecast": "未確認",
+      "previous": "未確認",
+      "focus": "関税・為替の輸入物価波及",
+      "affected_markets": "ドル・米国債・輸出関連株",
+      "importance": "中",
+      "source_url": "https://www.bls.gov/schedule/2026/11_sched.htm",
+      "source_name": "U.S. Bureau of Labor Statistics",
+      "verified_on": "2026-11-11"
+    },
+    {
+      "id": "jp-cpi-2026-10",
+      "event": "日本・全国消費者物価指数（10月）",
+      "start_at_jst": "2026-11-20T08:30:00+09:00",
+      "jst_time": "2026-11-20 08:30 JST（統計局の原則日程から確認）",
+      "forecast": "未確認",
+      "previous": "未確認",
+      "focus": "基調物価と日銀追加利上げ余地",
+      "affected_markets": "円・国内金利・日本株",
+      "importance": "最重要",
+      "source_url": "https://www.stat.go.jp/data/cpi/",
+      "source_name": "総務省統計局",
+      "verified_on": "2026-11-11"
     }
   ]
 }

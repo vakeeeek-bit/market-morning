@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-10T06:56:00+09:00",
-  "source_report_date": "2026-11-10",
+  "updated_at": "2026-11-11T06:52:00+09:00",
+  "source_report_date": "2026-11-11",
   "items": [
     {
       "id": "stale_cross_asset",
       "status": "QUALIFIED",
-      "missing": "market.jsonのDXY・USD/JPY・日経平均は11月6日、米2年・10年債利回りは11月6日で、米株11月9日より1営業日以上古い。11月9日の株価変動との因果を保留",
-      "impact": "11月9日の株価因果から除外",
-      "last_checked_at": "2026-11-10T06:56:00+09:00",
+      "missing": "DXY・USD/JPY・米2年・10年債利回りは11月9日で、米株11月10日より1市場日古い。CPI後の同日因果には使用しない",
+      "impact": "CPI後の株価因果から除外",
+      "last_checked_at": "2026-11-11T06:52:00+09:00",
       "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
       "attempts": [
         {
@@ -136,9 +136,9 @@
     {
       "id": "contracts",
       "status": "QUALIFIED",
-      "missing": "Gold・Silver・Copper・WTI・Brentは11月6日値のうえ、取引所・限月・清算値対応を確認できず、結論から除外。Copperは任意非掲載",
+      "missing": "Gold・Silver・Copper・WTI・Brentは11月9日値で、取引所・限月・清算値対応を確認できず結論から除外。Copperは任意非掲載",
       "impact": "商品先物の価格・前日比を結論から除外",
-      "last_checked_at": "2026-11-10T06:56:00+09:00",
+      "last_checked_at": "2026-11-11T06:52:00+09:00",
       "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
       "attempts": [
         {
@@ -281,9 +281,9 @@
     {
       "id": "current_values",
       "status": "QUALIFIED",
-      "missing": "11月10日朝の時刻付きUSD/JPY現在値と限月付き日経225先物実測値は未取得",
+      "missing": "11月11日朝の時刻付きUSD/JPY現在値と限月付き日経225先物実測値は未取得",
       "impact": "朝の現在値・先物示唆を除外",
-      "last_checked_at": "2026-11-10T06:56:00+09:00",
+      "last_checked_at": "2026-11-11T06:52:00+09:00",
       "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
       "attempts": [
         {
@@ -414,7 +414,7 @@
       "status": "QUALIFIED",
       "missing": "アナリスト評価変更と日本企業開示の全件網羅は未確認で、変更なしとは断定しない",
       "impact": "変更なし・企業ニュース網羅の包括断定を除外",
-      "last_checked_at": "2026-11-10T06:56:00+09:00",
+      "last_checked_at": "2026-11-11T06:52:00+09:00",
       "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
       "attempts": [
         {
@@ -543,9 +543,9 @@
     {
       "id": "project_docs",
       "status": "QUALIFIED",
-      "missing": "Project添付仕様書3点は接続済みGoogle Driveで完全一致・部分一致検索とも0件。Project Instructionsとmain現行スキーマ・検証を優先",
+      "missing": "Project添付仕様書3点は接続済みGoogle Driveの完全一致・部分一致検索とも0件。Project Instructionsとmain現行スキーマ・検証を優先",
       "impact": "添付仕様書実読済みという主張を除外",
-      "last_checked_at": "2026-11-10T06:56:00+09:00",
+      "last_checked_at": "2026-11-11T06:52:00+09:00",
       "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
       "attempts": [
         {
@@ -726,6 +726,33 @@
         "限定ユニバースBreadth"
       ],
       "excluded_from_publication": false
+    },
+    {
+      "id": "japan_stock_partial_20261110",
+      "status": "QUALIFIED",
+      "missing": "日本個別株は34銘柄中29銘柄を取得。8001・6501・7267・9101・9501はレート制限で欠測し、ランキング・Breadthから除外",
+      "impact": "個別株ランキングを取得済み29銘柄の限定サンプルと明記し、欠測5銘柄を除外",
+      "last_checked_at": "2026-11-11T06:52:00+09:00",
+      "next_action": "次回収集で34銘柄を再取得し完全性を再検証",
+      "attempts": [
+        {
+          "method": "python scripts/update_japan_market.py 再試行",
+          "result": "17業種とベンチマークは11月10日で整合。個別29/34、5銘柄はレート制限",
+          "source_urls": [
+            "https://query1.finance.yahoo.com/"
+          ],
+          "checked_at": "2026-11-11T06:52:00+09:00"
+        }
+      ],
+      "affected_components": [
+        "japan_market",
+        "japan_stocks"
+      ],
+      "excluded_claims": [
+        "34銘柄全体のBreadth",
+        "欠測銘柄を含む順位"
+      ],
+      "excluded_from_publication": true
     }
   ]
 }

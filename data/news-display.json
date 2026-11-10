@@ -2,28 +2,20 @@
   "version": "1.0",
   "description": "確認済み一次資料の表示設定",
   "items": {
-    "nov10-ustr-exclusions": {
+    "nov11-us-cpi": {
       "primary_page": "world",
       "priority": 100,
       "attention_points": [
-        "178除外を2027年1月9日まで延長",
-        "対象限定で包括合意ではない"
+        "総合+0.4%、コア+0.3%前月比",
+        "多くの前年比は算出不能"
       ]
     },
-    "nov10-ustr-call": {
-      "primary_page": "world",
-      "priority": 90,
+    "nov11-boj-opinions": {
+      "primary_page": "japan",
+      "priority": 95,
       "attention_points": [
-        "農産品・レアアース等の履行を協議",
-        "新規合意成立ではない"
-      ]
-    },
-    "nov10-ofac-latest": {
-      "primary_page": "world",
-      "priority": 70,
-      "attention_points": [
-        "11月9日の新規指定は確認できず",
-        "日本株への直接影響は未確認"
+        "追加利上げ志向を含む",
+        "新規政策決定ではない"
       ]
     }
   }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10 13:10:35",
+  "updated_at": "2026-11-10 13:41:20",
   "timezone": "Asia/Tokyo",
   "source": "Yahoo Finance via yfinance for market closes; FRED DGS2/DGS10 for US Treasury yields",
   "notes": {
@@ -71,9 +71,9 @@
     "russell2000": {
       "name": "Russell2000",
       "ticker": "^RUT",
-      "price": 2840.8101,
+      "price": 2840.8123,
       "previous": 2754.1101,
-      "change": 86.7,
+      "change": 86.7021,
       "change_pct": 3.15,
       "status": "取得成功",
       "market_date": "2026-11-09",

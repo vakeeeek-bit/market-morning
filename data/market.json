@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10 12:38:49",
+  "updated_at": "2026-11-10 13:10:35",
   "timezone": "Asia/Tokyo",
   "source": "Yahoo Finance via yfinance for market closes; FRED DGS2/DGS10 for US Treasury yields",
   "notes": {
@@ -60,9 +60,9 @@
     "dow": {
       "name": "NYダウ",
       "ticker": "^DJI",
-      "price": 52389.75,
+      "price": 52389.8008,
       "previous": 51285.7305,
-      "change": 1104.0195,
+      "change": 1104.0703,
       "change_pct": 2.15,
       "status": "取得成功",
       "market_date": "2026-11-09",
@@ -71,9 +71,9 @@
     "russell2000": {
       "name": "Russell2000",
       "ticker": "^RUT",
-      "price": 2840.8123,
+      "price": 2840.8101,
       "previous": 2754.1101,
-      "change": 86.7021,
+      "change": 86.7,
       "change_pct": 3.15,
       "status": "取得成功",
       "market_date": "2026-11-09",

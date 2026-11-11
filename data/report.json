@@ -1,110 +1,110 @@
 {
-  "report_date": "2026-11-11",
-  "target_market_date": "2026-11-10",
-  "updated_at": "2026-11-11T06:52:00+09:00",
+  "report_date": "2026-11-12",
+  "target_market_date": "2026-11-11",
+  "updated_at": "2026-11-12T07:01:00+09:00",
   "report_type": "daily",
   "quick_view": {
-    "headline": "注釈付き11月11日版｜米CPI上振れで金利再上昇、日本の反発は電機・機械主導だが持続性を再点検",
+    "headline": "注釈付き11月12日版｜AI・半導体が反発、日本は銀行・電機優位だが市場幅は9対8",
     "top_news": [
       {
-        "title": "米CPI上振れ、金利上昇"
+        "title": "CoreWeave見通し引き上げでAI株反発"
       },
       {
-        "title": "米テックが相対劣後"
+        "title": "SOX+5.66%、NASDAQ100+2.28%"
       },
       {
-        "title": "日本は電機・機械主導で続伸"
+        "title": "日本は銀行・電機優位、上昇業種は9/17"
       }
     ],
     "important_today": [
-      "米10月CPIは総合+0.4%、コア+0.3%（前月比）。市場予想を上回り、米10年金利とドルが上昇、S&P500-0.38%、NASDAQ-0.74%。ただし年率の多くは2025年10月データ欠測で算出不能",
-      "米株内部は大型・グロースが劣後。NASDAQ100-0.60%、Russell2000-0.68%、SOX-0.35%、ダウ-0.30%。11業種ETF代理は金融+0.52%が首位、情報技術-1.15%が最下位",
-      "日本11月10日は日経平均60,459.58（+2.87%）、TOPIX3,893.71（+1.98%）。17業種ETF代理は13上昇・4下落で、電機・精密+4.39%、機械+4.36%、銀行+3.37%が上位",
-      "日銀10月会合の主な意見は追加利上げ継続を唱える意見を含むが、新たな政策決定ではない。銀行ETF代理は+3.37%、不動産は-0.22%だったが単独因果は断定しない",
-      "次の分岐は11月12日日銀企業物価、13日米PPI、16日日本GDP。強い物価と金利上昇が続けば高PER電機・情報通信の戻りが失速する"
+      "CoreWeaveは2026年通期売上高見通しを130億〜133億ドルへ引き上げ。契約前払金・預り金約90億ドルを今後3か月で見込み、AIインフラ需要の継続を示した。米市場ではAI関連が反発",
+      "米国はS&P500+1.31%、NASDAQ+1.60%、NASDAQ100+2.28%、SOX+5.66%、ダウ+0.49%、Russell2000+0.88%、VIX-10.12%。半導体・大型グロース主導で、11業種ETF代理は10上昇・1下落",
+      "日本11月11日は日経平均61,248.59（+1.31%）、TOPIX3,929.39（+0.92%）。17業種ETF代理は9上昇・8下落で、銀行+2.31%、電機・精密+1.90%、鉄鋼・非鉄+1.65%が上位",
+      "Hondaは北米ハイブリッド増産へオハイオ新工場に30億ドル、年24万台、2029年稼働を計画。7267は-4.53%、自動車・輸送機ETF代理は-1.46%で、投資負担と決算後評価を監視",
+      "本日8:50の日銀企業物価、13日22:30の米PPI、16日8:50の日本GDPが次の分岐。物価上振れと金利高が続けば高PER株反発の持続性を下げる"
     ]
   },
   "executive_summary": {
-    "headline": "注釈付き11月11日版｜米CPI上振れで金利再上昇、日本の反発は電機・機械主導だが持続性を再点検",
-    "market_mood": "米10月CPIが市場予想を上回り、米金利とドルが上昇、米主要6指数は下落した。ただしVIXは低下し、11業種ETF代理は6上昇・5下落で、全面リスクオフではなくテック中心の調整。日本はCPI公表前の11月10日に日経平均+2.87%、TOPIX+1.98%、17業種ETF代理13上昇・4下落と続伸した。",
-    "main_driver": "米CPI上振れによる金利再上昇とテックのバリュエーション調整。日本は前日の急落反動とAI・半導体買い戻しが続いたが、時系列上CPI後の米下落はまだ織り込んでいない",
+    "headline": "注釈付き11月12日版｜AI・半導体が反発、日本は銀行・電機優位だが市場幅は9対8",
+    "market_mood": "米国はAI・半導体主導で反発し、VIXも17.49へ低下。11業種ETF代理は10上昇・1下落で価格面の広がりも確認したが、NASDAQ100・SOXの上昇率が突出し集中色は残る。日本は続伸したものの、17業種ETF代理は9上昇・8下落で全面高ではない。",
+    "main_driver": "CoreWeaveの売上高見通し引き上げとAIインフラ需要継続を受けたAI・半導体株の買い戻し。11日は米債券市場休場のため、同日金利低下を材料とは扱わない",
     "winners": [
-      "米金融・エネルギー",
-      "日本の電機・精密、機械、銀行"
+      "米半導体・情報技術",
+      "日本の銀行・電機精密・鉄鋼非鉄"
     ],
     "losers": [
-      "米情報技術",
-      "日本の医薬品・小売・自動車ETF代理"
+      "米一般消費財ETF代理",
+      "日本の自動車・食品・エネルギーETF代理"
     ],
     "important_today": [
-      "米10月CPIは総合+0.4%、コア+0.3%（前月比）。市場予想を上回り、米10年金利とドルが上昇、S&P500-0.38%、NASDAQ-0.74%。ただし年率の多くは2025年10月データ欠測で算出不能",
-      "米株内部は大型・グロースが劣後。NASDAQ100-0.60%、Russell2000-0.68%、SOX-0.35%、ダウ-0.30%。11業種ETF代理は金融+0.52%が首位、情報技術-1.15%が最下位",
-      "日本11月10日は日経平均60,459.58（+2.87%）、TOPIX3,893.71（+1.98%）。17業種ETF代理は13上昇・4下落で、電機・精密+4.39%、機械+4.36%、銀行+3.37%が上位",
-      "日銀10月会合の主な意見は追加利上げ継続を唱える意見を含むが、新たな政策決定ではない。銀行ETF代理は+3.37%、不動産は-0.22%だったが単独因果は断定しない",
-      "次の分岐は11月12日日銀企業物価、13日米PPI、16日日本GDP。強い物価と金利上昇が続けば高PER電機・情報通信の戻りが失速する"
+      "CoreWeaveは2026年通期売上高見通しを130億〜133億ドルへ引き上げ。契約前払金・預り金約90億ドルを今後3か月で見込み、AIインフラ需要の継続を示した。米市場ではAI関連が反発",
+      "米国はS&P500+1.31%、NASDAQ+1.60%、NASDAQ100+2.28%、SOX+5.66%、ダウ+0.49%、Russell2000+0.88%、VIX-10.12%。半導体・大型グロース主導で、11業種ETF代理は10上昇・1下落",
+      "日本11月11日は日経平均61,248.59（+1.31%）、TOPIX3,929.39（+0.92%）。17業種ETF代理は9上昇・8下落で、銀行+2.31%、電機・精密+1.90%、鉄鋼・非鉄+1.65%が上位",
+      "Hondaは北米ハイブリッド増産へオハイオ新工場に30億ドル、年24万台、2029年稼働を計画。7267は-4.53%、自動車・輸送機ETF代理は-1.46%で、投資負担と決算後評価を監視",
+      "本日8:50の日銀企業物価、13日22:30の米PPI、16日8:50の日本GDPが次の分岐。物価上振れと金利高が続けば高PER株反発の持続性を下げる"
     ],
     "watch_markets": [
-      "米2年・10年金利のCPI後水準",
-      "USD/JPYのCPI後水準",
-      "XLKとSOX",
-      "日本の電機・精密と機械",
-      "11月12日日銀企業物価"
+      "SOXとNASDAQ100の続伸性",
+      "日本の上昇業種数",
+      "銀行と電機精密のTOPIX比",
+      "Hondaと自動車業種",
+      "日銀企業物価・米PPI"
     ],
     "current_environment": [
-      "米株・VIX・11業種ETFは11月10日終値",
-      "日本指数・17業種ETF代理・取得済み29銘柄は11月10日終値",
-      "米金利・DXY・USD/JPYは11月9日で古い",
+      "米株・VIX・11業種ETFは11月11日終値",
+      "日本指数・17業種ETF代理・34銘柄は11月11日終値",
+      "米金利は11月9日、DXY・USD/JPYは11月10日で古い",
       "商品先物と朝の現在値は結論から除外",
       "Copperは任意非掲載"
     ]
   },
   "news": [
     {
-      "title": "米10月CPI、総合+0.4%・コア+0.3%",
-      "fact": "BLSは11月10日公表。2025年10月の調査欠測により多くの12か月変化率は算出不能。",
-      "source_url": "https://www.bls.gov/news.release/cpi.nr0.htm",
-      "analysis": "前月比は市場予想を上回り、金利・ドル上昇を通じ高PER株の評価を圧迫。",
+      "title": "CoreWeave、2026年売上高見通しを引き上げ",
+      "fact": "第3四半期は売上高が前四半期比10億ドル超増加し、調整後営業利益率は計画より1四半期早く2桁へ。通期売上高見通しを130億〜133億ドルへ引き上げた。",
+      "source_url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx",
+      "analysis": "AIインフラ需要と資金調達への懸念を短期的に和らげたが、高CAPEXと資金調達コストは反証として残る。",
       "published_at": "2026-11-10",
-      "market_reaction": "米主要指数下落、米金利・ドル上昇。正本値とReuters/APで方向を確認。"
+      "market_reaction": "11月11日にSOX+5.66%、NASDAQ100+2.28%。CoreWeave単独因果とは断定しない。"
     },
     {
-      "title": "日銀、10月会合の主な意見を公表",
-      "fact": "現行金利を維持しリスクを点検する一方、追加利上げ継続や中立金利への接近を唱える意見を収録。",
-      "source_url": "https://www.boj.or.jp/mopo/mpmsche_minu/opinion_2026/opi261030.pdf",
-      "analysis": "利上げバイアス確認だが、意見集であり新規政策決定ではない。",
+      "title": "Honda、北米ハイブリッド増産へ30億ドル新工場",
+      "fact": "オハイオ州に年24万台の新工場を建設し、2029年稼働を目指す。約2,000人を雇用し、北米生産能力を167万台から191万台へ引き上げる計画。",
+      "source_url": "https://global.honda/jp/news/2026/c261110b.html",
+      "analysis": "北米ハイブリッド需要への対応力を高める一方、設備投資負担と立ち上げ時期を監視。",
       "published_at": "2026-11-10",
-      "market_reaction": "銀行ETF代理+3.37%、不動産-0.22%。単独因果は未確認。"
+      "market_reaction": "7267は11月11日-4.53%、自動車・輸送機ETF代理-1.46%。決算・投資計画の寄与を単独断定しない。"
     },
     {
       "title": "次の公式イベントは日銀企業物価・米PPI・日本GDP",
       "fact": "11月12日08:50 JSTに日銀企業物価、13日22:30 JSTに米PPI、16日08:50 JSTに日本GDP。",
       "source_url": "https://www.boj.or.jp/about/calendar/",
-      "analysis": "物価と成長の組み合わせが円・金利・高PER株の次の分岐。",
-      "published_at": "2026-11-11",
+      "analysis": "物価と成長の組み合わせが円・国内金利・高PER株の次の分岐。",
+      "published_at": "2026-11-12",
       "market_reaction": "発表前。"
     }
   ],
   "policy": {
     "economic_indicators": {
-      "fact": "米10月CPIは総合+0.4%、コア+0.3%前月比。前年比の多くは2025年10月データ欠測で算出不能。",
+      "fact": "11月11日の新規主要米経済指標は確認できず。米債券市場はVeterans Dayで休場。日銀企業物価は本日08:50 JST発表予定。",
       "source_urls": [
-        "https://www.bls.gov/news.release/cpi.nr0.htm"
+        "https://www.boj.or.jp/about/calendar/"
       ]
     },
     "central_banks": {
-      "fact": "日銀10月会合の主な意見は追加利上げ継続を唱える意見を含むが、新規政策決定ではない。",
+      "fact": "前日確認の日銀『主な意見』は利上げ継続論を含むが、新規政策決定ではない。本日朝までに新規決定は確認していない。",
       "source_urls": [
         "https://www.boj.or.jp/mopo/mpmsche_minu/opinion_2026/opi261030.pdf"
       ]
     },
     "trade_tariffs": {
-      "fact": "前日確認のUSTR 178除外延長が継続。11月10日の新規包括合意とは扱わない。",
+      "fact": "11月12日朝までに新規の包括的な関税・通商決定を一次本文で確認できず、未調査を材料なしとは扱わない。前回確認のUSTR除外延長を継続背景とする。",
       "source_urls": [
-        "https://ustr.gov/sites/default/files/files/Issue_Areas/Enforcement/Section%20301/USTR%20FRN%20Extending%20Section%20301%20China%20FTT%20Exclusions%20to%20Jan%202027.pdf"
+        "https://ustr.gov/issue-areas/enforcement/section-301-investigations/tariff-actions"
       ]
     },
     "sanctions": {
-      "fact": "11月11日朝の新規制裁指定は本レポートで一次本文を確認できず、未調査を材料なしとは扱わない。前日までの最新確認は11月6日のイラン関連。",
+      "fact": "11月12日朝までの新規制裁指定を本レポートで一次本文まで確認できず、未確認として継続。",
       "source_urls": [
         "https://ofac.treasury.gov/recent-actions/sanctions-list-updates"
       ]
@@ -112,118 +112,122 @@
   },
   "scenarios": [
     {
-      "name": "基本",
-      "conditions": "米金利高止まり、VIX20未満、SOXは市場並み",
-      "impact_on_japan": "指数はもみ合い、銀行相対優位、電機・機械は利益確定を交え選別",
-      "strong_sectors": [
-        "銀行"
-      ],
-      "weak_sectors": [
-        "情報通信・サービス"
-      ],
-      "invalidation": "米金利低下とSOX反発"
-    },
-    {
-      "name": "上振れ",
-      "conditions": "米金利低下、XLK・SOX反発、円急騰なし",
-      "impact_on_japan": "電機・精密、機械の上昇再開",
+      "name": "AI反発継続",
+      "conditions": "SOX・NASDAQ100が続伸し、VIXが20未満、日本の電機精密がTOPIXを上回る",
+      "impact_on_japan": "半導体製造装置・電機精密・機械が追い風",
       "strong_sectors": [
         "電機・精密",
         "機械"
       ],
-      "weak_sectors": [],
-      "invalidation": "米金利再上昇、VIX20超"
+      "weak_sectors": [
+        "ディフェンシブ"
+      ],
+      "invalidation": "SOX反落、VIX20超、日本の上昇業種が過半を割る"
     },
     {
-      "name": "下振れ",
-      "conditions": "米金利・ドル・VIX上昇、XLK続落",
-      "impact_on_japan": "高PER株の戻りが失速し、指数反発を巻き戻す",
+      "name": "物価・金利再警戒",
+      "conditions": "日銀企業物価または米PPIが上振れし、円・金利が上昇",
+      "impact_on_japan": "銀行相対優位、高PER株・不動産に逆風",
       "strong_sectors": [
         "銀行"
       ],
       "weak_sectors": [
-        "電機・精密",
+        "不動産",
         "情報通信・サービス"
       ],
-      "invalidation": "金利低下と市場幅改善"
+      "invalidation": "物価下振れと金利低下"
+    },
+    {
+      "name": "日本市場幅縮小",
+      "conditions": "日経平均が上昇しても17業種の上昇が過半未満",
+      "impact_on_japan": "指数寄与大型株中心で追随リスクが高い",
+      "strong_sectors": [
+        "電機・精密"
+      ],
+      "weak_sectors": [
+        "小売",
+        "食品",
+        "自動車・輸送機"
+      ],
+      "invalidation": "上昇業種が12以上へ拡大"
     }
   ],
   "market_data": [
     {
       "market": "S&P500",
-      "price": "7520.9302",
-      "change": "-29.0098 (-0.38%)",
-      "basis_time": "2026-11-10・日足Close・現在値ではない",
+      "price": "7619.3799",
+      "change": "+98.4497 (+1.31%)",
+      "basis_time": "2026-11-11・日足Close・現在値ではない",
       "source": "market.json / ^GSPC"
     },
     {
       "market": "NASDAQ総合",
-      "price": "25065.8750",
-      "change": "-187.2656 (-0.74%)",
-      "basis_time": "2026-11-10・日足Close・現在値ではない",
+      "price": "25466.1895",
+      "change": "+400.3203 (+1.60%)",
+      "basis_time": "2026-11-11・日足Close・現在値ではない",
       "source": "market.json / ^IXIC"
     },
     {
       "market": "NASDAQ100",
-      "price": "27740.7949",
-      "change": "-166.8359 (-0.60%)",
-      "basis_time": "2026-11-10・日足Close・現在値ではない",
+      "price": "28374.2520",
+      "change": "+633.4629 (+2.28%)",
+      "basis_time": "2026-11-11・日足Close・現在値ではない",
       "source": "market.json / ^NDX"
     },
     {
       "market": "NYダウ",
-      "price": "52231.8906",
-      "change": "-157.8594 (-0.30%)",
-      "basis_time": "2026-11-10・日足Close・現在値ではない",
+      "price": "52486.4883",
+      "change": "+254.5977 (+0.49%)",
+      "basis_time": "2026-11-11・日足Close・現在値ではない",
       "source": "market.json / ^DJI"
     },
     {
       "market": "Russell2000",
-      "price": "2821.3755",
-      "change": "-19.4346 (-0.68%)",
-      "basis_time": "2026-11-10・日足Close・現在値ではない",
+      "price": "2846.2625",
+      "change": "+24.8826 (+0.88%)",
+      "basis_time": "2026-11-11・日足Close・現在値ではない",
       "source": "market.json / ^RUT"
     },
     {
       "market": "PHLX半導体株指数（SOX）",
-      "price": "9998.3301",
-      "change": "-35.5996 (-0.35%)",
-      "basis_time": "2026-11-10・日足Close・現在値ではない",
+      "price": "10564.1113",
+      "change": "+565.7812 (+5.66%)",
+      "basis_time": "2026-11-11・日足Close・現在値ではない",
       "source": "market.json / ^SOX"
     },
     {
       "market": "VIX",
-      "price": "19.4600",
-      "change": "-0.4600 (-2.31%)",
-      "basis_time": "2026-11-10・日足Close・現在値ではない",
+      "price": "17.4900",
+      "change": "-1.9700 (-10.12%)",
+      "basis_time": "2026-11-11・日足Close・現在値ではない",
       "source": "market.json / ^VIX"
     },
     {
       "market": "日経平均",
-      "price": "60,459.58",
-      "change": "+1,684.08 (+2.87%)",
-      "basis_time": "2026-11-10・公式終値",
+      "price": "61,248.59",
+      "change": "+789.01 (+1.31%)",
+      "basis_time": "2026-11-11・公式終値",
       "source": "Nikkei Indexes"
     },
     {
       "market": "TOPIX",
-      "price": "3,893.71",
-      "change": "+75.55 (+1.98%)",
-      "basis_time": "2026-11-10・現物終値",
-      "source": "JPX値を複数市場データで照合"
+      "price": "3,929.39",
+      "change": "+35.68 (+0.92%)",
+      "basis_time": "2026-11-11・現物終値",
+      "source": "市場データで照合"
     },
     {
       "market": "DXY",
-      "price": "101.6500",
-      "change": "-0.6500 (-0.64%)",
-      "basis_time": "2026-11-09・日足Close・現在値ではない",
+      "price": "102.2300",
+      "change": "+0.5800 (+0.57%)",
+      "basis_time": "2026-11-10・日足Close・現在値ではない",
       "source": "market.json / DX-Y.NYB"
     },
     {
       "market": "USD/JPY",
-      "price": "158.2920",
-      "change": "+0.7940 (+0.50%)",
-      "basis_time": "2026-11-09・日足Close・現在値ではない",
+      "price": "157.9830",
+      "change": "-0.3090 (-0.20%)",
+      "basis_time": "2026-11-10・日足Close・現在値ではない",
       "source": "market.json / JPY=X"
     },
     {
@@ -244,309 +248,300 @@
       "market": "Gold",
       "price": "不採用",
       "change": "不採用",
-      "basis_time": "11月9日かつ取引所・限月・値種別・基準時刻の対応未確認",
+      "basis_time": "11月10日かつ取引所・限月・値種別・基準時刻の対応未確認",
       "source": "market.json（値は結論から除外）"
     },
     {
       "market": "Silver",
       "price": "不採用",
       "change": "不採用",
-      "basis_time": "11月9日かつ取引所・限月・値種別・基準時刻の対応未確認",
+      "basis_time": "11月10日かつ取引所・限月・値種別・基準時刻の対応未確認",
       "source": "market.json（値は結論から除外）"
     },
     {
       "market": "Copper",
       "price": "不採用",
       "change": "不採用",
-      "basis_time": "11月9日かつ取引所・限月・値種別・基準時刻の対応未確認",
+      "basis_time": "11月10日かつ取引所・限月・値種別・基準時刻の対応未確認",
       "source": "market.json（値は結論から除外）"
     },
     {
       "market": "WTI",
       "price": "不採用",
       "change": "不採用",
-      "basis_time": "11月9日かつ取引所・限月・値種別・基準時刻の対応未確認",
+      "basis_time": "11月10日かつ取引所・限月・値種別・基準時刻の対応未確認",
       "source": "market.json（値は結論から除外）"
     },
     {
       "market": "Brent",
       "price": "不採用",
       "change": "不採用",
-      "basis_time": "11月9日かつ取引所・限月・値種別・基準時刻の対応未確認",
+      "basis_time": "11月10日かつ取引所・限月・値種別・基準時刻の対応未確認",
       "source": "market.json（値は結論から除外）"
     }
   ],
   "market_overview": [
     {
       "market": "日本株",
-      "move": "日経平均60,459.58（+2.87%）、TOPIX3,893.71（+1.98%）",
-      "relative_strength": "17業種ETF代理は13上昇・4下落。電機・精密+4.39%、機械+4.36%、銀行+3.37%が上位",
-      "background": "前週急落後の買い戻し、AI・半導体関連の反発。CPI公表前の取引",
-      "impact_on_japan": "CPI後の米金利上昇を11日寄り付きで再評価。高PER電機・情報通信の続伸条件は厳しくなった"
+      "move": "日経平均61,248.59（+1.31%）、TOPIX3,929.39（+0.92%）",
+      "relative_strength": "17業種ETF代理は9上昇・8下落。銀行+2.31%、電機・精密+1.90%、鉄鋼・非鉄+1.65%が上位",
+      "background": "前日の反発継続とAI関連期待。ただし自動車-1.46%、食品-1.13%、エネルギー-1.03%",
+      "impact_on_japan": "米半導体反発は電機・精密に追い風候補。上昇業種数の拡大がなければ指数寄与大型株中心と判断"
     },
     {
       "market": "米国株",
-      "move": "S&P500-0.38%、NASDAQ-0.74%、NASDAQ100-0.60%、ダウ-0.30%、Russell2000-0.68%、SOX-0.35%",
-      "relative_strength": "金融+0.52%、エネルギー+0.44%が上位、情報技術-1.15%が最下位。6業種上昇・5業種下落",
-      "background": "CPI上振れ後に金利とドルが上昇。大型・小型とも下落したがVIXは-2.31%",
-      "impact_on_japan": "半導体・高PER株に逆風、銀行には相対追い風候補。全面リスクオフとは評価しない"
+      "move": "S&P500+1.31%、NASDAQ+1.60%、NASDAQ100+2.28%、ダウ+0.49%、Russell2000+0.88%、SOX+5.66%",
+      "relative_strength": "情報技術+3.23%、エネルギー+1.86%、資本財+1.33%が上位。一般消費財-0.05%のみ下落",
+      "background": "CoreWeaveが2026年売上高見通しを引き上げ、AI関連が反発。VIXは-10.12%",
+      "impact_on_japan": "半導体製造装置・電機精密に追い風候補。ただし単日の買い戻しであり、資金調達・高CAPEX懸念は残る"
     },
     {
       "market": "金利・為替",
-      "move": "market.jsonの米2年4.56%、10年4.88%、DXY101.65、USD/JPY158.292は11月9日",
+      "move": "market.jsonの米2年4.56%、10年4.88%は11月9日、DXY102.23とUSD/JPY157.983は11月10日",
       "relative_strength": "同一基準日11月9日に限り2s10sは+32bp",
-      "background": "CPI後の同日値ではないため、Reuters/APで方向（上昇）のみ確認",
-      "impact_on_japan": "朝の実測がないため、銀行・不動産・輸出株の具体的方向は寄り付き後に再確認"
+      "background": "11日は米債券市場が休場。株式の同日反発を金利低下で説明しない",
+      "impact_on_japan": "銀行・不動産・輸出株の具体的方向は、本日寄り付き後の円・国内金利で再確認"
     }
   ],
   "market_move_explanation": {
-    "title": "CPI上振れで米テックが相対劣後",
-    "move": "米主要6指数は全て下落。XLK-1.15%が11業種最下位、XLF+0.52%が首位",
-    "trigger": "BLSの10月CPIは総合+0.4%、コア+0.3%前月比で市場予想を上回り、米金利とドルが上昇",
+    "title": "CoreWeave決算後にAI・半導体が急反発",
+    "move": "SOX+5.66%、NASDAQ100+2.28%、XLK+3.23%。S&P500+1.31%、ダウ+0.49%を大幅に上回った",
+    "trigger": "CoreWeaveが2026年通期売上高見通しを130億〜133億ドルへ引き上げ、AIインフラ需要と資金源の継続を示した",
     "transmission_chain": [
-      "CPI上振れ",
-      "Fed引き締め観測強化",
-      "米金利・ドル上昇",
-      "高PERテックの評価圧縮",
-      "日本の電機・情報通信へ逆風候補"
+      "CoreWeave決算・見通し引き上げ",
+      "AIインフラ需要懸念の後退",
+      "半導体・大型テック買い戻し",
+      "SOX・NASDAQ100上昇",
+      "日本の電機精密へ追い風候補"
     ],
     "hit_hardest": [
       {
-        "market": "米情報技術ETF代理",
-        "reason": "-1.15%で11業種最下位"
+        "market": "米半導体",
+        "reason": "SOX+5.66%で主要指数を大幅に上回る"
       },
       {
-        "market": "Russell2000",
-        "reason": "-0.68%で主要指数下位"
+        "market": "米情報技術ETF代理",
+        "reason": "XLK+3.23%で11業種首位"
       }
     ],
-    "relative_resilience": "米金融+0.52%、エネルギー+0.44%。日本はCPI前に電機・精密+4.39%、機械+4.36%",
-    "japan_impact": "11日朝は高PER電機・情報通信の利益確定圧力と、銀行の相対優位を確認。自動車は円安の追い風と米需要・金利懸念を分ける",
-    "confidence": "supported。CPIはBLS、価格はmarket.json、反応方向はReuters/AP。単一因果は不採用",
-    "invalidation": "米金利がCPI前水準へ低下し、XLK・SOXが反発、VIXが20未満を維持する場合はテック逆風を縮小"
+    "relative_resilience": "米11業種ETF代理は10上昇・1下落だが、SOXとNASDAQ100の上昇率が突出。日本は銀行・電機精密が上位でも9上昇・8下落",
+    "japan_impact": "半導体製造装置・電機精密の追い風候補。銀行は国内金利と企業物価を別途確認。自動車はHonda決算・設備投資負担と円相場を分ける",
+    "confidence": "supported。CoreWeave一次資料、AP、market.json、日本市場実績で確認。単一因果は不採用",
+    "invalidation": "SOX・NASDAQ100が反落し、国内電機精密がTOPIX比で劣後、またはVIXが20超へ戻る場合はAI反発の持続判断を撤回"
   },
   "internal_strength": {
-    "breadth": "米11業種ETF代理は6上昇・5下落。日本17業種ETF代理は13上昇・4下落。日本個別29銘柄は限定サンプルで市場全体とは扱わない",
-    "growth_value": "NASDAQ100-0.60%がダウ-0.30%を下回り、ダウ型優位",
-    "large_small": "Russell2000-0.68%がS&P500-0.38%を下回り、小型株劣後",
-    "semiconductors": "SOX-0.35%でS&P500とほぼ同等、XLK-1.15%より底堅い",
-    "financials": "XLF+0.52%で11業種首位。日本銀行ETF代理+3.37%",
-    "japan": "日経平均+2.87%、TOPIX+1.98%。17業種ETF代理は13上昇・4下落。電機・精密と機械が上位、自動車・小売・医薬品・不動産は下落"
+    "breadth": "米11業種ETF代理は10上昇・1下落。日本17業種ETF代理は9上昇・8下落。日本34銘柄は限定監視ユニバースで市場全体とは扱わない",
+    "growth_value": "NASDAQ100+2.28%がダウ+0.49%を1.79pt上回り、大型グロース優位",
+    "large_small": "S&P500+1.31%がRussell2000+0.88%を0.43pt上回り、大型株優位",
+    "semiconductors": "SOX+5.66%でS&P500を4.35pt上回る",
+    "financials": "XLF+0.58%はS&P500を0.73pt下回る。日本銀行ETF代理は+2.31%で17業種首位",
+    "japan": "日経平均+1.31%、TOPIX+0.92%。17業種ETF代理は9上昇・8下落。銀行・電機精密が上位、自動車・食品・エネルギーが下位"
   },
   "us_sector_etf_closes": [
     {
       "ticker": "XLC",
-      "price": 107.76,
-      "change_pct": 0.37,
-      "market_date": "2026-11-10",
+      "price": 108.6,
+      "change_pct": 0.78,
+      "market_date": "2026-11-11",
       "value_type": "日足Close（ETF代理、業種指数そのものではない）",
       "source": "market.json"
     },
     {
       "ticker": "XLY",
-      "price": 121.05,
-      "change_pct": 0.03,
-      "market_date": "2026-11-10",
+      "price": 120.99,
+      "change_pct": -0.05,
+      "market_date": "2026-11-11",
       "value_type": "日足Close（ETF代理、業種指数そのものではない）",
       "source": "market.json"
     },
     {
       "ticker": "XLP",
-      "price": 91.03,
-      "change_pct": 0.15,
-      "market_date": "2026-11-10",
+      "price": 91.45,
+      "change_pct": 0.46,
+      "market_date": "2026-11-11",
       "value_type": "日足Close（ETF代理、業種指数そのものではない）",
       "source": "market.json"
     },
     {
       "ticker": "XLE",
-      "price": 62.21,
-      "change_pct": 0.44,
-      "market_date": "2026-11-10",
+      "price": 63.37,
+      "change_pct": 1.86,
+      "market_date": "2026-11-11",
       "value_type": "日足Close（ETF代理、業種指数そのものではない）",
       "source": "market.json"
     },
     {
       "ticker": "XLF",
-      "price": 58.29,
-      "change_pct": 0.52,
-      "market_date": "2026-11-10",
+      "price": 58.63,
+      "change_pct": 0.58,
+      "market_date": "2026-11-11",
       "value_type": "日足Close（ETF代理、業種指数そのものではない）",
       "source": "market.json"
     },
     {
       "ticker": "XLV",
-      "price": 188.88,
-      "change_pct": 0.29,
-      "market_date": "2026-11-10",
+      "price": 188.95,
+      "change_pct": 0.04,
+      "market_date": "2026-11-11",
       "value_type": "日足Close（ETF代理、業種指数そのものではない）",
       "source": "market.json"
     },
     {
       "ticker": "XLI",
-      "price": 168.73,
-      "change_pct": -0.09,
-      "market_date": "2026-11-10",
+      "price": 170.97,
+      "change_pct": 1.33,
+      "market_date": "2026-11-11",
       "value_type": "日足Close（ETF代理、業種指数そのものではない）",
       "source": "market.json"
     },
     {
       "ticker": "XLB",
-      "price": 52.85,
-      "change_pct": -0.17,
-      "market_date": "2026-11-10",
+      "price": 53.02,
+      "change_pct": 0.32,
+      "market_date": "2026-11-11",
       "value_type": "日足Close（ETF代理、業種指数そのものではない）",
       "source": "market.json"
     },
     {
       "ticker": "XLRE",
-      "price": 44.58,
-      "change_pct": -0.13,
-      "market_date": "2026-11-10",
+      "price": 44.59,
+      "change_pct": 0.02,
+      "market_date": "2026-11-11",
       "value_type": "日足Close（ETF代理、業種指数そのものではない）",
       "source": "market.json"
     },
     {
       "ticker": "XLK",
-      "price": 168.91,
-      "change_pct": -1.15,
-      "market_date": "2026-11-10",
+      "price": 174.36,
+      "change_pct": 3.23,
+      "market_date": "2026-11-11",
       "value_type": "日足Close（ETF代理、業種指数そのものではない）",
       "source": "market.json"
     },
     {
       "ticker": "XLU",
-      "price": 43.73,
-      "change_pct": -0.14,
-      "market_date": "2026-11-10",
+      "price": 43.82,
+      "change_pct": 0.21,
+      "market_date": "2026-11-11",
       "value_type": "日足Close（ETF代理、業種指数そのものではない）",
       "source": "market.json"
     }
   ],
   "monitoring_points": [
     {
-      "target": "米金利・ドル",
-      "current_view": "CPI後に上昇方向。正確な朝水準は未取得",
-      "change_condition": "金利・ドルがCPI前水準へ低下すれば高PER株逆風を縮小"
-    },
-    {
-      "target": "米テックと金融",
-      "current_view": "XLK劣後、XLF優位",
-      "change_condition": "XLK・SOXがS&P500を上回ればテック調整の見方を撤回"
+      "target": "米AI・半導体",
+      "current_view": "CoreWeave後に急反発",
+      "today_check": "SOX、NASDAQ100、CoreWeave、VIX",
+      "view_change_condition": "SOX反落・VIX20超で持続判断を撤回"
     },
     {
       "target": "日本の市場幅",
-      "current_view": "17業種ETF代理13上昇・4下落",
-      "change_condition": "上昇業種が過半を割る、電機・機械がTOPIXを下回る場合は反発継続を下方修正"
+      "current_view": "17業種は9上昇・8下落",
+      "today_check": "電機精密、銀行、上昇業種数",
+      "view_change_condition": "上昇が過半割れなら全面回復評価を縮小"
+    },
+    {
+      "target": "物価・金利",
+      "current_view": "同日米金利は休場で未確認",
+      "today_check": "日銀企業物価、国内金利、USD/JPY",
+      "view_change_condition": "物価・金利低下で高PER逆風を縮小"
     }
   ],
   "data_quality": {
     "overall": "MANUAL_REVIEW",
     "missing": [
-      "DXY・USD/JPY・米2年・10年債利回りは11月9日で、米株11月10日より1市場日古い。CPI後の同日因果には使用しない",
-      "Gold・Silver・Copper・WTI・Brentは11月9日値で、取引所・限月・清算値対応を確認できず結論から除外。Copperは任意非掲載",
-      "11月11日朝の時刻付きUSD/JPY現在値と限月付き日経225先物実測値は未取得",
-      "日本個別株は34銘柄中29銘柄を取得。8001・6501・7267・9101・9501はレート制限で欠測し、ランキング・Breadthから除外",
+      "DXY・USD/JPYは11月10日、米2年・10年債利回りは11月9日で、米株11月11日と基準日が異なる。11日は米債券市場休場で、同日金利因果には使用しない",
+      "Gold・Silver・Copper・WTI・Brentは11月10日値で、取引所・限月・清算値対応を確認できず結論から除外。Copperは任意非掲載",
+      "11月12日朝の時刻付きUSD/JPY現在値と限月付き日経225先物実測値は未取得",
       "アナリスト評価変更と日本企業開示の全件網羅は未確認で、変更なしとは断定しない",
-      "Project添付仕様書3点は接続済みGoogle Driveの完全一致・部分一致検索とも0件。Project Instructionsとmain現行スキーマ・検証を優先"
+      "Project添付仕様書3点は接続済みGoogle Driveの完全一致検索で0件。Project Instructionsとmain現行スキーマ・検証を優先"
     ],
     "differences": [
-      "米国は11月9日の全面高から11月10日は主要6指数が全て下落。VIXは19.92から19.46へ低下し、全面的な恐怖再燃ではない",
-      "11業種ETF代理は前日の全上昇から6上昇・5下落へ。金融+0.52%、エネルギー+0.44%が相対優位、情報技術-1.15%が最下位",
-      "日本は日経平均+2.87%、TOPIX+1.98%。17業種ETF代理は13上昇・4下落で、電機・精密と機械が上位、自動車・小売・医薬品・不動産は下落",
-      "米CPIは前月比総合+0.4%、コア+0.3%。2025年10月の調査欠測により多くの12か月変化率は算出不能",
-      "日銀主な意見は追加利上げ志向を含むが、会合の新規決定ではない"
+      "米国は11月10日の全面安から11月11日は主要6指数が全て上昇。SOX+5.66%、NASDAQ100+2.28%が主導し、VIXは17.49へ低下",
+      "11業種ETF代理は10上昇・1下落。情報技術+3.23%、エネルギー+1.86%、資本財+1.33%が上位、一般消費財-0.05%のみ下落",
+      "日本は日経平均+1.31%、TOPIX+0.92%。17業種ETF代理は9上昇・8下落で、銀行・電機精密・鉄鋼非鉄が上位、自動車・食品・エネルギーが下位",
+      "前回のCPI後テック劣後から、CoreWeave決算後のAI・半導体反発へ更新。ただし広い日本株上昇とは判定しない",
+      "日本個別株は前日の29/34から34/34へ回復し、11月11日に日付整合"
     ],
     "excluded": [
-      "11月9日の金利・為替を11月10日のCPI後の株価変動原因として扱うこと",
+      "古い金利・為替を11月11日の米株上昇原因として扱うこと",
       "限月・値種別・時刻未確認の商品先物、日経225先物、朝の為替現在値",
       "Copper価格・在庫（任意非掲載）",
-      "欠測5銘柄を含む個別株全体のBreadth・順位断定",
-      "米株下落をCPIだけの単一因果で説明すること",
+      "CoreWeave決算だけで米株全体上昇を単一因果として説明すること",
       "評価変更なし、企業材料を全件確認済みという包括断定"
     ],
     "cautions": [
       "QUALIFIED注釈付き版",
-      "米株は11月10日、金利・DXY・USD/JPYは11月9日を混同しない",
+      "米株は11月11日、金利は11月9日、DXY・USD/JPYは11月10日を混同しない",
       "日本・米国の業種はETF代理で指数そのものではない",
-      "日本個別株は29/34の限定サンプル",
+      "日本個別株34銘柄は限定監視ユニバースで市場全体のBreadthではない",
       "Copperは任意非掲載",
       "事実・市場反応・解釈を分離"
     ]
   },
   "final_conclusion": {
-    "headline": "注釈付き11月11日版｜米CPI上振れで金利再上昇、日本の反発は電機・機械主導だが持続性を再点検",
-    "winners": [
-      "米金融・エネルギー",
-      "日本の電機・精密、機械、銀行"
-    ],
-    "losers": [
-      "米情報技術",
-      "日本の医薬品・小売・自動車ETF代理"
-    ],
-    "top_three": [
-      "米10月CPIは総合+0.4%、コア+0.3%（前月比）。市場予想を上回り、米10年金利とドルが上昇、S&P500-0.38%、NASDAQ-0.74%。ただし年率の多くは2025年10月データ欠測で算出不能",
-      "米株内部は大型・グロースが劣後。NASDAQ100-0.60%、Russell2000-0.68%、SOX-0.35%、ダウ-0.30%。11業種ETF代理は金融+0.52%が首位、情報技術-1.15%が最下位",
-      "日本11月10日は日経平均60,459.58（+2.87%）、TOPIX3,893.71（+1.98%）。17業種ETF代理は13上昇・4下落で、電機・精密+4.39%、機械+4.36%、銀行+3.37%が上位"
-    ],
-    "triggers": [
-      "米金利・USD/JPYのCPI後水準",
-      "11月12日日銀企業物価",
-      "11月13日米PPI"
-    ],
-    "disclaimer": "QUALIFIED。古い金利・為替、未定義先物、欠測5銘柄を除外。推測補完なし。"
+    "stance": "AI・半導体の反発を条件付き追い風とするが、日本の市場幅9対8と古い金利・為替のためQUALIFIED。",
+    "japan_view": "電機精密・銀行を相対注目。自動車はHondaの設備投資・決算反応を個別確認。",
+    "risk": "AI反発の失速、物価上振れ、VIX20超、上昇業種の過半割れ。",
+    "change_condition": "SOX・NASDAQ100続伸と日本の上昇業種拡大で強気化。逆条件で慎重化。"
   },
   "japan_equities_preview": {
-    "summary": "CPI後の金利再上昇を11日朝に織り込む局面。電機・機械の続伸条件と銀行の相対優位を確認",
+    "summary": "米半導体反発は電機精密に追い風候補。ただし日本の上昇業種は9/17で、銀行・電機優位の持続と市場幅拡大を確認",
     "top_materials": [
-      "米10月CPIは総合+0.4%、コア+0.3%（前月比）。市場予想を上回り、米10年金利とドルが上昇、S&P500-0.38%、NASDAQ-0.74%。ただし年率の多くは2025年10月データ欠測で算出不能",
-      "米株内部は大型・グロースが劣後。NASDAQ100-0.60%、Russell2000-0.68%、SOX-0.35%、ダウ-0.30%。11業種ETF代理は金融+0.52%が首位、情報技術-1.15%が最下位",
-      "日本11月10日は日経平均60,459.58（+2.87%）、TOPIX3,893.71（+1.98%）。17業種ETF代理は13上昇・4下落で、電機・精密+4.39%、機械+4.36%、銀行+3.37%が上位",
-      "日銀10月会合の主な意見は追加利上げ継続を唱える意見を含むが、新たな政策決定ではない。銀行ETF代理は+3.37%、不動産は-0.22%だったが単独因果は断定しない",
-      "次の分岐は11月12日日銀企業物価、13日米PPI、16日日本GDP。強い物価と金利上昇が続けば高PER電機・情報通信の戻りが失速する"
+      "CoreWeaveは2026年通期売上高見通しを130億〜133億ドルへ引き上げ。契約前払金・預り金約90億ドルを今後3か月で見込み、AIインフラ需要の継続を示した。米市場ではAI関連が反発",
+      "米国はS&P500+1.31%、NASDAQ+1.60%、NASDAQ100+2.28%、SOX+5.66%、ダウ+0.49%、Russell2000+0.88%、VIX-10.12%。半導体・大型グロース主導で、11業種ETF代理は10上昇・1下落",
+      "日本11月11日は日経平均61,248.59（+1.31%）、TOPIX3,929.39（+0.92%）。17業種ETF代理は9上昇・8下落で、銀行+2.31%、電機・精密+1.90%、鉄鋼・非鉄+1.65%が上位",
+      "Hondaは北米ハイブリッド増産へオハイオ新工場に30億ドル、年24万台、2029年稼働を計画。7267は-4.53%、自動車・輸送機ETF代理は-1.46%で、投資負担と決算後評価を監視",
+      "本日8:50の日銀企業物価、13日22:30の米PPI、16日8:50の日本GDPが次の分岐。物価上振れと金利高が続けば高PER株反発の持続性を下げる"
     ],
     "focus_sectors": [
       "電機・精密",
-      "機械",
       "銀行",
-      "情報通信・サービス",
-      "自動車・輸送機"
+      "鉄鋼・非鉄",
+      "自動車・輸送機",
+      "情報通信・サービス"
     ],
     "top_stories": [
       {
-        "company": "トヨタ自動車",
-        "ticker": "7203",
-        "headline": "決算後の急騰を一部巻き戻し、11月10日は-2.21%",
+        "company": "本田技研工業",
+        "ticker": "7267",
+        "headline": "北米ハイブリッド増産投資を公表、株価は-4.53%",
+        "importance": "high",
+        "market_pricing_status": "公表後取引で下落"
+      },
+      {
+        "company": "ソフトバンクグループ",
+        "ticker": "9984",
+        "headline": "第2四半期決算後、11月11日は-0.44%",
         "importance": "medium",
-        "market_pricing_status": "決算後の急騰を一部巻き戻し"
+        "market_pricing_status": "決算翌日の終値で小幅安"
       }
     ],
-    "total_story_count": 1
+    "total_story_count": 2
   },
   "what_changed": {
-    "summary": "11月10日版の広いリスク回復から、CPI上振れ後のテック中心調整へ更新。日本はCPI前に続伸したため、11日朝の再価格付けを重視。",
+    "summary": "前回のCPI後テック劣後から、CoreWeave決算後のAI・半導体反発へ更新。日本は続伸したが市場幅は9対8で、全面回復とは扱わない。",
     "items": [
-      "米主要6指数は全面高から全面安へ",
-      "XLKが-1.15%で業種最下位、XLF+0.52%で首位",
-      "日本は日経平均+2.87%、TOPIX+1.98%と続伸",
-      "BLSは多くの前年比CPIが算出不能と注記",
-      "日銀主な意見に追加利上げ志向を確認"
+      "米主要6指数は全面安から全面高へ",
+      "SOXは-0.35%から+5.66%、XLKは-1.15%から+3.23%へ反転",
+      "VIXは19.46から17.49へ低下",
+      "日本は日経平均+1.31%、TOPIX+0.92%で続伸",
+      "日本個別株収集は29/34から34/34へ回復"
     ]
   },
   "publication_policy": {
     "status": "QUALIFIED",
     "mode": "provisional",
-    "updated_at": "2026-11-11T06:52:00+09:00",
+    "updated_at": "2026-11-12T07:01:00+09:00",
     "complete_gate": "FAIL",
     "copper_included": false,
-    "note": "11月10日の米主要株・VIX・11業種ETF、公式日本指数・17業種ETF代理・取得済み29銘柄、確認済み一次資料を採用。古い金利・為替、未定義先物、欠測5銘柄を除外した注釈付き公開。",
+    "note": "11月11日の米主要株・VIX・11業種ETF、公式日本指数・17業種ETF代理・34銘柄、確認済み一次資料を採用。古い金利・為替、未定義先物を除外した注釈付き公開。",
     "missing_items": [
-      "DXY・USD/JPY・米2年・10年債利回りは11月9日で、米株11月10日より1市場日古い。CPI後の同日因果には使用しない",
-      "Gold・Silver・Copper・WTI・Brentは11月9日値で、取引所・限月・清算値対応を確認できず結論から除外。Copperは任意非掲載",
-      "11月11日朝の時刻付きUSD/JPY現在値と限月付き日経225先物実測値は未取得",
-      "日本個別株は34銘柄中29銘柄を取得。8001・6501・7267・9101・9501はレート制限で欠測し、ランキング・Breadthから除外",
+      "DXY・USD/JPYは11月10日、米2年・10年債利回りは11月9日で、米株11月11日と基準日が異なる。11日は米債券市場休場で、同日金利因果には使用しない",
+      "Gold・Silver・Copper・WTI・Brentは11月10日値で、取引所・限月・清算値対応を確認できず結論から除外。Copperは任意非掲載",
+      "11月12日朝の時刻付きUSD/JPY現在値と限月付き日経225先物実測値は未取得",
       "アナリスト評価変更と日本企業開示の全件網羅は未確認で、変更なしとは断定しない",
-      "Project添付仕様書3点は接続済みGoogle Driveの完全一致・部分一致検索とも0件。Project Instructionsとmain現行スキーマ・検証を優先"
+      "Project添付仕様書3点は接続済みGoogle Driveの完全一致検索で0件。Project Instructionsとmain現行スキーマ・検証を優先"
     ]
   },
   "market_context_themes": [
@@ -718,6 +713,15 @@
             "nov11-us-cpi",
             "nov11-us-market"
           ]
+        },
+        {
+          "date": "2026-11-11",
+          "title": "CPI後の株安からAI主導で反発",
+          "fact": "11日は米債券市場休場の中、S&P500+1.31%、VIX-10.12%。",
+          "market_impact": "同日金利を確認できないため、金融政策期待の変化を株価だけから断定しない。",
+          "source_ids": [
+            "nov12-us-market"
+          ]
         }
       ],
       "initial_view": {
@@ -725,12 +729,12 @@
         "text": "FRBはインフレを警戒し、利下げを急がない姿勢"
       },
       "new_fact": {
-        "date": "2026-11-10",
-        "text": "10月CPIは総合+0.4%、コア+0.3%前月比。米主要6指数は下落。"
+        "date": "2026-11-11",
+        "text": "11日は米債券市場休場の中、S&P500+1.31%、VIX-10.12%。"
       },
       "market_reaction": {
-        "date": "2026-11-10",
-        "text": "米金利とドルが上昇し、情報技術ETF代理が11業種最下位。"
+        "date": "2026-11-11",
+        "text": "同日金利を確認できないため、金融政策期待の変化を株価だけから断定しない。"
       },
       "current_view": "雇用は急減速を示さず、景気不安を和らげる一方で金利高止まりリスクを残す。10日CPIで物価経路を再確認。",
       "japan_impact": "米テック反発は電機・精密の戻り候補。金利未確認のため銀行・不動産・円の方向は断定しない。",
@@ -768,7 +772,8 @@
         "nov9-bls",
         "nov10-market-rebound",
         "nov11-us-cpi",
-        "nov11-us-market"
+        "nov11-us-market",
+        "nov12-us-market"
       ]
     },
     {
@@ -972,6 +977,16 @@
           "source_ids": [
             "nov11-us-market"
           ]
+        },
+        {
+          "date": "2026-11-11",
+          "title": "CoreWeave決算後に半導体が急反発",
+          "fact": "CoreWeaveは通期売上高見通しを130億〜133億ドルへ引き上げ。SOX+5.66%、NASDAQ100+2.28%。",
+          "market_impact": "AI需要懸念が和らいだが、単日反発であり高CAPEX・資金調達負担は残る。",
+          "source_ids": [
+            "nov12-coreweave",
+            "nov12-us-market"
+          ]
         }
       ],
       "initial_view": {
@@ -979,15 +994,15 @@
         "text": "AI設備投資と先端半導体需要の強さが株価を支える局面"
       },
       "new_fact": {
-        "date": "2026-11-10",
-        "text": "NASDAQ-0.74%、NASDAQ100-0.60%、SOX-0.35%。"
+        "date": "2026-11-11",
+        "text": "CoreWeaveは通期売上高見通しを130億〜133億ドルへ引き上げ。SOX+5.66%、NASDAQ100+2.28%。"
       },
       "market_reaction": {
-        "date": "2026-11-10",
-        "text": "XLK-1.15%が業種最下位。ただしSOXはS&P500並みで全面崩れではない。"
+        "date": "2026-11-11",
+        "text": "AI需要懸念が和らいだが、単日反発であり高CAPEX・資金調達負担は残る。"
       },
-      "current_view": "AI需要仮説の消滅ではなく、高ボラの採算・規制選別局面。SOX続伸と日本の市場幅改善まで反発を転換と扱わない。",
-      "japan_impact": "半導体・AI関連は自律反発候補だが、9984や指数寄与大型株の戻り持続を確認。",
+      "current_view": "AI需要仮説の消滅ではなく、高ボラの採算・資金調達選別局面。SOXの続伸と日本の市場幅改善を確認する。",
+      "japan_impact": "電機・精密と半導体製造装置に追い風候補。日本17業種の上昇が過半を維持できるか確認。",
       "counter_evidence": "SOXの反発、XLK+1.45%、日本ではソニー・日本製鉄が相対耐性。",
       "source_ids": [
         "ai-apr16",
@@ -1019,7 +1034,9 @@
         "us-close-1016",
         "nov9-reuters-us",
         "nov9-reuters-jp",
-        "nov11-us-market"
+        "nov11-us-market",
+        "nov12-coreweave",
+        "nov12-us-market"
       ]
     },
     {
@@ -1187,6 +1204,15 @@
           "source_ids": [
             "nov11-boj-opinions"
           ]
+        },
+        {
+          "date": "2026-11-11",
+          "title": "日本は銀行・電機優位で続伸",
+          "fact": "日経平均+1.31%、TOPIX+0.92%。銀行ETF代理+2.31%で首位。",
+          "market_impact": "日銀企業物価前の金利感応株上昇だが、国内金利との単独因果は未確認。",
+          "source_ids": [
+            "nov12-honda"
+          ]
         }
       ],
       "initial_view": {
@@ -1194,12 +1220,12 @@
         "text": "政策金利0.75%でも利上げを求める意見が増え、正常化継続が意識された"
       },
       "new_fact": {
-        "date": "2026-11-10",
-        "text": "追加利上げ継続や中立金利への接近を唱える意見を確認。"
+        "date": "2026-11-11",
+        "text": "日経平均+1.31%、TOPIX+0.92%。銀行ETF代理+2.31%で首位。"
       },
       "market_reaction": {
-        "date": "2026-11-10",
-        "text": "新規政策決定ではなく、次回会合の確定経路とは扱わない。"
+        "date": "2026-11-11",
+        "text": "日銀企業物価前の金利感応株上昇だが、国内金利との単独因果は未確認。"
       },
       "current_view": "10日8:50の10月会合『主な意見』で基調物価2%到達後の追加利上げ見解を確認。",
       "japan_impact": "円・国内金利を通じ銀行・不動産・輸出株へ分岐。朝の現在値未取得のため方向は条件付き。",
@@ -1236,7 +1262,8 @@
         "oct30-boj-schedule",
         "oct30-japan-market",
         "nov9-boj",
-        "nov11-boj-opinions"
+        "nov11-boj-opinions",
+        "nov12-honda"
       ]
     }
   ],
@@ -1862,23 +1889,30 @@
       "publisher": "Bank of Japan",
       "published_date": "2026-11-10",
       "source_url": "https://www.boj.or.jp/mopo/mpmsche_minu/opinion_2026/opi261030.pdf"
+    },
+    "nov12-coreweave": {
+      "id": "nov12-coreweave",
+      "title": "CoreWeave Reports Strong Third Quarter 2026 Results",
+      "publisher": "CoreWeave",
+      "published_date": "2026-11-10",
+      "source_url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx"
+    },
+    "nov12-us-market": {
+      "id": "nov12-us-market",
+      "title": "How major US stock indexes fared Wednesday 11/11/2026",
+      "publisher": "Associated Press",
+      "published_date": "2026-11-11",
+      "source_url": "https://apnews.com/article/027cd5f4583d1a11c1795150bf065afb"
+    },
+    "nov12-honda": {
+      "id": "nov12-honda",
+      "title": "北米で、新四輪車生産工場の建設および生産拠点への設備投資を決定",
+      "publisher": "Honda",
+      "published_date": "2026-11-10",
+      "source_url": "https://global.honda/jp/news/2026/c261110b.html"
     }
   },
   "events": [
-    {
-      "id": "boj-cgpi-2026-10",
-      "event": "日本・企業物価指数（10月）",
-      "start_at_jst": "2026-11-12T08:50:00+09:00",
-      "jst_time": "2026-11-12 08:50 JST",
-      "forecast": "未確認",
-      "previous": "未確認",
-      "focus": "投入価格と国内物価転嫁",
-      "affected_markets": "円・国内金利・日本株",
-      "importance": "高",
-      "source_url": "https://www.boj.or.jp/about/calendar/",
-      "source_name": "Bank of Japan",
-      "verified_on": "2026-11-11"
-    },
     {
       "id": "us-ppi-2026-10",
       "event": "米生産者物価指数（10月）",
@@ -1891,7 +1925,49 @@
       "importance": "高",
       "source_url": "https://www.bls.gov/schedule/news_release/ppi.htm",
       "source_name": "U.S. Bureau of Labor Statistics",
-      "verified_on": "2026-11-11"
+      "verified_on": "2026-11-12"
+    },
+    {
+      "id": "us-gdp-2026-q3-second",
+      "event": "米GDP（2026年7〜9月期・改定値）",
+      "start_at_jst": "2026-11-25T22:30:00+09:00",
+      "jst_time": "2026-11-25 22:30 JST",
+      "forecast": "未確認",
+      "previous": "未確認",
+      "focus": "速報値からの改定、個人消費、設備投資と金利見通し",
+      "affected_markets": "米国債・ドル・米国株・日本株",
+      "importance": "高",
+      "source_url": "https://www.bea.gov/news/schedule",
+      "source_name": "U.S. Bureau of Economic Analysis",
+      "verified_on": "2026-11-12"
+    },
+    {
+      "id": "us-pce-2026-10",
+      "event": "米PCE物価指数・個人所得支出（10月）",
+      "start_at_jst": "2026-11-25T22:30:00+09:00",
+      "jst_time": "2026-11-25 22:30 JST",
+      "forecast": "未確認",
+      "previous": "未確認",
+      "focus": "基調インフレ、個人消費とFRBの政策判断",
+      "affected_markets": "米国債・ドル・米国株・日本株",
+      "importance": "最重要",
+      "source_url": "https://www.bea.gov/news/schedule",
+      "source_name": "U.S. Bureau of Economic Analysis",
+      "verified_on": "2026-11-12"
+    },
+    {
+      "id": "boj-cgpi-2026-10",
+      "event": "日本・企業物価指数（10月）",
+      "start_at_jst": "2026-11-12T08:50:00+09:00",
+      "jst_time": "2026-11-12 08:50 JST",
+      "forecast": "未確認",
+      "previous": "未確認",
+      "focus": "投入価格と国内物価転嫁",
+      "affected_markets": "円・国内金利・日本株",
+      "importance": "高",
+      "source_url": "https://www.boj.or.jp/about/calendar/",
+      "source_name": "Bank of Japan",
+      "verified_on": "2026-11-12"
     },
     {
       "id": "jp-gdp-2026-q3-first",
@@ -1905,7 +1981,7 @@
       "importance": "最重要",
       "source_url": "https://www.esri.cao.go.jp/jp/sna/kouhyou/kouhyou_top.html",
       "source_name": "内閣府 経済社会総合研究所",
-      "verified_on": "2026-11-11"
+      "verified_on": "2026-11-12"
     },
     {
       "id": "us-import-export-2026-10",
@@ -1919,7 +1995,7 @@
       "importance": "中",
       "source_url": "https://www.bls.gov/schedule/2026/11_sched.htm",
       "source_name": "U.S. Bureau of Labor Statistics",
-      "verified_on": "2026-11-11"
+      "verified_on": "2026-11-12"
     },
     {
       "id": "jp-cpi-2026-10",
@@ -1933,17 +2009,15 @@
       "importance": "最重要",
       "source_url": "https://www.stat.go.jp/data/cpi/",
       "source_name": "総務省統計局",
-      "verified_on": "2026-11-11"
+      "verified_on": "2026-11-12"
     }
   ],
   "events_metadata": {
     "status": "取得済",
-    "updated_at": "2026-11-11T11:51:40+09:00",
-    "window_start": "2026-11-11",
-    "window_end": "2026-11-25",
+    "updated_at": "2026-11-12T07:01:00+09:00",
+    "window_start": "2026-11-12",
+    "window_end": "2026-11-26",
     "timezone": "Asia/Tokyo",
-    "source_policy": "公式日程で確認済みのイベントのみ。予想・前回値は未確認を推測しない",
-    "coverage_note": "公式日程で確認できた主要イベントのみ。市場予想・前回値を確認できない場合は未確認と表示する。",
-    "catalog_version": "1.0"
+    "source_policy": "公式日程で確認済みのイベントのみ。予想・前回値は未確認なら明示。"
   }
 }

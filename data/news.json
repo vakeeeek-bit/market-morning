@@ -1,38 +1,38 @@
 {
-  "report_date": "2026-11-11",
-  "target_market_date": "2026-11-10",
-  "updated_at": "2026-11-11T06:52:00+09:00",
+  "report_date": "2026-11-12",
+  "target_market_date": "2026-11-11",
+  "updated_at": "2026-11-12T07:01:00+09:00",
   "publication_mode": "verified_news",
   "coverage_status": "partial",
-  "coverage_note": "一次本文を実読できた2件のみ掲載。市場反応は正本価格とReuters/APで別確認。企業開示・制裁・通商の当日全件網羅は未確認で、材料なしとは扱わない。",
+  "coverage_note": "一次本文を実読できた2件のみ掲載。市場反応は正本価格とAPで別確認。企業開示・制裁・通商の当日全件網羅は未確認で、材料なしとは扱わない。",
   "articles": [
     {
-      "id": "nov11-us-cpi",
-      "title": "米10月CPI、総合+0.4%・コア+0.3%前月比",
+      "id": "nov12-coreweave",
+      "title": "CoreWeave、2026年売上高見通しを引き上げ",
       "published_date": "2026-11-10",
-      "verified_at": "2026-11-11T06:52:00+09:00",
+      "verified_at": "2026-11-12T07:01:00+09:00",
       "source_type": "primary",
-      "publisher": "U.S. Bureau of Labor Statistics",
-      "source_url": "https://www.bls.gov/news.release/cpi.nr0.htm",
-      "verification_url": "https://www.bls.gov/news.release/cpi.nr0.htm",
+      "publisher": "CoreWeave",
+      "source_url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx",
+      "verification_url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx",
       "verification_status": "PASS",
-      "fact": "10月CPIは前月比で総合+0.4%、コア+0.3%。2025年10月の調査欠測により多くの12か月変化率は算出不能。",
-      "analysis": "市場予想を上回り、金利上昇を通じ高PER株の評価を圧迫したと解釈。",
-      "limitations": "市場予想は一次資料ではない。前年比の多くが欠測で、通常の前年比比較はできない。 市場反応はこの事実専用フィードでは未確認。",
+      "fact": "第3四半期は売上高が前四半期比10億ドル超増加し、調整後営業利益率は計画より1四半期早く2桁へ。2026年売上高見通しを130億〜133億ドルへ引き上げた。",
+      "analysis": "AIインフラ需要の継続を示すが、高い資本支出と資金調達負担は残る。",
+      "limitations": "将来見通しであり達成を保証しない。 市場反応はこの事実専用フィードでは未確認。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
         "source_read": {
           "status": "PASS",
-          "evidence": "U.S. Bureau of Labor Statisticsの一次本文を実読し、発表日・対象・留保を確認。"
+          "evidence": "CoreWeaveの一次本文を実読し、発表日・対象・留保を確認。"
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "10月CPIは前月比で総合+0.4%、コア+0.3%。2025年10月の調査欠測により多くの12か月変化率は算出不能。"
+          "evidence": "第3四半期は売上高が前四半期比10億ドル超増加し、調整後営業利益率は計画より1四半期早く2桁へ。2026年売上高見通しを130億〜133億ドルへ引き上げた。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日2026-11-10、実確認2026-11-11T06:52:00+09:00。発表日・市場日を分離。"
+          "evidence": "発表日2026-11-10、実確認2026-11-12T07:01:00+09:00。発表日・市場日を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
@@ -40,37 +40,37 @@
         },
         "limitations": {
           "status": "PASS",
-          "evidence": "市場予想は一次資料ではない。前年比の多くが欠測で、通常の前年比比較はできない。 市場反応はこの事実専用フィードでは未確認。"
+          "evidence": "将来見通しであり達成を保証しない。 市場反応はこの事実専用フィードでは未確認。"
         }
       }
     },
     {
-      "id": "nov11-boj-opinions",
-      "title": "日銀、10月会合の主な意見を公表",
+      "id": "nov12-honda",
+      "title": "Honda、北米ハイブリッド増産へ30億ドル新工場",
       "published_date": "2026-11-10",
-      "verified_at": "2026-11-11T06:52:00+09:00",
+      "verified_at": "2026-11-12T07:01:00+09:00",
       "source_type": "primary",
-      "publisher": "Bank of Japan",
-      "source_url": "https://www.boj.or.jp/mopo/mpmsche_minu/opinion_2026/opi261030.pdf",
-      "verification_url": "https://www.boj.or.jp/mopo/mpmsche_minu/opinion_2026/opi261030.pdf",
+      "publisher": "Honda",
+      "source_url": "https://global.honda/jp/news/2026/c261110b.html",
+      "verification_url": "https://global.honda/jp/news/2026/c261110b.html",
       "verification_status": "PASS",
-      "fact": "現行金利を維持しリスクを点検する一方、追加利上げ継続や中立金利への接近を唱える意見を収録。ETF売却ペース再検討の意見も記載。",
-      "analysis": "利上げ方向の委員意見は確認できるが、新規政策決定とは扱わない。",
-      "limitations": "意見集であり合意された将来経路ではない。個別委員と市場反応の単独因果は未確認。 市場反応はこの事実専用フィードでは未確認。",
+      "fact": "オハイオ州に年24万台の新工場を建設し2029年稼働予定。約2,000人を雇用し、北米生産能力を167万台から191万台へ引き上げる計画。",
+      "analysis": "北米HV需要への対応力を高める一方、設備投資負担と立ち上げ時期を監視。",
+      "limitations": "計画値であり、政府承認・需要・建設進捗に依存する。 市場反応はこの事実専用フィードでは未確認。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
         "source_read": {
           "status": "PASS",
-          "evidence": "Bank of Japanの一次本文を実読し、発表日・対象・留保を確認。"
+          "evidence": "Hondaの一次本文を実読し、発表日・対象・留保を確認。"
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "現行金利を維持しリスクを点検する一方、追加利上げ継続や中立金利への接近を唱える意見を収録。ETF売却ペース再検討の意見も記載。"
+          "evidence": "オハイオ州に年24万台の新工場を建設し2029年稼働予定。約2,000人を雇用し、北米生産能力を167万台から191万台へ引き上げる計画。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日2026-11-10、実確認2026-11-11T06:52:00+09:00。発表日・市場日を分離。"
+          "evidence": "発表日2026-11-10、実確認2026-11-12T07:01:00+09:00。発表日・市場日を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
@@ -78,7 +78,7 @@
         },
         "limitations": {
           "status": "PASS",
-          "evidence": "意見集であり合意された将来経路ではない。個別委員と市場反応の単独因果は未確認。 市場反応はこの事実専用フィードでは未確認。"
+          "evidence": "計画値であり、政府承認・需要・建設進捗に依存する。 市場反応はこの事実専用フィードでは未確認。"
         }
       }
     }

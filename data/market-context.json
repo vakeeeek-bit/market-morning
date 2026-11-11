@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "updated_at": "2026-11-11T06:52:00+09:00",
-  "report_date": "2026-11-11",
+  "updated_at": "2026-11-12T07:01:00+09:00",
+  "report_date": "2026-11-12",
   "period_start": "2026-03-18",
-  "period_end": "2026-11-10",
+  "period_end": "2026-11-11",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-11-11",
+    "latest_report_date": "2026-11-12",
     "source_report_count": 11,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
@@ -181,6 +181,15 @@
             "nov11-us-cpi",
             "nov11-us-market"
           ]
+        },
+        {
+          "date": "2026-11-11",
+          "title": "CPI後の株安からAI主導で反発",
+          "fact": "11日は米債券市場休場の中、S&P500+1.31%、VIX-10.12%。",
+          "market_impact": "同日金利を確認できないため、金融政策期待の変化を株価だけから断定しない。",
+          "source_ids": [
+            "nov12-us-market"
+          ]
         }
       ],
       "initial_view": {
@@ -188,12 +197,12 @@
         "text": "FRBはインフレを警戒し、利下げを急がない姿勢"
       },
       "new_fact": {
-        "date": "2026-11-10",
-        "text": "10月CPIは総合+0.4%、コア+0.3%前月比。米主要6指数は下落。"
+        "date": "2026-11-11",
+        "text": "11日は米債券市場休場の中、S&P500+1.31%、VIX-10.12%。"
       },
       "market_reaction": {
-        "date": "2026-11-10",
-        "text": "米金利とドルが上昇し、情報技術ETF代理が11業種最下位。"
+        "date": "2026-11-11",
+        "text": "同日金利を確認できないため、金融政策期待の変化を株価だけから断定しない。"
       },
       "current_view": "雇用は急減速を示さず、景気不安を和らげる一方で金利高止まりリスクを残す。10日CPIで物価経路を再確認。",
       "japan_impact": "米テック反発は電機・精密の戻り候補。金利未確認のため銀行・不動産・円の方向は断定しない。",
@@ -231,7 +240,8 @@
         "nov9-bls",
         "nov10-market-rebound",
         "nov11-us-cpi",
-        "nov11-us-market"
+        "nov11-us-market",
+        "nov12-us-market"
       ]
     },
     {
@@ -435,6 +445,16 @@
           "source_ids": [
             "nov11-us-market"
           ]
+        },
+        {
+          "date": "2026-11-11",
+          "title": "CoreWeave決算後に半導体が急反発",
+          "fact": "CoreWeaveは通期売上高見通しを130億〜133億ドルへ引き上げ。SOX+5.66%、NASDAQ100+2.28%。",
+          "market_impact": "AI需要懸念が和らいだが、単日反発であり高CAPEX・資金調達負担は残る。",
+          "source_ids": [
+            "nov12-coreweave",
+            "nov12-us-market"
+          ]
         }
       ],
       "initial_view": {
@@ -442,15 +462,15 @@
         "text": "AI設備投資と先端半導体需要の強さが株価を支える局面"
       },
       "new_fact": {
-        "date": "2026-11-10",
-        "text": "NASDAQ-0.74%、NASDAQ100-0.60%、SOX-0.35%。"
+        "date": "2026-11-11",
+        "text": "CoreWeaveは通期売上高見通しを130億〜133億ドルへ引き上げ。SOX+5.66%、NASDAQ100+2.28%。"
       },
       "market_reaction": {
-        "date": "2026-11-10",
-        "text": "XLK-1.15%が業種最下位。ただしSOXはS&P500並みで全面崩れではない。"
+        "date": "2026-11-11",
+        "text": "AI需要懸念が和らいだが、単日反発であり高CAPEX・資金調達負担は残る。"
       },
-      "current_view": "AI需要仮説の消滅ではなく、高ボラの採算・規制選別局面。SOX続伸と日本の市場幅改善まで反発を転換と扱わない。",
-      "japan_impact": "半導体・AI関連は自律反発候補だが、9984や指数寄与大型株の戻り持続を確認。",
+      "current_view": "AI需要仮説の消滅ではなく、高ボラの採算・資金調達選別局面。SOXの続伸と日本の市場幅改善を確認する。",
+      "japan_impact": "電機・精密と半導体製造装置に追い風候補。日本17業種の上昇が過半を維持できるか確認。",
       "counter_evidence": "SOXの反発、XLK+1.45%、日本ではソニー・日本製鉄が相対耐性。",
       "source_ids": [
         "ai-apr16",
@@ -482,7 +502,9 @@
         "us-close-1016",
         "nov9-reuters-us",
         "nov9-reuters-jp",
-        "nov11-us-market"
+        "nov11-us-market",
+        "nov12-coreweave",
+        "nov12-us-market"
       ]
     },
     {
@@ -650,6 +672,15 @@
           "source_ids": [
             "nov11-boj-opinions"
           ]
+        },
+        {
+          "date": "2026-11-11",
+          "title": "日本は銀行・電機優位で続伸",
+          "fact": "日経平均+1.31%、TOPIX+0.92%。銀行ETF代理+2.31%で首位。",
+          "market_impact": "日銀企業物価前の金利感応株上昇だが、国内金利との単独因果は未確認。",
+          "source_ids": [
+            "nov12-honda"
+          ]
         }
       ],
       "initial_view": {
@@ -657,12 +688,12 @@
         "text": "政策金利0.75%でも利上げを求める意見が増え、正常化継続が意識された"
       },
       "new_fact": {
-        "date": "2026-11-10",
-        "text": "追加利上げ継続や中立金利への接近を唱える意見を確認。"
+        "date": "2026-11-11",
+        "text": "日経平均+1.31%、TOPIX+0.92%。銀行ETF代理+2.31%で首位。"
       },
       "market_reaction": {
-        "date": "2026-11-10",
-        "text": "新規政策決定ではなく、次回会合の確定経路とは扱わない。"
+        "date": "2026-11-11",
+        "text": "日銀企業物価前の金利感応株上昇だが、国内金利との単独因果は未確認。"
       },
       "current_view": "10日8:50の10月会合『主な意見』で基調物価2%到達後の追加利上げ見解を確認。",
       "japan_impact": "円・国内金利を通じ銀行・不動産・輸出株へ分岐。朝の現在値未取得のため方向は条件付き。",
@@ -699,11 +730,25 @@
         "oct30-boj-schedule",
         "oct30-japan-market",
         "nov9-boj",
-        "nov11-boj-opinions"
+        "nov11-boj-opinions",
+        "nov12-honda"
       ]
     }
   ],
-  "scenario_change_conditions": [],
+  "scenario_change_conditions": [
+    {
+      "condition": "米AI・半導体",
+      "meaning": "SOX反落・VIX20超で持続判断を撤回"
+    },
+    {
+      "condition": "日本の市場幅",
+      "meaning": "上昇が過半割れなら全面回復評価を縮小"
+    },
+    {
+      "condition": "物価・金利",
+      "meaning": "物価・金利低下で高PER逆風を縮小"
+    }
+  ],
   "sources": [
     {
       "id": "fed-apr29",
@@ -937,6 +982,13 @@
       "url": "https://apnews.com/article/wall-street-stocks-dow-nasdaq-a97eb31c415811065561f2c2ac552cd7"
     },
     {
+      "id": "nov12-us-market",
+      "title": "How major US stock indexes fared Wednesday 11/11/2026",
+      "publisher": "Associated Press",
+      "published_at": "2026-11-11",
+      "url": "https://apnews.com/article/027cd5f4583d1a11c1795150bf065afb"
+    },
+    {
       "id": "ai-apr16",
       "title": "Strong ASML, TSMC forecasts signal AI spending boom is intact",
       "publisher": "Reuters",
@@ -1047,6 +1099,13 @@
       "publisher": "Reuters / Newsweek Japan",
       "published_at": "2026-11-06",
       "url": "https://www.newsweekjapan.jp/articles/-/339313"
+    },
+    {
+      "id": "nov12-coreweave",
+      "title": "CoreWeave Reports Strong Third Quarter 2026 Results",
+      "publisher": "CoreWeave",
+      "published_at": "2026-11-10",
+      "url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx"
     },
     {
       "id": "boj-apr28",
@@ -1222,6 +1281,13 @@
       "publisher": "Bank of Japan",
       "published_at": "2026-11-10",
       "url": "https://www.boj.or.jp/mopo/mpmsche_minu/opinion_2026/opi261030.pdf"
+    },
+    {
+      "id": "nov12-honda",
+      "title": "北米で、新四輪車生産工場の建設および生産拠点への設備投資を決定",
+      "publisher": "Honda",
+      "published_at": "2026-11-10",
+      "url": "https://global.honda/jp/news/2026/c261110b.html"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-11 10:58:46",
+  "updated_at": "2026-11-11 11:51:41",
   "timezone": "Asia/Tokyo",
   "source": "Yahoo Finance via yfinance for market closes; FRED DGS2/DGS10 for US Treasury yields",
   "notes": {
@@ -160,13 +160,13 @@
     "sector_xlc": {
       "name": "米コミュニケーション・サービス（XLC）",
       "ticker": "XLC",
-      "price": 107.36,
-      "previous": 104.79,
-      "change": 2.57,
-      "change_pct": 2.45,
+      "price": 107.76,
+      "previous": 107.36,
+      "change": 0.4,
+      "change_pct": 0.37,
       "status": "取得成功",
-      "market_date": "2026-11-09",
-      "previous_market_date": "2026-11-06"
+      "market_date": "2026-11-10",
+      "previous_market_date": "2026-11-09"
     },
     "sector_xly": {
       "name": "米一般消費財（XLY）",
@@ -248,13 +248,13 @@
     "sector_xlre": {
       "name": "米不動産（XLRE）",
       "ticker": "XLRE",
-      "price": 44.64,
-      "previous": 44.0,
-      "change": 0.64,
-      "change_pct": 1.45,
+      "price": 44.58,
+      "previous": 44.64,
+      "change": -0.06,
+      "change_pct": -0.13,
       "status": "取得成功",
-      "market_date": "2026-11-09",
-      "previous_market_date": "2026-11-06"
+      "market_date": "2026-11-10",
+      "previous_market_date": "2026-11-09"
     },
     "sector_xlk": {
       "name": "米情報技術（XLK）",

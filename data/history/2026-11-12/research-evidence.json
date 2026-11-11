@@ -2,7 +2,7 @@
   "version": "2.0",
   "report_date": "2026-11-12",
   "target_market_date": "2026-11-11",
-  "updated_at": "2026-11-12T07:01:00+09:00",
+  "updated_at": "2026-11-12T07:06:00+09:00",
   "scope_note": "市場32系列、日本17業種・34銘柄、一次資料、異常値、前日差分を確認。未定義値と網羅不能項目は除外。",
   "research_coverage": {
     "status": "QUALIFIED",
@@ -486,32 +486,32 @@
   },
   "publication_decision": {
     "status": "QUALIFIED",
-    "decided_at": "2026-11-12T07:01:00+09:00",
+    "decided_at": "2026-11-12T07:06:00+09:00",
     "summary": "古い金利・FX、未定義先物を除外し、確認済み市場・ニュースを注釈付き公開可能。",
     "components": {
       "ai_report": {
         "status": "QUALIFIED",
-        "updated_at": "2026-11-12T07:01:00+09:00",
+        "updated_at": "2026-11-12T07:06:00+09:00",
         "reason": "古い金利・FXと未定義値を除外"
       },
       "world_market": {
         "status": "PASS",
-        "updated_at": "2026-11-12T07:01:00+09:00",
+        "updated_at": "2026-11-12T07:06:00+09:00",
         "reason": "米主要株・VIX・11業種ETFは11月11日同日正本"
       },
       "japan_market": {
         "status": "PASS",
-        "updated_at": "2026-11-12T07:01:00+09:00",
+        "updated_at": "2026-11-12T07:06:00+09:00",
         "reason": "17業種・34銘柄・ベンチマークは11月11日整合"
       },
       "japan_stocks": {
         "status": "QUALIFIED",
-        "updated_at": "2026-11-12T07:01:00+09:00",
+        "updated_at": "2026-11-12T07:06:00+09:00",
         "reason": "企業ニュース・評価変更の全件網羅不能を注記"
       },
       "verified_news": {
         "status": "PASS",
-        "updated_at": "2026-11-12T07:01:00+09:00",
+        "updated_at": "2026-11-12T07:06:00+09:00",
         "reason": "2件の一次本文を実読"
       }
     },
@@ -521,7 +521,7 @@
         "status": "QUALIFIED",
         "missing": "DXY・USD/JPYは11月10日、米2年・10年債利回りは11月9日で、米株11月11日と基準日が異なる。11日は米債券市場休場で、同日金利因果には使用しない",
         "impact": "米株11月11日の金利・為替因果から除外",
-        "last_checked_at": "2026-11-12T07:01:00+09:00",
+        "last_checked_at": "2026-11-12T07:06:00+09:00",
         "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
         "attempts": [
           {
@@ -652,7 +652,7 @@
         "status": "QUALIFIED",
         "missing": "Gold・Silver・Copper・WTI・Brentは11月10日値で、取引所・限月・清算値対応を確認できず結論から除外。Copperは任意非掲載",
         "impact": "商品先物の価格・前日比を結論から除外",
-        "last_checked_at": "2026-11-12T07:01:00+09:00",
+        "last_checked_at": "2026-11-12T07:06:00+09:00",
         "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
         "attempts": [
           {
@@ -797,7 +797,7 @@
         "status": "QUALIFIED",
         "missing": "11月12日朝の時刻付きUSD/JPY現在値と限月付き日経225先物実測値は未取得",
         "impact": "朝の現在値・先物示唆を除外",
-        "last_checked_at": "2026-11-12T07:01:00+09:00",
+        "last_checked_at": "2026-11-12T07:06:00+09:00",
         "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
         "attempts": [
           {
@@ -928,7 +928,7 @@
         "status": "QUALIFIED",
         "missing": "アナリスト評価変更と日本企業開示の全件網羅は未確認で、変更なしとは断定しない",
         "impact": "変更なし・企業ニュース網羅の包括断定を除外",
-        "last_checked_at": "2026-11-12T07:01:00+09:00",
+        "last_checked_at": "2026-11-12T07:06:00+09:00",
         "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
         "attempts": [
           {
@@ -1059,7 +1059,7 @@
         "status": "QUALIFIED",
         "missing": "Project添付仕様書3点は接続済みGoogle Driveの完全一致検索で0件。Project Instructionsとmain現行スキーマ・検証を優先",
         "impact": "添付仕様書実読済みという主張を除外",
-        "last_checked_at": "2026-11-12T07:01:00+09:00",
+        "last_checked_at": "2026-11-12T07:06:00+09:00",
         "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
         "attempts": [
           {

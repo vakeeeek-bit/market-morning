@@ -1,8 +1,8 @@
 {
-  "status": "qualified",
-  "updated_at": "2026-11-12 06:49:00 JST",
-  "message": "Market and Japan market data update completed; qualified exclusions documented.",
-  "component": "publication_bundle",
-  "publication_status": "QUALIFIED",
-  "component_updated_at": "2026-11-12T07:06:00+09:00"
+  "status": "success",
+  "updated_at": "2026-11-12 11:19:12 JST",
+  "message": "Market data update completed and validation passed.",
+  "component": "market_data",
+  "publication_status": "PASS",
+  "component_updated_at": "2026-11-12 11:19:03"
 }

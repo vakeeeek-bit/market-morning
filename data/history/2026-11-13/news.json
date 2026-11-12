@@ -1,0 +1,86 @@
+{
+  "report_date": "2026-11-13",
+  "target_market_date": "2026-11-12",
+  "updated_at": "2026-11-13T06:52:00+09:00",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "一次本文を実読できた2件のみ掲載。市場反応は正本価格とAP/Reutersで別確認。企業開示・制裁・通商の当日全件網羅は未確認で、材料なしとは扱わない。",
+  "articles": [
+    {
+      "id": "nov13-nvidia",
+      "title": "NVIDIA、CEO交代を発表",
+      "published_date": "2026-11-12",
+      "verified_at": "2026-11-13T06:52:00+09:00",
+      "source_type": "primary",
+      "publisher": "NVIDIA",
+      "source_url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-CEO-Transition/",
+      "verification_url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-CEO-Transition/",
+      "verification_status": "PASS",
+      "fact": "ジェンスン・フアン氏がCEO・取締役を即時辞任し、CFOコレット・クレス氏が暫定CEOを兼務。取締役会は後任を社内外から選定する。",
+      "analysis": "製品ロードマップ継続を表明したが、経営移行リスクを監視。",
+      "limitations": "後任・調査結果・顧客行動は未確定。市場反応は事実専用フィードから除外。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "NVIDIAの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "ジェンスン・フアン氏がCEO・取締役を即時辞任し、CFOコレット・クレス氏が暫定CEOを兼務。取締役会は後任を社内外から選定する。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-12、実確認2026-11-13T06:52:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。市場反応は事実専用フィードから除外。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "後任・調査結果・顧客行動は未確定。市場反応は事実専用フィードから除外。"
+        }
+      }
+    },
+    {
+      "id": "nov13-boj-cgpi",
+      "title": "日銀、10月企業物価を公表",
+      "published_date": "2026-11-12",
+      "verified_at": "2026-11-13T06:52:00+09:00",
+      "source_type": "primary",
+      "publisher": "日本銀行",
+      "source_url": "https://www.boj.or.jp/statistics/pi/cgpi_release/cgpi2610.pdf",
+      "verification_url": "https://www.boj.or.jp/statistics/pi/cgpi_release/cgpi2610.pdf",
+      "verification_status": "PASS",
+      "fact": "国内企業物価指数は前月比+0.7%、前年比+7.1%。円ベース輸入物価は前月比+3.3%、前年比+24.8%。",
+      "analysis": "企業マージンと国内金利への波及をGDP・円相場と合わせて監視。",
+      "limitations": "速報値であり、金融政策決定ではない。市場反応は事実専用フィードから除外。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "日本銀行の一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "国内企業物価指数は前月比+0.7%、前年比+7.1%。円ベース輸入物価は前月比+3.3%、前年比+24.8%。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-12、実確認2026-11-13T06:52:00+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。市場反応は事実専用フィードから除外。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "速報値であり、金融政策決定ではない。市場反応は事実専用フィードから除外。"
+        }
+      }
+    }
+  ]
+}

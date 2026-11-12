@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "updated_at": "2026-11-12T07:06:00+09:00",
-  "report_date": "2026-11-12",
+  "updated_at": "2026-11-13T06:52:00+09:00",
+  "report_date": "2026-11-13",
   "period_start": "2026-03-18",
-  "period_end": "2026-11-11",
+  "period_end": "2026-11-12",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-11-12",
+    "latest_report_date": "2026-11-13",
     "source_report_count": 11,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
@@ -190,6 +190,15 @@
           "source_ids": [
             "nov12-us-market"
           ]
+        },
+        {
+          "date": "2026-11-12",
+          "title": "PPI前に米小型株が劣後",
+          "fact": "11月12日は米主要6指数が下落し、Russell2000が最弱。",
+          "market_impact": "Russell2000-1.66%、VIX+6.92%。",
+          "source_ids": [
+            "nov13-us-market"
+          ]
         }
       ],
       "initial_view": {
@@ -197,16 +206,16 @@
         "text": "FRBはインフレを警戒し、利下げを急がない姿勢"
       },
       "new_fact": {
-        "date": "2026-11-11",
-        "text": "11日は米債券市場休場の中、S&P500+1.31%、VIX-10.12%。"
+        "date": "2026-11-12",
+        "text": "11月13日米PPIを前に、米主要6指数が下落し小型株が劣後。"
       },
       "market_reaction": {
-        "date": "2026-11-11",
-        "text": "同日金利を確認できないため、金融政策期待の変化を株価だけから断定しない。"
+        "date": "2026-11-12",
+        "text": "Russell2000-1.66%、S&P500-0.35%、VIX+6.92%。"
       },
-      "current_view": "雇用は急減速を示さず、景気不安を和らげる一方で金利高止まりリスクを残す。10日CPIで物価経路を再確認。",
-      "japan_impact": "米テック反発は電機・精密の戻り候補。金利未確認のため銀行・不動産・円の方向は断定しない。",
-      "counter_evidence": "NASDAQは週間4週続落、VIX25.64、米11業種ETFは8業種下落。",
+      "current_view": "物価と政策金利の再評価はPPI確認まで未決着。",
+      "japan_impact": "PPI上振れなら円・金利・高PER株に逆風。",
+      "counter_evidence": "金利・FX正本は米株より古く、同日因果には使用しない。",
       "source_ids": [
         "fed-apr29",
         "fed-mar18",
@@ -241,7 +250,8 @@
         "nov10-market-rebound",
         "nov11-us-cpi",
         "nov11-us-market",
-        "nov12-us-market"
+        "nov12-us-market",
+        "nov13-us-market"
       ]
     },
     {
@@ -455,6 +465,17 @@
             "nov12-coreweave",
             "nov12-us-market"
           ]
+        },
+        {
+          "date": "2026-11-12",
+          "title": "NVIDIA CEO交代",
+          "fact": "NVIDIAはフアン氏の即時辞任とクレス氏の暫定CEO就任を発表。",
+          "market_impact": "SOX-0.54%、日本電機精密ETF代理-1.31%。",
+          "source_ids": [
+            "nov13-nvidia",
+            "nov13-us-market",
+            "nov13-japan-market"
+          ]
         }
       ],
       "initial_view": {
@@ -462,16 +483,16 @@
         "text": "AI設備投資と先端半導体需要の強さが株価を支える局面"
       },
       "new_fact": {
-        "date": "2026-11-11",
-        "text": "CoreWeaveは通期売上高見通しを130億〜133億ドルへ引き上げ。SOX+5.66%、NASDAQ100+2.28%。"
+        "date": "2026-11-12",
+        "text": "NVIDIAはフアン氏の即時辞任とクレス氏の暫定CEO就任を発表。"
       },
       "market_reaction": {
-        "date": "2026-11-11",
-        "text": "AI需要懸念が和らいだが、単日反発であり高CAPEX・資金調達負担は残る。"
+        "date": "2026-11-12",
+        "text": "NVIDIAは日中一時14%下落後に下げ幅を縮小、SOX-0.54%。"
       },
-      "current_view": "AI需要仮説の消滅ではなく、高ボラの採算・資金調達選別局面。SOXの続伸と日本の市場幅改善を確認する。",
-      "japan_impact": "電機・精密と半導体製造装置に追い風候補。日本17業種の上昇が過半を維持できるか確認。",
-      "counter_evidence": "SOXの反発、XLK+1.45%、日本ではソニー・日本製鉄が相対耐性。",
+      "current_view": "AI需要の中期背景は維持するが、11月17日決算までは経営移行プレミアムを上乗せ。",
+      "japan_impact": "電機精密・半導体製造装置に逆風候補。",
+      "counter_evidence": "会社は製品ロードマップと顧客対応の継続を表明。",
       "source_ids": [
         "ai-apr16",
         "ai-credit-1016",
@@ -504,7 +525,10 @@
         "nov9-reuters-jp",
         "nov11-us-market",
         "nov12-coreweave",
-        "nov12-us-market"
+        "nov12-us-market",
+        "nov13-nvidia",
+        "nov13-us-market",
+        "nov13-japan-market"
       ]
     },
     {
@@ -681,6 +705,16 @@
           "source_ids": [
             "nov12-honda"
           ]
+        },
+        {
+          "date": "2026-11-12",
+          "title": "10月企業物価は前年比+7.1%",
+          "fact": "円ベース輸入物価は前年比+24.8%でコスト圧力を再確認。",
+          "market_impact": "TOPIX+0.20%、銀行-0.55%、不動産+2.80%。",
+          "source_ids": [
+            "nov13-boj-cgpi",
+            "nov13-japan-market"
+          ]
         }
       ],
       "initial_view": {
@@ -688,16 +722,16 @@
         "text": "政策金利0.75%でも利上げを求める意見が増え、正常化継続が意識された"
       },
       "new_fact": {
-        "date": "2026-11-11",
-        "text": "日経平均+1.31%、TOPIX+0.92%。銀行ETF代理+2.31%で首位。"
+        "date": "2026-11-12",
+        "text": "国内企業物価は前年比+7.1%、円ベース輸入物価は+24.8%。"
       },
       "market_reaction": {
-        "date": "2026-11-11",
-        "text": "日銀企業物価前の金利感応株上昇だが、国内金利との単独因果は未確認。"
+        "date": "2026-11-12",
+        "text": "日経平均-0.70%、TOPIX+0.20%。銀行安・不動産高で単純な金利上昇取引ではない。"
       },
-      "current_view": "10日8:50の10月会合『主な意見』で基調物価2%到達後の追加利上げ見解を確認。",
-      "japan_impact": "円・国内金利を通じ銀行・不動産・輸出株へ分岐。朝の現在値未取得のため方向は条件付き。",
-      "counter_evidence": "11月6日は銀行ETF代理-6.94%、不動産-7.67%で、前日のTOPIX/value優位は崩れた。",
+      "current_view": "輸入コストと国内金利の両面をGDP・円相場と合わせて確認。",
+      "japan_impact": "価格転嫁力・金利感応度で業種選別。",
+      "counter_evidence": "企業物価は金融政策決定ではなく、同日相場はNVIDIA要因も重なる。",
       "source_ids": [
         "boj-apr28",
         "boj-jun16",
@@ -731,22 +765,32 @@
         "oct30-japan-market",
         "nov9-boj",
         "nov11-boj-opinions",
-        "nov12-honda"
+        "nov12-honda",
+        "nov13-boj-cgpi",
+        "nov13-japan-market"
       ]
     }
   ],
   "scenario_change_conditions": [
     {
-      "condition": "米AI・半導体",
-      "meaning": "SOX反落・VIX20超で持続判断を撤回"
+      "condition": "NVIDIA・AI半導体",
+      "meaning": "SOX安定・電機精密TOPIX超過で逆風評価を縮小"
     },
     {
-      "condition": "日本の市場幅",
-      "meaning": "上昇が過半割れなら全面回復評価を縮小"
+      "condition": "米市場幅",
+      "meaning": "小型株優位・6業種以上上昇でリスク回避評価を縮小"
+    },
+    {
+      "condition": "日本のローテーション",
+      "meaning": "電機精密優位・上昇業種過半割れで内需優位を撤回"
     },
     {
       "condition": "物価・金利",
-      "meaning": "物価・金利低下で高PER逆風を縮小"
+      "meaning": "物価下振れ・金利低下で高PER逆風を縮小"
+    },
+    {
+      "condition": "イベント",
+      "meaning": "予想差と価格反応でシナリオを更新"
     }
   ],
   "sources": [
@@ -989,6 +1033,13 @@
       "url": "https://apnews.com/article/027cd5f4583d1a11c1795150bf065afb"
     },
     {
+      "id": "nov13-us-market",
+      "title": "How major US stock indexes fared Thursday 11/12/2026",
+      "publisher": "Associated Press",
+      "published_at": "2026-11-12",
+      "url": "https://apnews.com/article/3f3668a937a11535103e3a5c8d82c9fc"
+    },
+    {
       "id": "ai-apr16",
       "title": "Strong ASML, TSMC forecasts signal AI spending boom is intact",
       "publisher": "Reuters",
@@ -1106,6 +1157,20 @@
       "publisher": "CoreWeave",
       "published_at": "2026-11-10",
       "url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx"
+    },
+    {
+      "id": "nov13-nvidia",
+      "title": "NVIDIA Announces CEO Transition",
+      "publisher": "NVIDIA",
+      "published_at": "2026-11-12",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-CEO-Transition/"
+    },
+    {
+      "id": "nov13-japan-market",
+      "title": "日経平均日次サマリー 2026年11月12日",
+      "publisher": "Nikkei Indexes",
+      "published_at": "2026-11-12",
+      "url": "https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20261112&idx=nk225"
     },
     {
       "id": "boj-apr28",
@@ -1288,6 +1353,13 @@
       "publisher": "Honda",
       "published_at": "2026-11-10",
       "url": "https://global.honda/jp/news/2026/c261110b.html"
+    },
+    {
+      "id": "nov13-boj-cgpi",
+      "title": "企業物価指数（2026年10月）",
+      "publisher": "日本銀行",
+      "published_at": "2026-11-12",
+      "url": "https://www.boj.or.jp/statistics/pi/cgpi_release/cgpi2610.pdf"
     }
   ]
 }

@@ -2,20 +2,36 @@
   "version": "1.0",
   "description": "確認済み一次資料の表示設定",
   "items": {
-    "nov13-nvidia": {
+    "nov16-us-ppi": {
       "primary_page": "world",
       "priority": 100,
       "attention_points": [
-        "CEO・取締役の即時辞任",
-        "暫定CEO体制と製品ロードマップ継続"
+        "10月PPIは前月比+0.3%、前年比+6.5%",
+        "市場反応と単一因果にしない"
       ]
     },
-    "nov13-boj-cgpi": {
+    "nov16-mufg": {
       "primary_page": "japan",
-      "priority": 95,
+      "priority": 100,
       "attention_points": [
-        "国内企業物価前年比+7.1%",
-        "円ベース輸入物価前年比+24.8%"
+        "利益目標2.8兆円・年間配当100円",
+        "発表時刻未確認で同日終値を反応に使わない"
+      ]
+    },
+    "nov16-ustr-industrias-fg": {
+      "primary_page": "world",
+      "priority": 65,
+      "attention_points": [
+        "USMCA労働メカニズムの個別施設案件",
+        "広範な関税措置ではない"
+      ]
+    },
+    "nov16-ofac-guatemala": {
+      "primary_page": "world",
+      "priority": 55,
+      "attention_points": [
+        "グアテマラの2組織を制裁指定",
+        "日本株への直接影響は限定的"
       ]
     }
   }

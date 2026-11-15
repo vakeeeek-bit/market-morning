@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "updated_at": "2026-11-13T06:52:00+09:00",
-  "report_date": "2026-11-13",
+  "updated_at": "2026-11-16T07:00:44+09:00",
+  "report_date": "2026-11-16",
   "period_start": "2026-03-18",
-  "period_end": "2026-11-12",
+  "period_end": "2026-11-16",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-11-13",
+    "latest_report_date": "2026-11-16",
     "source_report_count": 11,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
@@ -199,6 +199,16 @@
           "source_ids": [
             "nov13-us-market"
           ]
+        },
+        {
+          "date": "2026-11-13",
+          "title": "米PPI上昇と金利警戒",
+          "fact": "10月PPIは前月比+0.3%、前年比+6.5%。",
+          "market_impact": "S&P500-0.40%、NASDAQ100-1.22%、米国債利回りは上昇。",
+          "source_ids": [
+            "nov16-us-ppi",
+            "nov16-us-close"
+          ]
         }
       ],
       "initial_view": {
@@ -206,12 +216,12 @@
         "text": "FRBはインフレを警戒し、利下げを急がない姿勢"
       },
       "new_fact": {
-        "date": "2026-11-12",
-        "text": "11月13日米PPIを前に、米主要6指数が下落し小型株が劣後。"
+        "date": "2026-11-13",
+        "text": "10月PPIは前月比+0.3%、前年比+6.5%。"
       },
       "market_reaction": {
-        "date": "2026-11-12",
-        "text": "Russell2000-1.66%、S&P500-0.35%、VIX+6.92%。"
+        "date": "2026-11-13",
+        "text": "S&P500-0.40%、NASDAQ100-1.22%、米国債利回りは上昇。"
       },
       "current_view": "物価と政策金利の再評価はPPI確認まで未決着。",
       "japan_impact": "PPI上振れなら円・金利・高PER株に逆風。",
@@ -251,7 +261,9 @@
         "nov11-us-cpi",
         "nov11-us-market",
         "nov12-us-market",
-        "nov13-us-market"
+        "nov13-us-market",
+        "nov16-us-ppi",
+        "nov16-us-close"
       ]
     },
     {
@@ -476,6 +488,15 @@
             "nov13-us-market",
             "nov13-japan-market"
           ]
+        },
+        {
+          "date": "2026-11-13",
+          "title": "半導体・情報技術へ売り集中",
+          "fact": "NVIDIA経営移行後の不透明感とPPIが重なった。",
+          "market_impact": "SOX-3.43%、NASDAQ100-1.22%、XLK-2.01%。",
+          "source_ids": [
+            "nov16-us-close"
+          ]
         }
       ],
       "initial_view": {
@@ -483,12 +504,12 @@
         "text": "AI設備投資と先端半導体需要の強さが株価を支える局面"
       },
       "new_fact": {
-        "date": "2026-11-12",
-        "text": "NVIDIAはフアン氏の即時辞任とクレス氏の暫定CEO就任を発表。"
+        "date": "2026-11-13",
+        "text": "NVIDIA経営移行後の不透明感とPPIが重なった。"
       },
       "market_reaction": {
-        "date": "2026-11-12",
-        "text": "NVIDIAは日中一時14%下落後に下げ幅を縮小、SOX-0.54%。"
+        "date": "2026-11-13",
+        "text": "SOX-3.43%、NASDAQ100-1.22%、XLK-2.01%。"
       },
       "current_view": "AI需要の中期背景は維持するが、11月17日決算までは経営移行プレミアムを上乗せ。",
       "japan_impact": "電機精密・半導体製造装置に逆風候補。",
@@ -528,7 +549,8 @@
         "nov12-us-market",
         "nov13-nvidia",
         "nov13-us-market",
-        "nov13-japan-market"
+        "nov13-japan-market",
+        "nov16-us-close"
       ]
     },
     {
@@ -715,6 +737,24 @@
             "nov13-boj-cgpi",
             "nov13-japan-market"
           ]
+        },
+        {
+          "date": "2026-11-13",
+          "title": "日本株は内需優位",
+          "fact": "日経平均+0.53%、TOPIX+0.11%。",
+          "market_impact": "17業種ETF代理は11上昇・6下落、小売・食品・運輸物流が上位。",
+          "source_ids": [
+            "nov16-japan-close"
+          ]
+        },
+        {
+          "date": "2026-11-16",
+          "title": "日本GDP公表待ち",
+          "fact": "7-9月期GDP 1次速報は11月16日08:50公表予定。",
+          "market_impact": "公表前のため方向は未確認。円・国内金利・銀行と内需の反応待ち。",
+          "source_ids": [
+            "nov16-jp-gdp-schedule"
+          ]
         }
       ],
       "initial_view": {
@@ -722,12 +762,12 @@
         "text": "政策金利0.75%でも利上げを求める意見が増え、正常化継続が意識された"
       },
       "new_fact": {
-        "date": "2026-11-12",
-        "text": "国内企業物価は前年比+7.1%、円ベース輸入物価は+24.8%。"
+        "date": "2026-11-16",
+        "text": "日本GDPは08:50公表予定で、レポート時点では未公表。"
       },
       "market_reaction": {
-        "date": "2026-11-12",
-        "text": "日経平均-0.70%、TOPIX+0.20%。銀行安・不動産高で単純な金利上昇取引ではない。"
+        "date": "2026-11-16",
+        "text": "公表前のため反応未確認。方向を決めず観測する。"
       },
       "current_view": "輸入コストと国内金利の両面をGDP・円相場と合わせて確認。",
       "japan_impact": "価格転嫁力・金利感応度で業種選別。",
@@ -767,30 +807,32 @@
         "nov11-boj-opinions",
         "nov12-honda",
         "nov13-boj-cgpi",
-        "nov13-japan-market"
+        "nov13-japan-market",
+        "nov16-japan-close",
+        "nov16-jp-gdp-schedule"
       ]
     }
   ],
   "scenario_change_conditions": [
     {
       "condition": "NVIDIA・AI半導体",
-      "meaning": "SOX安定・電機精密TOPIX超過で逆風評価を縮小"
+      "meaning": "SOX反発・電機精密TOPIX超過で逆風を縮小"
     },
     {
-      "condition": "米市場幅",
-      "meaning": "小型株優位・6業種以上上昇でリスク回避評価を縮小"
+      "condition": "米インフレ・金利",
+      "meaning": "金利低下と高PER株反発がそろえば物価警戒を縮小"
     },
     {
-      "condition": "日本のローテーション",
-      "meaning": "電機精密優位・上昇業種過半割れで内需優位を撤回"
+      "condition": "MUFG・銀行",
+      "meaning": "8306が銀行ETFを下回れば固有追い風を弱める"
     },
     {
-      "condition": "物価・金利",
-      "meaning": "物価下振れ・金利低下で高PER逆風を縮小"
+      "condition": "日本の内需優位",
+      "meaning": "上昇業種過半割れ・内需劣後で撤回"
     },
     {
-      "condition": "イベント",
-      "meaning": "予想差と価格反応でシナリオを更新"
+      "condition": "公式イベント",
+      "meaning": "結果と実価格反応でシナリオ更新"
     }
   ],
   "sources": [
@@ -1038,6 +1080,20 @@
       "publisher": "Associated Press",
       "published_at": "2026-11-12",
       "url": "https://apnews.com/article/3f3668a937a11535103e3a5c8d82c9fc"
+    },
+    {
+      "id": "nov16-us-ppi",
+      "title": "Producer Price Index News Release, October 2026",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "published_at": "2026-11-13",
+      "url": "https://www.bls.gov/news.release/archives/ppi_11132026.htm"
+    },
+    {
+      "id": "nov16-us-close",
+      "title": "How major US stock indexes fared Friday 11/13/2026",
+      "publisher": "Associated Press",
+      "published_at": "2026-11-13",
+      "url": "https://apnews.com/article/12c1e8155fb85c3c7b09e058ed6d3c74"
     },
     {
       "id": "ai-apr16",
@@ -1360,6 +1416,20 @@
       "publisher": "日本銀行",
       "published_at": "2026-11-12",
       "url": "https://www.boj.or.jp/statistics/pi/cgpi_release/cgpi2610.pdf"
+    },
+    {
+      "id": "nov16-japan-close",
+      "title": "日経平均日次サマリー 2026年11月13日",
+      "publisher": "Nikkei Indexes",
+      "published_at": "2026-11-13",
+      "url": "https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20261113&idx=nk225"
+    },
+    {
+      "id": "nov16-jp-gdp-schedule",
+      "title": "2026年7-9月期GDP 1次速報公表予定",
+      "publisher": "内閣府 経済社会総合研究所",
+      "published_at": "2026-11-16",
+      "url": "https://www.esri.cao.go.jp/jp/sna/kouhyou/kouhyou_top.html"
     }
   ]
 }

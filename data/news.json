@@ -1,38 +1,38 @@
 {
-  "report_date": "2026-11-13",
-  "target_market_date": "2026-11-12",
-  "updated_at": "2026-11-13T06:52:00+09:00",
+  "report_date": "2026-11-16",
+  "target_market_date": "2026-11-13",
+  "updated_at": "2026-11-16T07:00:44+09:00",
   "publication_mode": "verified_news",
   "coverage_status": "partial",
-  "coverage_note": "一次本文を実読できた2件のみ掲載。市場反応は正本価格とAP/Reutersで別確認。企業開示・制裁・通商の当日全件網羅は未確認で、材料なしとは扱わない。",
+  "coverage_note": "11月13日公表の一次本文を実読できた4件のみ掲載。市場反応は記事本文から除外。企業開示・評価変更の全件網羅は未確認で、材料なしとは扱わない。",
   "articles": [
     {
-      "id": "nov13-nvidia",
-      "title": "NVIDIA、CEO交代を発表",
-      "published_date": "2026-11-12",
-      "verified_at": "2026-11-13T06:52:00+09:00",
+      "id": "nov16-us-ppi",
+      "title": "米10月PPI、前月比+0.3%・前年比+6.5%",
+      "published_date": "2026-11-13",
+      "verified_at": "2026-11-16T07:00:44+09:00",
       "source_type": "primary",
-      "publisher": "NVIDIA",
-      "source_url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-CEO-Transition/",
-      "verification_url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-CEO-Transition/",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "source_url": "https://www.bls.gov/news.release/archives/ppi_11132026.htm",
+      "verification_url": "https://www.bls.gov/news.release/archives/ppi_11132026.htm",
       "verification_status": "PASS",
-      "fact": "ジェンスン・フアン氏がCEO・取締役を即時辞任し、CFOコレット・クレス氏が暫定CEOを兼務。取締役会は後任を社内外から選定する。",
-      "analysis": "製品ロードマップ継続を表明したが、経営移行リスクを監視。",
-      "limitations": "後任・調査結果・顧客行動は未確定。市場反応は事実専用フィードから除外。",
+      "fact": "最終需要PPIは前月比+0.3%、前年比+6.5%。財は+0.5%、サービスは+0.2%。食品・エネルギー・貿易サービス除く指数は前月比+0.5%、前年比+4.9%。",
+      "analysis": "高PER株と金利の実反応を確認する。",
+      "limitations": "公表値は改定され得る。市場反応は別検証。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
         "source_read": {
           "status": "PASS",
-          "evidence": "NVIDIAの一次本文を実読し、発表日・対象・留保を確認。"
+          "evidence": "U.S. Bureau of Labor Statisticsの一次本文を実読し、発表日・対象・留保を確認。"
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "ジェンスン・フアン氏がCEO・取締役を即時辞任し、CFOコレット・クレス氏が暫定CEOを兼務。取締役会は後任を社内外から選定する。"
+          "evidence": "最終需要PPIは前月比+0.3%、前年比+6.5%。財は+0.5%、サービスは+0.2%。食品・エネルギー・貿易サービス除く指数は前月比+0.5%、前年比+4.9%。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日2026-11-12、実確認2026-11-13T06:52:00+09:00。発表日・市場日を分離。"
+          "evidence": "発表日2026-11-13、実確認2026-11-16T07:00:44+09:00。発表日・市場日を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
@@ -40,37 +40,37 @@
         },
         "limitations": {
           "status": "PASS",
-          "evidence": "後任・調査結果・顧客行動は未確定。市場反応は事実専用フィードから除外。"
+          "evidence": "公表値は改定され得る。市場反応は別検証。"
         }
       }
     },
     {
-      "id": "nov13-boj-cgpi",
-      "title": "日銀、10月企業物価を公表",
-      "published_date": "2026-11-12",
-      "verified_at": "2026-11-13T06:52:00+09:00",
+      "id": "nov16-mufg",
+      "title": "MUFG、利益目標・配当を上方修正し自己株買い",
+      "published_date": "2026-11-13",
+      "verified_at": "2026-11-16T07:00:44+09:00",
       "source_type": "primary",
-      "publisher": "日本銀行",
-      "source_url": "https://www.boj.or.jp/statistics/pi/cgpi_release/cgpi2610.pdf",
-      "verification_url": "https://www.boj.or.jp/statistics/pi/cgpi_release/cgpi2610.pdf",
+      "publisher": "三菱UFJフィナンシャル・グループ",
+      "source_url": "https://www.mufg.jp/dam/pressrelease/2026/pdf/news-20261113-001_ja.pdf",
+      "verification_url": "https://www.mufg.jp/dam/pressrelease/2026/pdf/news-20261113-001_ja.pdf",
       "verification_status": "PASS",
-      "fact": "国内企業物価指数は前月比+0.7%、前年比+7.1%。円ベース輸入物価は前月比+3.3%、前年比+24.8%。",
-      "analysis": "企業マージンと国内金利への波及をGDP・円相場と合わせて監視。",
-      "limitations": "速報値であり、金融政策決定ではない。市場反応は事実専用フィードから除外。",
+      "fact": "純利益目標を2.7兆円から2.8兆円、年間配当予想を96円から100円へ上方修正。下期最大2,000億円の自己株買いを決定。",
+      "analysis": "銀行固有の還元強化として月曜の実反応を確認する。",
+      "limitations": "発表時刻未確認のため同日終値を新情報への反応とは扱わない。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
         "source_read": {
           "status": "PASS",
-          "evidence": "日本銀行の一次本文を実読し、発表日・対象・留保を確認。"
+          "evidence": "三菱UFJフィナンシャル・グループの一次本文を実読し、発表日・対象・留保を確認。"
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "国内企業物価指数は前月比+0.7%、前年比+7.1%。円ベース輸入物価は前月比+3.3%、前年比+24.8%。"
+          "evidence": "純利益目標を2.7兆円から2.8兆円、年間配当予想を96円から100円へ上方修正。下期最大2,000億円の自己株買いを決定。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日2026-11-12、実確認2026-11-13T06:52:00+09:00。発表日・市場日を分離。"
+          "evidence": "発表日2026-11-13、実確認2026-11-16T07:00:44+09:00。発表日・市場日を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
@@ -78,7 +78,83 @@
         },
         "limitations": {
           "status": "PASS",
-          "evidence": "速報値であり、金融政策決定ではない。市場反応は事実専用フィードから除外。"
+          "evidence": "発表時刻未確認のため同日終値を新情報への反応とは扱わない。"
+        }
+      }
+    },
+    {
+      "id": "nov16-ustr-industrias-fg",
+      "title": "USTR、Industrias FG施設をUSMCA労働審査対象に",
+      "published_date": "2026-11-13",
+      "verified_at": "2026-11-16T07:00:44+09:00",
+      "source_type": "primary",
+      "publisher": "Office of the U.S. Trade Representative",
+      "source_url": "https://www.ustr.gov/about/policy-offices/press-office/press-releases/2026/november/united-states-seeks-mexicos-review-alleged-denial-workers-rights-industrias-fg",
+      "verification_url": "https://www.ustr.gov/about/policy-offices/press-office/press-releases/2026/november/united-states-seeks-mexicos-review-alleged-denial-workers-rights-industrias-fg",
+      "verification_status": "PASS",
+      "fact": "USTRはメキシコに権利侵害の審査を要請し、同施設からの未清算輸入品の清算を停止。施設は機械用ポリウレタン油圧シールを製造。",
+      "analysis": "北米機械サプライチェーンの個別確認材料。",
+      "limitations": "包括関税変更ではなく、日本企業への直接影響は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Office of the U.S. Trade Representativeの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "USTRはメキシコに権利侵害の審査を要請し、同施設からの未清算輸入品の清算を停止。施設は機械用ポリウレタン油圧シールを製造。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-13、実確認2026-11-16T07:00:44+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。市場反応は事実専用フィードから除外。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "包括関税変更ではなく、日本企業への直接影響は未確認。"
+        }
+      }
+    },
+    {
+      "id": "nov16-ofac-guatemala",
+      "title": "米財務省、グアテマラの麻薬組織を制裁指定",
+      "published_date": "2026-11-13",
+      "verified_at": "2026-11-16T07:00:44+09:00",
+      "source_type": "primary",
+      "publisher": "U.S. Department of the Treasury",
+      "source_url": "https://home.treasury.gov/news/press-releases/sb0689",
+      "verification_url": "https://home.treasury.gov/news/press-releases/sb0689",
+      "verification_status": "PASS",
+      "fact": "OFACはLos Mendoza DTOとLos Huistas DTOを指定し、米国内または米国人の管理下にある資産を凍結。50%以上保有する関連企業も原則対象。",
+      "analysis": "金融機関の制裁順守上の確認事項。",
+      "limitations": "日本株主要指数への直接影響は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "U.S. Department of the Treasuryの一次本文を実読し、発表日・対象・留保を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "OFACはLos Mendoza DTOとLos Huistas DTOを指定し、米国内または米国人の管理下にある資産を凍結。50%以上保有する関連企業も原則対象。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-13、実確認2026-11-16T07:00:44+09:00。発表日・市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次事実と条件付き分析を分離。市場反応は事実専用フィードから除外。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "日本株主要指数への直接影響は未確認。"
         }
       }
     }

@@ -1,160 +1,84 @@
 {
-  "report_date": "2026-11-16",
-  "target_market_date": "2026-11-13",
-  "updated_at": "2026-11-16T07:00:44+09:00",
+  "report_date": "2026-11-17",
+  "target_market_date": "2026-11-16",
+  "updated_at": "2026-11-17T06:43:10+09:00",
   "publication_mode": "verified_news",
   "coverage_status": "partial",
-  "coverage_note": "11月13日公表の一次本文を実読できた4件のみ掲載。市場反応は記事本文から除外。企業開示・評価変更の全件網羅は未確認で、材料なしとは扱わない。",
+  "coverage_note": "11月16日公表の一次資料を実読できた2件のみ掲載。市場反応は未確認として分離。米国市場急落、企業開示、通商・制裁、評価変更の全件網羅は未確認で、材料なしとは扱わない。",
   "articles": [
     {
-      "id": "nov16-us-ppi",
-      "title": "米10月PPI、前月比+0.3%・前年比+6.5%",
-      "published_date": "2026-11-13",
-      "verified_at": "2026-11-16T07:00:44+09:00",
+      "id": "nov17-japan-q3-gdp",
+      "title": "日本の7〜9月期実質GDP、前期比ほぼ横ばい",
+      "published_date": "2026-11-16",
+      "verified_at": "2026-11-17T06:43:10+09:00",
       "source_type": "primary",
-      "publisher": "U.S. Bureau of Labor Statistics",
-      "source_url": "https://www.bls.gov/news.release/archives/ppi_11132026.htm",
-      "verification_url": "https://www.bls.gov/news.release/archives/ppi_11132026.htm",
+      "publisher": "内閣府 経済社会総合研究所",
+      "source_url": "https://www.esri.cao.go.jp/jp/sna/data/data_list/sokuhou/files/2026/qe263/pdf/gaiyou2631.pdf",
+      "verification_url": "https://www.esri.cao.go.jp/jp/sna/data/data_list/sokuhou/files/2026/qe263/pdf/gaiyou2631.pdf",
       "verification_status": "PASS",
-      "fact": "最終需要PPIは前月比+0.3%、前年比+6.5%。財は+0.5%、サービスは+0.2%。食品・エネルギー・貿易サービス除く指数は前月比+0.5%、前年比+4.9%。",
-      "analysis": "高PER株と金利の実反応を確認する。",
-      "limitations": "公表値は改定され得る。市場反応は別検証。",
+      "fact": "2026年7〜9月期の実質GDP1次速報は前期比-0.0%、年率-0.1%。国内需要の寄与度は+0.6ポイント、財貨・サービスの純輸出は-0.6ポイント。名目GDPは前期比+0.4%、年率+1.6%。",
+      "analysis": "内需が下支えする一方、外需が相殺した構図。内需関連と輸出関連の相対強弱は、11月16日の日本株実績を確認して判断する。",
+      "limitations": "1次速報は改定され得る。11月16日の日本株市場反応は正本データ未更新のため未確認。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
         "source_read": {
           "status": "PASS",
-          "evidence": "U.S. Bureau of Labor Statisticsの一次本文を実読し、発表日・対象・留保を確認。"
+          "evidence": "内閣府の結果概要PDFを実読し、公表日、実質・名目GDP、需要項目の寄与度を確認。"
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "最終需要PPIは前月比+0.3%、前年比+6.5%。財は+0.5%、サービスは+0.2%。食品・エネルギー・貿易サービス除く指数は前月比+0.5%、前年比+4.9%。"
+          "evidence": "実質GDP前期比-0.0%・年率-0.1%、国内需要+0.6ポイント、純輸出-0.6ポイント、名目GDP前期比+0.4%・年率+1.6%。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日2026-11-13、実確認2026-11-16T07:00:44+09:00。発表日・市場日を分離。"
+          "evidence": "公表日2026-11-16、実確認2026-11-17T06:43:10+09:00。公表日・ニュース更新日・対象市場日を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
-          "evidence": "一次事実と条件付き分析を分離。市場反応は事実専用フィードから除外。"
+          "evidence": "一次統計と日本株への条件付き解釈を分離し、実際の市場反応は未確認と明記。"
         },
         "limitations": {
           "status": "PASS",
-          "evidence": "公表値は改定され得る。市場反応は別検証。"
+          "evidence": "1次速報の改定可能性と、日本株正本データ未更新による反応未確認を明示。"
         }
       }
     },
     {
-      "id": "nov16-mufg",
-      "title": "MUFG、利益目標・配当を上方修正し自己株買い",
-      "published_date": "2026-11-13",
-      "verified_at": "2026-11-16T07:00:44+09:00",
+      "id": "nov17-boj-takata-speech",
+      "title": "日銀・高田委員、機動的でデータ依存の利上げを主張",
+      "published_date": "2026-11-16",
+      "verified_at": "2026-11-17T06:43:10+09:00",
       "source_type": "primary",
-      "publisher": "三菱UFJフィナンシャル・グループ",
-      "source_url": "https://www.mufg.jp/dam/pressrelease/2026/pdf/news-20261113-001_ja.pdf",
-      "verification_url": "https://www.mufg.jp/dam/pressrelease/2026/pdf/news-20261113-001_ja.pdf",
+      "publisher": "日本銀行",
+      "source_url": "https://www.boj.or.jp/en/about/press/koen_2026/data/ko261116a1.pdf",
+      "verification_url": "https://www.boj.or.jp/en/about/press/koen_2026/ko261116a.htm",
       "verification_status": "PASS",
-      "fact": "純利益目標を2.7兆円から2.8兆円、年間配当予想を96円から100円へ上方修正。下期最大2,000億円の自己株買いを決定。",
-      "analysis": "銀行固有の還元強化として月曜の実反応を確認する。",
-      "limitations": "発表時刻未確認のため同日終値を新情報への反応とは扱わない。",
+      "fact": "高田創審議委員は、日銀が2026年6月に政策金利を1.0%程度、9月に1.25%へ引き上げ、10月会合では自身が1.5%への引き上げを提案したと説明。2026年は固定的なペースや幅ではなく、物価・景気と海外動向に応じた機動的でデータ依存の対応が必要との個人見解を示した。",
+      "analysis": "金融株には金利正常化期待が追い風となり得る一方、高PER株と金利敏感業種には逆風となり得る。実際の価格反応は11月16日の日本株正本更新後に確認する。",
+      "limitations": "政策決定ではなく審議委員個人の講演。市場全体の織り込みや11月16日の株価反応は未確認。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
         "source_read": {
           "status": "PASS",
-          "evidence": "三菱UFJフィナンシャル・グループの一次本文を実読し、発表日・対象・留保を確認。"
+          "evidence": "日本銀行掲載の講演全文PDFを実読し、過去の政策金利変更、10月会合での提案、今後の政策運営に関する個人見解を確認。"
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "純利益目標を2.7兆円から2.8兆円、年間配当予想を96円から100円へ上方修正。下期最大2,000億円の自己株買いを決定。"
+          "evidence": "6月1.0%程度、9月1.25%、10月会合で1.5%への引き上げを提案し、機動的・データ依存の対応を主張。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日2026-11-13、実確認2026-11-16T07:00:44+09:00。発表日・市場日を分離。"
+          "evidence": "講演日2026-11-16、実確認2026-11-17T06:43:10+09:00。政策決定済み事項と委員の今後の主張を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
-          "evidence": "一次事実と条件付き分析を分離。市場反応は事実専用フィードから除外。"
+          "evidence": "講演で確認できる事実と、金融・高PER株への条件付き波及を分離。"
         },
         "limitations": {
           "status": "PASS",
-          "evidence": "発表時刻未確認のため同日終値を新情報への反応とは扱わない。"
-        }
-      }
-    },
-    {
-      "id": "nov16-ustr-industrias-fg",
-      "title": "USTR、Industrias FG施設をUSMCA労働審査対象に",
-      "published_date": "2026-11-13",
-      "verified_at": "2026-11-16T07:00:44+09:00",
-      "source_type": "primary",
-      "publisher": "Office of the U.S. Trade Representative",
-      "source_url": "https://www.ustr.gov/about/policy-offices/press-office/press-releases/2026/november/united-states-seeks-mexicos-review-alleged-denial-workers-rights-industrias-fg",
-      "verification_url": "https://www.ustr.gov/about/policy-offices/press-office/press-releases/2026/november/united-states-seeks-mexicos-review-alleged-denial-workers-rights-industrias-fg",
-      "verification_status": "PASS",
-      "fact": "USTRはメキシコに権利侵害の審査を要請し、同施設からの未清算輸入品の清算を停止。施設は機械用ポリウレタン油圧シールを製造。",
-      "analysis": "北米機械サプライチェーンの個別確認材料。",
-      "limitations": "包括関税変更ではなく、日本企業への直接影響は未確認。",
-      "market_reaction_status": "unverified",
-      "market_reaction": "未確認",
-      "verification": {
-        "source_read": {
-          "status": "PASS",
-          "evidence": "Office of the U.S. Trade Representativeの一次本文を実読し、発表日・対象・留保を確認。"
-        },
-        "facts_verified": {
-          "status": "PASS",
-          "evidence": "USTRはメキシコに権利侵害の審査を要請し、同施設からの未清算輸入品の清算を停止。施設は機械用ポリウレタン油圧シールを製造。"
-        },
-        "chronology": {
-          "status": "PASS",
-          "evidence": "発表日2026-11-13、実確認2026-11-16T07:00:44+09:00。発表日・市場日を分離。"
-        },
-        "fact_analysis_separation": {
-          "status": "PASS",
-          "evidence": "一次事実と条件付き分析を分離。市場反応は事実専用フィードから除外。"
-        },
-        "limitations": {
-          "status": "PASS",
-          "evidence": "包括関税変更ではなく、日本企業への直接影響は未確認。"
-        }
-      }
-    },
-    {
-      "id": "nov16-ofac-guatemala",
-      "title": "米財務省、グアテマラの麻薬組織を制裁指定",
-      "published_date": "2026-11-13",
-      "verified_at": "2026-11-16T07:00:44+09:00",
-      "source_type": "primary",
-      "publisher": "U.S. Department of the Treasury",
-      "source_url": "https://home.treasury.gov/news/press-releases/sb0689",
-      "verification_url": "https://home.treasury.gov/news/press-releases/sb0689",
-      "verification_status": "PASS",
-      "fact": "OFACはLos Mendoza DTOとLos Huistas DTOを指定し、米国内または米国人の管理下にある資産を凍結。50%以上保有する関連企業も原則対象。",
-      "analysis": "金融機関の制裁順守上の確認事項。",
-      "limitations": "日本株主要指数への直接影響は未確認。",
-      "market_reaction_status": "unverified",
-      "market_reaction": "未確認",
-      "verification": {
-        "source_read": {
-          "status": "PASS",
-          "evidence": "U.S. Department of the Treasuryの一次本文を実読し、発表日・対象・留保を確認。"
-        },
-        "facts_verified": {
-          "status": "PASS",
-          "evidence": "OFACはLos Mendoza DTOとLos Huistas DTOを指定し、米国内または米国人の管理下にある資産を凍結。50%以上保有する関連企業も原則対象。"
-        },
-        "chronology": {
-          "status": "PASS",
-          "evidence": "発表日2026-11-13、実確認2026-11-16T07:00:44+09:00。発表日・市場日を分離。"
-        },
-        "fact_analysis_separation": {
-          "status": "PASS",
-          "evidence": "一次事実と条件付き分析を分離。市場反応は事実専用フィードから除外。"
-        },
-        "limitations": {
-          "status": "PASS",
-          "evidence": "日本株主要指数への直接影響は未確認。"
+          "evidence": "個人見解であり政策決定ではない点と、市場反応未確認を明示。"
         }
       }
     }

@@ -2,36 +2,20 @@
   "version": "1.0",
   "description": "確認済み一次資料の表示設定",
   "items": {
-    "nov16-us-ppi": {
-      "primary_page": "world",
-      "priority": 100,
-      "attention_points": [
-        "10月PPIは前月比+0.3%、前年比+6.5%",
-        "市場反応と単一因果にしない"
-      ]
-    },
-    "nov16-mufg": {
+    "nov17-japan-q3-gdp": {
       "primary_page": "japan",
       "priority": 100,
       "attention_points": [
-        "利益目標2.8兆円・年間配当100円",
-        "発表時刻未確認で同日終値を反応に使わない"
+        "実質GDPは前期比ほぼ横ばい、内需+0.6ptと純輸出-0.6ptが相殺",
+        "1次速報であり市場反応は未確認"
       ]
     },
-    "nov16-ustr-industrias-fg": {
-      "primary_page": "world",
-      "priority": 65,
+    "nov17-boj-takata-speech": {
+      "primary_page": "japan",
+      "priority": 95,
       "attention_points": [
-        "USMCA労働メカニズムの個別施設案件",
-        "広範な関税措置ではない"
-      ]
-    },
-    "nov16-ofac-guatemala": {
-      "primary_page": "world",
-      "priority": 55,
-      "attention_points": [
-        "グアテマラの2組織を制裁指定",
-        "日本株への直接影響は限定的"
+        "高田委員は機動的・データ依存の利上げを主張",
+        "個人見解であり政策決定ではない"
       ]
     }
   }

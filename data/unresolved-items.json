@@ -1,7 +1,41 @@
 {
-  "updated_at": "2026-11-13T06:52:00+09:00",
-  "source_report_date": "2026-11-13",
+  "updated_at": "2026-11-17T06:43:10+09:00",
+  "source_report_date": "2026-11-17",
   "items": [
+    {
+      "id": "market_data_2026_11_16",
+      "status": "BLOCK",
+      "missing": "当日JSTのmarket_data成功記録がなく、market.jsonの米株・日本株・為替・VIXは11月13日、米2年・10年債利回りは11月12日のまま。japan-market.jsonも11月13日で、期待市場日11月16日と不一致",
+      "impact": "AIレポート、世界市場実績、日本株実績の11月17日版を停止。11月16日の米国大幅安と日本株への実際の反応を正本数値として掲載しない",
+      "last_checked_at": "2026-11-17T06:43:10+09:00",
+      "next_action": "Market Morning Daily UpdateとJapan Market Close Updateを再確認し、11月16日市場日の正本が成功更新された後に5ゲートとpublish検証を再実行",
+      "attempts": [
+        {
+          "method": "mainのstatus.json・market.json・japan-market.jsonとActionsを確認",
+          "result": "最新のMarket Morning Daily Updateは11月16日11:52 JST、Japan Market Close Updateは11月17日01:27 JSTだが、いずれも対象市場日は11月13日のまま",
+          "source_urls": [
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/status.json",
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json",
+            "https://github.com/vakeeeek-bit/market-morning/actions"
+          ],
+          "checked_at": "2026-11-17T06:43:10+09:00"
+        }
+      ],
+      "affected_components": [
+        "ai_report",
+        "world_market",
+        "japan_market",
+        "japan_stocks"
+      ],
+      "excluded_claims": [
+        "11月16日の指数・金利・為替・VIX・業種の正本値",
+        "11月16日の日本株実反応",
+        "時刻付き朝の現在値と限月付き先物示唆"
+      ],
+      "excluded_from_publication": true,
+      "first_seen_at": "2026-11-17T06:43:10+09:00"
+    },
     {
       "id": "stale_cross_asset",
       "status": "QUALIFIED",
@@ -87,18 +121,19 @@
     {
       "id": "coverage",
       "status": "QUALIFIED",
-      "missing": "アナリスト評価変更と日本企業開示の全件網羅は未確認で、変更なしとは断定しない",
+      "missing": "11月16日公表の内閣府GDPと日銀講演は確認済み。アナリスト評価変更、日本企業開示、通商・制裁の全件網羅は未確認で、変更なしとは断定しない",
       "impact": "変更なし・企業ニュース網羅の包括断定を除外",
-      "last_checked_at": "2026-11-13T06:52:00+09:00",
+      "last_checked_at": "2026-11-17T06:43:10+09:00",
       "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
       "attempts": [
         {
-          "method": "当日正本・公式ソース確認",
-          "result": "必要な完全性を確定できず、依存主張を除外",
+          "method": "一次資料の独立収集",
+          "result": "内閣府GDPと日銀講演の2件を確認済みニュースへ採用。網羅性は未確認",
           "source_urls": [
-            "https://www.release.tdnet.info/inbs/I_main_00.html"
+            "https://www.esri.cao.go.jp/jp/sna/data/data_list/sokuhou/files/2026/qe263/pdf/gaiyou2631.pdf",
+            "https://www.boj.or.jp/en/about/press/koen_2026/data/ko261116a1.pdf"
           ],
-          "checked_at": "2026-11-13T06:52:00+09:00"
+          "checked_at": "2026-11-17T06:43:10+09:00"
         }
       ],
       "affected_components": [
@@ -116,16 +151,16 @@
       "status": "QUALIFIED",
       "missing": "Project添付仕様書3点は接続済みGoogle Driveの完全一致検索で0件。Project Instructionsとmain現行スキーマ・検証を優先",
       "impact": "添付仕様書実読済みという主張を除外",
-      "last_checked_at": "2026-11-13T06:52:00+09:00",
-      "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
+      "last_checked_at": "2026-11-17T06:43:10+09:00",
+      "next_action": "次回もDriveを再検索し、文書が接続された場合はProject Instructionsとの優先順位に従って実読",
       "attempts": [
         {
-          "method": "当日正本・公式ソース確認",
-          "result": "必要な完全性を確定できず、依存主張を除外",
+          "method": "Google Drive完全一致検索",
+          "result": "指定3文書はいずれも0件",
           "source_urls": [
             "https://drive.google.com/"
           ],
-          "checked_at": "2026-11-13T06:52:00+09:00"
+          "checked_at": "2026-11-17T06:43:10+09:00"
         }
       ],
       "affected_components": [

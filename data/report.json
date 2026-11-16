@@ -2079,20 +2079,6 @@
   },
   "events": [
     {
-      "id": "jp-gdp-2026-q3-first",
-      "event": "日本GDP（2026年7〜9月期・1次速報）",
-      "start_at_jst": "2026-11-16T08:50:00+09:00",
-      "jst_time": "2026-11-16 08:50 JST",
-      "forecast": "未確認",
-      "previous": "未確認",
-      "focus": "内需・外需・設備投資と日銀政策余地",
-      "affected_markets": "円・国内金利・日本株",
-      "importance": "最重要",
-      "source_url": "https://www.esri.cao.go.jp/jp/sna/kouhyou/kouhyou_top.html",
-      "source_name": "内閣府 経済社会総合研究所",
-      "verified_on": "2026-11-11"
-    },
-    {
       "id": "us-import-export-2026-10",
       "event": "米輸出入物価指数（10月）",
       "start_at_jst": "2026-11-17T22:30:00+09:00",
@@ -2105,20 +2091,6 @@
       "source_url": "https://www.bls.gov/schedule/2026/11_sched.htm",
       "source_name": "U.S. Bureau of Labor Statistics",
       "verified_on": "2026-11-11"
-    },
-    {
-      "id": "nvidia-fy27-q3",
-      "event": "NVIDIA 2027年度第3四半期決算",
-      "start_at_jst": "2026-11-18T06:20:00+09:00",
-      "jst_time": "2026-11-18 06:20頃 JST（米太平洋13:20）",
-      "forecast": "未確認",
-      "previous": "未確認",
-      "focus": "暫定CEO体制、需要・供給、粗利、ロードマップ",
-      "affected_markets": "SOX・NASDAQ100・日本半導体",
-      "importance": "最重要",
-      "source_url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/",
-      "source_name": "NVIDIA",
-      "verified_on": "2026-11-16"
     },
     {
       "id": "jp-cpi-2026-10",
@@ -2165,12 +2137,12 @@
   ],
   "events_metadata": {
     "status": "取得済",
-    "updated_at": "2026-11-16T07:00:44+09:00",
+    "updated_at": "2026-11-16T10:08:59+09:00",
     "window_start": "2026-11-16",
-    "window_end": "2026-11-29",
+    "window_end": "2026-11-30",
     "timezone": "Asia/Tokyo",
     "source_policy": "公式日程で確認済みのイベントのみ。予想・前回値は未確認を推測しない",
-    "coverage_note": "日本GDP・米輸出入物価・日本CPI・米GDP/PCE・NVIDIA決算を公式日程で確認。",
+    "coverage_note": "公式日程で確認できた主要イベントのみ。市場予想・前回値を確認できない場合は未確認と表示する。",
     "catalog_version": "1.0"
   }
 }

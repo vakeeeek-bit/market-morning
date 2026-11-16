@@ -1,0 +1,86 @@
+{
+  "report_date": "2026-11-17",
+  "target_market_date": "2026-11-16",
+  "updated_at": "2026-11-17T06:43:10+09:00",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "11月16日公表の一次資料を実読できた2件のみ掲載。市場反応は未確認として分離。米国市場急落、企業開示、通商・制裁、評価変更の全件網羅は未確認で、材料なしとは扱わない。",
+  "articles": [
+    {
+      "id": "nov17-japan-q3-gdp",
+      "title": "日本の7〜9月期実質GDP、前期比ほぼ横ばい",
+      "published_date": "2026-11-16",
+      "verified_at": "2026-11-17T06:43:10+09:00",
+      "source_type": "primary",
+      "publisher": "内閣府 経済社会総合研究所",
+      "source_url": "https://www.esri.cao.go.jp/jp/sna/data/data_list/sokuhou/files/2026/qe263/pdf/gaiyou2631.pdf",
+      "verification_url": "https://www.esri.cao.go.jp/jp/sna/data/data_list/sokuhou/files/2026/qe263/pdf/gaiyou2631.pdf",
+      "verification_status": "PASS",
+      "fact": "2026年7〜9月期の実質GDP1次速報は前期比-0.0%、年率-0.1%。国内需要の寄与度は+0.6ポイント、財貨・サービスの純輸出は-0.6ポイント。名目GDPは前期比+0.4%、年率+1.6%。",
+      "analysis": "内需が下支えする一方、外需が相殺した構図。内需関連と輸出関連の相対強弱は、11月16日の日本株実績を確認して判断する。",
+      "limitations": "1次速報は改定され得る。11月16日の日本株市場反応は正本データ未更新のため未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "内閣府の結果概要PDFを実読し、公表日、実質・名目GDP、需要項目の寄与度を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "実質GDP前期比-0.0%・年率-0.1%、国内需要+0.6ポイント、純輸出-0.6ポイント、名目GDP前期比+0.4%・年率+1.6%。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-11-16、実確認2026-11-17T06:43:10+09:00。公表日・ニュース更新日・対象市場日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次統計と日本株への条件付き解釈を分離し、実際の市場反応は未確認と明記。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "1次速報の改定可能性と、日本株正本データ未更新による反応未確認を明示。"
+        }
+      }
+    },
+    {
+      "id": "nov17-boj-takata-speech",
+      "title": "日銀・高田委員、機動的でデータ依存の利上げを主張",
+      "published_date": "2026-11-16",
+      "verified_at": "2026-11-17T06:43:10+09:00",
+      "source_type": "primary",
+      "publisher": "日本銀行",
+      "source_url": "https://www.boj.or.jp/en/about/press/koen_2026/data/ko261116a1.pdf",
+      "verification_url": "https://www.boj.or.jp/en/about/press/koen_2026/ko261116a.htm",
+      "verification_status": "PASS",
+      "fact": "高田創審議委員は、日銀が2026年6月に政策金利を1.0%程度、9月に1.25%へ引き上げ、10月会合では自身が1.5%への引き上げを提案したと説明。2026年は固定的なペースや幅ではなく、物価・景気と海外動向に応じた機動的でデータ依存の対応が必要との個人見解を示した。",
+      "analysis": "金融株には金利正常化期待が追い風となり得る一方、高PER株と金利敏感業種には逆風となり得る。実際の価格反応は11月16日の日本株正本更新後に確認する。",
+      "limitations": "政策決定ではなく審議委員個人の講演。市場全体の織り込みや11月16日の株価反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "日本銀行掲載の講演全文PDFを実読し、過去の政策金利変更、10月会合での提案、今後の政策運営に関する個人見解を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "6月1.0%程度、9月1.25%、10月会合で1.5%への引き上げを提案し、機動的・データ依存の対応を主張。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "講演日2026-11-16、実確認2026-11-17T06:43:10+09:00。政策決定済み事項と委員の今後の主張を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "講演で確認できる事実と、金融・高PER株への条件付き波及を分離。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "個人見解であり政策決定ではない点と、市場反応未確認を明示。"
+        }
+      }
+    }
+  ]
+}

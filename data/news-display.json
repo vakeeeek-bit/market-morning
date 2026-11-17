@@ -2,21 +2,20 @@
   "version": "1.0",
   "description": "確認済み一次資料の表示設定",
   "items": {
-    "nov17-japan-q3-gdp": {
-      "primary_page": "japan",
+    "nov18-nvidia-q3-fy2027": {
+      "primary_page": "world",
       "priority": 100,
-      "attention_points": [
-        "実質GDPは前期比ほぼ横ばい、内需+0.6ptと純輸出-0.6ptが相殺",
-        "1次速報であり市場反応は未確認"
-      ]
+      "attention_points": ["売上高1158億ドル、データセンター1076億ドル", "Q4見通しは中国向けデータセンター計算売上を見込まず"]
     },
-    "nov17-boj-takata-speech": {
-      "primary_page": "japan",
-      "priority": 95,
-      "attention_points": [
-        "高田委員は機動的・データ依存の利上げを主張",
-        "個人見解であり政策決定ではない"
-      ]
+    "nov18-us-import-export-prices-oct": {
+      "primary_page": "world",
+      "priority": 90,
+      "attention_points": ["輸入・輸出物価とも前月比1.1%上昇", "市場反応と消費者物価への転嫁は未確認"]
+    },
+    "nov18-fed-industrial-production-oct": {
+      "primary_page": "world",
+      "priority": 85,
+      "attention_points": ["鉱工業生産-0.4%に対し製造業は+0.3%", "設備稼働率76.4%、市場反応は未確認"]
     }
   }
 }

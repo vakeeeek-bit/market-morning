@@ -1,0 +1,124 @@
+{
+  "report_date": "2026-11-18",
+  "target_market_date": "2026-11-17",
+  "updated_at": "2026-11-18T06:51:01+09:00",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "11月17日公表の一次資料を実読できた3件のみ掲載。市場反応は未確認として分離。米国市場の全材料、日本企業開示、通商・制裁、評価変更の全件網羅は未確認で、材料なしとは扱わない。",
+  "articles": [
+    {
+      "id": "nov18-nvidia-q3-fy2027",
+      "title": "NVIDIA、FY2027第3四半期売上高1158億ドル",
+      "published_date": "2026-11-17",
+      "verified_at": "2026-11-18T06:51:01+09:00",
+      "source_type": "primary",
+      "publisher": "NVIDIA",
+      "source_url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027",
+      "verification_url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027",
+      "verification_status": "PASS",
+      "fact": "NVIDIAは2026年10月25日終了のFY2027第3四半期売上高が1158億ドル（前四半期比20%増、前年同期比103%増）、データセンター売上高が1076億ドル（同21%増、110%増）だったと発表。GAAP希薄化後EPSは2.70ドル。第4四半期売上高見通しは1300億ドル±3%で、中国向けデータセンター計算売上は見込んでいない。",
+      "analysis": "AI投資需要の強さは日本の半導体製造装置・検査・部材株の需要期待を支え得る一方、中国向け計算売上を見込まない点は輸出規制と地域構成の不確実性を残す。日本株への実際の反応は11月18日取引で確認する。",
+      "limitations": "会社発表値と会社見通しであり、外部予想との差、発表後の株価・先物反応、日本企業の受注への波及は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "NVIDIA公式決算発表本文を実読し、四半期実績、データセンター売上、EPS、次四半期見通しを確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "売上高1158億ドル、データセンター1076億ドル、GAAP EPS2.70ドル、Q4売上高見通し1300億ドル±3%、中国向けデータセンター計算売上を見込まないとの記載を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日2026-11-17、対象四半期終了日2026-10-25、実確認2026-11-18T06:51:01+09:00を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "会社実績・見通しと日本の半導体関連株への条件付き解釈を分離し、市場反応は未確認と明記。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "外部予想比較、発表後反応、日本企業受注への波及が未確認であることを明示。"
+        }
+      }
+    },
+    {
+      "id": "nov18-us-import-export-prices-oct",
+      "title": "米10月輸入物価と輸出物価、ともに前月比1.1%上昇",
+      "published_date": "2026-11-17",
+      "verified_at": "2026-11-18T06:51:01+09:00",
+      "source_type": "primary",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "source_url": "https://www.bls.gov/news.release/ximpim.nr0.htm",
+      "verification_url": "https://www.bls.gov/news.release/ximpim.nr0.htm",
+      "verification_status": "PASS",
+      "fact": "米労働統計局は10月の輸入物価が前月比1.1%上昇し、非燃料輸入品が上昇を主導したと発表。輸出物価も前月比1.1%上昇。中国からの輸入物価は1.4%上昇し、日本向け米輸出物価は3.7%上昇した。",
+      "analysis": "輸入インフレの再加速が続く場合、米金利とドルを通じて日本の高PER株に逆風、円安を通じて輸出株に追い風となる可能性がある。ただし11月17日の金利・為替反応は正本未更新のため断定しない。",
+      "limitations": "単月の価格指数であり消費者物価への転嫁は未確認。11月17日の債券・為替・株式の同時反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "BLS公式Import and Export Price Indexes本文を実読し、総合指数、非燃料、対中輸入、日本向け輸出を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "輸入物価+1.1%、輸出物価+1.1%、中国からの輸入+1.4%、日本向け輸出+3.7%を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-11-17、対象月2026年10月、実確認2026-11-18T06:51:01+09:00を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "統計値と金利・為替・日本株への条件付き経路を分離し、実際の反応は未確認と明記。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "消費者物価への転嫁と市場反応が未確認であることを明示。"
+        }
+      }
+    },
+    {
+      "id": "nov18-fed-industrial-production-oct",
+      "title": "米10月鉱工業生産は0.4%低下、製造業は0.3%上昇",
+      "published_date": "2026-11-17",
+      "verified_at": "2026-11-18T06:51:01+09:00",
+      "source_type": "primary",
+      "publisher": "Board of Governors of the Federal Reserve System",
+      "source_url": "https://www.federalreserve.gov/releases/g17/current/default.htm",
+      "verification_url": "https://www.federalreserve.gov/releases/g17/current/default.htm",
+      "verification_status": "PASS",
+      "fact": "FRBは10月の鉱工業生産が前月比0.4%低下したと発表。製造業は0.3%上昇、鉱業は0.8%低下、公益は4.3%低下。設備稼働率は76.4%で長期平均を3.0ポイント下回った。",
+      "analysis": "製造業の小幅増は景気後退を一方向に示さない一方、総合低下と低い稼働率は景気敏感株の上値を抑え得る。日本の機械・素材・輸出株への波及は受注指標と11月18日の実反応で確認する。",
+      "limitations": "公益の大幅低下が総合を押し下げており、総合値だけで製造業循環を判断しない。市場反応と日本企業への波及は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "FRB公式G.17本文を実読し、総合、製造業、鉱業、公益、設備稼働率を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "鉱工業生産-0.4%、製造業+0.3%、鉱業-0.8%、公益-4.3%、設備稼働率76.4%を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表日2026-11-17、対象月2026年10月、実確認2026-11-18T06:51:01+09:00を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "一次統計と景気敏感株への条件付き解釈を分離し、市場反応は未確認と明記。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "公益の寄与、総合と製造業の方向差、市場反応未確認を明示。"
+        }
+      }
+    }
+  ]
+}

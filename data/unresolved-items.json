@@ -1,25 +1,25 @@
 {
-  "updated_at": "2026-11-17T06:43:10+09:00",
-  "source_report_date": "2026-11-17",
+  "updated_at": "2026-11-18T06:51:01+09:00",
+  "source_report_date": "2026-11-18",
   "items": [
     {
-      "id": "market_data_2026_11_16",
+      "id": "market_data_2026_11_17",
       "status": "BLOCK",
-      "missing": "当日JSTのmarket_data成功記録がなく、market.jsonの米株・日本株・為替・VIXは11月13日、米2年・10年債利回りは11月12日のまま。japan-market.jsonも11月13日で、期待市場日11月16日と不一致",
-      "impact": "AIレポート、世界市場実績、日本株実績の11月17日版を停止。11月16日の米国大幅安と日本株への実際の反応を正本数値として掲載しない",
-      "last_checked_at": "2026-11-17T06:43:10+09:00",
-      "next_action": "Market Morning Daily UpdateとJapan Market Close Updateを再確認し、11月16日市場日の正本が成功更新された後に5ゲートとpublish検証を再実行",
+      "missing": "当日JSTのmarket_data成功記録がなく、market.jsonの株価・為替・VIX・米業種は11月16日、米2年・10年債利回りは11月13日、暗号資産は11月15日のまま。japan-market.jsonも11月16日で、期待市場日11月17日と不一致",
+      "impact": "AIレポート、世界市場実績、日本株実績の11月18日版を停止。11月17日の米国続落と日本株への実際の反応を正本数値として掲載しない",
+      "last_checked_at": "2026-11-18T06:51:01+09:00",
+      "next_action": "Market Morning Daily UpdateとJapan Market Close Updateを再確認し、11月17日市場日の正本が成功更新された後に5ゲートとpublish検証を再実行",
       "attempts": [
         {
           "method": "mainのstatus.json・market.json・japan-market.jsonとActionsを確認",
-          "result": "最新のMarket Morning Daily Updateは11月16日11:52 JST、Japan Market Close Updateは11月17日01:27 JSTだが、いずれも対象市場日は11月13日のまま",
+          "result": "status.jsonは11月17日14:07 JST更新で当日記録ではない。market.jsonは11月16日市場日、japan-market.jsonも11月16日でdata_error（期待市場日11月17日）。Actionsにも11月18日のDaily Update成功記録は未確認",
           "source_urls": [
             "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/status.json",
             "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
             "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json",
             "https://github.com/vakeeeek-bit/market-morning/actions"
           ],
-          "checked_at": "2026-11-17T06:43:10+09:00"
+          "checked_at": "2026-11-18T06:51:01+09:00"
         }
       ],
       "affected_components": [
@@ -29,19 +29,19 @@
         "japan_stocks"
       ],
       "excluded_claims": [
-        "11月16日の指数・金利・為替・VIX・業種の正本値",
-        "11月16日の日本株実反応",
+        "11月17日の指数・金利・為替・VIX・業種の正本値",
+        "11月17日の日本株実反応",
         "時刻付き朝の現在値と限月付き先物示唆"
       ],
       "excluded_from_publication": true,
-      "first_seen_at": "2026-11-17T06:43:10+09:00"
+      "first_seen_at": "2026-11-18T06:51:01+09:00"
     },
     {
       "id": "stale_cross_asset",
       "status": "QUALIFIED",
-      "missing": "DXY・USD/JPYは11月11日、米2年・10年債利回りは11月10日で、米株11月12日と基準日が異なる。米株の同日因果には使用しない",
-      "impact": "米株11月12日の金利・為替因果から除外",
-      "last_checked_at": "2026-11-13T06:52:00+09:00",
+      "missing": "DXY・USD/JPY・米株は11月16日、米2年・10年債利回りは11月13日で基準日が異なる。米株11月17日の同日因果には使用しない",
+      "impact": "米株11月17日の金利・為替因果から除外",
+      "last_checked_at": "2026-11-18T06:51:01+09:00",
       "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
       "attempts": [
         {
@@ -50,7 +50,7 @@
           "source_urls": [
             "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
           ],
-          "checked_at": "2026-11-13T06:52:00+09:00"
+          "checked_at": "2026-11-18T06:51:01+09:00"
         }
       ],
       "affected_components": [
@@ -58,7 +58,7 @@
         "japan_stocks"
       ],
       "excluded_claims": [
-        "米株11月12日の金利・為替因果から除外"
+        "米株11月17日の金利・為替因果から除外"
       ],
       "excluded_from_publication": true,
       "first_seen_at": "2026-10-28T06:58:00+09:00"
@@ -66,9 +66,9 @@
     {
       "id": "contracts",
       "status": "QUALIFIED",
-      "missing": "Gold・Silver・Copper・WTI・Brentは11月11日値で、取引所・限月・清算値対応を確認できず結論から除外。Copperは任意非掲載",
+      "missing": "Gold・Silver・Copper・WTI・Brentは11月16日の連続足だが、取引所・限月・清算値対応を確認できず11月18日朝の結論から除外。Copperは任意非掲載",
       "impact": "商品先物の価格・前日比を結論から除外",
-      "last_checked_at": "2026-11-13T06:52:00+09:00",
+      "last_checked_at": "2026-11-18T06:51:01+09:00",
       "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
       "attempts": [
         {
@@ -78,7 +78,7 @@
             "https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.settlements.html",
             "https://www.ice.com/products/219/Brent-Crude-Futures"
           ],
-          "checked_at": "2026-11-13T06:52:00+09:00"
+          "checked_at": "2026-11-18T06:51:01+09:00"
         }
       ],
       "affected_components": [
@@ -94,9 +94,9 @@
     {
       "id": "current_values",
       "status": "QUALIFIED",
-      "missing": "11月13日朝の時刻付きUSD/JPY現在値と限月付き日経225先物実測値は未取得",
+      "missing": "11月18日朝の時刻付きUSD/JPY現在値と限月付き日経225先物実測値は未取得",
       "impact": "朝の現在値・先物示唆を除外",
-      "last_checked_at": "2026-11-13T06:52:00+09:00",
+      "last_checked_at": "2026-11-18T06:51:01+09:00",
       "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
       "attempts": [
         {
@@ -105,7 +105,7 @@
           "source_urls": [
             "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
           ],
-          "checked_at": "2026-11-13T06:52:00+09:00"
+          "checked_at": "2026-11-18T06:51:01+09:00"
         }
       ],
       "affected_components": [
@@ -121,19 +121,20 @@
     {
       "id": "coverage",
       "status": "QUALIFIED",
-      "missing": "11月16日公表の内閣府GDPと日銀講演は確認済み。アナリスト評価変更、日本企業開示、通商・制裁の全件網羅は未確認で、変更なしとは断定しない",
+      "missing": "11月17日公表のNVIDIA決算、BLS輸出入物価、FRB鉱工業生産は確認済み。日本企業開示、通商・制裁、評価変更の全件網羅は未確認で、変更なしとは断定しない",
       "impact": "変更なし・企業ニュース網羅の包括断定を除外",
-      "last_checked_at": "2026-11-17T06:43:10+09:00",
+      "last_checked_at": "2026-11-18T06:51:01+09:00",
       "next_action": "次回も再確認し、定義・同一基準日・網羅性が揃った場合のみ採用",
       "attempts": [
         {
           "method": "一次資料の独立収集",
-          "result": "内閣府GDPと日銀講演の2件を確認済みニュースへ採用。網羅性は未確認",
+          "result": "NVIDIA決算、BLS輸出入物価、FRB鉱工業生産の3件を確認済みニュースへ採用。網羅性は未確認",
           "source_urls": [
-            "https://www.esri.cao.go.jp/jp/sna/data/data_list/sokuhou/files/2026/qe263/pdf/gaiyou2631.pdf",
-            "https://www.boj.or.jp/en/about/press/koen_2026/data/ko261116a1.pdf"
+            "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027",
+            "https://www.bls.gov/news.release/ximpim.nr0.htm",
+            "https://www.federalreserve.gov/releases/g17/current/default.htm"
           ],
-          "checked_at": "2026-11-17T06:43:10+09:00"
+          "checked_at": "2026-11-18T06:51:01+09:00"
         }
       ],
       "affected_components": [
@@ -151,7 +152,7 @@
       "status": "QUALIFIED",
       "missing": "Project添付仕様書3点は接続済みGoogle Driveの完全一致検索で0件。Project Instructionsとmain現行スキーマ・検証を優先",
       "impact": "添付仕様書実読済みという主張を除外",
-      "last_checked_at": "2026-11-17T06:43:10+09:00",
+      "last_checked_at": "2026-11-18T06:51:01+09:00",
       "next_action": "次回もDriveを再検索し、文書が接続された場合はProject Instructionsとの優先順位に従って実読",
       "attempts": [
         {
@@ -160,7 +161,7 @@
           "source_urls": [
             "https://drive.google.com/"
           ],
-          "checked_at": "2026-11-17T06:43:10+09:00"
+          "checked_at": "2026-11-18T06:51:01+09:00"
         }
       ],
       "affected_components": [

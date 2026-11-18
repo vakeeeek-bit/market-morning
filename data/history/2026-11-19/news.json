@@ -1,0 +1,86 @@
+{
+  "report_date": "2026-11-19",
+  "target_market_date": "2026-11-18",
+  "updated_at": "2026-11-19T06:47:02+09:00",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "11月18日公表のFOMC議事要旨を一次資料で実読できた1件のみ掲載。市場反応は未確認として分離。米国市場の全材料、日本企業開示、通商・制裁、評価変更の全件網羅は未確認で、材料なしとは扱わない。",
+  "articles": [
+    {
+      "id": "nov19-fomc-oct-minutes",
+      "title": "FOMC議事要旨、ほぼ全参加者が追加利上げを適切と判断",
+      "published_date": "2026-11-18",
+      "verified_at": "2026-11-19T06:47:02+09:00",
+      "source_type": "primary",
+      "publisher": "Board of Governors of the Federal Reserve System",
+      "source_url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm",
+      "verification_url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm",
+      "verification_status": "PASS",
+      "fact": "10月27～28日会合は10対2で政策金利の誘導目標を3.75～4.00%に据え置き、2名は0.25ポイントの引き上げを支持した。ほぼ全参加者は基本見通しの下で追加利上げが適切となる可能性が高いと判断し、2名はインフレが不利に推移すれば次回会合で0.25ポイントを超える利上げも検討に値すると指摘した。議事要旨は、AI投資の収益期待が失望した場合の資産価格再評価や、AI関連債務・複雑な資金調達を金融安定上のリスクとして議論した。",
+      "analysis": "追加引き締め観測の継続は割引率を通じて日本の高PER・AI投資関連株に逆風となり得る。銀行株には利ざや期待が追い風となる一方、信用コストとAI関連融資の集中リスクが反対方向に働く。11月19日の日本株への実際の反応は当日取引で確認する。",
+      "limitations": "議事要旨は10月会合時点の情報に基づき、11月に公表された物価・生産統計を反映した新たな政策決定ではない。11月18日の債券・為替・株式の同時反応は正本市場データ未更新のため未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "FRB公式FOMC議事要旨本文を実読し、採決、参加者の政策判断、インフレおよび金融安定リスクの記述を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "3.75～4.00%据え置き、10対2、2名の0.25ポイント引き上げ支持、ほぼ全参加者の追加利上げ判断、2名の0.25ポイント超検討、AI関連金融安定リスクを確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "会合日2026-10-27～28、公表日2026-11-18、実確認2026-11-19T06:47:02+09:00を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "会合時点の政策判断と日本株への条件付き伝達経路を分離し、11月18日の市場反応は未確認と明記。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "10月会合時点の資料であり11月統計を反映した新決定ではないこと、市場反応が未確認であることを明示。"
+        }
+      }
+    },
+    {
+      "id": "nov19-bls-workplace-injuries-2025",
+      "title": "米民間労災・疾病件数、2025年は3.0%減",
+      "published_date": "2026-11-18",
+      "verified_at": "2026-11-19T06:47:02+09:00",
+      "source_type": "primary",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "source_url": "https://www.bls.gov/news.release/osh.nr0.htm",
+      "verification_url": "https://www.bls.gov/news.release/osh.nr0.htm",
+      "verification_status": "PASS",
+      "fact": "米労働統計局によると、2025年に民間雇用主が報告した非致死性の労働災害・疾病は241万4200件で、前年比3.0%減少した。記録対象総件数の発生率はフルタイム労働者100人当たり2.3件。製造業の総件数は30万4200件で8.5%減少した。",
+      "analysis": "製造業の労災件数減少は操業安全性だけでなく生産構成や労働時間の影響も受けるため、日本の機械・製造業需要の方向を単独では示さない。市場材料としての優先度はFOMC議事要旨より低い。",
+      "limitations": "雇用主報告に基づく年次推計で、2025年からNAICS 2022へ移行している。生産量、労働時間、日本企業の受注、市場反応との因果は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "BLS公式Employer-Reported Workplace Injuries and Illnesses本文を実読し、総件数、前年比、発生率、製造業件数を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "民間非致死性労災・疾病241万4200件、前年比3.0%減、100人当たり2.3件、製造業30万4200件・8.5%減を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "対象年2025年、公表日2026-11-18、実確認2026-11-19T06:47:02+09:00を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "年次統計と日本の製造業需要への限定的な解釈を分離し、市場反応は未確認と明記。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "雇用主報告、分類変更、生産量・市場との因果未確認を明示。"
+        }
+      }
+    }
+  ]
+}

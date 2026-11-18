@@ -2,20 +2,15 @@
   "version": "1.0",
   "description": "確認済み一次資料の表示設定",
   "items": {
-    "nov18-nvidia-q3-fy2027": {
+    "nov19-fomc-oct-minutes": {
       "primary_page": "world",
       "priority": 100,
-      "attention_points": ["売上高1158億ドル、データセンター1076億ドル", "Q4見通しは中国向けデータセンター計算売上を見込まず"]
+      "attention_points": ["10対2で3.75～4.00%据え置き、2名は0.25ポイント引き上げ支持", "ほぼ全参加者が追加利上げを適切と判断、AI関連の金融安定リスクも議論"]
     },
-    "nov18-us-import-export-prices-oct": {
+    "nov19-bls-workplace-injuries-2025": {
       "primary_page": "world",
-      "priority": 90,
-      "attention_points": ["輸入・輸出物価とも前月比1.1%上昇", "市場反応と消費者物価への転嫁は未確認"]
-    },
-    "nov18-fed-industrial-production-oct": {
-      "primary_page": "world",
-      "priority": 85,
-      "attention_points": ["鉱工業生産-0.4%に対し製造業は+0.3%", "設備稼働率76.4%、市場反応は未確認"]
+      "priority": 40,
+      "attention_points": ["民間の非致死性労災・疾病は前年比3.0%減", "年次推計であり生産量・市場反応との因果は未確認"]
     }
   }
 }

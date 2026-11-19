@@ -1,23 +1,23 @@
 {
-  "updated_at": "2026-11-20T06:55:32+09:00",
+  "updated_at": "2026-11-20T07:01:00+09:00",
   "source_report_date": "2026-11-20",
   "items": [
     {
       "id": "vercel_deploy_db7d1f15",
-      "status": "BLOCK",
-      "missing": "mainのニュース更新コミットdb7d1f15はActions成功済みだが、Vercel本番は11月19日版5記事のまま。対象コミットのVercel status/deployment記録も確認できない。",
-      "impact": "11月20日の確認済みニュース3件はmainに保存済みだが、本番公開完了とは扱わない。世界市場・日本株の両ページは旧版表示を継続。",
-      "last_checked_at": "2026-11-20T06:55:32+09:00",
-      "next_action": "VercelプロジェクトのGit連携、Production Branch=main、デプロイ履歴を確認し、コミットdb7d1f15を再デプロイ後に両ページの11月20日表示を実確認する。",
+      "status": "PASS",
+      "missing": "解消済み。main反映後にVercelの起動が遅延したが、追加のmain更新後に11月20日版へ切り替わった。",
+      "impact": "確認済みニュース3件の本番公開を世界市場・日本株の両ページで確認済み。総合レポートと市場実績の日付不足は別項目として継続する。",
+      "last_checked_at": "2026-11-20T07:01:00+09:00",
+      "next_action": "次回実行でもmain反映後にVercel本番JSONと両ページの日付・件数を照合する。",
       "attempts": [{
         "method": "main raw JSON、GitHub Actions、commit status/deployment、Vercel本番JSONと両ページを照合",
-        "result": "mainは11月20日版3記事、Actionsは2件成功。本番は11月19日版5記事で、約7分間の再取得後も不一致。",
+        "result": "初回はmainが11月20日版3記事、Actions成功に対し本番は11月19日版5記事。追加main更新後、本番JSONと両ページが11月20日版へ切り替わり、世界市場1件・日本株2件を実表示確認。",
         "source_urls": ["https://github.com/vakeeeek-bit/market-morning/commit/db7d1f15bfd7cb5182566296dd1053bb70cc0cbd", "https://github.com/vakeeeek-bit/market-morning/actions/runs/44622449784", "https://github.com/vakeeeek-bit/market-morning/actions/runs/44622449875", "https://market-morning-gules.vercel.app/data/news.json", "https://market-morning-gules.vercel.app/", "https://market-morning-gules.vercel.app/japan-stocks.html"],
-        "checked_at": "2026-11-20T06:55:32+09:00"
+        "checked_at": "2026-11-20T07:01:00+09:00"
       }],
       "affected_components": ["verified_news", "world_market", "japan_stocks", "production_deployment"],
-      "excluded_claims": ["11月20日ニュースのVercel本番公開完了"],
-      "excluded_from_publication": true,
+      "excluded_claims": [],
+      "excluded_from_publication": false,
       "first_seen_at": "2026-11-20T06:55:32+09:00"
     },
     {

@@ -157,16 +157,16 @@ def build_market_regime(sector_rows, stock_rows, internals, market=None):
         posture_reason = "日経平均またはTOPIXの同日データが不足しています"
     elif divergence:
         posture = "指数ごとに強弱が分かれる相場"
-        posture_reason = f"日経平均 {nikkei:+.2f}%に対しTOPIX {topix:+.2f}%"
+        posture_reason = f"日経平均型ETF {nikkei:+.2f}%に対しTOPIX連動ETF {topix:+.2f}%"
     elif nikkei >= 0.3 and topix >= 0.3:
         posture = "主要指数がそろって上昇"
-        posture_reason = f"日経平均 {nikkei:+.2f}%、TOPIX {topix:+.2f}%"
+        posture_reason = f"日経平均型ETF {nikkei:+.2f}%、TOPIX連動ETF {topix:+.2f}%"
     elif nikkei <= -0.3 and topix <= -0.3:
         posture = "主要指数がそろって下落"
-        posture_reason = f"日経平均 {nikkei:+.2f}%、TOPIX {topix:+.2f}%"
+        posture_reason = f"日経平均型ETF {nikkei:+.2f}%、TOPIX連動ETF {topix:+.2f}%"
     else:
         posture = "方向感は限定的"
-        posture_reason = f"日経平均 {nikkei:+.2f}%、TOPIX {topix:+.2f}%で値動きが小幅です"
+        posture_reason = f"日経平均型ETF {nikkei:+.2f}%、TOPIX連動ETF {topix:+.2f}%で値動きが小幅です"
     dimensions = [
         market_axis(market or {}, "大型株/小型株", "大型株", "小型株", ["sp500"], ["russell2000"], "S&P500とRussell2000の同日騰落率比較"),
         market_axis(market or {}, "グロース/バリュー（代理）", "大型ハイテク", "ダウ型", ["nasdaq100"], ["dow"], "NASDAQ100とNYダウの同日騰落率による代理比較"),
@@ -178,8 +178,8 @@ def build_market_regime(sector_rows, stock_rows, internals, market=None):
         "headline": posture,
         "headline_reason": posture_reason,
         "scoreboard": [
-            {"label": "日経平均", "value": nikkei, "unit": "%", "meaning": "プラスなら日経平均型が上昇"},
-            {"label": "TOPIX", "value": topix, "unit": "%", "meaning": "市場全体の方向"},
+            {"label": "日経平均型ETF", "value": nikkei, "unit": "%", "meaning": "プラスなら日経平均型が上昇"},
+            {"label": "TOPIX連動ETF", "value": topix, "unit": "%", "meaning": "市場全体の方向"},
         ],
         "divergence_alert": f"主要指数が逆方向：{posture_reason}" if divergence else None,
         "dimensions": dimensions,
@@ -393,7 +393,15 @@ def scenario_review(report, sector_rows, market_date, ready=True, blocked_reason
         result["note"] = "東証現物は休場です。前営業日の実績は保持し、次の取引日に見方を修正します。"
         result["market_reaction"] = "休場のため新しい現物株の結果はありません"
         result["revision"] = "先物・海外材料は監視し、現物株の判断は次の取引日まで保留"
-    elif awaiting_new_session:
+    elif awaiting_new_session and not ready and not blocked_reason:
+        result["status"] = "大引け待ち"
+        result["checks"] = [{"sector": name, "result": "当日終値の取得後に確認"} for name in watched]
+        result["condition_result"] = "表示中の業種実績は前営業日の終値です"
+        result["market_reaction"] = "本日の終値はまだ取得していません"
+        result["unexpected_gap"] = "当日終値が揃ってから比較します"
+        result["revision"] = "大引け後に注目業種と市場全体の相対順位を確認"
+        result["note"] = "前営業日の実績を本日シナリオの結果として採点しません。"
+    elif awaiting_new_session and not blocked_reason:
         result["status"] = "寄り付き前・検証保留"
         result["checks"] = [{"sector": name, "result": "本日大引け後に確認"} for name in watched]
         result["condition_result"] = "本日の条件と日本株現物の反応はまだ発生・確認していません"
@@ -510,6 +518,7 @@ def build(download, universe, report, market, now):
     data_phase = (
         "休場" if holiday and not blocked_reason
         else "データ異常・検証保留" if blocked_reason
+        else "前営業日終値（本日取引中）" if session_in_progress and market_date < today
         else "取引中暫定" if session_in_progress
         else "取引開始前" if (now.hour, now.minute) < (9, 0)
         else "大引け後"

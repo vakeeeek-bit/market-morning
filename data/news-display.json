@@ -5,12 +5,42 @@
     "nov19-fomc-oct-minutes": {
       "primary_page": "world",
       "priority": 100,
-      "attention_points": ["10対2で3.75～4.00%据え置き、2名は0.25ポイント引き上げ支持", "ほぼ全参加者が追加利上げを適切と判断、AI関連の金融安定リスクも議論"]
+      "attention_points": [
+        "10対2で3.75～4.00%据え置き、2名は0.25ポイント引き上げ支持",
+        "ほぼ全参加者が追加利上げを適切と判断、AI関連の金融安定リスクも議論"
+      ]
     },
     "nov19-bls-workplace-injuries-2025": {
       "primary_page": "world",
       "priority": 40,
-      "attention_points": ["民間の非致死性労災・疾病は前年比3.0%減", "年次推計であり生産量・市場反応との因果は未確認"]
+      "attention_points": [
+        "民間の非致死性労災・疾病は前年比3.0%減",
+        "年次推計であり生産量・市場反応との因果は未確認"
+      ]
+    },
+    "nov19-nv": {
+      "primary_page": "world",
+      "priority": 95,
+      "attention_points": [
+        "NVIDIAの8～10月期売上高は1,158億ドル、前年同期比103%増。データセンター部門は1,076億ドルで110%増えた。",
+        "対象期間は10月25日まで。日本企業の今後の受注額は未確定。"
+      ]
+    },
+    "nov19-trade": {
+      "primary_page": "japan",
+      "priority": 92,
+      "attention_points": [
+        "日本の10月輸出額は前年比20.5%増、数量は5.8%増。輸入額は21.6%増えた一方、数量は0.2%減。貿易赤字は4,765億円だった。",
+        "円建て金額と数量指数を区別。速報のため改定され得る。"
+      ]
+    },
+    "nov19-delta": {
+      "primary_page": "japan",
+      "priority": 85,
+      "attention_points": [
+        "Delta-Fly Pharmaは開発中の抗がん剤DFP-10917の長期保存を可能にする製剤技術について特許査定を受けたと発表した。",
+        "特許査定から医薬品の承認・収益寄与は判断できない。"
+      ]
     }
   }
 }

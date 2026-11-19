@@ -1,7 +1,7 @@
 {
   "updated_at": "2026-11-19 11:40:09 JST",
   "market_date": "2026-11-18",
-  "data_phase": "取引中暫定",
+  "data_phase": "前営業日終値（本日取引中）",
   "data_state": {
     "kind": "normal",
     "label": "通常取引日",
@@ -1038,39 +1038,33 @@
     "checks": [
       {
         "sector": "電機・精密",
-        "result": "大引け後に確認"
+        "result": "当日終値の取得後に確認"
       },
       {
         "sector": "機械",
-        "result": "大引け後に確認"
+        "result": "当日終値の取得後に確認"
       },
       {
         "sector": "銀行",
-        "result": "大引け後に確認"
+        "result": "当日終値の取得後に確認"
       },
       {
         "sector": "小売",
-        "result": "大引け後に確認"
-      },
-      {
-        "sector": "食品",
-        "result": "大引け後に確認"
+        "result": "当日終値の取得後に確認"
       }
     ],
-    "previous_condition": "米2年・10年債利回りは11月12日公表値で、米株11月13日より1営業日古い。2s10sは同一基準日だけで+24bpを算出するが、13日の株価要因には使用しない / Gold・Silver・Copper・WTI・Brentは11月13日連続足だが、取引所・限月・清算値対応を確定できず結論から除外。Copperは任意非掲載 / 11月16日朝の時刻付きUSD/JPY現在値と限月付き日経225先物実測値は未取得 / アナリスト評価変更と日本企業開示の全件網羅は未確認で、変更なしとは断定しない / Project添付仕様書3点は接続済みGoogle Driveの完全一致検索で0件。Project Instructionsとmain現行スキーマ・検証を優先",
-    "condition_result": "発生条件を自動判定できる一次データがないため、確認できず",
-    "market_reaction": "電機・精密 +1.32% / 機械 +0.54% / エネルギー資源 +0.29%",
-    "unexpected_gap": "電機・精密は上位3 / 機械は上位3 / 銀行は下位3 / 小売は下位3 / 食品は中位",
+    "previous_condition": "銀行と小売がTOPIX連動ETFを上回るか / 上昇が電機・精密と機械以外にも広がるか / 20日8:30の全国CPIと、発表後の円・国内金利",
+    "condition_result": "表示中の業種実績は前営業日の終値です",
+    "market_reaction": "本日の終値はまだ取得していません",
+    "unexpected_gap": "当日終値が揃ってから比較します",
     "gap_reason": "業種ETFの結果だけでは個別ニュースとの因果を分離できないため、理由は断定しません",
-    "revision": "注目業種の相対順位を踏まえて強弱判断を更新",
+    "revision": "大引け後に注目業種と市場全体の相対順位を確認",
     "today_watch": [
-      "米2年・10年債利回りは11月12日公表値で、米株11月13日より1営業日古い。2s10sは同一基準日だけで+24bpを算出するが、13日の株価要因には使用しない",
-      "Gold・Silver・Copper・WTI・Brentは11月13日連続足だが、取引所・限月・清算値対応を確定できず結論から除外。Copperは任意非掲載",
-      "11月16日朝の時刻付きUSD/JPY現在値と限月付き日経225先物実測値は未取得",
-      "アナリスト評価変更と日本企業開示の全件網羅は未確認で、変更なしとは断定しない",
-      "Project添付仕様書3点は接続済みGoogle Driveの完全一致検索で0件。Project Instructionsとmain現行スキーマ・検証を優先"
+      "銀行と小売がTOPIX連動ETFを上回るか",
+      "上昇が電機・精密と機械以外にも広がるか",
+      "20日8:30の全国CPIと、発表後の円・国内金利"
     ],
-    "note": "取引中のため検証しません。大引け後の更新で前回の見方を再点検します"
+    "note": "前営業日の実績を本日シナリオの結果として採点しません。"
   },
   "data_quality": {
     "sector_total": 17,
@@ -1079,7 +1073,7 @@
     "stock_available": 34,
     "date_alignment": {
       "expected_market_date": "2026-11-18",
-      "report_target_market_date": "2026-11-13",
+      "report_target_market_date": "2026-11-18",
       "sector_market_date": "2026-11-18",
       "stock_market_date": "2026-11-18",
       "benchmark_market_date": "2026-11-18",
@@ -1089,22 +1083,22 @@
   },
   "market_regime": {
     "headline": "指数ごとに強弱が分かれる相場",
-    "headline_reason": "日経平均 +0.21%に対しTOPIX -0.64%",
+    "headline_reason": "日経平均型ETF +0.21%に対しTOPIX連動ETF -0.64%",
     "scoreboard": [
       {
-        "label": "日経平均",
+        "label": "日経平均型ETF",
         "value": 0.21,
         "unit": "%",
         "meaning": "プラスなら日経平均型が上昇"
       },
       {
-        "label": "TOPIX",
+        "label": "TOPIX連動ETF",
         "value": -0.64,
         "unit": "%",
         "meaning": "市場全体の方向"
       }
     ],
-    "divergence_alert": "主要指数が逆方向：日経平均 +0.21%に対しTOPIX -0.64%",
+    "divergence_alert": "主要指数が逆方向：日経平均型ETF +0.21%に対しTOPIX連動ETF -0.64%",
     "dimensions": [
       {
         "axis": "大型株/小型株",
@@ -1835,7 +1829,7 @@
   ],
   "morning_summary": {
     "stance": "指数ごとに強弱が分かれる相場",
-    "reason": "日経平均 +0.21%に対しTOPIX -0.64%",
+    "reason": "日経平均型ETF +0.21%に対しTOPIX連動ETF -0.64%",
     "tailwinds": [
       "明確な追い風は確認できず"
     ],

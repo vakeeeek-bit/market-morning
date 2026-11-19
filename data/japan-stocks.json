@@ -27,7 +27,7 @@
     "individual_news_review": {
       "status": "reviewed",
       "story_count": 1,
-      "scope": "企業IRを確認した個別材料1件。全適時開示の網羅は未確認。"
+      "scope": "一次資料を確認した企業固有材料のみ掲載。件数合わせは行わない"
     }
   },
   "top_stories": [
@@ -105,7 +105,10 @@
         "name": "株探・格上げ日報",
         "url": "https://s.kabutan.jp/news/n202611181098/",
         "result": "18日の格上げ2件を実読",
-        "coverage": "無料公開の格上げ集計のみ"
+        "coverage": "無料公開の格上げ集計のみ",
+        "freshness": "当日確認状況をJSONに記録",
+        "automation": "契約API未導入",
+        "rights": "確認できた事実だけを掲載"
       }
     ],
     "summary": "証券会社の投資判断。株探18日17時掲載分を確認。格下げ・新規・未公開資料を含む全件の集計は未確認。"

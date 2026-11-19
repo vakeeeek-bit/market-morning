@@ -1,0 +1,124 @@
+{
+  "report_date": "2026-11-20",
+  "target_market_date": "2026-11-19",
+  "updated_at": "2026-11-20T06:40:05+09:00",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "11月19日公表の一次資料を実読できた3件のみ掲載。市場反応は未確認として分離。米国市場の全材料、日本企業開示、通商・制裁、評価変更の全件網羅は未確認で、材料なしとは扱わない。",
+  "articles": [
+    {
+      "id": "nov20-boj-ueda-diet-statement",
+      "title": "日銀総裁、政策金利の引き上げ継続方針を説明",
+      "published_date": "2026-11-19",
+      "verified_at": "2026-11-20T06:40:05+09:00",
+      "source_type": "primary",
+      "publisher": "日本銀行",
+      "source_url": "https://www.boj.or.jp/mopo/diet/d_state/data/dst261119a.pdf",
+      "verification_url": "https://www.boj.or.jp/mopo/diet/d_state/data/dst261119a.pdf",
+      "verification_status": "PASS",
+      "fact": "植田総裁は参議院財政金融委員会で、景気は一部に弱めの動きがあるものの緩やかに回復し、AI関連需要を背景に輸出は緩やかに増加していると説明した。生鮮食品を除く消費者物価は足元で2%程度、先行きは原油、半導体価格、これまでの円安などから2%をはっきり上回ると予想。政策金利を1.25%程度に維持した10月会合を説明し、経済・物価・金融情勢に応じて引き続き利上げし、金融緩和度を調整する方針を示した。",
+      "analysis": "これまでの市場認識は日銀の正常化継続だった。今回、物価上振れリスクと継続利上げ方針が国会説明で再確認された。銀行には利ざや期待が追い風となり得る一方、不動産・高PER株には割引率上昇、内需には円安・原油高による実質所得圧迫が逆風候補。実際の株価・円・国内金利反応は正本市場データ更新後に判定する。",
+      "limitations": "10月会合の方針を説明したもので、11月19日の新たな金融政策決定ではない。次回利上げの時期・幅は示していない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "日銀公式の国会概要説明全文を実読し、景気・物価判断、1.25%維持、継続利上げ方針、リスク要因を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "輸出の緩やかな増加、足元の物価2%程度、先行き2%超、政策金利1.25%程度の維持、利上げ継続方針を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "10月会合の決定、国会説明日2026-11-19、実確認2026-11-20T06:40:05+09:00を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "総裁説明と日本株への条件付き伝達経路を分離し、市場反応は未確認と明記。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "新規決定ではなく、次回利上げ時期・幅が未確定であることを明示。"
+        }
+      }
+    },
+    {
+      "id": "nov20-boj-real-exports-oct",
+      "title": "10月実質輸出は前月比4.1%増",
+      "published_date": "2026-11-19",
+      "verified_at": "2026-11-20T06:40:05+09:00",
+      "source_type": "primary",
+      "publisher": "日本銀行",
+      "source_url": "https://www.boj.or.jp/research/research_data/reri/reri.pdf",
+      "verification_url": "https://www.boj.or.jp/research/research_data/reri/reri.pdf",
+      "verification_status": "PASS",
+      "fact": "日銀の価格変動を除いた季節調整済み実質輸出は、2026年10月に前月比4.1%増加した。地域別では米国3.7%増、EU10.7%増、アジア3.1%増、中国5.2%増。財別では自動車関連7.1%増、情報関連2.1%増、資本財5.0%増だった。",
+      "analysis": "これまでの市場認識は財務省貿易統計で輸出金額・数量が増加したというものだった。今回、価格変動を除いた日銀系列でも10月輸出の改善を確認した。自動車、機械、半導体関連の外需には追い風候補だが、企業利益への波及は為替、販売価格、地域構成、受注開示で確認する。",
+      "limitations": "10月単月の季節調整済み計数で、後日改定され得る。輸出増加から個別企業の売上・利益や11月19日の株価反応を直接推定しない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "日銀公式『実質輸出入の動向』図表を実読し、10月の総合、地域別、財別の前月比を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "実質輸出計+4.1%、米国+3.7%、EU+10.7%、アジア+3.1%、中国+5.2%、自動車+7.1%、情報+2.1%、資本財+5.0%を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "対象月2026年10月、公表日2026-11-19、実確認2026-11-20T06:40:05+09:00を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "実質輸出統計と日本企業への条件付き波及を分離し、市場反応は未確認と明記。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "単月・改定可能性、個別企業利益と市場反応を直接推定しないことを明示。"
+        }
+      }
+    },
+    {
+      "id": "nov20-fed-jefferson-shocks-ai",
+      "title": "FRB副議長、AI投資は当面需要と物価を押し上げると説明",
+      "published_date": "2026-11-19",
+      "verified_at": "2026-11-20T06:40:05+09:00",
+      "source_type": "primary",
+      "publisher": "Board of Governors of the Federal Reserve System",
+      "source_url": "https://www.federalreserve.gov/newsevents/speech/jefferson20261119a.htm",
+      "verification_url": "https://www.federalreserve.gov/newsevents/speech/jefferson20261119a.htm",
+      "verification_status": "PASS",
+      "fact": "ジェファーソンFRB副議長は、エネルギー価格ショックはインフレを押し上げる一方で実質所得と需要を下押しすると説明した。AIについては、データセンターや高度計算機への投資が足元の需要とインフレを押し上げる一方、将来の生産性向上は成長を支えながら物価を下押しし得ると述べた。",
+      "analysis": "これまでの市場認識はFOMC議事要旨が示した追加利上げ寄りの姿勢だった。今回の講演は、AI投資を需要・物価の上振れ要因と将来の供給力改善要因に分ける判断枠組みを示した。日本のAI設備・半導体には需要面の追い風がある一方、米金利高止まりと投資回収懸念が評価面の逆風となる二面性を維持する。",
+      "limitations": "講演は副議長個人の見解であり、FOMCの新たな決定や次回会合の投票方針を示すものではない。市場反応は未確認。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "FRB公式講演本文を実読し、エネルギーショック、AIの需要・供給効果、政策判断上のトレードオフを確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "エネルギー高のインフレ・実質所得への逆方向効果、AI投資の現在の需要・物価押し上げと将来の生産性効果を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "講演日2026-11-19、実確認2026-11-20T06:40:05+09:00を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "副議長の説明と日本株への条件付き解釈を分離し、市場反応は未確認と明記。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "個人見解でありFOMCの新決定・投票方針ではないことを明示。"
+        }
+      }
+    }
+  ]
+}

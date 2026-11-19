@@ -1,269 +1,211 @@
 {
-  "report_date": "2026-11-16",
-  "target_market_date": "2026-11-13",
-  "updated_at": "2026-11-16T07:00:44+09:00",
+  "report_date": "2026-11-19",
+  "target_market_date": "2026-11-18",
+  "updated_at": "2026-11-19T12:29:58+09:00",
   "report_type": "daily",
   "japan_quick_view": {
-    "headline": "注釈付き11月16日版｜米半導体安と物価警戒、日本は内需優位・MUFG還元策の反応待ち",
-    "summary": "日本13日は日経平均・TOPIXとも上昇し11/17業種が上昇したが、9984・機械・鉄鋼非鉄は弱い。月曜は米半導体安とMUFG還元策、日本GDPの三つを分離して確認。",
+    "headline": "日経平均は上昇、17業種のうち値上がりは3業種",
+    "summary": "日本の18日終値は日経平均が59,024.28円（+0.28%）。TOPIX連動ETFは0.64%下落し、17業種ETFのうち14業種が下落した。19日前引けの日経平均は59,140.87円（+0.20%）。業種の比較は18日終値を使用。",
     "top_materials": [
-      "NVIDIA経営移行の不透明感が継続。米国ではNASDAQ100-1.22%、SOX-3.43%、情報技術ETF代理-2.01%となり、日本では正式発表後初取引のソフトバンクグループ（9984）が-5.11%。ただしロードマップ継続表明を反証として保持",
-      "米10月PPIは前月比+0.3%、前年比+6.5%。食品・エネルギー・貿易サービス除く指数も前月比+0.5%、前年比+4.9%。米国債利回り上昇とハイテク安が観測されたが、正本金利は1営業日古いため数値因果は保留",
-      "日本11月13日は日経平均61,142.35（+0.53%）、TOPIX3,941.57（+0.11%）。17業種ETF代理は11上昇・6下落で、小売+1.77%、食品+1.29%、運輸物流+1.14%が上位、機械-1.96%、鉄鋼非鉄-2.38%が下位",
-      "三菱UFJ FG（8306）は純利益目標を2.7兆円から2.8兆円へ上方修正し、年間配当予想を96円から100円へ増額、下期最大2,000億円の自己株買いを決定。発表時刻は未確認のため13日終値-0.66%を発表反応とは扱わず、月曜反応を確認",
-      "本日08:50の日本GDP、17日22:30の米輸出入物価、18日06:20頃のNVIDIA決算、20日08:30の日本CPIが次の分岐。結果公表前は方向を決めず、円・国内金利・SOX・銀行と内需の実反応で更新"
+      "日本の18日終値は日経平均が59,024.28円（+0.28%）。TOPIX連動ETFは0.64%下落し、17業種ETFのうち14業種が下落した。",
+      "経営交代後もAI向け需要は伸びた。一方、決算を受けた18日の米取引で同社株は下落。日本の装置株では受注の伸びと、株価がすでに織り込んだ成長を分けて見る。",
+      "据え置き後も追加引き締めの可能性が残る。将来の利益を現在の価値に割り引く金利が上がれば、成長株の評価には逆風。次回の利上げ幅・確率は未確定。",
+      "日本の10月輸出額は前年比20.5%増、数量は5.8%増。輸入額は21.6%増えた一方、数量は0.2%減。貿易赤字は4,765億円だった。",
+      "Delta-Fly Pharma（4598）は18日大引け時に特許査定を発表。19日前引けは79円（+36.2%）。医薬品セクター全体への波及は未確認。"
     ],
     "focus_sectors": [
       "電機・精密",
       "機械",
       "銀行",
-      "小売",
-      "食品"
+      "小売"
     ],
     "unpriced_materials": [
-      "米2年・10年債利回りは11月12日公表値で、米株11月13日より1営業日古い。2s10sは同一基準日だけで+24bpを算出するが、13日の株価要因には使用しない",
-      "Gold・Silver・Copper・WTI・Brentは11月13日連続足だが、取引所・限月・清算値対応を確定できず結論から除外。Copperは任意非掲載",
-      "11月16日朝の時刻付きUSD/JPY現在値と限月付き日経225先物実測値は未取得",
-      "アナリスト評価変更と日本企業開示の全件網羅は未確認で、変更なしとは断定しない",
-      "Project添付仕様書3点は接続済みGoogle Driveの完全一致検索で0件。Project Instructionsとmain現行スキーマ・検証を優先"
+      "銀行と小売がTOPIX連動ETFを上回るか",
+      "上昇が電機・精密と機械以外にも広がるか",
+      "20日8:30の全国CPIと、発表後の円・国内金利"
     ],
     "individual_news_review": {
       "status": "reviewed",
-      "story_count": 2,
-      "scope": "一次資料を確認した企業固有材料のみ掲載。件数合わせは行わない"
+      "story_count": 1,
+      "scope": "企業IRを確認した個別材料1件。全適時開示の網羅は未確認。"
     }
   },
   "top_stories": [
     {
-      "company": "三菱UFJフィナンシャル・グループ",
-      "ticker": "8306",
-      "headline": "利益目標・配当を上方修正、自己株買いを決定",
-      "category": "決算・株主還元",
-      "fact": "純利益目標を2.7兆円から2.8兆円、年間配当予想を96円から100円へ上方修正し、下期最大2,000億円の自己株買いを決定。",
-      "announced_at": "2026-11-13（時刻未確認）",
-      "timing": "発表時刻未確認のため、11月13日終値を発表反応に使用しない",
-      "market_pricing_status": "織り込み状態未確認",
-      "price_reaction": "8306は11月13日終値で-0.66%。発表時刻未確認のため新情報への反応とは断定しない",
-      "related_stocks": [
-        "8316"
-      ],
+      "company": "Delta-Fly Pharma",
+      "ticker": "4598",
+      "headline": "開発中の抗がん剤の製剤技術で特許査定",
+      "category": "企業開示",
+      "fact": "Delta-Fly Pharmaは開発中の抗がん剤DFP-10917の長期保存を可能にする製剤技術について特許査定を受けたと発表した。",
+      "announced_at": "2026-11-18T15:30:00+09:00",
+      "timing": "18日大引け時に公表、19日前場の反応を区別。",
+      "market_pricing_status": "前場で反応を確認",
+      "price_reaction": "19日前引け79円、前日終値比+36.2%（株探）。",
+      "related_stocks": [],
       "related_sectors": [
-        "銀行",
-        "金融（銀行除く）"
+        "医薬品"
       ],
-      "importance": "high",
+      "importance": "個別銘柄",
       "confidence": "confirmed",
-      "source_url": "https://www.mufg.jp/dam/pressrelease/2026/pdf/news-20261113-001_ja.pdf",
-      "analysis": "還元強化は固有の追い風候補だが、国内金利・円・GDP後の銀行全体の反応と分離。",
-      "today_watch": "8306の銀行ETF比、国内金利、USD/JPY"
+      "source_url": "https://www.delta-flypharma.co.jp/documents/others/ir/info/4598-20261118-disclosure01_bt.pdf",
+      "analysis": "保存・供給面の課題に進展。医薬品の承認、販売開始、売上寄与の時期はこの発表からは決まらない。",
+      "today_watch": "後場の出来高と終値。利益への寄与は今後の開示を確認。",
+      "price_source_url": "https://finance.yahoo.co.jp/news/detail/4e9110c783eb3b3dcd0bd2edce7f34a54e29024f"
     }
   ],
-  "important_stories": [
-    {
-      "company": "ソフトバンクグループ",
-      "ticker": "9984",
-      "headline": "NVIDIA経営移行後初取引で下落",
-      "category": "市場フォロー",
-      "fact": "NVIDIAは11月12日にCEO交代を発表。9984は正式発表後初取引の11月13日に3,547円、前日比-5.11%。",
-      "announced_at": "2026-11-12T16:00:00-08:00",
-      "timing": "正式発表後の日本初取引を11月13日終値で確認",
-      "market_pricing_status": "一部織り込み",
-      "price_reaction": "9984-5.11%、情報通信サービスETF代理+1.09%、SOX-3.43%",
-      "related_stocks": [
-        "6501",
-        "6758"
-      ],
-      "related_sectors": [
-        "情報通信・サービス",
-        "電機・精密",
-        "機械"
-      ],
-      "importance": "high",
-      "confidence": "supported",
-      "source_url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-CEO-Transition/",
-      "analysis": "業種全体ではなくAI投資感応度の高い個別株へ弱さが集中。",
-      "today_watch": "9984、SOX、NVIDIA決算、電機精密のTOPIX比"
-    }
-  ],
+  "important_stories": [],
   "other_stories": [],
   "data_quality": {
-    "overall": "MANUAL_REVIEW",
+    "overall": "注釈付き公開",
     "missing": [
-      "米2年・10年債利回りは11月12日公表値で、米株11月13日より1営業日古い。2s10sは同一基準日だけで+24bpを算出するが、13日の株価要因には使用しない",
-      "Gold・Silver・Copper・WTI・Brentは11月13日連続足だが、取引所・限月・清算値対応を確定できず結論から除外。Copperは任意非掲載",
-      "11月16日朝の時刻付きUSD/JPY現在値と限月付き日経225先物実測値は未取得",
-      "アナリスト評価変更と日本企業開示の全件網羅は未確認で、変更なしとは断定しない",
-      "Project添付仕様書3点は接続済みGoogle Driveの完全一致検索で0件。Project Instructionsとmain現行スキーマ・検証を優先"
+      "米金利・ドル指数・商品・暗号資産の保存日足は11月17日。18日の米株変動と同時点の因果には使えない。",
+      "SOXは保存日足とNasdaqの履歴表示・報道で騰落の符号が一致せず、方向判断から除外。",
+      "商品先物の限月・清算値と日経先物の同時刻価格は未確認。",
+      "国内の全適時開示・証券会社の評価変更は一部のみ確認。"
     ],
     "differences": [
-      "米国はダウ+0.10%に対しNASDAQ100-1.22%、SOX-3.43%。11業種ETF代理は7上昇・4下落で、指数下落は情報技術の集中した弱さが中心",
-      "米PPIは前月比+0.3%、前年比+6.5%。インフレ鈍化確認ではなく、金利高止まり警戒を残す内容",
-      "日本は日経平均+0.53%、TOPIX+0.11%、17業種ETF代理は11上昇・6下落。小売・食品・運輸物流が上位、機械・鉄鋼非鉄が下位",
-      "NVIDIA正式発表後の日本取引で9984-5.11%。米SOXはさらに-3.43%で、前回の選別相場から半導体固有の弱さが拡大",
-      "日本17業種・34銘柄は通常一括取得がレート制限で未達後、Yahoo chart個別代替取得で11月13日に整合"
+      "SOXは保存日足とNasdaqの履歴表示・報道で騰落の符号が一致せず、方向判断から除外。",
+      "TOPIXの数値は1306.Tの参考値。"
     ],
     "excluded": [
-      "11月12日の米金利を11月13日の米ハイテク安の同日原因として扱うこと",
-      "限月・値種別・時刻未確認の商品先物、日経225先物、朝の為替現在値",
-      "Copper価格・在庫（任意非掲載）",
-      "NVIDIAの経営移行またはPPIだけで全市場の値動きを単一因果として説明すること",
-      "評価変更なし、企業材料を全件確認済みという包括断定"
+      "先物の未特定限月、18日の金利変化、未確認の利上げ確率"
     ],
     "cautions": [
-      "QUALIFIED注釈付き版",
-      "米株・FXは11月13日、米金利は11月12日を混同しない",
-      "日本・米国の業種はETF代理で指数そのものではない",
-      "日本個別株34銘柄は限定監視ユニバースで市場全体のBreadthではない",
-      "NVIDIA、PPI、MUFGの発表時刻と各市場終値の前後関係を分離",
-      "Copperは任意非掲載"
+      "米金利・ドル指数・商品・暗号資産の保存日足は11月17日。18日の米株変動と同時点の因果には使えない。",
+      "18日の日本株は米議事要旨公表前。19日の前場段階で当日終値は未確定。"
     ]
   },
   "analyst_rating_changes": {
-    "headline": "11月13日の評価変更を全件網羅できず非掲載",
-    "coverage_status": "十分調査したが取得不能",
-    "items": [],
-    "source_review": [
+    "headline": "11月18日公表の格上げ2件",
+    "coverage_status": "取得済",
+    "items": [
       {
-        "name": "TDnet公開一覧",
-        "url": "https://www.release.tdnet.info/inbs/I_main_00.html",
-        "result": "企業開示はMUFGを確認。評価変更の全件網羅は確認できず",
-        "coverage": "公開範囲のみ",
-        "freshness": "11月16日朝確認",
-        "automation": "契約API未導入",
-        "rights": "確認事実のみ掲載"
+        "company": "富士フイルムHD",
+        "ticker": "4901",
+        "headline": "岩井コスモがBからB＋へ",
+        "fact": "目標株価を3,300円から3,950円に引き上げ。",
+        "category": "格上げ",
+        "analysis": "株探の公開集計。発行元レポート本文と変更直後の市場反応は未確認。",
+        "source_url": "https://s.kabutan.jp/news/n202611181098/",
+        "announced_at": "2026-11-18"
+      },
+      {
+        "company": "グローリー",
+        "ticker": "6457",
+        "headline": "東海東京が中立から強気へ",
+        "fact": "目標株価を4,540円から5,400円に引き上げ。",
+        "category": "格上げ",
+        "analysis": "株探の公開集計。発行元レポート本文と変更直後の市場反応は未確認。",
+        "source_url": "https://s.kabutan.jp/news/n202611181098/",
+        "announced_at": "2026-11-18"
       }
     ],
-    "summary": "変更なしとは断定しない"
+    "source_review": [
+      {
+        "name": "株探・格上げ日報",
+        "url": "https://s.kabutan.jp/news/n202611181098/",
+        "result": "18日の格上げ2件を実読",
+        "coverage": "無料公開の格上げ集計のみ"
+      }
+    ],
+    "summary": "証券会社の投資判断。株探18日17時掲載分を確認。格下げ・新規・未公開資料を含む全件の集計は未確認。"
   },
   "sector_implications": [
     {
-      "driver": "NVIDIA経営移行とSOX-3.43%",
+      "driver": "NVIDIA決算",
       "affected_sectors": [
         "電機・精密",
-        "機械",
-        "情報通信・サービス"
-      ],
-      "possible_impact": "半導体・AI投資感応株に逆風候補",
-      "confirmation_condition": "SOX、9984、電機精密のTOPIX比"
-    },
-    {
-      "driver": "MUFG還元策",
-      "affected_sectors": [
-        "銀行",
-        "金融（銀行除く）"
-      ],
-      "possible_impact": "銀行固有の追い風候補",
-      "confirmation_condition": "8306の銀行ETF比と国内金利"
-    },
-    {
-      "driver": "日本GDP",
-      "affected_sectors": [
-        "銀行",
-        "不動産",
-        "小売",
         "機械"
       ],
-      "possible_impact": "結果公表前は方向保留",
-      "confirmation_condition": "GDP実績、円、国内金利、業種反応"
+      "possible_impact": "経営交代後もAI向け需要は伸びた。一方、決算を受けた18日の米取引で同社株は下落。日本の装置株では受注の伸びと、株価がすでに織り込んだ成長を分けて見る。",
+      "confirmation_condition": "上昇が電機・精密と機械以外にも広がるか"
+    },
+    {
+      "driver": "輸入額増加",
+      "affected_sectors": [
+        "小売",
+        "運輸・物流"
+      ],
+      "possible_impact": "輸出数量の増加は外需を支える。一方、輸入支払いの増加は原材料を海外から調達する企業の負担になり得る。価格転嫁と為替予約の差に注意。",
+      "confirmation_condition": "20日8:30の全国CPIと、発表後の円・国内金利"
     }
   ],
   "scenarios": [
     {
-      "name": "半導体安継続",
-      "conditions": "NVIDIA・SOXが続落し、日本の電機精密・機械がTOPIXを下回る",
-      "impact_on_japan": "半導体製造装置・AI投資感応株に逆風",
+      "name": "指数高・物色は限定",
+      "conditions": "電機・精密と機械が優位、上昇業種は半数未満",
+      "impact_on_japan": "日経平均が持ち直しても保有銘柄の体感とずれやすい。",
       "strong_sectors": [
-        "食品",
-        "小売",
-        "公益"
+        "電機・精密",
+        "機械"
       ],
+      "weak_sectors": [
+        "銀行",
+        "小売"
+      ],
+      "invalidation": "銀行と小売がTOPIX連動ETFを上回るか"
+    },
+    {
+      "name": "上昇が広がる",
+      "conditions": "17業種の過半が上昇し、TOPIX連動ETFもプラスに転じる",
+      "impact_on_japan": "日経平均以外にも買いが広がる。",
+      "strong_sectors": [
+        "銀行",
+        "小売"
+      ],
+      "weak_sectors": [],
+      "invalidation": "再び過半の業種が下落"
+    },
+    {
+      "name": "装置株も失速",
+      "conditions": "電機・精密がTOPIX連動ETFを下回り、銀行・小売も低迷",
+      "impact_on_japan": "指数を支えた輸出株へも売りが広がる。",
+      "strong_sectors": [],
       "weak_sectors": [
         "電機・精密",
         "機械"
       ],
-      "invalidation": "SOX反発、VIX低下、電機精密がTOPIXを上回る"
-    },
-    {
-      "name": "MUFG還元策とGDPで銀行優位",
-      "conditions": "8306が銀行ETFを上回り、GDP後に国内金利が上昇して円が安定",
-      "impact_on_japan": "銀行・高配当株に追い風候補",
-      "strong_sectors": [
-        "銀行",
-        "金融（銀行除く）"
-      ],
-      "weak_sectors": [
-        "不動産",
-        "高PER内需"
-      ],
-      "invalidation": "8306が銀行ETFを下回る、円高・金利低下、GDP下振れ"
-    },
-    {
-      "name": "内需ローテーション継続",
-      "conditions": "上昇業種が過半、小売・食品・運輸物流がTOPIXを上回る",
-      "impact_on_japan": "指数より業種選別を優先",
-      "strong_sectors": [
-        "小売",
-        "食品",
-        "運輸・物流"
-      ],
-      "weak_sectors": [
-        "機械",
-        "鉄鋼・非鉄"
-      ],
-      "invalidation": "半導体・機械主導へ転換し、内需がTOPIX比で劣後"
+      "invalidation": "電機が相対優位を取り戻し、上昇業種が増える"
     }
   ],
   "monitoring_points": [
     {
-      "target": "NVIDIA・AI半導体",
-      "current_view": "経営移行不透明感で売り集中",
-      "today_check": "NVIDIA、SOX、9984、電機精密",
-      "view_change_condition": "SOX反発・電機精密TOPIX超過で逆風を縮小"
+      "target": "東証の業種の広がり",
+      "current_view": "日本の18日終値は日経平均が59,024.28円（+0.28%）。TOPIX連動ETFは0.64%下落し、17業種ETFのうち14業種が下落した。",
+      "today_check": "上昇が電機・精密と機械以外にも広がるか",
+      "view_change_condition": "17業種の過半が上昇し、TOPIX連動ETFもプラスに転じる"
     },
     {
-      "target": "米インフレ・金利",
-      "current_view": "PPI前年比+6.5%、正本金利は1営業日古い",
-      "today_check": "米金利・DXY・高PER株",
-      "view_change_condition": "金利低下と高PER株反発がそろえば物価警戒を縮小"
+      "target": "AI関連",
+      "current_view": "経営交代後もAI向け需要は伸びた。一方、決算を受けた18日の米取引で同社株は下落。日本の装置株では受注の伸びと、株価がすでに織り込んだ成長を分けて見る。",
+      "today_check": "電機・精密とTOPIX連動ETFの差",
+      "view_change_condition": "電機・精密がTOPIX連動ETFを下回り、銀行・小売も低迷"
     },
     {
-      "target": "MUFG・銀行",
-      "current_view": "上方修正・増配・自己株買いへの市場反応は未確認",
-      "today_check": "8306と銀行ETF、国内金利",
-      "view_change_condition": "8306が銀行ETFを下回れば固有追い風を弱める"
-    },
-    {
-      "target": "日本の内需優位",
-      "current_view": "11/17業種上昇、小売・食品・運輸上位",
-      "today_check": "上昇業種数とTOPIX比",
-      "view_change_condition": "上昇業種過半割れ・内需劣後で撤回"
-    },
-    {
-      "target": "公式イベント",
-      "current_view": "GDP・輸出入物価・NVIDIA決算・CPI待ち",
-      "today_check": "発表実績と時系列",
-      "view_change_condition": "結果と実価格反応でシナリオ更新"
+      "target": "国内物価",
+      "current_view": "輸出数量の増加は外需を支える。一方、輸入支払いの増加は原材料を海外から調達する企業の負担になり得る。価格転嫁と為替予約の差に注意。",
+      "today_check": "20日8:30の全国CPIと、発表後の円・国内金利",
+      "view_change_condition": "輸入コスト増でも価格転嫁が進み、小売の相対株価が持ち直す"
     }
   ],
   "source_notes": [
-    "日経平均はNikkei Indexes、TOPIXはJPXの11月13日公式値",
-    "17業種ETF・34銘柄はYahoo chart個別代替取得。市場全体のBreadthではない",
-    "NVIDIA、PPI、MUFGの発表時刻と市場終値を分離",
-    "未確認値・限月不明値は不採用"
+    "https://www.delta-flypharma.co.jp/documents/others/ir/info/4598-20261118-disclosure01_bt.pdf",
+    "https://finance.yahoo.co.jp/news/detail/4e9110c783eb3b3dcd0bd2edce7f34a54e29024f",
+    "https://s.kabutan.jp/news/n202611181098/",
+    "https://github.com/vakeeeek-bit/market-morning/blob/ca58436661427012561904eef02b29cb00945bf4/data/japan-market.json"
   ],
   "publication_policy": {
     "status": "QUALIFIED",
     "mode": "provisional",
-    "updated_at": "2026-11-16T07:00:44+09:00",
+    "updated_at": "2026-11-19T12:29:58+09:00",
     "complete_gate": "FAIL",
     "copper_included": false,
-    "note": "11月13日の米主要株・VIX・11業種ETF、公式日本指数・17業種ETF代理・34銘柄、一次資料を採用。古い金利、未定義先物、未確認の朝現在値を除外した注釈付き公開。",
+    "note": "11月19日昼更新。米国・日本の18日終値と19日日本の前場観測を明記。時点・定義が揃わない値を除いて掲載。",
     "missing_items": [
-      "米2年・10年債利回りは11月12日公表値で、米株11月13日より1営業日古い。2s10sは同一基準日だけで+24bpを算出するが、13日の株価要因には使用しない",
-      "Gold・Silver・Copper・WTI・Brentは11月13日連続足だが、取引所・限月・清算値対応を確定できず結論から除外。Copperは任意非掲載",
-      "11月16日朝の時刻付きUSD/JPY現在値と限月付き日経225先物実測値は未取得",
-      "アナリスト評価変更と日本企業開示の全件網羅は未確認で、変更なしとは断定しない",
-      "Project添付仕様書3点は接続済みGoogle Driveの完全一致検索で0件。Project Instructionsとmain現行スキーマ・検証を優先"
+      "米金利・ドル指数・商品・暗号資産の保存日足は11月17日。18日の米株変動と同時点の因果には使えない。",
+      "SOXは保存日足とNasdaqの履歴表示・報道で騰落の符号が一致せず、方向判断から除外。",
+      "商品先物の限月・清算値と日経先物の同時刻価格は未確認。",
+      "国内の全適時開示・証券会社の評価変更は一部のみ確認。"
     ]
   }
 }

@@ -1,10 +1,10 @@
 {
   "report_date": "2026-11-19",
   "target_market_date": "2026-11-18",
-  "updated_at": "2026-11-19T06:47:02+09:00",
+  "updated_at": "2026-11-19T12:29:58+09:00",
   "publication_mode": "verified_news",
   "coverage_status": "partial",
-  "coverage_note": "11月18日公表のFOMC議事要旨を一次資料で実読できた1件のみ掲載。市場反応は未確認として分離。米国市場の全材料、日本企業開示、通商・制裁、評価変更の全件網羅は未確認で、材料なしとは扱わない。",
+  "coverage_note": "一次資料で確認した5件を掲載。発表日を個別に表示。株価の反応は市場分析・個別株欄に分けて掲載。",
   "articles": [
     {
       "id": "nov19-fomc-oct-minutes",
@@ -17,8 +17,8 @@
       "verification_url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm",
       "verification_status": "PASS",
       "fact": "10月27～28日会合は10対2で政策金利の誘導目標を3.75～4.00%に据え置き、2名は0.25ポイントの引き上げを支持した。ほぼ全参加者は基本見通しの下で追加利上げが適切となる可能性が高いと判断し、2名はインフレが不利に推移すれば次回会合で0.25ポイントを超える利上げも検討に値すると指摘した。議事要旨は、AI投資の収益期待が失望した場合の資産価格再評価や、AI関連債務・複雑な資金調達を金融安定上のリスクとして議論した。",
-      "analysis": "追加引き締め観測の継続は割引率を通じて日本の高PER・AI投資関連株に逆風となり得る。銀行株には利ざや期待が追い風となる一方、信用コストとAI関連融資の集中リスクが反対方向に働く。11月19日の日本株への実際の反応は当日取引で確認する。",
-      "limitations": "議事要旨は10月会合時点の情報に基づき、11月に公表された物価・生産統計を反映した新たな政策決定ではない。11月18日の債券・為替・株式の同時反応は正本市場データ未更新のため未確認。",
+      "analysis": "据え置き後も追加引き締めの可能性が残る。将来の利益を現在の価値に割り引く金利が上がれば、成長株の評価には逆風。次回の利上げ幅・確率は未確定。",
+      "limitations": "10月会合時点の判断。11月18日の新たな金利決定ではない。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
@@ -79,6 +79,120 @@
         "limitations": {
           "status": "PASS",
           "evidence": "雇用主報告、分類変更、生産量・市場との因果未確認を明示。"
+        }
+      }
+    },
+    {
+      "id": "nov19-nv",
+      "title": "NVIDIA決算でAI向け需要を確認",
+      "published_date": "2026-11-17",
+      "verified_at": "2026-11-19T12:29:58+09:00",
+      "source_type": "primary",
+      "publisher": "NVIDIA",
+      "source_url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/",
+      "verification_url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/",
+      "verification_status": "PASS",
+      "fact": "NVIDIAの8～10月期売上高は1,158億ドル、前年同期比103%増。データセンター部門は1,076億ドルで110%増えた。",
+      "analysis": "AI向け需要が日本の半導体装置・部材メーカーの受注に結び付くかが焦点。企業別の受注額は個別の開示で確認する。",
+      "limitations": "対象期間は10月25日まで。日本企業の今後の受注額は未確定。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "NVIDIAの資料本文を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "NVIDIAの8～10月期売上高は1,158億ドル、前年同期比103%増。データセンター部門は1,076億ドルで110%増えた。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "2026-11-17の公表を19日昼に確認。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "会社・官庁発表と条件付き解釈を分けた。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "対象期間は10月25日まで。日本企業の今後の受注額は未確定。"
+        }
+      }
+    },
+    {
+      "id": "nov19-trade",
+      "title": "日本の輸出数量は増加、輸入は金額増・数量減",
+      "published_date": "2026-11-18",
+      "verified_at": "2026-11-19T12:29:58+09:00",
+      "source_type": "primary",
+      "publisher": "財務省",
+      "source_url": "https://www.customs.go.jp/toukei/shinbun/trade-st/gaiyo2026_10.pdf",
+      "verification_url": "https://www.customs.go.jp/toukei/shinbun/trade-st/gaiyo2026_10.pdf",
+      "verification_status": "PASS",
+      "fact": "日本の10月輸出額は前年比20.5%増、数量は5.8%増。輸入額は21.6%増えた一方、数量は0.2%減。貿易赤字は4,765億円だった。",
+      "analysis": "輸出数量の増加は外需を支える。一方、輸入支払いの増加は原材料を海外から調達する企業の負担になり得る。価格転嫁と為替予約の差に注意。",
+      "limitations": "円建て金額と数量指数を区別。速報のため改定され得る。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "財務省の資料本文を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "日本の10月輸出額は前年比20.5%増、数量は5.8%増。輸入額は21.6%増えた一方、数量は0.2%減。貿易赤字は4,765億円だった。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "2026-11-18の公表を19日昼に確認。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "会社・官庁発表と条件付き解釈を分けた。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "円建て金額と数量指数を区別。速報のため改定され得る。"
+        }
+      }
+    },
+    {
+      "id": "nov19-delta",
+      "title": "開発中の抗がん剤の製剤技術で特許査定",
+      "published_date": "2026-11-18",
+      "verified_at": "2026-11-19T12:29:58+09:00",
+      "source_type": "primary",
+      "publisher": "Delta-Fly Pharma",
+      "source_url": "https://www.delta-flypharma.co.jp/documents/others/ir/info/4598-20261118-disclosure01_bt.pdf",
+      "verification_url": "https://www.delta-flypharma.co.jp/documents/others/ir/info/4598-20261118-disclosure01_bt.pdf",
+      "verification_status": "PASS",
+      "fact": "Delta-Fly Pharmaは開発中の抗がん剤DFP-10917の長期保存を可能にする製剤技術について特許査定を受けたと発表した。",
+      "analysis": "保存・供給面の課題に進展。医薬品の承認、販売開始、売上寄与の時期はこの発表からは決まらない。",
+      "limitations": "特許査定から医薬品の承認・収益寄与は判断できない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "Delta-Fly Pharmaの資料本文を確認。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "Delta-Fly Pharmaは開発中の抗がん剤DFP-10917の長期保存を可能にする製剤技術について特許査定を受けたと発表した。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "2026-11-18の公表を19日昼に確認。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "会社・官庁発表と条件付き解釈を分けた。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "特許査定から医薬品の承認・収益寄与は判断できない。"
         }
       }
     }

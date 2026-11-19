@@ -149,6 +149,15 @@ class JapanMarketDesignTests(unittest.TestCase):
         self.assertTrue(all("確認" in item["result"] for item in review["checks"]))
         self.assertIn("前営業日", review["note"])
 
+    def test_intraday_review_waits_for_current_close(self):
+        from scripts.update_japan_market import scenario_review
+        report = {"report_date": "2026-11-19", "japan_quick_view": {"focus_sectors": ["銀行"]}}
+        rows = [{"name": "銀行", "change_pct": -1.45, "status": "取得成功"}]
+        review = scenario_review(report, rows, "2026-11-18", ready=False)
+        self.assertEqual("大引け待ち", review["status"])
+        self.assertIn("前営業日", review["condition_result"])
+        self.assertNotIn("下位", str(review["checks"]))
+
     def test_market_regime_has_five_visible_dimensions(self):
         data = json.loads((ROOT / "data" / "japan-market.json").read_text(encoding="utf-8"))
         dimensions = data["market_regime"]["dimensions"]

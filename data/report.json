@@ -2042,20 +2042,6 @@
   },
   "events": [
     {
-      "id": "jp-cpi-2026-10",
-      "event": "日本・全国消費者物価指数（10月）",
-      "start_at_jst": "2026-11-20T08:30:00+09:00",
-      "jst_time": "2026-11-20 08:30 JST（統計局の原則日程から確認）",
-      "forecast": "未確認",
-      "previous": "未確認",
-      "focus": "基調物価と日銀追加利上げ余地",
-      "affected_markets": "円・国内金利・日本株",
-      "importance": "最重要",
-      "source_url": "https://www.stat.go.jp/data/cpi/",
-      "source_name": "総務省統計局",
-      "verified_on": "2026-11-11"
-    },
-    {
       "id": "us-gdp-2026-q3-second",
       "event": "米GDP（2026年7〜9月期・改定値）",
       "start_at_jst": "2026-11-25T22:30:00+09:00",
@@ -2086,9 +2072,9 @@
   ],
   "events_metadata": {
     "status": "取得済",
-    "updated_at": "2026-11-19T13:16:00+09:00",
-    "window_start": "2026-11-19",
-    "window_end": "2026-12-03",
+    "updated_at": "2026-11-20T11:25:04+09:00",
+    "window_start": "2026-11-20",
+    "window_end": "2026-12-04",
     "timezone": "Asia/Tokyo",
     "source_policy": "公式日程で確認済みのイベントのみ。予想・前回値は未確認を推測しない",
     "coverage_note": "公式日程で確認できた主要イベントのみ。市場予想・前回値を確認できない場合は未確認と表示する。",

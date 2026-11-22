@@ -1,0 +1,124 @@
+{
+  "report_date": "2026-11-23",
+  "target_market_date": "2026-11-20",
+  "updated_at": "2026-11-23T06:55:00+09:00",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "一次資料を実読した3件のみ。市場反応は確認済み価格と記事の事実を分離し、記事単独の寄与は未確認。国内全適時開示・通商・制裁を網羅したものではない。",
+  "articles": [
+    {
+      "id": "nov23-jp-cpi-oct",
+      "title": "10月全国CPI、コアは前年比2.2%上昇",
+      "published_date": "2026-11-20",
+      "verified_at": "2026-11-23T06:55:00+09:00",
+      "source_type": "primary",
+      "publisher": "総務省統計局",
+      "source_url": "https://www.stat.go.jp/data/cpi/sokuhou/tsuki/index-z.html",
+      "verification_url": "https://www.stat.go.jp/data/cpi/sokuhou/tsuki/index-z.html",
+      "verification_status": "PASS",
+      "fact": "2026年10月の全国CPIは総合が前年同月比2.3%上昇、生鮮食品を除く総合と生鮮食品・エネルギーを除く総合はいずれも2.2%上昇した。",
+      "analysis": "これまでの市場認識は日銀の正常化継続。今回の数値は基調物価が2%台にあることを確認し、銀行には相対追い風、高PER株には金利感応度の点で逆風候補。ただし20日の株価急落をCPI単独の反応とは扱わない。",
+      "limitations": "統計発表と20日の株価は同日だが、材料別の寄与率は未確認。季節調整済み月次や内訳の詳細は本記事では扱わない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "統計局の2026年10月分公表ページを実読。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "総合、生鮮食品除く、生鮮食品・エネルギー除くの前年比を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "対象月2026年10月、発表日11月20日、確認日時を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "統計値と日本株への条件付き波及を分離。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "株価寄与と詳細内訳を未確認として明示。"
+        }
+      }
+    },
+    {
+      "id": "nov23-fed-cook-global",
+      "title": "FRBクック理事、世界経済とAI投資を論じる",
+      "published_date": "2026-11-20",
+      "verified_at": "2026-11-23T06:55:00+09:00",
+      "source_type": "primary",
+      "publisher": "Federal Reserve Board",
+      "source_url": "https://www.federalreserve.gov/newsevents/speech/cook20261120a.htm",
+      "verification_url": "https://www.federalreserve.gov/newsevents/speech/cook20261120a.htm",
+      "verification_status": "PASS",
+      "fact": "クック理事は世界経済の文脈で貿易制限、AI関連投資、米国経済への波及を論じた。講演は個人見解であり、新たなFOMC決定ではない。",
+      "analysis": "AI投資が成長を支える経路と、投資回収・貿易制限のリスクを同時に確認する材料。日本の半導体・設備投資関連には需要期待と評価調整の両面がある。",
+      "limitations": "講演は政策決定ではなく、20日の株価急落への寄与率や新規関税・制裁の有無を示すものではない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "FRB公式講演本文を実読。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "貿易制限、AI投資、世界経済への言及と個人見解の位置付けを確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "講演日11月20日と既存政策決定を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "講演内容と日本株への条件付き解釈を分離。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "新規政策決定でも株価寄与の証明でもないと明示。"
+        }
+      }
+    },
+    {
+      "id": "nov23-jpx-holiday",
+      "title": "11月23日は東証休場、デリバティブ祝日取引も休止",
+      "published_date": "2026-11-20",
+      "verified_at": "2026-11-23T06:55:00+09:00",
+      "source_type": "primary",
+      "publisher": "日本取引所グループ",
+      "source_url": "https://www.jpx.co.jp/corporate/about-jpx/calendar/index.html",
+      "verification_url": "https://www.jpx.co.jp/corporate/about-jpx/calendar/index.html",
+      "verification_status": "PASS",
+      "fact": "2026年11月23日は勤労感謝の日で東証現物市場が休場。JPXは同日のデリバティブ祝日取引もBCP・DRテストのため実施しないと案内した。",
+      "analysis": "23日に新しい日本現物終値は生じない。次の現物取引で米20日の追加下落を織り込むため、寄り付きと日中の戻りを分けて確認する。",
+      "limitations": "休場情報であり株価方向を予測するものではない。PTSや海外上場商品は対象外。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "JPXの休業日カレンダーと祝日取引案内を実読。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "現物休場とデリバティブ祝日取引休止を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "案内確認日と対象日11月23日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "休場事実と次回確認点を分離。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "方向予測ではなく対象市場の範囲を明示。"
+        }
+      }
+    }
+  ]
+}

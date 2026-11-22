@@ -10,6 +10,25 @@ from scripts.validate_data import ROOT, run
 
 
 class ValidateDataTest(unittest.TestCase):
+    @staticmethod
+    def sample_story():
+        return {
+            "company": "テスト株式会社", "ticker": "1234", "headline": "検証用一次開示",
+            "category": "企業開示", "fact": "検証用の企業開示事実。",
+            "announced_at": "2026-11-20T15:30:00+09:00", "timing": "大引け後",
+            "market_pricing_status": "未確認", "price_reaction": "未確認",
+            "importance": "個別銘柄", "confidence": "一次資料確認済み",
+            "source_url": "https://example.com/ir/1234", "analysis": "検証用分析。",
+            "today_watch": "次の取引日の反応を確認。",
+        }
+
+    @classmethod
+    def sample_preview(cls):
+        story = cls.sample_story()
+        return {key: story[key] for key in (
+            "company", "ticker", "headline", "importance", "market_pricing_status"
+        )}
+
     def make_root(self, mutate=None) -> Path:
         temporary = Path(tempfile.mkdtemp())
         (temporary / "data").mkdir()
@@ -113,8 +132,13 @@ class ValidateDataTest(unittest.TestCase):
     def test_sector_or_macro_label_cannot_pass_as_company_news(self):
         def mutate(name, data):
             if name == "japan-stocks":
+                data["top_stories"] = [self.sample_story()]
+                data["japan_quick_view"]["individual_news_review"].update(status="reviewed", story_count=1)
                 data["top_stories"][0]["company"] = "半導体・高PER株"
                 data["top_stories"][0]["ticker"] = "-"
+            if name == "report":
+                data["japan_equities_preview"]["top_stories"] = [self.sample_preview()]
+                data["japan_equities_preview"]["total_story_count"] = 1
             return data
 
         result = run(self.make_root(mutate))
@@ -123,7 +147,12 @@ class ValidateDataTest(unittest.TestCase):
     def test_secondary_market_article_cannot_replace_primary_company_source(self):
         def mutate(name, data):
             if name == "japan-stocks":
+                data["top_stories"] = [self.sample_story()]
+                data["japan_quick_view"]["individual_news_review"].update(status="reviewed", story_count=1)
                 data["top_stories"][0]["source_url"] = "https://www.reuters.com/example"
+            if name == "report":
+                data["japan_equities_preview"]["top_stories"] = [self.sample_preview()]
+                data["japan_equities_preview"]["total_story_count"] = 1
             return data
 
         result = run(self.make_root(mutate))
@@ -132,7 +161,12 @@ class ValidateDataTest(unittest.TestCase):
     def test_company_news_preview_must_match_detail(self):
         def mutate(name, data):
             if name == "report":
+                data["japan_equities_preview"]["top_stories"] = [self.sample_preview()]
+                data["japan_equities_preview"]["total_story_count"] = 1
                 data["japan_equities_preview"]["top_stories"][0]["headline"] = "不一致"
+            if name == "japan-stocks":
+                data["top_stories"] = [self.sample_story()]
+                data["japan_quick_view"]["individual_news_review"].update(status="reviewed", story_count=1)
             return data
 
         result = run(self.make_root(mutate))

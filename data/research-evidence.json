@@ -3,7 +3,7 @@
   "report_date": "2026-11-23",
   "target_market_date": "2026-11-20",
   "updated_at": "2026-11-23T06:55:00+09:00",
-  "scope_note": "11月20日の確認済み終値、一次資料、翌営業日への日本株伝達を監査。取得失敗項目は除外し注釈付き公開。",
+  "scope_note": "11月20日の確認済み終値、一次資料、翌営業日への日本株伝達を監査。時点不一致・非網羅項目は除外し注釈付き公開。",
   "research_coverage": {
     "status": "QUALIFIED",
     "directions": [
@@ -52,12 +52,12 @@
         "id": "japan_enrichment",
         "label": "日本17業種・34銘柄",
         "tier": "Required",
-        "status": "十分調査したが取得不能",
-        "evidence": "日本17業種・34銘柄の11月20日終値は取得時のレート制限で必要数に届かず、11月19日の保存値を20日の結論に使わない。",
+        "status": "取得済",
+        "evidence": "再取得で11月20日の17業種・34銘柄が全件揃い、対象日・ベンチマーク日も一致。17業種ETF代理は2上昇・15下落。",
         "attempts": [
           {
             "method": "update_japan_market.pyで11月20日を再取得",
-            "result": "レート制限で17業種中9、34銘柄中22に留まり、品質ゲートで保存停止。",
+            "result": "初回はレート制限で保存停止したが、自動再取得で17業種・34銘柄が全件揃った。",
             "source_urls": [
               "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
             ],
@@ -65,23 +65,22 @@
           },
           {
             "method": "現行保存データと対象日の整合確認",
-            "result": "保存値は11月19日で対象日11月20日と不一致のため代用せず。",
+            "result": "再取得値の業種・銘柄・ベンチマーク日はすべて11月20日で一致。",
             "source_urls": [
               "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
             ],
             "checked_at": "2026-11-23T06:55:00+09:00"
           },
           {
-            "method": "現行保存データと対象日の整合確認",
-            "result": "保存値は11月19日で対象日11月20日と不一致のため代用せず。",
+            "method": "全必須数と日付整合の再検証",
+            "result": "17/17業種、34/34銘柄、ベンチマークの全件を確認。",
             "source_urls": [
               "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
             ],
             "checked_at": "2026-11-23T06:55:00+09:00"
           }
         ],
-        "publication_use": "excluded",
-        "impact_if_unavailable": "11月20日の国内17業種・34銘柄の広がり、ランキング、業種反応を公開対象から除外。"
+        "publication_use": "selected"
       },
       {
         "id": "policy_macro",
@@ -219,7 +218,7 @@
           ]
         },
         "market_internals": {
-          "text": "国内17業種の20日データは取得不能。"
+          "text": "17業種ETF代理は2上昇・15下落。医薬品+0.59%、運輸・物流+0.11%が上昇し、鉄鋼・非鉄−8.26%、機械−5.22%、電機・精密−5.17%が最弱。"
         },
         "market_pricing": {
           "status": "unknown",
@@ -397,7 +396,7 @@
     "status": "QUALIFIED",
     "checks": [
       "株式・FX・VIXは11月20日、金利は11月19日、暗号資産は11月21日と分離。",
-      "商品先物と国内17業種・34銘柄の20日データを除外。",
+      "商品先物は限月・値種別不明のため除外。国内17業種・34銘柄は11月20日で全件整合。",
       "reportとJapanのレポート日・対象市場日・TOP5を一致。"
     ]
   },
@@ -415,7 +414,7 @@
   "publication_decision": {
     "status": "QUALIFIED",
     "decided_at": "2026-11-23T06:55:00+09:00",
-    "summary": "確認済みの11月20日終値と一次資料で注釈付き公開。時点不一致・限月不明・取得失敗に依存する主張は除外。",
+    "summary": "確認済みの11月20日終値と一次資料で注釈付き公開。時点不一致・限月不明・非網羅項目に依存する主張は除外。",
     "components": {
       "ai_report": {
         "status": "QUALIFIED",
@@ -425,7 +424,7 @@
       "japan_stocks": {
         "status": "QUALIFIED",
         "updated_at": "2026-11-23T06:55:00+09:00",
-        "reason": "指数実績とTOP5を掲載。17業種・34銘柄の20日詳細は除外。"
+        "reason": "指数実績、TOP5、11月20日の17業種・34銘柄詳細を掲載。企業開示・評価変更は非網羅として分離。"
       },
       "world_market": {
         "status": "PASS",
@@ -433,9 +432,9 @@
         "reason": "32系列取得。系列別基準日を表示。"
       },
       "japan_market": {
-        "status": "BLOCK",
-        "updated_at": "2026-11-23T06:55:00+09:00",
-        "reason": "20日の17業種・34銘柄が品質ゲート未達。19日保存値は結論に使用しない。"
+        "status": "PASS",
+        "updated_at": "2026-11-23T07:07:44+09:00",
+        "reason": "11月20日の17業種・34銘柄が全件取得済みで、対象日・ベンチマーク日も一致。"
       },
       "verified_news": {
         "status": "PASS",
@@ -497,32 +496,6 @@
         "excluded_from_publication": true
       },
       {
-        "id": "japan_enrichment_2026_11_20",
-        "status": "BLOCK",
-        "missing": "日本17業種・34銘柄の11月20日終値は取得時のレート制限で必要数に届かず、11月19日の保存値を20日の結論に使わない。",
-        "impact": "国内17業種Breadth、個別34銘柄、上昇・下落ランキングを停止。",
-        "last_checked_at": "2026-11-23T06:55:00+09:00",
-        "next_action": "レート制限解消後に11月20日確定日足を再取得し全必須数を検証。",
-        "attempts": [
-          {
-            "method": "当日取得・公式資料・現行mainの照合",
-            "result": "日本17業種・34銘柄の11月20日終値は取得時のレート制限で必要数に届かず、11月19日の保存値を20日の結論に使わない。",
-            "source_urls": [
-              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
-            ],
-            "checked_at": "2026-11-23T06:55:00+09:00"
-          }
-        ],
-        "affected_components": [
-          "japan_market",
-          "japan_stocks"
-        ],
-        "excluded_claims": [
-          "11月20日の国内業種強弱と個別株ランキング"
-        ],
-        "excluded_from_publication": true
-      },
-      {
         "id": "coverage",
         "status": "QUALIFIED",
         "missing": "統一時刻の株価先物・為替現在値、国内全適時開示、証券会社評価変更、通商・制裁の網羅確認は未完了。",
@@ -576,7 +549,8 @@
     ],
     "resolved_item_ids": [
       "market_data_2026_11_19",
-      "sox_close_nov18"
+      "sox_close_nov18",
+      "japan_enrichment_2026_11_20"
     ]
   }
 }

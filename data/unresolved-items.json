@@ -55,32 +55,6 @@
       "excluded_from_publication": true
     },
     {
-      "id": "japan_enrichment_2026_11_20",
-      "status": "BLOCK",
-      "missing": "日本17業種・34銘柄の11月20日終値は取得時のレート制限で必要数に届かず、11月19日の保存値を20日の結論に使わない。",
-      "impact": "国内17業種Breadth、個別34銘柄、上昇・下落ランキングを停止。",
-      "last_checked_at": "2026-11-23T06:55:00+09:00",
-      "next_action": "レート制限解消後に11月20日確定日足を再取得し全必須数を検証。",
-      "attempts": [
-        {
-          "method": "当日取得・公式資料・現行mainの照合",
-          "result": "日本17業種・34銘柄の11月20日終値は取得時のレート制限で必要数に届かず、11月19日の保存値を20日の結論に使わない。",
-          "source_urls": [
-            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
-          ],
-          "checked_at": "2026-11-23T06:55:00+09:00"
-        }
-      ],
-      "affected_components": [
-        "japan_market",
-        "japan_stocks"
-      ],
-      "excluded_claims": [
-        "11月20日の国内業種強弱と個別株ランキング"
-      ],
-      "excluded_from_publication": true
-    },
-    {
       "id": "coverage",
       "status": "QUALIFIED",
       "missing": "統一時刻の株価先物・為替現在値、国内全適時開示、証券会社評価変更、通商・制裁の網羅確認は未完了。",

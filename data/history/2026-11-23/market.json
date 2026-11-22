@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23 06:49:43",
+  "updated_at": "2026-11-23 07:07:40",
   "timezone": "Asia/Tokyo",
   "source": "Yahoo Finance via yfinance for market closes; FRED DGS2/DGS10 for US Treasury yields",
   "notes": {
@@ -287,7 +287,8 @@
       "change_pct": -4.62,
       "status": "取得成功",
       "market_date": "2026-11-20",
-      "previous_market_date": "2026-11-19"
+      "previous_market_date": "2026-11-19",
+      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
     },
     "silver": {
       "name": "Silver",
@@ -298,7 +299,8 @@
       "change_pct": -7.33,
       "status": "取得成功",
       "market_date": "2026-11-20",
-      "previous_market_date": "2026-11-19"
+      "previous_market_date": "2026-11-19",
+      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
     },
     "copper": {
       "name": "Copper",
@@ -309,7 +311,8 @@
       "change_pct": -2.49,
       "status": "取得成功",
       "market_date": "2026-11-20",
-      "previous_market_date": "2026-11-19"
+      "previous_market_date": "2026-11-19",
+      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
     },
     "wti": {
       "name": "WTI",
@@ -320,7 +323,8 @@
       "change_pct": 0.24,
       "status": "取得成功",
       "market_date": "2026-11-20",
-      "previous_market_date": "2026-11-19"
+      "previous_market_date": "2026-11-19",
+      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
     },
     "brent": {
       "name": "Brent",
@@ -331,7 +335,8 @@
       "change_pct": -2.21,
       "status": "取得成功",
       "market_date": "2026-11-20",
-      "previous_market_date": "2026-11-19"
+      "previous_market_date": "2026-11-19",
+      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
     },
     "btc": {
       "name": "BTC",

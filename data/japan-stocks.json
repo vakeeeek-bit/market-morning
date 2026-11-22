@@ -27,7 +27,7 @@
     "individual_news_review": {
       "status": "partial",
       "story_count": 0,
-      "scope": "全国CPI、JPX休場、FRB講演を確認。国内全適時開示・全証券会社評価変更は網羅できず、個別株記事を掲載しない。"
+      "scope": "確認済み企業固有材料は0件。未調査や取得不能を『材料なし』とは扱わない"
     }
   },
   "top_stories": [],
@@ -66,7 +66,10 @@
         "name": "株探 公開ニュース",
         "url": "https://kabutan.jp/news/",
         "result": "公開範囲を確認したが、11月20日分の網羅性を担保できず不掲載。",
-        "coverage": "無料公開範囲のみ。証券会社原文・全件は未確認。"
+        "coverage": "無料公開範囲のみ。証券会社原文・全件は未確認。",
+        "freshness": "当日確認状況をJSONに記録",
+        "automation": "契約API未導入",
+        "rights": "確認できた事実だけを掲載"
       }
     ],
     "summary": "未確認を「変更なし」とせず、今回は判断材料から除外。"

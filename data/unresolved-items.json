@@ -1,155 +1,135 @@
 {
-  "updated_at": "2026-11-20T07:01:00+09:00",
-  "source_report_date": "2026-11-20",
+  "updated_at": "2026-11-23T06:55:00+09:00",
+  "source_report_date": "2026-11-23",
   "items": [
-    {
-      "id": "vercel_deploy_db7d1f15",
-      "status": "PASS",
-      "missing": "解消済み。main反映後にVercelの起動が遅延したが、追加のmain更新後に11月20日版へ切り替わった。",
-      "impact": "確認済みニュース3件の本番公開を世界市場・日本株の両ページで確認済み。総合レポートと市場実績の日付不足は別項目として継続する。",
-      "last_checked_at": "2026-11-20T07:01:00+09:00",
-      "next_action": "次回実行でもmain反映後にVercel本番JSONと両ページの日付・件数を照合する。",
-      "attempts": [{
-        "method": "main raw JSON、GitHub Actions、commit status/deployment、Vercel本番JSONと両ページを照合",
-        "result": "初回はmainが11月20日版3記事、Actions成功に対し本番は11月19日版5記事。追加main更新後、本番JSONと両ページが11月20日版へ切り替わり、世界市場1件・日本株2件を実表示確認。",
-        "source_urls": ["https://github.com/vakeeeek-bit/market-morning/commit/db7d1f15bfd7cb5182566296dd1053bb70cc0cbd", "https://github.com/vakeeeek-bit/market-morning/actions/runs/44622449784", "https://github.com/vakeeeek-bit/market-morning/actions/runs/44622449875", "https://market-morning-gules.vercel.app/data/news.json", "https://market-morning-gules.vercel.app/", "https://market-morning-gules.vercel.app/japan-stocks.html"],
-        "checked_at": "2026-11-20T07:01:00+09:00"
-      }],
-      "affected_components": ["verified_news", "world_market", "japan_stocks", "production_deployment"],
-      "excluded_claims": [],
-      "excluded_from_publication": false,
-      "first_seen_at": "2026-11-20T06:55:32+09:00"
-    },
-    {
-      "id": "market_data_2026_11_19",
-      "status": "BLOCK",
-      "missing": "status.jsonの更新は11月19日13:16、market.jsonの米株は11月18日、米金利・DXY等は11月17日、日本株実績は11月18日で、対象市場日11月19日の正本一式が未収集。",
-      "impact": "11月20日版のAIレポート、世界市場、日本株実績を更新せず、旧日付を当日値として表示しない。確認済みニュースだけを独立公開する。",
-      "last_checked_at": "2026-11-20T06:40:05+09:00",
-      "next_action": "market-dataワークフローを再実行し、status.jsonの当日成功、market.jsonとjapan-market.jsonの対象市場日11月19日を確認後に総合レポートを再生成する。",
-      "attempts": [{
-        "method": "最新mainのstatus.json、market.json、japan-market.jsonを照合",
-        "result": "取得は成功したが対象市場日11月19日の正本一式は存在しなかった。",
-        "source_urls": [
-          "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/status.json",
-          "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
-          "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json",
-          "https://github.com/vakeeeek-bit/market-morning/actions"
-        ],
-        "checked_at": "2026-11-20T06:40:05+09:00"
-      }],
-      "affected_components": ["ai_report", "world_market", "japan_market", "japan_stocks"],
-      "excluded_claims": ["11月19日の正本市場値に基づく騰落・内部強弱・因果判断", "旧終値を11月20日朝の現在値として扱う記述"],
-      "excluded_from_publication": true,
-      "first_seen_at": "2026-11-20T06:40:05+09:00"
-    },
     {
       "id": "stale_cross_asset",
       "status": "QUALIFIED",
-      "missing": "保存日足は米株・USD/JPYが11月18日、米金利・DXY・商品・暗号資産が11月17日で、11月19日の米株急落と同時点ではない。",
-      "impact": "11月19日の金利・為替・商品と株価の同時反応および因果を保留。",
-      "last_checked_at": "2026-11-20T06:40:05+09:00",
-      "next_action": "正本収集更新後に各系列のmarket_dateと値種別を再照合する。",
-      "attempts": [{
-        "method": "最新mainのmarket.json各系列のmarket_dateを確認",
-        "result": "対象日が11月17日と18日に分かれ、11月19日分は未収録。",
-        "source_urls": ["https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"],
-        "checked_at": "2026-11-20T06:40:05+09:00"
-      }],
-      "affected_components": ["ai_report", "world_market", "japan_stocks"],
-      "excluded_claims": ["11月19日の金利・為替・商品と米株の同時反応"],
-      "excluded_from_publication": true,
-      "first_seen_at": "2026-10-28T06:58:00+09:00"
+      "missing": "米2年・10年金利は11月19日公表値で、米株11月20日と同一基準日ではない。株価急落との同時反応には使わない。",
+      "impact": "20日の株価と金利の同時反応・2s10sの株価因果を保留。",
+      "last_checked_at": "2026-11-23T06:55:00+09:00",
+      "next_action": "FREDの20日公表値反映後に再照合。",
+      "attempts": [
+        {
+          "method": "当日取得・公式資料・現行mainの照合",
+          "result": "米2年・10年金利は11月19日公表値で、米株11月20日と同一基準日ではない。株価急落との同時反応には使わない。",
+          "source_urls": [
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+          ],
+          "checked_at": "2026-11-23T06:55:00+09:00"
+        }
+      ],
+      "affected_components": [
+        "ai_report",
+        "japan_stocks"
+      ],
+      "excluded_claims": [
+        "20日の米金利変化が株価急落を引き起こしたとの断定"
+      ],
+      "excluded_from_publication": true
     },
     {
       "id": "contracts",
       "status": "QUALIFIED",
-      "missing": "商品先物の限月・清算値と日経先物の同時刻価格は未確認。",
-      "impact": "限月特定を要する商品・先物判断を除外。",
-      "last_checked_at": "2026-11-20T06:40:05+09:00",
-      "next_action": "公式取引所の限月・清算値と同時刻データを取得して照合する。",
-      "attempts": [{
-        "method": "最新mainのmarket.jsonの値種別・契約情報を確認",
-        "result": "11月19日対象の限月・清算値を確認できなかった。",
-        "source_urls": ["https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"],
-        "checked_at": "2026-11-20T06:40:05+09:00"
-      }],
-      "affected_components": ["ai_report", "japan_stocks"],
-      "excluded_claims": ["商品先物と日経先物の当日水準に依存する判断"],
-      "excluded_from_publication": true,
-      "first_seen_at": "2026-10-28T06:58:00+09:00"
+      "missing": "商品先物は限月と値種別を確認できないため、Gold・Silver・WTI・Brent・Copperを分析から除外。",
+      "impact": "商品・日経先物に依存する分析を除外。",
+      "last_checked_at": "2026-11-23T06:55:00+09:00",
+      "next_action": "取引所、限月、清算値、基準時刻を確認できる公式系列を取得。",
+      "attempts": [
+        {
+          "method": "当日取得・公式資料・現行mainの照合",
+          "result": "商品先物は限月と値種別を確認できないため、Gold・Silver・WTI・Brent・Copperを分析から除外。",
+          "source_urls": [
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+          ],
+          "checked_at": "2026-11-23T06:55:00+09:00"
+        }
+      ],
+      "affected_components": [
+        "ai_report",
+        "japan_stocks"
+      ],
+      "excluded_claims": [
+        "商品先物方向と在庫に依存する主張"
+      ],
+      "excluded_from_publication": true
     },
     {
-      "id": "current_values",
-      "status": "QUALIFIED",
-      "missing": "11月20日朝の取得時刻付きUSD/JPY現在値と、取引所・限月・値種別を特定した日経先物値は未確認。",
-      "impact": "日足終値とリアルタイム値を混同せず、寄り付き水準の断定を除外。",
-      "last_checked_at": "2026-11-20T06:40:05+09:00",
-      "next_action": "取得時刻と契約情報を伴う正本値を取得する。",
-      "attempts": [{
-        "method": "最新mainのmarket.jsonとjapan-market.jsonを確認",
-        "result": "11月20日朝の同時刻現在値は存在しなかった。",
-        "source_urls": ["https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json", "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"],
-        "checked_at": "2026-11-20T06:40:05+09:00"
-      }],
-      "affected_components": ["ai_report", "japan_stocks"],
-      "excluded_claims": ["11月20日朝の為替・日経先物水準"],
-      "excluded_from_publication": true,
-      "first_seen_at": "2026-10-28T06:58:00+09:00"
+      "id": "japan_enrichment_2026_11_20",
+      "status": "BLOCK",
+      "missing": "日本17業種・34銘柄の11月20日終値は取得時のレート制限で必要数に届かず、11月19日の保存値を20日の結論に使わない。",
+      "impact": "国内17業種Breadth、個別34銘柄、上昇・下落ランキングを停止。",
+      "last_checked_at": "2026-11-23T06:55:00+09:00",
+      "next_action": "レート制限解消後に11月20日確定日足を再取得し全必須数を検証。",
+      "attempts": [
+        {
+          "method": "当日取得・公式資料・現行mainの照合",
+          "result": "日本17業種・34銘柄の11月20日終値は取得時のレート制限で必要数に届かず、11月19日の保存値を20日の結論に使わない。",
+          "source_urls": [
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
+          ],
+          "checked_at": "2026-11-23T06:55:00+09:00"
+        }
+      ],
+      "affected_components": [
+        "japan_market",
+        "japan_stocks"
+      ],
+      "excluded_claims": [
+        "11月20日の国内業種強弱と個別株ランキング"
+      ],
+      "excluded_from_publication": true
     },
     {
       "id": "coverage",
       "status": "QUALIFIED",
-      "missing": "日銀国会説明、日銀実質輸出、FRB講演の一次資料は実読したが、国内全適時開示、通商・制裁、証券会社評価変更の網羅確認は未完了。",
-      "impact": "確認済み3件だけを部分収集として公開し、網羅性や『新規材料なし』を主張しない。",
-      "last_checked_at": "2026-11-20T06:40:05+09:00",
-      "next_action": "次回実行でTDnet、財務省・経産省、USTR・OFAC等の一次資料を追加確認する。",
-      "attempts": [{
-        "method": "日銀・FRBの公式本文を実読",
-        "result": "3件は事実と日時を確認。その他の横断調査は網羅未完了。",
-        "source_urls": ["https://www.boj.or.jp/about/press/koen_2026/ko261119a.htm", "https://www.boj.or.jp/research/research_data/reri.htm", "https://www.federalreserve.gov/newsevents/speech/jefferson20261119a.htm"],
-        "checked_at": "2026-11-20T06:40:05+09:00"
-      }],
-      "affected_components": ["verified_news", "ai_report", "japan_stocks"],
-      "excluded_claims": ["全適時開示・通商制裁・評価変更の網羅性", "未調査分野に新規材料がないとの断定"],
-      "excluded_from_publication": true,
-      "first_seen_at": "2026-10-28T06:58:00+09:00"
-    },
-    {
-      "id": "sox_close_nov18",
-      "status": "QUALIFIED",
-      "missing": "11月18日のSOXは保存日足とNasdaq履歴表示・報道で騰落の符号が一致しない問題が未解消。",
-      "impact": "当該日のSOX方向に依存する比較を継続除外。",
-      "last_checked_at": "2026-11-20T06:40:05+09:00",
-      "next_action": "Nasdaq公式確定履歴と正本収集値の計算定義を再照合する。",
-      "attempts": [{
-        "method": "前回未解決事項を引き継ぎ、最新mainで解消有無を確認",
-        "result": "正本値の差し替え・説明追加はなく未解消。",
-        "source_urls": ["https://indexes.nasdaq.com/Index/History/SOX", "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"],
-        "checked_at": "2026-11-20T06:40:05+09:00"
-      }],
-      "affected_components": ["ai_report", "japan_stocks"],
-      "excluded_claims": ["11月18日のSOX騰落方向"],
-      "excluded_from_publication": true,
-      "first_seen_at": "2026-11-19T12:29:58+09:00"
+      "missing": "統一時刻の株価先物・為替現在値、国内全適時開示、証券会社評価変更、通商・制裁の網羅確認は未完了。",
+      "impact": "網羅性を前提とする「変更なし」「材料なし」を除外。",
+      "last_checked_at": "2026-11-23T06:55:00+09:00",
+      "next_action": "次回、TDnet・企業IR・証券会社公表、USTR・OFAC等を継続確認。",
+      "attempts": [
+        {
+          "method": "当日取得・公式資料・現行mainの照合",
+          "result": "統一時刻の株価先物・為替現在値、国内全適時開示、証券会社評価変更、通商・制裁の網羅確認は未完了。",
+          "source_urls": [
+            "https://www.release.tdnet.info/inbs/I_main_00.html",
+            "https://home.treasury.gov/policy-issues/financial-sanctions/recent-actions"
+          ],
+          "checked_at": "2026-11-23T06:55:00+09:00"
+        }
+      ],
+      "affected_components": [
+        "ai_report",
+        "japan_stocks",
+        "verified_news"
+      ],
+      "excluded_claims": [
+        "個別株・評価変更・通商・制裁の網羅性断定"
+      ],
+      "excluded_from_publication": true
     },
     {
       "id": "project_docs",
       "status": "QUALIFIED",
-      "missing": "正本指定のv2文書3件を接続済みGoogle Driveの完全一致検索で取得できなかった。",
-      "impact": "Project Instructionsと現行mainのスキーマ・検証・運用文書を優先し、未取得文書の内容を推測しない。",
-      "last_checked_at": "2026-11-20T06:40:05+09:00",
-      "next_action": "文書が接続先に追加された後、次回実行で再検索し差分監査する。",
-      "attempts": [{
-        "method": "Google Driveで3文書名を完全一致検索",
-        "result": "3件とも検索結果0件。",
-        "source_urls": [],
-        "checked_at": "2026-11-20T06:40:05+09:00"
-      }],
-      "affected_components": ["governance", "ai_report", "verified_news"],
-      "excluded_claims": ["未取得のv2文書と完全整合しているとの断定"],
-      "excluded_from_publication": false,
-      "first_seen_at": "2026-11-20T06:40:05+09:00"
+      "missing": "Project添付の仕様書v2三点は今回の接続先検索で確認できず、現行mainのスキーマ・検証・公開ルールを適用。",
+      "impact": "添付v2との差分監査ができず、現行main検証を優先。",
+      "last_checked_at": "2026-11-23T06:55:00+09:00",
+      "next_action": "接続先で文書が利用可能になった時点で再照合。",
+      "attempts": [
+        {
+          "method": "当日取得・公式資料・現行mainの照合",
+          "result": "Project添付の仕様書v2三点は今回の接続先検索で確認できず、現行mainのスキーマ・検証・公開ルールを適用。",
+          "source_urls": [],
+          "checked_at": "2026-11-23T06:55:00+09:00"
+        }
+      ],
+      "affected_components": [
+        "ai_report"
+      ],
+      "excluded_claims": [
+        "未確認の添付仕様に適合したとの断定"
+      ],
+      "excluded_from_publication": true
     }
   ]
 }

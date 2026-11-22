@@ -215,6 +215,16 @@ class JapanMarketDesignTests(unittest.TestCase):
             ),
         )
 
+    def test_closed_day_reuse_requires_latest_session(self):
+        module = importlib.import_module("scripts.update_japan_market")
+        holiday = datetime(2026, 11, 23, 6, 45, tzinfo=ZoneInfo("Asia/Tokyo"))
+        self.assertTrue(
+            module.can_reuse_closed_day_snapshot({"market_date": "2026-11-20"}, holiday)
+        )
+        self.assertFalse(
+            module.can_reuse_closed_day_snapshot({"market_date": "2026-11-19"}, holiday)
+        )
+
     def test_close_workflow_runs_after_tokyo_close(self):
         source = (ROOT / ".github" / "workflows" / "japan-market-close.yml").read_text(encoding="utf-8")
         self.assertIn('cron: "45 6 * * 1-5"', source)

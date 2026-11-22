@@ -1,0 +1,177 @@
+{
+  "report_date": "2026-11-23",
+  "target_market_date": "2026-11-20",
+  "updated_at": "2026-11-23T06:55:00+09:00",
+  "report_type": "daily",
+  "japan_quick_view": {
+    "headline": "AI・半導体売りで日経平均5.06%安、23日は休場",
+    "summary": "20日の日経平均は56,436.65円（−5.06%）、TOPIX連動ETFは−3.98%。AI・半導体売りが日本株全体へ波及した。 国内業種・個別株の20日データは取得失敗のため、指数と確認済みニュースに限定。",
+    "top_materials": [
+      "20日の日経平均は56,436.65円（−5.06%）、TOPIX連動ETFは−3.98%。AI・半導体売りが日本株全体へ波及した。",
+      "米20日はNASDAQ総合−5.28%、NASDAQ100−5.61%、SOX−10.73%。大型ハイテクと半導体が市場全体を大きく下回った。",
+      "10月の全国CPIは総合+2.3%、生鮮食品除く総合+2.2%。日銀の正常化観測を残すが、20日の株価下落をCPI単独の反応とは扱わない。",
+      "米11業種ETFは生活必需品だけが上昇し、情報技術は−7.27%。下落は半導体から景気敏感株へ広がった。",
+      "23日は東証現物が休場で、デリバティブ祝日取引もBCPテストのため実施しない。次の現物取引で米20日の追加下落を再評価する。"
+    ],
+    "focus_sectors": [
+      "電機・精密",
+      "機械",
+      "食品・医薬品",
+      "銀行"
+    ],
+    "unpriced_materials": [
+      "次の現物取引における米20日追加安の織り込み",
+      "20日の国内17業種・34銘柄Breadth",
+      "CPI後の円・国内金利と銀行／高PER株の相対反応"
+    ],
+    "individual_news_review": {
+      "status": "partial",
+      "story_count": 0,
+      "scope": "全国CPI、JPX休場、FRB講演を確認。国内全適時開示・全証券会社評価変更は網羅できず、個別株記事を掲載しない。"
+    }
+  },
+  "top_stories": [],
+  "important_stories": [],
+  "other_stories": [],
+  "data_quality": {
+    "overall": "注釈付き公開",
+    "missing": [
+      "米2年・10年金利は11月19日公表値で、米株11月20日と同一基準日ではない。株価急落との同時反応には使わない。",
+      "商品先物は限月と値種別を確認できないため、Gold・Silver・WTI・Brent・Copperを分析から除外。",
+      "日本17業種・34銘柄の11月20日終値は取得時のレート制限で必要数に届かず、11月19日の保存値を20日の結論に使わない。",
+      "統一時刻の株価先物・為替現在値、国内全適時開示、証券会社評価変更、通商・制裁の網羅確認は未完了。",
+      "Project添付の仕様書v2三点は今回の接続先検索で確認できず、現行mainのスキーマ・検証・公開ルールを適用。"
+    ],
+    "differences": [
+      "TOPIXは指数そのものではなく1306 ETFの参考値。",
+      "米金利は11月19日、株式・FX・VIXは11月20日、暗号資産は11月21日の日足。"
+    ],
+    "excluded": [
+      "限月不明の商品先物値と日経先物値",
+      "11月19日金利と11月20日株価の同時点因果",
+      "11月19日の日本業種・個別株データを使った11月20日のBreadth判定",
+      "未確認の個別株・アナリスト変更・通商・制裁についての「材料なし」断定"
+    ],
+    "cautions": [
+      "旧終値を23日の現在値として表示しない。",
+      "23日は日本市場休場で新しい日本現物終値はない。"
+    ]
+  },
+  "analyst_rating_changes": {
+    "headline": "公開可能な評価変更は掲載せず",
+    "coverage_status": "十分調査したが取得不能",
+    "items": [],
+    "source_review": [
+      {
+        "name": "株探 公開ニュース",
+        "url": "https://kabutan.jp/news/",
+        "result": "公開範囲を確認したが、11月20日分の網羅性を担保できず不掲載。",
+        "coverage": "無料公開範囲のみ。証券会社原文・全件は未確認。"
+      }
+    ],
+    "summary": "未確認を「変更なし」とせず、今回は判断材料から除外。"
+  },
+  "sector_implications": [
+    {
+      "driver": "米半導体・情報技術急落",
+      "affected_sectors": [
+        "電機・精密",
+        "機械"
+      ],
+      "possible_impact": "半導体製造装置・電子部品・AI関連大型株には追加の評価調整圧力。",
+      "confirmation_condition": "SOX反発と次の東京現物取引で電機・精密がTOPIXを上回る"
+    },
+    {
+      "driver": "物価と相対防御",
+      "affected_sectors": [
+        "銀行",
+        "食品",
+        "医薬品"
+      ],
+      "possible_impact": "コアCPI+2.2%は正常化観測を残す一方、リスク回避局面では食品・医薬品の相対耐性候補。",
+      "confirmation_condition": "円・国内金利と、銀行・食品・医薬品の相対株価を同時確認"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "下げ止まり",
+      "conditions": "SOXが反発し、VIXが30を下回る",
+      "impact_on_japan": "半導体・電機の売りが縮小し、日経平均の戻りが先行。",
+      "strong_sectors": [
+        "電機・精密",
+        "機械"
+      ],
+      "weak_sectors": [],
+      "invalidation": "SOXが安値を更新しVIXが再上昇"
+    },
+    {
+      "name": "リスク回避継続",
+      "conditions": "SOX安値更新、VIX35超、米情報技術が再び市場を下回る",
+      "impact_on_japan": "AI・半導体関連から大型輸出株へ売りが広がる。",
+      "strong_sectors": [
+        "食品",
+        "医薬品"
+      ],
+      "weak_sectors": [
+        "電機・精密",
+        "機械"
+      ],
+      "invalidation": "半導体が反発し上昇銘柄が過半へ拡大"
+    },
+    {
+      "name": "ディフェンシブへの回転",
+      "conditions": "指数は不安定でも生活必需品・ヘルスケア・銀行が相対優位",
+      "impact_on_japan": "日経平均よりTOPIX、成長株より内需・高配当が相対優位。",
+      "strong_sectors": [
+        "食品",
+        "医薬品",
+        "銀行"
+      ],
+      "weak_sectors": [
+        "高PER成長株"
+      ],
+      "invalidation": "情報技術が市場を上回り、VIXが低下"
+    }
+  ],
+  "monitoring_points": [
+    {
+      "target": "AI・半導体",
+      "current_view": "短期の評価調整が世界株へ拡大。中期需要の崩壊は未確認。",
+      "today_check": "SOX反発とXLKの相対順位",
+      "view_change_condition": "SOX反発、VIX30割れ、情報技術がS&P500を上回る"
+    },
+    {
+      "target": "日本株Breadth",
+      "current_view": "20日の指数は急落。17業種・34銘柄データは取得失敗。",
+      "today_check": "次の現物取引の上昇銘柄・業種数",
+      "view_change_condition": "上昇銘柄・業種が過半に広がる"
+    },
+    {
+      "target": "物価・日銀",
+      "current_view": "10月CPIはコア+2.2%で正常化観測を残す。",
+      "today_check": "円、国内金利、銀行と高PER株の相対差",
+      "view_change_condition": "円高・金利低下と成長株優位が同時に進む"
+    }
+  ],
+  "source_notes": [
+    "Market Morning market.json: 11月20日の指数・為替・VIX・米業種ETF終値の正本。 https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+    "総務省統計局: 10月全国CPIを確認。 https://www.stat.go.jp/data/cpi/sokuhou/tsuki/index-z.html",
+    "日本取引所グループ: 11月23日の休場を確認。 https://www.jpx.co.jp/corporate/about-jpx/calendar/index.html",
+    "Reuters: 米20日の市場反応と半導体・大型ハイテク売りを確認。 https://www.reuters.com/markets/us/wall-st-week-ahead-ai-worries-hit-stocks-2026-11-20/"
+  ],
+  "publication_policy": {
+    "status": "QUALIFIED",
+    "mode": "provisional",
+    "updated_at": "2026-11-23T06:55:00+09:00",
+    "complete_gate": "FAIL",
+    "copper_included": false,
+    "note": "確認済みの11月20日終値と一次資料で注釈付き公開。時点不一致・限月不明・取得失敗に依存する主張は除外。",
+    "missing_items": [
+      "米2年・10年金利は11月19日公表値で、米株11月20日と同一基準日ではない。株価急落との同時反応には使わない。",
+      "商品先物は限月と値種別を確認できないため、Gold・Silver・WTI・Brent・Copperを分析から除外。",
+      "日本17業種・34銘柄の11月20日終値は取得時のレート制限で必要数に届かず、11月19日の保存値を20日の結論に使わない。",
+      "統一時刻の株価先物・為替現在値、国内全適時開示、証券会社評価変更、通商・制裁の網羅確認は未完了。",
+      "Project添付の仕様書v2三点は今回の接続先検索で確認できず、現行mainのスキーマ・検証・公開ルールを適用。"
+    ]
+  }
+}

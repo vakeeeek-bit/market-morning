@@ -599,6 +599,14 @@ def refresh_closed_day_snapshot(snapshot, now, market, report):
     return result
 
 
+def can_reuse_closed_day_snapshot(snapshot, now):
+    """Only reuse a closed-day snapshot after the latest session was captured."""
+    return (
+        bool(jpx_closure_name(now.date()))
+        and snapshot.get("market_date") == expected_jpx_market_date(now)
+    )
+
+
 def main():
     universe = json.loads(UNIVERSE_PATH.read_text(encoding="utf-8"))
     report = json.loads(JAPAN_REPORT_PATH.read_text(encoding="utf-8")) if JAPAN_REPORT_PATH.exists() else {}
@@ -606,11 +614,16 @@ def main():
     now = datetime.now(ZoneInfo("Asia/Tokyo"))
     if OUTPUT_PATH.exists():
         existing = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
-        closed_day = refresh_closed_day_snapshot(existing, now, market, report)
-        if closed_day:
-            OUTPUT_PATH.write_text(json.dumps(closed_day, ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8")
-            print(f"休場日のため、{closed_day.get('market_date')}の現物データを維持して休場情報を更新しました")
-            return
+        # A weekend/holiday refresh may run before the prior session has been
+        # captured.  In that case, do not freeze an older snapshot merely
+        # because today is closed; continue to the normal download path and
+        # backfill the expected prior trading day first.
+        if can_reuse_closed_day_snapshot(existing, now):
+            closed_day = refresh_closed_day_snapshot(existing, now, market, report)
+            if closed_day:
+                OUTPUT_PATH.write_text(json.dumps(closed_day, ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+                print(f"休場日のため、{closed_day.get('market_date')}の現物データを維持して休場情報を更新しました")
+                return
     tickers = list(universe["benchmarks"][key]["ticker"] for key in universe["benchmarks"])
     for sector in universe["sectors"]:
         tickers.append(sector["etf"])

@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "updated_at": "2026-11-19T12:29:58+09:00",
-  "report_date": "2026-11-19",
+  "updated_at": "2026-11-23T06:55:00+09:00",
+  "report_date": "2026-11-23",
   "period_start": "2026-03-18",
-  "period_end": "2026-11-18",
+  "period_end": "2026-11-23",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-11-19",
-    "source_report_count": 9,
+    "latest_report_date": "2026-11-23",
+    "source_report_count": 8,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
   "headline": "市場の見方がどう変わったかを3つのテーマで確認",
@@ -516,6 +516,15 @@
           "source_ids": [
             "nov19-nv"
           ]
+        },
+        {
+          "date": "2026-11-20",
+          "title": "半導体売りが世界株へ拡大",
+          "fact": "SOX−10.73%、NASDAQ100−5.61%、S&P500−3.70%。",
+          "market_impact": "米11業種は1上昇・10下落、XLK−7.27%、VIX+26.20%。AI・半導体の評価調整が広範化した。",
+          "source_ids": [
+            "nov23-market"
+          ]
         }
       ],
       "initial_view": {
@@ -523,16 +532,16 @@
         "text": "AI設備投資と先端半導体需要の強さが株価を支える局面"
       },
       "new_fact": {
-        "date": "2026-11-17",
-        "text": "NVIDIAの8～10月期売上高は1,158億ドル、前年同期比103%増。データセンター部門は1,076億ドルで110%増えた。"
+        "date": "2026-11-20",
+        "text": "SOX−10.73%、NASDAQ100−5.61%。半導体・大型ハイテク売りが世界株へ拡大。"
       },
       "market_reaction": {
-        "date": "2026-11-18",
-        "text": "18日の米取引でNVIDIA株は下落。NASDAQ総合は上昇。"
+        "date": "2026-11-20",
+        "text": "S&P500−3.70%、VIX+26.20%、日経平均−5.06%。"
       },
-      "current_view": "経営交代後もAI向け需要は伸びた。一方、決算を受けた18日の米取引で同社株は下落。日本の装置株では受注の伸びと、株価がすでに織り込んだ成長を分けて見る。",
-      "japan_impact": "経営交代後もAI向け需要は伸びた。一方、決算を受けた18日の米取引で同社株は下落。日本の装置株では受注の伸びと、株価がすでに織り込んだ成長を分けて見る。",
-      "counter_evidence": "SOXは保存日足とNasdaqの履歴表示・報道で騰落の符号が一致せず、方向判断から除外。",
+      "current_view": "AI需要の中期テーマが消えたとは確認できない一方、投資回収と評価倍率への警戒は半導体から市場全体へ広がった。",
+      "japan_impact": "次の東京現物取引で半導体・電機の追加売りと、食品・医薬品・銀行の相対耐性を確認する。",
+      "counter_evidence": "米生活必需品は+0.67%。またAI需要そのものの中期失速は未確認。",
       "source_ids": [
         "ai-apr16",
         "ai-credit-1016",
@@ -570,7 +579,8 @@
         "nov13-us-market",
         "nov13-japan-market",
         "nov16-us-close",
-        "nov19-nv"
+        "nov19-nv",
+        "nov23-market"
       ]
     },
     {
@@ -784,6 +794,25 @@
           "source_ids": [
             "nov19-trade"
           ]
+        },
+        {
+          "date": "2026-11-20",
+          "title": "10月全国CPIはコア2.2%",
+          "fact": "総合+2.3%、生鮮食品除く総合+2.2%、生鮮食品・エネルギー除く総合+2.2%。",
+          "market_impact": "日銀正常化観測を残すが、同日の株価急落をCPI単独の反応とは扱わない。",
+          "source_ids": [
+            "nov23-jp-cpi",
+            "nov23-market"
+          ]
+        },
+        {
+          "date": "2026-11-23",
+          "title": "東京市場は祝日休場",
+          "fact": "東証現物は休場、デリバティブ祝日取引もBCP・DRテストのため実施しない。",
+          "market_impact": "23日に新しい日本現物終値は生じないため、次の現物取引で米20日の追加下落を再評価する。",
+          "source_ids": [
+            "nov23-jpx-holiday"
+          ]
         }
       ],
       "initial_view": {
@@ -791,16 +820,16 @@
         "text": "政策金利0.75%でも利上げを求める意見が増え、正常化継続が意識された"
       },
       "new_fact": {
-        "date": "2026-11-18",
-        "text": "日本の10月輸出額は前年比20.5%増、数量は5.8%増。輸入額は21.6%増えた一方、数量は0.2%減。貿易赤字は4,765億円だった。"
+        "date": "2026-11-20",
+        "text": "10月全国CPIは総合+2.3%、コア+2.2%。"
       },
       "market_reaction": {
-        "date": "2026-11-18",
-        "text": "日本の18日終値は日経平均が59,024.28円（+0.28%）。TOPIX連動ETFは0.64%下落し、17業種ETFのうち14業種が下落した。"
+        "date": "2026-11-20",
+        "text": "日経平均−5.06%、TOPIX連動ETF−3.98%。CPI単独寄与は未確認。"
       },
-      "current_view": "輸出数量の増加は外需を支える。一方、輸入支払いの増加は原材料を海外から調達する企業の負担になり得る。価格転嫁と為替予約の差に注意。",
-      "japan_impact": "輸出数量の増加は外需を支える。一方、輸入支払いの増加は原材料を海外から調達する企業の負担になり得る。価格転嫁と為替予約の差に注意。",
-      "counter_evidence": "貿易額から企業別の利益率は読み取れない。",
+      "current_view": "基調物価は2%台で正常化観測を残すが、20日の株価はAI・半導体売りなど複数材料を含む。",
+      "japan_impact": "銀行には相対追い風、高PER株には金利感応度の逆風候補。円・国内金利と株価を同時確認する。",
+      "counter_evidence": "20日の国内17業種データは取得失敗で、業種別のCPI反応は未確認。",
       "source_ids": [
         "boj-apr28",
         "boj-jun16",
@@ -839,22 +868,25 @@
         "nov13-japan-market",
         "nov16-japan-close",
         "nov16-jp-gdp-schedule",
-        "nov19-trade"
+        "nov19-trade",
+        "nov23-jp-cpi",
+        "nov23-market",
+        "nov23-jpx-holiday"
       ]
     }
   ],
   "scenario_change_conditions": [
     {
-      "condition": "東証の業種の広がり",
-      "meaning": "17業種の過半が上昇し、TOPIX連動ETFもプラスに転じる"
+      "condition": "AI・半導体",
+      "meaning": "SOX反発、VIX30割れ、情報技術がS&P500を上回る"
     },
     {
-      "condition": "AI関連",
-      "meaning": "電機・精密がTOPIX連動ETFを下回り、銀行・小売も低迷"
+      "condition": "日本株Breadth",
+      "meaning": "上昇銘柄・業種が過半に広がる"
     },
     {
-      "condition": "国内物価",
-      "meaning": "輸入コスト増でも価格転嫁が進み、小売の相対株価が持ち直す"
+      "condition": "物価・日銀",
+      "meaning": "円高・金利低下と成長株優位が同時に進む"
     }
   ],
   "sources": [
@@ -1265,6 +1297,13 @@
       "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/"
     },
     {
+      "id": "nov23-market",
+      "title": "2026年11月20日の世界市場正本",
+      "publisher": "Market Morning / Reuters照合",
+      "published_at": "2026-11-20",
+      "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+    },
+    {
       "id": "boj-apr28",
       "title": "Statement on Monetary Policy",
       "publisher": "Bank of Japan",
@@ -1473,6 +1512,20 @@
       "publisher": "財務省",
       "published_at": "2026-11-18",
       "url": "https://www.customs.go.jp/toukei/shinbun/trade-st/gaiyo2026_10.pdf"
+    },
+    {
+      "id": "nov23-jp-cpi",
+      "title": "2026年10月分全国消費者物価指数",
+      "publisher": "総務省統計局",
+      "published_at": "2026-11-20",
+      "url": "https://www.stat.go.jp/data/cpi/sokuhou/tsuki/index-z.html"
+    },
+    {
+      "id": "nov23-jpx-holiday",
+      "title": "11月23日は東証休場、デリバティブ祝日取引も休止",
+      "publisher": "日本取引所グループ",
+      "published_at": "2026-11-20",
+      "url": "https://www.jpx.co.jp/corporate/about-jpx/calendar/index.html"
     }
   ]
 }

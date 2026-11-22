@@ -2,20 +2,29 @@
   "version": "1.0",
   "description": "確認済み一次資料の表示設定",
   "items": {
-    "nov20-boj-ueda-diet-statement": {
+    "nov23-jp-cpi-oct": {
       "primary_page": "japan",
       "priority": 100,
-      "attention_points": ["1.25%程度の政策金利維持と継続利上げ方針を再確認", "新規決定ではなく、次回の時期・幅は未確定"]
+      "attention_points": [
+        "10月コアCPIは前年比2.2%",
+        "20日の株価下落をCPI単独の反応とは扱わない"
+      ]
     },
-    "nov20-boj-real-exports-oct": {
+    "nov23-jpx-holiday": {
       "primary_page": "japan",
       "priority": 95,
-      "attention_points": ["10月実質輸出は前月比4.1%増、自動車関連は7.1%増", "単月計数であり個別企業の利益・株価反応は未確認"]
+      "attention_points": [
+        "23日は東証現物休場",
+        "デリバティブ祝日取引もBCPテストで休止"
+      ]
     },
-    "nov20-fed-jefferson-shocks-ai": {
+    "nov23-fed-cook-global": {
       "primary_page": "world",
       "priority": 90,
-      "attention_points": ["AI投資は足元の需要・物価を押し上げる一方、将来は生産性を高め得る", "副議長個人の見解で、FOMCの新規決定ではない"]
+      "attention_points": [
+        "世界貿易制限とAI投資を論じた",
+        "個人見解で新規FOMC決定ではない"
+      ]
     }
   }
 }

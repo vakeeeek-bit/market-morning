@@ -1,0 +1,124 @@
+{
+  "report_date": "2026-11-24",
+  "target_market_date": "2026-11-23",
+  "updated_at": "2026-11-24T06:55:00+09:00",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "NVIDIA・SEC・総務省・JPXの一次資料を実読した3件のみ。記事単体では市場反応を断定せず、国内全適時開示・通商・制裁を網羅したものではない。",
+  "articles": [
+    {
+      "id": "nov24-nvidia-ceo",
+      "title": "NVIDIA、Jensen Huang氏を社長・CEO・取締役へ復帰",
+      "published_date": "2026-11-23",
+      "verified_at": "2026-11-24T06:55:00+09:00",
+      "source_type": "primary",
+      "publisher": "NVIDIA / SEC",
+      "source_url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Board-Reinstates-Jensen-Huang-as-President-CEO-and-Board-Director/default.aspx",
+      "verification_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000090/nvda-20261122.htm",
+      "verification_status": "PASS",
+      "fact": "NVIDIAはJensen Huang氏を社長・CEO・取締役へ即時復帰させたと発表。SEC 8-Kは11月22日の取締役会決定と11月23日の提出を確認できる。",
+      "analysis": "これまでの市場認識は経営不確実性とAI投資採算への警戒。今回、経営不確実性の一部は後退したが、独立委員会調査・政府調査とAI投資採算の検証は継続する。日本の半導体・AI関連には追い風候補だが、24日の現物反応確認が必要。",
+      "limitations": "記事単体の市場寄与率と日本株反応は未確認。独立委員会調査・政府調査は継続。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "NVIDIA公式発表とSEC 8-Kを実読。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "復帰役職、効力、取締役会決定日を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "取締役会11月22日、発表・提出11月23日、確認11月24日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "役員復帰の事実と日本株への条件付き波及を分離。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "市場寄与率、調査継続、日本株反応未確認を明示。"
+        }
+      }
+    },
+    {
+      "id": "nov24-jp-cpi-oct",
+      "title": "10月全国CPI、コアは前年比2.2%上昇",
+      "published_date": "2026-11-20",
+      "verified_at": "2026-11-24T06:55:00+09:00",
+      "source_type": "primary",
+      "publisher": "総務省統計局",
+      "source_url": "https://www.stat.go.jp/data/cpi/sokuhou/tsuki/index-z.html",
+      "verification_url": "https://www.stat.go.jp/data/cpi/sokuhou/tsuki/index-z.html",
+      "verification_status": "PASS",
+      "fact": "2026年10月の全国CPIは総合が前年同月比2.3%上昇、生鮮食品を除く総合と生鮮食品・エネルギーを除く総合はいずれも2.2%上昇した。",
+      "analysis": "これまでの市場認識は日銀の正常化継続。今回の数値は基調物価が2%台にあることを確認し、銀行には相対追い風、高PER株には金利感応度の点で逆風候補。ただし20日の株価急落をCPI単独の反応とは扱わない。",
+      "limitations": "統計発表と20日の株価は同日だが、材料別の寄与率は未確認。季節調整済み月次や内訳の詳細は本記事では扱わない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "統計局の2026年10月分公表ページを実読。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "総合、生鮮食品除く、生鮮食品・エネルギー除くの前年比を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "対象月2026年10月、発表日11月20日、確認日時を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "統計値と日本株への条件付き波及を分離。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "株価寄与と詳細内訳を未確認として明示。"
+        }
+      }
+    },
+    {
+      "id": "nov24-jpx-holiday",
+      "title": "11月23日は東証休場、デリバティブ祝日取引も休止",
+      "published_date": "2026-11-20",
+      "verified_at": "2026-11-24T06:55:00+09:00",
+      "source_type": "primary",
+      "publisher": "日本取引所グループ",
+      "source_url": "https://www.jpx.co.jp/corporate/about-jpx/calendar/index.html",
+      "verification_url": "https://www.jpx.co.jp/corporate/about-jpx/calendar/index.html",
+      "verification_status": "PASS",
+      "fact": "2026年11月23日は勤労感謝の日で東証現物市場が休場。JPXは同日のデリバティブ祝日取引もBCP・DRテストのため実施しないと案内した。",
+      "analysis": "23日に新しい日本現物終値は生じない。次の現物取引で米20日の追加下落を織り込むため、寄り付きと日中の戻りを分けて確認する。",
+      "limitations": "休場情報であり株価方向を予測するものではない。PTSや海外上場商品は対象外。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "JPXの休業日カレンダーと祝日取引案内を実読。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "現物休場とデリバティブ祝日取引休止を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "案内確認日と対象日11月23日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "休場事実と次回確認点を分離。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "方向予測ではなく対象市場の範囲を明示。"
+        }
+      }
+    }
+  ]
+}

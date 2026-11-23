@@ -2,28 +2,28 @@
   "version": "1.0",
   "description": "確認済み一次資料の表示設定",
   "items": {
-    "nov23-jp-cpi-oct": {
-      "primary_page": "japan",
+    "nov24-nvidia-ceo": {
+      "primary_page": "world",
       "priority": 100,
       "attention_points": [
-        "10月コアCPIは前年比2.2%",
-        "20日の株価下落をCPI単独の反応とは扱わない"
+        "Jensen Huang氏がCEO復帰",
+        "調査継続と日本株反応未確認を分離"
       ]
     },
-    "nov23-jpx-holiday": {
+    "nov24-jp-cpi-oct": {
       "primary_page": "japan",
-      "priority": 95,
-      "attention_points": [
-        "23日は東証現物休場",
-        "デリバティブ祝日取引もBCPテストで休止"
-      ]
-    },
-    "nov23-fed-cook-global": {
-      "primary_page": "world",
       "priority": 90,
       "attention_points": [
-        "世界貿易制限とAI投資を論じた",
-        "個人見解で新規FOMC決定ではない"
+        "10月コアCPIは前年比2.2%",
+        "25日の基調インフレ指標へ継続"
+      ]
+    },
+    "nov24-jpx-holiday": {
+      "primary_page": "japan",
+      "priority": 85,
+      "attention_points": [
+        "23日は東証現物休場",
+        "24日寄り前で米反発は未反映"
       ]
     }
   }

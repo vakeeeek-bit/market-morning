@@ -1,48 +1,22 @@
 {
-  "updated_at": "2026-11-23T06:55:00+09:00",
-  "source_report_date": "2026-11-23",
+  "updated_at": "2026-11-24T06:55:00+09:00",
+  "source_report_date": "2026-11-24",
   "items": [
-    {
-      "id": "stale_cross_asset",
-      "status": "QUALIFIED",
-      "missing": "米2年・10年金利は11月19日公表値で、米株11月20日と同一基準日ではない。株価急落との同時反応には使わない。",
-      "impact": "20日の株価と金利の同時反応・2s10sの株価因果を保留。",
-      "last_checked_at": "2026-11-23T06:55:00+09:00",
-      "next_action": "FREDの20日公表値反映後に再照合。",
-      "attempts": [
-        {
-          "method": "当日取得・公式資料・現行mainの照合",
-          "result": "米2年・10年金利は11月19日公表値で、米株11月20日と同一基準日ではない。株価急落との同時反応には使わない。",
-          "source_urls": [
-            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
-          ],
-          "checked_at": "2026-11-23T06:55:00+09:00"
-        }
-      ],
-      "affected_components": [
-        "ai_report",
-        "japan_stocks"
-      ],
-      "excluded_claims": [
-        "20日の米金利変化が株価急落を引き起こしたとの断定"
-      ],
-      "excluded_from_publication": true
-    },
     {
       "id": "contracts",
       "status": "QUALIFIED",
       "missing": "商品先物は限月と値種別を確認できないため、Gold・Silver・WTI・Brent・Copperを分析から除外。",
       "impact": "商品・日経先物に依存する分析を除外。",
-      "last_checked_at": "2026-11-23T06:55:00+09:00",
+      "last_checked_at": "2026-11-24T06:55:00+09:00",
       "next_action": "取引所、限月、清算値、基準時刻を確認できる公式系列を取得。",
       "attempts": [
         {
-          "method": "当日取得・公式資料・現行mainの照合",
+          "method": "当日取得・公式資料・現行main・Drive検索の照合",
           "result": "商品先物は限月と値種別を確認できないため、Gold・Silver・WTI・Brent・Copperを分析から除外。",
           "source_urls": [
             "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
           ],
-          "checked_at": "2026-11-23T06:55:00+09:00"
+          "checked_at": "2026-11-24T06:55:00+09:00"
         }
       ],
       "affected_components": [
@@ -52,24 +26,25 @@
       "excluded_claims": [
         "商品先物方向と在庫に依存する主張"
       ],
-      "excluded_from_publication": true
+      "excluded_from_publication": true,
+      "first_seen_at": "2026-11-24T06:55:00+09:00"
     },
     {
       "id": "coverage",
       "status": "QUALIFIED",
       "missing": "統一時刻の株価先物・為替現在値、国内全適時開示、証券会社評価変更、通商・制裁の網羅確認は未完了。",
-      "impact": "網羅性を前提とする「変更なし」「材料なし」を除外。",
-      "last_checked_at": "2026-11-23T06:55:00+09:00",
+      "impact": "網羅性を前提とする『変更なし』『材料なし』を除外。",
+      "last_checked_at": "2026-11-24T06:55:00+09:00",
       "next_action": "次回、TDnet・企業IR・証券会社公表、USTR・OFAC等を継続確認。",
       "attempts": [
         {
-          "method": "当日取得・公式資料・現行mainの照合",
+          "method": "当日取得・公式資料・現行main・Drive検索の照合",
           "result": "統一時刻の株価先物・為替現在値、国内全適時開示、証券会社評価変更、通商・制裁の網羅確認は未完了。",
           "source_urls": [
             "https://www.release.tdnet.info/inbs/I_main_00.html",
             "https://home.treasury.gov/policy-issues/financial-sanctions/recent-actions"
           ],
-          "checked_at": "2026-11-23T06:55:00+09:00"
+          "checked_at": "2026-11-24T06:55:00+09:00"
         }
       ],
       "affected_components": [
@@ -80,21 +55,51 @@
       "excluded_claims": [
         "個別株・評価変更・通商・制裁の網羅性断定"
       ],
-      "excluded_from_publication": true
+      "excluded_from_publication": true,
+      "first_seen_at": "2026-11-24T06:55:00+09:00"
+    },
+    {
+      "id": "japan_unpriced",
+      "status": "QUALIFIED",
+      "missing": "日本現物は11月20日終値で、米11月23日のNVIDIA材料と米株反発は未反映。24日寄り付き前の方向を実績として断定しない。",
+      "impact": "24日の日本株方向・業種波及を実績として掲載しない。",
+      "last_checked_at": "2026-11-24T06:55:00+09:00",
+      "next_action": "24日大引け後に17業種・主要監視銘柄を再取得。",
+      "attempts": [
+        {
+          "method": "当日取得・公式資料・現行main・Drive検索の照合",
+          "result": "日本現物は11月20日終値で、米11月23日のNVIDIA材料と米株反発は未反映。24日寄り付き前の方向を実績として断定しない。",
+          "source_urls": [
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+            "https://www.jpx.co.jp/corporate/about-jpx/calendar/index.html"
+          ],
+          "checked_at": "2026-11-24T06:55:00+09:00"
+        }
+      ],
+      "affected_components": [
+        "ai_report",
+        "japan_stocks",
+        "japan_market"
+      ],
+      "excluded_claims": [
+        "日本株が米AI反発を織り込んだとの断定"
+      ],
+      "excluded_from_publication": true,
+      "first_seen_at": "2026-11-24T06:55:00+09:00"
     },
     {
       "id": "project_docs",
       "status": "QUALIFIED",
-      "missing": "Project添付の仕様書v2三点は今回の接続先検索で確認できず、現行mainのスキーマ・検証・公開ルールを適用。",
-      "impact": "添付v2との差分監査ができず、現行main検証を優先。",
-      "last_checked_at": "2026-11-23T06:55:00+09:00",
+      "missing": "Project添付の仕様書v2三点は今回のDrive検索で確認できず、Project Instructionsと現行mainのスキーマ・検証・公開ルールを適用。",
+      "impact": "添付v2との差分監査ができず、Project Instructionsと現行main検証を優先。",
+      "last_checked_at": "2026-11-24T06:55:00+09:00",
       "next_action": "接続先で文書が利用可能になった時点で再照合。",
       "attempts": [
         {
-          "method": "当日取得・公式資料・現行mainの照合",
-          "result": "Project添付の仕様書v2三点は今回の接続先検索で確認できず、現行mainのスキーマ・検証・公開ルールを適用。",
+          "method": "当日取得・公式資料・現行main・Drive検索の照合",
+          "result": "Project添付の仕様書v2三点は今回のDrive検索で確認できず、Project Instructionsと現行mainのスキーマ・検証・公開ルールを適用。",
           "source_urls": [],
-          "checked_at": "2026-11-23T06:55:00+09:00"
+          "checked_at": "2026-11-24T06:55:00+09:00"
         }
       ],
       "affected_components": [
@@ -103,7 +108,35 @@
       "excluded_claims": [
         "未確認の添付仕様に適合したとの断定"
       ],
-      "excluded_from_publication": true
+      "excluded_from_publication": true,
+      "first_seen_at": "2026-11-24T06:55:00+09:00"
+    },
+    {
+      "id": "stale_cross_asset",
+      "status": "QUALIFIED",
+      "missing": "米2年・10年金利、DXY、USD/JPY、EUR/USD、商品先物は11月20日、米株は11月23日で同時点ではない。株価反発との同時反応・因果には使わない。",
+      "impact": "23日の米株反発と金利・為替・商品の同時反応を保留。",
+      "last_checked_at": "2026-11-24T06:55:00+09:00",
+      "next_action": "各系列が11月23日公表・確定後に再照合。",
+      "attempts": [
+        {
+          "method": "当日取得・公式資料・現行main・Drive検索の照合",
+          "result": "米2年・10年金利、DXY、USD/JPY、EUR/USD、商品先物は11月20日、米株は11月23日で同時点ではない。株価反発との同時反応・因果には使わない。",
+          "source_urls": [
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+          ],
+          "checked_at": "2026-11-24T06:55:00+09:00"
+        }
+      ],
+      "affected_components": [
+        "ai_report",
+        "japan_stocks"
+      ],
+      "excluded_claims": [
+        "米株反発を金利低下・円変動が引き起こしたとの断定"
+      ],
+      "excluded_from_publication": true,
+      "first_seen_at": "2026-11-24T06:55:00+09:00"
     }
   ]
 }

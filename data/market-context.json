@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "updated_at": "2026-11-23T06:55:00+09:00",
-  "report_date": "2026-11-23",
+  "updated_at": "2026-11-24T06:55:00+09:00",
+  "report_date": "2026-11-24",
   "period_start": "2026-03-18",
   "period_end": "2026-11-23",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-11-23",
+    "latest_report_date": "2026-11-24",
     "source_report_count": 8,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
@@ -525,6 +525,16 @@
           "source_ids": [
             "nov23-market"
           ]
+        },
+        {
+          "date": "2026-11-23",
+          "title": "NVIDIA CEO復帰で半導体が急反発",
+          "fact": "NVIDIAはJensen Huang氏のCEO復帰を発表。SOXは14.03%上昇した。",
+          "market_impact": "経営不確実性の一部後退でAI関連株が買い戻されたが、20日急落前水準の完全回復とAI投資採算懸念の解消は未確認。",
+          "source_ids": [
+            "nov24-nvidia",
+            "nov24-market"
+          ]
         }
       ],
       "initial_view": {
@@ -532,24 +542,35 @@
         "text": "AI設備投資と先端半導体需要の強さが株価を支える局面"
       },
       "new_fact": {
-        "date": "2026-11-20",
-        "text": "SOX−10.73%、NASDAQ100−5.61%。半導体・大型ハイテク売りが世界株へ拡大。"
+        "date": "2026-11-23",
+        "text": "NVIDIAはJensen Huang氏のCEO復帰を発表。SOXは14.03%上昇した。"
       },
       "market_reaction": {
-        "date": "2026-11-20",
-        "text": "S&P500−3.70%、VIX+26.20%、日経平均−5.06%。"
+        "date": "2026-11-23",
+        "text": "SOX+14.03%、NASDAQ100+6.86%、VIX−25.83%。"
       },
-      "current_view": "AI需要の中期テーマが消えたとは確認できない一方、投資回収と評価倍率への警戒は半導体から市場全体へ広がった。",
-      "japan_impact": "次の東京現物取引で半導体・電機の追加売りと、食品・医薬品・銀行の相対耐性を確認する。",
-      "counter_evidence": "米生活必需品は+0.67%。またAI需要そのものの中期失速は未確認。",
+      "current_view": "NVIDIA固有の経営不確実性は一部後退したが、AI投資の採算と高い評価倍率への懸念は残る。",
+      "japan_impact": "24日の半導体製造装置・電機の戻りと、TOPIX・業種Breadthへの広がりを確認する。",
+      "counter_evidence": "SOXは20日−10.73%の後の反発で、急落前水準を完全には回復していない。",
       "source_ids": [
         "ai-apr16",
         "ai-credit-1016",
         "ai-jul20",
         "ai-sep14",
+        "nov11-us-market",
+        "nov12-coreweave",
+        "nov12-us-market",
+        "nov13-japan-market",
+        "nov13-nvidia",
+        "nov13-us-market",
+        "nov16-us-close",
+        "nov19-nv",
         "nov2-intel",
         "nov2-market",
         "nov2-weekend",
+        "nov23-market",
+        "nov24-market",
+        "nov24-nvidia",
         "nov3-market",
         "nov3-marvell",
         "nov4-apple",
@@ -557,6 +578,8 @@
         "nov5-market",
         "nov6-ap",
         "nov6-market",
+        "nov9-reuters-jp",
+        "nov9-reuters-us",
         "oct15-2",
         "oct16-tsmc",
         "oct19-3",
@@ -569,18 +592,7 @@
         "oct30-market",
         "reaction14",
         "reaction15",
-        "us-close-1016",
-        "nov9-reuters-us",
-        "nov9-reuters-jp",
-        "nov11-us-market",
-        "nov12-coreweave",
-        "nov12-us-market",
-        "nov13-nvidia",
-        "nov13-us-market",
-        "nov13-japan-market",
-        "nov16-us-close",
-        "nov19-nv",
-        "nov23-market"
+        "us-close-1016"
       ]
     },
     {
@@ -878,15 +890,15 @@
   "scenario_change_conditions": [
     {
       "condition": "AI・半導体",
-      "meaning": "SOX反発、VIX30割れ、情報技術がS&P500を上回る"
+      "meaning": "SOX反落、VIX30超、日本半導体株が20日安値更新"
     },
     {
       "condition": "日本株Breadth",
-      "meaning": "上昇銘柄・業種が過半に広がる"
+      "meaning": "上昇業種が過半かつTOPIXが日経平均型に追随"
     },
     {
-      "condition": "物価・日銀",
-      "meaning": "円高・金利低下と成長株優位が同時に進む"
+      "condition": "物価・日銀／米PCE",
+      "meaning": "実績・声明を確認し、円・金利と株価の同時反応が生じる"
     }
   ],
   "sources": [
@@ -1185,11 +1197,60 @@
       "url": "https://www.reuters.com/business/ai-warnings-knock-nasdaq-futures-pressure-tech-stocks-2026-09-14/"
     },
     {
+      "id": "nov12-coreweave",
+      "title": "CoreWeave Reports Strong Third Quarter 2026 Results",
+      "publisher": "CoreWeave",
+      "published_at": "2026-11-10",
+      "url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx"
+    },
+    {
+      "id": "nov13-japan-market",
+      "title": "日経平均日次サマリー 2026年11月12日",
+      "publisher": "Nikkei Indexes",
+      "published_at": "2026-11-12",
+      "url": "https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20261112&idx=nk225"
+    },
+    {
+      "id": "nov13-nvidia",
+      "title": "NVIDIA Announces CEO Transition",
+      "publisher": "NVIDIA",
+      "published_at": "2026-11-12",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-CEO-Transition/"
+    },
+    {
+      "id": "nov19-nv",
+      "title": "NVIDIA四半期決算",
+      "publisher": "NVIDIA",
+      "published_at": "2026-11-17",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/"
+    },
+    {
       "id": "nov2-intel",
       "title": "Intel Reports Third-Quarter 2026 Financial Results",
       "publisher": "Intel Corporation",
       "published_at": "2026-10-29",
       "url": "https://www.intc.com/news-events/press-releases/detail/1752/intel-reports-third-quarter-2026-financial-results"
+    },
+    {
+      "id": "nov23-market",
+      "title": "2026年11月20日の世界市場正本",
+      "publisher": "Market Morning / Reuters照合",
+      "published_at": "2026-11-20",
+      "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+    },
+    {
+      "id": "nov24-market",
+      "title": "2026年11月23日の米国市場正本",
+      "publisher": "Market Morning / Reuters照合",
+      "published_at": "2026-11-23",
+      "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+    },
+    {
+      "id": "nov24-nvidia",
+      "title": "NVIDIA Board Reinstates Jensen Huang",
+      "publisher": "NVIDIA",
+      "published_at": "2026-11-23",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Board-Reinstates-Jensen-Huang-as-President-CEO-and-Board-Director/default.aspx"
     },
     {
       "id": "nov3-marvell",
@@ -1211,6 +1272,20 @@
       "publisher": "Associated Press",
       "published_at": "2026-11-05",
       "url": "https://apnews.com/article/afe254c608c3d1fe2ea792812ba9765a"
+    },
+    {
+      "id": "nov9-reuters-jp",
+      "title": "日経平均株価は大幅に5日続落",
+      "publisher": "Reuters / Newsweek Japan",
+      "published_at": "2026-11-06",
+      "url": "https://www.newsweekjapan.jp/articles/-/339313"
+    },
+    {
+      "id": "nov9-reuters-us",
+      "title": "Nasdaq rebounds but posts fourth straight weekly decline",
+      "publisher": "Reuters",
+      "published_at": "2026-11-06",
+      "url": "https://www.fidelity.com/news/article/us-markets/202611061602RTRSNEWSCOMBINED_L6N46N1AI_1"
     },
     {
       "id": "oct15-2",
@@ -1253,55 +1328,6 @@
       "publisher": "Reuters",
       "published_at": "2026-10-23",
       "url": "https://www.reuters.com/world/china/global-markets-view-usa-2026-10-23/"
-    },
-    {
-      "id": "nov9-reuters-us",
-      "title": "Nasdaq rebounds but posts fourth straight weekly decline",
-      "publisher": "Reuters",
-      "published_at": "2026-11-06",
-      "url": "https://www.fidelity.com/news/article/us-markets/202611061602RTRSNEWSCOMBINED_L6N46N1AI_1"
-    },
-    {
-      "id": "nov9-reuters-jp",
-      "title": "日経平均株価は大幅に5日続落",
-      "publisher": "Reuters / Newsweek Japan",
-      "published_at": "2026-11-06",
-      "url": "https://www.newsweekjapan.jp/articles/-/339313"
-    },
-    {
-      "id": "nov12-coreweave",
-      "title": "CoreWeave Reports Strong Third Quarter 2026 Results",
-      "publisher": "CoreWeave",
-      "published_at": "2026-11-10",
-      "url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx"
-    },
-    {
-      "id": "nov13-nvidia",
-      "title": "NVIDIA Announces CEO Transition",
-      "publisher": "NVIDIA",
-      "published_at": "2026-11-12",
-      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-CEO-Transition/"
-    },
-    {
-      "id": "nov13-japan-market",
-      "title": "日経平均日次サマリー 2026年11月12日",
-      "publisher": "Nikkei Indexes",
-      "published_at": "2026-11-12",
-      "url": "https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20261112&idx=nk225"
-    },
-    {
-      "id": "nov19-nv",
-      "title": "NVIDIA四半期決算",
-      "publisher": "NVIDIA",
-      "published_at": "2026-11-17",
-      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/"
-    },
-    {
-      "id": "nov23-market",
-      "title": "2026年11月20日の世界市場正本",
-      "publisher": "Market Morning / Reuters照合",
-      "published_at": "2026-11-20",
-      "url": "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
     },
     {
       "id": "boj-apr28",

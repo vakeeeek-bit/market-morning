@@ -1,0 +1,180 @@
+{
+  "report_date": "2026-11-24",
+  "target_market_date": "2026-11-23",
+  "updated_at": "2026-11-24T06:55:00+09:00",
+  "report_type": "daily",
+  "japan_quick_view": {
+    "headline": "米AI株急反発、東京は20日急落後の戻りを確認",
+    "summary": "日本現物は20日の日経平均−5.06%、TOPIX連動ETF−3.98%が最新。米23日はSOX+14.03%、NASDAQ100+6.86%へ反発し、24日の東京で半導体・電機の戻りと市場全体への広がりを確認する。",
+    "top_materials": [
+      "米23日はSOX+14.03%、NASDAQ100+6.86%、S&P500+4.73%。20日の急落から大幅反発したが、SOXは20日急落前の水準を完全には回復していない。",
+      "NVIDIAは11月23日、Jensen Huang氏を社長・CEO・取締役に即時復帰させたと発表。SEC 8-Kでも11月22日の取締役会決定を確認した。",
+      "日本現物の最新終値は11月20日（日経平均−5.06%、TOPIX連動ETF−3.98%）。米23日の反発は24日の東京現物に未反映で、寄り付き後の持続性を確認する。",
+      "米11業種ETF代理は9上昇・2下落。情報技術+8.97%が首位、エネルギー−1.06%と生活必需品−0.09%は下落し、AI・景気敏感側への急反転が観測された。",
+      "11月25日は日銀サービス価格・基調インフレ指標、米GDP改定値・PCEを予定。予想値は未確認で、政策方向を先取りしない。"
+    ],
+    "focus_sectors": [
+      "電機・精密",
+      "機械",
+      "情報通信・サービス",
+      "銀行"
+    ],
+    "unpriced_materials": [
+      "NVIDIA CEO復帰と米23日のAI・半導体急反発",
+      "VIX26.62への低下",
+      "米情報技術+8.97%とエネルギー−1.06%の業種差"
+    ],
+    "individual_news_review": {
+      "status": "partial",
+      "story_count": 0,
+      "scope": "確認済み企業固有材料は0件。未調査や取得不能を『材料なし』とは扱わない"
+    }
+  },
+  "top_stories": [],
+  "important_stories": [],
+  "other_stories": [],
+  "data_quality": {
+    "overall": "注釈付き公開",
+    "missing": [
+      "米2年・10年金利、DXY、USD/JPY、EUR/USD、商品先物は11月20日、米株は11月23日で同時点ではない。株価反発との同時反応・因果には使わない。",
+      "商品先物は限月と値種別を確認できないため、Gold・Silver・WTI・Brent・Copperを分析から除外。",
+      "日本現物は11月20日終値で、米11月23日のNVIDIA材料と米株反発は未反映。24日寄り付き前の方向を実績として断定しない。",
+      "統一時刻の株価先物・為替現在値、国内全適時開示、証券会社評価変更、通商・制裁の網羅確認は未完了。",
+      "Project添付の仕様書v2三点は今回のDrive検索で確認できず、Project Instructionsと現行mainのスキーマ・検証・公開ルールを適用。"
+    ],
+    "differences": [
+      "TOPIXは指数そのものではなく1306 ETFの参考値。",
+      "米株・VIXは11月23日、日本株・FX・金利・商品は11月20日、暗号資産は11月22日の日足。"
+    ],
+    "excluded": [
+      "限月不明の商品先物値と日経先物値",
+      "異時点の金利・為替・商品と11月23日米株の同時点因果",
+      "未確認の個別株・評価変更・通商・制裁についての網羅性断定"
+    ],
+    "cautions": [
+      "11月20日の日本現物終値を24日の現在値として表示しない。",
+      "米23日の反発を日本現物の実績として扱わない。"
+    ]
+  },
+  "analyst_rating_changes": {
+    "headline": "公開可能な評価変更は掲載せず",
+    "coverage_status": "十分調査したが取得不能",
+    "items": [],
+    "source_review": [
+      {
+        "name": "株探 公開ニュース",
+        "url": "https://kabutan.jp/news/",
+        "result": "公開範囲を確認したが、11月23〜24日分の証券会社原文・全件の網羅性を担保できず不掲載。",
+        "coverage": "無料公開範囲のみ。証券会社原文・全件は未確認。",
+        "freshness": "当日確認状況をJSONに記録",
+        "automation": "契約API未導入",
+        "rights": "確認できた事実だけを掲載"
+      }
+    ],
+    "summary": "未確認を「変更なし」とせず、今回は判断材料から除外。"
+  },
+  "sector_implications": [
+    {
+      "driver": "米半導体・情報技術急反発",
+      "affected_sectors": [
+        "電機・精密",
+        "機械",
+        "情報通信・サービス"
+      ],
+      "possible_impact": "20日に急落した半導体製造装置・電子部品・AI関連大型株の買い戻し候補。",
+      "confirmation_condition": "寄り後も上昇を維持し、TOPIXと上昇業種数が改善"
+    },
+    {
+      "driver": "物価・日銀イベント",
+      "affected_sectors": [
+        "銀行",
+        "不動産",
+        "高PER成長株"
+      ],
+      "possible_impact": "25日のサービス価格・基調インフレ指標を前に円・国内金利への感応度が高まり得る。結果未発表のため方向は中立。",
+      "confirmation_condition": "公式実績と円・国内金利・各業種の同時反応を確認"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "反発が日本株へ波及",
+      "conditions": "電機・精密と機械が上昇し、17業種ETF代理の上昇が過半、VIX30未満を維持",
+      "impact_on_japan": "日経平均型の戻りに加えTOPIXへ広がる。",
+      "strong_sectors": [
+        "電機・精密",
+        "機械"
+      ],
+      "weak_sectors": [
+        "食品・医薬品（相対）"
+      ],
+      "invalidation": "半導体株が寄り高後に失速し、業種上昇が過半に届かない"
+    },
+    {
+      "name": "買い戻し限定",
+      "conditions": "日経平均は上昇してもTOPIX・業種Breadthが追随しない",
+      "impact_on_japan": "指数寄与度の高いAI・半導体株だけの反発にとどまる。",
+      "strong_sectors": [
+        "電機・精密"
+      ],
+      "weak_sectors": [
+        "内需・小型株"
+      ],
+      "invalidation": "TOPIXと上昇業種数が同時に改善"
+    },
+    {
+      "name": "リスク回避再燃",
+      "conditions": "SOXが反落、VIX30超、東京の半導体株が20日安値を更新",
+      "impact_on_japan": "20日の急落が単なる行き過ぎではないとの見方が強まり、輸出・景気敏感へ売りが再拡大。",
+      "strong_sectors": [
+        "食品",
+        "医薬品"
+      ],
+      "weak_sectors": [
+        "電機・精密",
+        "機械"
+      ],
+      "invalidation": "SOX高値維持と日本Breadth過半上昇"
+    }
+  ],
+  "monitoring_points": [
+    {
+      "target": "AI・半導体",
+      "current_view": "経営不確実性の一部後退で急反発。ただしAI投資採算への懸念は未解消。",
+      "today_check": "東京の電機・精密、機械が寄り後も上昇を維持するか",
+      "view_change_condition": "SOX反落、VIX30超、日本半導体株が20日安値更新"
+    },
+    {
+      "target": "日本株Breadth",
+      "current_view": "日本は20日時点で17業種ETF代理2上昇・15下落。米反発は未反映。",
+      "today_check": "24日の上昇業種数と日経平均・TOPIXの差",
+      "view_change_condition": "上昇業種が過半かつTOPIXが日経平均型に追随"
+    },
+    {
+      "target": "物価・日銀／米PCE",
+      "current_view": "25日に日本のサービス価格・基調インフレ、米PCEを予定。結果未発表。",
+      "today_check": "円・国内金利・銀行と高PER株の相対差",
+      "view_change_condition": "実績・声明を確認し、円・金利と株価の同時反応が生じる"
+    }
+  ],
+  "source_notes": [
+    "Market Morning market.json: 11月23日米国終値と11月20日日本終値の正本。 https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+    "NVIDIA: Jensen Huang氏のCEO復帰を確認。 https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Board-Reinstates-Jensen-Huang-as-President-CEO-and-Board-Director/default.aspx",
+    "SEC 8-K: 11月22日の取締役会決定を確認。 https://www.sec.gov/Archives/edgar/data/1045810/000104581026000090/nvda-20261122.htm",
+    "Reuters: 11月23日の米市場反応を照合。 https://www.reuters.com/business/wall-street-futures-rebound-after-rough-week-ai-linked-shares-2026-11-23/"
+  ],
+  "publication_policy": {
+    "status": "QUALIFIED",
+    "mode": "provisional",
+    "updated_at": "2026-11-24T06:55:00+09:00",
+    "complete_gate": "FAIL",
+    "copper_included": false,
+    "note": "米11月23日終値とNVIDIA一次資料を確認し、日本現物11月20日との時点差を注記して公開。未確認・異時点項目に依存する主張は除外。",
+    "missing_items": [
+      "米2年・10年金利、DXY、USD/JPY、EUR/USD、商品先物は11月20日、米株は11月23日で同時点ではない。株価反発との同時反応・因果には使わない。",
+      "商品先物は限月と値種別を確認できないため、Gold・Silver・WTI・Brent・Copperを分析から除外。",
+      "日本現物は11月20日終値で、米11月23日のNVIDIA材料と米株反発は未反映。24日寄り付き前の方向を実績として断定しない。",
+      "統一時刻の株価先物・為替現在値、国内全適時開示、証券会社評価変更、通商・制裁の網羅確認は未完了。",
+      "Project添付の仕様書v2三点は今回のDrive検索で確認できず、Project Instructionsと現行mainのスキーマ・検証・公開ルールを適用。"
+    ]
+  }
+}

@@ -1,16 +1,54 @@
 {
-  "report_date": "2026-11-23",
-  "target_market_date": "2026-11-20",
-  "updated_at": "2026-11-23T06:55:00+09:00",
+  "report_date": "2026-11-24",
+  "target_market_date": "2026-11-23",
+  "updated_at": "2026-11-24T06:55:00+09:00",
   "publication_mode": "verified_news",
   "coverage_status": "partial",
-  "coverage_note": "一次資料を実読した3件のみ。市場反応は確認済み価格と記事の事実を分離し、記事単独の寄与は未確認。国内全適時開示・通商・制裁を網羅したものではない。",
+  "coverage_note": "NVIDIA・SEC・総務省・JPXの一次資料を実読した3件のみ。記事単体では市場反応を断定せず、国内全適時開示・通商・制裁を網羅したものではない。",
   "articles": [
     {
-      "id": "nov23-jp-cpi-oct",
+      "id": "nov24-nvidia-ceo",
+      "title": "NVIDIA、Jensen Huang氏を社長・CEO・取締役へ復帰",
+      "published_date": "2026-11-23",
+      "verified_at": "2026-11-24T06:55:00+09:00",
+      "source_type": "primary",
+      "publisher": "NVIDIA / SEC",
+      "source_url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Board-Reinstates-Jensen-Huang-as-President-CEO-and-Board-Director/default.aspx",
+      "verification_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000090/nvda-20261122.htm",
+      "verification_status": "PASS",
+      "fact": "NVIDIAはJensen Huang氏を社長・CEO・取締役へ即時復帰させたと発表。SEC 8-Kは11月22日の取締役会決定と11月23日の提出を確認できる。",
+      "analysis": "これまでの市場認識は経営不確実性とAI投資採算への警戒。今回、経営不確実性の一部は後退したが、独立委員会調査・政府調査とAI投資採算の検証は継続する。日本の半導体・AI関連には追い風候補だが、24日の現物反応確認が必要。",
+      "limitations": "記事単体の市場寄与率と日本株反応は未確認。独立委員会調査・政府調査は継続。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "NVIDIA公式発表とSEC 8-Kを実読。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "復帰役職、効力、取締役会決定日を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "取締役会11月22日、発表・提出11月23日、確認11月24日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "役員復帰の事実と日本株への条件付き波及を分離。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "市場寄与率、調査継続、日本株反応未確認を明示。"
+        }
+      }
+    },
+    {
+      "id": "nov24-jp-cpi-oct",
       "title": "10月全国CPI、コアは前年比2.2%上昇",
       "published_date": "2026-11-20",
-      "verified_at": "2026-11-23T06:55:00+09:00",
+      "verified_at": "2026-11-24T06:55:00+09:00",
       "source_type": "primary",
       "publisher": "総務省統計局",
       "source_url": "https://www.stat.go.jp/data/cpi/sokuhou/tsuki/index-z.html",
@@ -45,48 +83,10 @@
       }
     },
     {
-      "id": "nov23-fed-cook-global",
-      "title": "FRBクック理事、世界経済とAI投資を論じる",
-      "published_date": "2026-11-20",
-      "verified_at": "2026-11-23T06:55:00+09:00",
-      "source_type": "primary",
-      "publisher": "Federal Reserve Board",
-      "source_url": "https://www.federalreserve.gov/newsevents/speech/cook20261120a.htm",
-      "verification_url": "https://www.federalreserve.gov/newsevents/speech/cook20261120a.htm",
-      "verification_status": "PASS",
-      "fact": "クック理事は世界経済の文脈で貿易制限、AI関連投資、米国経済への波及を論じた。講演は個人見解であり、新たなFOMC決定ではない。",
-      "analysis": "AI投資が成長を支える経路と、投資回収・貿易制限のリスクを同時に確認する材料。日本の半導体・設備投資関連には需要期待と評価調整の両面がある。",
-      "limitations": "講演は政策決定ではなく、20日の株価急落への寄与率や新規関税・制裁の有無を示すものではない。",
-      "market_reaction_status": "unverified",
-      "market_reaction": "未確認",
-      "verification": {
-        "source_read": {
-          "status": "PASS",
-          "evidence": "FRB公式講演本文を実読。"
-        },
-        "facts_verified": {
-          "status": "PASS",
-          "evidence": "貿易制限、AI投資、世界経済への言及と個人見解の位置付けを確認。"
-        },
-        "chronology": {
-          "status": "PASS",
-          "evidence": "講演日11月20日と既存政策決定を分離。"
-        },
-        "fact_analysis_separation": {
-          "status": "PASS",
-          "evidence": "講演内容と日本株への条件付き解釈を分離。"
-        },
-        "limitations": {
-          "status": "PASS",
-          "evidence": "新規政策決定でも株価寄与の証明でもないと明示。"
-        }
-      }
-    },
-    {
-      "id": "nov23-jpx-holiday",
+      "id": "nov24-jpx-holiday",
       "title": "11月23日は東証休場、デリバティブ祝日取引も休止",
       "published_date": "2026-11-20",
-      "verified_at": "2026-11-23T06:55:00+09:00",
+      "verified_at": "2026-11-24T06:55:00+09:00",
       "source_type": "primary",
       "publisher": "日本取引所グループ",
       "source_url": "https://www.jpx.co.jp/corporate/about-jpx/calendar/index.html",

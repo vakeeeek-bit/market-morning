@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-11-23 12:48:48 JST",
+  "updated_at": "2026-11-24 03:46:09 JST",
   "market_date": "2026-11-20",
-  "data_phase": "休場",
+  "data_phase": "取引開始前",
   "data_state": {
-    "kind": "holiday",
-    "label": "東証現物は休場",
-    "message": "2026-11-23は勤労感謝の日で休場。2026-11-20の前営業日データを表示"
+    "kind": "normal",
+    "label": "通常取引日",
+    "message": "取引日データを正常取得"
   },
   "source": "Yahoo Finance via yfinance（1回の一括取得）",
   "scope": "市場・セクター評価は指数連動ETFとTOPIX-17業種ETFを使用。主要監視34銘柄は銘柄ランキングだけに使用",
@@ -558,19 +558,6 @@
           "trading_value_proxy_yen": 12207057600,
           "market_date": "2026-11-20",
           "status": "取得成功"
-        },
-        {
-          "ticker": "9503.T",
-          "name": "関西電力",
-          "sector": "電力・ガス",
-          "price": 2518.5,
-          "change_pct": -5.44,
-          "return_5d_pct": -7.73,
-          "volume": 6726900,
-          "volume_ratio_20d": 1.82,
-          "trading_value_proxy_yen": 16941697650,
-          "market_date": "2026-11-20",
-          "status": "取得成功"
         }
       ]
     },
@@ -895,19 +882,6 @@
   ],
   "volume_surge_ranking": [
     {
-      "ticker": "9503.T",
-      "name": "関西電力",
-      "sector": "電力・ガス",
-      "price": 2518.5,
-      "change_pct": -5.44,
-      "return_5d_pct": -7.73,
-      "volume": 6726900,
-      "volume_ratio_20d": 1.82,
-      "trading_value_proxy_yen": 16941697650,
-      "market_date": "2026-11-20",
-      "status": "取得成功"
-    },
-    {
       "ticker": "9984.T",
       "name": "ソフトバンクグループ",
       "sector": "情報通信・サービス",
@@ -1023,6 +997,19 @@
       "trading_value_proxy_yen": 14463290200,
       "market_date": "2026-11-20",
       "status": "取得成功"
+    },
+    {
+      "ticker": "2802.T",
+      "name": "味の素",
+      "sector": "食品",
+      "price": 3819.0,
+      "change_pct": -7.06,
+      "return_5d_pct": -9.65,
+      "volume": 5591100,
+      "volume_ratio_20d": 1.11,
+      "trading_value_proxy_yen": 21352410900,
+      "market_date": "2026-11-20",
+      "status": "取得成功"
     }
   ],
   "market_internals": {
@@ -1034,39 +1021,39 @@
     "market_date": "2026-11-20",
     "title": "昨日のシナリオ検証 → 今日への修正",
     "basis": "前回レポートの注目業種をTOPIX-17業種ETFの実績と照合し、次の取引日へ見方を修正",
-    "status": "休場・検証保留",
+    "status": "寄り付き前・検証保留",
     "checks": [
       {
         "sector": "電機・精密",
-        "result": "休場・次回取引日に確認"
+        "result": "本日大引け後に確認"
       },
       {
         "sector": "機械",
-        "result": "休場・次回取引日に確認"
+        "result": "本日大引け後に確認"
       },
       {
         "sector": "銀行",
-        "result": "休場・次回取引日に確認"
+        "result": "本日大引け後に確認"
       }
     ],
     "previous_condition": "次の現物取引における米20日追加安の織り込み / 次の現物取引で国内17業種Breadthが過半上昇へ改善するか / CPI後の円・国内金利と銀行／高PER株の相対反応",
-    "condition_result": "発生条件を自動判定できる一次データがないため、確認できず",
-    "market_reaction": "休場のため新しい現物株の結果はありません",
-    "unexpected_gap": "電機・精密は下位3 / 機械は下位3 / 銀行は中位",
+    "condition_result": "本日の条件と日本株現物の反応はまだ発生・確認していません",
+    "market_reaction": "本日の日本株現物は寄り付き前",
+    "unexpected_gap": "新しい取引結果がないため比較しません",
     "gap_reason": "業種ETFの結果だけでは個別ニュースとの因果を分離できないため、理由は断定しません",
-    "revision": "先物・海外材料は監視し、現物株の判断は次の取引日まで保留",
+    "revision": "本日の大引け後、実際の条件・市場反応・想定との差を確認して修正",
     "today_watch": [
       "次の現物取引における米20日追加安の織り込み",
       "次の現物取引で国内17業種Breadthが過半上昇へ改善するか",
       "CPI後の円・国内金利と銀行／高PER株の相対反応"
     ],
-    "note": "東証現物は休場です。前営業日の実績は保持し、次の取引日に見方を修正します。"
+    "note": "前営業日の値動きを、本日シナリオの結果として採点しません。"
   },
   "data_quality": {
     "sector_total": 17,
     "sector_available": 17,
     "stock_total": 34,
-    "stock_available": 34,
+    "stock_available": 33,
     "date_alignment": {
       "expected_market_date": "2026-11-20",
       "report_target_market_date": "2026-11-20",

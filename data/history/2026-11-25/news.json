@@ -1,0 +1,124 @@
+{
+  "report_date": "2026-11-25",
+  "target_market_date": "2026-11-24",
+  "updated_at": "2026-11-25T06:58:00+09:00",
+  "publication_mode": "verified_news",
+  "coverage_status": "partial",
+  "coverage_note": "一次資料で確認できた市場実績・公式日程3件。企業開示、評価変更、通商・制裁は非網羅。",
+  "articles": [
+    {
+      "id": "nov25-japan-rebound",
+      "title": "日経平均、11月24日は3.91%上昇",
+      "published_date": "2026-11-24",
+      "verified_at": "2026-11-25T06:58:00+09:00",
+      "source_type": "primary",
+      "publisher": "Nikkei Indexes",
+      "source_url": "https://indexes.nikkei.co.jp/en/nkave/archives/summary?dt=20261124&idx=nk225",
+      "verification_url": "https://indexes.nikkei.co.jp/en/nkave/archives/summary?dt=20261124&idx=nk225",
+      "verification_status": "PASS",
+      "fact": "日経平均は11月24日に58,644.63円で終了し、前取引日比2,207.98円、3.91%上昇。構成銘柄は167上昇、58下落だった。",
+      "analysis": "これまで米AI反発の日本現物への波及は未確認だった。今回、指数と構成銘柄幅の改善を確認したが、短期買い戻しを中期トレンド転換とは扱わない。",
+      "limitations": "指数全体の値動きであり、NVIDIA材料の寄与率は未確認。TOPIX値は別資料で照合。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "日経指数公式日次サマリーを実読。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "終値、前日比、騰落率、上昇・下落銘柄数を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "対象市場日11月24日、確認日11月25日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "指数実績と材料解釈を分離。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "材料寄与率とTOPIX出典を分離。"
+        }
+      }
+    },
+    {
+      "id": "nov25-boj-core-calendar",
+      "title": "日銀、11月25日にサービス価格・基調インフレ指標を公表予定",
+      "published_date": "2026-11-25",
+      "verified_at": "2026-11-25T06:58:00+09:00",
+      "source_type": "primary",
+      "publisher": "日本銀行",
+      "source_url": "https://www.boj.or.jp/about/calendar/",
+      "verification_url": "https://www.boj.or.jp/en/research/research_data/cpi/index.htm",
+      "verification_status": "PASS",
+      "fact": "日銀公式日程で11月25日08:50に企業向けサービス価格指数、14:00に基調的なインフレ率指標を予定。",
+      "analysis": "公表前であり、日銀の政策方向や銀行・高PER株の反応を先取りしない。実績と円・国内金利の同時反応を確認する。",
+      "limitations": "予想値・前回値は未確認。予定は決定・実績ではない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "日銀公式日程と基調インフレ指標説明を実読。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "公表日・時刻・指標の性質を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "予定と実績を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "日程事実と日本株への条件付き影響を分離。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "予想・前回値未確認を明示。"
+        }
+      }
+    },
+    {
+      "id": "nov25-us-gdp-pce-calendar",
+      "title": "米GDP改定値と10月PCE、11月25日22:30公表予定",
+      "published_date": "2026-11-25",
+      "verified_at": "2026-11-25T06:58:00+09:00",
+      "source_type": "primary",
+      "publisher": "U.S. Bureau of Economic Analysis",
+      "source_url": "https://www.bea.gov/news/schedule/",
+      "verification_url": "https://www.bea.gov/news/schedule/",
+      "verification_status": "PASS",
+      "fact": "BEA公式日程で11月25日08:30米東部時間に2026年7〜9月期GDP改定値・企業利益と10月Personal Income and Outlaysを予定。日本時間22:30。",
+      "analysis": "PCEはFRB政策と米金利・ドルの重要確認材料。公表前のため方向は中立とする。",
+      "limitations": "予想値・前回値は未確認。公表結果と市場反応は未発生。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "BEA公式リリース日程を実読。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "対象統計、公表日、米東部時間を確認。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "公表予定と結果を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "日程事実と政策・市場への条件付き影響を分離。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "予想・結果・反応未確認を明示。"
+        }
+      }
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
-  "status": "success",
-  "updated_at": "2026-11-24 15:59:12 JST",
-  "message": "Market data update completed and validation passed.",
-  "component": "market_data",
-  "publication_status": "PASS",
-  "component_updated_at": "2026-11-24 15:59:02"
+  "status": "qualified",
+  "updated_at": "2026-11-25 06:58:00 JST",
+  "message": "Daily report, market data, Japan close data, and verified news passed validation with disclosed exclusions.",
+  "component": "daily_publication",
+  "publication_status": "QUALIFIED",
+  "component_updated_at": "2026-11-25T06:58:00+09:00"
 }

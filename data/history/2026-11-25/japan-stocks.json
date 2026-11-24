@@ -1,0 +1,193 @@
+{
+  "report_date": "2026-11-25",
+  "target_market_date": "2026-11-24",
+  "updated_at": "2026-11-25T06:58:00+09:00",
+  "report_type": "daily",
+  "japan_quick_view": {
+    "headline": "24日は広く反発、25日は米半導体反落を再評価",
+    "summary": "24日は日経平均+3.91%、TOPIX+2.47%、17業種ETF代理11上昇・6下落。電機・精密+5.13%が首位だったが、同夜の米SOX−7.88%を25日に再評価する。",
+    "top_materials": [
+      "日本24日は日経平均+3.91%、TOPIX+2.47%。17業種ETF代理は11上昇・6下落で、電機・精密+5.13%、鉄鋼・非鉄+4.62%、銀行+4.18%が上位。",
+      "米24日はSOX−7.88%、NASDAQ100−1.99%、S&P500−0.50%。23日の急反発からAI・半導体が反落し、ダウ+0.85%、Russell2000+0.57%との分化が拡大した。",
+      "米11業種ETF代理は9上昇・2下落。ヘルスケア+2.95%、生活必需品+1.66%に対し、情報技術−3.26%、資本財−0.53%で、全面的なリスク回避ではなくテックからの回転が観測された。",
+      "前回の「日本株へ波及」は、日経平均・TOPIX・業種Breadthの上昇で確認。ただし米24日の半導体反落により、25日の日本株では電機・精密の持続性を再確認する。",
+      "25日は日銀の企業向けサービス価格・基調インフレ指標、米GDP改定値・PCEを予定。公式日程は確認済みだが、市場予想と前回値は未確認。"
+    ],
+    "focus_sectors": [
+      "電機・精密",
+      "銀行",
+      "鉄鋼・非鉄",
+      "医薬品・食品（相対）"
+    ],
+    "unpriced_materials": [
+      "米24日のSOX−7.88%とXLK−3.26%",
+      "25日の日銀物価指標",
+      "米GDP改定値・PCE"
+    ],
+    "individual_news_review": {
+      "status": "partial",
+      "story_count": 0,
+      "scope": "確認済み企業固有材料は0件。未調査や取得不能を『材料なし』とは扱わない"
+    }
+  },
+  "top_stories": [],
+  "important_stories": [],
+  "other_stories": [],
+  "data_quality": {
+    "overall": "注釈付き公開",
+    "missing": [
+      "米株・VIXは11月24日、米金利・為替・商品・暗号資産は11月23日で同時点ではない。24日の株価変動との同時反応・因果には使わない。",
+      "商品先物は限月と値種別を確認できないため、Gold・Silver・WTI・Brent・Copperを分析から除外。",
+      "統一時刻の株価先物・為替現在値、国内全適時開示、証券会社評価変更、通商・制裁の網羅確認は未完了。",
+      "Project添付の仕様書v2三点は今回のDrive検索でも確認できず、Project Instructionsと現行mainのスキーマ・検証・公開ルールを適用。"
+    ],
+    "differences": [
+      "日本株指数は公式日経平均・TOPIXで照合し、サイト内TOPIX表示は1306 ETFを参考値として併記。",
+      "米株・VIXは11月24日、日本株も11月24日、米金利・為替・商品・暗号資産は11月23日の日足。"
+    ],
+    "excluded": [
+      "限月不明の商品先物値と日経先物値",
+      "異時点の金利・為替・商品と11月24日米株の同時点因果",
+      "未確認の個別株・評価変更・通商・制裁についての網羅性断定"
+    ],
+    "cautions": [
+      "24日の日本株反発と同夜の米半導体反落を時間順に分離する。",
+      "米テック反落を米市場全体の全面安と表現しない。"
+    ]
+  },
+  "analyst_rating_changes": {
+    "headline": "公開可能な評価変更は掲載せず",
+    "coverage_status": "十分調査したが取得不能",
+    "items": [],
+    "source_review": [
+      {
+        "name": "株探 公開ニュース",
+        "url": "https://kabutan.jp/news/",
+        "result": "公開範囲を確認したが、11月23〜24日分の証券会社原文・全件の網羅性を担保できず不掲載。",
+        "coverage": "無料公開範囲のみ。証券会社原文・全件は未確認。",
+        "freshness": "当日確認状況をJSONに記録",
+        "automation": "契約API未導入",
+        "rights": "確認できた事実だけを掲載"
+      }
+    ],
+    "summary": "未確認を「変更なし」とせず、今回は判断材料から除外。"
+  },
+  "sector_implications": [
+    {
+      "driver": "米半導体・情報技術の反落",
+      "affected_sectors": [
+        "電機・精密",
+        "機械",
+        "情報通信・サービス"
+      ],
+      "possible_impact": "24日に反発した半導体・AI関連の利益確定と寄り付き下落候補。",
+      "confirmation_condition": "電機・精密が前日終値を維持できるか"
+    },
+    {
+      "driver": "米市場の非テック優位",
+      "affected_sectors": [
+        "銀行",
+        "医薬品",
+        "食品",
+        "不動産"
+      ],
+      "possible_impact": "テックからの回転が日本でも相対的な受け皿になる可能性。",
+      "confirmation_condition": "TOPIXと非テック業種がプラスを維持"
+    },
+    {
+      "driver": "日銀・米物価イベント",
+      "affected_sectors": [
+        "銀行",
+        "不動産",
+        "高PER成長株"
+      ],
+      "possible_impact": "結果公表後の円・金利を通じた相対差。結果未発表のため方向は中立。",
+      "confirmation_condition": "公式実績と円・国内金利・株価の同時反応を確認"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "テック調整・市場内ローテーション",
+      "conditions": "日本の電機・精密が反落する一方、銀行・ヘルスケア・内需が相対的に底堅い",
+      "impact_on_japan": "日経平均の上値は抑えられるが、TOPIXと非テック業種が下支えする。",
+      "strong_sectors": [
+        "銀行",
+        "医薬品・食品（相対）"
+      ],
+      "weak_sectors": [
+        "電機・精密",
+        "機械"
+      ],
+      "invalidation": "電機・精密が米SOX反落を吸収し、TOPIXと業種Breadthも上昇"
+    },
+    {
+      "name": "日本株の反発継続",
+      "conditions": "電機・精密が前日終値を維持し、17業種ETF代理の上昇が過半",
+      "impact_on_japan": "米テック反落を織り込みつつ、日本株独自の買い戻しが継続。",
+      "strong_sectors": [
+        "電機・精密",
+        "銀行",
+        "鉄鋼・非鉄"
+      ],
+      "weak_sectors": [
+        "運輸・物流（相対）"
+      ],
+      "invalidation": "半導体株の失速と上昇業種数の過半割れ"
+    },
+    {
+      "name": "AI再調整が全面安へ拡大",
+      "conditions": "SOXの下落が続き、VIX30超、東京の上昇業種数が過半を割る",
+      "impact_on_japan": "24日の反発が短期買い戻しだったとの見方が強まり、外需・景気敏感へ売りが拡大。",
+      "strong_sectors": [
+        "食品",
+        "医薬品"
+      ],
+      "weak_sectors": [
+        "電機・精密",
+        "機械",
+        "情報通信・サービス"
+      ],
+      "invalidation": "VIX30未満維持と日本Breadthの過半上昇"
+    }
+  ],
+  "monitoring_points": [
+    {
+      "target": "AI・半導体",
+      "current_view": "日本24日は強く反発したが、米24日はSOX−7.88%。持続的回復判定を撤回し、再検証段階。",
+      "today_check": "東京の電機・精密が前日終値を維持できるか",
+      "view_change_condition": "電機・精密が米反落を吸収し、出来高とBreadthを伴って上昇"
+    },
+    {
+      "target": "日本株Breadth",
+      "current_view": "24日は17業種ETF代理11上昇・6下落で、前回の波及条件を満たした。",
+      "today_check": "上昇業種が過半を維持し、銀行・内需がテック下落を補えるか",
+      "view_change_condition": "上昇業種が過半割れし、TOPIXが前日安値を下回る"
+    },
+    {
+      "target": "物価・日銀／米PCE",
+      "current_view": "25日に公式イベントを予定。結果・予想は未確認。",
+      "today_check": "円・国内金利・銀行・高PER株の同時反応",
+      "view_change_condition": "実績と公式説明を確認し、複数市場で整合した反応が生じる"
+    }
+  ],
+  "source_notes": [
+    "Market Morning market.json: 11月24日の日米終値。 https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+    "日経指数公式: 11月24日の日経平均終値と騰落。 https://indexes.nikkei.co.jp/en/nkave/archives/summary?dt=20261124&idx=nk225",
+    "Reuters: 日本24日の市場反応を照合。 https://www.fidelity.com/news/article/international/202611232202RTRSNEWSCOMBINED_L6N47503J_1",
+    "Reuters: 米24日の市場反応を照合。 https://www.reuters.com/business/wall-street-futures-dip-chip-stocks-cool-after-nvidia-fueled-rally-2026-11-24/"
+  ],
+  "publication_policy": {
+    "status": "QUALIFIED",
+    "mode": "provisional",
+    "updated_at": "2026-11-25T06:58:00+09:00",
+    "complete_gate": "FAIL",
+    "copper_included": false,
+    "note": "日米11月24日終値を確認。日本株への波及実績と米半導体の反落を時系列で分離し、異時点・限月不明項目に依存する主張を除外して公開。",
+    "missing_items": [
+      "米株・VIXは11月24日、米金利・為替・商品・暗号資産は11月23日で同時点ではない。24日の株価変動との同時反応・因果には使わない。",
+      "商品先物は限月と値種別を確認できないため、Gold・Silver・WTI・Brent・Copperを分析から除外。",
+      "統一時刻の株価先物・為替現在値、国内全適時開示、証券会社評価変更、通商・制裁の網羅確認は未完了。",
+      "Project添付の仕様書v2三点は今回のDrive検索でも確認できず、Project Instructionsと現行mainのスキーマ・検証・公開ルールを適用。"
+    ]
+  }
+}

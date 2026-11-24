@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-11-24 03:46:09 JST",
+  "updated_at": "2026-11-24 14:22:25 JST",
   "market_date": "2026-11-20",
-  "data_phase": "取引開始前",
+  "data_phase": "前営業日終値（本日取引中）",
   "data_state": {
     "kind": "normal",
     "label": "通常取引日",
@@ -558,6 +558,19 @@
           "trading_value_proxy_yen": 12207057600,
           "market_date": "2026-11-20",
           "status": "取得成功"
+        },
+        {
+          "ticker": "9503.T",
+          "name": "関西電力",
+          "sector": "電力・ガス",
+          "price": 2518.5,
+          "change_pct": -5.44,
+          "return_5d_pct": -7.73,
+          "volume": 6726900,
+          "volume_ratio_20d": 1.82,
+          "trading_value_proxy_yen": 16941697650,
+          "market_date": "2026-11-20",
+          "status": "取得成功"
         }
       ]
     },
@@ -882,6 +895,19 @@
   ],
   "volume_surge_ranking": [
     {
+      "ticker": "9503.T",
+      "name": "関西電力",
+      "sector": "電力・ガス",
+      "price": 2518.5,
+      "change_pct": -5.44,
+      "return_5d_pct": -7.73,
+      "volume": 6726900,
+      "volume_ratio_20d": 1.82,
+      "trading_value_proxy_yen": 16941697650,
+      "market_date": "2026-11-20",
+      "status": "取得成功"
+    },
+    {
       "ticker": "9984.T",
       "name": "ソフトバンクグループ",
       "sector": "情報通信・サービス",
@@ -997,19 +1023,6 @@
       "trading_value_proxy_yen": 14463290200,
       "market_date": "2026-11-20",
       "status": "取得成功"
-    },
-    {
-      "ticker": "2802.T",
-      "name": "味の素",
-      "sector": "食品",
-      "price": 3819.0,
-      "change_pct": -7.06,
-      "return_5d_pct": -9.65,
-      "volume": 5591100,
-      "volume_ratio_20d": 1.11,
-      "trading_value_proxy_yen": 21352410900,
-      "market_date": "2026-11-20",
-      "status": "取得成功"
     }
   ],
   "market_internals": {
@@ -1021,42 +1034,46 @@
     "market_date": "2026-11-20",
     "title": "昨日のシナリオ検証 → 今日への修正",
     "basis": "前回レポートの注目業種をTOPIX-17業種ETFの実績と照合し、次の取引日へ見方を修正",
-    "status": "寄り付き前・検証保留",
+    "status": "大引け待ち",
     "checks": [
       {
         "sector": "電機・精密",
-        "result": "本日大引け後に確認"
+        "result": "当日終値の取得後に確認"
       },
       {
         "sector": "機械",
-        "result": "本日大引け後に確認"
+        "result": "当日終値の取得後に確認"
+      },
+      {
+        "sector": "情報通信・サービス",
+        "result": "当日終値の取得後に確認"
       },
       {
         "sector": "銀行",
-        "result": "本日大引け後に確認"
+        "result": "当日終値の取得後に確認"
       }
     ],
-    "previous_condition": "次の現物取引における米20日追加安の織り込み / 次の現物取引で国内17業種Breadthが過半上昇へ改善するか / CPI後の円・国内金利と銀行／高PER株の相対反応",
-    "condition_result": "本日の条件と日本株現物の反応はまだ発生・確認していません",
-    "market_reaction": "本日の日本株現物は寄り付き前",
-    "unexpected_gap": "新しい取引結果がないため比較しません",
+    "previous_condition": "NVIDIA CEO復帰と米23日のAI・半導体急反発 / VIX26.62への低下 / 米情報技術+8.97%とエネルギー−1.06%の業種差",
+    "condition_result": "表示中の業種実績は前営業日の終値です",
+    "market_reaction": "本日の終値はまだ取得していません",
+    "unexpected_gap": "当日終値が揃ってから比較します",
     "gap_reason": "業種ETFの結果だけでは個別ニュースとの因果を分離できないため、理由は断定しません",
-    "revision": "本日の大引け後、実際の条件・市場反応・想定との差を確認して修正",
+    "revision": "大引け後に注目業種と市場全体の相対順位を確認",
     "today_watch": [
-      "次の現物取引における米20日追加安の織り込み",
-      "次の現物取引で国内17業種Breadthが過半上昇へ改善するか",
-      "CPI後の円・国内金利と銀行／高PER株の相対反応"
+      "NVIDIA CEO復帰と米23日のAI・半導体急反発",
+      "VIX26.62への低下",
+      "米情報技術+8.97%とエネルギー−1.06%の業種差"
     ],
-    "note": "前営業日の値動きを、本日シナリオの結果として採点しません。"
+    "note": "前営業日の実績を本日シナリオの結果として採点しません。"
   },
   "data_quality": {
     "sector_total": 17,
     "sector_available": 17,
     "stock_total": 34,
-    "stock_available": 33,
+    "stock_available": 34,
     "date_alignment": {
       "expected_market_date": "2026-11-20",
-      "report_target_market_date": "2026-11-20",
+      "report_target_market_date": "2026-11-23",
       "sector_market_date": "2026-11-20",
       "stock_market_date": "2026-11-20",
       "benchmark_market_date": "2026-11-20",
@@ -1085,78 +1102,78 @@
     "dimensions": [
       {
         "axis": "大型株/小型株",
-        "label": "小型株優位",
-        "result": "小型株優位",
+        "label": "大型株優位",
+        "result": "大型株優位",
         "status": "estimated",
         "left_label": "大型株",
         "right_label": "小型株",
-        "left_value": -3.7,
-        "right_value": -2.76,
-        "spread_pt": -0.94,
-        "detail": "大型株 -3.70% ／ 小型株 -2.76%",
-        "reason": "相対騰落：大型株 -3.70%／小型株 -2.76%（差 -0.94pt）",
+        "left_value": 4.73,
+        "right_value": 3.4,
+        "spread_pt": 1.33,
+        "detail": "大型株 +4.73% ／ 小型株 +3.40%",
+        "reason": "相対騰落：大型株 +4.73%／小型株 +3.40%（差 +1.33pt）",
         "basis": "S&P500とRussell2000の同日騰落率比較",
-        "market_date": "2026-11-20"
+        "market_date": "2026-11-23"
       },
       {
         "axis": "グロース/バリュー（代理）",
-        "label": "ダウ型優位",
-        "result": "ダウ型優位",
+        "label": "大型ハイテク優位",
+        "result": "大型ハイテク優位",
         "status": "estimated",
         "left_label": "大型ハイテク",
         "right_label": "ダウ型",
-        "left_value": -5.61,
-        "right_value": -1.93,
-        "spread_pt": -3.68,
-        "detail": "大型ハイテク -5.61% ／ ダウ型 -1.93%",
-        "reason": "相対騰落：大型ハイテク -5.61%／ダウ型 -1.93%（差 -3.68pt）",
+        "left_value": 6.86,
+        "right_value": 3.01,
+        "spread_pt": 3.85,
+        "detail": "大型ハイテク +6.86% ／ ダウ型 +3.01%",
+        "reason": "相対騰落：大型ハイテク +6.86%／ダウ型 +3.01%（差 +3.85pt）",
         "basis": "NASDAQ100とNYダウの同日騰落率による代理比較",
-        "market_date": "2026-11-20"
+        "market_date": "2026-11-23"
       },
       {
         "axis": "景気敏感/ディフェンシブ",
-        "label": "ディフェンシブ優位",
-        "result": "ディフェンシブ優位",
+        "label": "景気敏感優位",
+        "result": "景気敏感優位",
         "status": "estimated",
         "left_label": "景気敏感",
         "right_label": "ディフェンシブ",
-        "left_value": -2.51,
-        "right_value": -0.06,
-        "spread_pt": -2.45,
-        "detail": "景気敏感 -2.51% ／ ディフェンシブ -0.06%",
-        "reason": "相対騰落：景気敏感 -2.51%／ディフェンシブ -0.06%（差 -2.45pt）",
+        "left_value": 3.27,
+        "right_value": 0.87,
+        "spread_pt": 2.4,
+        "detail": "景気敏感 +3.27% ／ ディフェンシブ +0.87%",
+        "reason": "相対騰落：景気敏感 +3.27%／ディフェンシブ +0.87%（差 +2.40pt）",
         "basis": "米Sector SPDR ETFの同日平均騰落率比較",
-        "market_date": "2026-11-20"
+        "market_date": "2026-11-23"
       },
       {
         "axis": "半導体/市場全体",
-        "label": "市場全体優位",
-        "result": "市場全体優位",
+        "label": "半導体優位",
+        "result": "半導体優位",
         "status": "estimated",
         "left_label": "半導体",
         "right_label": "市場全体",
-        "left_value": -10.73,
-        "right_value": -3.7,
-        "spread_pt": -7.03,
-        "detail": "半導体 -10.73% ／ 市場全体 -3.70%",
-        "reason": "相対騰落：半導体 -10.73%／市場全体 -3.70%（差 -7.03pt）",
+        "left_value": 14.03,
+        "right_value": 4.73,
+        "spread_pt": 9.3,
+        "detail": "半導体 +14.03% ／ 市場全体 +4.73%",
+        "reason": "相対騰落：半導体 +14.03%／市場全体 +4.73%（差 +9.30pt）",
         "basis": "SOXとS&P500の同日騰落率比較",
-        "market_date": "2026-11-20"
+        "market_date": "2026-11-23"
       },
       {
         "axis": "金融/市場全体",
-        "label": "金融優位",
-        "result": "金融優位",
+        "label": "市場全体優位",
+        "result": "市場全体優位",
         "status": "estimated",
         "left_label": "金融",
         "right_label": "市場全体",
-        "left_value": -1.82,
-        "right_value": -3.7,
-        "spread_pt": 1.88,
-        "detail": "金融 -1.82% ／ 市場全体 -3.70%",
-        "reason": "相対騰落：金融 -1.82%／市場全体 -3.70%（差 +1.88pt）",
+        "left_value": 1.98,
+        "right_value": 4.73,
+        "spread_pt": -2.75,
+        "detail": "金融 +1.98% ／ 市場全体 +4.73%",
+        "reason": "相対騰落：金融 +1.98%／市場全体 +4.73%（差 -2.75pt）",
         "basis": "XLFとS&P500の同日騰落率比較",
-        "market_date": "2026-11-20"
+        "market_date": "2026-11-23"
       }
     ],
     "method_note": "冒頭の市場方向は日経平均・TOPIX連動ETFの同日騰落だけで判定します。詳細軸は確認済みの同日米指数・業種ETFによる相対比較で、投資主体別フローではありません。34銘柄を市場全体の広がりには使用しません。"
@@ -1165,100 +1182,100 @@
     {
       "driver": "米国半導体株",
       "category": "海外株",
-      "assessment": "向かい風",
+      "assessment": "追い風",
       "status": "observed",
-      "market_value": 8408.5898,
-      "change_pct": -10.73,
+      "market_value": 9588.0498,
+      "change_pct": 14.03,
       "transmission_path": "国内半導体関連の投資家心理に波及",
-      "reason": "PHLX半導体株指数（SOX） 8408.5898、前日比 -10.73%（2026-11-20）→ 国内半導体関連の投資家心理に波及",
+      "reason": "PHLX半導体株指数（SOX） 9588.0498、前日比 +14.03%（2026-11-23）→ 国内半導体関連の投資家心理に波及。日本株現物の基準日2026-11-20より新しく、次回取引の監視材料",
       "affected_sectors": [
         "電機・精密",
         "機械"
       ],
-      "market_date": "2026-11-20",
+      "market_date": "2026-11-23",
       "selection_factors": {
-        "日本株現物への織り込み": "同日または既反映の参考値",
+        "日本株現物への織り込み": "日本株現物に未反映",
         "日本株への波及範囲": 3,
         "影響業種数": 2,
         "ニュース重要度": 3,
         "値動き": 3
       },
-      "pricing_status": "同日または既反映の参考値",
+      "pricing_status": "日本株現物に未反映",
       "change_condition": "米半導体株が反転するか、日本の電機・精密が追随しなければ影響を弱く見る"
+    },
+    {
+      "driver": "ドル円",
+      "category": "為替",
+      "assessment": "外需に向かい風／輸入コストに追い風",
+      "status": "observed",
+      "market_value": 158.931,
+      "change_pct": -0.49,
+      "transmission_path": "輸出採算と輸入コストが変化",
+      "reason": "USD/JPY 158.931、前日比 -0.49%（2026-11-23）→ 輸出採算と輸入コストが変化。日本株現物の基準日2026-11-20より新しく、次回取引の監視材料",
+      "affected_sectors": [
+        "自動車・輸送機",
+        "機械",
+        "小売"
+      ],
+      "market_date": "2026-11-23",
+      "selection_factors": {
+        "日本株現物への織り込み": "日本株現物に未反映",
+        "日本株への波及範囲": 3,
+        "影響業種数": 3,
+        "ニュース重要度": 3,
+        "値動き": 1
+      },
+      "pricing_status": "日本株現物に未反映",
+      "change_condition": "為替が反転し、自動車・機械の相対方向も変われば見方を修正する"
+    },
+    {
+      "driver": "米国大型ハイテク株",
+      "category": "海外株",
+      "assessment": "追い風",
+      "status": "observed",
+      "market_value": 26746.0996,
+      "change_pct": 6.86,
+      "transmission_path": "国内グロース株の投資家心理に波及",
+      "reason": "NASDAQ100 26746.0996、前日比 +6.86%（2026-11-23）→ 国内グロース株の投資家心理に波及。日本株現物の基準日2026-11-20より新しく、次回取引の監視材料",
+      "affected_sectors": [
+        "電機・精密",
+        "情報通信・サービス"
+      ],
+      "market_date": "2026-11-23",
+      "selection_factors": {
+        "日本株現物への織り込み": "日本株現物に未反映",
+        "日本株への波及範囲": 2,
+        "影響業種数": 2,
+        "ニュース重要度": 2,
+        "値動き": 3
+      },
+      "pricing_status": "日本株現物に未反映",
+      "change_condition": "米国ハイテク株が反転し、日本のグロース株が追随しなければ影響を弱く見る"
     },
     {
       "driver": "米10年金利",
       "category": "金利",
       "assessment": "高PER株に追い風",
       "status": "observed",
-      "market_value": 5.04,
-      "change_pct": -0.59,
+      "market_value": 4.92,
+      "change_pct": -2.38,
       "transmission_path": "高PER株の割引率と銀行収益期待が変化",
-      "reason": "米10年債利回り 5.04、前日比 -0.59%（2026-11-19）→ 高PER株の割引率と銀行収益期待が変化",
+      "reason": "米10年債利回り 4.92、前日比 -2.38%（2026-11-20）→ 高PER株の割引率と銀行収益期待が変化",
       "affected_sectors": [
         "電機・精密",
         "情報通信・サービス",
         "銀行"
       ],
-      "market_date": "2026-11-19",
-      "selection_factors": {
-        "日本株現物への織り込み": "同日または既反映の参考値",
-        "日本株への波及範囲": 3,
-        "影響業種数": 3,
-        "ニュース重要度": 3,
-        "値動き": 2
-      },
-      "pricing_status": "同日または既反映の参考値",
-      "change_condition": "金利の方向が反転し、電機・精密や銀行の反応も変われば見方を修正する"
-    },
-    {
-      "driver": "ドル円",
-      "category": "為替",
-      "assessment": "中立",
-      "status": "observed",
-      "market_value": 159.707,
-      "change_pct": 0.2,
-      "transmission_path": "輸出採算と輸入コストが変化",
-      "reason": "USD/JPY 159.707、前日比 +0.20%（2026-11-20）→ 輸出採算と輸入コストが変化",
-      "affected_sectors": [
-        "自動車・輸送機",
-        "機械",
-        "小売"
-      ],
       "market_date": "2026-11-20",
       "selection_factors": {
         "日本株現物への織り込み": "同日または既反映の参考値",
         "日本株への波及範囲": 3,
         "影響業種数": 3,
         "ニュース重要度": 3,
-        "値動き": 1
-      },
-      "pricing_status": "同日または既反映の参考値",
-      "change_condition": "為替が反転し、自動車・機械の相対方向も変われば見方を修正する"
-    },
-    {
-      "driver": "米国大型ハイテク株",
-      "category": "海外株",
-      "assessment": "向かい風",
-      "status": "observed",
-      "market_value": 25028.9805,
-      "change_pct": -5.61,
-      "transmission_path": "国内グロース株の投資家心理に波及",
-      "reason": "NASDAQ100 25028.9805、前日比 -5.61%（2026-11-20）→ 国内グロース株の投資家心理に波及",
-      "affected_sectors": [
-        "電機・精密",
-        "情報通信・サービス"
-      ],
-      "market_date": "2026-11-20",
-      "selection_factors": {
-        "日本株現物への織り込み": "同日または既反映の参考値",
-        "日本株への波及範囲": 2,
-        "影響業種数": 2,
-        "ニュース重要度": 2,
         "値動き": 3
       },
       "pricing_status": "同日または既反映の参考値",
-      "change_condition": "米国ハイテク株が反転し、日本のグロース株が追随しなければ影響を弱く見る"
+      "change_condition": "金利の方向が反転し、電機・精密や銀行の反応も変われば見方を修正する"
     }
   ],
   "rotation_read": {
@@ -1814,11 +1831,11 @@
     "stance": "主要指数がそろって下落",
     "reason": "日経平均型ETF -4.89%、TOPIX連動ETF -3.98%",
     "tailwinds": [
-      "米10年金利：高PER株に追い風"
+      "米国半導体株：追い風",
+      "ドル円：外需に向かい風／輸入コストに追い風"
     ],
     "headwinds": [
-      "米国半導体株：向かい風",
-      "米国大型ハイテク株：向かい風"
+      "ドル円：外需に向かい風／輸入コストに追い風"
     ],
     "focus_sectors": [
       "医薬品",

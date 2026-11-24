@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24 15:08:25",
+  "updated_at": "2026-11-24 15:59:02",
   "timezone": "Asia/Tokyo",
   "source": "Yahoo Finance via yfinance for market closes; FRED DGS2/DGS10 for US Treasury yields",
   "notes": {
@@ -82,24 +82,24 @@
     "nikkei225": {
       "name": "日経225",
       "ticker": "^N225",
-      "price": 56436.6484,
-      "previous": 59444.2109,
-      "change": -3007.5625,
-      "change_pct": -5.06,
+      "price": 58644.6289,
+      "previous": 56436.6484,
+      "change": 2207.9805,
+      "change_pct": 3.91,
       "status": "取得成功",
-      "market_date": "2026-11-20",
-      "previous_market_date": "2026-11-19"
+      "market_date": "2026-11-24",
+      "previous_market_date": "2026-11-20"
     },
     "topix": {
       "name": "TOPIX参考（1306 ETF）",
       "ticker": "1306.T",
-      "price": 386.2,
-      "previous": 402.2,
-      "change": -16.0,
-      "change_pct": -3.98,
+      "price": 395.9,
+      "previous": 386.2,
+      "change": 9.7,
+      "change_pct": 2.51,
       "status": "取得成功",
-      "market_date": "2026-11-20",
-      "previous_market_date": "2026-11-19"
+      "market_date": "2026-11-24",
+      "previous_market_date": "2026-11-20"
     },
     "dxy": {
       "name": "DXY",

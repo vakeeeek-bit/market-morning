@@ -1,11 +1,11 @@
 {
   "updated_at": "2026-11-24 15:59:09 JST",
   "market_date": "2026-11-24",
-  "data_phase": "大引け後",
+  "data_phase": "データ異常・検証保留",
   "data_state": {
-    "kind": "normal",
-    "label": "通常取引日",
-    "message": "取引日データを正常取得"
+    "kind": "data_error",
+    "label": "データ異常",
+    "message": "取得日の不一致により、2026-11-24の整合済み保存データを表示"
   },
   "source": "Yahoo Finance via yfinance（1回の一括取得）",
   "scope": "市場・セクター評価は指数連動ETFとTOPIX-17業種ETFを使用。主要監視34銘柄は銘柄ランキングだけに使用",
@@ -1034,37 +1034,37 @@
     "market_date": "2026-11-24",
     "title": "昨日のシナリオ検証 → 今日への修正",
     "basis": "前回レポートの注目業種をTOPIX-17業種ETFの実績と照合し、次の取引日へ見方を修正",
-    "status": "検証可能",
+    "status": "判定保留",
     "checks": [
       {
         "sector": "電機・精密",
-        "result": "上位3"
+        "result": "データ整合後に確認"
       },
       {
         "sector": "機械",
-        "result": "中位"
+        "result": "データ整合後に確認"
       },
       {
         "sector": "情報通信・サービス",
-        "result": "中位"
+        "result": "データ整合後に確認"
       },
       {
         "sector": "銀行",
-        "result": "上位3"
+        "result": "データ整合後に確認"
       }
     ],
     "previous_condition": "NVIDIA CEO復帰と米23日のAI・半導体急反発 / VIX26.62への低下 / 米情報技術+8.97%とエネルギー−1.06%の業種差",
     "condition_result": "発生条件を自動判定できる一次データがないため、確認できず",
-    "market_reaction": "電機・精密 +5.13% / 鉄鋼・非鉄 +4.62% / 銀行 +4.18%",
+    "market_reaction": "日付不一致のため比較しません",
     "unexpected_gap": "電機・精密は上位3 / 機械は中位 / 情報通信・サービスは中位 / 銀行は上位3",
     "gap_reason": "業種ETFの結果だけでは個別ニュースとの因果を分離できないため、理由は断定しません",
-    "revision": "注目業種の相対順位を踏まえて強弱判断を更新",
+    "revision": "データ整合後に再検証",
     "today_watch": [
       "NVIDIA CEO復帰と米23日のAI・半導体急反発",
       "VIX26.62への低下",
       "米情報技術+8.97%とエネルギー−1.06%の業種差"
     ],
-    "note": "的中・外れを採点するものではありません。前回の見方と実績の差から、今日の監視点を修正します。"
+    "note": "取得日の不一致により、2026-11-24の整合済み保存データを表示"
   },
   "data_quality": {
     "sector_total": 17,
@@ -1073,12 +1073,11 @@
     "stock_available": 34,
     "date_alignment": {
       "expected_market_date": "2026-11-24",
-      "report_target_market_date": "2026-11-23",
       "sector_market_date": "2026-11-24",
       "stock_market_date": "2026-11-24",
-      "benchmark_market_date": "2026-11-24",
+      "benchmark_market_date": null,
       "aligned": true,
-      "benchmark_aligned": true
+      "benchmark_aligned": false
     }
   },
   "market_regime": {

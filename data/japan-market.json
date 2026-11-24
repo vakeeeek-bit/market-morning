@@ -3,9 +3,9 @@
   "market_date": "2026-11-24",
   "data_phase": "データ異常・検証保留",
   "data_state": {
-    "kind": "data_error",
-    "label": "データ異常",
-    "message": "取得日の不一致により、2026-11-24の整合済み保存データを表示"
+    "kind": "normal",
+    "label": "通常取引日",
+    "message": "2026-11-24の取引日データを正常取得"
   },
   "source": "Yahoo Finance via yfinance（1回の一括取得）",
   "scope": "市場・セクター評価は指数連動ETFとTOPIX-17業種ETFを使用。主要監視34銘柄は銘柄ランキングだけに使用",
@@ -1033,38 +1033,38 @@
   "scenario_review": {
     "market_date": "2026-11-24",
     "title": "昨日のシナリオ検証 → 今日への修正",
-    "basis": "前回レポートの注目業種をTOPIX-17業種ETFの実績と照合し、次の取引日へ見方を修正",
-    "status": "判定保留",
+    "basis": "前回レポートの条件を日経平均・TOPIX・17業種ETF実績と照合",
+    "status": "検証済み",
     "checks": [
       {
         "sector": "電機・精密",
-        "result": "データ整合後に確認"
+        "result": "+5.13%、上位1位、出来高20日平均比1.29倍"
       },
       {
         "sector": "機械",
-        "result": "データ整合後に確認"
+        "result": "+3.67%、TOPIX参考比+1.16pt"
       },
       {
         "sector": "情報通信・サービス",
-        "result": "データ整合後に確認"
+        "result": "−0.13%、TOPIX参考比−2.64pt"
       },
       {
         "sector": "銀行",
-        "result": "データ整合後に確認"
+        "result": "+4.18%、上位3位"
       }
     ],
-    "previous_condition": "NVIDIA CEO復帰と米23日のAI・半導体急反発 / VIX26.62への低下 / 米情報技術+8.97%とエネルギー−1.06%の業種差",
-    "condition_result": "発生条件を自動判定できる一次データがないため、確認できず",
-    "market_reaction": "日付不一致のため比較しません",
-    "unexpected_gap": "電機・精密は上位3 / 機械は中位 / 情報通信・サービスは中位 / 銀行は上位3",
-    "gap_reason": "業種ETFの結果だけでは個別ニュースとの因果を分離できないため、理由は断定しません",
-    "revision": "データ整合後に再検証",
+    "previous_condition": "電機・精密と機械が上昇し、17業種ETF代理の上昇が過半、VIX30未満を維持",
+    "condition_result": "電機・精密・機械は上昇、17業種ETF代理は11上昇・6下落、VIXは26.36で30未満。",
+    "market_reaction": "日経平均+3.91%、TOPIX+2.47%。前回の反発波及シナリオを確認。",
+    "unexpected_gap": "情報通信・サービスは−0.13%で、AI・グロース全体への波及は限定。",
+    "gap_reason": "業種ETF結果だけでは個別材料の寄与を分離できないため断定しない。",
+    "revision": "同夜の米SOX−7.88%を受け、25日は電機・精密の持続性と非テックへの回転を確認。",
     "today_watch": [
-      "NVIDIA CEO復帰と米23日のAI・半導体急反発",
-      "VIX26.62への低下",
-      "米情報技術+8.97%とエネルギー−1.06%の業種差"
+      "日本24日は日経平均+3.91%、TOPIX+2.47%。17業種ETF代理は11上昇・6下落で、電機・精密+5.13%、鉄鋼・非鉄+4.62%、銀行+4.18%が上位。",
+      "米24日はSOX−7.88%、NASDAQ100−1.99%、S&P500−0.50%。23日の急反発からAI・半導体が反落し、ダウ+0.85%、Russell2000+0.57%との分化が拡大した。",
+      "米11業種ETF代理は9上昇・2下落。ヘルスケア+2.95%、生活必需品+1.66%に対し、情報技術−3.26%、資本財−0.53%で、全面的なリスク回避ではなくテックからの回転が観測された。"
     ],
-    "note": "取得日の不一致により、2026-11-24の整合済み保存データを表示"
+    "note": "日本24日の整合済み終値と米24日終値を時系列で分離。"
   },
   "data_quality": {
     "sector_total": 17,
@@ -1075,9 +1075,10 @@
       "expected_market_date": "2026-11-24",
       "sector_market_date": "2026-11-24",
       "stock_market_date": "2026-11-24",
-      "benchmark_market_date": null,
+      "benchmark_market_date": "2026-11-24",
       "aligned": true,
-      "benchmark_aligned": false
+      "benchmark_aligned": true,
+      "report_target_market_date": "2026-11-24"
     }
   },
   "market_regime": {

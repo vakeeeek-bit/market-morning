@@ -2,28 +2,28 @@
   "version": "1.0",
   "description": "確認済み一次資料の表示設定",
   "items": {
-    "nov24-nvidia-ceo": {
-      "primary_page": "world",
+    "nov25-japan-rebound": {
+      "primary_page": "japan",
       "priority": 100,
       "attention_points": [
-        "Jensen Huang氏がCEO復帰",
-        "調査継続と日本株反応未確認を分離"
+        "日経平均は11月24日に3.91%上昇",
+        "167銘柄上昇、58銘柄下落"
       ]
     },
-    "nov24-jp-cpi-oct": {
+    "nov25-boj-core-calendar": {
       "primary_page": "japan",
+      "priority": 95,
+      "attention_points": [
+        "企業向けサービス価格は08:50",
+        "基調インフレ指標は14:00"
+      ]
+    },
+    "nov25-us-gdp-pce-calendar": {
+      "primary_page": "world",
       "priority": 90,
       "attention_points": [
-        "10月コアCPIは前年比2.2%",
-        "25日の基調インフレ指標へ継続"
-      ]
-    },
-    "nov24-jpx-holiday": {
-      "primary_page": "japan",
-      "priority": 85,
-      "attention_points": [
-        "23日は東証現物休場",
-        "24日寄り前で米反発は未反映"
+        "GDP改定値とPCEは22:30",
+        "予想・前回値は未確認"
       ]
     }
   }

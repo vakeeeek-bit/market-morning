@@ -1,31 +1,31 @@
 {
   "version": "2.0",
-  "report_date": "2026-11-24",
-  "target_market_date": "2026-11-23",
-  "updated_at": "2026-11-24T06:55:00+09:00",
-  "scope_note": "11月23日の米国終値、NVIDIA一次資料、11月20日の日本現物終値を分離して監査。異時点・非網羅項目は除外し注釈付き公開。",
+  "report_date": "2026-11-25",
+  "target_market_date": "2026-11-24",
+  "updated_at": "2026-11-25T06:58:00+09:00",
+  "scope_note": "11月24日の日米終値、日本17業種・34銘柄、公式日程を分離して監査。異時点・限月不明・非網羅項目は結論から除外し注釈付き公開。",
   "research_coverage": {
     "status": "QUALIFIED",
     "directions": [
       {
         "id": "fixed_universe",
         "status": "PASS",
-        "evidence": "米23日はSOX+14.03%、NASDAQ100+6.86%、S&P500+4.73%。20日の急落から大幅反発したが、SOXは20日急落前の水準を完全には回復していない。 日本現物の最新終値は11月20日（日経平均−5.06%、TOPIX連動ETF−3.98%）。米23日の反発は24日の東京現物に未反映で、寄り付き後の持続性を確認する。"
+        "evidence": "米主要6指数・VIX・11業種ETF代理と、日本主要2指数・17業種ETF代理・34銘柄を確認。"
       },
       {
         "id": "cross_news",
         "status": "QUALIFIED",
-        "evidence": "NVIDIA・SEC・日銀・BEA日程を確認。国内全開示・通商・制裁は非網羅。"
+        "evidence": "日経指数・日銀・BEA一次資料を実読。国内全適時開示、評価変更、通商・制裁は非網羅。"
       },
       {
         "id": "reverse_from_anomalies",
         "status": "PASS",
-        "evidence": "SOX+14.03%、XLK+8.97%、VIX−25.83%からNVIDIA一次資料・SEC 8-Kを逆引き。"
+        "evidence": "SOX−7.88%、XLK−3.26%とダウ+0.85%、米9/11業種上昇の分化から材料と内部強弱を逆引き。"
       },
       {
         "id": "previous_day_change",
         "status": "PASS",
-        "evidence": "前回のAI主導急落から、NVIDIA CEO復帰を契機とする急反発へ変化。"
+        "evidence": "未確認だった米AI反発の日本波及を24日実績で確認し、同夜の米半導体再反落で持続性評価を修正。"
       }
     ],
     "items": [
@@ -34,16 +34,16 @@
         "label": "米国・日本の指数と市場内部",
         "tier": "Critical",
         "status": "取得済",
-        "evidence": "米23日はSOX+14.03%、NASDAQ100+6.86%、S&P500+4.73%。20日の急落から大幅反発したが、SOXは20日急落前の水準を完全には回復していない。 日本現物の最新終値は11月20日（日経平均−5.06%、TOPIX連動ETF−3.98%）。米23日の反発は24日の東京現物に未反映で、寄り付き後の持続性を確認する。",
+        "evidence": "日米24日終値、米11業種ETF代理、日本17業種ETF代理を確認。",
         "attempts": [
           {
-            "method": "market.json正本とReuters照合",
-            "result": "数値と方向が一致。",
+            "method": "market.json、日経指数公式、Reuters照合",
+            "result": "指数方向・市場日・内部強弱を確認。",
             "source_urls": [
               "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
-              "https://www.reuters.com/business/wall-street-futures-rebound-after-rough-week-ai-linked-shares-2026-11-23/"
+              "https://indexes.nikkei.co.jp/en/nkave/archives/summary?dt=20261124&idx=nk225"
             ],
-            "checked_at": "2026-11-24T06:55:00+09:00"
+            "checked_at": "2026-11-25T06:58:00+09:00"
           }
         ],
         "publication_use": "selected"
@@ -53,51 +53,35 @@
         "label": "日本17業種・34銘柄",
         "tier": "Required",
         "status": "取得済",
-        "evidence": "11月20日の17業種・主要監視銘柄を検証済み値として保持。24日寄り付き前のため新しい現物実績は未確認。",
+        "evidence": "11月24日の17/17業種、34/34銘柄、ベンチマーク日付を整合。",
         "attempts": [
           {
-            "method": "update_japan_market.pyで11月20日を再取得",
-            "result": "初回はレート制限で保存停止したが、自動再取得で17業種・34銘柄が全件揃った。",
+            "method": "現行保存データと公式指数を再検証",
+            "result": "17業種・34銘柄は11月24日で整合。",
             "source_urls": [
-              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json",
+              "https://indexes.nikkei.co.jp/en/nkave/archives/summary?dt=20261124&idx=nk225"
             ],
-            "checked_at": "2026-11-23T06:55:00+09:00"
-          },
-          {
-            "method": "現行保存データと対象日の整合確認",
-            "result": "再取得値の業種・銘柄・ベンチマーク日はすべて11月20日で一致。",
-            "source_urls": [
-              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
-            ],
-            "checked_at": "2026-11-23T06:55:00+09:00"
-          },
-          {
-            "method": "全必須数と日付整合の再検証",
-            "result": "17/17業種、34/34銘柄、ベンチマークの全件を確認。",
-            "source_urls": [
-              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
-            ],
-            "checked_at": "2026-11-23T06:55:00+09:00"
+            "checked_at": "2026-11-25T06:58:00+09:00"
           }
         ],
         "publication_use": "selected"
       },
       {
         "id": "policy_macro",
-        "label": "政策・マクロ・休場",
+        "label": "政策・マクロ日程",
         "tier": "Critical",
         "status": "取得済",
-        "evidence": "NVIDIA・SEC、日銀・BEAの公式日程を確認。未発表イベントを結果扱いしない。",
+        "evidence": "日銀とBEA公式日程を実読し、予定と実績を分離。",
         "attempts": [
           {
-            "method": "公式本文実読",
-            "result": "事実・発表日・対象・留保を確認。",
+            "method": "公式日程実読",
+            "result": "11月25日の公表予定と日本時間を確認。",
             "source_urls": [
-              "https://www.stat.go.jp/data/cpi/sokuhou/tsuki/index-z.html",
-              "https://www.federalreserve.gov/newsevents/speech/cook20261120a.htm",
-              "https://www.jpx.co.jp/corporate/about-jpx/calendar/index.html"
+              "https://www.boj.or.jp/about/calendar/",
+              "https://www.bea.gov/news/schedule/"
             ],
-            "checked_at": "2026-11-23T06:55:00+09:00"
+            "checked_at": "2026-11-25T06:58:00+09:00"
           }
         ],
         "publication_use": "selected"
@@ -107,15 +91,15 @@
         "label": "アナリスト評価変更",
         "tier": "Required",
         "status": "取得済",
-        "evidence": "無料公開範囲を確認したが、証券会社原文・全件の網羅性を担保できないため記事を掲載せず、変更なしとも断定しない。",
+        "evidence": "無料公開範囲を確認したが、証券会社原文・全件の網羅性を担保できず、記事を掲載せず「変更なし」とも断定しない。",
         "attempts": [
           {
-            "method": "公開ニュース確認",
-            "result": "無料公開範囲を確認。網羅性は未確認。",
+            "method": "公開範囲確認",
+            "result": "網羅性を確認できず除外。",
             "source_urls": [
               "https://kabutan.jp/news/"
             ],
-            "checked_at": "2026-11-23T06:55:00+09:00"
+            "checked_at": "2026-11-25T06:58:00+09:00"
           }
         ],
         "publication_use": "excluded"
@@ -125,15 +109,15 @@
         "label": "国内企業開示",
         "tier": "Required",
         "status": "取得済",
-        "evidence": "公開開示を部分確認したが、11月20日の全適時開示を網羅できないため個別株記事は掲載せず、材料なしとも断定しない。",
+        "evidence": "TDnet公開範囲を確認したが、全適時開示の実読と市場反応確認を完了できず、個別株記事を掲載せず「材料なし」とも断定しない。",
         "attempts": [
           {
-            "method": "TDnet公開開示の確認",
-            "result": "公開範囲を確認。全件の実読・市場反応確認は未完了。",
+            "method": "TDnet公開範囲確認",
+            "result": "全件監査未完了のため除外。",
             "source_urls": [
               "https://www.release.tdnet.info/inbs/I_main_00.html"
             ],
-            "checked_at": "2026-11-23T06:55:00+09:00"
+            "checked_at": "2026-11-25T06:58:00+09:00"
           }
         ],
         "publication_use": "excluded"
@@ -144,175 +128,115 @@
     "status": "PASS",
     "materials": [
       {
-        "headline": "NVIDIA CEO復帰で米AI・半導体が急反発",
+        "headline": "日本株は米AI反発を24日に織り込む",
         "fact": {
-          "text": "NVIDIAはJensen Huang氏のCEO復帰を発表。SEC 8-Kでも確認。米23日はSOX+14.03%、NASDAQ100+6.86%、S&P500+4.73%。",
+          "text": "日経平均+3.91%、TOPIX+2.47%。17業種ETF代理は11上昇・6下落。",
           "source_urls": [
-            "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Board-Reinstates-Jensen-Huang-as-President-CEO-and-Board-Director/default.aspx",
-            "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000090/nvda-20261122.htm",
-            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
-            "https://www.reuters.com/business/wall-street-futures-rebound-after-rough-week-ai-linked-shares-2026-11-23/"
+            "https://indexes.nikkei.co.jp/en/nkave/archives/summary?dt=20261124&idx=nk225",
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/japan-market.json"
           ],
           "verification_status": "PASS"
         },
         "observed_market_reaction": {
-          "text": "SOXとXLKが市場全体を大きく上回り、VIXは26.62へ低下。",
-          "assets_checked": [
-            "米国株",
-            "日本株",
-            "USD/JPY",
-            "VIX"
-          ]
-        },
-        "market_internals": {
-          "text": "米11業種ETF代理は9上昇・2下落、XLK+8.97%、XLE−1.06%。"
-        },
-        "market_pricing": {
-          "status": "unknown",
-          "text": "CEO復帰は価格に反映されたが、AI投資採算懸念の完全な織り込み・解消は算定できない。"
-        },
-        "interpretation": {
-          "text": "NVIDIA固有の経営不確実性は一部後退。20日の急落から買い戻されたが、中期AI需要・採算の再評価は継続。",
-          "confidence": "supported",
-          "evidence": "SOX+14.03%、NASDAQ100+6.86%、VIX−25.83%。",
-          "uncertainty": "反発の持続性と材料別寄与率は未確認。"
-        },
-        "japan_transmission": {
-          "economic_channel": "米AI株の評価回復候補が日本の半導体製造装置・電機のリスクプレミアムに波及。",
-          "intermediate_reactions": [
-            "米SOX・XLKが急反発",
-            "日本現物は20日終値のままで未反映"
-          ],
-          "affected_sectors": [
-            "電機・精密",
-            "機械",
-            "情報通信・サービス"
-          ],
-          "pricing_in_japan": "24日寄り付き前で未反映。",
-          "assessment": "条件付き"
-        },
-        "counter_evidence": [
-          "SOXは20日の急落前水準を完全回復していない",
-          "独立委員会調査・政府調査は継続",
-          "日本現物の反応は未確認"
-        ],
-        "change_conditions": [
-          "SOX反落とVIX30超",
-          "日本の半導体株が寄り高後に失速",
-          "TOPIX・業種Breadthが改善"
-        ],
-        "chronology_check": "PASS",
-        "conflict_resolution": "11月20日日本終値、11月23日米終値、11月24日寄り前を分離し、日本株反応を推測しない。"
-      },
-      {
-        "headline": "日本の10月全国CPI",
-        "fact": {
-          "text": "総合+2.3%、生鮮食品除く総合+2.2%、生鮮食品・エネルギー除く総合+2.2%。",
-          "source_urls": [
-            "https://www.stat.go.jp/data/cpi/sokuhou/tsuki/index-z.html"
-          ],
-          "verification_status": "PASS"
-        },
-        "observed_market_reaction": {
-          "text": "20日の日経平均は5.06%安だが、CPI単独の寄与は未確認。",
-          "assets_checked": [
-            "米国株",
-            "日本株",
-            "USD/JPY",
-            "VIX"
-          ]
-        },
-        "market_internals": {
-          "text": "17業種ETF代理は2上昇・15下落。医薬品+0.59%、運輸・物流+0.11%が上昇し、鉄鋼・非鉄−8.26%、機械−5.22%、電機・精密−5.17%が最弱。"
-        },
-        "market_pricing": {
-          "status": "unknown",
-          "text": "材料別の寄与率と完全な織り込みは算定できない。"
-        },
-        "interpretation": {
-          "text": "正常化観測を残すが、株価急落はAI・半導体売りなど複数材料と分けて判断。",
-          "confidence": "supported",
-          "evidence": "20日の日経平均は5.06%安だが、CPI単独の寄与は未確認。",
-          "uncertainty": "複数材料が同時に作用。"
-        },
-        "japan_transmission": {
-          "economic_channel": "正常化観測を残すが、株価急落はAI・半導体売りなど複数材料と分けて判断。",
-          "intermediate_reactions": [
-            "20日の日経平均は5.06%安だが、CPI単独の寄与は未確認。",
-            "20日の日経平均は56,436.65円（−5.06%）、TOPIX連動ETFは−3.98%。AI・半導体売りが日本株全体へ波及した。"
-          ],
-          "affected_sectors": [
-            "銀行",
-            "不動産",
-            "高PER成長株"
-          ],
-          "pricing_in_japan": "20日の日本終値と、その後の米20日終値、23日の休場を分離。",
-          "assessment": "条件付き"
-        },
-        "counter_evidence": [
-          "米半導体主導の急落が同日発生",
-          "国内業種反応は未確認"
-        ],
-        "change_conditions": [
-          "円・国内金利上昇と銀行相対優位",
-          "高PER株の下げ拡大"
-        ],
-        "chronology_check": "PASS",
-        "conflict_resolution": "統計発表、20日日本終値、20日米国終値を時系列で分離。"
-      },
-      {
-        "headline": "日本現物は米反発を未反映",
-        "fact": {
-          "text": "11月23日は東証休場、24日寄り付き前の最新現物市場日は20日。",
-          "source_urls": [
-            "https://www.jpx.co.jp/corporate/about-jpx/calendar/index.html",
-            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
-          ],
-          "verification_status": "PASS"
-        },
-        "observed_market_reaction": {
-          "text": "日本20日は日経平均−5.06%、TOPIX連動ETF−3.98%。23日米反発後の日本反応は未確認。",
+          "text": "電機・精密+5.13%、鉄鋼・非鉄+4.62%、銀行+4.18%。",
           "assets_checked": [
             "日本株",
             "米国株"
           ]
         },
         "market_internals": {
-          "text": "日本17業種ETF代理は20日時点で2上昇・15下落。"
+          "text": "17業種ETF代理は11上昇・6下落。電機・精密は出来高20日平均比1.29倍。"
         },
         "market_pricing": {
-          "status": "unknown",
-          "text": "米23日材料は日本現物に未反映。"
+          "status": "partially_priced",
+          "text": "前日の米AI反発は日本株へ波及したが、中期懸念の解消は未確認。"
         },
         "interpretation": {
-          "text": "寄り付き反発の可能性はあるが、実績ではない。",
-          "confidence": "tentative",
-          "evidence": "市場日差を確認。",
-          "uncertainty": "24日の寄り後・大引け反応。"
+          "text": "前回の条件付き追い風が日本現物へ波及。",
+          "confidence": "supported",
+          "evidence": "指数・業種幅・出来高で確認。",
+          "uncertainty": "材料別寄与率は未確認。"
         },
         "japan_transmission": {
-          "economic_channel": "米AI株反発→日本のAI・半導体株のセンチメント",
+          "economic_channel": "米AI株反発→日本の半導体・電機の評価回復→業種幅へ波及",
           "intermediate_reactions": [
-            "米SOX反発",
-            "日本現物再開待ち"
+            "電機・精密が首位",
+            "TOPIXと11業種が上昇"
           ],
           "affected_sectors": [
             "電機・精密",
-            "機械"
+            "機械",
+            "銀行"
           ],
-          "pricing_in_japan": "未反映",
+          "pricing_in_japan": "24日終値で一部反映",
+          "assessment": "確認済み"
+        },
+        "counter_evidence": [
+          "情報通信・サービスは−0.13%",
+          "同夜の米SOXは−7.88%"
+        ],
+        "change_conditions": [
+          "電機・精密が前日終値を維持",
+          "業種Breadthが過半"
+        ],
+        "chronology_check": "PASS",
+        "conflict_resolution": "米23日反発、日本24日反映、米24日再反落を順序分離。"
+      },
+      {
+        "headline": "米国はテック急落・非テック上昇へ回転",
+        "fact": {
+          "text": "SOX−7.88%、NASDAQ100−1.99%、S&P500−0.50%、ダウ+0.85%、Russell2000+0.57%。",
+          "source_urls": [
+            "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+          ],
+          "verification_status": "PASS"
+        },
+        "observed_market_reaction": {
+          "text": "米11業種ETF代理は9上昇・2下落。XLV+2.95%、XLP+1.66%、XLK−3.26%。",
+          "assets_checked": [
+            "米国株",
+            "VIX"
+          ]
+        },
+        "market_internals": {
+          "text": "大型テックと半導体が弱い一方、非テック・小型株は相対的に底堅い。"
+        },
+        "market_pricing": {
+          "status": "unknown",
+          "text": "AI投資採算・評価懸念の織り込み度は算定不能。"
+        },
+        "interpretation": {
+          "text": "全面リスク回避ではなく、テック集中の巻き戻しと業種回転。",
+          "confidence": "supported",
+          "evidence": "ダウ・Russell・9業種上昇。",
+          "uncertainty": "材料別寄与率は未確認。"
+        },
+        "japan_transmission": {
+          "economic_channel": "米半導体安→日本の電機・精密のリスクプレミアム上昇",
+          "intermediate_reactions": [
+            "SOX・XLK急落",
+            "ダウ・非テック上昇"
+          ],
+          "affected_sectors": [
+            "電機・精密",
+            "機械",
+            "銀行",
+            "医薬品・食品"
+          ],
+          "pricing_in_japan": "25日東京で未反映",
           "assessment": "条件付き"
         },
         "counter_evidence": [
-          "米反発が1日で失速する可能性",
-          "TOPIXへ広がらない可能性"
+          "VIXは26.36で30未満",
+          "米9/11業種は上昇"
         ],
         "change_conditions": [
-          "上昇業種が過半",
-          "TOPIXと日経平均の同時上昇"
+          "日本の電機・精密が反落",
+          "VIX30超",
+          "日本Breadth過半割れ"
         ],
         "chronology_check": "PASS",
-        "conflict_resolution": "休場日を取引日として扱わない。"
+        "conflict_resolution": "米24日終値と25日日本寄り前を分離。"
       }
     ],
     "template_degradation_audit": {
@@ -323,21 +247,21 @@
       "conflicting_materials_compared": true,
       "transmission_explained": true,
       "observable_change_conditions": true,
-      "comparison_note": "前回のAI主導急落から、23日はNVIDIA CEO復帰を契機に米AI・半導体が急反発。日本現物は未反映。"
+      "comparison_note": "前回未確認だった日本波及を24日実績で確認後、同夜の米半導体再反落で持続性評価を慎重化。"
     }
   },
   "counter_evidence_audit": {
     "status": "PASS",
     "conclusions": [
       {
-        "conclusion": "NVIDIA CEO復帰で米AI・半導体が急反発",
+        "conclusion": "米国はテックから非テックへ回転",
         "checks": [
-          "SOX+14.03%、XLK+8.97%、VIX−25.83%",
-          "SOXは20日急落前水準を完全回復していない",
-          "NVIDIA調査継続、日本現物未反映"
+          "SOX−7.88%、XLK−3.26%",
+          "ダウ+0.85%、Russell2000+0.57%",
+          "米9/11業種上昇、VIX30未満"
         ],
-        "weighing": "価格反応と一次資料は確認。持続性・日本波及は条件付き。",
-        "uncertainty": "AI投資採算懸念の解消、日本株への波及、反発の持続性は未確認。",
+        "weighing": "テック急落は確認したが全面リスク回避とは判定しない。",
+        "uncertainty": "25日の日本株への波及は未確認。",
         "result": "supported_with_limits"
       }
     ]
@@ -353,60 +277,61 @@
     ],
     "relationships": [
       {
-        "combination": "米株高・VIX低下",
-        "explanation": "23日の株式急反発とVIX−25.83%はリスク回避後退と整合。",
+        "combination": "米テック安・非テック高",
+        "explanation": "SOX・NASDAQ100安とダウ・Russell・9業種高が同日併存。業種回転と整合。",
         "unresolved": false
       },
       {
         "combination": "株式と米金利・為替",
-        "explanation": "米2年・10年金利、DXY、USD/JPY、EUR/USD、商品先物は11月20日、米株は11月23日で同時点ではない。株価反発との同時反応・因果には使わない。",
+        "explanation": "米株・VIXは11月24日、米金利・為替・商品・暗号資産は11月23日で同時点ではない。24日の株価変動との同時反応・因果には使わない。",
         "unresolved": true,
         "uncertainty": "同時点の反応未確認"
       },
       {
-        "combination": "米株と日本株",
-        "explanation": "米株23日、日本株20日で日本現物は未反映。",
+        "combination": "日本株と米株",
+        "explanation": "日本24日反発の後に米24日半導体反落。25日の日本反応は未確認。",
         "unresolved": true,
-        "uncertainty": "24日の現物反応未確認"
+        "uncertainty": "25日東京の反応未確認"
       },
       {
         "combination": "株式と商品・暗号資産",
-        "explanation": "商品20日、暗号資産22日で米株23日と同一基準日ではない。",
+        "explanation": "市場日が異なり、商品は限月も未確認。因果に使用しない。",
         "unresolved": true,
-        "uncertainty": "異時点"
+        "uncertainty": "異時点・契約不明"
       }
     ]
   },
   "previous_day_change": {
     "status": "PASS",
-    "prior_view": "前回はAI投資の評価懸念と半導体主導の世界的リスク回避を重視。",
+    "prior_view": "米23日のAI急反発は日本24日現物へ未反映で、波及の持続性を確認する段階。",
     "new_events": [
-      "米23日はSOX+14.03%、NASDAQ100+6.86%、S&P500+4.73%。20日の急落から大幅反発したが、SOXは20日急落前の水準を完全には回復していない。",
-      "NVIDIAは11月23日、Jensen Huang氏を社長・CEO・取締役に即時復帰させたと発表。SEC 8-Kでも11月22日の取締役会決定を確認した。",
-      "日本現物の最新終値は11月20日（日経平均−5.06%、TOPIX連動ETF−3.98%）。米23日の反発は24日の東京現物に未反映で、寄り付き後の持続性を確認する。"
+      "日本24日は日経平均+3.91%、TOPIX+2.47%。17業種ETF代理は11上昇・6下落で、電機・精密+5.13%、鉄鋼・非鉄+4.62%、銀行+4.18%が上位。",
+      "米24日はSOX−7.88%、NASDAQ100−1.99%、S&P500−0.50%。23日の急反発からAI・半導体が反落し、ダウ+0.85%、Russell2000+0.57%との分化が拡大した。",
+      "米11業種ETF代理は9上昇・2下落。ヘルスケア+2.95%、生活必需品+1.66%に対し、情報技術−3.26%、資本財−0.53%で、全面的なリスク回避ではなくテックからの回転が観測された。"
     ],
     "changed": [
-      "NVIDIA CEO復帰を契機にSOX・NASDAQが急反発し、VIXは30を下回った。"
+      "日本24日の指数・業種幅で波及を確認。",
+      "同夜の米半導体再反落で25日の持続性評価を慎重化。"
     ],
     "unchanged": [
       "AI需要の中期成長と採算・評価倍率リスクを分けて見る。"
     ],
-    "japan_revision": "24日の東京で半導体株の戻りとTOPIX・業種Breadthへの広がりを確認。"
+    "japan_revision": "電機・精密の反落リスクを警戒するが、銀行・内需とTOPIXが支える限り全面弱気とはしない。"
   },
   "source_quality": {
     "status": "PASS",
     "checks": [
-      "market.json正本とReutersの指数方向を照合。",
-      "NVIDIA公式発表とSEC 8-Kを実読。",
-      "日銀・BEA公式日程を確認し、未発表イベントを結果扱いしない。"
+      "market.jsonとReutersで米指数方向を照合。",
+      "日経指数公式で24日終値・騰落銘柄数を確認。",
+      "日銀・BEA公式日程を実読し予定と実績を分離。"
     ]
   },
   "data_integrity": {
     "status": "QUALIFIED",
     "checks": [
-      "米株・VIXは11月23日、日本株・FX・金利・商品は11月20日、暗号資産は11月22日と分離。",
-      "商品先物は限月・値種別不明のため分析から除外。日本現物は20日実績を保持。",
-      "reportとJapanのレポート日・対象市場日・TOP5を一致。"
+      "米株・VIXと日本株は11月24日、金利・為替・商品・暗号資産は11月23日と分離。",
+      "商品先物は限月・値種別不明のため分析から除外。",
+      "report・Japan・履歴のレポート日、対象市場日、TOP5を一致。"
     ]
   },
   "quality_gates": {
@@ -422,96 +347,42 @@
   },
   "publication_decision": {
     "status": "QUALIFIED",
-    "decided_at": "2026-11-24T06:55:00+09:00",
-    "summary": "米11月23日終値とNVIDIA一次資料を確認し、日本現物11月20日との時点差を注記して公開。未確認・異時点項目に依存する主張は除外。",
+    "decided_at": "2026-11-25T06:58:00+09:00",
+    "summary": "日米11月24日終値を確認。日本株への波及実績と米半導体の反落を時系列で分離し、異時点・限月不明項目に依存する主張を除外して公開。",
     "components": {
       "ai_report": {
         "status": "QUALIFIED",
-        "updated_at": "2026-11-24T06:55:00+09:00",
-        "reason": "確認済み事実のみ。異時点・未反映項目に依存する主張を除外。"
+        "updated_at": "2026-11-25T06:58:00+09:00",
+        "reason": "日米24日実績を確認。異時点・限月不明・非網羅項目に依存する主張を除外。"
       },
       "japan_stocks": {
         "status": "QUALIFIED",
-        "updated_at": "2026-11-24T06:55:00+09:00",
-        "reason": "11月20日実績と米11月23日未反映材料を分離。企業開示・評価変更は非網羅。"
+        "updated_at": "2026-11-25T06:58:00+09:00",
+        "reason": "24日実績と25日未反映材料を分離。企業開示・評価変更は非網羅。"
       },
       "world_market": {
         "status": "PASS",
-        "updated_at": "2026-11-24 06:45:51",
+        "updated_at": "2026-11-25 06:46:47",
         "reason": "32系列取得。系列別基準日を表示。"
       },
       "japan_market": {
         "status": "PASS",
-        "updated_at": "2026-11-24 03:46:09 JST",
-        "reason": "11月20日の検証済み現物データを保持。米11月23日ドライバーは未反映表示。"
+        "updated_at": "2026-11-24 15:59:09 JST",
+        "reason": "11月24日の17業種・34銘柄と公式指数を照合。"
       },
       "verified_news": {
         "status": "PASS",
-        "updated_at": "2026-11-24T06:55:00+09:00",
-        "reason": "一次資料実読済み3件。市場反応は別レポートで分離。"
+        "updated_at": "2026-11-25T06:58:00+09:00",
+        "reason": "一次資料実読済み3件。予定と実績を分離。"
       }
     },
     "unresolved_items": [
-      {
-        "id": "stale_cross_asset",
-        "status": "QUALIFIED",
-        "missing": "米2年・10年金利、DXY、USD/JPY、EUR/USD、商品先物は11月20日、米株は11月23日で同時点ではない。株価反発との同時反応・因果には使わない。",
-        "impact": "23日の米株反発と金利・為替・商品の同時反応を保留。",
-        "last_checked_at": "2026-11-24T06:55:00+09:00",
-        "next_action": "各系列が11月23日公表・確定後に再照合。",
-        "attempts": [
-          {
-            "method": "当日取得・公式資料・現行main・Drive検索の照合",
-            "result": "米2年・10年金利、DXY、USD/JPY、EUR/USD、商品先物は11月20日、米株は11月23日で同時点ではない。株価反発との同時反応・因果には使わない。",
-            "source_urls": [
-              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
-            ],
-            "checked_at": "2026-11-24T06:55:00+09:00"
-          }
-        ],
-        "affected_components": [
-          "ai_report",
-          "japan_stocks"
-        ],
-        "excluded_claims": [
-          "米株反発を金利低下・円変動が引き起こしたとの断定"
-        ],
-        "excluded_from_publication": true
-      },
-      {
-        "id": "japan_unpriced",
-        "status": "QUALIFIED",
-        "missing": "日本現物は11月20日終値で、米11月23日のNVIDIA材料と米株反発は未反映。24日寄り付き前の方向を実績として断定しない。",
-        "impact": "24日の日本株方向・業種波及を実績として掲載しない。",
-        "last_checked_at": "2026-11-24T06:55:00+09:00",
-        "next_action": "24日大引け後に17業種・主要監視銘柄を再取得。",
-        "attempts": [
-          {
-            "method": "当日取得・公式資料・現行main・Drive検索の照合",
-            "result": "日本現物は11月20日終値で、米11月23日のNVIDIA材料と米株反発は未反映。24日寄り付き前の方向を実績として断定しない。",
-            "source_urls": [
-              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
-              "https://www.jpx.co.jp/corporate/about-jpx/calendar/index.html"
-            ],
-            "checked_at": "2026-11-24T06:55:00+09:00"
-          }
-        ],
-        "affected_components": [
-          "ai_report",
-          "japan_stocks",
-          "japan_market"
-        ],
-        "excluded_claims": [
-          "日本株が米AI反発を織り込んだとの断定"
-        ],
-        "excluded_from_publication": true
-      },
       {
         "id": "contracts",
         "status": "QUALIFIED",
         "missing": "商品先物は限月と値種別を確認できないため、Gold・Silver・WTI・Brent・Copperを分析から除外。",
         "impact": "商品・日経先物に依存する分析を除外。",
-        "last_checked_at": "2026-11-24T06:55:00+09:00",
+        "last_checked_at": "2026-11-25T06:58:00+09:00",
         "next_action": "取引所、限月、清算値、基準時刻を確認できる公式系列を取得。",
         "attempts": [
           {
@@ -530,14 +401,15 @@
         "excluded_claims": [
           "商品先物方向と在庫に依存する主張"
         ],
-        "excluded_from_publication": true
+        "excluded_from_publication": true,
+        "first_seen_at": "2026-11-24T06:55:00+09:00"
       },
       {
         "id": "coverage",
         "status": "QUALIFIED",
         "missing": "統一時刻の株価先物・為替現在値、国内全適時開示、証券会社評価変更、通商・制裁の網羅確認は未完了。",
         "impact": "網羅性を前提とする『変更なし』『材料なし』を除外。",
-        "last_checked_at": "2026-11-24T06:55:00+09:00",
+        "last_checked_at": "2026-11-25T06:58:00+09:00",
         "next_action": "次回、TDnet・企業IR・証券会社公表、USTR・OFAC等を継続確認。",
         "attempts": [
           {
@@ -558,14 +430,15 @@
         "excluded_claims": [
           "個別株・評価変更・通商・制裁の網羅性断定"
         ],
-        "excluded_from_publication": true
+        "excluded_from_publication": true,
+        "first_seen_at": "2026-11-24T06:55:00+09:00"
       },
       {
         "id": "project_docs",
         "status": "QUALIFIED",
-        "missing": "Project添付の仕様書v2三点は今回のDrive検索で確認できず、Project Instructionsと現行mainのスキーマ・検証・公開ルールを適用。",
+        "missing": "Project添付の仕様書v2三点は今回のDrive検索でも確認できず、Project Instructionsと現行mainのスキーマ・検証・公開ルールを適用。",
         "impact": "添付v2との差分監査ができず、Project Instructionsと現行main検証を優先。",
-        "last_checked_at": "2026-11-24T06:55:00+09:00",
+        "last_checked_at": "2026-11-25T06:58:00+09:00",
         "next_action": "接続先で文書が利用可能になった時点で再照合。",
         "attempts": [
           {
@@ -581,12 +454,41 @@
         "excluded_claims": [
           "未確認の添付仕様に適合したとの断定"
         ],
-        "excluded_from_publication": true
+        "excluded_from_publication": true,
+        "first_seen_at": "2026-11-24T06:55:00+09:00"
+      },
+      {
+        "id": "stale_cross_asset",
+        "status": "QUALIFIED",
+        "missing": "米株・VIXは11月24日、米金利・為替・商品・暗号資産は11月23日で同時点ではない。24日の株価変動との同時反応・因果には使わない。",
+        "impact": "24日の米テック反落と金利・為替・商品の同時反応を保留。",
+        "last_checked_at": "2026-11-25T06:58:00+09:00",
+        "next_action": "各系列が11月24日公表・確定後に再照合。",
+        "attempts": [
+          {
+            "method": "当日取得と現行mainの系列別市場日を照合",
+            "result": "米株・VIXは11月24日、米金利・為替・商品・暗号資産は11月23日で同時点ではない。24日の株価変動との同時反応・因果には使わない。",
+            "source_urls": [
+              "https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json"
+            ],
+            "checked_at": "2026-11-25T06:58:00+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "米テック反落を金利・円・商品変動が引き起こしたとの断定"
+        ],
+        "excluded_from_publication": true,
+        "first_seen_at": "2026-11-24T06:55:00+09:00"
       }
     ],
     "resolved_item_ids": [
       "stale_cross_asset_2026_11_20",
-      "market_data_2026_11_23"
+      "market_data_2026_11_23",
+      "japan_unpriced_2026_11_24"
     ]
   }
 }

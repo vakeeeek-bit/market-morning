@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "updated_at": "2026-11-24T06:55:00+09:00",
-  "report_date": "2026-11-24",
+  "updated_at": "2026-11-25T06:58:00+09:00",
+  "report_date": "2026-11-25",
   "period_start": "2026-03-18",
-  "period_end": "2026-11-23",
+  "period_end": "2026-11-24",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-11-24",
+    "latest_report_date": "2026-11-25",
     "source_report_count": 8,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
@@ -535,6 +535,15 @@
             "nov24-nvidia",
             "nov24-market"
           ]
+        },
+        {
+          "date": "2026-11-24",
+          "title": "日本反発後に米半導体が再反落",
+          "fact": "日本は日経平均+3.91%、電機・精密+5.13%。同夜の米SOXは−7.88%。",
+          "market_impact": "CEO復帰後の買い戻しは日本へ波及したが、米国で持続せず、AI投資採算・評価懸念の解消は未確認。",
+          "source_ids": [
+            "nov25-japan-rebound"
+          ]
         }
       ],
       "initial_view": {
@@ -542,16 +551,16 @@
         "text": "AI設備投資と先端半導体需要の強さが株価を支える局面"
       },
       "new_fact": {
-        "date": "2026-11-23",
-        "text": "NVIDIAはJensen Huang氏のCEO復帰を発表。SOXは14.03%上昇した。"
+        "date": "2026-11-24",
+        "text": "日本24日は日経平均+3.91%、電機・精密+5.13%と波及を確認したが、同夜の米SOXは−7.88%となった。"
       },
       "market_reaction": {
-        "date": "2026-11-23",
-        "text": "SOX+14.03%、NASDAQ100+6.86%、VIX−25.83%。"
+        "date": "2026-11-24",
+        "text": "日本は幅広く反発した一方、米国では半導体・情報技術が急反落し、非テックへ回転した。"
       },
-      "current_view": "NVIDIA固有の経営不確実性は一部後退したが、AI投資の採算と高い評価倍率への懸念は残る。",
-      "japan_impact": "24日の半導体製造装置・電機の戻りと、TOPIX・業種Breadthへの広がりを確認する。",
-      "counter_evidence": "SOXは20日−10.73%の後の反発で、急落前水準を完全には回復していない。",
+      "current_view": "NVIDIA固有の経営不確実性は一部後退したが、23日の急反発後に米半導体が再反落。AI投資の採算と高い評価倍率への懸念は残る。",
+      "japan_impact": "24日に電機・精密は反発した。25日は米SOX反落を吸収できるか、TOPIXと業種Breadthが支えるかを確認する。",
+      "counter_evidence": "日本24日は電機・精密+5.13%だった一方、米24日はSOX−7.88%。地域と時間差を分離する。",
       "source_ids": [
         "ai-apr16",
         "ai-credit-1016",
@@ -592,7 +601,8 @@
         "oct30-market",
         "reaction14",
         "reaction15",
-        "us-close-1016"
+        "us-close-1016",
+        "nov25-japan-rebound"
       ]
     },
     {
@@ -890,15 +900,15 @@
   "scenario_change_conditions": [
     {
       "condition": "AI・半導体",
-      "meaning": "SOX反落、VIX30超、日本半導体株が20日安値更新"
+      "meaning": "電機・精密が米反落を吸収し、出来高とBreadthを伴って上昇"
     },
     {
       "condition": "日本株Breadth",
-      "meaning": "上昇業種が過半かつTOPIXが日経平均型に追随"
+      "meaning": "上昇業種が過半割れし、TOPIXが前日安値を下回る"
     },
     {
       "condition": "物価・日銀／米PCE",
-      "meaning": "実績・声明を確認し、円・金利と株価の同時反応が生じる"
+      "meaning": "実績と公式説明を確認し、複数市場で整合した反応が生じる"
     }
   ],
   "sources": [
@@ -1328,6 +1338,13 @@
       "publisher": "Reuters",
       "published_at": "2026-10-23",
       "url": "https://www.reuters.com/world/china/global-markets-view-usa-2026-10-23/"
+    },
+    {
+      "id": "nov25-japan-rebound",
+      "title": "日経平均、11月24日は3.91%上昇",
+      "publisher": "Nikkei Indexes",
+      "published_at": "2026-11-24",
+      "url": "https://indexes.nikkei.co.jp/en/nkave/archives/summary?dt=20261124&idx=nk225"
     },
     {
       "id": "boj-apr28",

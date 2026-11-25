@@ -2189,20 +2189,6 @@
   },
   "events": [
     {
-      "id": "boj-core-cpi-indicators-2026-10",
-      "event": "日銀・基調的なインフレ率指標（10月）",
-      "start_at_jst": "2026-11-25T14:00:00+09:00",
-      "jst_time": "2026-11-25 14:00 JST",
-      "forecast": "未確認",
-      "previous": "未確認",
-      "focus": "刈込平均値など基調物価と正常化判断",
-      "affected_markets": "円・国内金利・日本株",
-      "importance": "高",
-      "source_url": "https://www.boj.or.jp/about/calendar/",
-      "source_name": "日本銀行",
-      "verified_on": "2026-11-23"
-    },
-    {
       "id": "us-gdp-2026-q3-second",
       "event": "米GDP（2026年7〜9月期・改定値）",
       "start_at_jst": "2026-11-25T22:30:00+09:00",
@@ -2332,7 +2318,7 @@
   ],
   "events_metadata": {
     "status": "取得済",
-    "updated_at": "2026-11-25T13:56:16+09:00",
+    "updated_at": "2026-11-25T14:31:12+09:00",
     "window_start": "2026-11-25",
     "window_end": "2026-12-09",
     "timezone": "Asia/Tokyo",

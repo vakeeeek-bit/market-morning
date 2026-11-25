@@ -1,0 +1,194 @@
+{
+  "report_date": "2026-11-26",
+  "target_market_date": "2026-11-25",
+  "updated_at": "2026-11-26T06:55:00+09:00",
+  "report_type": "daily",
+  "japan_quick_view": {
+    "headline": "25日はAI・外需安、内需は広く上昇",
+    "summary": "日本25日は日経平均−2.78%、TOPIX−0.50%。一方、日経平均構成銘柄は127上昇・96下落、17業種ETF代理は12上昇・5下落で、指数急落と市場全体を区別する。 日本の電機・精密−3.89%、機械−3.51%、鉄鋼・非鉄−5.02%に対し、医薬品+6.05%、食品+4.69%、不動産+4.53%。前回警戒したAI・外需の反落と内需回転を確認。",
+    "top_materials": [
+      "日本25日は日経平均−2.78%、TOPIX−0.50%。一方、日経平均構成銘柄は127上昇・96下落、17業種ETF代理は12上昇・5下落で、指数急落と市場全体を区別する。",
+      "日本の電機・精密−3.89%、機械−3.51%、鉄鋼・非鉄−5.02%に対し、医薬品+6.05%、食品+4.69%、不動産+4.53%。前回警戒したAI・外需の反落と内需回転を確認。",
+      "米25日はNASDAQ100−0.64%、SOX−0.65%、S&P500−0.25%に対し、ダウ+0.33%、Russell2000+0.71%。NASDAQは一時4%超安から下げ幅を縮小し、8/11業種が上昇。",
+      "米GDP改定値は年率+4.3%、10月PCE価格は前年比+3.8%、コア+3.3%。成長・物価の上振れは高PER株の割引率リスクだが、同日金利反応は未確認。",
+      "26日は米国休場。日本は10時の日銀田村委員講演を確認し、円・銀行・不動産・高PER株の同時反応が出るまで方向を断定しない。"
+    ],
+    "focus_sectors": [
+      "医薬品",
+      "食品",
+      "不動産",
+      "電機・精密（反発確認）"
+    ],
+    "unpriced_materials": [
+      "米25日のSOX下げ幅縮小",
+      "26日の日銀田村委員講演",
+      "米休場による流動性低下"
+    ],
+    "individual_news_review": {
+      "status": "partial",
+      "story_count": 0,
+      "scope": "確認済み企業固有材料は0件。未調査や取得不能を「材料なし」とは扱わない"
+    }
+  },
+  "top_stories": [],
+  "important_stories": [],
+  "other_stories": [],
+  "data_quality": {
+    "overall": "注釈付き公開",
+    "missing": [
+      "米株・VIXは11月25日、米金利・為替・商品・暗号資産は11月24日で同時点ではない。25日の株価変動との同時反応・因果には使わない。",
+      "商品先物は限月と値種別を確認できないため、Gold・Silver・WTI・Brent・Copperを分析から除外。",
+      "日本の17業種は取得済みだが、監視34銘柄のうち8766、7203、8001は取得制限で欠測。欠測銘柄に依存する個別株判断を除外。",
+      "統一時刻の株価先物・為替現在値、国内全適時開示、証券会社評価変更、通商・制裁の網羅確認は未完了。",
+      "Project添付の仕様書v2三点は今回のDrive検索でも確認できず、Project Instructionsと現行mainのスキーマ・検証・公開ルールを適用。"
+    ],
+    "differences": [
+      "日本指数は公式日経平均・ReutersのTOPIXで照合し、サイト内はETF参考値。",
+      "米株・VIXは11月25日、金利・為替・商品・暗号資産は11月24日。"
+    ],
+    "excluded": [
+      "限月不明の商品先物値と日経先物値",
+      "異時点の金利・為替・商品と11月25日米株の同時点因果",
+      "欠測3銘柄と非網羅の開示・評価変更に依存する主張"
+    ],
+    "cautions": [
+      "日経平均の下落率と構成銘柄・業種Breadthを分離。",
+      "提案された追加関税を決定済みと表現しない。"
+    ]
+  },
+  "analyst_rating_changes": {
+    "headline": "公開可能な評価変更は掲載せず",
+    "coverage_status": "十分調査したが取得不能",
+    "items": [],
+    "source_review": [
+      {
+        "name": "株探 公開ニュース",
+        "url": "https://kabutan.jp/news/",
+        "result": "公開範囲を確認したが証券会社原文・全件の網羅性を担保できず不掲載。",
+        "coverage": "無料公開範囲のみ。証券会社原文・全件は未確認。",
+        "freshness": "当日確認状況をJSONに記録",
+        "automation": "契約API未導入",
+        "rights": "確認できた事実だけを掲載"
+      }
+    ],
+    "summary": "未確認を「変更なし」とせず、今回は判断材料から除外。"
+  },
+  "sector_implications": [
+    {
+      "driver": "AI・外需の調整",
+      "affected_sectors": [
+        "電機・精密",
+        "機械",
+        "鉄鋼・非鉄"
+      ],
+      "possible_impact": "25日の下落後も高ボラティリティが残る。",
+      "confirmation_condition": "前日安値を維持し反発できるか"
+    },
+    {
+      "driver": "内需ローテーション",
+      "affected_sectors": [
+        "医薬品",
+        "食品",
+        "不動産"
+      ],
+      "possible_impact": "指数安の受け皿として相対優位が継続する可能性。",
+      "confirmation_condition": "TOPIXと上昇業種過半を維持"
+    },
+    {
+      "driver": "日銀講演・米物価",
+      "affected_sectors": [
+        "銀行",
+        "不動産",
+        "高PER成長株"
+      ],
+      "possible_impact": "円・国内金利を通じた相対差。方向は発言・反応確認まで中立。",
+      "confirmation_condition": "公式発言と複数市場の同時反応"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "内需ローテーション継続",
+      "conditions": "電機・精密が不安定でも医薬品・食品・不動産が相対的に底堅い",
+      "impact_on_japan": "日経平均の上値は重いがTOPIXと業種幅が支える。",
+      "strong_sectors": [
+        "医薬品",
+        "食品",
+        "不動産"
+      ],
+      "weak_sectors": [
+        "電機・精密",
+        "機械"
+      ],
+      "invalidation": "内需上位も反落し上昇業種が過半割れ"
+    },
+    {
+      "name": "半導体の自律反発",
+      "conditions": "SOXの下げ幅縮小を織り込み、電機・精密が前日高値を回復",
+      "impact_on_japan": "日経平均主導で反発するが、出来高とBreadthを伴うか確認。",
+      "strong_sectors": [
+        "電機・精密",
+        "機械"
+      ],
+      "weak_sectors": [
+        "医薬品・食品（相対）"
+      ],
+      "invalidation": "電機・精密が前日安値を下回る"
+    },
+    {
+      "name": "AI調整が全面安へ拡大",
+      "conditions": "VIX30超、電機・精密安が内需へ波及し日本の上昇業種が過半割れ",
+      "impact_on_japan": "指数集中安から市場全体のリスク回避へ変化。",
+      "strong_sectors": [
+        "食品",
+        "医薬品"
+      ],
+      "weak_sectors": [
+        "電機・精密",
+        "機械",
+        "情報通信"
+      ],
+      "invalidation": "VIX30未満と日本Breadth過半上昇"
+    }
+  ],
+  "monitoring_points": [
+    {
+      "target": "AI・半導体",
+      "current_view": "日本25日は電機・精密−3.89%。米25日はSOX−0.65%まで戻したが高ボラティリティ継続。",
+      "today_check": "電機・精密が前日安値を守り、SOXの戻りを織り込めるか",
+      "view_change_condition": "前日高値回復とBreadth維持"
+    },
+    {
+      "target": "内需ローテーション",
+      "current_view": "医薬品+6.05%、食品+4.69%、不動産+4.53%。12/17業種が上昇。",
+      "today_check": "内需優位とTOPIXの相対強さが継続するか",
+      "view_change_condition": "上昇業種が過半割れし内需上位も反落"
+    },
+    {
+      "target": "日銀・米物価",
+      "current_view": "田村委員講演を予定。米GDP+4.3%、コアPCE+3.3%は確認済みだが同日金利反応は未確認。",
+      "today_check": "円・国内金利・銀行・不動産・高PER株の同時反応",
+      "view_change_condition": "公式発言と複数市場の整合反応を確認"
+    }
+  ],
+  "source_notes": [
+    "Market Morning market.json: 11月24日の日米終値。 https://raw.githubusercontent.com/vakeeeek-bit/market-morning/main/data/market.json",
+    "日経指数公式: 11月24日の日経平均終値と騰落。 https://indexes.nikkei.co.jp/en/nkave/archives/summary?dt=20261124&idx=nk225",
+    "Reuters: 日本24日の市場反応を照合。 https://www.fidelity.com/news/article/international/202611232202RTRSNEWSCOMBINED_L6N47503J_1",
+    "Reuters: 米24日の市場反応を照合。 https://www.reuters.com/business/wall-street-futures-dip-chip-stocks-cool-after-nvidia-fueled-rally-2026-11-24/"
+  ],
+  "publication_policy": {
+    "status": "QUALIFIED",
+    "mode": "provisional",
+    "updated_at": "2026-11-26T06:55:00+09:00",
+    "complete_gate": "FAIL",
+    "copper_included": false,
+    "note": "日米11月25日終値と市場内部を確認。異時点、限月不明、個別株欠測・非網羅項目に依存する主張を除外して公開。",
+    "missing_items": [
+      "米株・VIXは11月25日、米金利・為替・商品・暗号資産は11月24日で同時点ではない。25日の株価変動との同時反応・因果には使わない。",
+      "商品先物は限月と値種別を確認できないため、Gold・Silver・WTI・Brent・Copperを分析から除外。",
+      "日本の17業種は取得済みだが、監視34銘柄のうち8766、7203、8001は取得制限で欠測。欠測銘柄に依存する個別株判断を除外。",
+      "統一時刻の株価先物・為替現在値、国内全適時開示、証券会社評価変更、通商・制裁の網羅確認は未完了。",
+      "Project添付の仕様書v2三点は今回のDrive検索でも確認できず、Project Instructionsと現行mainのスキーマ・検証・公開ルールを適用。"
+    ]
+  }
+}

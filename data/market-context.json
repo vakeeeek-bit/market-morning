@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "updated_at": "2026-11-25T06:58:00+09:00",
-  "report_date": "2026-11-25",
+  "updated_at": "2026-11-26T06:55:00+09:00",
+  "report_date": "2026-11-26",
   "period_start": "2026-03-18",
-  "period_end": "2026-11-24",
+  "period_end": "2026-11-25",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-11-25",
+    "latest_report_date": "2026-11-26",
     "source_report_count": 8,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
@@ -544,6 +544,15 @@
           "source_ids": [
             "nov25-japan-rebound"
           ]
+        },
+        {
+          "date": "2026-11-25",
+          "title": "日本でAI・外需安、内需へ回転",
+          "fact": "日経平均−2.78%、電機・精密−3.89%に対し、17業種ETF代理は12上昇。",
+          "market_impact": "前日の米半導体安が日本外需へ波及した一方、市場全体は内需高で吸収。",
+          "source_ids": [
+            "nov25-japan-close"
+          ]
         }
       ],
       "initial_view": {
@@ -551,16 +560,16 @@
         "text": "AI設備投資と先端半導体需要の強さが株価を支える局面"
       },
       "new_fact": {
-        "date": "2026-11-24",
-        "text": "日本24日は日経平均+3.91%、電機・精密+5.13%と波及を確認したが、同夜の米SOXは−7.88%となった。"
+        "date": "2026-11-25",
+        "text": "日本25日は電機・精密−3.89%となったが、17業種ETF代理は12上昇。"
       },
       "market_reaction": {
-        "date": "2026-11-24",
-        "text": "日本は幅広く反発した一方、米国では半導体・情報技術が急反落し、非テックへ回転した。"
+        "date": "2026-11-25",
+        "text": "日経平均は大幅安でも、医薬品・食品・不動産が上昇し内需へ回転。"
       },
-      "current_view": "NVIDIA固有の経営不確実性は一部後退したが、23日の急反発後に米半導体が再反落。AI投資の採算と高い評価倍率への懸念は残る。",
-      "japan_impact": "24日に電機・精密は反発した。25日は米SOX反落を吸収できるか、TOPIXと業種Breadthが支えるかを確認する。",
-      "counter_evidence": "日本24日は電機・精密+5.13%だった一方、米24日はSOX−7.88%。地域と時間差を分離する。",
+      "current_view": "AI需要の中期成長と採算・高評価リスクが併存。日本25日は外需調整を内需が吸収し、米25日はテックが安値から下げ幅を縮小した。",
+      "japan_impact": "26日は電機・精密の自律反発と、医薬品・食品・不動産の相対優位が両立するかを確認。",
+      "counter_evidence": "日経平均−2.78%でも日経構成127上昇、17業種中12業種上昇。指数下落を全面安とは扱わない。",
       "source_ids": [
         "ai-apr16",
         "ai-credit-1016",
@@ -602,7 +611,8 @@
         "reaction14",
         "reaction15",
         "us-close-1016",
-        "nov25-japan-rebound"
+        "nov25-japan-rebound",
+        "nov25-japan-close"
       ]
     },
     {
@@ -900,15 +910,15 @@
   "scenario_change_conditions": [
     {
       "condition": "AI・半導体",
-      "meaning": "電機・精密が米反落を吸収し、出来高とBreadthを伴って上昇"
+      "meaning": "前日高値回復とBreadth維持"
     },
     {
-      "condition": "日本株Breadth",
-      "meaning": "上昇業種が過半割れし、TOPIXが前日安値を下回る"
+      "condition": "内需ローテーション",
+      "meaning": "上昇業種が過半割れし内需上位も反落"
     },
     {
-      "condition": "物価・日銀／米PCE",
-      "meaning": "実績と公式説明を確認し、複数市場で整合した反応が生じる"
+      "condition": "日銀・米物価",
+      "meaning": "公式発言と複数市場の整合反応を確認"
     }
   ],
   "sources": [
@@ -1345,6 +1355,13 @@
       "publisher": "Nikkei Indexes",
       "published_at": "2026-11-24",
       "url": "https://indexes.nikkei.co.jp/en/nkave/archives/summary?dt=20261124&idx=nk225"
+    },
+    {
+      "id": "nov25-japan-close",
+      "title": "日経平均、11月25日は2.78%下落",
+      "publisher": "Nikkei Indexes",
+      "published_at": "2026-11-25",
+      "url": "https://indexes.nikkei.co.jp/en/nkave/archives/summary?dt=20261125&idx=nk225"
     },
     {
       "id": "boj-apr28",

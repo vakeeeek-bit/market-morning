@@ -2,28 +2,28 @@
   "version": "1.0",
   "description": "確認済み一次資料の表示設定",
   "items": {
-    "nov25-japan-rebound": {
+    "nov25-japan-close": {
       "primary_page": "japan",
       "priority": 100,
       "attention_points": [
-        "日経平均は11月24日に3.91%上昇",
-        "167銘柄上昇、58銘柄下落"
+        "日経平均は11月25日に2.78%下落",
+        "127銘柄上昇、96銘柄下落"
       ]
     },
-    "nov25-boj-core-calendar": {
-      "primary_page": "japan",
+    "nov25-us-gdp-pce": {
+      "primary_page": "world",
       "priority": 95,
       "attention_points": [
-        "企業向けサービス価格は08:50",
-        "基調インフレ指標は14:00"
+        "Q3 GDP改定値は年率+4.3%",
+        "10月コアPCEは前年比+3.3%"
       ]
     },
-    "nov25-us-gdp-pce-calendar": {
-      "primary_page": "world",
+    "nov25-boj-inflation": {
+      "primary_page": "japan",
       "priority": 90,
       "attention_points": [
-        "GDP改定値とPCEは22:30",
-        "予想・前回値は未確認"
+        "日銀が10月の基調的インフレ指標を更新",
+        "政策変更は断定しない"
       ]
     }
   }

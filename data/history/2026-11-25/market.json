@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25 06:46:47",
+  "updated_at": "2026-11-25 13:20:41",
   "timezone": "Asia/Tokyo",
   "source": "Yahoo Finance via yfinance for market closes; FRED DGS2/DGS10 for US Treasury yields",
   "notes": {
@@ -115,24 +115,24 @@
     "usdjpy": {
       "name": "USD/JPY",
       "ticker": "JPY=X",
-      "price": 158.931,
-      "previous": 159.707,
-      "change": -0.776,
-      "change_pct": -0.49,
+      "price": 159.009,
+      "previous": 158.931,
+      "change": 0.078,
+      "change_pct": 0.05,
       "status": "取得成功",
-      "market_date": "2026-11-23",
-      "previous_market_date": "2026-11-20"
+      "market_date": "2026-11-24",
+      "previous_market_date": "2026-11-23"
     },
     "eurusd": {
       "name": "EUR/USD",
       "ticker": "EURUSD=X",
-      "price": 1.0972,
-      "previous": 1.097,
-      "change": 0.0002,
-      "change_pct": 0.02,
+      "price": 1.0908,
+      "previous": 1.0972,
+      "change": -0.0063,
+      "change_pct": -0.58,
       "status": "取得成功",
-      "market_date": "2026-11-23",
-      "previous_market_date": "2026-11-20"
+      "market_date": "2026-11-24",
+      "previous_market_date": "2026-11-23"
     },
     "us10y": {
       "name": "米10年債利回り",

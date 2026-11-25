@@ -2189,20 +2189,6 @@
   },
   "events": [
     {
-      "id": "boj-sppi-2026-10",
-      "event": "日本・企業向けサービス価格指数（10月）",
-      "start_at_jst": "2026-11-25T08:50:00+09:00",
-      "jst_time": "2026-11-25 08:50 JST",
-      "forecast": "未確認",
-      "previous": "未確認",
-      "focus": "サービス価格と日銀の物価判断",
-      "affected_markets": "円・国内金利・日本株",
-      "importance": "高",
-      "source_url": "https://www.boj.or.jp/about/calendar/",
-      "source_name": "日本銀行",
-      "verified_on": "2026-11-23"
-    },
-    {
       "id": "boj-core-cpi-indicators-2026-10",
       "event": "日銀・基調的なインフレ率指標（10月）",
       "start_at_jst": "2026-11-25T14:00:00+09:00",
@@ -2346,7 +2332,7 @@
   ],
   "events_metadata": {
     "status": "取得済",
-    "updated_at": "2026-11-25T06:46:26+09:00",
+    "updated_at": "2026-11-25T13:20:40+09:00",
     "window_start": "2026-11-25",
     "window_end": "2026-12-09",
     "timezone": "Asia/Tokyo",

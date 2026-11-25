@@ -120,6 +120,33 @@
           }
         ],
         "publication_use": "excluded"
+      },
+      {
+        "id": "company_disclosures",
+        "label": "国内企業開示",
+        "tier": "Required",
+        "status": "十分調査したが取得不能",
+        "evidence": "TDnet公開範囲を確認したが全適時開示の実読と株価反応確認を完了できず、個別株記事は不掲載。",
+        "impact_if_unavailable": "企業固有材料に依存する個別株判断を除外。",
+        "attempts": [
+          {
+            "method": "TDnet公開一覧確認",
+            "result": "全件実読と市場反応確認は未完了。",
+            "source_urls": [
+              "https://www.release.tdnet.info/inbs/I_main_00.html"
+            ],
+            "checked_at": "2026-11-26T06:55:00+09:00"
+          },
+          {
+            "method": "企業IR公開範囲の追加確認",
+            "result": "網羅性を担保できず個別記事を除外。",
+            "source_urls": [
+              "https://www.jpx.co.jp/listing/disclosure/index.html"
+            ],
+            "checked_at": "2026-11-26T06:55:00+09:00"
+          }
+        ],
+        "publication_use": "excluded"
       }
     ]
   },

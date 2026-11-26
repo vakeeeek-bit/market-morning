@@ -1,8 +1,8 @@
 {
-  "status": "qualified",
-  "updated_at": "2026-11-26 06:55:00 JST",
-  "message": "日米11月25日データを更新。異時点・限月不明・個別3銘柄欠測を除外して注釈付き公開候補。",
-  "component": "daily_publication",
-  "publication_status": "QUALIFIED",
-  "component_updated_at": "2026-11-26 06:55:00"
+  "status": "success",
+  "updated_at": "2026-11-26 12:39:32 JST",
+  "message": "Market data update completed and validation passed.",
+  "component": "market_data",
+  "publication_status": "PASS",
+  "component_updated_at": "2026-11-26 12:39:25"
 }

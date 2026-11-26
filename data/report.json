@@ -2207,20 +2207,6 @@
   },
   "events": [
     {
-      "id": "boj-tamura-speech-2026-11-26",
-      "event": "日銀・田村委員講演",
-      "start_at_jst": "2026-11-26T10:00:00+09:00",
-      "jst_time": "2026-11-26 10:00 JST",
-      "forecast": "未確認",
-      "previous": "未確認",
-      "focus": "経済・物価・金融政策に関する見解",
-      "affected_markets": "円・国内金利・日本株",
-      "importance": "高",
-      "source_url": "https://www.boj.or.jp/about/calendar/",
-      "source_name": "日本銀行",
-      "verified_on": "2026-11-23"
-    },
-    {
       "id": "boj-ueda-speech-2026-11-30",
       "event": "日銀・植田総裁講演",
       "start_at_jst": "2026-11-30T10:05:00+09:00",
@@ -2308,7 +2294,7 @@
   ],
   "events_metadata": {
     "status": "取得済",
-    "updated_at": "2026-11-26T06:46:40+09:00",
+    "updated_at": "2026-11-26T12:39:25+09:00",
     "window_start": "2026-11-26",
     "window_end": "2026-12-10",
     "timezone": "Asia/Tokyo",

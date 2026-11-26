@@ -1,0 +1,634 @@
+{
+  "version": "2.0",
+  "report_date": "2026-11-27",
+  "target_market_date": "2026-11-26",
+  "updated_at": "2026-11-27T06:58:00+09:00",
+  "scope_note": "日本26日終値・Breadth、日銀田村委員講演、米感謝祭休場を確認。26日業種・個別再取得失敗、異時点・限月不明・非網羅項目を結論から除外。",
+  "research_coverage": {
+    "status": "QUALIFIED",
+    "directions": [
+      {
+        "id": "fixed_universe",
+        "status": "PASS",
+        "evidence": "日本26日指数・Breadth、米25日直近終値・VIX、11業種を確認。米26日休場を明示。"
+      },
+      {
+        "id": "cross_news",
+        "status": "QUALIFIED",
+        "evidence": "日経指数、日銀、NYSE一次資料を実読。開示・評価変更は非網羅。"
+      },
+      {
+        "id": "reverse_from_anomalies",
+        "status": "PASS",
+        "evidence": "日経平均+0.86%に対しTOPIX+0.11%、値下がり優勢、引け失速を逆引き。"
+      },
+      {
+        "id": "previous_day_change",
+        "status": "PASS",
+        "evidence": "前回のAI反落警戒から自律反発へ更新。ただしBreadth弱含みで全面強気へ変更せず。"
+      }
+    ],
+    "items": [
+      {
+        "id": "fixed_market_universe",
+        "label": "米国・日本の指数と市場内部",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "日本26日指数・Breadth、米25日直近終値を確認。",
+        "attempts": [
+          {
+            "method": "market.json、日経指数公式、Reuters照合",
+            "result": "指数方向・市場日・内部強弱を確認。",
+            "source_urls": [
+              "https://indexes.nikkei.co.jp/en/nkave/archives/summary?dt=20261125&idx=nk225"
+            ],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          }
+        ],
+        "publication_use": "selected"
+      },
+      {
+        "id": "japan_enrichment",
+        "label": "日本17業種・34銘柄",
+        "tier": "Required",
+        "status": "十分調査したが取得不能",
+        "evidence": "再取得は7/17業種・15/34銘柄で品質ゲート未達。前回値を保持し26日分析から除外。",
+        "attempts": [
+          {
+            "method": "対象を分割して再取得",
+            "result": "17業種取得、個別3件はレート制限継続。",
+            "source_urls": [
+              "https://finance.yahoo.com/"
+            ],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          },
+          {
+            "method": "代替公開範囲の追加確認",
+            "result": "一次資料または全件網羅性を確認できず、依存する主張を除外。",
+            "source_urls": [
+              "https://finance.yahoo.co.jp/"
+            ],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          }
+        ],
+        "publication_use": "excluded",
+        "impact_if_unavailable": "指数・Breadthの確認済み公表値のみ使用。"
+      },
+      {
+        "id": "policy_macro",
+        "label": "政策・マクロ",
+        "tier": "Critical",
+        "status": "取得済",
+        "evidence": "日銀田村委員講演とNYSE日程を一次資料で実読。",
+        "attempts": [
+          {
+            "method": "公式資料実読",
+            "result": "GDP・PCE実績と日銀更新を確認。",
+            "source_urls": [
+              "https://www.bea.gov/news/2026/gross-domestic-product-3rd-quarter-and-corporate-profits-preliminary-estimate",
+              "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026",
+              "https://www.boj.or.jp/en/research/research_data/cpi/index.htm"
+            ],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          }
+        ],
+        "publication_use": "selected"
+      },
+      {
+        "id": "analyst_rating_changes",
+        "label": "アナリスト評価変更",
+        "tier": "Required",
+        "status": "十分調査したが取得不能",
+        "evidence": "公開範囲を確認したが証券会社原文と全件網羅性を確認できず、不掲載。",
+        "impact_if_unavailable": "評価変更に依存する個別株判断を除外。",
+        "attempts": [
+          {
+            "method": "公開ニュース一覧の追加確認",
+            "result": "証券会社原文がないため掲載除外。",
+            "source_urls": [
+              "https://finance.yahoo.co.jp/"
+            ],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          },
+          {
+            "method": "代替公開範囲の追加確認",
+            "result": "一次資料または全件網羅性を確認できず、依存する主張を除外。",
+            "source_urls": [
+              "https://kabutan.jp/news/"
+            ],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          }
+        ],
+        "publication_use": "excluded"
+      },
+      {
+        "id": "company_disclosures",
+        "label": "国内企業開示",
+        "tier": "Required",
+        "status": "十分調査したが取得不能",
+        "evidence": "TDnet公開範囲を確認したが全適時開示の実読と株価反応確認を完了できず、個別株記事は不掲載。",
+        "impact_if_unavailable": "企業固有材料に依存する個別株判断を除外。",
+        "attempts": [
+          {
+            "method": "企業IR公開範囲の追加確認",
+            "result": "網羅性を担保できず個別記事を除外。",
+            "source_urls": [
+              "https://www.jpx.co.jp/listing/disclosure/index.html"
+            ],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          },
+          {
+            "method": "代替公開範囲の追加確認",
+            "result": "一次資料または全件網羅性を確認できず、依存する主張を除外。",
+            "source_urls": [
+              "https://www.release.tdnet.info/inbs/I_main_00.html"
+            ],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          }
+        ],
+        "publication_use": "excluded"
+      }
+    ]
+  },
+  "analysis_quality": {
+    "status": "PASS",
+    "materials": [
+      {
+        "headline": "日本はAI反発も市場内部は弱い",
+        "fact": {
+          "text": "日本26日は日経平均+0.86%、TOPIX+0.11%。日経平均は一時+2.18%まで上昇後に上げ幅を縮め、値上がり727・値下がり776で、反発を全面高とは扱わない。 AI・半導体関連の買い戻しが指数を押し上げたが、日経平均は高値58,251.93円から57,499.16円へ失速。AI調整終了ではなく自律反発の確認段階。",
+          "source_urls": [
+            "https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20261126&idx=nk225",
+            "https://www.jpx.co.jp/markets/equities/summary/"
+          ],
+          "verification_status": "PASS"
+        },
+        "observed_market_reaction": {
+          "text": "日経平均は高値から引けまで752.77円上げ幅を縮小。",
+          "assets_checked": [
+            "日本株",
+            "国内債券",
+            "USD/JPY"
+          ]
+        },
+        "market_internals": {
+          "text": "値上がり727・値下がり776。"
+        },
+        "market_pricing": {
+          "status": "partially_priced",
+          "text": "AI反発は指数に反映、幅広い銘柄には未波及。"
+        },
+        "interpretation": {
+          "text": "自律反発であり全面リスクオンではない。",
+          "confidence": "supported",
+          "evidence": "指数格差、Breadth、日中失速。",
+          "uncertainty": "26日業種ランキングは取得失敗。"
+        },
+        "japan_transmission": {
+          "economic_channel": "米テック下げ幅縮小→日本AI買い戻し→日経反発→Breadth追随せず",
+          "intermediate_reactions": [
+            "日経平均一時+2.18%",
+            "引け+0.86%"
+          ],
+          "affected_sectors": [
+            "電機・精密",
+            "機械"
+          ],
+          "pricing_in_japan": "26日終値で一部反映",
+          "assessment": "確認済み（指数）、限定（業種）"
+        },
+        "counter_evidence": [
+          "TOPIXは+0.11%",
+          "値下がり銘柄が多い"
+        ],
+        "change_conditions": [
+          "日経平均58,251.93円回復",
+          "Breadth改善"
+        ],
+        "chronology_check": "PASS",
+        "conflict_resolution": "米25日引け、日本26日取引、米26日休場を順序分離。"
+      },
+      {
+        "headline": "日銀正常化方向と市場の鈍い反応",
+        "fact": {
+          "text": "田村日銀審議委員は、基調物価が2%目標と整合的な水準に達し、政策金利を中立水準へ少しでも早く近づける必要があるとの見解を示した。",
+          "source_urls": [
+            "https://www.boj.or.jp/about/press/koen_2026/ko261126a.htm"
+          ],
+          "verification_status": "PASS"
+        },
+        "observed_market_reaction": {
+          "text": "ドル円は159円台前半でもみ合い、国内10年金利は2.630%へ低下。",
+          "assets_checked": [
+            "USD/JPY",
+            "日本国債",
+            "日本株"
+          ]
+        },
+        "market_internals": {
+          "text": "26日業種ランキングは取得失敗のため銀行・不動産実績を判定しない。"
+        },
+        "market_pricing": {
+          "status": "unknown",
+          "text": "次回利上げの確率・幅は未確認。"
+        },
+        "interpretation": {
+          "text": "方向はタカ派だが政策決定ではない。",
+          "confidence": "supported",
+          "evidence": "日銀一次資料。",
+          "uncertainty": "市場の織り込み度。"
+        },
+        "japan_transmission": {
+          "economic_channel": "利上げ期待→円・国内金利→銀行/不動産/高PER株",
+          "intermediate_reactions": [
+            "円はもみ合い",
+            "10年金利は低下"
+          ],
+          "affected_sectors": [
+            "銀行",
+            "不動産",
+            "高PER成長株"
+          ],
+          "pricing_in_japan": "明確な同時反応を確認できず",
+          "assessment": "条件付き"
+        },
+        "counter_evidence": [
+          "円の方向感なし",
+          "国内10年金利低下"
+        ],
+        "change_conditions": [
+          "円高・金利上昇・銀行優位が同時進行"
+        ],
+        "chronology_check": "PASS",
+        "conflict_resolution": "講演事実と同日価格反応を分離。"
+      }
+    ],
+    "template_degradation_audit": {
+      "today_specific": true,
+      "previous_report_compared": true,
+      "actual_market_reaction_checked": true,
+      "multi_asset_checked": true,
+      "conflicting_materials_compared": true,
+      "transmission_explained": true,
+      "observable_change_conditions": true,
+      "comparison_note": "前回のAI反落警戒から自律反発へ更新。ただしBreadth悪化と引け失速で全面強気へ変更せず。"
+    }
+  },
+  "counter_evidence_audit": {
+    "status": "PASS",
+    "conclusions": [
+      {
+        "conclusion": "AI反発は確認したが全面高ではない",
+        "checks": [
+          "TOPIX+0.11%",
+          "値下がり776>値上がり727",
+          "日経平均は高値から失速"
+        ],
+        "weighing": "指数上昇と内部弱含みを併記。",
+        "uncertainty": "26日業種ランキングは取得失敗。",
+        "result": "supported_with_limits"
+      },
+      {
+        "conclusion": "田村発言は利上げ方向を支持",
+        "checks": [
+          "日銀一次資料",
+          "円はもみ合い",
+          "国内10年金利低下"
+        ],
+        "weighing": "発言と価格反応を分離。",
+        "uncertainty": "次回決定は未確定。",
+        "result": "supported_with_limits"
+      }
+    ]
+  },
+  "cross_asset_consistency": {
+    "status": "QUALIFIED",
+    "assets_checked": [
+      "equities",
+      "rates",
+      "fx",
+      "commodities",
+      "crypto"
+    ],
+    "relationships": [
+      {
+        "combination": "日本指数反発・Breadth弱含み",
+        "explanation": "日経平均+0.86%に対しTOPIX+0.11%、値下がりが値上がりを上回る。",
+        "unresolved": false
+      },
+      {
+        "combination": "田村委員発言と円・国内金利",
+        "explanation": "ドル円はもみ合い、国内10年金利は低下。タカ派発言だけで織り込み加速とは断定しない。",
+        "unresolved": false
+      },
+      {
+        "combination": "米株と26日クロスアセット",
+        "explanation": "米現物休場で新しい現物反応なし。",
+        "unresolved": true,
+        "uncertainty": "27日短縮取引待ち"
+      },
+      {
+        "combination": "株式と商品",
+        "explanation": "先物限月・値種別未確認のため除外。",
+        "unresolved": true,
+        "uncertainty": "限月不明"
+      }
+    ]
+  },
+  "previous_day_change": {
+    "status": "PASS",
+    "prior_view": "25日はAI・外需安と内需回転。米SOX下げ幅縮小を受けた日本半導体の自律反発余地を監視。",
+    "new_events": [
+      "日本26日は日経平均+0.86%、TOPIX+0.11%。日経平均は一時+2.18%まで上昇後に上げ幅を縮め、値上がり727・値下がり776で、反発を全面高とは扱わない。",
+      "AI・半導体関連の買い戻しが指数を押し上げたが、日経平均は高値58,251.93円から57,499.16円へ失速。AI調整終了ではなく自律反発の確認段階。",
+      "田村日銀審議委員は、基調物価が2%目標と整合的な水準に達し、政策金利を中立水準へ少しでも早く近づける必要があるとの見解を示した。"
+    ],
+    "changed": [
+      "日本AI・半導体の自律反発を確認。",
+      "Breadth弱含みと引け失速から全面強気への変更を見送り。",
+      "田村委員の中立水準への早期接近見解を追加。"
+    ],
+    "unchanged": [
+      "AI中期需要と採算・評価倍率リスクを分けて見る。",
+      "異時点データから因果を断定しない。"
+    ],
+    "japan_revision": "自律反発を認めつつ、26日高値回復とBreadth改善を上方変更条件とする。"
+  },
+  "source_quality": {
+    "status": "PASS",
+    "checks": [
+      "日経指数公式を実読。",
+      "日銀田村委員講演を実読。",
+      "NYSE休場・短縮取引日程を実読。"
+    ]
+  },
+  "data_integrity": {
+    "status": "QUALIFIED",
+    "checks": [
+      "日本26日と米25日・米金利24日を分離。",
+      "YahooのVIX26日付値を休場日程により除外。",
+      "日本業種・個別ランキング再取得失敗を除外。",
+      "商品は限月不明で除外。"
+    ]
+  },
+  "quality_gates": {
+    "research_coverage": "QUALIFIED",
+    "source_quality": "PASS",
+    "data_integrity": "QUALIFIED",
+    "analysis_logic": "PASS",
+    "cross_asset_consistency": "QUALIFIED",
+    "japan_transmission": "PASS",
+    "counter_evidence_audit": "PASS",
+    "previous_day_change": "PASS",
+    "final_content_audit": "PASS"
+  },
+  "publication_decision": {
+    "status": "QUALIFIED",
+    "decided_at": "2026-11-27T06:58:00+09:00",
+    "summary": "日本26日終値・日銀発言・米休場日程を確認。26日業種・個別ランキング、異時点・限月不明・非網羅項目を除外して公開。",
+    "components": {
+      "ai_report": {
+        "status": "QUALIFIED",
+        "updated_at": "2026-11-27T06:58:00+09:00",
+        "reason": "異時点・限月不明・非網羅項目を除外。"
+      },
+      "japan_stocks": {
+        "status": "QUALIFIED",
+        "updated_at": "2026-11-27T06:58:00+09:00",
+        "reason": "指数・Breadth・政策材料のみ。企業固有記事と26日業種ランキングを除外。"
+      },
+      "world_market": {
+        "status": "PASS",
+        "updated_at": "2026-11-27 06:51:05",
+        "reason": "取得済み系列を市場日付きで表示し、米休場を注記。"
+      },
+      "japan_market": {
+        "status": "BLOCK",
+        "updated_at": "2026-11-27 06:56:00 JST",
+        "reason": "26日業種・個別ランキングは再取得失敗で除外。"
+      },
+      "verified_news": {
+        "status": "PASS",
+        "updated_at": "2026-11-27T06:58:00+09:00",
+        "reason": "一次資料実読済み3件。"
+      }
+    },
+    "unresolved_items": [
+      {
+        "id": "contracts",
+        "status": "QUALIFIED",
+        "missing": "商品先物は限月と値種別を確認できないため、Gold・Silver・WTI・Brent・Copperを分析から除外。",
+        "impact": "商品・日経先物に依存する分析を除外。",
+        "last_checked_at": "2026-11-27T06:58:00+09:00",
+        "next_action": "次回取得時に再照合し、確認完了まで引き継ぐ。",
+        "attempts": [
+          {
+            "method": "当日取得・一次資料・現行main・Google Drive検索の照合",
+            "result": "商品先物は限月と値種別を確認できないため、Gold・Silver・WTI・Brent・Copperを分析から除外。",
+            "source_urls": [],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          },
+          {
+            "method": "当日取得・一次資料・現行main・Google Drive検索の照合",
+            "result": "商品先物は限月と値種別を確認できないため、Gold・Silver・WTI・Brent・Copperを分析から除外。",
+            "source_urls": [],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          },
+          {
+            "method": "当日取得・一次資料・現行main・Google Drive検索の照合",
+            "result": "商品先物は限月と値種別を確認できないため、Gold・Silver・WTI・Brent・Copperを分析から除外。",
+            "source_urls": [],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          },
+          {
+            "method": "当日取得・一次資料・現行main・Google Drive検索の照合",
+            "result": "商品先物は限月と値種別を確認できないため、Gold・Silver・WTI・Brent・Copperを分析から除外。",
+            "source_urls": [],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "未確認項目に依存する断定"
+        ],
+        "excluded_from_publication": true,
+        "first_seen_at": "2026-11-24T06:55:00+09:00"
+      },
+      {
+        "id": "coverage",
+        "status": "QUALIFIED",
+        "missing": "国内全適時開示、証券会社評価変更、通商・制裁の網羅確認は未完了。未調査を「材料なし」と扱わない。",
+        "impact": "網羅性を前提とする断定を除外。",
+        "last_checked_at": "2026-11-27T06:58:00+09:00",
+        "next_action": "次回取得時に再照合し、確認完了まで引き継ぐ。",
+        "attempts": [
+          {
+            "method": "当日取得・一次資料・現行main・Google Drive検索の照合",
+            "result": "国内全適時開示、証券会社評価変更、通商・制裁の網羅確認は未完了。未調査を「材料なし」と扱わない。",
+            "source_urls": [],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          },
+          {
+            "method": "当日取得・一次資料・現行main・Google Drive検索の照合",
+            "result": "国内全適時開示、証券会社評価変更、通商・制裁の網羅確認は未完了。未調査を「材料なし」と扱わない。",
+            "source_urls": [],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          },
+          {
+            "method": "当日取得・一次資料・現行main・Google Drive検索の照合",
+            "result": "国内全適時開示、証券会社評価変更、通商・制裁の網羅確認は未完了。未調査を「材料なし」と扱わない。",
+            "source_urls": [],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          },
+          {
+            "method": "当日取得・一次資料・現行main・Google Drive検索の照合",
+            "result": "国内全適時開示、証券会社評価変更、通商・制裁の網羅確認は未完了。未調査を「材料なし」と扱わない。",
+            "source_urls": [],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "未確認項目に依存する断定"
+        ],
+        "excluded_from_publication": true,
+        "first_seen_at": "2026-11-24T06:55:00+09:00"
+      },
+      {
+        "id": "project_docs",
+        "status": "QUALIFIED",
+        "missing": "Project Instructions以外のProject添付仕様書v2三点は今回のGoogle Drive検索でも確認できず、現行mainのスキーマ・検証・公開ルールを適用。",
+        "impact": "添付v2との差分監査ができない。",
+        "last_checked_at": "2026-11-27T06:58:00+09:00",
+        "next_action": "次回取得時に再照合し、確認完了まで引き継ぐ。",
+        "attempts": [
+          {
+            "method": "当日取得・一次資料・現行main・Google Drive検索の照合",
+            "result": "Project Instructions以外のProject添付仕様書v2三点は今回のGoogle Drive検索でも確認できず、現行mainのスキーマ・検証・公開ルールを適用。",
+            "source_urls": [],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          },
+          {
+            "method": "当日取得・一次資料・現行main・Google Drive検索の照合",
+            "result": "Project Instructions以外のProject添付仕様書v2三点は今回のGoogle Drive検索でも確認できず、現行mainのスキーマ・検証・公開ルールを適用。",
+            "source_urls": [],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          },
+          {
+            "method": "当日取得・一次資料・現行main・Google Drive検索の照合",
+            "result": "Project Instructions以外のProject添付仕様書v2三点は今回のGoogle Drive検索でも確認できず、現行mainのスキーマ・検証・公開ルールを適用。",
+            "source_urls": [],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          },
+          {
+            "method": "当日取得・一次資料・現行main・Google Drive検索の照合",
+            "result": "Project Instructions以外のProject添付仕様書v2三点は今回のGoogle Drive検索でも確認できず、現行mainのスキーマ・検証・公開ルールを適用。",
+            "source_urls": [],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "未確認項目に依存する断定"
+        ],
+        "excluded_from_publication": true,
+        "first_seen_at": "2026-11-24T06:55:00+09:00"
+      },
+      {
+        "id": "stale_cross_asset",
+        "status": "QUALIFIED",
+        "missing": "米国現物は11月26日感謝祭休場。米株・米業種・VIXは11月25日終値、FRED米2年・10年金利は11月24日公表値で同時点ではない。",
+        "impact": "25日の株価と金利・為替・商品の同時反応を保留。",
+        "last_checked_at": "2026-11-27T06:58:00+09:00",
+        "next_action": "次回取得時に再照合し、確認完了まで引き継ぐ。",
+        "attempts": [
+          {
+            "method": "当日取得・一次資料・現行main・Google Drive検索の照合",
+            "result": "米国現物は11月26日感謝祭休場。米株・米業種・VIXは11月25日終値、FRED米2年・10年金利は11月24日公表値で同時点ではない。",
+            "source_urls": [],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          },
+          {
+            "method": "当日取得・一次資料・現行main・Google Drive検索の照合",
+            "result": "米国現物は11月26日感謝祭休場。米株・米業種・VIXは11月25日終値、FRED米2年・10年金利は11月24日公表値で同時点ではない。",
+            "source_urls": [],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          },
+          {
+            "method": "当日取得・一次資料・現行main・Google Drive検索の照合",
+            "result": "米国現物は11月26日感謝祭休場。米株・米業種・VIXは11月25日終値、FRED米2年・10年金利は11月24日公表値で同時点ではない。",
+            "source_urls": [],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          },
+          {
+            "method": "当日取得・一次資料・現行main・Google Drive検索の照合",
+            "result": "米国現物は11月26日感謝祭休場。米株・米業種・VIXは11月25日終値、FRED米2年・10年金利は11月24日公表値で同時点ではない。",
+            "source_urls": [],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          }
+        ],
+        "affected_components": [
+          "ai_report",
+          "japan_stocks"
+        ],
+        "excluded_claims": [
+          "未確認項目に依存する断定"
+        ],
+        "excluded_from_publication": true,
+        "first_seen_at": "2026-11-24T06:55:00+09:00"
+      },
+      {
+        "id": "japan_stock_coverage",
+        "status": "BLOCK",
+        "attempts": [
+          {
+            "method": "当日取得・一次資料・現行main・Google Drive検索の照合",
+            "result": "日本17業種・監視34銘柄の11月26日一括再取得はレート制限で7/17業種、15/34銘柄に留まり、品質ゲート未達。11月25日値を保持し、26日の業種・個別ランキング分析から除外。",
+            "source_urls": [],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          },
+          {
+            "method": "当日取得・一次資料・現行main・Google Drive検索の照合",
+            "result": "日本17業種・監視34銘柄の11月26日一括再取得はレート制限で7/17業種、15/34銘柄に留まり、品質ゲート未達。11月25日値を保持し、26日の業種・個別ランキング分析から除外。",
+            "source_urls": [],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          },
+          {
+            "method": "当日取得・一次資料・現行main・Google Drive検索の照合",
+            "result": "日本17業種・監視34銘柄の11月26日一括再取得はレート制限で7/17業種、15/34銘柄に留まり、品質ゲート未達。11月25日値を保持し、26日の業種・個別ランキング分析から除外。",
+            "source_urls": [],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          },
+          {
+            "method": "当日取得・一次資料・現行main・Google Drive検索の照合",
+            "result": "日本17業種・監視34銘柄の11月26日一括再取得はレート制限で7/17業種、15/34銘柄に留まり、品質ゲート未達。11月25日値を保持し、26日の業種・個別ランキング分析から除外。",
+            "source_urls": [],
+            "checked_at": "2026-11-27T06:58:00+09:00"
+          }
+        ],
+        "first_seen_at": "2026-11-26T06:55:00+09:00",
+        "missing": "日本17業種・監視34銘柄の11月26日一括再取得はレート制限で7/17業種、15/34銘柄に留まり、品質ゲート未達。11月25日値を保持し、26日の業種・個別ランキング分析から除外。",
+        "impact": "11月26日の日本業種・個別ランキング公開単位を停止。指数・Breadthの独立公開は継続。",
+        "last_checked_at": "2026-11-27T06:58:00+09:00",
+        "next_action": "次回取得時に再照合し、確認完了まで引き継ぐ。",
+        "affected_components": [
+          "japan_market"
+        ],
+        "excluded_claims": [
+          "未確認項目に依存する断定"
+        ],
+        "excluded_from_publication": true
+      }
+    ],
+    "resolved_item_ids": []
+  }
+}

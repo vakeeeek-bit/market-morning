@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26 14:12:15",
+  "updated_at": "2026-11-27 06:51:05",
   "timezone": "Asia/Tokyo",
   "source": "Yahoo Finance via yfinance for market closes; FRED DGS2/DGS10 for US Treasury yields",
   "notes": {
@@ -82,24 +82,25 @@
     "nikkei225": {
       "name": "日経225",
       "ticker": "^N225",
-      "price": 57011.6211,
-      "previous": 58644.6289,
-      "change": -1633.0078,
-      "change_pct": -2.78,
+      "price": 57499.16,
+      "previous": 57011.6211,
+      "change": 487.5389,
+      "change_pct": 0.86,
       "status": "取得成功",
-      "market_date": "2026-11-25",
-      "previous_market_date": "2026-11-24"
+      "market_date": "2026-11-26",
+      "previous_market_date": "2026-11-25",
+      "retrieval_method": "日経平均プロフィル公式日次サマリー照合"
     },
     "topix": {
       "name": "TOPIX参考（1306 ETF）",
       "ticker": "1306.T",
-      "price": 394.7,
-      "previous": 395.9,
-      "change": -1.2,
-      "change_pct": -0.3,
+      "price": 394.6,
+      "previous": 394.7,
+      "change": -0.1,
+      "change_pct": -0.03,
       "status": "取得成功",
-      "market_date": "2026-11-25",
-      "previous_market_date": "2026-11-24"
+      "market_date": "2026-11-26",
+      "previous_market_date": "2026-11-25"
     },
     "dxy": {
       "name": "DXY",
@@ -155,7 +156,8 @@
       "change_pct": 7.32,
       "status": "取得成功",
       "market_date": "2026-11-25",
-      "previous_market_date": "2026-11-24"
+      "previous_market_date": "2026-11-24",
+      "stale_reason": "2026-11-26はNYSE感謝祭休場。Yahooの11月26日付値は確定米現物セッション値として採用せず、直近確認済みの11月25日終値を維持"
     },
     "sector_xlc": {
       "name": "米コミュニケーション・サービス（XLC）",
@@ -287,7 +289,8 @@
       "change_pct": -0.73,
       "status": "取得成功",
       "market_date": "2026-11-25",
-      "previous_market_date": "2026-11-24"
+      "previous_market_date": "2026-11-24",
+      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
     },
     "silver": {
       "name": "Silver",
@@ -298,7 +301,8 @@
       "change_pct": -1.74,
       "status": "取得成功",
       "market_date": "2026-11-25",
-      "previous_market_date": "2026-11-24"
+      "previous_market_date": "2026-11-24",
+      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
     },
     "copper": {
       "name": "Copper",
@@ -309,7 +313,8 @@
       "change_pct": -0.56,
       "status": "取得成功",
       "market_date": "2026-11-25",
-      "previous_market_date": "2026-11-24"
+      "previous_market_date": "2026-11-24",
+      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
     },
     "wti": {
       "name": "WTI",
@@ -320,7 +325,8 @@
       "change_pct": 1.99,
       "status": "取得成功",
       "market_date": "2026-11-25",
-      "previous_market_date": "2026-11-24"
+      "previous_market_date": "2026-11-24",
+      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
     },
     "brent": {
       "name": "Brent",
@@ -331,29 +337,30 @@
       "change_pct": 3.51,
       "status": "取得成功",
       "market_date": "2026-11-25",
-      "previous_market_date": "2026-11-24"
+      "previous_market_date": "2026-11-24",
+      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
     },
     "btc": {
       "name": "BTC",
       "ticker": "BTC-USD",
-      "price": 59747.7656,
-      "previous": 61210.9844,
-      "change": -1463.2188,
-      "change_pct": -2.39,
+      "price": 60378.1992,
+      "previous": 59747.7656,
+      "change": 630.4336,
+      "change_pct": 1.06,
       "status": "取得成功",
-      "market_date": "2026-11-24",
-      "previous_market_date": "2026-11-23"
+      "market_date": "2026-11-25",
+      "previous_market_date": "2026-11-24"
     },
     "eth": {
       "name": "ETH",
       "ticker": "ETH-USD",
-      "price": 1677.6948,
-      "previous": 1708.8513,
-      "change": -31.1565,
-      "change_pct": -1.82,
+      "price": 1690.769,
+      "previous": 1677.6948,
+      "change": 13.0742,
+      "change_pct": 0.78,
       "status": "取得成功",
-      "market_date": "2026-11-24",
-      "previous_market_date": "2026-11-23"
+      "market_date": "2026-11-25",
+      "previous_market_date": "2026-11-24"
     },
     "us2y": {
       "name": "米2年債利回り",

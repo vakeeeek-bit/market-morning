@@ -1,124 +1,126 @@
 {
-  "report_date": "2026-11-26",
+  "report_date": "2026-11-27",
   "target_market_date": "2026-11-25",
-  "updated_at": "2026-11-26T06:55:00+09:00",
+  "updated_at": "2026-11-27T06:58:00+09:00",
   "publication_mode": "verified_news",
   "coverage_status": "partial",
-  "coverage_note": "一次資料実読済み3件のみ掲載。国内全開示、評価変更、通商・制裁は非網羅で「材料なし」と断定しない。",
+  "coverage_note": "一次資料を実読できた3件のみ。国内全適時開示・評価変更・政策資料の網羅調査ではない。",
   "articles": [
     {
-      "id": "nov25-japan-close",
-      "title": "日経平均、11月25日は2.78%下落",
-      "published_date": "2026-11-25",
-      "verified_at": "2026-11-26T06:55:00+09:00",
+      "id": "nov26-nikkei-close",
+      "title": "日経平均、11月26日は57,499.16円で終了",
+      "published_date": "2026-11-26",
+      "verified_at": "2026-11-27T06:58:00+09:00",
       "source_type": "primary",
       "publisher": "Nikkei Indexes",
-      "source_url": "https://indexes.nikkei.co.jp/en/nkave/archives/summary?dt=20261125&idx=nk225",
-      "verification_url": "https://indexes.nikkei.co.jp/en/nkave/archives/summary?dt=20261125&idx=nk225",
+      "source_url": "https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20261126&idx=nk225",
+      "verification_url": "https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20261126&idx=nk225",
       "verification_status": "PASS",
-      "fact": "日経平均は11月25日に57,011.62円で終了し、前日比1,633.01円、2.78%下落。構成銘柄は127上昇、96下落、2変わらず。",
-      "analysis": "指数寄与の大きいAI・外需株の下落に対し、市場内部は指数ほど弱くない。",
-      "limitations": "TOPIXと業種値は別資料・ETF代理で照合。材料別寄与率は未確認。",
+      "fact": "日経平均は前日比487.54円（0.86%）高の57,499.16円。高値58,251.93円、安値57,288.10円。",
+      "analysis": "前日の急落後の反発だが、高値から上げ幅を縮めた。",
+      "limitations": "TOPIX・Breadth・材料寄与は別資料で確認し、この記事単独では市場全体を断定しない。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
         "source_read": {
           "status": "PASS",
-          "evidence": "日経指数公式日次サマリーを実読。"
+          "evidence": "一次資料本文を実読。"
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "日経指数公式日次サマリーを実読。"
+          "evidence": "掲載値・日程・発言を一次資料で照合。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日・対象期・確認日を分離。"
+          "evidence": "発表日、対象市場日、確認日を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
-          "evidence": "確認済み事実と分析を分離。"
+          "evidence": "確認済み事実と分析を別欄に記載。"
         },
         "limitations": {
           "status": "PASS",
-          "evidence": "材料寄与と市場反応の未確認範囲を明記。"
+          "evidence": "市場反応・網羅性の限界を明示。"
         }
       }
     },
     {
-      "id": "nov25-us-gdp-pce",
-      "title": "米Q3 GDP改定値+4.3%、10月コアPCE+3.3%",
-      "published_date": "2026-11-25",
-      "verified_at": "2026-11-26T06:55:00+09:00",
-      "source_type": "primary",
-      "publisher": "U.S. Bureau of Economic Analysis",
-      "source_url": "https://www.bea.gov/news/2026/gross-domestic-product-3rd-quarter-and-corporate-profits-preliminary-estimate",
-      "verification_url": "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026",
-      "verification_status": "PASS",
-      "fact": "実質GDPはQ3年率+4.3%。10月PCE価格は前年比+3.8%、食品・エネルギー除くコアは+3.3%。",
-      "analysis": "成長・物価の強さは金融緩和期待を抑え得るが、同日の金利反応は未確認。",
-      "limitations": "市場予想との差、25日金利、材料別株価寄与は未確認。",
-      "market_reaction_status": "unverified",
-      "market_reaction": "未確認",
-      "verification": {
-        "source_read": {
-          "status": "PASS",
-          "evidence": "BEAのGDPおよびPersonal Income and Outlaysを実読。"
-        },
-        "facts_verified": {
-          "status": "PASS",
-          "evidence": "BEAのGDPおよびPersonal Income and Outlaysを実読。"
-        },
-        "chronology": {
-          "status": "PASS",
-          "evidence": "発表日・対象期・確認日を分離。"
-        },
-        "fact_analysis_separation": {
-          "status": "PASS",
-          "evidence": "確認済み事実と分析を分離。"
-        },
-        "limitations": {
-          "status": "PASS",
-          "evidence": "材料寄与と市場反応の未確認範囲を明記。"
-        }
-      }
-    },
-    {
-      "id": "nov25-boj-inflation",
-      "title": "日銀、基調的なインフレ率指標を更新",
-      "published_date": "2026-11-25",
-      "verified_at": "2026-11-26T06:55:00+09:00",
+      "id": "nov26-boj-tamura",
+      "title": "田村委員、金融環境はなお緩和的との見解",
+      "published_date": "2026-11-26",
+      "verified_at": "2026-11-27T06:58:00+09:00",
       "source_type": "primary",
       "publisher": "Bank of Japan",
-      "source_url": "https://www.boj.or.jp/en/research/research_data/cpi/index.htm",
-      "verification_url": "https://www.boj.or.jp/en/research/research_data/cpi/index.htm",
+      "source_url": "https://www.boj.or.jp/about/press/koen_2026/ko261126a.htm",
+      "verification_url": "https://www.boj.or.jp/about/press/koen_2026/ko261126a.htm",
       "verification_status": "PASS",
-      "fact": "日銀は11月25日に基調的なインフレ率を捕捉する指標を更新し、10月データを公表した。",
-      "analysis": "賃金・サービス価格の持続性と政策判断の材料。方向は複数指標と日銀説明を併せて確認する。",
-      "limitations": "単一指標から政策変更を断定せず、当日の株価寄与も未確認。",
+      "fact": "田村委員は、基調的物価が2%目標と整合的な水準に達し、政策金利を中立水準へ少しでも早く持っていく必要があり、現行金融環境はなお緩和的との見解を示した。",
+      "analysis": "追加利上げ方向を支持する材料だが、会合決定ではない。",
+      "limitations": "具体的な次回決定や利上げ時期を確定した発表ではない。",
       "market_reaction_status": "unverified",
       "market_reaction": "未確認",
       "verification": {
         "source_read": {
           "status": "PASS",
-          "evidence": "日銀公式データページと更新日を実読。"
+          "evidence": "一次資料本文を実読。"
         },
         "facts_verified": {
           "status": "PASS",
-          "evidence": "日銀公式データページと更新日を実読。"
+          "evidence": "掲載値・日程・発言を一次資料で照合。"
         },
         "chronology": {
           "status": "PASS",
-          "evidence": "発表日・対象期・確認日を分離。"
+          "evidence": "発表日、対象市場日、確認日を分離。"
         },
         "fact_analysis_separation": {
           "status": "PASS",
-          "evidence": "確認済み事実と分析を分離。"
+          "evidence": "確認済み事実と分析を別欄に記載。"
         },
         "limitations": {
           "status": "PASS",
-          "evidence": "材料寄与と市場反応の未確認範囲を明記。"
+          "evidence": "市場反応・網羅性の限界を明示。"
+        }
+      }
+    },
+    {
+      "id": "nov26-nyse-holiday",
+      "title": "NYSE、11月26日は感謝祭休場",
+      "published_date": "2026-11-26",
+      "verified_at": "2026-11-27T06:58:00+09:00",
+      "source_type": "primary",
+      "publisher": "NYSE",
+      "source_url": "https://www.nyse.com/trade/hours-calendars",
+      "verification_url": "https://www.nyse.com/trade/hours-calendars",
+      "verification_status": "PASS",
+      "fact": "NYSEは2026年11月26日を感謝祭休場日とし、11月27日は米東部13時までの短縮取引と定めている。",
+      "analysis": "米株・業種・VIXの11月25日終値が直近現物セッション。",
+      "limitations": "先物・海外市場の値動きを米現物終値と混同しない。",
+      "market_reaction_status": "unverified",
+      "market_reaction": "未確認",
+      "verification": {
+        "source_read": {
+          "status": "PASS",
+          "evidence": "一次資料本文を実読。"
+        },
+        "facts_verified": {
+          "status": "PASS",
+          "evidence": "掲載値・日程・発言を一次資料で照合。"
+        },
+        "chronology": {
+          "status": "PASS",
+          "evidence": "発表日、対象市場日、確認日を分離。"
+        },
+        "fact_analysis_separation": {
+          "status": "PASS",
+          "evidence": "確認済み事実と分析を別欄に記載。"
+        },
+        "limitations": {
+          "status": "PASS",
+          "evidence": "市場反応・網羅性の限界を明示。"
         }
       }
     }
-  ]
+  ],
+  "collected_at": "2026-11-27T06:58:00+09:00",
+  "edition": "live"
 }

@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "updated_at": "2026-11-26T06:55:00+09:00",
-  "report_date": "2026-11-26",
+  "updated_at": "2026-11-27T06:58:00+09:00",
+  "report_date": "2026-11-27",
   "period_start": "2026-03-18",
-  "period_end": "2026-11-25",
+  "period_end": "2026-11-26",
   "freshness": {
     "status": "current",
-    "latest_report_date": "2026-11-26",
+    "latest_report_date": "2026-11-27",
     "source_report_count": 8,
     "note": "当日レポートと直近の履歴・確認済みニュースから更新"
   },
@@ -845,6 +845,15 @@
           "source_ids": [
             "nov23-jpx-holiday"
           ]
+        },
+        {
+          "date": "2026-11-26",
+          "title": "田村委員は中立水準への早期接近を主張",
+          "fact": "金融環境はなお緩和的で中立水準まで距離があり、政策金利を中立水準へ少しでも早く持っていく必要があるとの見解。",
+          "market_impact": "ドル円は159円台前半でもみ合い、国内10年金利は2.630%へ低下。発言だけで利上げ織り込み加速とは断定しない。",
+          "source_ids": [
+            "nov26-boj-tamura"
+          ]
         }
       ],
       "initial_view": {
@@ -852,16 +861,16 @@
         "text": "政策金利0.75%でも利上げを求める意見が増え、正常化継続が意識された"
       },
       "new_fact": {
-        "date": "2026-11-20",
-        "text": "10月全国CPIは総合+2.3%、コア+2.2%。"
+        "date": "2026-11-26",
+        "text": "田村委員は金融環境をなお緩和的と評価し、中立水準への早期接近が必要との見解を示した。"
       },
       "market_reaction": {
-        "date": "2026-11-20",
-        "text": "日経平均−5.06%、TOPIX連動ETF−3.98%。CPI単独寄与は未確認。"
+        "date": "2026-11-26",
+        "text": "ドル円は159円台前半でもみ合い、国内10年金利は2.630%へ低下。日経平均は+0.86%だが材料別寄与は未確認。"
       },
-      "current_view": "基調物価は2%台で正常化観測を残すが、20日の株価はAI・半導体売りなど複数材料を含む。",
-      "japan_impact": "銀行には相対追い風、高PER株には金利感応度の逆風候補。円・国内金利と株価を同時確認する。",
-      "counter_evidence": "20日の17業種ETF代理は2上昇・15下落だが、CPI単独の業種別寄与は未確認。",
+      "current_view": "追加利上げ方向は維持されるが、田村委員の見解は政策決定ではない。植田総裁30日講演と円・国内金利・銀行・不動産の同時反応で織り込みを確認する。",
+      "japan_impact": "銀行には支援候補、輸出・不動産・高PER株には逆風候補。ただし26日の業種ランキング取得失敗により実績判定は保留。",
+      "counter_evidence": "タカ派的な講演後もドル円は方向感を欠き、国内10年金利は低下。単一発言から政策経路を断定しない。",
       "source_ids": [
         "boj-apr28",
         "boj-jun16",
@@ -903,22 +912,23 @@
         "nov19-trade",
         "nov23-jp-cpi",
         "nov23-market",
-        "nov23-jpx-holiday"
+        "nov23-jpx-holiday",
+        "nov26-boj-tamura"
       ]
     }
   ],
   "scenario_change_conditions": [
     {
       "condition": "AI・半導体",
-      "meaning": "前日高値回復とBreadth維持"
+      "meaning": "両方を確認すれば自律反発から広範な反発へ変更"
     },
     {
-      "condition": "内需ローテーション",
-      "meaning": "上昇業種が過半割れし内需上位も反落"
+      "condition": "日銀正常化",
+      "meaning": "円高・金利上昇・銀行優位がそろえば織り込み加速"
     },
     {
-      "condition": "日銀・米物価",
-      "meaning": "公式発言と複数市場の整合反応を確認"
+      "condition": "米国短縮取引",
+      "meaning": "SOX反発とVIX低下が同時なら日本半導体の支援材料"
     }
   ],
   "sources": [
@@ -1586,6 +1596,13 @@
       "publisher": "日本取引所グループ",
       "published_at": "2026-11-20",
       "url": "https://www.jpx.co.jp/corporate/about-jpx/calendar/index.html"
+    },
+    {
+      "id": "nov26-boj-tamura",
+      "title": "田村審議委員「わが国の経済・物価情勢と金融政策」",
+      "publisher": "Bank of Japan",
+      "published_at": "2026-11-26",
+      "url": "https://www.boj.or.jp/about/press/koen_2026/ko261126a.htm"
     }
   ]
 }

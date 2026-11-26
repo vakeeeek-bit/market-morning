@@ -2,28 +2,28 @@
   "version": "1.0",
   "description": "確認済み一次資料の表示設定",
   "items": {
-    "nov25-japan-close": {
+    "nov26-nikkei-close": {
       "primary_page": "japan",
       "priority": 100,
       "attention_points": [
-        "日経平均は11月25日に2.78%下落",
-        "127銘柄上昇、96銘柄下落"
+        "日経平均+0.86%",
+        "高値から上げ幅縮小"
       ]
     },
-    "nov25-us-gdp-pce": {
-      "primary_page": "world",
+    "nov26-boj-tamura": {
+      "primary_page": "japan",
       "priority": 95,
       "attention_points": [
-        "Q3 GDP改定値は年率+4.3%",
-        "10月コアPCEは前年比+3.3%"
+        "金融環境はなお緩和的",
+        "中立水準への早期接近を主張"
       ]
     },
-    "nov25-boj-inflation": {
-      "primary_page": "japan",
+    "nov26-nyse-holiday": {
+      "primary_page": "world",
       "priority": 90,
       "attention_points": [
-        "日銀が10月の基調的インフレ指標を更新",
-        "政策変更は断定しない"
+        "11月26日は休場",
+        "27日は13時ETまで"
       ]
     }
   }

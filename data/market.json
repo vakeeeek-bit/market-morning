@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27 13:19:02",
+  "updated_at": "2026-11-27 14:09:53",
   "timezone": "Asia/Tokyo",
   "source": "Yahoo Finance via yfinance for market closes; FRED DGS2/DGS10 for US Treasury yields",
   "notes": {
@@ -104,13 +104,13 @@
     "dxy": {
       "name": "DXY",
       "ticker": "DX-Y.NYB",
-      "price": 103.67,
-      "previous": 103.81,
-      "change": -0.14,
-      "change_pct": -0.13,
+      "price": 103.755,
+      "previous": 103.67,
+      "change": 0.085,
+      "change_pct": 0.08,
       "status": "取得成功",
-      "market_date": "2026-11-25",
-      "previous_market_date": "2026-11-24"
+      "market_date": "2026-11-26",
+      "previous_market_date": "2026-11-25"
     },
     "usdjpy": {
       "name": "USD/JPY",
@@ -281,62 +281,57 @@
     "gold": {
       "name": "Gold",
       "ticker": "GC=F",
-      "price": 3535.8,
-      "previous": 3561.8999,
-      "change": -26.0999,
-      "change_pct": -0.73,
+      "price": 3659.3999,
+      "previous": 3535.8,
+      "change": 123.5999,
+      "change_pct": 3.5,
       "status": "取得成功",
-      "market_date": "2026-11-25",
-      "previous_market_date": "2026-11-24",
-      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
+      "market_date": "2026-11-26",
+      "previous_market_date": "2026-11-25"
     },
     "silver": {
       "name": "Silver",
       "ticker": "SI=F",
-      "price": 40.052,
-      "previous": 40.76,
-      "change": -0.708,
-      "change_pct": -1.74,
+      "price": 43.67,
+      "previous": 40.052,
+      "change": 3.618,
+      "change_pct": 9.03,
       "status": "取得成功",
-      "market_date": "2026-11-25",
-      "previous_market_date": "2026-11-24",
-      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
+      "market_date": "2026-11-26",
+      "previous_market_date": "2026-11-25"
     },
     "copper": {
       "name": "Copper",
       "ticker": "HG=F",
-      "price": 5.3325,
-      "previous": 5.3625,
-      "change": -0.03,
-      "change_pct": -0.56,
+      "price": 5.634,
+      "previous": 5.3325,
+      "change": 0.3015,
+      "change_pct": 5.65,
       "status": "取得成功",
-      "market_date": "2026-11-25",
-      "previous_market_date": "2026-11-24",
-      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
+      "market_date": "2026-11-26",
+      "previous_market_date": "2026-11-25"
     },
     "wti": {
       "name": "WTI",
       "ticker": "CL=F",
-      "price": 83.68,
-      "previous": 82.05,
-      "change": 1.63,
-      "change_pct": 1.99,
+      "price": 85.79,
+      "previous": 83.68,
+      "change": 2.11,
+      "change_pct": 2.52,
       "status": "取得成功",
-      "market_date": "2026-11-25",
-      "previous_market_date": "2026-11-24",
-      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
+      "market_date": "2026-11-26",
+      "previous_market_date": "2026-11-25"
     },
     "brent": {
       "name": "Brent",
       "ticker": "BZ=F",
-      "price": 94.61,
-      "previous": 91.4,
-      "change": 3.21,
-      "change_pct": 3.51,
+      "price": 92.32,
+      "previous": 94.61,
+      "change": -2.29,
+      "change_pct": -2.42,
       "status": "取得成功",
-      "market_date": "2026-11-25",
-      "previous_market_date": "2026-11-24",
-      "stability_note": "同一市場日の再取得値が変化したため、検証済みスナップショットを維持"
+      "market_date": "2026-11-26",
+      "previous_market_date": "2026-11-25"
     },
     "btc": {
       "name": "BTC",

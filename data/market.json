@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27 06:51:05",
+  "updated_at": "2026-11-27 12:40:37",
   "timezone": "Asia/Tokyo",
   "source": "Yahoo Finance via yfinance for market closes; FRED DGS2/DGS10 for US Treasury yields",
   "notes": {
@@ -82,14 +82,13 @@
     "nikkei225": {
       "name": "日経225",
       "ticker": "^N225",
-      "price": 57499.16,
+      "price": 57499.1602,
       "previous": 57011.6211,
-      "change": 487.5389,
+      "change": 487.5391,
       "change_pct": 0.86,
       "status": "取得成功",
       "market_date": "2026-11-26",
-      "previous_market_date": "2026-11-25",
-      "retrieval_method": "日経平均プロフィル公式日次サマリー照合"
+      "previous_market_date": "2026-11-25"
     },
     "topix": {
       "name": "TOPIX参考（1306 ETF）",
@@ -116,24 +115,24 @@
     "usdjpy": {
       "name": "USD/JPY",
       "ticker": "JPY=X",
-      "price": 159.262,
-      "previous": 159.009,
-      "change": 0.253,
-      "change_pct": 0.16,
+      "price": 159.215,
+      "previous": 159.262,
+      "change": -0.047,
+      "change_pct": -0.03,
       "status": "取得成功",
-      "market_date": "2026-11-25",
-      "previous_market_date": "2026-11-24"
+      "market_date": "2026-11-26",
+      "previous_market_date": "2026-11-25"
     },
     "eurusd": {
       "name": "EUR/USD",
       "ticker": "EURUSD=X",
-      "price": 1.0962,
-      "previous": 1.0908,
-      "change": 0.0054,
-      "change_pct": 0.5,
+      "price": 1.097,
+      "previous": 1.0962,
+      "change": 0.0008,
+      "change_pct": 0.07,
       "status": "取得成功",
-      "market_date": "2026-11-25",
-      "previous_market_date": "2026-11-24"
+      "market_date": "2026-11-26",
+      "previous_market_date": "2026-11-25"
     },
     "us10y": {
       "name": "米10年債利回り",
@@ -150,14 +149,13 @@
     "vix": {
       "name": "VIX",
       "ticker": "^VIX",
-      "price": 28.29,
-      "previous": 26.36,
-      "change": 1.93,
-      "change_pct": 7.32,
+      "price": 26.8,
+      "previous": 28.29,
+      "change": -1.49,
+      "change_pct": -5.27,
       "status": "取得成功",
-      "market_date": "2026-11-25",
-      "previous_market_date": "2026-11-24",
-      "stale_reason": "2026-11-26はNYSE感謝祭休場。Yahooの11月26日付値は確定米現物セッション値として採用せず、直近確認済みの11月25日終値を維持"
+      "market_date": "2026-11-26",
+      "previous_market_date": "2026-11-25"
     },
     "sector_xlc": {
       "name": "米コミュニケーション・サービス（XLC）",
